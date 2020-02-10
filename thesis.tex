@@ -1,0 +1,99 @@
+\documentclass[twoside,openleft,reqno,a4paper,final]{book}
+%%% Remove the next two lines if you want the figures at their place
+%\usepackage[figuresonly,nolists,nomarkers]{endfloat}
+%\renewcommand{\processdelayedfloats}{}
+
+\usepackage{soul}%strikeout \st
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{chapterbib}
+\usepackage[version=4]{mhchem}
+\usepackage{hyperref,booktabs,algpseudocode,algorithm,booktabs,titlesec,setspace,relsize,import}
+\usepackage{amsmath,xcolor,graphicx,float,subcaption,graphicx,}
+\usepackage[toc,page]{appendix}
+\usepackage[bindingoffset=25mm, left=15mm, right=15mm,top=30mm, bottom=20mm]{geometry}
+\usepackage[space=true]{grffile}
+\usepackage{fancyhdr,booktabs,algpseudocode,algorithm,tikz}
+
+
+
+\newcommand{\chapterbib}{
+\bibliographystyle{apalike}
+\bibliography{bibtex}
+}
+
+%\pagenumbering{roman}  http://www.markschenk.com/tensegrity/latexexplanation.html
+ %A4 (210 mm x 297 mm)  https://tex.stackexchange.com/questions/20538/what-is-the-right-order-when-using-frontmatter-tableofcontents-mainmatter
+%\addtolength{\textwidth}{12mm}%210
+%\addtolength{\evensidemargin}{-4mm}
+%\addtolength{\oddsidemargin}{-8mm}
+%\addtolength{\textheight}{35mm}%297
+\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+\setcitestyle{square}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter~-~#1}{}}
+ \fancyhf{}
+  \fancyhead[LE]{\itshape   \thepage}
+ \fancyhead[RE]{\itshape  \nouppercase{\rightmark}} %\nouppercase !
+  \fancyhead[LO]{\itshape  \nouppercase{\leftmark }}%thechapter
+ \fancyhead[RO]{\itshape  \thepage} %\nouppercase !
+\pagestyle{fancy}
+\newcommand{\ch}[1]{\MakeUppercase{\ce{#1}}}  % version 1
+\newcommand{\multiref}[2]{\autoref{#1}-\ref{#2}} % from - to
+\usetikzlibrary{arrows}
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+\def\blankpage{%
+      \clearpage%%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-2}%
+      \null%
+      \clearpage}
+
+
+
+\author{Dan Ellis }
+\date{March 2020}
+
+
+\begin{document}
+% \newgeometry{oneside}
+
+\frontmatter
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{5}
+%\cleardoublepage
+\setcounter{page}{01}
+\setcounter{chapter}{1}
+% \maketitle
+\cleardoublepage{}
+\setlength{\footnotesep}{0.5cm}
+\raggedbottom %group writing to top of page!
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+\mainmatter
+
+
+
+% Chapter 6
+\subimport{}{5_centrality.tex}
+% Chapter 6
+\subimport{}{6_lumping.tex}
+
+\newpage
+%
+%\bibliographystyle{apalike}
+%\bibliography{bibtex}
+%% \bibliographystyle{unsrt}
+
+
+
+
+\end{document}

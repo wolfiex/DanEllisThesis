@@ -1,0 +1,239 @@
+@article{degreefreeman,
+  title={Centrality in social networks conceptual clarification},
+  author={Freeman, Linton C},
+  journal={Social networks},
+  volume={1},
+  number={3},
+  pages={215--239},
+  year={1978},
+  publisher={North-Holland}
+}
+
+
+@MISC{degreetwitter,
+  author="Gemma, Joyce",
+  title        = "{The Most Influential Men and Women on Twitter 2017}",
+  booktitle    = "{Brandwatch}",
+  url          = "https://www.brandwatch.com/blog/react-influential-men-and-women-2017/",
+  howpublished = "\url{https://www.brandwatch.com/blog/react-influential-men-and-women-2017/}",
+  note         = "Accessed: 2019-4-28"
+}
+
+@InProceedings{degreeauction,
+author="Bangcharoensap, Phiradet
+and Kobayashi, Hayato
+and Shimizu, Nobuyuki
+and Yamauchi, Satoshi
+and Murata, Tsuyoshi",
+editor="Bifet, Albert
+and May, Michael
+and Zadrozny, Bianca
+and Gavalda, Ricard
+and Pedreschi, Dino
+and Bonchi, Francesco
+and Cardoso, Jaime
+and Spiliopoulou, Myra",
+title="Two Step graph-based semi-supervised Learning for Online Auction Fraud Detection",
+booktitle="Machine Learning and Knowledge Discovery in Databases",
+year="2015",
+publisher="Springer International Publishing",
+address="Cham",
+pages="165--179",
+isbn="978-3-319-23461-8"
+}
+
+
+@ARTICLE{hits,
+  title     = "{Authoritative Sources in a Hyperlinked Environment}",
+  author    = "Kleinberg, Jon M",
+  journal   = "Journal of the ACM",
+  publisher = "ACM",
+  volume    =  46,
+  number    =  5,
+  pages     = "604--632",
+  month     =  sep,
+  year      =  1999,
+  url       = "http://doi.acm.org/10.1145/324133.324140",
+  address   = "New York, NY, USA",
+  keywords  = "World Wide Web, graph algorithms, hypertext structure, link
+               analysis",
+  issn      = "0004-5411",
+  doi       = "10.1145/324133.324140"
+}
+
+@ARTICLE{hitsvspagerank,
+  title     = "{A Survey of Eigenvector Methods for Web Information Retrieval}",
+  author    = "Langville, A and Meyer, C",
+  journal   = "SIAM Review",
+  publisher = "Society for Industrial and Applied Mathematics",
+  volume    =  47,
+  number    =  1,
+  pages     = "135--161",
+  month     =  jan,
+  year      =  2005,
+  url       = "https://doi.org/10.1137/S0036144503424786",
+  annote    = "doi: 10.1137/S0036144503424786",
+  issn      = "0036-1445",
+  doi       = "10.1137/S0036144503424786"
+}
+
+@ARTICLE{hitsweb,
+  title  = "{The Web as a graph}",
+  author = "Kumar, Ravi and Upfal, Eli",
+  url    = "http://cs.brown.edu/research/webagent/pods-2000.pdf"
+}
+
+
+@ARTICLE{phrase,
+  title  = "{A Comparison of Centrality Measures for Graph-Based Keyphrase
+            Extraction}",
+  author = "Boudin, Florian",
+  url    = "https://hal.archives-ouvertes.fr/hal-00850187/document"
+}
+
+
+@ARTICLE{terror,
+  title   = "{Mapping networks of terrorist cells}",
+  author  = "Krebs, Valdis E",
+  journal = "Connections",
+  volume  =  24,
+  number  =  3,
+  pages   = "43--52",
+  year    =  2002,
+  url     = "http://ecsocman.hse.ru/data/517/132/1231/mappingterroristnetworks.pdf",
+  issn    = "0226-1766"
+}
+
+
+@ARTICLE{closeness-book,
+  title = "{Social Network Analysis: Theory and Applications}",
+  url   = "https://www.politaktiv.org/documents/10157/29141/SocNet_TheoryApp.pdf"
+}
+
+
+@ARTICLE{dev-social-analysis,
+  title  = "{The Development of Social Network Analysis---with an Emphasis on
+            Recent Events}",
+  author = "Freeman, Linton C",
+  url    = "http://moreno.ss.uci.edu/91.pdf"
+}
+
+@article{betweenness,
+author = {Freeman, Linton and Borgatti, Stephen and White, Douglas},
+year = {1991},
+month = {06},
+pages = {141-154},
+title = {Centrality in Valued Graphs: A Measure of Betweenness Based on Network Flow},
+volume = {13},
+journal = {Social Networks},
+doi = {10.1016/0378-8733(91)90017-N}
+}
+
+
+@ARTICLE{spectral,
+  title     = "{Spectral ranking}",
+  author    = "Vigna, Sebastiano",
+  journal   = "Network Science",
+  publisher = "Cambridge University Press",
+  volume    =  4,
+  number    =  4,
+  pages     = "433--445",
+  month     =  dec,
+  year      =  2016,
+  url       = "https://www.cambridge.org/core/journals/network-science/article/spectral-ranking/99ACDCD0CC1B774AB0041FB16AB43D1B",
+  keywords  = "ranking; centrality; eigenvectors",
+  issn      = "2050-1242, 2050-1250",
+  doi       = "10.1017/nws.2016.21"
+}
+
+
+@article{between,
+author = {Freeman, Linton},
+year = {1977},
+month = {03},
+pages = {35-41},
+title = {A Set of Measures of Centrality Based on Betweenness},
+volume = {40},
+booktitle = {Sociometry}
+}
+
+@ARTICLE{betweenfast,
+    author = {Ulrik Brandes},
+    title = {A Faster Algorithm for Betweenness Centrality},
+    journal = {Journal of Mathematical Sociology},
+    year = {2001},
+    volume = {25},
+    pages = {163--177}
+}
+
+% unused but really good. 
+@ARTICLE{examples_centrality,
+  title    = "{Centrality and network flow}",
+  author   = "Borgatti, Stephen P",
+  journal  = "Social networks",
+  volume   =  27,
+  number   =  1,
+  pages    = "55--71",
+  month    =  jan,
+  year     =  2005,
+  url      = "http://www.sciencedirect.com/science/article/pii/S0378873304000693",
+  keywords = "Centrality; Network flow; Typology",
+  issn     = "0378-8733",
+  doi      = "10.1016/j.socnet.2004.11.008"
+}
+
+
+@ARTICLE{neoj4,
+  title  = "{Practical Examples in Apache Spark \& Neo4j}",
+  author = "Needham, Mark and Hodler, Amy E",
+  url    = "https://neo4j.com/neoassets/graphbooks/Graph_Algorithms_Neo4j.pdf",
+  journal="O'Reilly",
+  year=2019,
+  isbn="978-1-492-05781-9."
+}
+
+
+@article{eigen2,
+title = "Some unique properties of eigenvector centrality",
+journal = "Social Networks",
+volume = "29",
+number = "4",
+pages = "555 - 564",
+year = "2007",
+issn = "0378-8733",
+doi = "https://doi.org/10.1016/j.socnet.2007.04.002",
+url = "http://www.sciencedirect.com/science/article/pii/S0378873307000342",
+author = "Phillip Bonacich",
+keywords = "Centrality, Eigenvector"
+}
+
+
+@ARTICLE{katz,
+  title    = "{Universal behavior of load distribution in scale-free networks}",
+  author   = "Goh, K I and Kahng, B and Kim, D",
+  journal  = "Physical review letters",
+  volume   =  87,
+  number   = "27 Pt 1",
+  pages    = "278701",
+  month    =  dec,
+  year     =  2001,
+  url      = "http://dx.doi.org/10.1103/PhysRevLett.87.278701",
+  language = "en",
+  issn     = "0031-9007",
+  pmid     = "11800921",
+  doi      = "10.1103/PhysRevLett.87.278701"
+}
+
+
+@ARTICLE{biopr,
+  title         = "{Strategic heuristics underlie animal dominance hierarchies
+                   and provide evidence of group-level social knowledge}",
+  author        = "Hobson, Elizabeth A and M{\o}nster, Dan and DeDeo, Simon",
+  month         =  oct,
+  year          =  2018,
+  url           = "http://arxiv.org/abs/1810.07215",
+  archivePrefix = "arXiv",
+  eprint        = "1810.07215",
+  primaryClass  = "q-bio.PE",
+  arxivid       = "1810.07215"
+}

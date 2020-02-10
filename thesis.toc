@@ -1,0 +1,73 @@
+\contentsline {chapter}{\numberline {2} Chemical model diagnostics using graph theory and metrics. }{1}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}Graph Metrics}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Centrality metrics and academic publishing.}{3}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}The Master Chemical Mechanism (MCM)}{6}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Data Collection}{6}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Visualising the data.}{6}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Filtering the data}{8}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}The Co-citation Network}{9}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}The Co-authorship network}{10}{subsection.2.2.7}
+\contentsline {section}{\numberline {2.3}Metric analysis}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Degree Centrality}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Closness Centrality}{13}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Betweenness}{15}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Spectral methods and matrix analysis}{17}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Page Rank}{18}{subsection.2.3.5}
+\contentsline {paragraph}{The Google Matrix}{19}{section*.18}
+\contentsline {paragraph}{Solving the algebra}{20}{equation.2.3.1}
+\contentsline {paragraph}{Prediction}{20}{algorithm.2}
+\contentsline {subsubsection}{\numberline {2.3.5.1}Conclusions}{21}{subsubsection.2.3.5.1}
+\contentsline {section}{\numberline {2.4}Classifying the Master Chemical Mechanism network}{22}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Network density}{22}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Small world Phenomena}{23}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Power Law and Scale-free graphs}{24}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Describing the MCM network}{26}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Graph Construction methodology }{26}{section.2.5}
+\contentsline {subsubsection}{\numberline {2.5.0.1}Concentration time series}{26}{subsubsection.2.5.0.1}
+\contentsline {subsubsection}{\numberline {2.5.0.2}Rate of Production and Loss}{27}{subsubsection.2.5.0.2}
+\contentsline {subsubsection}{\numberline {2.5.0.3}The Jacobian}{30}{subsubsection.2.5.0.3}
+\contentsline {subsection}{\numberline {2.5.1}Graph construction methodology for simulated data}{31}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}A practical Example using the MCM}{32}{subsection.2.5.2}
+\contentsline {paragraph}{Converting the Jacobian into an adjacency matrix}{33}{figure.caption.27}
+\contentsline {section}{\numberline {2.6}Case study Example}{34}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Establishing Initial Conditions from observational data}{34}{subsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.1.1}The origin of Artificial Neural Networks}{35}{subsubsection.2.6.1.1}
+\contentsline {subsubsection}{\numberline {2.6.1.2}The Multi Layer Perceptron}{36}{subsubsection.2.6.1.2}
+\contentsline {subsubsection}{\numberline {2.6.1.3}Application of the MLPRegressor to observational data}{37}{subsubsection.2.6.1.3}
+\contentsline {subsubsection}{\numberline {2.6.1.4}Generation of the ICS file and simulation run}{43}{subsubsection.2.6.1.4}
+\contentsline {subsubsection}{\numberline {2.6.1.5}Extracting the required results}{43}{subsubsection.2.6.1.5}
+\contentsline {subsubsection}{\numberline {2.6.1.6}Unifying the results}{43}{subsubsection.2.6.1.6}
+\contentsline {section}{\numberline {2.7}Comparing Results}{49}{section.2.7}
+\contentsline {subsubsection}{\numberline {2.7.0.1}The inner workings of TF-IDF}{49}{subsubsection.2.7.0.1}
+\contentsline {subsection}{\numberline {2.7.1}Metric Comparison}{51}{subsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.1.1}Individual Categories}{51}{subsubsection.2.7.1.1}
+\contentsline {subsection}{\numberline {2.7.2}\IeC {\textbullet }}{52}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}what is important in all source location using reverse (adjoint) personalised page rank}{52}{subsection.2.7.3}
+\contentsline {chapter}{\numberline {3} Chemical model diagnostics using graph theory and metrics. }{61}{chapter.3}
+\contentsline {section}{\numberline {3.1}INTRODUCTION }{62}{section.3.1}
+\contentsline {section}{\numberline {3.2}Reduction as a solution.}{63}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Reaction Removal}{63}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Species removal}{64}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Trial and Error}{64}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2.2}Species Removal by Inspection of Rates}{65}{subsubsection.3.2.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.3}Jacobian Connectivity Method}{65}{subsubsection.3.2.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Lumping}{65}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Chemical Lumping}{65}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Linear}{66}{subsubsection.3.2.3.2}
+\contentsline {subsubsection}{\numberline {3.2.3.3}Lifetime}{66}{subsubsection.3.2.3.3}
+\contentsline {subsubsection}{\numberline {3.2.3.4}Quasi Steady State Approximation (QSSA)}{66}{subsubsection.3.2.3.4}
+\contentsline {subsection}{\numberline {3.2.4}Graph parallels. }{66}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Methodology: Part I }{67}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}The Mechanism}{67}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}The Box-Model}{68}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Model Inputs}{68}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Reduction through Lifetime}{69}{subsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.4.1}Calculating the lifetime}{69}{subsubsection.3.3.4.1}
+\contentsline {subsection}{\numberline {3.3.5}Comparing Magnitude and Direction}{70}{subsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.5.1}Euclidian distance}{70}{subsubsection.3.3.5.1}
+\contentsline {subsubsection}{\numberline {3.3.5.2}Cosine Distance}{71}{subsubsection.3.3.5.2}
+\contentsline {section}{\numberline {3.4}Results: Part I}{71}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Temporal Lifetime Vector Comparison}{72}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Viewing the similarity graph}{74}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Using MCMC to extract groups}{74}{subsubsection.3.4.2.1}
