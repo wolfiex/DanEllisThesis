@@ -1,0 +1,169 @@
+\documentclass[twoside,openleft,reqno,a4paper,final]{book}
+%%% Remove the next two lines if you want the figures at their place
+%\usepackage[figuresonly,nolists,nomarkers]{endfloat}
+%\renewcommand{\processdelayedfloats}{}
+
+\usepackage{soul}%strikeout \st
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[version=4]{mhchem}
+\usepackage{hyperref,booktabs,algpseudocode,algorithm,booktabs,titlesec,setspace,relsize}
+\usepackage{natbib,amsmath,xcolor,graphicx,float,subcaption}
+\usepackage[toc,page]{appendix}
+\setcitestyle{square}
+
+
+%\pagenumbering{roman}  http://www.markschenk.com/tensegrity/latexexplanation.html
+ %A4 (210 mm x 297 mm)  https://tex.stackexchange.com/questions/20538/what-is-the-right-order-when-using-frontmatter-tableofcontents-mainmatter
+%\addtolength{\textwidth}{12mm}%210
+%\addtolength{\evensidemargin}{-4mm}
+%\addtolength{\oddsidemargin}{-8mm}
+%\addtolength{\textheight}{35mm}%297
+\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+\usepackage[bindingoffset=25mm, left=15mm, right=15mm,top=30mm, bottom=20mm]{geometry}
+\usepackage{float}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter~-~#1}{}}
+ \fancyhf{}
+  \fancyhead[LE]{\itshape   \thepage}
+ \fancyhead[RE]{\itshape  \nouppercase{\rightmark}} %\nouppercase !
+  \fancyhead[LO]{\itshape  \nouppercase{\leftmark }}%thechapter
+ \fancyhead[RO]{\itshape  \thepage} %\nouppercase !
+%  \cfoot{\thepage}
+%\renewcommand{\footrulewidth}{\headrulewidth}
+\pagestyle{fancy}
+
+\newcommand{\ch}[1]{\MakeUppercase{\ce{#1}}}  % version 1
+\newcommand{\multiref}[2]{\autoref{#1}-\ref{#2}} % from - to
+\newcommand{\qfig}[4]{\begin{figure}[H]\centering\includegraphics[width=#4]{#1}\caption{#3}\label{#2}\end{figure}\newpage}
+% location,label,caption,width
+
+
+
+\usepackage[space=true]{grffile}
+
+
+\def\blankpage{%
+      \clearpage%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-2}%
+      \null%
+      \clearpage}
+
+
+\usepackage{booktabs}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+
+
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+
+\def\blankpage{%
+      \clearpage%%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-1}%
+      \null%
+      \clearpage}
+
+
+% dont have & in citations, and clear to fix error
+
+
+\newcommand{\dfig}[4]{
+\newpage
+\begin{figure}[H]
+\centering\includegraphics[width=.45\textwidth]{#1}
+\centering\includegraphics[width=.45\textwidth]{#2}
+
+\caption{ Colouring #4 }
+\label{#3}
+\end{figure}
+\newpage
+}
+
+
+
+
+%%%%%%
+
+% location,label,caption,width
+
+
+
+
+
+\author{Dan Ellis }
+\date{March 2019}
+
+
+
+
+\begin{document}
+% \newgeometry{oneside}
+
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{5}
+%\cleardoublepage
+\setcounter{page}{301}
+\setcounter{chapter}{3}
+
+% \maketitle
+\cleardoublepage{}
+\chapter{ Chemical model diagnostics using graph theory and metrics.  }
+\cleardoublepage{}
+\restoregeometry
+\vspace*{0.15\paperheight}
+
+
+\begin{center}
+\begin{quotation}
+  \large{\emph{\textbf{``The complexities of cause and effect defy analysis.''} }  }  \\
+  \begin{flushright}
+  - Douglas Adams, \textit{Dirk Gently's Holistic Detective Agency}
+
+  \end{flushright}
+ \end{quotation}
+\end{center}
+
+%\blankpage
+\doublespacing
+% \onehalfspacing
+
+\setlength{\footnotesep}{0.5cm}
+\raggedbottom %group writing to top of page!
+\tableofcontents
+\newpage
+%
+\input{intro.tex}
+\input{centrality.tex}
+
+\input{chemistry.tex}
+\input{graphconstruction.tex}
+
+\input{casestudy.tex}
+
+
+
+\newpage
+
+\bibliographystyle{apalike}
+\bibliography{centrality,metric}
+% \bibliographystyle{unsrt}
+
+
+
+
+\end{document}

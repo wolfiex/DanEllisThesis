@@ -1,0 +1,497 @@
+\begin{thebibliography}{}
+
+\bibitem[lsq, 2008]{lsq}
+ (2008).
+\newblock {\em Latin Square Designs}, pages 297--297.
+\newblock Springer New York, New York, NY.
+
+\bibitem[lap, 2019]{lapack}
+ (2019).
+\newblock {Lapack --- Linear Algebra Package}.
+\newblock \url{http://www.netlib.org/lapack/}.
+\newblock http://www.netlib.org/lapack/.
+
+\bibitem[Barabási, 2019]{naturecover}
+Barabási, A.-L. (2019).
+\newblock {Nature-150-Cover.Pdf}.
+\newblock {\em Nature}, 575(7781).
+\newblock Accessed 20-01-2020.
+
+\bibitem[Bastian et~al., 2009]{gephi}
+Bastian, M., Heymann, S., and Jacomy, M. (2009).
+\newblock Gephi: An open source software for exploring and manipulating
+  networks.
+\newblock {\em AAAI}.
+\newblock http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154.
+
+\bibitem[Beel et~al., 2016]{tf83}
+Beel, J., Gipp, B., Langer, S., and Breitinger, C. (2016).
+\newblock Research-paper recommender systems: A literature survey.
+\newblock {\em International Journal on Digital Libraries}, 17(4):305--338.
+
+\bibitem[Bloss et~al., 2005]{detailedmcm}
+Bloss, C., Wagner, V., Jenkin, M.~E., Volkamer, R., Bloss, W.~J., Lee, J.~D.,
+  Heard, D.~E., Wirtz, K., Martin-Reviejo, M., Rea, G., Wenger, J.~C., and
+  Pilling, M.~J. (2005).
+\newblock Development of a detailed chemical mechanism (mcmv3.1) for the
+  atmospheric oxidation of aromatic hydrocarbons.
+\newblock {\em Atmospheric Chemistry and Physics}, 5(3):641--664.
+
+\bibitem[Bloss et~al., 2004]{lif2}
+Bloss, W.~J., Lee, J.~D., Bloss, C., Heard, D.~E., Pilling, M.~J., Wirtz, K.,
+  Martin-Reviejo, M., and Siese, M. (2004).
+\newblock Validation of the calibration of a laser-induced fluorescence
+  instrument for the measurement of oh radicals in the atmosphere.
+\newblock {\em Atmospheric Chemistry and Physics}, 4(2):571--583.
+
+\bibitem[Bonacich, 1987]{eigen}
+Bonacich, P. (1987).
+\newblock Power and centrality: A family of measures.
+\newblock {\em American Journal of Sociology}, 92(5):1170--1182.
+\newblock http://www.jstor.org/stable/2780000.
+
+\bibitem[Bonacich, 2007]{eigen2}
+Bonacich, P. (2007).
+\newblock Some unique properties of eigenvector centrality.
+\newblock {\em Social Networks}, 29(4):555 -- 564.
+
+\bibitem[Borgatti, 2005]{examples_centrality}
+Borgatti, S.~P. (2005).
+\newblock {Centrality And Network Flow}.
+\newblock {\em Social networks}, 27(1):55--71.
+
+\bibitem[Boudin, 2013]{phrase}
+Boudin, F. (2013).
+\newblock {A Comparison Of Centrality Measures For Graph-Based Keyphrase
+  Extraction}.
+
+\bibitem[Brandes, 2001]{betweenfast}
+Brandes, U. (2001).
+\newblock A faster algorithm for betweenness centrality.
+\newblock {\em Journal of Mathematical Sociology}, 25:163--177.
+
+\bibitem[Brasseur and Jacob, 2017]{jacob}
+Brasseur, G. and Jacob, D. (2017).
+\newblock {\em Modeling Of Atmospheric Chemistry}.
+\newblock Cambridge University Press.
+
+\bibitem[Broido and Clauset, 2019]{scalefreebad}
+Broido, A.~D. and Clauset, A. (2019).
+\newblock {Scale-Free Networks Are Rare}.
+\newblock {\em Nature communications}, 10(1):1017.
+
+\bibitem[Cabello, 2019]{threejs}
+Cabello, R. (2019).
+\newblock {Three.Js -- Javascript 3D Library}.
+\newblock \url{https://threejs.org/}.
+\newblock Accessed: 2020-1-25.
+
+\bibitem[Cajal, 2020]{layercortex}
+Cajal, S.~R. (2020).
+\newblock Cortex drawings.
+\newblock {\em web}.
+\newblock Accessed: 2020-2-4.
+
+\bibitem[Clauset et~al., 2009]{plexp}
+Clauset, A., Shalizi, C.~R., and Newman, M. E.~J. (2009).
+\newblock {Power-Law Distributions In Empirical Data}.
+\newblock {\em SIAM Review}, 51(4):661--703.
+
+\bibitem[Cornell, 2020]{perceptronimage}
+Cornell, L. (2020).
+\newblock {Mark 1 Perceptron}.
+\newblock
+  \url{https://en.wikipedia.org/w/index.php?title=Perceptron&oldid=935763442}.
+\newblock Accessed: 2020-2-4.
+
+\bibitem[de~Solla~Price, 1965]{scalefreepapers}
+de~Solla~Price, D.~J. (1965).
+\newblock Networks of scientific papers.
+\newblock {\em Science}, 149(3683):510--515.
+
+\bibitem[Derwent et~al., 1998]{milk1}
+Derwent, R.~G., Jenkin, M.~E., Saunders, S.~M., and Pilling, M.~J. (1998).
+\newblock {Photochemical Ozone Creation Potentials For Organic Compounds In
+  Northwest Europe Calculated With A Master Chemical Mechanism}.
+\newblock {\em Atmospheric environment}, 32(14):2429--2441.
+
+\bibitem[Dillon et~al., 2006]{lif1}
+Dillon, T.~J., Tucceri, M.~E., and Crowley, J.~N. (2006).
+\newblock Laser induced fluorescence studies of iodine oxide chemistry part ii.
+  the reactions of io with ch3o2{,} cf3o2 and o3.
+\newblock {\em Phys. Chem. Chem. Phys.}, 8:5185--5198.
+
+\bibitem[Ebel et~al., 2002]{scalefreeemail}
+Ebel, H., Mielsch, L.-I., and Bornholdt, S. (2002).
+\newblock Scale-free topology of e-mail networks.
+\newblock {\em Phys. Rev. E}, 66:035103.
+
+\bibitem[Edsu and Ellis, 2019]{web}
+Edsu and Ellis, D. (2019).
+\newblock {Etudier}.
+\newblock https://github.com/wolfiex/etudier.
+
+\bibitem[Ellis, 2019]{frankenstein}
+Ellis, D. (2019).
+\newblock {Using Tf-Idf To Form Descriptive Chapter Summaries Via Keyword
+  Extraction}.
+\newblock
+  \url{https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190}.
+\newblock Accessed: 2020-2-5.
+
+\bibitem[Elshorbany et~al., 2012]{hoxcompmcm}
+Elshorbany, Y.~F., Kleffmann, J., Hofzumahaus, A., Kurtenbach, R., Wiesen, P.,
+  Brauers, T., Bohn, B., Dorn, H.-P., Fuchs, H., Holland, F., Rohrer, F.,
+  Tillmann, R., Wegener, R., Wahner, A., Kanaya, Y., Yoshino, A., Nishida, S.,
+  Kajii, Y., Martinez, M., Kubistin, D., Harder, H., Lelieveld, J., Elste, T.,
+  Plass-D{\"u}lmer, C., Stange, G., Berresheim, H., and Schurath, U. (2012).
+\newblock {Ho X Budgets During Hoxcomp: A Case Study Of Ho X Chemistry Under No
+  X -Limited Conditions}.
+\newblock {\em Journal of geophysical research}, 117(D3).
+
+\bibitem[Fantin et~al., 2012]{milk}
+Fantin, V., Buttol, P., Pergreffi, R., and Masoni, P. (2012).
+\newblock {Life Cycle Assessment Of Italian High Quality Milk Production. A
+  Comparison With An Epd Study}.
+\newblock {\em Journal of cleaner production}, 28:150--159.
+\newblock http://www.sciencedirect.com/science/article/pii/S095965261100388X.
+
+\bibitem[Freeman, 1977]{between}
+Freeman, L. (1977).
+\newblock A set of measures of centrality based on betweenness.
+\newblock 40:35--41.
+
+\bibitem[Freeman et~al., 1991]{betweenness}
+Freeman, L., Borgatti, S., and White, D. (1991).
+\newblock Centrality in valued graphs: A measure of betweenness based on
+  network flow.
+\newblock {\em Social Networks}, 13:141--154.
+
+\bibitem[Freeman, 1978]{degreefreeman}
+Freeman, L.~C. (1978).
+\newblock Centrality in social networks conceptual clarification.
+\newblock {\em Social networks}, 1(3):215--239.
+
+\bibitem[{Fujita} et~al., 2017]{coauthornew}
+{Fujita}, M., {Inoue}, H., and {Terano}, T. (2017).
+\newblock Searching promising researchers through network centrality measures
+  of co-author networks of technical papers.
+\newblock In {\em 2017 IEEE 41st Annual Computer Software and Applications
+  Conference (COMPSAC)}, volume~2, pages 615--618.
+
+\bibitem[Gemma, 2019]{degreetwitter}
+Gemma, J. (2019).
+\newblock {The Most Influential Men And Women On Twitter 2017}.
+\newblock
+  \url{https://www.brandwatch.com/blog/react-influential-men-and-women-2017/}.
+\newblock Accessed: 2019-4-28.
+
+\bibitem[G{\'e}ron, 2017]{handsonml}
+G{\'e}ron, A. (2017).
+\newblock {\em Hands-On Machine Learning With Scikit-Learn And Tensorflow:
+  Concepts, Tools, And Techniques To Build Intelligent Systems}.
+\newblock O'Reilly Media.
+
+\bibitem[Goh et~al., 2001]{katz}
+Goh, K.~I., Kahng, B., and Kim, D. (2001).
+\newblock {Universal Behavior Of Load Distribution In Scale-Free Networks}.
+\newblock {\em Physical review letters}, 87(27 Pt 1):278701.
+
+\bibitem[Google, 2019]{scholar}
+Google (2019).
+\newblock {Google Scholar}.
+\newblock \url{https://scholar.google.com/schhp?hl=en}.
+\newblock Accessed: 2020-1-25.
+
+\bibitem[Hagberg et~al., 2008]{networkx}
+Hagberg, A.~A., Schult, D.~A., and Swart, P.~J. (2008).
+\newblock Exploring network structure, dynamics, and function using networkx.
+\newblock In Varoquaux, G., Vaught, T., and Millman, J., editors, {\em
+  Proceedings of the 7th Python in Science Conference}, pages 11 -- 15,
+  Pasadena, CA USA.
+
+\bibitem[Hobson et~al., 2018]{biopr}
+Hobson, E.~A., M{\o}nster, D., and DeDeo, S. (2018).
+\newblock {Strategic Heuristics Underlie Animal Dominance Hierarchies And
+  Provide Evidence Of Group-Level Social Knowledge}.
+
+\bibitem[Humphries and Gurney, 2008]{sm2}
+Humphries, M.~D. and Gurney, K. (2008).
+\newblock {Network 'Small-World-Ness': A Quantitative Method For Determining
+  Canonical Network Equivalence}.
+\newblock {\em PloS one}, 3(4):e0002051.
+
+\bibitem[Jacob and Lapkin, 2018]{rscgraph}
+Jacob, P.-M. and Lapkin, A. (2018).
+\newblock Statistics of the network of organic chemistry.
+\newblock {\em React. Chem. Eng.}, 3:102--118.
+\newblock http://dx.doi.org/10.1039/C7RE00129K.
+
+\bibitem[Jeanningros et~al., 2010]{pilot}
+Jeanningros, Y., Vlaeminck, S.~E., Kaldate, A., Verstraete, W., and Graveleau,
+  L. (2010).
+\newblock {Fast Start-Up Of A Pilot-Scale Deammonification Sequencing Batch
+  Reactor From An Activated Sludge Inoculum}.
+\newblock {\em Water science and technology: a journal of the International
+  Association on Water Pollution Research}, 61(6):1393--1400.
+\newblock http://dx.doi.org/10.2166/wst.2010.019.
+
+\bibitem[Jenkin, 2019]{criv2}
+Jenkin, M. (2019).
+\newblock { Http://Cri.York.Ac.Uk }.
+\newblock Online.
+
+\bibitem[Jenkin et~al., 2008]{cri}
+Jenkin, M., Watson, L., Utembe, S., and Shallcross, D. (2008).
+\newblock A common representative intermediates (cri) mechanism for voc
+  degradation. part 1: Gas phase mechanism development.
+\newblock {\em Atmospheric Environment}, 42(31):7185 -- 7195.
+
+\bibitem[Jenkin and Hayman, 1999]{milk2}
+Jenkin, M.~E. and Hayman, G.~D. (1999).
+\newblock {Photochemical Ozone Creation Potentials For Oxygenated Volatile
+  Organic Compounds: Sensitivity To Variations In Kinetic And Mechanistic
+  Parameters}.
+\newblock {\em Atmospheric environment}, 33(8):1275--1293.
+
+\bibitem[Jenkin et~al., 1997]{mcmorigin}
+Jenkin, M.~E., Saunders, S.~M., and Pilling, M.~J. (1997).
+\newblock The tropospheric degradation of volatile organic compounds: A
+  protocol for mechanism development.
+\newblock {\em Atmospheric Environment}, 31(1):81 -- 104.
+
+\bibitem[Jenkin et~al., 2003]{mcmpartB}
+Jenkin, M.~E., Saunders, S.~M., Wagner, V., and Pilling, M.~J. (2003).
+\newblock Protocol for the development of the master chemical mechanism, mcm v3
+  (part b): Tropospheric degradation of aromatic volatile organic compounds.
+\newblock {\em Atmospheric Chemistry and Physics}, 3(1):181--193.
+
+\bibitem[Jenkin et~al., 2015]{isopmcm}
+Jenkin, M.~E., Young, J.~C., and Rickard, A.~R. (2015).
+\newblock The mcm v3.3.1 degradation scheme for isoprene.
+\newblock {\em Atmospheric Chemistry and Physics}, 15(20):11433--11459.
+
+\bibitem[John~Hay, 1960]{perceptronmanual}
+John~Hay, Ben~Lynch, D.~S. (1960).
+\newblock {Mark 1 Perceptron Operators' Manual}.
+\newblock {\em Cornell Aeronautical Laboratory}.
+
+\bibitem[Jones et~al., 01  ]{scipy}
+Jones, E., Oliphant, T., Peterson, P., et~al. (2001--).
+\newblock {Scipy}: Open source scientific tools for {Python}.
+\newblock http://www.scipy.org/.
+
+\bibitem[Kleinberg, 1999]{hits}
+Kleinberg, J.~M. (1999).
+\newblock {Authoritative Sources In A Hyperlinked Environment}.
+\newblock {\em Journal of the ACM}, 46(5):604--632.
+
+\bibitem[Korke et~al., 2004]{neuro2}
+Korke, R., Gatti, M. d.~L., Lau, A. L.~Y., Lim, J. W.~E., Seow, T.~K., Chung,
+  M. C.~M., and Hu, W.-S. (2004).
+\newblock {Large Scale Gene Expression Profiling Of Metabolic Shift Of
+  Mammalian Cells In Culture}.
+\newblock {\em Journal of biotechnology}, 107(1):1--17.
+
+\bibitem[Krebs, 2002]{terror}
+Krebs, V.~E. (2002).
+\newblock {Mapping Networks Of Terrorist Cells}.
+\newblock {\em Connections}, 24(3):43--52.
+
+\bibitem[Kumar and Upfal, 2000]{hitsweb}
+Kumar, R. and Upfal, E. (2000).
+\newblock {The Web As A Graph}.
+
+\bibitem[Langville and Meyer, 2005]{hitsvspagerank}
+Langville, A. and Meyer, C. (2005).
+\newblock {A Survey Of Eigenvector Methods For Web Information Retrieval}.
+\newblock {\em SIAM Review}, 47(1):135--161.
+
+\bibitem[Ling et~al., 2014]{hongkongmcm}
+Ling, Z.~H., Guo, H., Lam, S. H.~M., Saunders, S.~M., and Wang, T. (2014).
+\newblock Atmospheric photochemical reactivity and ozone production at two
+  sites in hong kong: Application of a master chemical
+  mechanism–photochemical box model.
+\newblock {\em Journal of Geophysical Research: Atmospheres},
+  119(17):10567--10582.
+
+\bibitem[McCulloch and Pitts, 1943]{pitts}
+McCulloch, W.~S. and Pitts, W. (1943).
+\newblock A logical calculus of the ideas immanent in nervous activity.
+\newblock {\em The bulletin of mathematical biophysics}, 5(4):115--133.
+
+\bibitem[Mckay et~al., 2000]{sampling}
+Mckay, M.~D., Beckman, R.~J., and Conover, W.~J. (2000).
+\newblock A comparison of three methods for selecting values of input variables
+  in the analysis of output from a computer code.
+\newblock {\em Technometrics}, 42(1):55--61.
+
+\bibitem[Mohanty et~al., 2014]{blood}
+Mohanty, J.~G., Nagababu, E., and Rifkind, J.~M. (2014).
+\newblock {Red Blood Cell Oxidative Stress Impairs Oxygen Delivery And Induces
+  Red Blood Cell Aging}.
+\newblock {\em Frontiers in physiology}, 5:84.
+\newblock http://dx.doi.org/10.3389/fphys.2014.00084.
+
+\bibitem[Molontay and Nagy, 2020]{netcoauthor}
+Molontay, R. and Nagy, M. (2020).
+\newblock {Twenty Years Of Network Science: A Bibliographic And Co-Authorship
+  Network Analysis}.
+\newblock {\em arXiv}.
+
+\bibitem[Monastersky and Van~Noorden, 2019]{naturecitation}
+Monastersky, R. and Van~Noorden, R. (2019).
+\newblock {150 Years Of Nature: A Data Graphic Charts Our Evolution}.
+\newblock {\em Nature}, 575(7781):22--23.
+
+\bibitem[Needham and Hodler, 2019]{neoj4}
+Needham, M. and Hodler, A.~E. (2019).
+\newblock {Practical Examples In Apache Spark \& Neo4J}.
+\newblock {\em O'Reilly}.
+
+\bibitem[Newman, 2004]{newmancoauthor}
+Newman, M. E.~J. (2004).
+\newblock Coauthorship networks and patterns of scientific collaboration.
+\newblock {\em Proceedings of the National Academy of Sciences}, 101(suppl
+  1):5200--5205.
+
+\bibitem[Oliphant, 2006]{numpy}
+Oliphant, T. (2006).
+\newblock Guide to numpy.
+
+\bibitem[Oran and Boris, 1991]{frenk}
+Oran, E. and Boris, J. (1991).
+\newblock Numerical approaches to combustion modeling. progress in astronautics
+  and aeronautics. vol. 135.
+\newblock {\em U.S. Department of Energy Office of Scientific and Technical
+  Information}.
+
+\bibitem[Ottens et~al., 2006]{neurotrauma}
+Ottens, A.~K., Kobeissy, F.~H., Golden, E.~C., Zhang, Z., Haskins, W.~E., Chen,
+  S.-S., Hayes, R.~L., Wang, K. K.~W., and Denslow, N.~D. (2006).
+\newblock {Neuroproteomics In Neurotrauma}.
+\newblock {\em Mass spectrometry reviews}, 25(3):380--408.
+\newblock http://dx.doi.org/10.1002/mas.20073.
+
+\bibitem[Page et~al., 1999]{google}
+Page, L., Brin, S., Motwani, R., and Winograd, T. (1999).
+\newblock The pagerank citation ranking: Bringing order to the web.
+\newblock {\em Stanford InfoLab}, (1999-66).
+\newblock Previous number = SIDL-WP-1999-0120
+  \url{http://ilpubs.stanford.edu:8090/422/}.
+
+\bibitem[Pokroy et~al., 2009]{nano}
+Pokroy, B., Epstein, A.~K., Persson-Gulda, M. C.~M., and Aizenberg, J. (2009).
+\newblock {Fabrication Of Bioinspired Actuated Nanostructures With Arbitrary
+  Geometry And Stiffness}.
+\newblock {\em Advanced materials}, 21(4):463--469.
+\newblock http://doi.wiley.com/10.1002/adma.200801432.
+
+\bibitem[poliaktiv, 2011]{closeness-book}
+poliaktiv (2011).
+\newblock {Social Network Analysis: Theory And Applications}.
+
+\bibitem[Press et~al., 1992]{ks}
+Press, W.~H., Teukolsky, S.~A., Vetterling, W.~T., and Flannery, B.~P. (1992).
+\newblock {\em Numerical Recipes In C (2Nd Ed.): The Art Of Scientific
+  Computing}.
+\newblock Cambridge University Press, USA.
+
+\bibitem[R.~Seeley, 1949]{seeley}
+R.~Seeley, J. (1949).
+\newblock The net of reciprocal influence: A problem in treating sociometric
+  data.
+\newblock {\em Canadian Journal of Psychology/Revue canadienne de psychologie},
+  3:234--240.
+
+\bibitem[Rosenblatt, 1958]{perceptron}
+Rosenblatt, F. (1958).
+\newblock The perceptron: A probabilistic model for information storage and
+  organization in the brain.
+\newblock {\em Psychological Review}, pages 65--386.
+
+\bibitem[Sabidussi, 1966]{closeness}
+Sabidussi, G. (1966).
+\newblock The centrality index of a graph.
+\newblock {\em Psychometrika}, 31(4):581--603.
+
+\bibitem[Saunders et~al., 2003]{mcmpartA}
+Saunders, S.~M., Jenkin, M.~E., Derwent, R.~G., and Pilling, M.~J. (2003).
+\newblock {Protocol For The Development Of The Master Chemical Mechanism, Mcm
+  V3 (Part A): Tropospheric Degradation Of Non-Aromatic Volatile Organic
+  Compounds}.
+\newblock {\em {Atmospheric Chemistry and Physics}}, 3(1):161--180.
+
+\bibitem[Small, 1973]{cocite}
+Small, H. (1973).
+\newblock Co-citation in the scientific literature: A new measure of the
+  relationship between two documents.
+\newblock {\em Journal of the American Society for Information Science},
+  24(4):265--269.
+
+\bibitem[Spencer et~al., 2010]{biogeo}
+Spencer, R. G.~M., Hernes, P.~J., Ruf, R., Baker, A., Dyda, R.~Y., Stubbins,
+  A., and Six, J. (2010).
+\newblock {Temporal Controls On Dissolved Organic Matter And Lignin
+  Biogeochemistry In A Pristine Tropical River, Democratic Republic Of Congo}.
+\newblock {\em Journal of geophysical research}, 115(G3):2069.
+\newblock http://doi.wiley.com/10.1029/2009JG001180.
+
+\bibitem[Stubbins et~al., 2008]{georiver1}
+Stubbins, A., Hubbard, V., Uher, G., Law, C.~S., Upstill-Goddard, R.~C., Aiken,
+  G.~R., and Mopper, K. (2008).
+\newblock {Relating Carbon Monoxide Photoproduction To Dissolved Organic Matter
+  Functionality}.
+\newblock {\em Environmental science \& technology}, 42(9):3271--3276.
+
+\bibitem[Tur{\'a}nyi, 1990]{cm}
+Tur{\'a}nyi, T. (1990).
+\newblock {Sensitivity Analysis Of Complex Kinetic Systems. Tools And
+  Applications}.
+\newblock {\em Journal of mathematical chemistry}, 5(3):203--248.
+
+\bibitem[Turanyi and Tomlin, 2015]{kinetics}
+Turanyi, T. and Tomlin, A. (2015).
+\newblock {\em Analysis Of Kinetic Reaction Mechanisms}.
+\newblock Springer.
+
+\bibitem[Tur{\'a}nyi and Tomlin, 2014]{connectivity}
+Tur{\'a}nyi, T. and Tomlin, A.~S. (2014).
+\newblock {\em Reduction Of Reaction Mechanisms}.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Turiinyi, 1990]{tur1990}
+Turiinyi, T. (1990).
+\newblock {Reductton Large Reactton Mechantsms}.
+\newblock {\em New journal of chemistry = Nouveau journal de chimie},
+  14:795--gO3.
+
+\bibitem[Vajda et~al., 1985]{PCAS}
+Vajda, S., Valko, P., and Turainyi, T. (1985).
+\newblock Principal component analysis of kinetic models.
+\newblock {\em International Journal of Chemical Kinetics}, 17(1):55--81.
+
+\bibitem[Vigna, 2016]{spectral}
+Vigna, S. (2016).
+\newblock {Spectral Ranking}.
+\newblock {\em Network Science}, 4(4):433--445.
+
+\bibitem[Watts and Strogatz, 1998]{smallworld}
+Watts, D.~J. and Strogatz, S.~H. (1998).
+\newblock {Collective Dynamics Of 'Small-World' Networks}.
+\newblock {\em Nature}, 393(6684):440--442.
+
+\bibitem[Whitehouse et~al., 2004]{whitehouse1}
+Whitehouse, L.~E., Tomlin, A.~S., and Pilling, M.~J. (2004).
+\newblock Systematic reduction of complex tropospheric chemical mechanisms,
+  part i: Sensitivity and time-scale analyses.
+\newblock {\em Atmospheric Chemistry and Physics}, 4(7):2025--2056.
+
+\bibitem[Wood, 2014]{skull}
+Wood, B. (2014).
+\newblock {The Origin Of Humans Is Surprisingly Complicated}.
+\newblock {\em Scientific American}.
+\newblock
+  \url{https://www.scientificamerican.com/article/the-origin-of-humans-is-surprisingly-complicated/}.
+
+\end{thebibliography}

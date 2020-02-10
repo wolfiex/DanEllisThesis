@@ -1,0 +1,436 @@
+
+@ARTICLE{abstract-realworld,
+  title         = "{On the limiting behavior of parameter-dependent network centrality measures}",
+  author        = "Benzi, Michele and Klymko, Christine",
+  month         =  dec,
+  year          =  2013,
+  note          = "http://arxiv.org/abs/1312.6722",
+  archivePrefix = "arXiv",
+  eprint        = "1312.6722",
+  primaryClass  = "math.NA",
+  arxivid       = "1312.6722"
+}
+
+
+@article{seeley,
+author = {R. Seeley, John},
+year = {1949},
+month = {12},
+pages = {234-240},
+title = {The net of reciprocal influence: A problem in treating sociometric data},
+volume = {3},
+journal = {Canadian Journal of Psychology/Revue canadienne de psychologie},
+doi = {10.1037/h0084096}
+}
+
+
+@ARTICLE{netcoauthor,
+  title         = "{Twenty Years of Network Science: A Bibliographic and
+                   Co-authorship Network Analysis}",
+  author        = "Molontay, Roland and Nagy, Marcell",
+  month         =  jan,
+  year          =  2020,
+  url           = "http://arxiv.org/abs/2001.09006",
+  archivePrefix = "arXiv",
+  eprint        = "2001.09006",
+  primaryClass  = "physics.soc-ph",
+  arxivid       = "2001.09006",
+  journal="arXiv"
+}
+
+
+@ARTICLE{skull,
+  title    = "{The Origin of Humans Is Surprisingly Complicated}",
+  journal  = "Scientific American",
+  year     =  2014,
+  author  = "Bernard Wood",
+  note     = "\url{https://www.scientificamerican.com/article/the-origin-of-humans-is-surprisingly-complicated/}",
+  issn     = "0036-8733",
+  doi      = "10.1038/scientificamerican0914-40"
+}
+
+
+
+@MISC{web,
+  title       = "{etudier}",
+  author      = "Edsu and Ellis, Dan",
+  institution = "Github",
+  note        = "https://github.com/wolfiex/etudier"
+}
+
+
+@article{gephi,
+author = {Mathieu Bastian and Sebastien Heymann and Mathieu Jacomy},
+title = {Gephi: An Open Source Software for Exploring and Manipulating Networks},
+conference = {International AAAI Conference on Weblogs and Social Media},
+year = {2009},
+keywords = {network;network science;visualization;graph exploration;open source;free software;dynamic network;interactive interface;graph;force vector;java;OpenGL;3-D visualization;user-centric;graph layout;complex graph rendering;network analysis;webatlas},
+note= {http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154}
+}
+
+
+%%%%%
+% web%
+%%%%%
+
+@ARTICLE{nano,
+  title   = "{Fabrication of Bioinspired Actuated Nanostructures with Arbitrary
+             Geometry and Stiffness}",
+  author  = "Pokroy, Boaz and Epstein, Alexander K and Persson-Gulda, Maria C M
+             and Aizenberg, Joanna",
+  journal = "Advanced materials",
+  volume  =  21,
+  number  =  4,
+  pages   = "463--469",
+  month   =  jan,
+  year    =  2009,
+  note    = "http://doi.wiley.com/10.1002/adma.200801432",
+  issn    = "0935-9648, 1521-4095",
+  doi     = "10.1002/adma.200801432"
+}
+
+
+@ARTICLE{biogeo,
+  title   = "{Temporal controls on dissolved organic matter and lignin
+             biogeochemistry in a pristine tropical river, Democratic Republic
+             of Congo}",
+  author  = "Spencer, Robert G M and Hernes, Peter J and Ruf, Rosmarie and
+             Baker, Andy and Dyda, Rachael Y and Stubbins, Aron and Six, Johan",
+  journal = "Journal of geophysical research",
+  volume  =  115,
+  number  = "G3",
+  pages   = "2069",
+  month   =  aug,
+  year    =  2010,
+  note    = "http://doi.wiley.com/10.1029/2009JG001180",
+  issn    = "0148-0227",
+  doi     = "10.1029/2009JG001180"
+}
+
+
+@ARTICLE{neurotrauma,
+  title    = "{Neuroproteomics in neurotrauma}",
+  author   = "Ottens, Andrew K and Kobeissy, Firas H and Golden, Erin C and
+              Zhang, Zhiqun and Haskins, William E and Chen, Su-Shing and
+              Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D",
+  journal  = "Mass spectrometry reviews",
+  volume   =  25,
+  number   =  3,
+  pages    = "380--408",
+  month    =  may,
+  year     =  2006,
+  note     = "http://dx.doi.org/10.1002/mas.20073",
+  language = "en",
+  issn     = "0277-7037",
+  pmid     = "16498609",
+  doi      = "10.1002/mas.20073"
+}
+
+
+@ARTICLE{pilot,
+  title    = "{Fast start-up of a pilot-scale deammonification sequencing batch
+              reactor from an activated sludge inoculum}",
+  author   = "Jeanningros, Y and Vlaeminck, S E and Kaldate, A and Verstraete,
+              W and Graveleau, L",
+  journal  = "Water science and technology: a journal of the International
+              Association on Water Pollution Research",
+  volume   =  61,
+  number   =  6,
+  pages    = "1393--1400",
+  year     =  2010,
+  note     = "http://dx.doi.org/10.2166/wst.2010.019",
+  language = "en",
+  issn     = "0273-1223",
+  pmid     = "20351417",
+  doi      = "10.2166/wst.2010.019"
+}
+
+
+
+@ARTICLE{blood,
+  title    = "{Red blood cell oxidative stress impairs oxygen delivery and
+              induces red blood cell aging}",
+  author   = "Mohanty, Joy G and Nagababu, Enika and Rifkind, Joseph M",
+  journal  = "Frontiers in physiology",
+  volume   =  5,
+  pages    = "84",
+  month    =  feb,
+  year     =  2014,
+  note     = "http://dx.doi.org/10.3389/fphys.2014.00084",
+  keywords = "cellular aging; deformability; heme degradation; oxidative
+              Stress; red blood cells",
+  language = "en",
+  issn     = "1664-042X",
+  pmid     = "24616707",
+  doi      = "10.3389/fphys.2014.00084",
+  pmc      = "PMC3937982"
+}
+
+
+@ARTICLE{milk,
+  title    = "{Life cycle assessment of Italian high quality milk production. A
+              comparison with an EPD study}",
+  author   = "Fantin, Valentina and Buttol, Patrizia and Pergreffi, Roberto and
+              Masoni, Paolo",
+  journal  = "Journal of cleaner production",
+  volume   =  28,
+  pages    = "150--159",
+  month    =  jun,
+  year     =  2012,
+  note     = "http://www.sciencedirect.com/science/article/pii/S095965261100388X",
+  keywords = "LCA; Food; Agriculture; Dairy; Environmental product declaration;
+              Comparability",
+  issn     = "0959-6526",
+  doi      = "10.1016/j.jclepro.2011.10.017"
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%old
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@Article{towards,
+  author =       "Batool K, Niazi MA",
+  title =        "Towards a Methodology for Validation of Centrality Measures in Complex Networks",
+  journal =      "PLoS ONE",
+  volume =       "9",
+  number =       "4",
+  year =         "2014",
+  DOI =          "https://doi.org/10.1371/journal.pone.0090283"
+}
+
+@Article{rscgraph,
+author ="Jacob, Philipp-Maximilian and Lapkin, Alexei",
+title  ="Statistics of the network of organic chemistry",
+journal  ="React. Chem. Eng.",
+year  ="2018",
+volume  ="3",
+issue  ="1",
+pages  ="102-118",
+publisher  ="The Royal Society of Chemistry",
+doi  ="10.1039/C7RE00129K",
+note ="http://dx.doi.org/10.1039/C7RE00129K"}
+
+@article{nnet,
+author = {Wei, Jennifer N. and Duvenaud, David and Aspuru-Guzik, AlÃ¡n},
+title = {Neural Networks for the Prediction of Organic Chemistry Reactions},
+journal = {ACS Central Science},
+volume = {2},
+number = {10},
+pages = {725-732},
+year = {2016},
+doi = {10.1021/acscentsci.6b00219},
+    note ={PMID: 27800555},
+
+note= {
+        https://doi.org/10.1021/acscentsci.6b00219
+
+},
+eprint = {
+        https://doi.org/10.1021/acscentsci.6b00219
+
+}
+
+}
+
+
+@ARTICLE{sm2,
+  title    = "{Network 'small-world-ness': a quantitative method for determining
+              canonical network equivalence}",
+  author   = "Humphries, Mark D and Gurney, Kevin",
+  journal  = "PloS one",
+  volume   =  3,
+  number   =  4,
+  pages    = "e0002051",
+  month    =  apr,
+  year     =  2008,
+  url      = "http://dx.doi.org/10.1371/journal.pone.0002051",
+  language = "en",
+  issn     = "1932-6203",
+  pmid     = "18446219",
+  doi      = "10.1371/journal.pone.0002051",
+  pmc      = "PMC2323569"
+}
+
+
+@ARTICLE{smallworld,
+  title    = "{Collective dynamics of 'small-world' networks}",
+  author   = "Watts, D J and Strogatz, S H",
+  journal  = "Nature",
+  volume   =  393,
+  number   =  6684,
+  pages    = "440--442",
+  month    =  jun,
+  year     =  1998,
+  url      = "http://dx.doi.org/10.1038/30918",
+  language = "en",
+  issn     = "0028-0836",
+  pmid     = "9623998",
+  doi      = "10.1038/30918"
+}
+
+
+
+@article{load,
+  title = {Scientific collaboration networks. II. Shortest paths, weighted networks, and centrality},
+  author = {Newman, M. E. J.},
+  journal = {Phys. Rev. E},
+  volume = {64},
+  issue = {1},
+  pages = {016132},
+  numpages = {7},
+  year = {2001},
+  month = {Jun},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevE.64.016132},
+  note= {https://link.aps.org/doi/10.1103/PhysRevE.64.016132}
+}
+
+@Article{closeness,
+author="Sabidussi, Gert",
+title="The centrality index of a graph",
+journal="Psychometrika",
+year="1966",
+month="Dec",
+day="01",
+volume="31",
+number="4",
+pages="581--603",
+issn="1860-0980",
+doi="10.1007/BF02289527",
+url="https://doi.org/10.1007/BF02289527"
+}
+
+
+
+
+
+
+@Article{Einstein,
+  author =       "Albert Einstein",
+  title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+                 [{On} the electrodynamics of moving bodies]",
+  journal =      "Annalen der Physik",
+  volume =       "322",
+  number =       "10",
+  pages =        "891--921",
+  year =         "1905",
+  DOI =          "http://dx.doi.org/10.1002/andp.19053221004"
+}
+
+
+@article{google,
+          number = {1999-66},
+           month = {November},
+          author = {Lawrence Page and Sergey Brin and Rajeev Motwani and Terry Winograd},
+           title = {The PageRank Citation Ranking: Bringing Order to the Web.},
+            type = {Technical Report},
+       publisher = {Stanford InfoLab},
+       journal={Stanford InfoLab},
+            year = {1999},
+     institution = {Stanford InfoLab},
+             note= {Previous number = SIDL-WP-1999-0120 \url{http://ilpubs.stanford.edu:8090/422/}}
+             }
+
+
+
+@article{eigen,
+ ISSN = {00029602, 15375390},
+ note= {http://www.jstor.org/stable/2780000},
+ author = {Phillip Bonacich},
+ journal = {American Journal of Sociology},
+ number = {5},
+ pages = {1170--1182},
+ publisher = {University of Chicago Press},
+ title = {Power and Centrality: A Family of Measures},
+ volume = {92},
+ year = {1987}
+}
+
+@article{cook,
+ ISSN = {00029602, 15375390},
+ note= {http://www.jstor.org/stable/2779142},
+
+ author = {Karen S. Cook and Richard M. Emerson and Mary R. Gillmore and Toshio Yamagishi},
+ journal = {American Journal of Sociology},
+ number = {2},
+ pages = {275--305},
+ publisher = {University of Chicago Press},
+ title = {The Distribution of Power in Exchange Networks: Theory and Experimental Results},
+ volume = {89},
+ year = {1983}
+}
+
+@ARTICLE{eades,
+author={Eades, P.},
+journal={A Heuristic for Graph Drawing},
+year={1984},
+pages={149-160},
+note={cited By 1},
+source={Scopus},
+}
+
+@article{treemap,
+ author = {Shneiderman, Ben},
+ title = {Tree Visualization with Tree-maps: 2-d Space-filling Approach},
+ journal = {ACM Trans. Graph.},
+ issue_date = {Jan. 1992},
+ volume = {11},
+ number = {1},
+ month = jan,
+ year = {1992},
+ issn = {0730-0301},
+ pages = {92--99},
+ numpages = {8},
+ note= {\url{http://doi.acm.org/10.1145/102377.115768}},
+ doi = {10.1145/102377.115768},
+ acmid = {115768},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@InProceedings{mosaic,
+author="Hartigan, J. A.
+and Kleiner, B.",
+editor="Eddy, William F.",
+title="Mosaics for Contingency Tables",
+booktitle="Computer Science and Statistics: Proceedings of the 13th Symposium on the Interface",
+year="1981",
+publisher="Springer US",
+address="New York, NY",
+pages="268--273",
+isbn="978-1-4613-9464-8"
+}
+
+
+@MISC{lapack,
+  title        = "{LAPACK --- Linear Algebra PACKage}",
+  note         = "http://www.netlib.org/lapack/",
+  howpublished = "\url{http://www.netlib.org/lapack/}",
+  note         = "Accessed: 2019-4-29"
+}
+
+@Misc{scipy,
+  author =    {Eric Jones and Travis Oliphant and Pearu Peterson and others},
+  title =     {{SciPy}: Open source scientific tools for {Python}},
+  year =      {2001--},
+  note= "http://www.scipy.org/"
+}
+
+@Misc{numpy,
+author = {Oliphant, Travis},
+year = {2006},
+month = {01},
+pages = {},
+title = {Guide to NumPy}
+}
+
+@InProceedings{networkx,
+  author =       {Aric A. Hagberg and Daniel A. Schult and Pieter J. Swart},
+  title =        {Exploring Network Structure, Dynamics, and Function using NetworkX},
+  booktitle =   {Proceedings of the 7th Python in Science Conference},
+  pages =     {11 - 15},
+  address = {Pasadena, CA USA},
+  year =      {2008},
+  editor =    {Ga\"el Varoquaux and Travis Vaught and Jarrod Millman},
+}

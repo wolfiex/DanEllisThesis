@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis.aux
+The style file: apalike.bst
+Database file #1: bibtex.bib
+Warning--I didn't find a database entry for "idfpic"
+Warning--I didn't find a database entry for "mcm"
+Warning--I didn't find a database entry for "kpp"
+Warning--I didn't find a database entry for "sklearn"
+Warning--I didn't find a database entry for "("
+Warning--to sort, need author or key in lapack
+Warning--to sort, need author, editor, or key in lsq
+Warning--empty author and editor in lsq
+Warning--empty journal in phrase
+Warning--empty journal in between
+Warning--empty journal in biopr
+Warning--empty journal in hitsweb
+Warning--there's a number but no volume in google
+Warning--empty journal in closeness-book
+You've used 83 entries,
+            1935 wiz_defined-function locations,
+            967 strings with 17781 characters,
+and the built_in function-call counts, 32663 in all, are:
+= -- 3183
+> -- 1398
+< -- 52
++ -- 495
+- -- 473
+* -- 2839
+:= -- 5774
+add.period$ -- 263
+call.type$ -- 83
+change.case$ -- 643
+chr.to.int$ -- 83
+cite$ -- 94
+duplicate$ -- 1153
+empty$ -- 2210
+format.name$ -- 586
+if$ -- 6276
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 78
+newline$ -- 432
+num.names$ -- 245
+pop$ -- 494
+preamble$ -- 1
+purify$ -- 649
+quote$ -- 0
+skip$ -- 895
+stack$ -- 0
+substring$ -- 2321
+swap$ -- 103
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 486
+warning$ -- 9
+while$ -- 254
+width$ -- 0
+write$ -- 1085
+(There were 14 warnings)
