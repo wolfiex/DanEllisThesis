@@ -1,0 +1,28 @@
+
+As with all scientific xxxxx we are faced with three hurdles. These are Understanding, Improvement and Simplification. Visualiation has long been used for the conveying of important information in our culture. Our brains aare predespositions to absorb images and patterns with far greater efficiency than numbers or characters. We utilise this property to unlock previously unused cognitive capabilities in the understanding of large and complex data. 
+Next we consider situations where data is too difficult visualise and apply a series of numerical techneques and metrics to determine what is important and what we might need to measure. 
+Finally we look at combining our previously gained knowledge in the simplification and ... of mechanisns... 
+
+\section{INTRODUCTION }
+
+
+\label{sec:intro}
+ 
+ As science advances, so does our capability to better represent real-world phenomena in the form of simulation and models. This allows for both predictive and evaluative properties for both policymaking, efficiency improvement and climate [refrefref!]. However much of this often comes at a cost. In being able to model, more, and more complex reactions we are often faced with a need for greater computational resources and cognitive ability in the interpretation of the results. \\
+ 
+ 
+ 
+ As mechanisms have evolved from having only a hand full of measured reactions, to multiple reactions from a specific protocol, we see an exponential increase in their size (e.g. the addition of isoprene in version 3.3.1 of the Master Chemical Mechanism \citep(mcm) increased it by XX\% compared to version 2). As we near the end of manual mechanism construction, we enter an age where the we can easily generate mechanisms containing the oxidation and degragation processes of new species. Automatic generation software, although overcoming the problem of manual construction and development, often results in mechanisms containing millions of species and billions of reactions. \\
+ 
+ 
+ 
+In general there are three main issues that may occur due to a mechanisms size. The simplest of these is the interpretation of the results. As human beings with limited screen real estate and cognitive abilities, we are only able to view or observe a handful of reactions at any one time. With chemistry following a power-law distribution (CITE ChaMBRIDGE) (think 6 degrees of separation), the web of influence is vast, complex and heavily intertwined. This makes the understanding of how each species in a several thousand species simulation change difficult at the least. \\
+
+
+
+Next we have the memory requirements required by the integrator. Continuously fetching data from hard storage has a highly detrimental effect on a program. Ideally all components required may be stored on the random access memory during the simulation. As a means to evolve the chemistry, the mechanism (a series of first order differentiable equations) is first integrated and gradded? to produce a relationship matrix of partials - the jacobian. This is an $n \times n$ matrix containing the influence of each species on each other. This means that as our species number increase, the matrix containing these scales by the order of  $O(n^2)$. Since each species does not often contain reactions with many (in proportion to all the other species), a sparse matrix may often be used to circumvent this problem during model execution. However this still poses an issue in both the compilation and preprocessing of these mechanisms, with preprocessors such as KPP[ref] needing to allocate and populate the entire Jacobian matrix, before they are able to create a sparse one for computation. \\
+
+
+Finally although the mechanism is converted into one set of reactions for integration, this is comprised of many different parts relating to each reaction a species is in. As species rely on many others, this forms a numerically stiff system which cannot be easily, or effectively, parallelised. The computation of all reaction rates for each update of the integrator can prove crippling for the computation time of 3D Earth Simulation Models which can contain complex fluid dynamic simulations and transport between grid boxes. This is seen when comparing the full Master Chemical Mechanism (3.3.1) [RFEF] - a benchmark near-explicit representation of our chemical understanding, with GEOS (Goddard Earth Observing System) -Chem  standard mechanism [REF]: 5809 species, 17224 reactions against 241 species and 719 reactions respectively. 
+ 
+ 

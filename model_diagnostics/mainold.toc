@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}The Model}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}Existing Methods}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Concentration time series}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Rate of Production and Loss}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Using the Jacobian Matrix}{7}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Summary of current methods}{8}{subsubsection.2.3.1}
+\contentsline {section}{\numberline {3}Graph based methods}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Unweighted Directed Analysis}{9}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Degree}{9}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Hypertext Induced Topic Search (HITS)}{9}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Weighted Degree}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Shortest Path}{14}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}The hierarchical subgraph of influence.}{14}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Closness Centrality}{18}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Betweenness}{18}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Comparing Closeness with Betweeness}{18}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {3.5}Spectral methods for matrix analysis.}{20}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Page Rank}{20}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}The Google Matrix}{21}{subsubsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.2}Solving the algebra}{22}{subsubsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.3}Personalised Page Rank}{22}{subsubsection.3.6.3}
+\contentsline {section}{\numberline {4}Application and Implication}{27}{section.4}
+\contentsline {subsection}{\numberline {4.1}Reversing the Flow}{27}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Sensitivity Analysis}{29}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Future work and Temporal data}{32}{subsection.4.3}
+\contentsline {section}{\numberline {5}Concluding Remarks}{34}{section.5}

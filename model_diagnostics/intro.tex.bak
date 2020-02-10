@@ -1,0 +1,322 @@
+
+\section{Introduction}
+The node-link style structure has long been used to represent real-world relationships between items. Such a structure is complementary to our cognitive disposition towards pattern recognition [CITE]. It is for this reason that the node-link visualisation format has been used for anything ranging from transportation maps [CITE BECK] to the differentiation of ancestorial lineages of the human race, \autoref{fig:skulls}. However, the abundance and complexity of real-world data often presents us with difficulties in manually representing it. One method to overcome this is through the use of computers to either analyse the data or make use of automated visualisation and graphing tools (i.e. Data-Visualisation) - both of which require a machine parseable representation of the data.
+
+\begin{figure}[H]
+     \centering
+         \includegraphics[width=\textwidth]{figures_c3/humanskulls.png}
+
+        \caption{ The human family tree showing the ancestral lineage to produce the modern-day human. Trees are a specific case example of the use of graph structure within visualisation. Source: \cite{skull}}
+        \label{fig:skulls}
+\end{figure}
+
+
+In the field of mathematics a graph, $G(\nu,\epsilon,\omega)$, is defined as a function of items (vertices\footnote{The term node, item or vertex shall be used interchangeably for the remainder of this chapter. This also applies to links/relationships/edges and edge-weight/strength}), $\nu$ which are connected through a series of links (or edges$^1$) representing any relationships between them, $\epsilon$. Since relationships in the real world are rarely equivalent, we then encode the importance of each link in the form of an edge weight, or strength - $\omega$. Such formats allow both numerical and computational algorithms to understand and interperate the graph structure, providing us with information about the data or make use of automated layout programs for visualisation (Chapter 2).
+
+
+
+
+\section{Graph Metrics}
+
+As our ability to gather more meaningful data increases, so do our datasets. This results with large, multivariate networks of inexplicable complexity. In such cases, our ability to draw out meaningful conclusions based on visualisation alone become highly inhibited. The solution once again falls to the field of mathematics, or more specifically Graph Theory through the use of a set of numerical algorithms or centrality metrics.
+
+
+
+
+
+Centrality metrics are designed in such a way that they reveal important characteristics of the network and its underlying structure.
+They have been implemented for a range of contexts...
+ the Russian spy network, roman etc (SEE BOOK ON DESK for examples), they reveal trends of ...
+
+The mathematical nature of these allow us to alleviate some of the difficulties of large/complex graphs and may be used to complement or replace visualisations with regards to data mining. Their ability to identify important nodes, as well as their role within the network, makes them particularly useful for application on graph databases (neo4j [ref]). Here we may have billions of nodes representing anything from commodities to user names in trade, video streaming, finance or social media [referferfereferef].
+
+
+
+\subsection{Understanding Centrality - The Citation Graph}
+
+To demonstrate the use of such metrics we take the citation network created through scraping the results of google scholar [CITE] for all papers related to the Master Chemical Mechanism (MCM) \cite{mcm}.
+
+\paragraph{The Master Chemical Mechanism}
+
+The master chemical mechanism is a near explicit representation of our foremost understanding of gas-phase tropospheric chemistry. The mechanism describes the oxidation of long-chain hydrocarbons and aromatics and the respective rates at which these occur. It has become an .... mechanism used to simulate or benchmark models and results in the field of atmospheric chemistry. Information on the chemistry, and how this can be used with regards to the following algorithms are presented in \autoref{sec:chem}
+
+
+
+
+
+\subsubsection{Collecting the data}
+
+To obtain data regarding papers on the Master Chemical Mechanism, we begin by querying only articles containing the set of words: \{ \emph{"Master", "Chemical", "Mechanism"} and \emph{"MCM"} \}. We then select the first 100 pages, each with 10 articles within them and collect their names. Following this, we repeat the process by looking at the top 1000 citations for each page. This results in a network of 15744 papers and 30178 citations\footnote{Note: this had the potential of returning up to 1000,000 nodes}. Data collection was done using a tweaked version of \emph{etudier} \cite{web}.
+
+We then created a three-dimensional visualisation tool using WebGL and THREE.js (REF). This allowed for the quick and efficient viewing, querying and interacting of the data. The additional dimension also helped identify the temporal change in the network by mapping node height relative to the year of publication.
+
+
+\begin{figure}[H] %dont leave blank lines between sfig
+     \centering
+     \hfill
+     \begin{subfigure}{0.495\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figures_c3/gephiall.png}
+         \caption{A 2D force directed representation of the network using the gephi software \cite{gephi}}
+         \label{fig:gall}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}{0.47\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figures_c3/sideall.png}
+         \caption{3D orthographic camera view across the time axis - This shows papers with respect to publication date (yellow = recent.) \autoref{fig:gall}}
+         \label{fig:sideweb}
+     \end{subfigure}
+     \hfill
+
+     \begin{subfigure}[b]{0.95\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{figures_c3/threeall.png}
+         \caption{3D perspective camera view of the graph in  \autoref{fig:gall}}
+         \label{fig:3dgeph}
+     \end{subfigure}
+
+
+        \caption{Still captures of 2D and 3D visualisations of the dataset. Node size corresponds to the number of citations, and colour (and z-axis) corresponds to the publication year for each paper.}
+        \label{fig:weball}
+
+\end{figure}
+
+
+\subsubsection{Filtering the data}
+
+In the method used to web scrape data there exist several features which needed to be corrected. Firstly there exist papers within the dataset older than 1996 (when the first version of the MCM was created), \autoref{fig:sideweb}. This is because papers, including the first MCM related papers, are likely to reference historic research and findings. Since we aim to explore the effect of introducing the master chemical mechanism, these are removed.
+
+Next belt consisting of small satellite clusters of poorly connected clusters are apparent in \autoref{fig:3dgeph}. These are often papers which are often not within the field of atmospheric chemistry (thus the poor connectivity between main network body) but have cited mechanism related research, \autoref{table:other}. These will then also have a localised halo of papers citing them, due to the web scraping method used.
+
+Finally, author names and some extended titles may be truncated with the use of ellipses. This is due to the web scraping script extracting these directly from the Google scholar page, and not the original articles themselves. It is worth noting that the results in this section are not explicit, but rather a demonstration of graph theory on a real-world dataset.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ p{0.6\textwidth}|l }
+ \hline
+   & \\
+ Fabrication of Bioinspired Actuated Nanostructures with Arbitrary Geometry and Stiffness & \cite{nano} \\ \\
+ Temporal controls on dissolved organic matter and lignin biogeochemistry in a pristine tropical river  & \cite{biogeo} \\ \\
+Neuroproteomics in Neurotrauma & \cite{neurotrauma}\\ \\
+Fast start-up of a pilot-scale deammonification sequencing batch reactor from an activated sludge inoculum & \cite{pilot} \\ \\
+Red blood cell oxidative stress impairs oxygen  delivery and induces red blood cell aging & \cite{blood} \\ \\
+Life cycle assessment of Italian high quality milk production. & \cite{milk}\\ \\
+ \hline
+\end{tabular}
+\end{center}
+\label{table:otherpapers}
+\caption{Example topics presented in some isolated satellite clusters.}
+
+\end{table}
+
+
+\paragraph{Co-citation}
+The problem of removing clusters of adjunct research fields may be solved through the use of a co-citation graph. Such methods have been used to show forward propagating trends of papers in the same field, compared to the backwards propagation of citation graphs. Cocitation has been heavily used in the comparison of academic ... most notably in natures 150-year edition [CITE], where...
+
+CiteSpace II: Detecting and Visualizing Emerging Trends
+and Transient Patterns in Scientific Literature
+Chaomei Chen
+
+
+
+
+Using the methods above we reduce the citation graph to 451 papers and 2758 edges, and create an undirected co-citation graph of the same number of nodes, but 5402 edges.
+
+\subsubsection{Co-author}
+Finally, it is also useful to see what authors commonly publish together\footnote{ Disclaimer: as mentioned earlier, not all authors for every paper were recorded by the web scraping algorithm}.
+Using such a method we can build a co-author network which may draw attention to research areas/groups who perform work related to the MCM. As this is the simplest of the three outlined networks, it will also be used in the visualisation of each metric below.
+
+
+\subsection{Network analysis}
+This section aims to access the efficiency of graph centrality metrics in identifying important nodes within a network. To do this three inherently simple networks derived from the citing of papers related to the Master Chemical Model will be used. The first is the use of directed citation counts, the second using a co-citation network to find related topics, and the last a co-author map of the authors involved for each paper. The reasoning behind this is that if successful, the metrics should uncover groups of authors who work on similar topics, as well as papers which are important with regards to the MCM and the atmospheric community. Such types of analysis have been performed before as a means of predicting future citations and core papers within a field.
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Degree}
+The simplest, and most intuitive, metric is degree centrality \cite{degreefreeman}. This can be described as the sum of all links incident on a node - simply put, we count the number of citations going into and out of a paper. Such analysis has been used to determine influence in social media or in calculating the probability of a profile committing online auction fraud \cite{degreetwitter,degreefreeman}.
+
+
+
+\begin{figure}[H]
+     \centering
+         \includegraphics[width=.8\textwidth]{figures_c3/degreeauthor.png}
+        \caption{ Degree centrality within the co-Author network}
+        \label{fig:degauth}
+\end{figure}
+\input{tables/degree_Author.tex}
+
+
+\input{tables/degree_Citation.tex}
+\input{tables/degree_Co-Citation.tex}
+
+
+\subsubsection{Directed Degree}
+In directed graphs, the direction of edges becomes important. To establish which nodes are important concerning the service provided by their edges, we may split their degree into inwards and outwards going links. This allows us to differentiate papers which cite many others, from those which are cited by others.
+
+Since the only directed network within our set is the citation network, we shall use this for comparison with the normal degree.
+
+
+\paragraph{In-Degree}
+\input{tables/In-Degree_Citation.tex}
+
+\paragraph{Out-Degree}
+\input{tables/Out-Degree_Citation.tex}
+
+
+\subsubsection{Closness Centrality}
+Closeness centrality ranks all the nodes within a network on their ability to convey information to other nodes. We calculate the reciprocal of the sum of Dijkstra paths\footnote{the shortest available path} to every other species \cite{closeness-book,closeness}. This creates a metric capable of representing the average distance of a node to every other within the network. Such a metric has been found useful in assessing the usefulness of intelligence gathering in terrorist networks, packet arrival in telecommunications and the calculation of word importance in key-phrase extraction \cite{terror,examples_centrality,phrase}.
+\begin{quote}
+\textit{
+\textbf{Example analogy}If we take the UK rail network as an example, York station will have a high closeness value as it is well connected and central in location. This means it is easy to reach every other location when compared to other stations.
+}
+\end{quote}
+
+\begin{figure}[H]
+     \centering
+         \includegraphics[width=.8\textwidth]{figures_c3/closenessauthor.png}
+        \caption{ Closeness centrality within the co-Author network}
+        \label{fig:closeauth}
+\end{figure}
+\input{tables/closeness_Author.tex}
+
+\input{tables/closeness_Citation.tex}
+\input{tables/closeness_Co-Citation.tex}
+\subsubsection{Betweenness}
+In social networks, it is often important not only to know who has the greatest reach (closeness centrality) but also where bottlenecks or `broker' positions occur. The betweenness centrality is a count of the number of geodesics (shortest) paths that pass through a specific node in the network\footnote{In cases where there are multiple possible `shortest` paths, we can account for this using the denominator}.
+Nodes with a high betweenness since they control, or limit, the amount of information that can be transferred across the network. If a node lies on the shortest path between two other nodes, we may consider it a `pivotal` node \cite{neoj4}. should such a node then be removed, we incur either a deviation, whereupon a longer path is required, or two separate connected subgraphs \cite{betweenness, between, betweenfast,examples_centrality}.
+\begin{quote}
+\textit{
+\textbf{Example analogy} Expanding on the UK rail network analogy, Shrewsbury station serves the critical role of connecting many lines from England to Wales. In removing this station, routes from the Liverpool or Manchester to Cardiff will be greatly increased. Additionally, the Aberystwyth section of the line will then become isolated from the rest of the country.
+}
+\end{quote}
+\begin{figure}[H]
+     \centering
+         \includegraphics[width=.8\textwidth]{figures_c3/betweenauthor.png}
+        \caption{ Betweenness centrality within the co-Author network}
+        \label{fig:betauth}
+\end{figure}
+\input{tables/betweenness_Author.tex}
+
+
+\input{tables/betweenness_Citation.tex}
+\input{tables/betweenness_Co-Citation.tex}
+\subsubsection{Spectral methods and matrix analysis}
+
+Graphs can often be represented in the form of relationship (adjacency) matrixes (ref Chapter 1). This allows us to apply the theory of linear maps, such as eigenvectors and values, to stochiometric data in matrix form. Such methods have been around since the 1950s, \cite{seeley}, but mainly became popular with the release of Larry Page's page-rank algorithm \cite{google} - the algorithm that began google. These methods, in addition to the HITS algorithm \autoref{hits}, make use of a graphs native matrix representation to calculate node importance. Spectral algorithms can be broken down into four categories \cite{spectral}:
+
+\begin{table}[H]
+  \centering
+\begin{tabular}{p{.1\textwidth}||p{.16\textwidth} p{.16\textwidth}}
+\hline
+ & No Normalisation  & Row Normalisation \\
+ \hline \hline
+No Damping & Eigenvector \cite{eigen, eigen2}  \: & Markov Chain Steady State \cite{seeley} \: \\
+Damping & Katz \cite{katz} \: & Total Effect Centrality PageRank \cite{google} \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+Here damping terms represent the probability of moving to new random starting position, allowing for the user to `randomly select a new webpage' or leave an isolated cluster. Normalisation of the matrix does not affect the node ranking, but merely adjusts the numerical output of the algorithm. It is for this reason that its overall practicality may be debated \cite{spectral}. Since page rank is the most common of these methods and allows for a tune-able degree of randomness within network propagation, this shall be discussed in more detail.
+
+
+
+\subsubsection{Hypertext Induced Topic Search (HITS)}\label{hits}
+One eigenvector based algorithm with use in classifying webpages into Hubs and Authorities is HITS \cite{hits,hitsvspagerank,hitsweb}. This is a more complex method of looking at the role of a node as an information provider (lots of outward links), i.e. an Authority or an information receiver - a Hub.
+Although there are many similarities to the directed degree centrality, this algorithm explores how information is propagated across the whole system, and can, therefore, give slightly different results.
+
+\input{tables/Hub_Citation.tex}
+\input{tables/Authority_Citation.tex}
+
+
+
+
+
+
+\paragraph{Page Rank}
+
+
+Page rank is the best known of all centrality algorithms \cite{neoj4}. As with all eigenvector methods, it measures the transitive influence in nodes, taking the effect of neighbours, and by proxy, their neighbours into account. In the context of web pages or citations, a link from a highly ranked, or credible, source holds more weight than one from someone less credible. \\
+
+
+History of page rank, app web pages citation counts. biophysics, etc, etc,..
+
+\paragraph{The Google Matrix}
+To solve for page rank, one must first construct the google matrix. Once this has been done, iterations of the power method can be applied until convergence is reached. \\
+
+Building the google matrix begins by turning our graph adjacency matrix $A_{i,j}$ into a Markov matrix $M_{i.j}$. The simplest way is to take our dyadic link map \autoref{binary}, and divide each column $j$ by the sum of the total outgoing links of node $j$, Algorithm \ref{eqn:markov}. Dangling nodes are species with no outgoing links. In chemical mechanisms, these are generally removed but could represent sinks within a system. In the case of dangling nodes, either a personalised list of values or a constant value, $1/n$, replaces the zero columns\footnote{Where $n$ is the number of nodes}.  This construction results in a normalised\footnote{ \: $\Sigma_{i=1,n} M(i,j) = $ unity} matrix of Markov chains representing the fractional production for node $j$ from all other nodes. \\
+
+
+
+
+\begin{algorithm} \caption{Adjacency to Markov matrix.}
+\begin{algorithmic}[1]
+\State Obtain graph adjacency matrix, $A_{i,j}$.
+\Repeat
+\ForEach{$ j \in \mathcal{}$ columns}
+\State $M($:$,j) \gets A($:$,j) / \Sigma_{i=1,n} A(j,i)$
+\EndFor
+\Until {$\Sigma_{i=1,n} M(i,j) = 1$}
+
+\end{algorithmic}\label{eqn:markov}
+\end{algorithm}
+
+
+
+The google matrix can now be defined using \autoref{eqn:google}. Cyclic reactions and nodes that only point towards each other within a group can `trap' the user, increasing their ranks. A damping factor, $\beta$, can be used to reduce this through selecting a probability that a user follows an existing link, typically $\beta = 0.85$, and a probability that they randomly select another page\footnote{Also known as teleportation.}, $(1-\beta)$. The value of $\beta$ will vary with application - a study in the application to biological data found an optimum value of $\beta = 0.694$ using Bayesian analysis \cite{biopr}, however in most cases the typical value will suffice.
+
+
+\begin{center}
+\begin{equation}
+     G_{i,j} = \beta M + \cfrac{1 - \beta}{n}
+ %\vec{dsfds}
+ \label{eqn:google}
+\end{equation}
+\begin{tabular}{ccl}
+$\beta$&-&\textit{Probability the user follows a link} \\
+ $(1 - \beta)$&-&\textit{Probability the user does not follow a link (teleportation)} \\
+$n$&-&\textit{Number of items / species}\\
+$M$&-&\textit{Normalised markov matrix}
+\end{tabular}
+\end{center}
+
+
+\paragraph{Solving the algebra}
+
+Once defined, the google matrix can be solved by propagating a ones vector, $r$ of length $n$, where $n$ is the number of species using Algorithm \ref{eqn:forwards}. This is repeated until a pre-defined tolerance, $\epsilon$ is reached. For best results, this can be set to the precision of the program.
+
+\begin{algorithm} \caption{Solving the google matrix linear algebra}
+\begin{algorithmic}[1]
+\State {Define value vectors $\Bar{r}_t$ and $\Bar{r}_{t+1}$:}
+\State  $\Bar{r}_t \:\:= [1_1, 1_2, ... , 1_n]$, $\Bar{r}_{t+1} = [0_1, 0_2, ... , 0_n]$
+\State
+\While {$||\Bar{r}_{t+1} - \Bar{r}_t|| > \epsilon$}
+\State $\Bar{r}_{t+1} \gets M . \Bar{r}_t$
+\State $\Bar{r}_t = \Bar{r}_{t+1}$
+\EndWhile
+\end{algorithmic}\label{eqn:forwards}
+\end{algorithm}
+
+For smaller systems, it is possible to use lapack \cite{lapack}, linear algebra solvers such as those used by numpy \cite{numpy}. However, if a network is large, computing an $n \times n $ matrix may be very memory consuming. It is then possible to apply the methods as described above using a sparse matrix on a per-node bases \cite{scipy,networkx}. A comparison of the page rank algorithm is seen in \autoref{fig:prrpr}.
+
+\paragraph{Prediction}
+\begin{figure}[H]
+     \centering
+         \includegraphics[width=.8\textwidth]{figures_c3/pagerankauthor.png}
+        \caption{ Page Rank centrality within the co-Author network}
+        \label{fig:pagerankauth}
+\end{figure}
+\input{tables/pagerank_Author.tex}
+
+
+\input{tables/pagerank_Citation.tex}
+\input{tables/pagerank_Co-Citation.tex}

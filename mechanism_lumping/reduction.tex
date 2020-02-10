@@ -1,0 +1,68 @@
+
+\section{Reduction as a solution.}
+
+As mechanisms complexity has long been a problem, many methods of simplification and `reduction' have been developed over the years. Although these are indeed useful, many reduced mechanism often require manual intervention and are usage/case specific. A generalisation of mechanism reduction is the elimination of species and reactions to produce a a smaller, more concise \footnote{and thus manageable}, mechanism whist retaining important properties or features of interest. There are many methods in the literature, the most common of which, are defined below. \\
+
+
+%The methods of Jacobian analysis and
+%overall rate sensitivity analysis proved to be efficient and capable of removing the majority of redundant reactions and
+%species in the scheme across a wide range of conditions relevant to the polluted troposphere.\\
+%
+%The use of the
+%quasi-steady state approximation (QSSA) proved to be an extremely successful method of removing the fast time-scales
+%within the system, as demonstrated by a local perturbation
+%analysis at each stage of reduction. QSSA species were automatically selected via the calculation of instantaneous QSSA
+%
+%whitehouse pt 1 
+%
+
+
+
+\subsection{Reaction Removal}
+The simplest method of reducing the number of items computed in a model, is to reduce the number of reactions. This eliviates the computational burden of calculating the rate of reaction each timestep.
+Classically this was done through the use of Rate and Production analaysis [ref previous chapter]. This allows for the visualisation of each reactions contribution to the rate of change of concentration of a a species of interest. In doing this we can may fillter redundant reactions that contribute less than a certain percentage\footnote{Typically $~5\%$} to the formation of our important species. Other more in depth methods include the principle component analysis of the sensetivity (PCAS), where the most important parameters (the principal components) related to a simulation are selected. Here the objective parameters are those of our important species, and and the investigated parameters are the rate coefficients \cite{PCAS}.
+
+
+\subsection{Species removal}
+Next we have species removal as a method to reduce a mechanism. This is useful not only because it reduced the size of the jacobian, but the removing or combining of species inherently reduces or simplifies the reactions within a mechanism. \cite{whitehouse1} states that using jacobian or sensetivity analysis methods proved `capable' and `efficient' in removing most redundant reactions and species from the MCM. Although there are many methods in which this may be done, all of these tend to partition the chemistry within three groups:
+
+
+\begin{itemize}
+    \item \textbf{Important} - reactions or species directly related to the topic / outcome we are interested in
+    \item \textbf{Needed} - reactions/species required by the important species, such that they may perform their desired function
+    \item \textbf{Redundant} - those we may remove with little or no consequence to the final outcome of the model. 
+\end{itemize}
+
+
+
+The interconnected, cascade nature of atmospheric chemistry results in the \emph{important} species containing many dependencies. This means that many of these processes are iterative processes, where necessary species are added to the important species list on each itteration. This is then repeated until either a gap in the chemistry is reached, or more likely a mechanism of the desired size is obtained. There are several methods on how to approach this, some of which are outlined below. 
+
+\subsubsection{Trial and Error}
+The simplest method is one of trial and error \cite{tur1990} (Method 1). Here all the consuming reactions of a species are removed. If the resulting deviation between the full and the reduced mechanism is small, then the species may be removed. The downsides of this method is that it may be inefficient for large mechanisms, and only works on a per-species level - you cannot remove like groups. 
+
+\subsubsection{Species Removal by Inspection of Rates}
+One of the first approaches to removing species was given by Frenklach in \cite{frenk} with respect to combustion modelling. Here species whose reactions are much slower than the rate determining steps of a mechanism are marked as redundant and removed. 
+
+\subsubsection{Jacobian Connectivity Method}
+
+The log-normalised Jacobian matrix can be used to determine the change in production of a species due to a 1\% change in the concentration of any other species. In squaring the effect of this for all improtant species, we get a metric depicting how the change in a certain species affects the concentrations on all important species, \autoref{connectivity}, where $({y_i}/{f_i})({\partial f_i}/{\partial y_i})$ is element $i$ of the normalised Jacobian . Through an iterative process we can identify redundant species, of a low contribution to our important species, and remove them. This is known as the Connectivity Method \cite{cm}.
+
+
+\begin{equation}
+B_i  = \sum_j(({y_i}/{f_i})({\partial f_i}/{\partial y_i}))^2 \label{connectivity}
+\end{equation}
+
+\subsection{Lumping}
+Rather than removing species or reactions from a mechanism we may combine them to form a new composite species. This is species lumping. To do this we must first consider how we determine species that are to be joined together, and then how their grouped reactions will contribute to every other species it reacts with. Some of the more general types of lumping styles are outlined below. 
+
+
+\subsubsection{Chemical Lumping}
+Mechanisms follow protocols in their generation. This produces reaction styles that many like-structured species follow in their degregation. In determining such classes we may be able to generalise like-species reactions and group them together as one. Taking the CRI mechanism as an example, this has taken the Ozone production capability as a feature of interest. The rato of CC and CH bonds are used to determine a species oxidation possibility ... An example of this are species such as CARB9  ... some examples and what the names mean \\
+
+As this type of lumping has already been performed on our starting mechanism, we shall not be applying it any further. 
+
+
+\subsubsection{Linear}
+\subsubsection{Lifetime}
+\subsubsection{Quasi Steady State Approximation (QSSA)}
+QSSA works on the axiom that the the flux through a species is 0  - Use louise whitehouses thesis here (better description that the analysis to kinetic reactions book)

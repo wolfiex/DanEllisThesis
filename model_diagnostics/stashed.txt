@@ -1,0 +1,1431 @@
+diff --git a/.DS_Store b/.DS_Store
+index d4acc84..e00ee24 100644
+Binary files a/.DS_Store and b/.DS_Store differ
+diff --git a/centrality.bib.bak b/centrality.bib.bak
+new file mode 100644
+index 0000000..336cc15
+--- /dev/null
++++ b/centrality.bib.bak
+@@ -0,0 +1,239 @@
++@article{degreefreeman,
++  title={Centrality in social networks conceptual clarification},
++  author={Freeman, Linton C},
++  journal={Social networks},
++  volume={1},
++  number={3},
++  pages={215--239},
++  year={1978},
++  publisher={North-Holland}
++}
++
++
++@MISC{degreetwitter,
++  author="Gemma, Joyce",
++  title        = "{The Most Influential Men and Women on Twitter 2017}",
++  booktitle    = "{Brandwatch}",
++  url          = "https://www.brandwatch.com/blog/react-influential-men-and-women-2017/",
++  howpublished = "\url{https://www.brandwatch.com/blog/react-influential-men-and-women-2017/}",
++  note         = "Accessed: 2019-4-28"
++}
++
++@InProceedings{degreeauction,
++author="Bangcharoensap, Phiradet
++and Kobayashi, Hayato
++and Shimizu, Nobuyuki
++and Yamauchi, Satoshi
++and Murata, Tsuyoshi",
++editor="Bifet, Albert
++and May, Michael
++and Zadrozny, Bianca
++and Gavalda, Ricard
++and Pedreschi, Dino
++and Bonchi, Francesco
++and Cardoso, Jaime
++and Spiliopoulou, Myra",
++title="Two Step graph-based semi-supervised Learning for Online Auction Fraud Detection",
++booktitle="Machine Learning and Knowledge Discovery in Databases",
++year="2015",
++publisher="Springer International Publishing",
++address="Cham",
++pages="165--179",
++isbn="978-3-319-23461-8"
++}
++
++
++@ARTICLE{hits,
++  title     = "{Authoritative Sources in a Hyperlinked Environment}",
++  author    = "Kleinberg, Jon M",
++  journal   = "Journal of the ACM",
++  publisher = "ACM",
++  volume    =  46,
++  number    =  5,
++  pages     = "604--632",
++  month     =  sep,
++  year      =  1999,
++  url       = "http://doi.acm.org/10.1145/324133.324140",
++  address   = "New York, NY, USA",
++  keywords  = "World Wide Web, graph algorithms, hypertext structure, link
++               analysis",
++  issn      = "0004-5411",
++  doi       = "10.1145/324133.324140"
++}
++
++@ARTICLE{hitsvspagerank,
++  title     = "{A Survey of Eigenvector Methods for Web Information Retrieval}",
++  author    = "Langville, A and Meyer, C",
++  journal   = "SIAM Review",
++  publisher = "Society for Industrial and Applied Mathematics",
++  volume    =  47,
++  number    =  1,
++  pages     = "135--161",
++  month     =  jan,
++  year      =  2005,
++  url       = "https://doi.org/10.1137/S0036144503424786",
++  annote    = "doi: 10.1137/S0036144503424786",
++  issn      = "0036-1445",
++  doi       = "10.1137/S0036144503424786"
++}
++
++@ARTICLE{hitsweb,
++  title  = "{The Web as a graph}",
++  author = "Kumar, Ravi and Upfal, Eli",
++  url    = "http://cs.brown.edu/research/webagent/pods-2000.pdf"
++}
++
++
++@ARTICLE{phrase,
++  title  = "{A Comparison of Centrality Measures for Graph-Based Keyphrase
++            Extraction}",
++  author = "Boudin, Florian",
++  url    = "https://hal.archives-ouvertes.fr/hal-00850187/document"
++}
++
++
++@ARTICLE{terror,
++  title   = "{Mapping networks of terrorist cells}",
++  author  = "Krebs, Valdis E",
++  journal = "Connections",
++  volume  =  24,
++  number  =  3,
++  pages   = "43--52",
++  year    =  2002,
++  url     = "http://ecsocman.hse.ru/data/517/132/1231/mappingterroristnetworks.pdf",
++  issn    = "0226-1766"
++}
++
++
++@ARTICLE{closeness-book,
++  title = "{Social Network Analysis: Theory and Applications}",
++  url   = "https://www.politaktiv.org/documents/10157/29141/SocNet_TheoryApp.pdf"
++}
++
++
++@ARTICLE{dev-social-analysis,
++  title  = "{The Development of Social Network Analysis---with an Emphasis on
++            Recent Events}",
++  author = "Freeman, Linton C",
++  url    = "http://moreno.ss.uci.edu/91.pdf"
++}
++
++@article{betweenness,
++author = {Freeman, Linton and Borgatti, Stephen and White, Douglas},
++year = {1991},
++month = {06},
++pages = {141-154},
++title = {Centrality in Valued Graphs: A Measure of Betweenness Based on Network Flow},
++volume = {13},
++journal = {Social Networks},
++doi = {10.1016/0378-8733(91)90017-N}
++}
++
++
++@ARTICLE{spectral,
++  title     = "{Spectral ranking}",
++  author    = "Vigna, Sebastiano",
++  journal   = "Network Science",
++  publisher = "Cambridge University Press",
++  volume    =  4,
++  number    =  4,
++  pages     = "433--445",
++  month     =  dec,
++  year      =  2016,
++  url       = "https://www.cambridge.org/core/journals/network-science/article/spectral-ranking/99ACDCD0CC1B774AB0041FB16AB43D1B",
++  keywords  = "ranking; centrality; eigenvectors",
++  issn      = "2050-1242, 2050-1250",
++  doi       = "10.1017/nws.2016.21"
++}
++
++
++@article{between,
++author = {Freeman, Linton},
++year = {1977},
++month = {03},
++pages = {35-41},
++title = {A Set of Measures of Centrality Based on Betweenness},
++volume = {40},
++booktitle = {Sociometry}
++}
++
++@ARTICLE{betweenfast,
++    author = {Ulrik Brandes},
++    title = {A Faster Algorithm for Betweenness Centrality},
++    journal = {Journal of Mathematical Sociology},
++    year = {2001},
++    volume = {25},
++    pages = {163--177}
++}
++
++% unused but really good. 
++@ARTICLE{examples_centrality,
++  title    = "{Centrality and network flow}",
++  author   = "Borgatti, Stephen P",
++  journal  = "Social networks",
++  volume   =  27,
++  number   =  1,
++  pages    = "55--71",
++  month    =  jan,
++  year     =  2005,
++  url      = "http://www.sciencedirect.com/science/article/pii/S0378873304000693",
++  keywords = "Centrality; Network flow; Typology",
++  issn     = "0378-8733",
++  doi      = "10.1016/j.socnet.2004.11.008"
++}
++
++
++@ARTICLE{neoj4,
++  title  = "{Practical Examples in Apache Spark \& Neo4j}",
++  author = "Needham, Mark and Hodler, Amy E",
++  url    = "https://neo4j.com/neoassets/graphbooks/Graph_Algorithms_Neo4j.pdf",
++  journal="O'Reilly",
++  year=2019,
++  isbn="978-1-492-05781-9."
++}
++
++
++@article{eigen2,
++title = "Some unique properties of eigenvector centrality",
++journal = "Social Networks",
++volume = "29",
++number = "4",
++pages = "555 - 564",
++year = "2007",
++issn = "0378-8733",
++doi = "https://doi.org/10.1016/j.socnet.2007.04.002",
++url = "http://www.sciencedirect.com/science/article/pii/S0378873307000342",
++author = "Phillip Bonacich",
++keywords = "Centrality, Eigenvector"
++}
++
++
++@ARTICLE{katz,
++  title    = "{Universal behavior of load distribution in scale-free networks}",
++  author   = "Goh, K I and Kahng, B and Kim, D",
++  journal  = "Physical review letters",
++  volume   =  87,
++  number   = "27 Pt 1",
++  pages    = "278701",
++  month    =  dec,
++  year     =  2001,
++  url      = "http://dx.doi.org/10.1103/PhysRevLett.87.278701",
++  language = "en",
++  issn     = "0031-9007",
++  pmid     = "11800921",
++  doi      = "10.1103/PhysRevLett.87.278701"
++}
++
++
++@ARTICLE{biopr,
++  title         = "{Strategic heuristics underlie animal dominance hierarchies
++                   and provide evidence of group-level social knowledge}",
++  author        = "Hobson, Elizabeth A and M{\o}nster, Dan and DeDeo, Simon",
++  month         =  oct,
++  year          =  2018,
++  url           = "http://arxiv.org/abs/1810.07215",
++  archivePrefix = "arXiv",
++  eprint        = "1810.07215",
++  primaryClass  = "q-bio.PE",
++  arxivid       = "1810.07215"
++}
+diff --git a/chemistry.tex b/chemistry.tex
+index 985cbb6..3995f6b 100644
+--- a/chemistry.tex
++++ b/chemistry.tex
+@@ -1,5 +1,22 @@
+ 
+-\section{Applying graph theory to chemical results}\label{sec:chem}
++\section{Existing analysis methods}
++Historically most methods for analysing model output fit into one of three categories. These are concentration analysis of the timeseries, exploration of the fluxes for each species ($\dot{v}$) or reaction, or looking at the gradient for each of these (jacobian analysis).
++
++
++\subsection{Concentration time series}
++The concenentration of a sepcies tells us information about its abundance within the atmosphere. As time evolves, species are oxidised, bonds are made/broken and the overall composition and ratios of concentrations of species change. In examining a species concentration we are able to not only map its changes throughout time, but also establish how changes in the intial conditions can affect the end result of a simulation. We can then use this in predicting how changes in policy or management may influence the atmosphere. Additionally we can also determine influential factors and relationships, for example the inverse response between \ch{NO2} and \ch{NO} in \autoref{fig:concentration}.
++
++\begin{figure}[H]
++     \centering
++         \includegraphics[width=.7\textwidth]{figures/ch2concentration.pdf}
++        \caption{Concentration time series: The classic method for identifying changes in a model. This multi-plot shows the changes in concentration profiles for all initialised species following an initial spin-up to steady state. }
++        \label{fig:concentration}
++\end{figure}
++
++
++
++
++
+ 
+ 
+ 
+@@ -8,6 +25,15 @@
+ 
+ 
+ 
++
++\section{Applying graph theory to chemical results}\label{sec:chem}
++
++
++
++
++
++
++
+  The Jacobean matrix is a descriptor for how the transformation of the chemical system from one latent space to anther. Similarities between this and a graph adjacency matrix make the conversion between them almost trivial by taking the $log_{10}$ and normalising between 1 and 0.
+ 
+ Having generated a representation of the chemical network within a simulation it is now possible to apply a range of network tools to
+diff --git a/figures_c3/GroupAuthor.png b/figures_c3/GroupAuthor.png
+new file mode 100644
+index 0000000..60dc158
+Binary files /dev/null and b/figures_c3/GroupAuthor.png differ
+diff --git a/figures_c3/WACLauthor.png b/figures_c3/WACLauthor.png
+new file mode 100644
+index 0000000..d76425e
+Binary files /dev/null and b/figures_c3/WACLauthor.png differ
+diff --git a/figures_c3/betweenauthor.png b/figures_c3/betweenauthor.png
+index 121f67d..1106a35 100644
+Binary files a/figures_c3/betweenauthor.png and b/figures_c3/betweenauthor.png differ
+diff --git a/figures_c3/closenessauthor.png b/figures_c3/closenessauthor.png
+index 01bbea3..d6fb462 100644
+Binary files a/figures_c3/closenessauthor.png and b/figures_c3/closenessauthor.png differ
+diff --git a/figures_c3/degreeauthor.png b/figures_c3/degreeauthor.png
+index b03e815..64a2c9b 100644
+Binary files a/figures_c3/degreeauthor.png and b/figures_c3/degreeauthor.png differ
+diff --git a/figures_c3/pagerankauthor.png b/figures_c3/pagerankauthor.png
+index bea66e1..0f7217d 100644
+Binary files a/figures_c3/pagerankauthor.png and b/figures_c3/pagerankauthor.png differ
+diff --git a/intro.tex b/intro.tex
+index b1f9153..c362310 100644
+--- a/intro.tex
++++ b/intro.tex
+@@ -125,7 +125,17 @@ Using the methods above we reduce the citation graph to 451 papers and 2758 edge
+ 
+ \subsubsection{Co-author}
+ Finally, it is also useful to see what authors commonly publish together\footnote{ Disclaimer: as mentioned earlier, not all authors for every paper were recorded by the web scraping algorithm}.
+-Using such a method we can build a co-author network which may draw attention to research areas/groups who perform work related to the MCM. As this is the simplest of the three outlined networks, it will also be used in the visualisation of each metric below.
++Using such a method we can build a co-author network which may draw attention to research areas/groups who perform work related to the MCM - for instance \autoref{fig:autorgroup} hilights three main workgroup locations present in papers relating to the MCM. Additionaly as this is the simplest of the three networks above, it will also be used to visually show the properties of each centrality metric.
++
++
++
++\begin{figure}[H]
++     \centering
++         \includegraphics[width=.8\textwidth]{figures_c3/GroupAuthor.png}
++        \caption{ The Author Network}
++        \label{fig:authorgroup}
++\end{figure}
++
+ 
+ 
+ \subsection{Network analysis}
+@@ -144,8 +154,6 @@ This section aims to access the efficiency of graph centrality metrics in identi
+ The simplest, and most intuitive, metric is degree centrality \cite{degreefreeman}. This can be described as the sum of all links incident on a node - simply put, we count the number of citations going into and out of a paper. Such analysis has been used to determine influence in social media or in calculating the probability of a profile committing online auction fraud \cite{degreetwitter,degreefreeman}.
+ 
+ 
+-\input{tables/degree_Citation.tex}
+-\input{tables/degree_Co-Citation.tex}
+ 
+ \begin{figure}[H]
+      \centering
+@@ -156,6 +164,10 @@ The simplest, and most intuitive, metric is degree centrality \cite{degreefreema
+ 
+ \input{tables/degree_Author.tex}
+ 
++
++\input{tables/degree_Citation.tex}
++\input{tables/degree_Co-Citation.tex}
++
+ \subsubsection{Directed Degree}
+ In directed graphs, the direction of edges becomes important. To establish which nodes are important concerning the service provided by their edges, we may split their degree into inwards and outwards going links. This allows us to differentiate papers which cite many others, from those which are cited by others.
+ 
+@@ -188,7 +200,7 @@ Closeness centrality ranks all the nodes within a network on their ability to co
+ 
+ \subsubsection{Betweenness}
+ In social networks, it is often important not only to know who has the greatest reach (closeness centrality) but also where bottlenecks or `broker' positions occur. The betweenness centrality is a count of the number of geodesics (shortest) paths that pass through a specific node in the network\footnote{In cases where there are multiple possible `shortest` paths, we can account for this using the denominator}.
+-Nodes with a high betweenness since they control, or limit, the amount of information that can be transferred across the network. If a node lies on the shortest path between two other nodes, we may consider it a `pivotal` node \cite{neoj4}. should such a node then be removed, we incur either a deviation, whereupon a longer path is required, or two separate connected subgraphs \cite{betweenness, between, between fast,examples_centrality}.
++Nodes with a high betweenness since they control, or limit, the amount of information that can be transferred across the network. If a node lies on the shortest path between two other nodes, we may consider it a `pivotal` node \cite{neoj4}. should such a node then be removed, we incur either a deviation, whereupon a longer path is required, or two separate connected subgraphs \cite{betweenness, between, betweenfast,examples_centrality}.
+ \begin{quote}
+ \textit{
+ \textbf{Example analogy} Expanding on the UK rail network analogy, Shrewsbury station serves the critical role of connecting many lines from England to Wales. In removing this station, routes from the Liverpool or Manchester to Cardiff will be greatly increased. Additionally, the Aberystwyth section of the line will then become isolated from the rest of the country.
+@@ -228,7 +240,7 @@ Here damping terms represent the probability of moving to new random starting po
+ 
+ \subsubsection{Hypertext Induced Topic Search (HITS)}\label{hits}
+ One eigenvector based algorithm with use in classifying webpages into Hubs and Authorities is HITS \cite{hits,hitsvspagerank,hitsweb}. This is a more complex method of looking at the role of a node as an information provider (lots of outward links), i.e. an Authority or an information receiver - a Hub.
+-Although there are many similarities to the directed degree centrality, this algorithm explores how information is propagated across the whole system, and can, therefore, give slightly different results.
++Although there are many similarities to the directed degree centrality, this algorithm explores how information is propagated across the whole system, and can, therefore, give slightly different results. Again since the algorithm explores only directed graphs, we are only able to apply it to the Citation graph in [REF SECT]
+ 
+ \input{tables/Hub_Citation.tex}
+ \input{tables/Authority_Citation.tex}
+@@ -305,8 +317,6 @@ Once defined, the google matrix can be solved by propagating a ones vector, $r$
+ For smaller systems, it is possible to use lapack \cite{lapack}, linear algebra solvers such as those used by numpy \cite{numpy}. However, if a network is large, computing an $n \times n $ matrix may be very memory consuming. It is then possible to apply the methods as described above using a sparse matrix on a per-node bases \cite{scipy,networkx}. A comparison of the page rank algorithm is seen in \autoref{fig:prrpr}.
+ 
+ \paragraph{Prediction}
+-\input{tables/pagerank_Citation.tex}
+-\input{tables/pagerank_Co-Citation.tex}
+ \begin{figure}[H]
+      \centering
+          \includegraphics[width=.8\textwidth]{figures_c3/pagerankauthor.png}
+@@ -316,4 +326,5 @@ For smaller systems, it is possible to use lapack \cite{lapack}, linear algebra
+ \input{tables/pagerank_Author.tex}
+ 
+ 
+-\subsubsection{Modularity and Community detection}
++\input{tables/pagerank_Citation.tex}
++\input{tables/pagerank_Co-Citation.tex}
+diff --git a/main.aux b/main.aux
+index 54237bd..524f15a 100644
+--- a/main.aux
++++ b/main.aux
+@@ -51,31 +51,32 @@
+ \newlabel{table:otherpapers}{{\caption@xref {table:otherpapers}{ on input line 108}}{308}{Filtering the data}{table.caption.4}{}}
+ \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Example topics presented in some isolated satellite clusters.\relax }}{308}{table.caption.4}}
+ \@writefile{toc}{\contentsline {paragraph}{Co-citation}{308}{table.caption.4}}
++\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1.3}Co-author}{309}{subsubsection.4.2.1.3}}
++\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces  The Author Network\relax }}{309}{figure.caption.5}}
++\newlabel{fig:authorgroup}{{4.3}{309}{The Author Network\relax }{figure.caption.5}{}}
+ \citation{degreefreeman}
+ \citation{degreetwitter}
+ \citation{degreefreeman}
++\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Network analysis}{310}{subsection.4.2.2}}
++\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.1}Degree}{310}{subsubsection.4.2.2.1}}
+ \citation{degree0}
+ \citation{degree1}
+ \citation{degree2}
+ \citation{degree3}
+ \citation{degree4}
+-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1.3}Co-author}{309}{subsubsection.4.2.1.3}}
+-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Network analysis}{309}{subsection.4.2.2}}
+-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.1}Degree}{309}{subsubsection.4.2.2.1}}
++\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces  Degree centrality within the co-Author network\relax }}{311}{figure.caption.6}}
++\newlabel{fig:degauth}{{4.4}{311}{Degree centrality within the co-Author network\relax }{figure.caption.6}{}}
++\newlabel{tab:degree_Author}{{\caption@xref {tab:degree_Author}{ on input line 16}}{311}{Degree}{table.caption.7}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces \textbf  {Author network}: Top 10 ranked items using degree centrality\relax }}{311}{table.caption.7}}
+ \citation{degree0}
+ \citation{degree1}
+ \citation{degree2}
+ \citation{degree3}
+ \citation{degree4}
+-\newlabel{tab:degree_Citation}{{\caption@xref {tab:degree_Citation}{ on input line 12}}{310}{Degree}{table.caption.5}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using degree centrality\relax }}{310}{table.caption.5}}
+-\newlabel{tab:degree_Co-Citation}{{\caption@xref {tab:degree_Co-Citation}{ on input line 12}}{310}{Degree}{table.caption.6}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces \textbf  {Co-Citation network}: Top 5 ranked items using degree centrality\relax }}{310}{table.caption.6}}
+-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces  Degree centrality within the co-Author network\relax }}{311}{figure.caption.7}}
+-\newlabel{fig:degauth}{{4.3}{311}{Degree centrality within the co-Author network\relax }{figure.caption.7}{}}
+-\newlabel{tab:degree_Author}{{\caption@xref {tab:degree_Author}{ on input line 16}}{311}{Degree}{table.caption.8}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces \textbf  {Author network}: Top 10 ranked items using degree centrality\relax }}{311}{table.caption.8}}
+-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.2}Directed Degree}{311}{subsubsection.4.2.2.2}}
++\newlabel{tab:degree_Citation}{{\caption@xref {tab:degree_Citation}{ on input line 12}}{312}{Degree}{table.caption.8}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using degree centrality\relax }}{312}{table.caption.8}}
++\newlabel{tab:degree_Co-Citation}{{\caption@xref {tab:degree_Co-Citation}{ on input line 12}}{312}{Degree}{table.caption.9}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces \textbf  {Co-Citation network}: Top 5 ranked items using degree centrality\relax }}{312}{table.caption.9}}
+ \citation{In-Degree0}
+ \citation{In-Degree1}
+ \citation{In-Degree2}
+@@ -86,9 +87,10 @@
+ \citation{Out-Degree2}
+ \citation{Out-Degree3}
+ \citation{Out-Degree4}
+-\@writefile{toc}{\contentsline {paragraph}{In-Degree}{312}{section*.9}}
+-\newlabel{tab:In-Degree_Citation}{{\caption@xref {tab:In-Degree_Citation}{ on input line 12}}{312}{In-Degree}{table.caption.10}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using In-Degree centrality\relax }}{312}{table.caption.10}}
++\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.2}Directed Degree}{313}{subsubsection.4.2.2.2}}
++\@writefile{toc}{\contentsline {paragraph}{In-Degree}{313}{section*.10}}
++\newlabel{tab:In-Degree_Citation}{{\caption@xref {tab:In-Degree_Citation}{ on input line 12}}{313}{In-Degree}{table.caption.11}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using In-Degree centrality\relax }}{313}{table.caption.11}}
+ \citation{closeness-book}
+ \citation{closeness}
+ \citation{terror}
+@@ -99,29 +101,29 @@
+ \citation{closeness2}
+ \citation{closeness3}
+ \citation{closeness4}
+-\@writefile{toc}{\contentsline {paragraph}{Out-Degree}{313}{table.caption.10}}
+-\newlabel{tab:Out-Degree_Citation}{{\caption@xref {tab:Out-Degree_Citation}{ on input line 12}}{313}{Out-Degree}{table.caption.11}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using Out-Degree centrality\relax }}{313}{table.caption.11}}
+-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.3}Closness Centrality}{313}{subsubsection.4.2.2.3}}
++\@writefile{toc}{\contentsline {paragraph}{Out-Degree}{314}{table.caption.11}}
++\newlabel{tab:Out-Degree_Citation}{{\caption@xref {tab:Out-Degree_Citation}{ on input line 12}}{314}{Out-Degree}{table.caption.12}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using Out-Degree centrality\relax }}{314}{table.caption.12}}
++\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.3}Closness Centrality}{314}{subsubsection.4.2.2.3}}
+ \citation{closeness0}
+ \citation{closeness1}
+ \citation{closeness2}
+ \citation{closeness3}
+ \citation{closeness4}
+-\newlabel{tab:closeness_Citation}{{\caption@xref {tab:closeness_Citation}{ on input line 12}}{314}{Closness Centrality}{table.caption.12}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using closeness centrality\relax }}{314}{table.caption.12}}
+-\newlabel{tab:closeness_Co-Citation}{{\caption@xref {tab:closeness_Co-Citation}{ on input line 12}}{314}{Closness Centrality}{table.caption.13}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.8}{\ignorespaces \textbf  {Co-Citation network}: Top 5 ranked items using closeness centrality\relax }}{314}{table.caption.13}}
++\newlabel{tab:closeness_Citation}{{\caption@xref {tab:closeness_Citation}{ on input line 12}}{315}{Closness Centrality}{table.caption.13}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using closeness centrality\relax }}{315}{table.caption.13}}
++\newlabel{tab:closeness_Co-Citation}{{\caption@xref {tab:closeness_Co-Citation}{ on input line 12}}{315}{Closness Centrality}{table.caption.14}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.8}{\ignorespaces \textbf  {Co-Citation network}: Top 5 ranked items using closeness centrality\relax }}{315}{table.caption.14}}
+ \citation{neoj4}
+ \citation{betweenness}
+ \citation{between}
+-\citation{between fast}
++\citation{betweenfast}
+ \citation{examples_centrality}
+-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces  Closeness centrality within the co-Author network\relax }}{315}{figure.caption.14}}
+-\newlabel{fig:closeauth}{{4.4}{315}{Closeness centrality within the co-Author network\relax }{figure.caption.14}{}}
+-\newlabel{tab:closeness_Author}{{\caption@xref {tab:closeness_Author}{ on input line 16}}{315}{Closness Centrality}{table.caption.15}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.9}{\ignorespaces \textbf  {Author network}: Top 10 ranked items using closeness centrality\relax }}{315}{table.caption.15}}
+-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.4}Betweenness}{315}{subsubsection.4.2.2.4}}
++\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces  Closeness centrality within the co-Author network\relax }}{316}{figure.caption.15}}
++\newlabel{fig:closeauth}{{4.5}{316}{Closeness centrality within the co-Author network\relax }{figure.caption.15}{}}
++\newlabel{tab:closeness_Author}{{\caption@xref {tab:closeness_Author}{ on input line 16}}{316}{Closness Centrality}{table.caption.16}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.9}{\ignorespaces \textbf  {Author network}: Top 10 ranked items using closeness centrality\relax }}{316}{table.caption.16}}
++\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.4}Betweenness}{316}{subsubsection.4.2.2.4}}
+ \citation{betweenness0}
+ \citation{betweenness1}
+ \citation{betweenness2}
+@@ -132,12 +134,12 @@
+ \citation{betweenness2}
+ \citation{betweenness3}
+ \citation{betweenness4}
+-\newlabel{tab:betweenness_Citation}{{\caption@xref {tab:betweenness_Citation}{ on input line 12}}{316}{Betweenness}{table.caption.16}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.10}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using betweenness centrality\relax }}{316}{table.caption.16}}
+-\newlabel{tab:betweenness_Co-Citation}{{\caption@xref {tab:betweenness_Co-Citation}{ on input line 12}}{317}{Betweenness}{table.caption.17}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.11}{\ignorespaces \textbf  {Co-Citation network}: Top 5 ranked items using betweenness centrality\relax }}{317}{table.caption.17}}
+-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces  Betweenness centrality within the co-Author network\relax }}{317}{figure.caption.18}}
+-\newlabel{fig:betauth}{{4.5}{317}{Betweenness centrality within the co-Author network\relax }{figure.caption.18}{}}
++\newlabel{tab:betweenness_Citation}{{\caption@xref {tab:betweenness_Citation}{ on input line 12}}{317}{Betweenness}{table.caption.17}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.10}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using betweenness centrality\relax }}{317}{table.caption.17}}
++\newlabel{tab:betweenness_Co-Citation}{{\caption@xref {tab:betweenness_Co-Citation}{ on input line 12}}{318}{Betweenness}{table.caption.18}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.11}{\ignorespaces \textbf  {Co-Citation network}: Top 5 ranked items using betweenness centrality\relax }}{318}{table.caption.18}}
++\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces  Betweenness centrality within the co-Author network\relax }}{318}{figure.caption.19}}
++\newlabel{fig:betauth}{{4.6}{318}{Betweenness centrality within the co-Author network\relax }{figure.caption.19}{}}
+ \citation{seeley}
+ \citation{google}
+ \citation{spectral}
+@@ -150,11 +152,11 @@
+ \citation{hits}
+ \citation{hitsvspagerank}
+ \citation{hitsweb}
+-\newlabel{tab:betweenness_Author}{{\caption@xref {tab:betweenness_Author}{ on input line 16}}{318}{Betweenness}{table.caption.19}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.12}{\ignorespaces \textbf  {Author network}: Top 10 ranked items using betweenness centrality\relax }}{318}{table.caption.19}}
+-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.5}Spectral methods and matrix analysis}{318}{subsubsection.4.2.2.5}}
+-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.6}Hypertext Induced Topic Search (HITS)}{318}{subsubsection.4.2.2.6}}
+-\newlabel{hits}{{4.2.2.6}{318}{Hypertext Induced Topic Search (HITS)}{subsubsection.4.2.2.6}{}}
++\newlabel{tab:betweenness_Author}{{\caption@xref {tab:betweenness_Author}{ on input line 16}}{319}{Betweenness}{table.caption.20}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.12}{\ignorespaces \textbf  {Author network}: Top 10 ranked items using betweenness centrality\relax }}{319}{table.caption.20}}
++\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.5}Spectral methods and matrix analysis}{319}{subsubsection.4.2.2.5}}
++\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.6}Hypertext Induced Topic Search (HITS)}{319}{subsubsection.4.2.2.6}}
++\newlabel{hits}{{4.2.2.6}{319}{Hypertext Induced Topic Search (HITS)}{subsubsection.4.2.2.6}{}}
+ \citation{Hub0}
+ \citation{Hub1}
+ \citation{Hub2}
+@@ -165,22 +167,22 @@
+ \citation{Authority2}
+ \citation{Authority3}
+ \citation{Authority4}
+-\newlabel{tab:Hub_Citation}{{\caption@xref {tab:Hub_Citation}{ on input line 12}}{319}{Hypertext Induced Topic Search (HITS)}{table.caption.21}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.13}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using Hub centrality\relax }}{319}{table.caption.21}}
++\newlabel{tab:Hub_Citation}{{\caption@xref {tab:Hub_Citation}{ on input line 12}}{320}{Hypertext Induced Topic Search (HITS)}{table.caption.22}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.13}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using Hub centrality\relax }}{320}{table.caption.22}}
+ \citation{neoj4}
+-\newlabel{tab:Authority_Citation}{{\caption@xref {tab:Authority_Citation}{ on input line 12}}{320}{Hypertext Induced Topic Search (HITS)}{table.caption.22}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.14}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using Authority centrality\relax }}{320}{table.caption.22}}
+-\@writefile{toc}{\contentsline {paragraph}{Page Rank}{320}{table.caption.22}}
+-\@writefile{toc}{\contentsline {paragraph}{The Google Matrix}{320}{table.caption.22}}
++\newlabel{tab:Authority_Citation}{{\caption@xref {tab:Authority_Citation}{ on input line 12}}{321}{Hypertext Induced Topic Search (HITS)}{table.caption.23}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.14}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using Authority centrality\relax }}{321}{table.caption.23}}
++\@writefile{toc}{\contentsline {paragraph}{Page Rank}{321}{table.caption.23}}
++\@writefile{toc}{\contentsline {paragraph}{The Google Matrix}{321}{table.caption.23}}
+ \citation{biopr}
+ \citation{lapack}
+ \citation{numpy}
+ \citation{scipy}
+ \citation{networkx}
+-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Adjacency to Markov matrix.\relax }}{321}{algorithm.1}}
+-\newlabel{eqn:markov}{{1}{321}{Adjacency to Markov matrix.\relax }{algorithm.1}{}}
+-\newlabel{eqn:google}{{4.1}{321}{The Google Matrix}{equation.4.2.1}{}}
+-\@writefile{toc}{\contentsline {paragraph}{Solving the algebra}{321}{equation.4.2.1}}
++\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Adjacency to Markov matrix.\relax }}{322}{algorithm.1}}
++\newlabel{eqn:markov}{{1}{322}{Adjacency to Markov matrix.\relax }{algorithm.1}{}}
++\newlabel{eqn:google}{{4.1}{322}{The Google Matrix}{equation.4.2.1}{}}
++\@writefile{toc}{\contentsline {paragraph}{Solving the algebra}{322}{equation.4.2.1}}
+ \citation{pagerank0}
+ \citation{pagerank1}
+ \citation{pagerank2}
+@@ -191,21 +193,25 @@
+ \citation{pagerank2}
+ \citation{pagerank3}
+ \citation{pagerank4}
+-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Solving the google matrix linear algebra\relax }}{322}{algorithm.2}}
+-\newlabel{eqn:forwards}{{2}{322}{Solving the google matrix linear algebra\relax }{algorithm.2}{}}
+-\@writefile{toc}{\contentsline {paragraph}{Prediction}{322}{algorithm.2}}
+-\newlabel{tab:pagerank_Citation}{{\caption@xref {tab:pagerank_Citation}{ on input line 12}}{322}{Prediction}{table.caption.23}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.15}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using pagerank centrality\relax }}{322}{table.caption.23}}
+-\newlabel{tab:pagerank_Co-Citation}{{\caption@xref {tab:pagerank_Co-Citation}{ on input line 12}}{323}{Prediction}{table.caption.24}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.16}{\ignorespaces \textbf  {Co-Citation network}: Top 5 ranked items using pagerank centrality\relax }}{323}{table.caption.24}}
+-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces  Page Rank centrality within the co-Author network\relax }}{323}{figure.caption.25}}
+-\newlabel{fig:pagerankauth}{{4.6}{323}{Page Rank centrality within the co-Author network\relax }{figure.caption.25}{}}
++\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Solving the google matrix linear algebra\relax }}{323}{algorithm.2}}
++\newlabel{eqn:forwards}{{2}{323}{Solving the google matrix linear algebra\relax }{algorithm.2}{}}
++\@writefile{toc}{\contentsline {paragraph}{Prediction}{323}{algorithm.2}}
++\newlabel{tab:pagerank_Citation}{{\caption@xref {tab:pagerank_Citation}{ on input line 12}}{323}{Prediction}{table.caption.24}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.15}{\ignorespaces \textbf  {Citation network}: Top 5 ranked items using pagerank centrality\relax }}{323}{table.caption.24}}
++\newlabel{tab:pagerank_Co-Citation}{{\caption@xref {tab:pagerank_Co-Citation}{ on input line 12}}{324}{Prediction}{table.caption.25}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.16}{\ignorespaces \textbf  {Co-Citation network}: Top 5 ranked items using pagerank centrality\relax }}{324}{table.caption.25}}
++\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces  Page Rank centrality within the co-Author network\relax }}{324}{figure.caption.26}}
++\newlabel{fig:pagerankauth}{{4.7}{324}{Page Rank centrality within the co-Author network\relax }{figure.caption.26}{}}
++\newlabel{tab:pagerank_Author}{{\caption@xref {tab:pagerank_Author}{ on input line 16}}{325}{Prediction}{table.caption.27}{}}
++\@writefile{lot}{\contentsline {table}{\numberline {4.17}{\ignorespaces \textbf  {Author network}: Top 10 ranked items using pagerank centrality\relax }}{325}{table.caption.27}}
++\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.7}Modularity and Community detection}{325}{subsubsection.4.2.2.7}}
++\@writefile{toc}{\contentsline {section}{\numberline {4.3}Existing analysis methods}{325}{section.4.3}}
++\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Concentration time series}{325}{subsection.4.3.1}}
+ \citation{cook}
+-\newlabel{tab:pagerank_Author}{{\caption@xref {tab:pagerank_Author}{ on input line 16}}{324}{Prediction}{table.caption.26}{}}
+-\@writefile{lot}{\contentsline {table}{\numberline {4.17}{\ignorespaces \textbf  {Author network}: Top 10 ranked items using pagerank centrality\relax }}{324}{table.caption.26}}
+-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.7}Modularity and Community detection}{324}{subsubsection.4.2.2.7}}
+-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Applying graph theory to chemical results}{324}{section.4.3}}
+-\newlabel{sec:chem}{{4.3}{324}{Applying graph theory to chemical results}{section.4.3}{}}
++\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Concentration time series: The classic method for identifying changes in a model. This multi-plot shows the changes in concentration profiles for all initialised species following an initial spin-up to steady state. \relax }}{326}{figure.caption.28}}
++\newlabel{fig:concentration}{{4.8}{326}{Concentration time series: The classic method for identifying changes in a model. This multi-plot shows the changes in concentration profiles for all initialised species following an initial spin-up to steady state. \relax }{figure.caption.28}{}}
++\@writefile{toc}{\contentsline {section}{\numberline {4.4}Applying graph theory to chemical results}{326}{section.4.4}}
++\newlabel{sec:chem}{{4.4}{326}{Applying graph theory to chemical results}{section.4.4}{}}
+ \bibstyle{apalike}
+ \bibdata{centrality,metric}
+ \bibcite{lapack}{lap, }
+@@ -215,6 +221,7 @@
+ \bibcite{eigen2}{Bonacich, 2007}
+ \bibcite{examples_centrality}{Borgatti, 2005}
+ \bibcite{phrase}{Boudin, }
++\bibcite{betweenfast}{Brandes, 2001}
+ \bibcite{cook}{Cook et\nobreakspace  {}al., 1983}
+ \bibcite{web}{Edsu and Ellis, }
+ \bibcite{milk}{Fantin et\nobreakspace  {}al., 2012}
+diff --git a/main.bbl b/main.bbl
+index 5a0f22f..ec3a3c6 100644
+--- a/main.bbl
++++ b/main.bbl
+@@ -35,6 +35,11 @@ Boudin, F.
+ \newblock {A Comparison of Centrality Measures for Graph-Based Keyphrase
+   Extraction}.
+ 
++\bibitem[Brandes, 2001]{betweenfast}
++Brandes, U. (2001).
++\newblock A faster algorithm for betweenness centrality.
++\newblock {\em Journal of Mathematical Sociology}, 25:163--177.
++
+ \bibitem[Cook et~al., 1983]{cook}
+ Cook, K.~S., Emerson, R.~M., Gillmore, M.~R., and Yamagishi, T. (1983).
+ \newblock The distribution of power in exchange networks: Theory and
+diff --git a/main.blg b/main.blg
+index 48a70e2..b6de90e 100644
+--- a/main.blg
++++ b/main.blg
+@@ -1,10 +1,6 @@
+ This is BibTeX, Version 0.99d (TeX Live 2016)
+ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+ The top-level auxiliary file: main.aux
+-White space in argument---line 118 of file main.aux
+- : \citation{between
+- :                   fast}
+-I'm skipping whatever remains of this command
+ The style file: apalike.bst
+ Database file #1: centrality.bib
+ Database file #2: metric.bib
+@@ -68,45 +64,45 @@ Warning--empty year in hitsweb
+ Warning--empty journal in hitsweb
+ Warning--empty journal in google
+ Warning--there's a number but no volume in google
+-You've used 34 entries,
++You've used 35 entries,
+             1935 wiz_defined-function locations,
+-            744 strings with 9639 characters,
+-and the built_in function-call counts, 12627 in all, are:
+-= -- 1241
+-> -- 498
+-< -- 19
+-+ -- 175
+-- -- 165
+-* -- 1069
+-:= -- 2239
+-add.period$ -- 107
+-call.type$ -- 34
+-change.case$ -- 250
+-chr.to.int$ -- 34
+-cite$ -- 53
+-duplicate$ -- 461
+-empty$ -- 872
+-format.name$ -- 205
+-if$ -- 2419
++            749 strings with 9749 characters,
++and the built_in function-call counts, 12989 in all, are:
++= -- 1279
++> -- 505
++< -- 20
+++ -- 179
++- -- 167
++* -- 1097
++:= -- 2301
++add.period$ -- 110
++call.type$ -- 35
++change.case$ -- 256
++chr.to.int$ -- 35
++cite$ -- 54
++duplicate$ -- 475
++empty$ -- 901
++format.name$ -- 208
++if$ -- 2489
+ int.to.chr$ -- 1
+ int.to.str$ -- 0
+-missing$ -- 29
+-newline$ -- 178
+-num.names$ -- 98
+-pop$ -- 200
++missing$ -- 30
++newline$ -- 183
++num.names$ -- 101
++pop$ -- 203
+ preamble$ -- 1
+-purify$ -- 250
++purify$ -- 256
+ quote$ -- 0
+-skip$ -- 348
++skip$ -- 359
+ stack$ -- 0
+-substring$ -- 893
+-swap$ -- 31
++substring$ -- 932
++swap$ -- 32
+ text.length$ -- 1
+ text.prefix$ -- 0
+ top$ -- 0
+-type$ -- 204
++type$ -- 210
+ warning$ -- 17
+-while$ -- 100
++while$ -- 104
+ width$ -- 0
+-write$ -- 435
+-(There was 1 error message)
++write$ -- 448
++(There were 59 warnings)
+diff --git a/main.log b/main.log
+index e472bd2..ff10a41 100644
+--- a/main.log
++++ b/main.log
+@@ -1,4 +1,4 @@
+-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.28)  29 NOV 2019 01:10
++This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.9.28)  1 DEC 2019 15:32
+ entering extended mode
+  restricted \write18 enabled.
+  %&-line parsing enabled.
+@@ -1120,7 +1120,7 @@ Chapter 4.
+ ] [303
+ 
+ ] (./intro.tex
+-<figures_c3/humanskulls.png, id=120, 959.585pt x 689.57625pt>
++<figures_c3/humanskulls.png, id=128, 959.585pt x 689.57625pt>
+ File: figures_c3/humanskulls.png Graphic file (type png)
+ 
+ <use figures_c3/humanskulls.png>
+@@ -1138,21 +1138,21 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
+ Package hyperref Warning: The anchor of a bookmark and its parent's must not
+ (hyperref)                be the same. Added a new anchor on input line 39.
+ 
+-[305] <figures_c3/gephiall.png, id=149, 627.34375pt x 543.02875pt>
++[305] <figures_c3/gephiall.png, id=157, 627.34375pt x 543.02875pt>
+ File: figures_c3/gephiall.png Graphic file (type png)
+ 
+ <use figures_c3/gephiall.png>
+ Package pdftex.def Info: figures_c3/gephiall.png used on input line 59.
+ (pdftex.def)             Requested size: 218.30162pt x 188.96086pt.
+ 
+-<figures_c3/sideall.png, id=152, 685.56125pt x 704.6325pt>
++<figures_c3/sideall.png, id=160, 685.56125pt x 704.6325pt>
+ File: figures_c3/sideall.png Graphic file (type png)
+ 
+ <use figures_c3/sideall.png>
+ Package pdftex.def Info: figures_c3/sideall.png used on input line 66.
+ (pdftex.def)             Requested size: 207.27887pt x 213.04716pt.
+ 
+-<figures_c3/threeall.png, id=155, 735.74875pt x 717.68124pt>
++<figures_c3/threeall.png, id=163, 735.74875pt x 717.68124pt>
+ File: figures_c3/threeall.png Graphic file (type png)
+ 
+ <use figures_c3/threeall.png>
+@@ -1170,9 +1170,28 @@ LaTeX Warning: Reference `3dgeph' on page 308 undefined on input line 90.
+ 
+ LaTeX Warning: Reference `table:other' on page 308 undefined on input line 90.
+ 
+-[308] (./tables/degree_Citation.tex
++[308]
+ 
+-LaTeX Warning: Citation `degree0' on page 309 undefined on input line 5.
++LaTeX Warning: Reference `fig:autorgroup' on page 309 undefined on input line 1
++28.
++
++<figures_c3/GroupAuthor.png, id=202, 662.97687pt x 660.96938pt>
++File: figures_c3/GroupAuthor.png Graphic file (type png)
++
++<use figures_c3/GroupAuthor.png>
++Package pdftex.def Info: figures_c3/GroupAuthor.png used on input line 134.
++(pdftex.def)             Requested size: 352.81554pt x 351.74425pt.
++ [309 <./figures_c3/GroupAuthor.png>]
++<figures_c3/degreeauthor.png, id=213, 750.805pt x 749.80125pt>
++File: figures_c3/degreeauthor.png Graphic file (type png)
++
++<use figures_c3/degreeauthor.png>
++Package pdftex.def Info: figures_c3/degreeauthor.png used on input line 160.
++(pdftex.def)             Requested size: 352.81554pt x 352.34943pt.
++ [310] (./tables/degree_Author.tex)
++(./tables/degree_Citation.tex
++
++LaTeX Warning: Citation `degree0' on page 311 undefined on input line 5.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+@@ -1180,20 +1199,20 @@ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+  []
+ 
+ 
+-LaTeX Warning: Citation `degree1' on page 309 undefined on input line 6.
++LaTeX Warning: Citation `degree1' on page 311 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `degree2' on page 309 undefined on input line 7.
++LaTeX Warning: Citation `degree2' on page 311 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `degree3' on page 309 undefined on input line 8.
++LaTeX Warning: Citation `degree3' on page 311 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `degree4' on page 309 undefined on input line 9.
++LaTeX Warning: Citation `degree4' on page 311 undefined on input line 9.
+ 
+-[309]) (./tables/degree_Co-Citation.tex
++[311 <./figures_c3/degreeauthor.png>]) (./tables/degree_Co-Citation.tex
+ 
+-LaTeX Warning: Citation `degree0' on page 310 undefined on input line 5.
++LaTeX Warning: Citation `degree0' on page 312 undefined on input line 5.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+@@ -1201,31 +1220,25 @@ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+  []
+ 
+ 
+-LaTeX Warning: Citation `degree1' on page 310 undefined on input line 6.
++LaTeX Warning: Citation `degree1' on page 312 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `degree2' on page 310 undefined on input line 7.
++LaTeX Warning: Citation `degree2' on page 312 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `degree3' on page 310 undefined on input line 8.
++LaTeX Warning: Citation `degree3' on page 312 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `degree4' on page 310 undefined on input line 9.
++LaTeX Warning: Citation `degree4' on page 312 undefined on input line 9.
+ 
+-) <figures_c3/degreeauthor.png, id=204, 752.8125pt x 744.7825pt>
+-File: figures_c3/degreeauthor.png Graphic file (type png)
+-
+-<use figures_c3/degreeauthor.png>
+-Package pdftex.def Info: figures_c3/degreeauthor.png used on input line 152.
+-(pdftex.def)             Requested size: 352.81554pt x 349.05911pt.
+- [310] (./tables/degree_Author.tex) [311 <./figures_c3/degreeauthor.png>]
++) [312]
+ 
+ Package hyperref Warning: The anchor of a bookmark and its parent's must not
+-(hyperref)                be the same. Added a new anchor on input line 165.
++(hyperref)                be the same. Added a new anchor on input line 177.
+ 
+ (./tables/In-Degree_Citation.tex
+ 
+-LaTeX Warning: Citation `In-Degree0' on page 312 undefined on input line 5.
++LaTeX Warning: Citation `In-Degree0' on page 313 undefined on input line 5.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+@@ -1233,36 +1246,36 @@ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+  []
+ 
+ 
+-LaTeX Warning: Citation `In-Degree1' on page 312 undefined on input line 6.
++LaTeX Warning: Citation `In-Degree1' on page 313 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `In-Degree2' on page 312 undefined on input line 7.
++LaTeX Warning: Citation `In-Degree2' on page 313 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `In-Degree3' on page 312 undefined on input line 8.
++LaTeX Warning: Citation `In-Degree3' on page 313 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `In-Degree4' on page 312 undefined on input line 9.
++LaTeX Warning: Citation `In-Degree4' on page 313 undefined on input line 9.
+ 
+ ) (./tables/Out-Degree_Citation.tex
+ 
+-LaTeX Warning: Citation `Out-Degree0' on page 312 undefined on input line 5.
++LaTeX Warning: Citation `Out-Degree0' on page 313 undefined on input line 5.
+ 
+ 
+-LaTeX Warning: Citation `Out-Degree1' on page 312 undefined on input line 6.
++LaTeX Warning: Citation `Out-Degree1' on page 313 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `Out-Degree2' on page 312 undefined on input line 7.
++LaTeX Warning: Citation `Out-Degree2' on page 313 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `Out-Degree3' on page 312 undefined on input line 8.
++LaTeX Warning: Citation `Out-Degree3' on page 313 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `Out-Degree4' on page 312 undefined on input line 9.
++LaTeX Warning: Citation `Out-Degree4' on page 313 undefined on input line 9.
+ 
+-[312]) (./tables/closeness_Citation.tex
++[313]) (./tables/closeness_Citation.tex
+ 
+-LaTeX Warning: Citation `closeness0' on page 313 undefined on input line 5.
++LaTeX Warning: Citation `closeness0' on page 314 undefined on input line 5.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+@@ -1270,20 +1283,20 @@ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+  []
+ 
+ 
+-LaTeX Warning: Citation `closeness1' on page 313 undefined on input line 6.
++LaTeX Warning: Citation `closeness1' on page 314 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `closeness2' on page 313 undefined on input line 7.
++LaTeX Warning: Citation `closeness2' on page 314 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `closeness3' on page 313 undefined on input line 8.
++LaTeX Warning: Citation `closeness3' on page 314 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `closeness4' on page 313 undefined on input line 9.
++LaTeX Warning: Citation `closeness4' on page 314 undefined on input line 9.
+ 
+-[313]) (./tables/closeness_Co-Citation.tex
++[314]) (./tables/closeness_Co-Citation.tex
+ 
+-LaTeX Warning: Citation `closeness0' on page 314 undefined on input line 5.
++LaTeX Warning: Citation `closeness0' on page 315 undefined on input line 5.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+@@ -1291,48 +1304,44 @@ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+  []
+ 
+ 
+-LaTeX Warning: Citation `closeness1' on page 314 undefined on input line 6.
++LaTeX Warning: Citation `closeness1' on page 315 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `closeness2' on page 314 undefined on input line 7.
++LaTeX Warning: Citation `closeness2' on page 315 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `closeness3' on page 314 undefined on input line 8.
++LaTeX Warning: Citation `closeness3' on page 315 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `closeness4' on page 314 undefined on input line 9.
++LaTeX Warning: Citation `closeness4' on page 315 undefined on input line 9.
+ 
+-) <figures_c3/closenessauthor.png, id=241, 754.82pt x 747.79375pt>
++) <figures_c3/closenessauthor.png, id=256, 752.8125pt x 752.8125pt>
+ File: figures_c3/closenessauthor.png Graphic file (type png)
+ 
+ <use figures_c3/closenessauthor.png>
+-Package pdftex.def Info: figures_c3/closenessauthor.png used on input line 183.
++Package pdftex.def Info: figures_c3/closenessauthor.png used on input line 195.
+ 
+-(pdftex.def)             Requested size: 352.81554pt x 349.52333pt.
+- (./tables/closeness_Author.tex [314])
++(pdftex.def)             Requested size: 352.81554pt x 352.82256pt.
++ (./tables/closeness_Author.tex [315])
++[316 <./figures_c3/closenessauthor.png>] (./tables/betweenness_Citation.tex
+ 
+-LaTeX Warning: Citation `between fast' on page 315 undefined on input line 191.
++LaTeX Warning: Citation `betweenness0' on page 317 undefined on input line 5.
+ 
+ 
+-[315 <./figures_c3/closenessauthor.png>] (./tables/betweenness_Citation.tex
++LaTeX Warning: Citation `betweenness1' on page 317 undefined on input line 6.
+ 
+-LaTeX Warning: Citation `betweenness0' on page 316 undefined on input line 5.
+ 
++LaTeX Warning: Citation `betweenness2' on page 317 undefined on input line 7.
+ 
+-LaTeX Warning: Citation `betweenness1' on page 316 undefined on input line 6.
+ 
++LaTeX Warning: Citation `betweenness3' on page 317 undefined on input line 8.
+ 
+-LaTeX Warning: Citation `betweenness2' on page 316 undefined on input line 7.
+ 
+-
+-LaTeX Warning: Citation `betweenness3' on page 316 undefined on input line 8.
+-
+-
+-LaTeX Warning: Citation `betweenness4' on page 316 undefined on input line 9.
++LaTeX Warning: Citation `betweenness4' on page 317 undefined on input line 9.
+ 
+ ) (./tables/betweenness_Co-Citation.tex
+ 
+-LaTeX Warning: Citation `betweenness0' on page 316 undefined on input line 5.
++LaTeX Warning: Citation `betweenness0' on page 317 undefined on input line 5.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+@@ -1340,116 +1349,116 @@ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+  []
+ 
+ 
+-LaTeX Warning: Citation `betweenness1' on page 316 undefined on input line 6.
++LaTeX Warning: Citation `betweenness1' on page 317 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `betweenness2' on page 316 undefined on input line 7.
++LaTeX Warning: Citation `betweenness2' on page 317 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `betweenness3' on page 316 undefined on input line 8.
++LaTeX Warning: Citation `betweenness3' on page 317 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `betweenness4' on page 316 undefined on input line 9.
++LaTeX Warning: Citation `betweenness4' on page 317 undefined on input line 9.
+ 
+-[316]) <figures_c3/betweenauthor.png, id=269, 751.80875pt x 745.78625pt>
++[317]) <figures_c3/betweenauthor.png, id=286, 749.80125pt x 724.7075pt>
+ File: figures_c3/betweenauthor.png Graphic file (type png)
+ 
+ <use figures_c3/betweenauthor.png>
+-Package pdftex.def Info: figures_c3/betweenauthor.png used on input line 201.
+-(pdftex.def)             Requested size: 352.81554pt x 349.99612pt.
+- (./tables/betweenness_Author.tex [317 <./figures_c3/betweenauthor.png>])
+-Underfull \hbox (badness 7925) in paragraph at lines 215--215
++Package pdftex.def Info: figures_c3/betweenauthor.png used on input line 213.
++(pdftex.def)             Requested size: 352.81554pt x 341.01067pt.
++ (./tables/betweenness_Author.tex [318 <./figures_c3/betweenauthor.png>])
++Underfull \hbox (badness 7925) in paragraph at lines 227--227
+ []\T1/cmr/m/n/10 No Nor-mal-i-sa-
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 217--217
++Underfull \hbox (badness 10000) in paragraph at lines 229--229
+ []\T1/cmr/m/n/10 No
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 217--217
++Underfull \hbox (badness 10000) in paragraph at lines 229--229
+ []\T1/cmr/m/n/10 Eigenvector
+  []
+ 
+ 
+-Overfull \hbox (0.66815pt too wide) in paragraph at lines 217--217
++Overfull \hbox (0.66815pt too wide) in paragraph at lines 229--229
+ \T1/cmr/m/n/10 [[],
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 217--217
++Underfull \hbox (badness 10000) in paragraph at lines 229--229
+ []\T1/cmr/m/n/10 ]
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 217--218
++Underfull \hbox (badness 10000) in paragraph at lines 229--230
+ []\T1/cmr/m/n/10 Markov Chain
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 217--218
++Underfull \hbox (badness 10000) in paragraph at lines 229--230
+ \T1/cmr/m/n/10 Steady State
+  []
+ 
+ 
+-Overfull \hbox (0.66815pt too wide) in paragraph at lines 217--218
++Overfull \hbox (0.66815pt too wide) in paragraph at lines 229--230
+ \T1/cmr/m/n/10 [[]]
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 218--218
++Underfull \hbox (badness 10000) in paragraph at lines 230--230
+ []\T1/cmr/m/n/10 Katz
+  []
+ 
+ 
+-Overfull \hbox (5.04208pt too wide) in paragraph at lines 218--218
++Overfull \hbox (5.04208pt too wide) in paragraph at lines 230--230
+ \T1/cmr/m/n/10 [[]]
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 218--218
++Underfull \hbox (badness 10000) in paragraph at lines 230--230
+ []\T1/cmr/m/n/10 Total Ef-fect
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 218--218
++Underfull \hbox (badness 10000) in paragraph at lines 230--230
+ \T1/cmr/m/n/10 Cen-tral-ity
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 218--218
++Underfull \hbox (badness 10000) in paragraph at lines 230--230
+ \T1/cmr/m/n/10 PageR-ank
+  []
+ 
+ 
+-Overfull \hbox (7.6109pt too wide) in paragraph at lines 218--218
++Overfull \hbox (7.6109pt too wide) in paragraph at lines 230--230
+ \T1/cmr/m/n/10 [[]]| 
+  []
+ 
+-[318] (./tables/Hub_Citation.tex
++[319] (./tables/Hub_Citation.tex
+ Underfull \hbox (badness 2020) in paragraph at lines 5--5
+ []\T1/cmr/m/n/10 A Com-mon Rep-re-sen-ta-tive In-ter-me-di-ates CRI
+  []
+ 
+ 
+-LaTeX Warning: Citation `Hub0' on page 319 undefined on input line 5.
++LaTeX Warning: Citation `Hub0' on page 320 undefined on input line 5.
+ 
+ 
+-LaTeX Warning: Citation `Hub1' on page 319 undefined on input line 6.
++LaTeX Warning: Citation `Hub1' on page 320 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `Hub2' on page 319 undefined on input line 7.
++LaTeX Warning: Citation `Hub2' on page 320 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `Hub3' on page 319 undefined on input line 8.
++LaTeX Warning: Citation `Hub3' on page 320 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `Hub4' on page 319 undefined on input line 9.
++LaTeX Warning: Citation `Hub4' on page 320 undefined on input line 9.
+ 
+ ) (./tables/Authority_Citation.tex
+ 
+-LaTeX Warning: Citation `Authority0' on page 319 undefined on input line 5.
++LaTeX Warning: Citation `Authority0' on page 320 undefined on input line 5.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+@@ -1457,51 +1466,51 @@ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+  []
+ 
+ 
+-LaTeX Warning: Citation `Authority1' on page 319 undefined on input line 6.
++LaTeX Warning: Citation `Authority1' on page 320 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `Authority2' on page 319 undefined on input line 7.
++LaTeX Warning: Citation `Authority2' on page 320 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `Authority3' on page 319 undefined on input line 8.
++LaTeX Warning: Citation `Authority3' on page 320 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `Authority4' on page 319 undefined on input line 9.
++LaTeX Warning: Citation `Authority4' on page 320 undefined on input line 9.
+ 
+-[319])
+-Underfull \hbox (badness 10000) in paragraph at lines 244--245
++[320])
++Underfull \hbox (badness 10000) in paragraph at lines 256--257
+ 
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 250--251
++Underfull \hbox (badness 10000) in paragraph at lines 262--263
+ 
+  []
+ 
+ 
+-LaTeX Warning: Reference `binary' on page 320 undefined on input line 252.
++LaTeX Warning: Reference `binary' on page 321 undefined on input line 264.
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 252--253
++Underfull \hbox (badness 10000) in paragraph at lines 264--265
+ 
+  []
+ 
+-[320]
++[321]
+ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+-put line 257.
++put line 269.
+ 
+ 
+-LaTeX Warning: Reference `fig:prrpr' on page 321 undefined on input line 305.
++LaTeX Warning: Reference `fig:prrpr' on page 322 undefined on input line 317.
+ 
+-[321] (./tables/pagerank_Citation.tex
++[322] (./tables/pagerank_Citation.tex
+ 
+-LaTeX Warning: Citation `pagerank0' on page 322 undefined on input line 5.
++LaTeX Warning: Citation `pagerank0' on page 323 undefined on input line 5.
+ 
+ 
+-LaTeX Warning: Citation `pagerank1' on page 322 undefined on input line 6.
++LaTeX Warning: Citation `pagerank1' on page 323 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `pagerank2' on page 322 undefined on input line 7.
++LaTeX Warning: Citation `pagerank2' on page 323 undefined on input line 7.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 8--8
+@@ -1509,14 +1518,14 @@ Underfull \hbox (badness 1668) in paragraph at lines 8--8
+  []
+ 
+ 
+-LaTeX Warning: Citation `pagerank3' on page 322 undefined on input line 8.
++LaTeX Warning: Citation `pagerank3' on page 323 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `pagerank4' on page 322 undefined on input line 9.
++LaTeX Warning: Citation `pagerank4' on page 323 undefined on input line 9.
+ 
+ ) (./tables/pagerank_Co-Citation.tex
+ 
+-LaTeX Warning: Citation `pagerank0' on page 322 undefined on input line 5.
++LaTeX Warning: Citation `pagerank0' on page 323 undefined on input line 5.
+ 
+ 
+ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+@@ -1524,28 +1533,34 @@ Underfull \hbox (badness 1668) in paragraph at lines 6--6
+  []
+ 
+ 
+-LaTeX Warning: Citation `pagerank1' on page 322 undefined on input line 6.
++LaTeX Warning: Citation `pagerank1' on page 323 undefined on input line 6.
+ 
+ 
+-LaTeX Warning: Citation `pagerank2' on page 322 undefined on input line 7.
++LaTeX Warning: Citation `pagerank2' on page 323 undefined on input line 7.
+ 
+ 
+-LaTeX Warning: Citation `pagerank3' on page 322 undefined on input line 8.
++LaTeX Warning: Citation `pagerank3' on page 323 undefined on input line 8.
+ 
+ 
+-LaTeX Warning: Citation `pagerank4' on page 322 undefined on input line 9.
++LaTeX Warning: Citation `pagerank4' on page 323 undefined on input line 9.
+ 
+-[322]) <figures_c3/pagerankauthor.png, id=352, 744.7825pt x 749.80125pt>
++[323]) <figures_c3/pagerankauthor.png, id=369, 749.80125pt x 745.78625pt>
+ File: figures_c3/pagerankauthor.png Graphic file (type png)
+ 
+ <use figures_c3/pagerankauthor.png>
+-Package pdftex.def Info: figures_c3/pagerankauthor.png used on input line 312.
+-(pdftex.def)             Requested size: 352.81554pt x 355.19824pt.
+- (./tables/pagerank_Author.tex [323 <./figures_c3/pagerankauthor.png>])) (./che
+-mistry.tex) [324] (./main.bbl
++Package pdftex.def Info: figures_c3/pagerankauthor.png used on input line 324.
++(pdftex.def)             Requested size: 352.81554pt x 350.92926pt.
++ (./tables/pagerank_Author.tex [324 <./figures_c3/pagerankauthor.png>])) (./che
++mistry.tex
++<figures/ch2concentration.pdf, id=378, 839.05469pt x 668.4975pt>
++File: figures/ch2concentration.pdf Graphic file (type pdf)
++
++<use figures/ch2concentration.pdf>
++Package pdftex.def Info: figures/ch2concentration.pdf used on input line 11.
++(pdftex.def)             Requested size: 308.71107pt x 245.96313pt.
++ [325]) [326 <./figures/ch2concentration.pdf>] (./main.bbl
+ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 5.
+-
+-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
++ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1cmtt.fd
+ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+ )
+ Underfull \hbox (badness 10000) in paragraph at lines 4--7
+@@ -1564,46 +1579,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--16
+ -ing net-works.
+  []
+ 
+-[325
++[327
+ 
+-] [326]
+-Underfull \hbox (badness 10000) in paragraph at lines 193--198
++] [328]
++Underfull \hbox (badness 10000) in paragraph at lines 198--203
+ []\T1/cmr/m/n/10 Wood, B. (2014).  The Ori-gin of Hu-mans Is Sur-pris-ingly Com
+ -pli-
+  []
+ 
+ 
+-Underfull \hbox (badness 10000) in paragraph at lines 193--198
++Underfull \hbox (badness 10000) in paragraph at lines 198--203
+ \T1/cmr/m/n/10 cated.  \T1/cmr/m/it/10 Sci-en-tific Amer-i-can\T1/cmr/m/n/10 . 
+  []$\T1/cmtt/m/n/10 https : / / www . scientificamerican . com / article /
+  []
+ 
+-) [327] [328
++) [329] [330
+ 
+-] (./main.toc [329])
++] (./main.toc [331])
+ \tf@toc=\write4
+ \openout4 = `main.toc'.
+ 
+ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
+- [330]
++ [332]
+ Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+  (./main.aux)
+ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
+ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+ Package rerunfilecheck Info: File `main.out' has not changed.
+-(rerunfilecheck)             Checksum: 081B91169852F78F05EF22B224CB458B;1910.
++(rerunfilecheck)             Checksum: 17AE09CAB0C4CA34843646C9C533BC7B;2062.
+ 
+ 
+ LaTeX Warning: There were undefined references.
+ 
++
++LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
++
+ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
+  ) 
+ Here is how much of TeX's memory you used:
+- 18760 strings out of 493014
+- 329398 string characters out of 6133351
+- 428719 words of memory out of 5000000
+- 21936 multiletter control sequences out of 15000+600000
+- 20231 words of font info for 43 fonts, out of 8000000 for 9000
++ 18783 strings out of 493014
++ 329903 string characters out of 6133351
++ 430024 words of memory out of 5000000
++ 21951 multiletter control sequences out of 15000+600000
++ 20997 words of font info for 44 fonts, out of 8000000 for 9000
+  1141 hyphenation exceptions out of 8191
+  42i,12n,44p,10435b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+ pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
+@@ -1656,10 +1674,10 @@ e1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+ /public/cm-super/sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ ublic/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+ lic/cm-super/sftt1000.pfb>
+-Output written on main.pdf (30 pages, 2746582 bytes).
++Output written on main.pdf (32 pages, 3138215 bytes).
+ PDF statistics:
+- 534 PDF objects out of 1000 (max. 8388607)
+- 452 compressed objects within 5 object streams
+- 120 named destinations out of 1000 (max. 500000)
+- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
++ 597 PDF objects out of 1000 (max. 8388607)
++ 482 compressed objects within 5 object streams
++ 127 named destinations out of 1000 (max. 500000)
++ 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 
+diff --git a/main.out b/main.out
+index b4c5b7d..f759d34 100644
+--- a/main.out
++++ b/main.out
+@@ -10,15 +10,17 @@
+ \BOOKMARK [2][-]{subsection.4.2.2}{Network analysis}{section.4.2}% 10
+ \BOOKMARK [3][-]{subsubsection.4.2.2.1}{Degree}{subsection.4.2.2}% 11
+ \BOOKMARK [3][-]{subsubsection.4.2.2.2}{Directed Degree}{subsection.4.2.2}% 12
+-\BOOKMARK [4][-]{section*.9}{In-Degree}{subsubsection.4.2.2.2}% 13
+-\BOOKMARK [4][-]{table.caption.10}{Out-Degree}{subsubsection.4.2.2.2}% 14
++\BOOKMARK [4][-]{section*.10}{In-Degree}{subsubsection.4.2.2.2}% 13
++\BOOKMARK [4][-]{table.caption.11}{Out-Degree}{subsubsection.4.2.2.2}% 14
+ \BOOKMARK [3][-]{subsubsection.4.2.2.3}{Closness Centrality}{subsection.4.2.2}% 15
+ \BOOKMARK [3][-]{subsubsection.4.2.2.4}{Betweenness}{subsection.4.2.2}% 16
+ \BOOKMARK [3][-]{subsubsection.4.2.2.5}{Spectral methods and matrix analysis}{subsection.4.2.2}% 17
+ \BOOKMARK [3][-]{subsubsection.4.2.2.6}{Hypertext Induced Topic Search \(HITS\)}{subsection.4.2.2}% 18
+-\BOOKMARK [4][-]{table.caption.22}{Page Rank}{subsubsection.4.2.2.6}% 19
+-\BOOKMARK [4][-]{table.caption.22}{The Google Matrix}{subsubsection.4.2.2.6}% 20
++\BOOKMARK [4][-]{table.caption.23}{Page Rank}{subsubsection.4.2.2.6}% 19
++\BOOKMARK [4][-]{table.caption.23}{The Google Matrix}{subsubsection.4.2.2.6}% 20
+ \BOOKMARK [4][-]{equation.4.2.1}{Solving the algebra}{subsubsection.4.2.2.6}% 21
+ \BOOKMARK [4][-]{algorithm.2}{Prediction}{subsubsection.4.2.2.6}% 22
+ \BOOKMARK [3][-]{subsubsection.4.2.2.7}{Modularity and Community detection}{subsection.4.2.2}% 23
+-\BOOKMARK [1][-]{section.4.3}{Applying graph theory to chemical results}{chapter.4}% 24
++\BOOKMARK [1][-]{section.4.3}{Existing analysis methods}{chapter.4}% 24
++\BOOKMARK [2][-]{subsection.4.3.1}{Concentration time series}{section.4.3}% 25
++\BOOKMARK [1][-]{section.4.4}{Applying graph theory to chemical results}{chapter.4}% 26
+diff --git a/main.pdf b/main.pdf
+index 39a7aa6..3ec27f8 100644
+Binary files a/main.pdf and b/main.pdf differ
+diff --git a/main.synctex.gz b/main.synctex.gz
+index cff70d3..053925f 100644
+Binary files a/main.synctex.gz and b/main.synctex.gz differ
+diff --git a/main.toc b/main.toc
+index be01852..c71b0a4 100644
+--- a/main.toc
++++ b/main.toc
+@@ -7,18 +7,20 @@
+ \contentsline {subsubsection}{\numberline {4.2.1.2}Filtering the data}{308}{subsubsection.4.2.1.2}
+ \contentsline {paragraph}{Co-citation}{308}{table.caption.4}
+ \contentsline {subsubsection}{\numberline {4.2.1.3}Co-author}{309}{subsubsection.4.2.1.3}
+-\contentsline {subsection}{\numberline {4.2.2}Network analysis}{309}{subsection.4.2.2}
+-\contentsline {subsubsection}{\numberline {4.2.2.1}Degree}{309}{subsubsection.4.2.2.1}
+-\contentsline {subsubsection}{\numberline {4.2.2.2}Directed Degree}{311}{subsubsection.4.2.2.2}
+-\contentsline {paragraph}{In-Degree}{312}{section*.9}
+-\contentsline {paragraph}{Out-Degree}{313}{table.caption.10}
+-\contentsline {subsubsection}{\numberline {4.2.2.3}Closness Centrality}{313}{subsubsection.4.2.2.3}
+-\contentsline {subsubsection}{\numberline {4.2.2.4}Betweenness}{315}{subsubsection.4.2.2.4}
+-\contentsline {subsubsection}{\numberline {4.2.2.5}Spectral methods and matrix analysis}{318}{subsubsection.4.2.2.5}
+-\contentsline {subsubsection}{\numberline {4.2.2.6}Hypertext Induced Topic Search (HITS)}{318}{subsubsection.4.2.2.6}
+-\contentsline {paragraph}{Page Rank}{320}{table.caption.22}
+-\contentsline {paragraph}{The Google Matrix}{320}{table.caption.22}
+-\contentsline {paragraph}{Solving the algebra}{321}{equation.4.2.1}
+-\contentsline {paragraph}{Prediction}{322}{algorithm.2}
+-\contentsline {subsubsection}{\numberline {4.2.2.7}Modularity and Community detection}{324}{subsubsection.4.2.2.7}
+-\contentsline {section}{\numberline {4.3}Applying graph theory to chemical results}{324}{section.4.3}
++\contentsline {subsection}{\numberline {4.2.2}Network analysis}{310}{subsection.4.2.2}
++\contentsline {subsubsection}{\numberline {4.2.2.1}Degree}{310}{subsubsection.4.2.2.1}
++\contentsline {subsubsection}{\numberline {4.2.2.2}Directed Degree}{313}{subsubsection.4.2.2.2}
++\contentsline {paragraph}{In-Degree}{313}{section*.10}
++\contentsline {paragraph}{Out-Degree}{314}{table.caption.11}
++\contentsline {subsubsection}{\numberline {4.2.2.3}Closness Centrality}{314}{subsubsection.4.2.2.3}
++\contentsline {subsubsection}{\numberline {4.2.2.4}Betweenness}{316}{subsubsection.4.2.2.4}
++\contentsline {subsubsection}{\numberline {4.2.2.5}Spectral methods and matrix analysis}{319}{subsubsection.4.2.2.5}
++\contentsline {subsubsection}{\numberline {4.2.2.6}Hypertext Induced Topic Search (HITS)}{319}{subsubsection.4.2.2.6}
++\contentsline {paragraph}{Page Rank}{321}{table.caption.23}
++\contentsline {paragraph}{The Google Matrix}{321}{table.caption.23}
++\contentsline {paragraph}{Solving the algebra}{322}{equation.4.2.1}
++\contentsline {paragraph}{Prediction}{323}{algorithm.2}
++\contentsline {subsubsection}{\numberline {4.2.2.7}Modularity and Community detection}{325}{subsubsection.4.2.2.7}
++\contentsline {section}{\numberline {4.3}Existing analysis methods}{325}{section.4.3}
++\contentsline {subsection}{\numberline {4.3.1}Concentration time series}{325}{subsection.4.3.1}
++\contentsline {section}{\numberline {4.4}Applying graph theory to chemical results}{326}{section.4.4}
