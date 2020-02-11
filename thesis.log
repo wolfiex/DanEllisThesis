@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  10 FEB 2020 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.21)  11 FEB 2020 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1206,260 +1206,11 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
 LaTeX Warning: Unused global option(s):
     [openleft].
 
-(./thesis.aux
+(./thesis.aux (./5_centrality.aux
 
-LaTeX Warning: Label `fig:density' multiply defined.
+LaTeX Warning: Label `tab:ch2ooe' multiply defined.
 
-
-Package natbib Warning: Citation `lsq' multiply defined.
-
-
-Package natbib Warning: Citation `lapack' multiply defined.
-
-
-Package natbib Warning: Citation `naturecover' multiply defined.
-
-
-Package natbib Warning: Citation `gephi' multiply defined.
-
-
-Package natbib Warning: Citation `tf83' multiply defined.
-
-
-Package natbib Warning: Citation `detailedmcm' multiply defined.
-
-
-Package natbib Warning: Citation `lif2' multiply defined.
-
-
-Package natbib Warning: Citation `eigen' multiply defined.
-
-
-Package natbib Warning: Citation `eigen2' multiply defined.
-
-
-Package natbib Warning: Citation `examples_centrality' multiply defined.
-
-
-Package natbib Warning: Citation `phrase' multiply defined.
-
-
-Package natbib Warning: Citation `betweenfast' multiply defined.
-
-
-Package natbib Warning: Citation `jacob' multiply defined.
-
-
-Package natbib Warning: Citation `scalefreebad' multiply defined.
-
-
-Package natbib Warning: Citation `threejs' multiply defined.
-
-
-Package natbib Warning: Citation `layercortex' multiply defined.
-
-
-Package natbib Warning: Citation `plexp' multiply defined.
-
-
-Package natbib Warning: Citation `perceptronimage' multiply defined.
-
-
-Package natbib Warning: Citation `scalefreepapers' multiply defined.
-
-
-Package natbib Warning: Citation `milk1' multiply defined.
-
-
-Package natbib Warning: Citation `lif1' multiply defined.
-
-
-Package natbib Warning: Citation `scalefreeemail' multiply defined.
-
-
-Package natbib Warning: Citation `web' multiply defined.
-
-
-Package natbib Warning: Citation `frankenstein' multiply defined.
-
-
-Package natbib Warning: Citation `hoxcompmcm' multiply defined.
-
-
-Package natbib Warning: Citation `milk' multiply defined.
-
-
-Package natbib Warning: Citation `between' multiply defined.
-
-
-Package natbib Warning: Citation `betweenness' multiply defined.
-
-
-Package natbib Warning: Citation `degreefreeman' multiply defined.
-
-
-Package natbib Warning: Citation `coauthornew' multiply defined.
-
-
-Package natbib Warning: Citation `degreetwitter' multiply defined.
-
-
-Package natbib Warning: Citation `handsonml' multiply defined.
-
-
-Package natbib Warning: Citation `katz' multiply defined.
-
-
-Package natbib Warning: Citation `scholar' multiply defined.
-
-
-Package natbib Warning: Citation `networkx' multiply defined.
-
-
-Package natbib Warning: Citation `biopr' multiply defined.
-
-
-Package natbib Warning: Citation `sm2' multiply defined.
-
-
-Package natbib Warning: Citation `rscgraph' multiply defined.
-
-
-Package natbib Warning: Citation `pilot' multiply defined.
-
-
-Package natbib Warning: Citation `criv2' multiply defined.
-
-
-Package natbib Warning: Citation `cri' multiply defined.
-
-
-Package natbib Warning: Citation `milk2' multiply defined.
-
-
-Package natbib Warning: Citation `mcmorigin' multiply defined.
-
-
-Package natbib Warning: Citation `mcmpartB' multiply defined.
-
-
-Package natbib Warning: Citation `isopmcm' multiply defined.
-
-
-Package natbib Warning: Citation `perceptronmanual' multiply defined.
-
-
-Package natbib Warning: Citation `scipy' multiply defined.
-
-
-Package natbib Warning: Citation `hits' multiply defined.
-
-
-Package natbib Warning: Citation `neuro2' multiply defined.
-
-
-Package natbib Warning: Citation `terror' multiply defined.
-
-
-Package natbib Warning: Citation `hitsweb' multiply defined.
-
-
-Package natbib Warning: Citation `hitsvspagerank' multiply defined.
-
-
-Package natbib Warning: Citation `hongkongmcm' multiply defined.
-
-
-Package natbib Warning: Citation `pitts' multiply defined.
-
-
-Package natbib Warning: Citation `sampling' multiply defined.
-
-
-Package natbib Warning: Citation `blood' multiply defined.
-
-
-Package natbib Warning: Citation `netcoauthor' multiply defined.
-
-
-Package natbib Warning: Citation `naturecitation' multiply defined.
-
-
-Package natbib Warning: Citation `neoj4' multiply defined.
-
-
-Package natbib Warning: Citation `newmancoauthor' multiply defined.
-
-
-Package natbib Warning: Citation `numpy' multiply defined.
-
-
-Package natbib Warning: Citation `frenk' multiply defined.
-
-
-Package natbib Warning: Citation `neurotrauma' multiply defined.
-
-
-Package natbib Warning: Citation `google' multiply defined.
-
-
-Package natbib Warning: Citation `nano' multiply defined.
-
-
-Package natbib Warning: Citation `closeness-book' multiply defined.
-
-
-Package natbib Warning: Citation `ks' multiply defined.
-
-
-Package natbib Warning: Citation `seeley' multiply defined.
-
-
-Package natbib Warning: Citation `perceptron' multiply defined.
-
-
-Package natbib Warning: Citation `closeness' multiply defined.
-
-
-Package natbib Warning: Citation `mcmpartA' multiply defined.
-
-
-Package natbib Warning: Citation `cocite' multiply defined.
-
-
-Package natbib Warning: Citation `biogeo' multiply defined.
-
-
-Package natbib Warning: Citation `georiver1' multiply defined.
-
-
-Package natbib Warning: Citation `cm' multiply defined.
-
-
-Package natbib Warning: Citation `kinetics' multiply defined.
-
-
-Package natbib Warning: Citation `connectivity' multiply defined.
-
-
-Package natbib Warning: Citation `tur1990' multiply defined.
-
-
-Package natbib Warning: Citation `PCAS' multiply defined.
-
-
-Package natbib Warning: Citation `spectral' multiply defined.
-
-
-Package natbib Warning: Citation `smallworld' multiply defined.
-
-
-Package natbib Warning: Citation `whitehouse1' multiply defined.
-
-
-Package natbib Warning: Citation `skull' multiply defined.
-
-)
+))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
@@ -1566,348 +1317,53 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-ABD: EveryShipout initializing macros (./thesis.toc [1
+ABD: EveryShipout initializing macros [0
 
 
 
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
+] (./thesis.toc
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
 )
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [2] [3] [4
+ [1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-(./thesis.lof [5] [6]
-
-Package natbib Warning: Citation `idfpic' on page vii undefined on input line 2
-9.
+\openout2 = `./5_centrality.aux'.
 
 
-Package caption Warning: \label without proper \caption on input line 159.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:morig' on page vii undefined on input line 33.
-
-
-Package caption Warning: \label without proper \caption on input line 177.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:metric' on page vii undefined on input line 33.
-
-
-Package caption Warning: \label without proper \caption on input line 159.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:morig' on page vii undefined on input line 34.
-
-
-Package caption Warning: \label without proper \caption on input line 177.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:metric' on page vii undefined on input line 34.
-
-)
-\tf@lof=\write6
-\openout6 = `thesis.lof'.
-
- [7] [8
-
-] (./thesis.lot)
-\tf@lot=\write7
-\openout7 = `thesis.lot'.
-
- [9] [10
-
-] (./5_centrality.tex
-Chapter 2.
+(./5_centrality.tex
+Chapter 1.
 [1
 
-] [0
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.22 \newpage
-              [1
 
+] [2
 
-] (./model_diagnostics/intro.tex
-<model_diagnostics/figures_c3/humanskulls.png, id=629, 959.585pt x 689.57625pt>
-File: model_diagnostics/figures_c3/humanskulls.png Graphic file (type png)
-<use model_diagnostics/figures_c3/humanskulls.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/humanskulls.png used on i
-nput line 7.
-(pdftex.def)             Requested size: 441.01775pt x 316.92482pt.
- [2 <./model_diagnostics/figures_c3/humanskulls.png>] [3]
-<model_diagnostics/figures_c3/naturegraph.png, id=671, 1433.355pt x 835.12pt>
-File: model_diagnostics/figures_c3/naturegraph.png Graphic file (type png)
+] [3
 
-<use model_diagnostics/figures_c3/naturegraph.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/naturegraph.png used on i
-nput line 45.
-(pdftex.def)             Requested size: 646.55914pt x 376.70526pt.
- [4]
-Overfull \vbox (13.77606pt too high) has occurred while \output is active []
 
+] (./model_diagnostics/casestudy.tex
 
-[5 <./model_diagnostics/figures_c3/naturegraph.png>]
+LaTeX Warning: Reference `sec:graphcentrality' on page 4 undefined on input lin
+e 3.
 
-Package natbib Warning: Citation `mcm' on page 6 undefined on input line 55.
 
+Package natbib Warning: Citation `sklearn' on page 4 undefined on input line 8.
 
-<model_diagnostics/figures_c3/gephiall.png, id=698, 627.34375pt x 543.02875pt>
-File: model_diagnostics/figures_c3/gephiall.png Graphic file (type png)
 
-<use model_diagnostics/figures_c3/gephiall.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/gephiall.png used on inpu
-t line 77.
-(pdftex.def)             Requested size: 218.30162pt x 188.96086pt.
 
-<model_diagnostics/figures_c3/sideall.png, id=703, 685.56125pt x 704.6325pt>
-File: model_diagnostics/figures_c3/sideall.png Graphic file (type png)
-
-<use model_diagnostics/figures_c3/sideall.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/sideall.png used on input
- line 84.
-(pdftex.def)             Requested size: 207.27887pt x 213.04716pt.
-
-<model_diagnostics/figures_c3/threeall.png, id=704, 735.74875pt x 717.68124pt>
-File: model_diagnostics/figures_c3/threeall.png Graphic file (type png)
-
-<use model_diagnostics/figures_c3/threeall.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/threeall.png used on inpu
-t line 92.
-(pdftex.def)             Requested size: 330.7633pt x 322.64694pt.
- [6] [7 <./model_diagnostics/figures_c3/gephiall.png> <./model_diagnostics/figu
-res_c3/sideall.png> <./model_diagnostics/figures_c3/threeall.png>]
-
-Package caption Warning: \label without proper \caption on input line 144.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `table:otherpapers' on page 8 undefined on input line 
-119.
-
-[8] [9]
-
-LaTeX Warning: Reference `fig:autorgroup' on page 10 undefined on input line 17
-1.
-
-
-<model_diagnostics/figures_c3/GroupAuthor.png, id=785, 662.97687pt x 660.96938p
-t>
-File: model_diagnostics/figures_c3/GroupAuthor.png Graphic file (type png)
- <use model_diagnostics/figures_c3/GroupAuthor.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/GroupAuthor.png used on i
-nput line 176.
-(pdftex.def)             Requested size: 352.81554pt x 351.74425pt.
- [10])
-(./model_diagnostics/centrality.tex
-
-LaTeX Warning: Reference `fig:autorgroup' on page 11 undefined on input line 5.
-
-
-[11 <./model_diagnostics/figures_c3/GroupAuthor.png>]
-<model_diagnostics/figures_c3/degreeauthor.png, id=810, 750.805pt x 749.80125pt
->
-File: model_diagnostics/figures_c3/degreeauthor.png Graphic file (type png)
- <use model_diagnostics/figures_c3/degreeauthor.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/degreeauthor.png used on 
-input line 15.
-(pdftex.def)             Requested size: 352.81554pt x 352.34943pt.
-
-(./model_diagnostics/tables/degree_Author.tex) [12 <./model_diagnostics/figures
-_c3/degreeauthor.png>] (./model_diagnostics/tables/In-Degree_Citation.tex)
-(./model_diagnostics/tables/Out-Degree_Citation.tex) [13]
-<model_diagnostics/figures_c3/closenessauthor.png, id=856, 752.8125pt x 752.812
-5pt>
-File: model_diagnostics/figures_c3/closenessauthor.png Graphic file (type png)
- <use model_diagnostics/figures_c3/closenessauthor.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/closenessauthor.png used 
-on input line 51.
-(pdftex.def)             Requested size: 352.81554pt x 352.82256pt.
-
-(./model_diagnostics/tables/closeness_Author.tex) [14] [15 <./model_diagnostics
-/figures_c3/closenessauthor.png>]
-<model_diagnostics/figures_c3/betweenauthor.png, id=882, 749.80125pt x 724.7075
-pt>
-File: model_diagnostics/figures_c3/betweenauthor.png Graphic file (type png)
- <use model_diagnostics/figures_c3/betweenauthor.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/betweenauthor.png used on
- input line 75.
-(pdftex.def)             Requested size: 352.81554pt x 341.01067pt.
-
-(./model_diagnostics/tables/betweenness_Author.tex) [16] [17 <./model_diagnosti
-cs/figures_c3/betweenauthor.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
-[]\T1/cmr/m/n/10 Eigenvector [[]Bonacich[],
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-[]\T1/cmr/m/n/10 Markov Chain Steady
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-[]\T1/cmr/m/n/10 Total Ef-fect Cen-tral-ity
- []
-
-
-Underfull \hbox (badness 2753) in paragraph at lines 96--96
-\T1/cmr/m/n/10 PageR-ank [[]Page et al.[],
- []
-
-
-Overfull \hbox (90.91995pt too wide) in paragraph at lines 91--98
- [][] 
- []
-
-
-Package hyperref Warning: No autoref name for `algorithm' on input line 121.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 123.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 123.
-
-[18]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 129.
- [19]
-<model_diagnostics/figures_c3/pagerankauthor.png, id=970, 749.80125pt x 745.786
-25pt>
-File: model_diagnostics/figures_c3/pagerankauthor.png Graphic file (type png)
- <use model_diagnostics/figures_c3/pagerankauthor.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/pagerankauthor.png used o
-n input line 191.
-(pdftex.def)             Requested size: 352.81554pt x 350.92926pt.
-
-(./model_diagnostics/tables/pagerank_Author.tex) [20])
-(./model_diagnostics/chemistry.tex [21 <./model_diagnostics/figures_c3/pagerank
-author.png>]
-
-Package caption Warning: \label without proper \caption on input line 182.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:density' on page 22 undefined on input line 7.
-
-<model_diagnostics/figures_c3/sparcity.png, id=989, 462.528pt x 346.896pt>
-File: model_diagnostics/figures_c3/sparcity.png Graphic file (type png)
-
-<use model_diagnostics/figures_c3/sparcity.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/sparcity.png used on inpu
-t line 11.
-(pdftex.def)             Requested size: 308.71107pt x 231.54573pt.
- [22] [23 <./model_diagnostics/figures_c3/sparcity.png>]
-<model_diagnostics/figures_c3/logpart.pdf, id=1011, 2099.92514pt x 935.41469pt>
-File: model_diagnostics/figures_c3/logpart.pdf Graphic file (type pdf)
-<use model_diagnostics/figures_c3/logpart.pdf>
-Package pdftex.def Info: model_diagnostics/figures_c3/logpart.pdf used on input
- line 33.
-(pdftex.def)             Requested size: 441.01775pt x 196.44289pt.
-
-<model_diagnostics/figures_c3/graphstyles.png, id=1023, 1084.05pt x 430.60875pt
->
-File: model_diagnostics/figures_c3/graphstyles.png Graphic file (type png)
- <use model_diagnostics/figures_c3/graphstyles.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/graphstyles.png used on i
-nput line 47.
-(pdftex.def)             Requested size: 352.81554pt x 140.1433pt.
- [24 <./model_diagnostics/figures_c3/logpart.pdf>]
-Overfull \hbox (5.45436pt too wide) in paragraph at lines 52--53
-[]\T1/cmr/m/n/10 To as-sess the best dis-tri-bu-tion for de-scrib-ing the monte
- carlo sub-sets of the MCM I use the Kolomogorov-
- []
-
-
-<model_diagnostics/figures_c3/KSdistance.png, id=1082, 667.7748pt x 292.6935pt>
-File: model_diagnostics/figures_c3/KSdistance.png Graphic file (type png)
-<use model_diagnostics/figures_c3/KSdistance.png>
-Package pdftex.def Info: model_diagnostics/figures_c3/KSdistance.png used on in
-put line 62.
-(pdftex.def)             Requested size: 441.01775pt x 193.30782pt.
- [25 <./model_diagnostics/figures_c3/graphstyles.png> <./model_diagnostics/figu
-res_c3/KSdistance.png>])
-(./model_diagnostics/graphconstruction.tex
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 7.
-
-[26]
-<model_diagnostics/figures/ch2concentration.pdf, id=1101, 769.87625pt x 377.41p
-t>
-File: model_diagnostics/figures/ch2concentration.pdf Graphic file (type pdf)
- <use model_diagnostics/figures/ch2concentration.pdf>
-Package pdftex.def Info: model_diagnostics/figures/ch2concentration.pdf used on
- input line 18.
-(pdftex.def)             Requested size: 374.86777pt x 183.775pt.
- [27 <./model_diagnostics/figures/ch2concentration.pdf>]
-<model_diagnostics/figures/ROPA_CH3CO3.pdf, id=1147, 993.7125pt x 1241.59856pt>
-File: model_diagnostics/figures/ROPA_CH3CO3.pdf Graphic file (type pdf)
-<use model_diagnostics/figures/ROPA_CH3CO3.pdf>
-Package pdftex.def Info: model_diagnostics/figures/ROPA_CH3CO3.pdf used on inpu
-t line 42.
-(pdftex.def)             Requested size: 441.01775pt x 551.04137pt.
- [28] [29 <./model_diagnostics/figures/ROPA_CH3CO3.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-
- []
-
-[30]
-
-Package natbib Warning: Citation `kpp' on page 31 undefined on input line 99.
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
- []
-
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-
- []
-
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 172.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmss.fd
-File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 194.
-
-[33]) (./model_diagnostics/casestudy.tex [34]
-
-Package natbib Warning: Citation `sklearn' on page 35 undefined on input line 8
-.
-
-
-<model_diagnostics/figures_c3/mlpregressor/Mark_I_perceptron.jpg, id=1308, 286.
-06876pt x 351.3125pt>
+<model_diagnostics/figures_c3/mlpregressor/Mark_I_perceptron.jpg, id=132, 286.0
+6876pt x 351.3125pt>
 File: model_diagnostics/figures_c3/mlpregressor/Mark_I_perceptron.jpg Graphic f
 ile (type jpg)
 
@@ -1915,10 +1371,10 @@ ile (type jpg)
 Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/Mark_I_perce
 ptron.jpg used on input line 16.
 (pdftex.def)             Requested size: 198.45663pt x 243.71922pt.
- [35]
-[36 <./model_diagnostics/figures_c3/mlpregressor/Mark_I_perceptron.jpg>]
-<model_diagnostics/figures_c3/mlpregressor/Cajal_cortex_drawings.png, id=1337, 
-759.83875pt x 450.68375pt>
+ [4]
+[5 <./model_diagnostics/figures_c3/mlpregressor/Mark_I_perceptron.jpg>]
+<model_diagnostics/figures_c3/mlpregressor/Cajal_cortex_drawings.png, id=173, 7
+59.83875pt x 450.68375pt>
 File: model_diagnostics/figures_c3/mlpregressor/Cajal_cortex_drawings.png Graph
 ic file (type png)
 
@@ -1927,9 +1383,9 @@ Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/Cajal_cortex
 _drawings.png used on input line 37.
 (pdftex.def)             Requested size: 374.86777pt x 222.34987pt.
 
-[37 <./model_diagnostics/figures_c3/mlpregressor/Cajal_cortex_drawings.png>]
-<model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/O3.pdf, id=1354, 115
-6.32pt x 578.16pt>
+[6 <./model_diagnostics/figures_c3/mlpregressor/Cajal_cortex_drawings.png>]
+<model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/O3.pdf, id=191, 1156
+.32pt x 578.16pt>
 File: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/O3.pdf Graphic 
 file (type pdf)
 
@@ -1937,9 +1393,9 @@ file (type pdf)
 Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVe
 rde/O3.pdf used on input line 54.
 (pdftex.def)             Requested size: 632.50047pt x 393.76114pt.
- [38]
-<model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO.pdf, id=1360, 115
-6.32pt x 578.16pt>
+ [7]
+<model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO.pdf, id=202, 1156
+.32pt x 578.16pt>
 File: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO.pdf Graphic 
 file (type pdf)
 
@@ -1947,9 +1403,9 @@ file (type pdf)
 Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVe
 rde/NO.pdf used on input line 61.
 (pdftex.def)             Requested size: 632.50047pt x 393.76114pt.
- [39 <./model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/O3.pdf>]
-<model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO2.pdf, id=1416, 11
-56.32pt x 578.16pt>
+ [8 <./model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/O3.pdf>]
+<model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO2.pdf, id=258, 115
+6.32pt x 578.16pt>
 File: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO2.pdf Graphic
  file (type pdf)
 
@@ -1958,9 +1414,9 @@ Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVe
 rde/NO2.pdf used on input line 68.
 (pdftex.def)             Requested size: 632.50047pt x 393.76114pt.
 
-[40 <./model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO.pdf>]
+[9 <./model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO.pdf>]
 <model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/ISO_PENTANE.pdf, id=
-1473, 1156.32pt x 578.16pt>
+315, 1156.32pt x 578.16pt>
 File: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/ISO_PENTANE.pdf
  Graphic file (type pdf)
 
@@ -1968,15 +1424,15 @@ File: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/ISO_PENTANE.pdf
 Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVe
 rde/ISO_PENTANE.pdf used on input line 75.
 (pdftex.def)             Requested size: 632.50047pt x 393.76114pt.
-[41 <./model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO2.pdf>]
-[42 <./model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/ISO_PENTANE.pd
+[10 <./model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/NO2.pdf>]
+[11 <./model_diagnostics/figures_c3/mlpregressor/CVNOX_CapeVerde/ISO_PENTANE.pd
 f>]
 
 Package caption Warning: \label without proper \caption on input line 98.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:icsmetric' on page 43 undefined on input line 85.
+LaTeX Warning: Reference `tab:icsmetric' on page 12 undefined on input line 85.
 
 
 
@@ -1984,32 +1440,32 @@ Package caption Warning: \label without proper \caption on input line 113.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:ccape' on page 43 undefined on input line 86.
+LaTeX Warning: Reference `fig:ccape' on page 12 undefined on input line 86.
 
 
 Package caption Warning: \label without proper \caption on input line 143.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:cbeijing' on page 43 undefined on input line 86.
+LaTeX Warning: Reference `fig:cbeijing' on page 12 undefined on input line 86.
 
 (./model_diagnostics/metricics.tex
 Overfull \hbox (1.89903pt too wide) in paragraph at lines 3--3
 []\T1/cmr/m/n/9 London(ClearFlo)| 
  []
 
-) [43] [44]
-<model_diagnostics/figures_c3/mlpregressor/conc_cape.pdf, id=1602, 578.16pt x 8
-67.24pt>
+) [12] [13]
+<model_diagnostics/figures_c3/mlpregressor/conc_cape.pdf, id=451, 578.16pt x 86
+7.24pt>
 File: model_diagnostics/figures_c3/mlpregressor/conc_cape.pdf Graphic file (typ
 e pdf)
  <use model_diagnostics/figures_c3/mlpregressor/conc_cape.pdf>
 Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/conc_cape.pd
 f used on input line 112.
 (pdftex.def)             Requested size: 396.91327pt x 595.3659pt.
- [45 <./model_diagnostics/figures_c3/mlpregressor/conc_cape.pdf>]
-<model_diagnostics/figures_c3/mlpregressor/conc_borneo.pdf, id=1634, 578.16pt x
- 867.24pt>
+ [14 <./model_diagnostics/figures_c3/mlpregressor/conc_cape.pdf>]
+<model_diagnostics/figures_c3/mlpregressor/conc_borneo.pdf, id=483, 578.16pt x 
+867.24pt>
 File: model_diagnostics/figures_c3/mlpregressor/conc_borneo.pdf Graphic file (t
 ype pdf)
  <use model_diagnostics/figures_c3/mlpregressor/conc_borneo.pdf>
@@ -2017,18 +1473,18 @@ Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/conc_borneo.
 pdf used on input line 122.
 (pdftex.def)             Requested size: 396.91327pt x 595.3659pt.
 
-[46 <./model_diagnostics/figures_c3/mlpregressor/conc_borneo.pdf>]
-<model_diagnostics/figures_c3/mlpregressor/conc_clfo.pdf, id=1663, 578.16pt x 8
-67.24pt>
+[15 <./model_diagnostics/figures_c3/mlpregressor/conc_borneo.pdf>]
+<model_diagnostics/figures_c3/mlpregressor/conc_clfo.pdf, id=513, 578.16pt x 86
+7.24pt>
 File: model_diagnostics/figures_c3/mlpregressor/conc_clfo.pdf Graphic file (typ
 e pdf)
  <use model_diagnostics/figures_c3/mlpregressor/conc_clfo.pdf>
 Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/conc_clfo.pd
 f used on input line 132.
 (pdftex.def)             Requested size: 396.91327pt x 595.3659pt.
- [47 <./model_diagnostics/figures_c3/mlpregressor/conc_clfo.pdf>]
-<model_diagnostics/figures_c3/mlpregressor/conc_beijing.pdf, id=1694, 578.16pt 
-x 867.24pt>
+ [16 <./model_diagnostics/figures_c3/mlpregressor/conc_clfo.pdf>]
+<model_diagnostics/figures_c3/mlpregressor/conc_beijing.pdf, id=546, 578.16pt x
+ 867.24pt>
 File: model_diagnostics/figures_c3/mlpregressor/conc_beijing.pdf Graphic file (
 type pdf)
  <use model_diagnostics/figures_c3/mlpregressor/conc_beijing.pdf>
@@ -2036,14 +1492,9 @@ Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/conc_beijing
 .pdf used on input line 142.
 (pdftex.def)             Requested size: 396.91327pt x 595.3659pt.
 
-[48 <./model_diagnostics/figures_c3/mlpregressor/conc_beijing.pdf>]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 158.
-
-[49]
-<model_diagnostics/figures_c3/mlpregressor/plotidf.png, id=1735, 637.6623pt x 3
-57.9774pt>
+[17 <./model_diagnostics/figures_c3/mlpregressor/conc_beijing.pdf>] [18]
+<model_diagnostics/figures_c3/mlpregressor/plotidf.png, id=586, 637.6623pt x 35
+7.9774pt>
 File: model_diagnostics/figures_c3/mlpregressor/plotidf.png Graphic file (type 
 png)
  <use model_diagnostics/figures_c3/mlpregressor/plotidf.png>
@@ -2052,895 +1503,126 @@ used on input line 183.
 (pdftex.def)             Requested size: 441.01775pt x 247.58366pt.
 
 
-Package natbib Warning: Citation `idfpic' on page 50 undefined on input line 18
+Package natbib Warning: Citation `idfpic' on page 19 undefined on input line 18
 4.
 
 
-Package natbib Warning: Citation `idfpic' on page 50 undefined on input line 18
+Package natbib Warning: Citation `idfpic' on page 19 undefined on input line 18
 4.
 
-[50 <./model_diagnostics/figures_c3/mlpregressor/plotidf.png>]
-<model_diagnostics/figures_c3/cbar.pdf, id=1743, 462.52798pt x 346.89601pt>
-File: model_diagnostics/figures_c3/cbar.pdf Graphic file (type pdf)
-
-<use model_diagnostics/figures_c3/cbar.pdf>
-Package pdftex.def Info: model_diagnostics/figures_c3/cbar.pdf used on input li
-ne 214.
-(pdftex.def)             Requested size: 176.4044pt x 132.30353pt.
- [51 <./model_diagnostics/figures_c3/cbar.pdf>]
+[19 <./model_diagnostics/figures_c3/mlpregressor/plotidf.png>]
+<model_diagnostics/figures_c3/mlpregressor/cbar.pdf, id=597, 374.39874pt x 375.
+4025pt>
+File: model_diagnostics/figures_c3/mlpregressor/cbar.pdf Graphic file (type pdf
+)
+ <use model_diagnostics/figures_c3/mlpregressor/cbar.pdf>
+Package pdftex.def Info: model_diagnostics/figures_c3/mlpregressor/cbar.pdf use
+d on input line 214.
+(pdftex.def)             Requested size: 176.4044pt x 176.88026pt.
+ [20 <./model_diagnostics/figures_c3/mlpregressor/cbar.pdf>]
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 244.
-) (./thesis.bbl [52]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
+
+<model_diagnostics/figures_c3/traditional.pdf, id=638, 764.8575pt x 320.19624pt
+>
+File: model_diagnostics/figures_c3/traditional.pdf Graphic file (type pdf)
+ <use model_diagnostics/figures_c3/traditional.pdf>
+Package pdftex.def Info: model_diagnostics/figures_c3/traditional.pdf used on i
+nput line 261.
+(pdftex.def)             Requested size: 396.91327pt x 166.161pt.
+
+<model_diagnostics/figures_c3/adjoint.pdf, id=639, 755.82375pt x 311.1625pt>
+File: model_diagnostics/figures_c3/adjoint.pdf Graphic file (type pdf)
+
+<use model_diagnostics/figures_c3/adjoint.pdf>
+Package pdftex.def Info: model_diagnostics/figures_c3/adjoint.pdf used on input
+ line 268.
+(pdftex.def)             Requested size: 396.91327pt x 163.40549pt.
+ [21] [22 <./model_diagnostics/figures_c3/traditional.pdf> <./model_diagnostics
+/figures_c3/adjoint.pdf
+
+pdfTeX warning: pdflatex (file ./model_diagnostics/figures_c3/adjoint.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>]
+
+Package caption Warning: \label without proper \caption on input line 356.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:ch2ooe' on page 23 undefined on input line 290.
+
+
+Package caption Warning: \label without proper \caption on input line 317.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:prtest0' on page 23 undefined on input line 310.
+
+<model_diagnostics/figures_c3/prtest0.png, id=674, 1280.785pt x 517.935pt>
+File: model_diagnostics/figures_c3/prtest0.png Graphic file (type png)
+
+<use model_diagnostics/figures_c3/prtest0.png>
+Package pdftex.def Info: model_diagnostics/figures_c3/prtest0.png used on input
+ line 315.
+(pdftex.def)             Requested size: 441.01775pt x 178.34003pt.
+ [23]) (./5_centrality.bbl
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 6.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
 []\T1/cmr/m/n/10 (2019).  La-pack --- Lin-ear Al-ge-bra Pack-age.  []$\T1/cmtt/
 m/n/10 http : / / www . netlib . org / lapack/$[]\T1/cmr/m/n/10 .
  []
 
-[53
-
-]
-Underfull \hbox (badness 1325) in paragraph at lines 101--106
+[24 <./model_diagnostics/figures_c3/prtest0.png>] [25]
+Underfull \hbox (badness 1325) in paragraph at lines 96--101
 []\T1/cmr/m/n/10 Cornell, L. (2020).  Mark 1 Per-cep-tron.  []$\T1/cmtt/m/n/10 
 https : / / en . wikipedia . org / w / index . php ? title =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--141
+Underfull \hbox (badness 10000) in paragraph at lines 130--136
 []\T1/cmr/m/n/10 Ellis, D. (2019).  Us-ing Tf-Idf To Form De-scrip-tive Chap-te
 r Sum-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--141
+Underfull \hbox (badness 10000) in paragraph at lines 130--136
 \T1/cmr/m/n/10 maries Via Key-word Ex-trac-tion.  []$\T1/cmtt/m/n/10 https : / 
 / towardsdatascience . com /
  []
 
 
-Overfull \hbox (28.64668pt too wide) in paragraph at lines 135--141
+Overfull \hbox (28.64668pt too wide) in paragraph at lines 130--136
 \T1/cmtt/m/n/10 using-[]tf-[]idf-[]to-[]form-[]descriptive-[]chapter-[]summarie
 s-[]via-[]keyword-[]extraction-[]4e6fd857d190$[]\T1/cmr/m/n/10 .
  []
 
-[54] [55] [56] [57] [58]
-Underfull \hbox (badness 10000) in paragraph at lines 491--496
+[26] [27] [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 434--439
 []\T1/cmr/m/n/10 Wood, B. (2014).  The Ori-gin Of Hu-mans Is Sur-pris-ingly Com
 -pli-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--496
+Underfull \hbox (badness 10000) in paragraph at lines 434--439
 \T1/cmr/m/n/10 cated.  \T1/cmr/m/it/10 Sci-en-tific Amer-i-can\T1/cmr/m/n/10 . 
  []$\T1/cmtt/m/n/10 https : / / www . scientificamerican . com / article /
  []
 
-)) (./6_lumping.tex [59] [60
-
-]
-Chapter 3.
-[61]pdfTeX warning (ext4): destination with the same identifier (name{page.60})
- has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.7 \blankpage
-               [60
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.61}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.21 \newpage
-              [61
-
-
-] (./mechanism_lumping/intro.tex
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Package natbib Warning: Citation `(' on page 62 undefined on input line 15.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-[62]) (./mechanism_lumping/reduction.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
-
- []
-
-[63] [64]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-[65]) (./mechanism_lumping/nlp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-[66]
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
-[67]
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-
-Package caption Warning: \label without proper \caption on input line 36.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:mc' on page 68 undefined on input line 29.
-
-
-Package caption Warning: \label without proper \caption on input line 41.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:lh' on page 68 undefined on input line 29.
-
-<mechanism_lumping/fig/mc.pdf, id=1900, 462.52798pt x 346.89601pt>
-File: mechanism_lumping/fig/mc.pdf Graphic file (type pdf)
-
-<use mechanism_lumping/fig/mc.pdf>
-Package pdftex.def Info: mechanism_lumping/fig/mc.pdf used on input line 35.
-(pdftex.def)             Requested size: 220.50887pt x 165.38074pt.
-
-<mechanism_lumping/fig/lh.pdf, id=1901, 462.52798pt x 346.89601pt>
-File: mechanism_lumping/fig/lh.pdf Graphic file (type pdf)
-
-<use mechanism_lumping/fig/lh.pdf>
-Package pdftex.def Info: mechanism_lumping/fig/lh.pdf used on input line 40.
-(pdftex.def)             Requested size: 220.50887pt x 165.38074pt.
- [68] [69 <./mechanism_lumping/fig/mc.pdf> <./mechanism_lumping/fig/lh.pdf
-
-pdfTeX warning: pdflatex (file ./mechanism_lumping/fig/lh.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->] [70]
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--139
-
- []
-
-[71]
-
-Package caption Warning: \label without proper \caption on input line 177.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:metric' on page 72 undefined on input line 147.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
-
- []
-
-
-Package caption Warning: \label without proper \caption on input line 159.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:morig' on page 72 undefined on input line 149.
-
-
-Package caption Warning: \label without proper \caption on input line 182.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:density' on page 72 undefined on input line 151.
-
-<mechanism_lumping/fig/metric-1.png, id=1972, 624.3325pt x 619.31375pt>
-File: mechanism_lumping/fig/metric-1.png Graphic file (type png)
-
-<use mechanism_lumping/fig/metric-1.png>
-Package pdftex.def Info: mechanism_lumping/fig/metric-1.png used on input line 
-158.
-(pdftex.def)             Requested size: 220.50887pt x 218.72865pt.
-
-<mechanism_lumping/fig/metric0.png, id=1973, 640.3925pt x 646.415pt>
-File: mechanism_lumping/fig/metric0.png Graphic file (type png)
-
-<use mechanism_lumping/fig/metric0.png>
-Package pdftex.def Info: mechanism_lumping/fig/metric0.png used on input line 1
-64.
-(pdftex.def)             Requested size: 220.50887pt x 222.57942pt.
-
-
-Package caption Warning: \label without proper \caption on input line 159.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:morig' on page 72 undefined on input line 169.
-
-
-Package caption Warning: \label without proper \caption on input line 177.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:metric' on page 72 undefined on input line 169.
-
-
-Package caption Warning: \label without proper \caption on input line 159.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:morig' on page 72 undefined on input line 169.
-
-
-Package caption Warning: \label without proper \caption on input line 177.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:metric' on page 72 undefined on input line 169.
-
-[72] <mechanism_lumping/fig/metric.png, id=1982, 789.95125pt x 782.925pt>
-File: mechanism_lumping/fig/metric.png Graphic file (type png)
-
-<use mechanism_lumping/fig/metric.png>
-Package pdftex.def Info: mechanism_lumping/fig/metric.png used on input line 17
-6.
-(pdftex.def)             Requested size: 220.50887pt x 218.54851pt.
-
-<mechanism_lumping/fig/metric_density.png, id=1983, 462.528pt x 346.896pt>
-File: mechanism_lumping/fig/metric_density.png Graphic file (type png)
-
-<use mechanism_lumping/fig/metric_density.png>
-Package pdftex.def Info: mechanism_lumping/fig/metric_density.png used on input
- line 181.
-(pdftex.def)             Requested size: 220.50887pt x 165.38072pt.
-
-Overfull \hbox (2.22166pt too wide) in paragraph at lines 175--185
-[]$[]$ $[]$ 
- []
-
-
-Package caption Warning: \label without proper \caption on input line 159.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:morig' on page 73 undefined on input line 185.
-
-
-Package caption Warning: \label without proper \caption on input line 177.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:metric' on page 73 undefined on input line 185.
-
-
-Package caption Warning: \label without proper \caption on input line 159.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:morig' on page 73 undefined on input line 185.
-
-
-Package caption Warning: \label without proper \caption on input line 177.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:metric' on page 73 undefined on input line 185.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--193
-
- []
-
-[73 <./mechanism_lumping/fig/metric.png> <./mechanism_lumping/fig/metric_densit
-y.png> <./mechanism_lumping/fig/metric-1.png> <./mechanism_lumping/fig/metric0.
-png>] <mechanism_lumping/fig/step1.png, id=1996, 629.35126pt x 561.09625pt>
-File: mechanism_lumping/fig/step1.png Graphic file (type png)
-
-<use mechanism_lumping/fig/step1.png>
-Package pdftex.def Info: mechanism_lumping/fig/step1.png used on input line 203
-.
-(pdftex.def)             Requested size: 145.53665pt x 129.75146pt.
-
-<mechanism_lumping/fig/step2.png, id=1997, 511.9125pt x 463.7325pt>
-File: mechanism_lumping/fig/step2.png Graphic file (type png)
-
-<use mechanism_lumping/fig/step2.png>
-Package pdftex.def Info: mechanism_lumping/fig/step2.png used on input line 209
-.
-(pdftex.def)             Requested size: 145.53665pt x 131.83963pt.
-
-<mechanism_lumping/fig/step3.png, id=1998, 489.83pt x 458.71375pt>
-File: mechanism_lumping/fig/step3.png Graphic file (type png)
-
-<use mechanism_lumping/fig/step3.png>
-Package pdftex.def Info: mechanism_lumping/fig/step3.png used on input line 215
-.
-(pdftex.def)             Requested size: 145.53665pt x 136.2853pt.
-) (./thesis.bbl [74 <./mechanism_lumping/fig/step1.png> <./mechanism_lumping/fi
-g/step2.png> <./mechanism_lumping/fig/step3.png>]pdfTeX warning (ext4): destina
-tion with the same identifier (name{cite.lsq}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.3 \bibitem[lsq, 2008]{lsq}
-                            pdfTeX warning (ext4): destination with the same id
-entifier (name{cite.lapack}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.8 \bibitem[lap, 2019]{lapack}
-                               
-Underfull \hbox (badness 10000) in paragraph at lines 9--13
-[]\T1/cmr/m/n/10 (2019).  La-pack --- Lin-ear Al-ge-bra Pack-age.  []$\T1/cmtt/
-m/n/10 http : / / www . netlib . org / lapack/$[]\T1/cmr/m/n/10 .
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{cite.natureco
-ver}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.14 \bibitem[Barabási, 2019]{naturecover}
-                                           pdfTeX warning (ext4): destination w
-ith the same identifier (name{cite.gephi}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.20 \bibitem[Bastian et~al., 2009]{gephi}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.tf83}) has been already used, duplicate ignor
-ed
-<to be read again> 
-                   \relax 
-l.27 \bibitem[Beel et~al., 2016]{tf83}
-                                      pdfTeX warning (ext4): destination with t
-he same identifier (name{cite.detailedmcm}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.32 \bibitem[Bloss et~al., 2005]{detailedmcm}
-                                              pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.lif2}) has been already used, duplicate i
-gnored
-<to be read again> 
-                   \relax 
-l.40 \bibitem[Bloss et~al., 2004]{lif2}
-                                       pdfTeX warning (ext4): destination with 
-the same identifier (name{cite.eigen}) has been already used, duplicate ignored
-
-<to be read again> 
-                   \relax 
-l.47 \bibitem[Bonacich, 1987]{eigen}
-                                    pdfTeX warning (ext4): destination with the
- same identifier (name{cite.eigen2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.53 \bibitem[Bonacich, 2007]{eigen2}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.examples_centrality}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.58 \bibitem[Borgatti, 2005]{examples_centrality}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.phrase}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.63 \bibitem[Boudin, 2013]{phrase}
-                                   pdfTeX warning (ext4): destination with the 
-same identifier (name{cite.betweenfast}) has been already used, duplicate ignor
-ed
-<to be read again> 
-                   \relax 
-l.68 \bibitem[Brandes, 2001]{betweenfast}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{cite.jacob}) has been already used, duplicate ignor
-ed
-<to be read again> 
-                   \relax 
-l.73 \bibitem[Brasseur and Jacob, 2017]{jacob}
-                                               [75
-
-]pdfTeX warning (ext4): destination with the same identifier (name{cite.scalefr
-eebad}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.78 ...em[Broido and Clauset, 2019]{scalefreebad}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.threejs}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.83 \bibitem[Cabello, 2019]{threejs}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.layercortex}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.89 \bibitem[Cajal, 2020]{layercortex}
-                                       pdfTeX warning (ext4): destination with 
-the same identifier (name{cite.plexp}) has been already used, duplicate ignored
-
-<to be read again> 
-                   \relax 
-l.95 \bibitem[Clauset et~al., 2009]{plexp}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.perceptronimage}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.100 \bibitem[Cornell, 2020]{perceptronimage}
-                                              
-Underfull \hbox (badness 1325) in paragraph at lines 101--106
-[]\T1/cmr/m/n/10 Cornell, L. (2020).  Mark 1 Per-cep-tron.  []$\T1/cmtt/m/n/10 
-https : / / en . wikipedia . org / w / index . php ? title =
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{cite.scalefre
-epapers}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.107 ...em[de~Solla~Price, 1965]{scalefreepapers}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.milk1}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.112 \bibitem[Derwent et~al., 1998]{milk1}
-                                           pdfTeX warning (ext4): destination w
-ith the same identifier (name{cite.lif1}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.118 \bibitem[Dillon et~al., 2006]{lif1}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{cite.scalefreeemail}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.124 \bibitem[Ebel et~al., 2002]{scalefreeemail}
-                                                 pdfTeX warning (ext4): destina
-tion with the same identifier (name{cite.web}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.129 \bibitem[Edsu and Ellis, 2019]{web}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{cite.frankenstein}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.134 \bibitem[Ellis, 2019]{frankenstein}
-                                         
-Underfull \hbox (badness 10000) in paragraph at lines 135--141
-[]\T1/cmr/m/n/10 Ellis, D. (2019).  Us-ing Tf-Idf To Form De-scrip-tive Chap-te
-r Sum-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--141
-\T1/cmr/m/n/10 maries Via Key-word Ex-trac-tion.  []$\T1/cmtt/m/n/10 https : / 
-/ towardsdatascience . com /
- []
-
-
-Overfull \hbox (28.64668pt too wide) in paragraph at lines 135--141
-\T1/cmtt/m/n/10 using-[]tf-[]idf-[]to-[]form-[]descriptive-[]chapter-[]summarie
-s-[]via-[]keyword-[]extraction-[]4e6fd857d190$[]\T1/cmr/m/n/10 .
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{cite.hoxcompm
-cm}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.142 ...item[Elshorbany et~al., 2012]{hoxcompmcm}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.milk}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.152 \bibitem[Fantin et~al., 2012]{milk}
-                                          [76]pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.between}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.159 \bibitem[Freeman, 1977]{between}
-                                      pdfTeX warning (ext4): destination with t
-he same identifier (name{cite.betweenness}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.164 \bibitem[Freeman et~al., 1991]{betweenness}
-                                                 pdfTeX warning (ext4): destina
-tion with the same identifier (name{cite.degreefreeman}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.170 \bibitem[Freeman, 1978]{degreefreeman}
-                                            pdfTeX warning (ext4): destination 
-with the same identifier (name{cite.coauthornew}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.175 \bibitem[{Fujita} et~al., 2017]{coauthornew}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.degreetwitter}) has been already used
-, duplicate ignored
-<to be read again> 
-                   \relax 
-l.182 \bibitem[Gemma, 2019]{degreetwitter}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.handsonml}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.189 \bibitem[G{\'e}ron, 2017]{handsonml}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.katz}) has been already used, duplicate ignor
-ed
-<to be read again> 
-                   \relax 
-l.195 \bibitem[Goh et~al., 2001]{katz}
-                                      pdfTeX warning (ext4): destination with t
-he same identifier (name{cite.scholar}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.200 \bibitem[Google, 2019]{scholar}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.networkx}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.206 \bibitem[Hagberg et~al., 2008]{networkx}
-                                              pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.biopr}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.213 \bibitem[Hobson et~al., 2018]{biopr}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.sm2}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.218 \bibitem[Humphries and Gurney, 2008]{sm2}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.rscgraph}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.224 \bibitem[Jacob and Lapkin, 2018]{rscgraph}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{cite.pilot}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.230 \bibitem[Jeanningros et~al., 2010]{pilot}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.criv2}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.239 \bibitem[Jenkin, 2019]{criv2}
-                                    [77]pdfTeX warning (ext4): destination with
- the same identifier (name{cite.cri}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.244 \bibitem[Jenkin et~al., 2008]{cri}
-                                        pdfTeX warning (ext4): destination with
- the same identifier (name{cite.milk2}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.250 \bibitem[Jenkin and Hayman, 1999]{milk2}
-                                              pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.mcmorigin}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.257 \bibitem[Jenkin et~al., 1997]{mcmorigin}
-                                              pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.mcmpartB}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.263 \bibitem[Jenkin et~al., 2003]{mcmpartB}
-                                             pdfTeX warning (ext4): destination
- with the same identifier (name{cite.isopmcm}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.269 \bibitem[Jenkin et~al., 2015]{isopmcm}
-                                            pdfTeX warning (ext4): destination 
-with the same identifier (name{cite.perceptronmanual}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.274 \bibitem[John~Hay, 1960]{perceptronmanual}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{cite.scipy}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.279 \bibitem[Jones et~al., 01  ]{scipy}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{cite.hits}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.284 \bibitem[Kleinberg, 1999]{hits}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.neuro2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.289 \bibitem[Korke et~al., 2004]{neuro2}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.terror}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.296 \bibitem[Krebs, 2002]{terror}
-                                   pdfTeX warning (ext4): destination with the 
-same identifier (name{cite.hitsweb}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.301 \bibitem[Kumar and Upfal, 2000]{hitsweb}
-                                              pdfTeX warning (ext4): destinatio
-n with the same identifier (name{cite.hitsvspagerank}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.305 ...angville and Meyer, 2005]{hitsvspagerank}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.hongkongmcm}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.310 \bibitem[Ling et~al., 2014]{hongkongmcm}
-                                               [78]pdfTeX warning (ext4): desti
-nation with the same identifier (name{cite.pitts}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.318 \bibitem[McCulloch and Pitts, 1943]{pitts}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{cite.sampling}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.323 \bibitem[Mckay et~al., 2000]{sampling}
-                                            pdfTeX warning (ext4): destination 
-with the same identifier (name{cite.blood}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.329 \bibitem[Mohanty et~al., 2014]{blood}
-                                           pdfTeX warning (ext4): destination w
-ith the same identifier (name{cite.netcoauthor}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.336 ...tem[Molontay and Nagy, 2020]{netcoauthor}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.naturecitation}) has been already use
-d, duplicate ignored
-<to be read again> 
-                   \relax 
-l.342 ...ky and Van~Noorden, 2019]{naturecitation}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.neoj4}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.347 \bibitem[Needham and Hodler, 2019]{neoj4}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.newmancoauthor}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.352 \bibitem[Newman, 2004]{newmancoauthor}
-                                            pdfTeX warning (ext4): destination 
-with the same identifier (name{cite.numpy}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.358 \bibitem[Oliphant, 2006]{numpy}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.frenk}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.362 \bibitem[Oran and Boris, 1991]{frenk}
-                                           pdfTeX warning (ext4): destination w
-ith the same identifier (name{cite.neurotrauma}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.369 \bibitem[Ottens et~al., 2006]{neurotrauma}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{cite.google}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.376 \bibitem[Page et~al., 1999]{google}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{cite.nano}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.383 \bibitem[Pokroy et~al., 2009]{nano}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{cite.closeness-book}) has been already used, duplic
-ate ignored
-<to be read again> 
-                   \relax 
-l.390 \bibitem[poliaktiv, 2011]{closeness-book}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.ks}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.394 \bibitem[Press et~al., 1992]{ks}
-                                       [79]pdfTeX warning (ext4): destination w
-ith the same identifier (name{cite.seeley}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.400 \bibitem[R.~Seeley, 1949]{seeley}
-                                       pdfTeX warning (ext4): destination with 
-the same identifier (name{cite.perceptron}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.407 \bibitem[Rosenblatt, 1958]{perceptron}
-                                            pdfTeX warning (ext4): destination 
-with the same identifier (name{cite.closeness}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.413 \bibitem[Sabidussi, 1966]{closeness}
-                                          pdfTeX warning (ext4): destination wi
-th the same identifier (name{cite.mcmpartA}) has been already used, duplicate i
-gnored
-<to be read again> 
-                   \relax 
-l.418 \bibitem[Saunders et~al., 2003]{mcmpartA}
-                                               pdfTeX warning (ext4): destinati
-on with the same identifier (name{cite.cocite}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.425 \bibitem[Small, 1973]{cocite}
-                                   pdfTeX warning (ext4): destination with the 
-same identifier (name{cite.biogeo}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.432 \bibitem[Spencer et~al., 2010]{biogeo}
-                                            pdfTeX warning (ext4): destination 
-with the same identifier (name{cite.georiver1}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.440 \bibitem[Stubbins et~al., 2008]{georiver1}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{cite.cm}) has been already used, duplicate i
-gnored
-<to be read again> 
-                   \relax 
-l.447 \bibitem[Tur{\'a}nyi, 1990]{cm}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.kinetics}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.453 \bibitem[Turanyi and Tomlin, 2015]{kinetics}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.connectivity}) has been already used,
- duplicate ignored
-<to be read again> 
-                   \relax 
-l.458 ...r{\'a}nyi and Tomlin, 2014]{connectivity}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.tur1990}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.463 \bibitem[Turiinyi, 1990]{tur1990}
-                                       pdfTeX warning (ext4): destination with 
-the same identifier (name{cite.PCAS}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.469 \bibitem[Vajda et~al., 1985]{PCAS}
-                                        pdfTeX warning (ext4): destination with
- the same identifier (name{cite.spectral}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.474 \bibitem[Vigna, 2016]{spectral}
-                                     pdfTeX warning (ext4): destination with th
-e same identifier (name{cite.smallworld}) has been already used, duplicate igno
-red
-<to be read again> 
-                   \relax 
-l.479 ...tem[Watts and Strogatz, 1998]{smallworld}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{cite.whitehouse1}) has been already used, 
-duplicate ignored
-<to be read again> 
-                   \relax 
-l.484 ...tem[Whitehouse et~al., 2004]{whitehouse1}
-                                                   [80]pdfTeX warning (ext4): d
-estination with the same identifier (name{cite.skull}) has been already used, d
-uplicate ignored
-<to be read again> 
-                   \relax 
-l.490 \bibitem[Wood, 2014]{skull}
-                                 
-Underfull \hbox (badness 10000) in paragraph at lines 491--496
-[]\T1/cmr/m/n/10 Wood, B. (2014).  The Ori-gin Of Hu-mans Is Sur-pris-ingly Com
--pli-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 491--496
-\T1/cmr/m/n/10 cated.  \T1/cmr/m/it/10 Sci-en-tific Amer-i-can\T1/cmr/m/n/10 . 
- []$\T1/cmtt/m/n/10 https : / / www . scientificamerican . com / article /
- []
-
-)) [81]
+)) [30]
 
 Package natbib Warning: There were undefined citations.
 
-
-Package natbib Warning: There were multiply defined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
-(./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 99.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+(./thesis.aux (./5_centrality.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 67EF229AE67D8D4B225B58BD1ACAD0B2;5905.
+(rerunfilecheck)             Checksum: 6481877480C695A10C41C42412410313;1409.
 
 
 LaTeX Warning: There were undefined references.
@@ -2948,60 +1630,18 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 98.
  ) 
 Here is how much of TeX's memory you used:
- 28491 strings out of 493089
- 548892 string characters out of 6134842
- 653086 words of memory out of 5000000
- 31137 multiletter control sequences out of 15000+600000
- 31006 words of font info for 64 fonts, out of 8000000 for 9000
+ 27903 strings out of 493089
+ 536865 string characters out of 6134842
+ 626222 words of memory out of 5000000
+ 30799 multiletter control sequences out of 15000+600000
+ 25323 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,20n,101p,10444b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
-, replaced by a fixed one
+ 60i,19n,83p,10444b,779s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
+st, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
 , replaced by a fixed one
@@ -3020,48 +1660,35 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
-/public/cm-super/sfbx1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/cm-super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/cm-super/sfbx2074.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/cm-super/sfbx2488.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-cm-super/sfrm0500.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
--super/sfrm0600.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm0700.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm0800.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super
-/sfrm0900.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/s
-frm1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfr
-m1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfsx0
-600.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfsx090
-0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti0700.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1000.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on thesis.pdf (95 pages, 10870617 bytes).
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/cm-super/sfti0700.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/cm-super/sfti1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/cm-super/sftt1000.pfb>
+Output written on thesis.pdf (33 pages, 2862517 bytes).
 PDF statistics:
- 2252 PDF objects out of 2487 (max. 8388607)
- 1647 compressed objects within 17 object streams
- 337 named destinations out of 1000 (max. 500000)
- 782 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 908 PDF objects out of 1000 (max. 8388607)
+ 535 compressed objects within 6 object streams
+ 149 named destinations out of 1000 (max. 500000)
+ 216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,7 +1,17 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: ./5_centrality.aux
 The style file: apalike.bst
+A level-1 auxiliary file: ./6_lumping.aux
+Illegal, another \bibstyle command---line 61 of file ./6_lumping.aux
+ : \bibstyle
+ :          {apalike}
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 62 of file ./6_lumping.aux
+ : \bibdata
+ :         {bibtex}
+I'm skipping whatever remains of this command
 Database file #1: bibtex.bib
 Warning--I didn't find a database entry for "idfpic"
 Warning--I didn't find a database entry for "mcm"
@@ -19,7 +29,7 @@ Warning--there's a number but no volume in google
 Warning--empty journal in closeness-book
 You've used 83 entries,
             1935 wiz_defined-function locations,
-            967 strings with 17781 characters,
+            969 strings with 17814 characters,
 and the built_in function-call counts, 32663 in all, are:
 = -- 3183
 > -- 1398
@@ -58,4 +68,4 @@ warning$ -- 9
 while$ -- 254
 width$ -- 0
 write$ -- 1085
-(There were 14 warnings)
+(There were 2 error messages)

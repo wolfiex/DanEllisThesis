@@ -1,73 +1,16 @@
-\BOOKMARK [0][-]{chapter.2}{ Chemical model diagnostics using graph theory and metrics. }{}% 1
-\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 2
-\BOOKMARK [1][-]{section.2.2}{Graph Metrics}{chapter.2}% 3
-\BOOKMARK [2][-]{subsection.2.2.1}{Centrality metrics and academic publishing.}{section.2.2}% 4
-\BOOKMARK [2][-]{subsection.2.2.2}{The Master Chemical Mechanism \(MCM\)}{section.2.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.3}{Data Collection}{section.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.4}{Visualising the data.}{section.2.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.5}{Filtering the data}{section.2.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.6}{The Co-citation Network}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.7}{The Co-authorship network}{section.2.2}% 10
-\BOOKMARK [1][-]{section.2.3}{Metric analysis}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.2.3.1}{Degree Centrality}{section.2.3}% 12
-\BOOKMARK [2][-]{subsection.2.3.2}{Closness Centrality}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.3}{Betweenness}{section.2.3}% 14
-\BOOKMARK [2][-]{subsection.2.3.4}{Spectral methods and matrix analysis}{section.2.3}% 15
-\BOOKMARK [2][-]{subsection.2.3.5}{Page Rank}{section.2.3}% 16
-\BOOKMARK [3][-]{section*.18}{The Google Matrix}{subsection.2.3.5}% 17
-\BOOKMARK [4][-]{equation.2.3.1}{Solving the algebra}{subsection.2.3.5}% 18
-\BOOKMARK [4][-]{algorithm.2}{Prediction}{subsection.2.3.5}% 19
-\BOOKMARK [3][-]{subsubsection.2.3.5.1}{Conclusions}{subsection.2.3.5}% 20
-\BOOKMARK [1][-]{section.2.4}{Classifying the Master Chemical Mechanism network}{chapter.2}% 21
-\BOOKMARK [2][-]{subsection.2.4.1}{Network density}{section.2.4}% 22
-\BOOKMARK [2][-]{subsection.2.4.2}{Small world Phenomena}{section.2.4}% 23
-\BOOKMARK [2][-]{subsection.2.4.3}{Power Law and Scale-free graphs}{section.2.4}% 24
-\BOOKMARK [2][-]{subsection.2.4.4}{Describing the MCM network}{section.2.4}% 25
-\BOOKMARK [1][-]{section.2.5}{Graph Construction methodology }{chapter.2}% 26
-\BOOKMARK [2][-]{subsubsection.2.5.0.1}{Concentration time series}{section.2.5}% 27
-\BOOKMARK [3][-]{subsubsection.2.5.0.2}{Rate of Production and Loss}{subsubsection.2.5.0.1}% 28
-\BOOKMARK [3][-]{subsubsection.2.5.0.3}{The Jacobian}{subsubsection.2.5.0.1}% 29
-\BOOKMARK [2][-]{subsection.2.5.1}{Graph construction methodology for simulated data}{section.2.5}% 30
-\BOOKMARK [2][-]{subsection.2.5.2}{A practical Example using the MCM}{section.2.5}% 31
-\BOOKMARK [3][-]{figure.caption.27}{Converting the Jacobian into an adjacency matrix}{subsection.2.5.2}% 32
-\BOOKMARK [1][-]{section.2.6}{Case study Example}{chapter.2}% 33
-\BOOKMARK [2][-]{subsection.2.6.1}{Establishing Initial Conditions from observational data}{section.2.6}% 34
-\BOOKMARK [3][-]{subsubsection.2.6.1.1}{The origin of Artificial Neural Networks}{subsection.2.6.1}% 35
-\BOOKMARK [3][-]{subsubsection.2.6.1.2}{The Multi Layer Perceptron}{subsection.2.6.1}% 36
-\BOOKMARK [3][-]{subsubsection.2.6.1.3}{Application of the MLPRegressor to observational data}{subsection.2.6.1}% 37
-\BOOKMARK [3][-]{subsubsection.2.6.1.4}{Generation of the ICS file and simulation run}{subsection.2.6.1}% 38
-\BOOKMARK [3][-]{subsubsection.2.6.1.5}{Extracting the required results}{subsection.2.6.1}% 39
-\BOOKMARK [3][-]{subsubsection.2.6.1.6}{Unifying the results}{subsection.2.6.1}% 40
-\BOOKMARK [1][-]{section.2.7}{Comparing Results}{chapter.2}% 41
-\BOOKMARK [2][-]{subsubsection.2.7.0.1}{The inner workings of TF-IDF}{section.2.7}% 42
-\BOOKMARK [2][-]{subsection.2.7.1}{Metric Comparison}{section.2.7}% 43
-\BOOKMARK [3][-]{subsubsection.2.7.1.1}{Individual Categories}{subsection.2.7.1}% 44
-\BOOKMARK [2][-]{subsection.2.7.2}{\200}{section.2.7}% 45
-\BOOKMARK [2][-]{subsection.2.7.3}{what is important in all source location using reverse \(adjoint\) personalised page rank}{section.2.7}% 46
-\BOOKMARK [0][-]{chapter.3}{ Chemical model diagnostics using graph theory and metrics. }{}% 47
-\BOOKMARK [1][-]{section.3.1}{INTRODUCTION }{chapter.3}% 48
-\BOOKMARK [1][-]{section.3.2}{Reduction as a solution.}{chapter.3}% 49
-\BOOKMARK [2][-]{subsection.3.2.1}{Reaction Removal}{section.3.2}% 50
-\BOOKMARK [2][-]{subsection.3.2.2}{Species removal}{section.3.2}% 51
-\BOOKMARK [3][-]{subsubsection.3.2.2.1}{Trial and Error}{subsection.3.2.2}% 52
-\BOOKMARK [3][-]{subsubsection.3.2.2.2}{Species Removal by Inspection of Rates}{subsection.3.2.2}% 53
-\BOOKMARK [3][-]{subsubsection.3.2.2.3}{Jacobian Connectivity Method}{subsection.3.2.2}% 54
-\BOOKMARK [2][-]{subsection.3.2.3}{Lumping}{section.3.2}% 55
-\BOOKMARK [3][-]{subsubsection.3.2.3.1}{Chemical Lumping}{subsection.3.2.3}% 56
-\BOOKMARK [3][-]{subsubsection.3.2.3.2}{Linear}{subsection.3.2.3}% 57
-\BOOKMARK [3][-]{subsubsection.3.2.3.3}{Lifetime}{subsection.3.2.3}% 58
-\BOOKMARK [3][-]{subsubsection.3.2.3.4}{Quasi Steady State Approximation \(QSSA\)}{subsection.3.2.3}% 59
-\BOOKMARK [2][-]{subsection.3.2.4}{Graph parallels. }{section.3.2}% 60
-\BOOKMARK [1][-]{section.3.3}{Methodology: Part I }{chapter.3}% 61
-\BOOKMARK [2][-]{subsection.3.3.1}{The Mechanism}{section.3.3}% 62
-\BOOKMARK [2][-]{subsection.3.3.2}{The Box-Model}{section.3.3}% 63
-\BOOKMARK [2][-]{subsection.3.3.3}{Model Inputs}{section.3.3}% 64
-\BOOKMARK [2][-]{subsection.3.3.4}{Reduction through Lifetime}{section.3.3}% 65
-\BOOKMARK [3][-]{subsubsection.3.3.4.1}{Calculating the lifetime}{subsection.3.3.4}% 66
-\BOOKMARK [2][-]{subsection.3.3.5}{Comparing Magnitude and Direction}{section.3.3}% 67
-\BOOKMARK [3][-]{subsubsection.3.3.5.1}{Euclidian distance}{subsection.3.3.5}% 68
-\BOOKMARK [3][-]{subsubsection.3.3.5.2}{Cosine Distance}{subsection.3.3.5}% 69
-\BOOKMARK [1][-]{section.3.4}{Results: Part I}{chapter.3}% 70
-\BOOKMARK [2][-]{subsection.3.4.1}{Temporal Lifetime Vector Comparison}{section.3.4}% 71
-\BOOKMARK [2][-]{subsection.3.4.2}{Viewing the similarity graph}{section.3.4}% 72
-\BOOKMARK [3][-]{subsubsection.3.4.2.1}{Using MCMC to extract groups}{subsection.3.4.2}% 73
+\BOOKMARK [0][-]{chapter.1}{ Chemical model diagnostics using graph theory and metrics. }{}% 1
+\BOOKMARK [1][-]{section.1.1}{Case study Example}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Establishing Initial Conditions from observational data}{section.1.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.1.1.1}{The origin of Artificial Neural Networks}{subsection.1.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.1.2}{The Multi Layer Perceptron}{subsection.1.1.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.1.3}{Application of the MLPRegressor to observational data}{subsection.1.1.1}% 6
+\BOOKMARK [3][-]{subsubsection.1.1.1.4}{Generation of the ICS file and simulation run}{subsection.1.1.1}% 7
+\BOOKMARK [3][-]{subsubsection.1.1.1.5}{Extracting the required results}{subsection.1.1.1}% 8
+\BOOKMARK [3][-]{subsubsection.1.1.1.6}{Unifying the results}{subsection.1.1.1}% 9
+\BOOKMARK [2][-]{subsection.1.1.2}{Comparing Results}{section.1.1}% 10
+\BOOKMARK [3][-]{subsubsection.1.1.2.1}{The inner workings of TF-IDF}{subsection.1.1.2}% 11
+\BOOKMARK [2][-]{subsection.1.1.3}{Metric Comparison}{section.1.1}% 12
+\BOOKMARK [3][-]{subsubsection.1.1.3.1}{Individual Categories}{subsection.1.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.1.4}{\200}{section.1.1}% 14
+\BOOKMARK [1][-]{section.1.2}{Calculating production sensetivity using personalised page rank.}{chapter.1}% 15
+\BOOKMARK [2][-]{subsection.1.2.1}{Testing}{section.1.2}% 16

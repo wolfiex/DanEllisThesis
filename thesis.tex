@@ -6,7 +6,7 @@
 \usepackage{soul}%strikeout \st
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{natbib}
+\usepackage[sectionbib]{natbib}
 \usepackage{chapterbib}
 \usepackage[version=4]{mhchem}
 \usepackage{hyperref,booktabs,algpseudocode,algorithm,booktabs,titlesec,setspace,relsize,import}
@@ -48,7 +48,7 @@
 \def\blankpage{%
       \clearpage%%
       \thispagestyle{empty}%
-      \addtocounter{page}{-2}%
+      \addtocounter{page}{0}%
       \null%
       \clearpage}
 
@@ -68,31 +68,30 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{5}
 %\cleardoublepage
-\setcounter{page}{01}
-\setcounter{chapter}{1}
+\setcounter{page}{0}
+\setcounter{chapter}{0}
 % \maketitle
 \cleardoublepage{}
 \setlength{\footnotesep}{0.5cm}
 \raggedbottom %group writing to top of page!
 \tableofcontents
-\listoffigures
-\listoftables
+% \listoffigures
+% \listoftables
 \newpage
 \mainmatter
 
 
-
+ 
 % Chapter 6
-\subimport{}{5_centrality.tex}
+\include{./5_centrality}
 % Chapter 6
-\subimport{}{6_lumping.tex}
+%\include{./6_lumping}
 
 \newpage
 %
 %\bibliographystyle{apalike}
 %\bibliography{bibtex}
 %% \bibliographystyle{unsrt}
-
 
 
 
