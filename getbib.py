@@ -1,7 +1,7 @@
 '''
 A program to span all folders and collate bibliography entries
 '''
-import glob, os
+import glob, os, re
 import bibtexparser
 from bibtexparser.bparser import BibTexParser,BibDatabase
 from bibtexparser.bwriter import BibTexWriter
@@ -67,14 +67,6 @@ writer.indent = '   '
 writer.comma_first = False  # place the comma at the beginning of the line
 with open('bibtex.bib', 'w') as bibfile:
     bibfile.write(writer.write(db))
-    
-os.system('pdflatex thesis.tex')
-bib = []
-for i in glob.glob('*/*.aux'):
-    bib.append(os.popen('bibtex '+i).read())
-    
-os.system('pdflatex thesis.tex')
-err = os.popen('pdflatex thesis.tex').read()
-print('end')
-print(bib)
 
+import compile
+compile.run('thesis.tex')
