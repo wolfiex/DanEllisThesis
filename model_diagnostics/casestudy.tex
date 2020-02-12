@@ -78,29 +78,27 @@ Since I shall be using only a noon estimate from the summer region, this does no
 \end{figure}
 
 
-\subsubsection{Generation of the ICS file and simulation run}
+\subsubsection{Model Initialisation Procedure}
 
-To generate the initial conditions for a model run, the MLP regressor is used to predict a representative species concentration at noon. As campaigns run at different times in the year, an error of $\pm 2 months$ around June exists. 
+To generate the initial concentrations used for a simulation an representative concentration for all species observed in the relevant campaigns are generated using the MLP regressor. Here concentrations are taken at noon (12:00) at the month closest to June in which reults were taken. This produces a montly error of $\pm 2 months$. As both nitrogen oxide and dioxide are supplied the total NO$_x$ for each simulation are \emph{not} constrained. The initial conditions are shown in \autoref{tab:icsmetric}.
 
-The predicted initial conditions in \autoref{tab:icsmetric} are used to initiate a box model simulation. 
-To spin these up the initial concentrations are reset at noon each day. When the simulation reaches a fractional difference of less than 0.001, the model is left to run unconstrained for 5 days. Observation of the concentration profiles of each run (\autoref{fig:ccape}-\ref{fig:cbeijing}) show us how RO$_2$, HO$_x$, NO$_x$ and Ozone change over time. Within these it can be seen that RO$_2$ takes longer to stabilise in the polluted environments (London and Beijing) than those with cleaner air (Cape Verde and Borneo). Using the concentration profiles as a guide the instantaneous values for the simulation results are taken at noon, 3 days after the end of the spinup period. 
+In this section we are not interested in the exact concentration modelling for specific times or senarios. Instead we seek to generate representative of the processed chemistry under a range of conditions. 
+
+In general observational measurements are not able to detect all the species presented within the MCM. This means that in order to be able to compare model senarios, the chemistry must first be spun up. In propatating the chemistry forwards in time, primary emitted and measued species are broken up forming the intermediate species which exist within a mechanism. In order to reach steady state, the model is initated at noon and the observational concentrations are rest every 24 hours. For each diurnal the fractional difference between the concentrations at each day are compared. If the difference between these is less than 0.001, the model is left to run unconstrained for 5 days (right of the dashed line in \autoref{fig:ccape}-\ref{fig:cbeijing}). Model results are then taken after 3 days of unconstrained runs. The reason for this is that the total RO$_2$ concentration takes longer to stabilise in the polluted environments (London and Beijing). This falls into a periodic cycle beginning noon on the third day, and can provide a representation of the processed chemistry within each environment. 
 
 \subsubsection{Extracting the required results}
-Model diagnostics such as concentration and the net flux passing through a species may be extracted directly from the DSMACC box model. These provide the baseline comparison against which we shall compare the results of graph metrics. The concentration will tell us which species are most abundant, and the net-flux tells us which are the fastest changing (either as a production or loss). 
+Model diagnostics such as concentration and the net flux passing through a species may be extracted directly from the DSMACC box model. These provide the baseline comparison and can be directly compared to the graph metrics. Species concentration tells us the abundance of different species, and the net-flux tells us how fast this is changing with respect to time. 
 
-In addition to this the jacobian matrix at the final timestep shall also be extracted. This is then manipulated to remove negative links (AS IN SECTION XX) and normalised. Using the normalised jacobian as an adjacency matrix, a graph on which the centrality metrics can be applied is generated. The result of these is compared in the next section.
-
-\subsubsection{Unifying the results}
-Since each metric compared can produce results on a different scale, there needs to be a method of normalising the results to achive parity between the range in which species are ranked. To do this all values within a group can be scaled between zero and unity, where 1 is the highest ranked and 0 is the lowest. For entries such as concentration or flux, which span several orders of magnitude, the $\log_{10}$ of the values shall be taken before they are scaled. 
-
+As some species may have a fast inwards and outwards flux (low net-flux), the aboslute flux is also included. Finally the sensetivity of each species with respect to other species is also extracted (the jacobian matrix). This serves to not only generate the graph used to represent the chemistry, (\autoref{sec:graphconstruction}), but also to identify the overall influence a species has on others in the network. This can be calculated by taking the net sum of the influence a species has on every other from the Jacobian. This is analogous to calculating the outdegree of a node in the jacobian network. 
+\newpage
+ 
 \begin{table}[H]
     \centering
-    \label{tab:icsmetric}
 \begin{small}
 \input{metricics.tex}
 \end{small}
-
-\caption{The initial conditions created from the MLPRegressor prediction of observational data.}
+\label{tab:icsmetric}
+\caption{The initial conditions created from the MLPRegressor prediction of observational data. Although not specified the concentration for methane is set by the model at 1770ppb.}
 \end{table}
 \footnotetext{This is written as ?-pinene in the merged CEDA dataset for the Borneo OP3 campaign. This is due to character conversion errors.}
 \footnotetext{The concentration for these is split evenly between both species}
@@ -150,13 +148,19 @@ Since each metric compared can produce results on a different scale, there needs
 
 
 
+\subsubsection{Unifying the results}
+Each metric provides a different range in which it ranks the importance of a node. In order to account for this all results are scaled to the range \{0,1\}, where 1 is the highest. Entries where the results span several orders of magnitude (e.g. concentration, flux, influence) are flattened using the $\log_{10}$ scale before being normalised. 
+
+
+
 \subsection{Comparing Results}
-This subsection presenets the comparison between traditional model diagnostic methods and the different graph metrics. It shall also provide an inter-senario comparison between the different types of chemistry which exists in each simulation. 
+This subsection juxtaposes the use of traditional model diagnostic methods against a selection of graph metrics. As there are several thousand species within each simulation run, the keyword extraction algorithm Term Frequency - Inverse Document Frequency (TF-IDF), is used to identify the top most prominent species for each metric (traditiona and graph). From this the 10 highest ranking species from each category are collated into a single diagram for comparison. 
 
-Since each simulation consists of several thousand species, it is infeisable to attempt to directly compare them for each centrality metrics. This is especially true for species that may not be consistently important across all metrics. To overcome this a computational method for extracting keywords from a corpus of documents, Term Frequency - Inverse Document Frequency (TF-IDF), will be used. 
 
-\subsubsection{The inner workings of TF-IDF}
-TF-IDF is a numerical statistuc used in text natural language processing and text mining to identify the importance of a word with regard to its context. It provides a value for the frequency a word appears within a section, offset by the number of times it appears in other sections - It is for this reason that 83\% of text recommender systems in digital libraries use TF-IDF, \citep{tf83}. 
+\subsubsection{What is TF-IDF}
+TF-IDF is a numerical statistuc used in text natural language processing and text mining. It is designed to be identify the importance of a word with regard to its context. 
+
+It provides a value for the frequency a word appears within a section, offset by the number of times it appears in other sections - It is for this reason that 83\% of text recommender systems in digital libraries use TF-IDF, \citep{tf83}. 
 
  In \citep{frankenstein} I applied this to the chapters of frankenstein, and found the keywords extracted almost exactly replicated those from the synoptic description of the novel. Although TF-IDF is a text mining procedure, the algorithm itself is mathematical, meaning that it may be applied to our diagnostic dataset. The working of the algorithm are discussed below.
 
@@ -173,7 +177,30 @@ The TF from the algorithm name stands for term frequency. This is an analysis of
 As the scaled values for each item are taken, we can liken our results to the `Adjusted for Document length' equation and use the scaled ranking value for each group respectively.
 
 \paragraph*{Inverse Document Frequency}
-Inverse document frequency tell us how much information a word provides with respect to a certain context. Whilst a word may be used extensively throughout the corpus (term frequency) we are often interested in words which ocuur often only in a single section. This is one of the reason TF-IDF is useful in the extraction of keywords from a document. 
+Inverse document frequency tell us how much information a word provides with respect to a certain context. Whilst a word may be used extensively throughout the corpus (i.e. term frequency) it is often that we are interested in words which are only frequent within a specific document. This is one of the reason TF-IDF is useful in the extraction of keywords from a document. 
+
+The inverse frequency of a word is usually calculated as the $\log$ of the fraction of documents $N$ against the number of documents the word appeas in $D_f$, \autoref{eqn:idf}.
+
+
+\begin{equation}
+    IDF = \log(\frac{N}{D_f})
+    \label{eqn:idf}
+\end{equation}
+
+If required, changes can be made to produce results which are show a better representation of words which are important for all documents (probabalistic, \autoref{eqn:idfprob}) or individually (smooth, \autoref{eqn:idfsmooth}). However in looking at \autoref{fig:idf}, it can be seen that the basic IDF formula mentioned has a limit of zero the greater the document frequency ($D_f$), which makes it easy to normalise against - i.e. divide by 2 as this is the the value tended to if the document freqnecy tends to 0.    
+
+
+\begin{equation}
+    IDF = \log(\frac{N-D_f}{D_f})
+    \label{eqn:idfprob}
+\end{equation}
+
+\begin{equation}
+    IDF = \log(\frac{N}{1+D_f})+1
+    \label{eqn:idfsmooth}
+\end{equation}
+
+
 
 
 To complete the TF-IDF equation, the term frequency and inverse document frequency terms are multiplied together. 
@@ -248,6 +275,10 @@ Finally the `Metric Sum' is the sum of all the metric values scaled between 1 an
 
 \section{Calculating production sensetivity using personalised page rank.}
 
+\autoref{fig:prtrad}\autoref{fig:pradj}
+
+
+
 % http://sibiu.cs.vt.edu/eprints/id/eprint/282/1/Sandu_2003_KPPSEN1.pdf
 % The adjoint modeling is presented as an ecient tool to evaluate the sensitivity
 % of a scalar response function with respect to the initial conditions and model parameters. In addition,
@@ -272,6 +303,8 @@ Finally the `Metric Sum' is the sum of all the metric values scaled between 1 an
 
 \caption{\textbf{Link reversal of the Jacobian Sensetivity matrix graph results in a graph of the Adjoint.} Showing how in changing the direction of the links in a graph is equivalent to applying the transpose to an adjacency matrix (right). In the case of a Jacobian based graph, this is analogous to using the adjoint to propagate the model back in time - something that can be used to identify the influence upon a species with a model.}
 \end{figure}
+
+
 
 
 \subsection{Testing}
