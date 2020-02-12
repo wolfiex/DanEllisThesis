@@ -148,7 +148,7 @@ First we wish to explore the results of a single simulation. This will help esta
 
 Since there are $n^2$ different combinations, this process can be lengthy to compute. Moreover the number of nodes present makes it difficult to visually determine which couplets to lump together, especially when they are overlaying eachother, as in \autoref{fig:morig}. To overcome this we apply a force graph simulation to each node. Here a strong force pulls them towards their true location, whist a collision/repulsive force ensures that there exists no overlap between nodes. Although some information loss may be incurred this way, it does enable us to interactively determine which pairs belong to which points.   
 
-Plotting the data this way provides an approximate view of how lifetimes change within the system. \autoref{fig:density} shows the distribution of values across both metrics. Here we see that although there is some difference the cosine difference can be used as an indicator for exploring further. This is useful since the cosine difference is a matrix operation and can produce near instant results in the form of the output relationship matrix. The euclidean distance however must be computed for each coupling individually as it requires taking the difference between the temporal lifetime arrays of each species. This means that rather than computing the euclidean distance for all permutaions of species, we can compute only those whose cosine distances suggest potentially promising results.  
+Plotting the data this way provides an approximate view of how lifetimes change within the system. \autoref{fig:density2} shows the distribution of values across both metrics. Here we see that although there is some difference the cosine difference can be used as an indicator for exploring further. This is useful since the cosine difference is a matrix operation and can produce near instant results in the form of the output relationship matrix. The euclidean distance however must be computed for each coupling individually as it requires taking the difference between the temporal lifetime arrays of each species. This means that rather than computing the euclidean distance for all permutaions of species, we can compute only those whose cosine distances suggest potentially promising results.  
 
 
 
@@ -179,7 +179,7 @@ Plotting the data this way provides an approximate view of how lifetimes change 
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
 \includegraphics[width=\textwidth]{fig/metric_density.png}
-\label{fig:density}
+\label{fig:density2}
 \caption{Gaussian Kernel Density Estimate plot showing the distributions present for each distance metric}
 \end{subfigure}
 \caption{Showing the evolution from the original overlaid locations, \autoref{fig:morig} to the slightly more accessible (interactively) \autoref{fig:metric}}
