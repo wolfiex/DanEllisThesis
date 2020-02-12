@@ -1,5 +1,5 @@
 
-import os 
+import os, sys, glob, re
 def make(filename):
     os.system('pdflatex '+filename)
     
@@ -21,7 +21,6 @@ def make(filename):
     print('Finished')
     
 def autorun(globstr,filename):
-    import glob
     import ipyReload as ipr 
     #conda install -c wolfiex ipyreload
     
@@ -37,4 +36,9 @@ def autorun(globstr,filename):
         
         
 if __name__ == '__main__':
-    autorun('*/*.tex','thesis.tex')
+    
+    try:
+        if sys.argv[1]=='True':
+            autorun('*/*.tex','thesis.tex')
+    except:
+        make('thesis.tex')
