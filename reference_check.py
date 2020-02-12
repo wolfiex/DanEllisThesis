@@ -65,7 +65,7 @@ if len(labels)!= len(set(labels)):
 labels = set(labels)
 
 ref = []
-for i in re.findall(r'\\[auto]{0,4}ref{([^}]*)}',thesis): ref.extend(i.replace(' ','').split(','))
+for i in re.findall(r'\\[auto]{0,5}ref{([^}]*)}',thesis): ref.extend(i.replace(' ','').split(','))
 ref = set(ref)
 
 if len(ref) != len(labels):
@@ -81,5 +81,28 @@ if len(ref) != len(labels):
         print (':'.join(os.popen('grep -inr "%s" */*.tex'%i).read().split(':')[:2])+'\n')
 
 
+re.findall(r'(\\begin{(figure)|(table)}[.\\{}\s]+\\label[.\\{}\s]+\\caption[.\\{}\s]+\\end{(figure)|(table)})',thesis) 
+
+re.findall(r'\\begin{figure}[.\\{}\s]+\\end{figure}',thesis) 
+
+# FIGURES 
+print('-'*20) 
+
+f = re.findall(r'(\\begin\{figure\}.+?\\end\{figure\})', thesis, re.S|re.DOTALL)
+
+f.extend(re.findall(r'(\\begin\{table\}.+?\\end\{table\})', thesis, re.S|re.DOTALL))
 
 
+
+def wrong(x):
+    if 'subfigure' in x:return False
+    return re.search(r'\\label[\{\}\[\].\s\w:]*?\\caption.*',x)!= None
+f = list(filter(wrong,f))
+
+
+if len(f)>0:
+    print('\u001b[31m' + 'Incorrect Figures' + '\u001b[0m')
+    for x in f:
+        print ('-- Label goes AFTER caption: ', re.search(r'\\label\{[.\w\W\s:]+?\}',x).group(), '--')
+        print (':'.join(os.popen('grep -Finr "%s" */*.tex'%re.search(r'\\caption\[*.*\]*\{[.\w\W\s:]+?\}',x).group()).read().split(':')[:2]),'\n')
+    
