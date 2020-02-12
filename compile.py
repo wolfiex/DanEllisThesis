@@ -1,14 +1,14 @@
 
 import os, sys, glob, re
 def make(filename):
-    os.system('pdflatex '+filename)
+    os.system('pdflatex '+filename+' >temp.tex')
     
     bib = []
     bf = glob.glob('*.aux')
     for i in bf:
         bib.append(os.popen('bibtex '+i).read())
         
-    os.system('pdflatex '+filename)
+    os.system('pdflatex '+filename+' >temp.tex')
     err = os.popen('pdflatex '+filename).read()
 
     print(re.findall(r'[Ww]arning:.*line\s\d+\.',err) )
@@ -42,3 +42,4 @@ if __name__ == '__main__':
             autorun('*/*.tex','thesis.tex')
     except:
         make('thesis.tex')
+        import clean

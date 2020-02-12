@@ -1,7 +1,7 @@
 import os 
 import glob
 
-ext = 'aux\|bbl\|blg\|log\|nav\|out\|snm\|toc'.split('\|')
+ext = 'aux\|bbl\|blg\|log\|nav\|out\|snm\|toc\|dvi\|lof\|lot\|bcf'.split('\|')
 
 fs = []
 
