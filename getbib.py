@@ -1,5 +1,12 @@
 '''
-A program to span all folders and collate bibliography entries
+A program to span all folders and collate bibliography entries. 
+
+Checks:
+    - duplicated key names
+    - missing Keys
+    - missing Years
+    - missing ID
+    - missing Author
 '''
 import glob, os, re
 import bibtexparser
@@ -8,6 +15,9 @@ from bibtexparser.bwriter import BibTexWriter
 
 fbib = glob.glob('./*/*.bib')
 
+
+
+print(fbib)
 
 
 def locate(x):
@@ -26,7 +36,12 @@ def dup(x,property):
 db = BibDatabase()
 entries = []
 
+keys = []
+
 for i in fbib:
+    txt = open(i).read()
+    keys.extend(re.findall(r'@[^{]*{(.*),',txt))
+    
     with open(i) as bibtex_file:
         bdata = bibtexparser.load(bibtex_file, BibTexParser(common_strings = True))
         entries.extend(bdata.get_entry_list())
@@ -62,11 +77,26 @@ entries.sort(key=lambda x: x['ID'], reverse=True)
 
 db.entries = entries
 
+
+if len(keys)!= len(set(keys)):
+    print('\u001b[31m' + 'Duplicate Keys' + '\u001b[0m')
+    for i in set(keys):
+        if keys.count(i)>1:
+            print ('-- Duplicate ', i, '--')
+
+if len(set(db.entries_dict.keys())) != len(set(keys)):
+    print('\u001b[31m' + 'Unparsed Keys' + '\u001b[0m')
+    for i in set(keys) - set(db.entries_dict.keys()):
+        print ('-- MISSING: ', i, '--')
+
+
+
+
+
 writer = BibTexWriter()
 writer.indent = '   ' 
 writer.comma_first = False  # place the comma at the beginning of the line
 with open('bibtex.bib', 'w') as bibfile:
     bibfile.write(writer.write(db))
 
-import compile
-compile.run('thesis.tex')
+print('bibtex written')
