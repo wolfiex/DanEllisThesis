@@ -87,7 +87,7 @@ Graphs can often be represented in the form of relationship (adjacency) matrixes
 
 \begin{table}[H]
   \centering
-\begin{tabular}{p{.6\textwidth}||p{.26\textwidth} p{.26\textwidth}}
+\begin{tabular}{p{.06\textwidth}||p{.26\textwidth} p{.26\textwidth}}
 \hline
  & No Normalisation  & Row Normalisation \\
  \hline \hline
@@ -115,11 +115,11 @@ Here damping terms represent the probability of moving to the new random startin
 
 
 
-\subsection{Page Rank}
+\subsection{Page Rank}\label{sec:pagerank}
 Arguably the best-known centrality algorithm is PageRank. This is a spectral method for measuring the transitive influence of a node, by taking the effect of neighbours and by their neighbours into account \citep{neoj4}. The page rank algorithm was initially developed to provide a better way of ranking web pages \citep{google}- here an important page is not only one of many links, but links to other important sources. In the context of academic papers, that same paper also found that in predicting future citations, the page rank algorithm fared better than using the current citation count of a paper. 
 To explain how this works, we will look at the mathematics behind the algorithm, and then eventually apply it to the co-authorship graph in \autoref{sec:applypr}
 
-\paragraph{The Google Matrix}
+\subsubsection{The Google Matrix}
 To solve for page rank, a google matrix must first be constructed. Once done this is iterated until convergence is reached. 
 
 To build a google matrix, we must first generate a dyadic link map of the graph\footnote{In sociology a dyad is a group of two people - the smallest possible social group.} - its adjacency matrix $A_{i,j}$ ($i,j$ are the source target indexes). This is then converted into a Markov matrix $M_{i.j}$ by dividing each column $j$ by the sum of the total outgoing links of node $j$, Algorithm \ref{eqn:markov}.
@@ -159,7 +159,7 @@ $M$&-&\textit{Normalised markov matrix}
 \end{center}
 
 
-\paragraph{Solving the algebra}
+\subsubsection{Solving the algebra}
 
 Once defined, the google matrix is solved by propagating a one's vector, $r$ of length $n$, where $n$ is the number of species using Algorithm \ref{eqn:forwards}.
 
@@ -182,7 +182,7 @@ Once defined, the google matrix is solved by propagating a one's vector, $r$ of 
 
 For smaller systems, it is possible to use the LAPACK \citep{lapack} library, as used by \citep{numpy}. For a large network, however, the computation of an $n \times n $ matrix can be very memory inefficient for small machines. It is then possible to apply the methods as described above using a sparse matrix on per-node bases as can be seen within the scipy implementation of the networkx source code \citep{scipy,networkx}.
 
-\paragraph{Prediction}\label{sec:applypr}
+\subsubsection{Prediction}\label{sec:applypr}
 As the PageRank algorithm is a physical representation looking at how quantities `flow' within a network, it can be used to identify not only the bottlenecks (betweenness centrality) but also any nodes which are connected well within the network. As the flows between a node are somewhat governed by the number of links it contains, the PageRank algorithms tend to correlate, but not a dependance, on the betweenness of a node. \autoref{fig:pagerankauth} shows the PageRank algorithm to identify important authors within each `cluster' or research group. Due to its propagating nature authors connected to these important nodes are often also of greater importance. An application of this can again be the determination of how to best spread new results or information with the least number of people. \textit{Note: if we only had one person we would probably use the node with the highest closeness centrality.}
 
 \begin{figure}[H]
@@ -195,7 +195,7 @@ As the PageRank algorithm is a physical representation looking at how quantities
 \end{figure}
 
 
-\subsubsection{Conclusions}
+\subsection{Conclusions}
 In this section, we have explored the use of centrality metrics to provide us with information on an unweighted co-authorship network of the MCM. Having used these to demonstrate the different roles that may be extracted from a node, we can move on to applying them to a chemical mechanism. In the next section, a global set of metrics will be used to determine the network type/structure of the MCM. Once this has been done, graph construction using simulation results (a weighted graph) will be looked into in \autoref{sec:graphconstruction}. 
 % 
 % 
