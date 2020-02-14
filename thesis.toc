@@ -4,23 +4,23 @@
 \contentsline {subsection}{\numberline {1.1.1}Reduction as a solution.}{4}{subsection.1.1.1}
 \contentsline {subsubsection}{\numberline {1.1.1.1}Reaction Removal}{4}{subsubsection.1.1.1.1}
 \contentsline {subsubsection}{\numberline {1.1.1.2}Species removal}{5}{subsubsection.1.1.1.2}
-\contentsline {subsection}{\numberline {1.1.2}Lumping}{6}{subsection.1.1.2}
-\contentsline {subsubsection}{\numberline {1.1.2.1}Chemical Lumping}{6}{subsubsection.1.1.2.1}
-\contentsline {subsubsection}{\numberline {1.1.2.2}Linear}{7}{subsubsection.1.1.2.2}
-\contentsline {subsubsection}{\numberline {1.1.2.3}Lifetime}{7}{subsubsection.1.1.2.3}
-\contentsline {subsubsection}{\numberline {1.1.2.4}Quasi Steady State Approximation (QSSA)}{7}{subsubsection.1.1.2.4}
-\contentsline {subsection}{\numberline {1.1.3}Graph parallels. }{7}{subsection.1.1.3}
-\contentsline {section}{\numberline {1.2}Methodology: Part I }{7}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}The Mechanism}{8}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}The Box-Model}{8}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Model Inputs}{9}{subsection.1.2.3}
-\contentsline {subsection}{\numberline {1.2.4}Reduction through Lifetime}{10}{subsection.1.2.4}
-\contentsline {subsubsection}{\numberline {1.2.4.1}Calculating the lifetime}{10}{subsubsection.1.2.4.1}
-\contentsline {subsection}{\numberline {1.2.5}Comparing Magnitude and Direction}{11}{subsection.1.2.5}
-\contentsline {subsubsection}{\numberline {1.2.5.1}Euclidian distance}{11}{subsubsection.1.2.5.1}
-\contentsline {subsubsection}{\numberline {1.2.5.2}Cosine Distance}{12}{subsubsection.1.2.5.2}
-\contentsline {section}{\numberline {1.3}Results: Part I}{12}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Temporal Lifetime Vector Comparison}{13}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Viewing the similarity graph}{15}{subsection.1.3.2}
-\contentsline {subsubsection}{\numberline {1.3.2.1}Using MCMC to extract groups}{15}{subsubsection.1.3.2.1}
+\contentsline {subsection}{\numberline {1.1.2}Lumping}{8}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Chemical Lumping}{8}{subsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.3.1}Linear}{9}{subsubsection.1.1.3.1}
+\contentsline {subsubsection}{\numberline {1.1.3.2}Lifetime}{9}{subsubsection.1.1.3.2}
+\contentsline {subsubsection}{\numberline {1.1.3.3}Quasi Steady State Approximation (QSSA)}{9}{subsubsection.1.1.3.3}
+\contentsline {subsection}{\numberline {1.1.4}Graph parallels. }{9}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Methodology: Part I }{9}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}The Mechanism}{10}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}The Box-Model}{10}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Model Inputs}{11}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Reduction through Lifetime}{12}{subsection.1.2.4}
+\contentsline {subsubsection}{\numberline {1.2.4.1}Calculating the lifetime}{12}{subsubsection.1.2.4.1}
+\contentsline {subsection}{\numberline {1.2.5}Comparing Magnitude and Direction}{13}{subsection.1.2.5}
+\contentsline {subsubsection}{\numberline {1.2.5.1}Euclidian distance}{13}{subsubsection.1.2.5.1}
+\contentsline {subsubsection}{\numberline {1.2.5.2}Cosine Distance}{14}{subsubsection.1.2.5.2}
+\contentsline {section}{\numberline {1.3}Results: Part I}{14}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Temporal Lifetime Vector Comparison}{15}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Viewing the similarity graph}{17}{subsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.2.1}Using MCMC to extract groups}{17}{subsubsection.1.3.2.1}
 \gdef \the@ipfilectr {}
