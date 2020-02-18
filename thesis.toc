@@ -17,14 +17,16 @@
 \contentsline {subsection}{\numberline {1.4.1}Graph parallels. }{9}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Types of Graph Clustering}{9}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Walk/Flow Based Clustering}{10}{subsection.1.4.3}
-\contentsline {subsection}{\numberline {1.4.4}The Infomap Clustering model}{11}{subsection.1.4.4}
-\contentsline {subsubsection}{\numberline {1.4.4.1}Number of clusters}{11}{subsubsection.1.4.4.1}
-\contentsline {section}{\numberline {1.5}Reduction through Lifetime}{14}{section.1.5}
-\contentsline {subsubsection}{\numberline {1.5.0.1}Calculating the lifetime}{14}{subsubsection.1.5.0.1}
-\contentsline {subsection}{\numberline {1.5.1}Comparing Magnitude and Direction}{15}{subsection.1.5.1}
-\contentsline {subsubsection}{\numberline {1.5.1.1}Euclidian distance}{15}{subsubsection.1.5.1.1}
-\contentsline {subsubsection}{\numberline {1.5.1.2}Cosine Distance}{15}{subsubsection.1.5.1.2}
-\contentsline {section}{\numberline {1.6}Results: Part I}{16}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Temporal Lifetime Vector Comparison}{16}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Viewing the similarity graph}{17}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.4.4}Infomap for graphical clustering }{11}{subsection.1.4.4}
+\contentsline {subsubsection}{\numberline {1.4.4.1}Species type and clustering}{14}{subsubsection.1.4.4.1}
+\contentsline {subsubsection}{\numberline {1.4.4.2}Inter and Intra links}{15}{subsubsection.1.4.4.2}
+\contentsline {subsubsection}{\numberline {1.4.4.3}Number of clusters}{18}{subsubsection.1.4.4.3}
+\contentsline {section}{\numberline {1.5}Reduction through Lifetime}{19}{section.1.5}
+\contentsline {subsubsection}{\numberline {1.5.0.1}Calculating the lifetime}{19}{subsubsection.1.5.0.1}
+\contentsline {subsection}{\numberline {1.5.1}Comparing Magnitude and Direction}{21}{subsection.1.5.1}
+\contentsline {subsubsection}{\numberline {1.5.1.1}Euclidian distance}{21}{subsubsection.1.5.1.1}
+\contentsline {subsubsection}{\numberline {1.5.1.2}Cosine Distance}{21}{subsubsection.1.5.1.2}
+\contentsline {section}{\numberline {1.6}Results: Part I}{22}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Temporal Lifetime Vector Comparison}{22}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Viewing the similarity graph}{23}{subsection.1.6.2}
 \gdef \the@ipfilectr {}
