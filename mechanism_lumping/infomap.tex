@@ -71,13 +71,63 @@ MULITLEVERL
 
 % Analogously, the field-of-view limit marks an upper limit on the size of communities that Louvain and Infomap can detect [36]. Infomap’s lack of a resolution limit causes it to suffer acutely from the field-of-view limit and identify smaller clusters than Louvain identifies. In this way, the resolution limit and the field-of-view limit favor Louvain over Infomap in our experiments with large communities.
 
-\subsection{The Infomap Clustering model}
+\subsection{Infomap for graphical clustering }
+
+Although there are a wide range of availiable clustering technques, there are several reasons that the infomap method works well. The main two criterions in selecting an algorithm for grouping atmospheric reactions are that the algorithm can deal with a directed network (chemistry is directional) and that it needs to be able to handle temopral data (since concentration and photolysis conditions change with time, this plays an important role within the system). The infomap algorithm implements a directed approach, improving on the core loudvain core algorithm it is built upon. In addition to this it is able to implement a multi-level clustering approach which has been shown to capture nodel-layer interaction in temporal networks,\citep{infointermittent}.
+
+Using the intial conditions for London from the last chapter (\autoref{tab:icsmetric}), a spun up simulation run with the CRI v2.2 mechanism was run. Since this does not contain \ch{c5h11cho}, MVK, MACR or Limonene, these species are omitted from the initialisation. Following a spinup to steady state, a graph is generated for noon after 1 day of an unconstrained run. The infomap algorithm is then applied to the generated graph. 
+
+The coursest level of clustering is shown in \autoref{fig:iml1}. Here nodes are coloured by their cluster, and approximate polygon hulls surround the nodes closest to the median cluster centre. Much like the findings in (CHAPTER STRT), it is seen that different sections of the graph network repesent different types of chemistry - for example hull 4 contains aromatic species, hull 2 contains the products of linear alkanes and hull 3 contains the terpines.
 
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{fig/crigroups.png}
+  \caption{\textbf{}}
+    \label{fig:iml1}
+\end{figure}
+
+Since the infomap provides a finer level of clustering which has originated from this, it is important to evaluate this. Using a graph-hull approach, as in \autoref{fig:iml1}, becomes cluttered and unusable. Instead a bubble plot may be used. Although this sacrafices the ability to view links, it allows for the complete overview of the hierarchical structure. In \autoref{fig:imbubble} shows the nested structure of each clustered group. In an electronic mail correspondance with \cite{correspondance} the origin of the naming convention of reduced species was explained. Using this, individual nodes are categoriesed by their prefixes. This allows the further categorisation of the chemistry withich has been grouped into a category. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{fig/imapbubble.pdf}
+  \caption{\textbf{}node sizes are representative of the $\log_{10}$ number of walkers that have become trapped by the flow algorithm at a location}
+    \label{fig:imbubble}
+\end{figure}
 
 
  \twopagepicture{t}{t}{mechanism_lumping/tree.pdf}{\textbf{A radial treemap showing the hierarchical clustering of the CRI mechanism.} The simulation results used are representative of the chemistry within London at Noon localtime and generated using DSMACC and the infomap algorithm.
- }{label}{1.09}{-4}
+ }{fig:imap2page}{1.0}{0}
+
+
+\subsubsection{Species type and clustering}
+Although a nested bubble chart is an intituive way to represent groups within a graph, a tree approach is more suited to revealing the hierarchical structure of the network. \autoref{fig:imap2page} shows the same simulation represented in the form of a tree. Here branches are numerically labled on each level - this allows us to navigate the structure using a sequence of numbers, e.g. to get to 1.5.\ch{c4h6} we take the first branch from the centre, followed by the fith branch after that.
+
+This split structure allow a general overview of the mechanism structure, as well as the reasoning/process of the clustering algorith. As was seen in \autoref{fig:iml1} the first level split shows branches 1,2 and 5 having origins from linear (n-) alkanes. This can be seen through both the emiited species (bold) and the \emph{RN} prefix of the species. Here the linear alkanes can react with OH to extract a hydrogen and then from an \ce{RO2}, or produce a cabonyl \emph{\ce{CARBxx}}, which can then go on to produce the \emph{\ce{RNxxO2}} peroxy radical.
+
+The with the exception of benzine in 2.14, branches 3 and 4 contain the aromoatic species in the network.  Branches 4.\{2,5,9,11\} all consist of \emph{\ce{RAxxO2}} species, which are the procuct of the addition of OH to toluene/benzine ringed species. 4.\{1,7,8\} and 1.5 contain peroxy radicals formed from the degregation of conjugated dienes (two alkene groups separated by a single bond, where some sharing of electrons may occur) \emph{\ce{RUxxO2}}. For the CRI v2.2 mechanism these are only isoprene and 1,3-butadiene. Such peroxy radicals often go on to form unsaturated carbonyls, as denoted by \emph{\ce{UCARBxx}}.
+
+Branch 3 contains the monoterpenes. This can be seen in 3.\{2,5\} ($\alpha-$pinene) and 3.6 ($\beta-$pinenen). Here peroxy radicals formed from the reaction with the e\textbf{n}docyclinc\footnote{Inside the pinene ring.} and e\textbf{x}docyclinc\footnote{Outside the pinene ring.} double bonds of $\alpha-$ and $\beta-$ pinene are denoted with the prefix \emph{\ce{RTN}} and \emph{\ce{RTX}}.
+
+The \emph{\ce{RIxxO2}} prefix was originally used for the peroxy radicals iso (`i-') alkanes and their cabonyl products - branches 3.\{1,4\}, however they tend to mainly be used for smaller branched precursors which produce acetone (\ch{CH3COCH3}) as a majour product in their oxidation chain (branch 3.1). As acetone is a particularly unreactive carbonyl, the fact that it is water soluble means that they may be washed out of the atmosphere by precipitation, \citep{acetonerain}. This may has been seen to interrupt the ozone formation process under regional-scale photochemical smog conditions in north-western Europe [ - from M.Jenkins PAPER? do you know what this is ].
+
+
+Finally, since the CRI index is representative of the oxidation potential it is common to see speacies containing the CRI value within a cluster. Cluster typically contain a combination of carbonyl (\ch{R(=O)R'},\emph{CARBxx}), hydroperoxy (\ch{R-OOH},\emph{RxxOOH}), peroxy (\ch{ROO.}, \emph{\ce{RxxO2}}) and nitrate (\ch{R-ONO2},\emph{\ch{NO3}}) groups. For the lumped species, it can be common for an \ch{RO2} species to react with NO or \ch{NO3} to produce a carbonyl with a CRI index of two values lower. This can be attributed to the loss of an oxygen and the formation of a double bond? (what is the long reaction for the MCM, it seems les direct). Similarly a reaction with NO or \ch{ho2} can produce a hydroperoxy or nitrate species, which in turn react with OH to produce the an equivalent carbonyl.
+
+
+%% good paper for introduction acetone
+
+\subsubsection{Inter and Intra links}
+ Typically the quality of clustering can be assessed using the adjacency matrix of a graph. In sortting the axis by cluster groups, squares of high density inter connections should become apparent in an adjacency heatmap. Unfortunately for an atmospheric chemistry mechanism, the size and sparseness of a graph, makes this an infeisable method to visually acess the nodcluster node ratios. Instead we can adapt the nodes presented by the treemap in \autoref{fig:imap2page} and replacing the hierarchical structure, with one representing the original graph. 
+
+ 
+   \begin{figure}[H]
+     \centering
+     \includegraphics[width=1.1\textwidth]{fig/treeplot.pdf}
+     \caption{\textbf{Treeplot.} }
+         \label{fig:imtreeplot}
+   \end{figure}
 
 
 
@@ -87,6 +137,13 @@ MULITLEVERL
  Many .... 
   resolution delimiter
 
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{fig/manygroups.pdf}
+    \caption{\textbf{A radial tree of the infomap algorithm with a forced number of groups.} }
+        \label{fig:im200}
+  \end{figure}
 
 
 
