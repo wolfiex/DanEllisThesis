@@ -2,7 +2,7 @@
 
 \section{Reduction through Lifetime}
 
-
+Conventionally 
 
 
 
@@ -81,6 +81,45 @@ $$this may be arranged$$
 Since this does not work for the triangle ? inequality, we need to normalise each vector before calculating the cosine distance. The merits of this come from  ... which makes its application comparing the similarity between texts or documents of different sizes very popular (REF!). \\
 
 
-COMPARE force graph of cosine differences and force graph of euclidean distances. Colour ones close to eachother. \\
 
+\subsection{Temporal Lifetime Vector Comparison}
+
+To compare a species diurnal profile with its absolute lifetime we can plot the cosine and eudlidian distance against eachother. In this subsection compute the euclidean and cosine distances for all remaining reaction pairs (88410 pairs) for a single simulation. We start by looking that the species density profiles, \autoref{fig:density2}. Here we can see that most of the species within our mechanism fall under two peaks. The first is a peak of great similarity between pairs of species (close to 1), where both the diurnal profile and concentration differences change simultaniously, The other contains species with a simiar dirunal profiles, that do not change at the same rate as eachotehr. In general the euclidean distances are smaller than the cosine distances, suggesting a greater concenration change between pairs of species with the same profile. 
+
+
+
+\begin{figure}
+\includegraphics[width=.7\textwidth]{fig/metric_density.png}
+\caption{Gaussian Kernel Density Estimate plot showing the distributions present for the \{0,1\} scaled euclidean and cosine distances.}
+\label{fig:density2}
+\end{figure}
+
+
+
+and plot them on separate axis, \autoref{fig:morig}. Here the colour represents the geometric mean of both normalised values. Due to the large number of 
+
+
+
+
+Since there are $n^2$ different combinations, this process can be lengthy to compute. Moreover the number of nodes present makes it difficult to visually determine which couplets to lump together, especially when they are overlaying eachother, as in \autoref{fig:metric}. To overcome this we apply a force graph simulation to each node. Here a strong force pulls them towards their true location, whist a collision/repulsive force ensures that there exists no overlap between nodes. Although some information loss may be incurred this way, it does enable us to interactively determine which pairs belong to which points.   
+
+Plotting the data this way provides an approximate view of how lifetimes change within the system. \autoref{fig:density2} shows the distribution of values across both metrics. Here we see that although there is some difference the cosine difference can be used as an indicator for exploring further. This is useful since the cosine difference is a matrix operation and can produce near instant results in the form of the output relationship matrix. The euclidean distance however must be computed for each coupling individually as it requires taking the difference between the temporal lifetime arrays of each species. This means that rather than computing the euclidean distance for all permutaions of species, we can compute only those whose cosine distances suggest potentially promising results.  
+
+
+
+\begin{figure}[H]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{fig/metric-1.png}
+  \label{fig:morig}
+  \caption{Original}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+\includegraphics[width=\textwidth]{fig/metric.png}
+\label{fig:metric}
+\caption{Interactive, non overlapping plot of normalised euclidian distance across the x axis against the cosine distance on the y. The colouring is the geometric mean between them.}
+\end{subfigure}
+
+\caption{Showing the evolution from the original overlaid locations, \autoref{fig:morig} to the slightly more accessible (interactively) \autoref{fig:metric}}
+\end{figure}
 
