@@ -89,6 +89,7 @@ To compare a species diurnal profile with its absolute lifetime we can plot the 
 
 
 \begin{figure}
+    \centering
 \includegraphics[width=.7\textwidth]{fig/metric_density.png}
 \caption{Gaussian Kernel Density Estimate plot showing the distributions present for the \{0,1\} scaled euclidean and cosine distances.}
 \label{fig:density2}
@@ -108,13 +109,13 @@ Plotting the data this way provides an approximate view of how lifetimes change 
 
 
 \begin{figure}[H]
-\begin{subfigure}{.5\textwidth}
+\begin{subfigure}[t]{.5\textwidth}
   \centering
   \includegraphics[width=\textwidth]{fig/metric-1.png}
   \label{fig:morig}
   \caption{Original}
 \end{subfigure}%
-\begin{subfigure}{.5\textwidth}
+\begin{subfigure}[t]{.5\textwidth}
 \includegraphics[width=\textwidth]{fig/metric.png}
 \label{fig:metric}
 \caption{Interactive, non overlapping plot of normalised euclidian distance across the x axis against the cosine distance on the y. The colouring is the geometric mean between them.}
