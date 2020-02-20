@@ -27,5 +27,8 @@
 \contentsline {subsubsection}{\numberline {1.5.1.1}Euclidian distance}{21}{subsubsection.1.5.1.1}
 \contentsline {subsubsection}{\numberline {1.5.1.2}Cosine Distance}{21}{subsubsection.1.5.1.2}
 \contentsline {subsection}{\numberline {1.5.2}Temporal Lifetime Vector Comparison}{22}{subsection.1.5.2}
-\contentsline {section}{\numberline {1.6}Results: Part I}{23}{section.1.6}
+\contentsline {section}{\numberline {1.6}Results}{23}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}The co-grouping network}{24}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Comparing daytime and nightime groups}{25}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Determining cluster suitabiltiy}{27}{subsection.1.6.3}
 \gdef \the@ipfilectr {}
