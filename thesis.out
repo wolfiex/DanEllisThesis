@@ -26,4 +26,7 @@
 \BOOKMARK [3][-]{subsubsection.1.5.1.1}{Euclidian distance}{subsection.1.5.1}% 26
 \BOOKMARK [3][-]{subsubsection.1.5.1.2}{Cosine Distance}{subsection.1.5.1}% 27
 \BOOKMARK [2][-]{subsection.1.5.2}{Temporal Lifetime Vector Comparison}{section.1.5}% 28
-\BOOKMARK [1][-]{section.1.6}{Results: Part I}{chapter.1}% 29
+\BOOKMARK [1][-]{section.1.6}{Results}{chapter.1}% 29
+\BOOKMARK [2][-]{subsection.1.6.1}{The co-grouping network}{section.1.6}% 30
+\BOOKMARK [2][-]{subsection.1.6.2}{Comparing daytime and nightime groups}{section.1.6}% 31
+\BOOKMARK [2][-]{subsection.1.6.3}{Determining cluster suitabiltiy}{section.1.6}% 32
