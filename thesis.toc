@@ -9,9 +9,10 @@
 \contentsline {subsection}{\numberline {1.4.1}HOx Cycle}{5}{subsection.1.4.1}
 \contentsline {section}{\numberline {1.5}Air Pollution}{5}{section.1.5}
 \contentsline {section}{\numberline {1.6}Modelling the Earth}{6}{section.1.6}
-\contentsline {subsubsection}{\numberline {1.6.0.1}Global Models}{6}{subsubsection.1.6.0.1}
-\contentsline {subsubsection}{\numberline {1.6.0.2}Common Problems with Earth prediction}{6}{subsubsection.1.6.0.2}
-\contentsline {subsection}{\numberline {1.6.1}The Atmosphere}{6}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}The model development cycle}{6}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}The Dynamically Simple Model of Atmospheric Chemical Complexity}{7}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.1}Global Models}{6}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}The Atmosphere}{6}{subsection.1.6.2}
+\contentsline {subsubsection}{\numberline {1.6.2.1}Types of model}{6}{subsubsection.1.6.2.1}
+\contentsline {subsubsection}{\numberline {1.6.2.2}Chemical Mechanisms}{6}{subsubsection.1.6.2.2}
+\contentsline {subsection}{\numberline {1.6.3}The model development cycle}{6}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}The Dynamically Simple Model of Atmospheric Chemical Complexity}{7}{subsection.1.6.4}
 \gdef \the@ipfilectr {}
