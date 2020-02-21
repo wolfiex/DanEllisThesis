@@ -1,32 +1,15 @@
-\BOOKMARK [0][-]{chapter.1}{ Chemical mechanism stratification and analysis using ML and graph clustering. }{}% 1
-\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Mechanism Reduction}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.2.1}{Reaction Removal}{section.1.2}% 4
-\BOOKMARK [2][-]{subsection.1.2.2}{Species removal}{section.1.2}% 5
-\BOOKMARK [2][-]{subsection.1.2.3}{Lumping}{section.1.2}% 6
-\BOOKMARK [3][-]{subsubsection.1.2.3.1}{Chemical Lumping}{subsection.1.2.3}% 7
-\BOOKMARK [3][-]{subsubsection.1.2.3.2}{Linear}{subsection.1.2.3}% 8
-\BOOKMARK [3][-]{subsubsection.1.2.3.3}{Lifetime}{subsection.1.2.3}% 9
-\BOOKMARK [3][-]{subsubsection.1.2.3.4}{Quasi Steady State Approximation \(QSSA\)}{subsection.1.2.3}% 10
-\BOOKMARK [1][-]{section.1.3}{Data Setup}{chapter.1}% 11
-\BOOKMARK [2][-]{subsection.1.3.1}{The Mechanism}{section.1.3}% 12
-\BOOKMARK [2][-]{subsection.1.3.2}{The Box-Model}{section.1.3}% 13
-\BOOKMARK [2][-]{subsection.1.3.3}{Model Inputs}{section.1.3}% 14
-\BOOKMARK [1][-]{section.1.4}{Graph based reduction}{chapter.1}% 15
-\BOOKMARK [2][-]{subsection.1.4.1}{Graph parallels. }{section.1.4}% 16
-\BOOKMARK [2][-]{subsection.1.4.2}{Types of Graph Clustering}{section.1.4}% 17
-\BOOKMARK [2][-]{subsection.1.4.3}{Walk/Flow Based Clustering}{section.1.4}% 18
-\BOOKMARK [2][-]{subsection.1.4.4}{Infomap for graphical clustering }{section.1.4}% 19
-\BOOKMARK [3][-]{subsubsection.1.4.4.1}{Species type and clustering}{subsection.1.4.4}% 20
-\BOOKMARK [3][-]{subsubsection.1.4.4.2}{Inter and Intra links}{subsection.1.4.4}% 21
-\BOOKMARK [3][-]{subsubsection.1.4.4.3}{Number of clusters}{subsection.1.4.4}% 22
-\BOOKMARK [1][-]{section.1.5}{Reduction through Lifetime}{chapter.1}% 23
-\BOOKMARK [2][-]{subsubsection.1.5.0.1}{Calculating the lifetime}{section.1.5}% 24
-\BOOKMARK [2][-]{subsection.1.5.1}{Comparing Magnitude and Direction}{section.1.5}% 25
-\BOOKMARK [3][-]{subsubsection.1.5.1.1}{Euclidian distance}{subsection.1.5.1}% 26
-\BOOKMARK [3][-]{subsubsection.1.5.1.2}{Cosine Distance}{subsection.1.5.1}% 27
-\BOOKMARK [2][-]{subsection.1.5.2}{Temporal Lifetime Vector Comparison}{section.1.5}% 28
-\BOOKMARK [1][-]{section.1.6}{Results}{chapter.1}% 29
-\BOOKMARK [2][-]{subsection.1.6.1}{The co-grouping network}{section.1.6}% 30
-\BOOKMARK [2][-]{subsection.1.6.2}{Comparing daytime and nightime groups}{section.1.6}% 31
-\BOOKMARK [2][-]{subsection.1.6.3}{Determining cluster suitabiltiy}{section.1.6}% 32
+\BOOKMARK [0][-]{chapter.1}{ Introduction }{}% 1
+\BOOKMARK [1][-]{section.1.1}{Whence}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Formation of the Atmosphere}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Rise of the Homo Spiens \(`Wise Man'\)}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Motivation}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Ozone and its role}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{Changing Climate}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.4.1}{HOx Cycle}{section.1.4}% 8
+\BOOKMARK [1][-]{section.1.5}{Air Pollution}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.6}{Modelling the Earth}{chapter.1}% 10
+\BOOKMARK [2][-]{subsubsection.1.6.0.1}{Global Models}{section.1.6}% 11
+\BOOKMARK [3][-]{subsubsection.1.6.0.2}{Common Problems with Earth prediction}{subsubsection.1.6.0.1}% 12
+\BOOKMARK [2][-]{subsection.1.6.1}{The Atmosphere}{section.1.6}% 13
+\BOOKMARK [2][-]{subsection.1.6.2}{The model development cycle}{section.1.6}% 14
+\BOOKMARK [2][-]{subsection.1.6.3}{The Dynamically Simple Model of Atmospheric Chemical Complexity}{section.1.6}% 15

@@ -13,6 +13,8 @@ import bibtexparser
 from bibtexparser.bparser import BibTexParser,BibDatabase
 from bibtexparser.bwriter import BibTexWriter
 
+os.system('mv bibtex.bib bibtex.bibbackup')
+
 fbib = glob.glob('./*/*.bib')
 
 

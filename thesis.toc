@@ -1,34 +1,17 @@
 \gdef \the@ipfilectr {@-1}
-\contentsline {chapter}{\numberline {1} Chemical mechanism stratification and analysis using ML and graph clustering. }{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Introduction}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Mechanism Reduction}{4}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Reaction Removal}{5}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Species removal}{5}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Lumping}{6}{subsection.1.2.3}
-\contentsline {subsubsection}{\numberline {1.2.3.1}Chemical Lumping}{6}{subsubsection.1.2.3.1}
-\contentsline {subsubsection}{\numberline {1.2.3.2}Linear}{7}{subsubsection.1.2.3.2}
-\contentsline {subsubsection}{\numberline {1.2.3.3}Lifetime}{7}{subsubsection.1.2.3.3}
-\contentsline {subsubsection}{\numberline {1.2.3.4}Quasi Steady State Approximation (QSSA)}{7}{subsubsection.1.2.3.4}
-\contentsline {section}{\numberline {1.3}Data Setup}{7}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}The Mechanism}{7}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}The Box-Model}{8}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Model Inputs}{8}{subsection.1.3.3}
-\contentsline {section}{\numberline {1.4}Graph based reduction}{8}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Graph parallels. }{9}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Types of Graph Clustering}{9}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Walk/Flow Based Clustering}{10}{subsection.1.4.3}
-\contentsline {subsection}{\numberline {1.4.4}Infomap for graphical clustering }{11}{subsection.1.4.4}
-\contentsline {subsubsection}{\numberline {1.4.4.1}Species type and clustering}{14}{subsubsection.1.4.4.1}
-\contentsline {subsubsection}{\numberline {1.4.4.2}Inter and Intra links}{15}{subsubsection.1.4.4.2}
-\contentsline {subsubsection}{\numberline {1.4.4.3}Number of clusters}{18}{subsubsection.1.4.4.3}
-\contentsline {section}{\numberline {1.5}Reduction through Lifetime}{19}{section.1.5}
-\contentsline {subsubsection}{\numberline {1.5.0.1}Calculating the lifetime}{19}{subsubsection.1.5.0.1}
-\contentsline {subsection}{\numberline {1.5.1}Comparing Magnitude and Direction}{21}{subsection.1.5.1}
-\contentsline {subsubsection}{\numberline {1.5.1.1}Euclidian distance}{21}{subsubsection.1.5.1.1}
-\contentsline {subsubsection}{\numberline {1.5.1.2}Cosine Distance}{21}{subsubsection.1.5.1.2}
-\contentsline {subsection}{\numberline {1.5.2}Temporal Lifetime Vector Comparison}{22}{subsection.1.5.2}
-\contentsline {section}{\numberline {1.6}Results}{23}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}The co-grouping network}{24}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Comparing daytime and nightime groups}{25}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Determining cluster suitabiltiy}{27}{subsection.1.6.3}
+\contentsline {chapter}{\numberline {1} Introduction }{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Whence}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Formation of the Atmosphere}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Rise of the Homo Spiens (`Wise Man')}{5}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Motivation}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Ozone and its role}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Changing Climate}{5}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}HOx Cycle}{5}{subsection.1.4.1}
+\contentsline {section}{\numberline {1.5}Air Pollution}{5}{section.1.5}
+\contentsline {section}{\numberline {1.6}Modelling the Earth}{6}{section.1.6}
+\contentsline {subsubsection}{\numberline {1.6.0.1}Global Models}{6}{subsubsection.1.6.0.1}
+\contentsline {subsubsection}{\numberline {1.6.0.2}Common Problems with Earth prediction}{6}{subsubsection.1.6.0.2}
+\contentsline {subsection}{\numberline {1.6.1}The Atmosphere}{6}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}The model development cycle}{6}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}The Dynamically Simple Model of Atmospheric Chemical Complexity}{7}{subsection.1.6.3}
 \gdef \the@ipfilectr {}
