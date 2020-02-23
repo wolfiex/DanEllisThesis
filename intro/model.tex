@@ -1,69 +1,43 @@
 \section{Modelling the Earth}
+In the previous section the air quality and its detrimental effects on human health was seen to influence polcicy for cities and industry. Koyoto, Islands suing powerstations.
 
-\subsection{Global Models}
+For a policy to be passed there needs to not only evidence of the problem, but a strong suggestion that any proposed changes will have the desired effect. As it is not possible to perform experiments on complex, and often unknown, chemistry at every location on the planet, we are forced to rely on the numerical simulation of the Earth System, and the constituent parts within it.
 
- Earth Simpulation Models (ESM) are models which predict past or future interactions of the planetary system. They represnt our foremost understanding of the complex interplay between land-surface (geosphere), ocean (hydrosphere), ice (cryosphere) and the air (atmosphere). These act as a surrogate to manual experimentation, which is just not possible on the global scle, and enable us to access changes, situations and predict the future. 
+\subsection{Earth System Models (ESM)}
 
-Earth simulation models often have to address many problems relating to computational efficiency. 
+  ESMs are models capable of predict past or future interactions of the planetary system. They represnt our foremost understanding of the complex interplay between land-surface (geosphere), ocean (hydrosphere), ice (cryosphere) and the air (atmosphere), and act as a surrogate to manual experimentation -  which is just not possible on the global scale.
 
-% Early simulations, such
-% 
-% as those run on ENIAC2, were capable of success-
-% ful 24 hour weather prediction. Unfortunately, al-
-% though a great feat, the delay in simulation time re-
-% sulted in a computation that only just kept up with
-% 
-% real-life events [Lynch, 2008]. in 1995 a general circu-
-% lation model of the atmosphere was created by Phillips
-% 
-% [Phillips, 1956]. It was soon discovered that this was
-% insu
-% cient to represent the Earth, and a general Global
-% Climate Model (GCM) was formed from the union
-% of atmospheric, oceanic, cryospheric and land-surface
-% 
-% models [NIPCC, 2010]. The outcome of this was a pro-
-% gram capable of simulating accurate short-term weather
-% 
-% predictions, which can allow an insight into the con-
-% tributing factors of climate change.
-% 
-% 
-% \subsubsection{Common Problems with Earth prediction}
-% There are several problems that an earth simulation model can face, most of which can be attributed to computational efficiency. An example of this is seen with the 
-% 
-% MET - DAY TO SIMULATE
-% 
-% Other problems with meteorlogy that are encountered rest on resolution. Too fine a scale and the model can take forever to run. simplfy, lose local effect and islands. 
-% 
-% Finally the tuning of models can result in overfitting due to a limited understanding or dataset. Here a model may be tweked to .. 
-% 
-% Numerical stiff chemical complexity. 
-% 
-% 
+ESMs can also be split into their individial parts. One example of this is the Chemistry section of the Goddard Earth Observing System (an integrated ESM and data assimulation model hosted by NASAs Goddard space flight centre [CITE]) - GEOS Chem. GEOS-Chem is a global 3D model of atmospheric chemistry which is driven by the meteorology provided by NASA [CITE]. Here the earth is split up into cubic sphere cells longitudally and latitudally, as well as vertically FIG CELLS\footnote{This image is not from GEOS-Chem.}. Each one of these cells performs several purtubations of the chemistry within them, before any long-lived species are transported, and the process is repeated. If extracted separately a single one of these cells may be used to explore the sensetivity of different species for a range of input conditions. This is the bases of the atmospheric box model.
 
 
-\subsection{The Atmosphere}
+\subsection{The zero-degree box model.}
+A box model
 
-\subsubsection{Types of model}
-3d transoport emission/deposition chemical and physical processes 
+
+
+mechanism,
+
+integrator,
+
+etc.
+
+
 
 
 
 
 \subsubsection{Chemical Mechanisms}
-The atmosphere consists of thousands of species, with tens of thousands of reactions between them. Since manual experimentation is not possible on both the macro (every location on earth) or micro (every atom) scale for the Earth System any prediction of these requires the use of a numerical model. 
+The atmosphere consists of thousands of species, with tens of thousands of reactions between them.
+
+These models represent real wodlc reactions
 
 
-These models represent real wodlc reactions 
-
-
-In modelling these we can describe their rate of production and loss with respect to the species they react with. 
+In modelling these we can describe their rate of production and loss with respect to the species they react with.
 
 
 
 \subsection{The model development cycle}
-Scientific understanding is the product of many cycles of trial and error, \autoref{fig:devcycle}. In atmospheric chemistry we start with a hypothesis or a question, e.g. will changing X have a negative response on Y. We then construct a theoretical model to represent the chemsistry within. This chemistry is updated to reflect the rates and reactions that have been recorded in laboratory/chamber experiments. This cycle is then repeated until the model and real-world observations produce a comparable result. 
+Scientific understanding is the product of many cycles of trial and error, \autoref{fig:devcycle}. In atmospheric chemistry we start with a hypothesis or a question, e.g. will changing X have a negative response on Y. We then construct a theoretical model to represent the chemsistry within. This chemistry is updated to reflect the rates and reactions that have been recorded in laboratory/chamber experiments. This cycle is then repeated until the model and real-world observations produce a comparable result.
 
 \begin{figure}[H]
     \centering
@@ -77,16 +51,52 @@ Scientific understanding is the product of many cycles of trial and error, \auto
 
 
 
-ESM 
+ESM
 
  A series of box models.
- 
- 
+
+
  \subsection{The Dynamically Simple Model of Atmospheric Chemical Complexity}
- 
- 
 
 
 
 
 
+
+
+
+ % Early simulations, such
+ %
+ % as those run on ENIAC2, were capable of success-
+ % ful 24 hour weather prediction. Unfortunately, al-
+ % though a great feat, the delay in simulation time re-
+ % sulted in a computation that only just kept up with
+ %
+ % real-life events [Lynch, 2008]. in 1995 a general circu-
+ % lation model of the atmosphere was created by Phillips
+ %
+ % [Phillips, 1956]. It was soon discovered that this was
+ % insu
+ % cient to represent the Earth, and a general Global
+ % Climate Model (GCM) was formed from the union
+ % of atmospheric, oceanic, cryospheric and land-surface
+ %
+ % models [NIPCC, 2010]. The outcome of this was a pro-
+ % gram capable of simulating accurate short-term weather
+ %
+ % predictions, which can allow an insight into the con-
+ % tributing factors of climate change.
+ %
+ %
+ % \subsubsection{Common Problems with Earth prediction}
+ % There are several problems that an earth simulation model can face, most of which can be attributed to computational efficiency. An example of this is seen with the
+ %
+ % MET - DAY TO SIMULATE
+ %
+ % Other problems with meteorlogy that are encountered rest on resolution. Too fine a scale and the model can take forever to run. simplfy, lose local effect and islands.
+ %
+ % Finally the tuning of models can result in overfitting due to a limited understanding or dataset. Here a model may be tweked to ..
+ %
+ % Numerical stiff chemical complexity.
+ %
+ %
