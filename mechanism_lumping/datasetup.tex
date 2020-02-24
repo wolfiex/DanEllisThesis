@@ -1,24 +1,24 @@
 \section{Data Setup}
-Unlike manual reduction, this chapter does not concern itself with the intricacies of the chemistry behind a mechanism. Instead serach for an automated method of simplifying the mathematical structure behind a mechanism whist preserving the quality of science it represents. Although this method of analysis may not directly replicate the real-world, it can provide an acurate test of the robustness of a mechanism and the equations within it. I work on the assumption that the equations describing each reaction are representative of experimental results, and in simplifying these, their usefulness in modelling the real data is preserved. This section describes the experimental setup for the experiment.
+Unlike manual reduction, this chapter does not concern itself with the intricacies of the chemistry behind a mechanism. Instead, we search for an automated method of simplifying the mathematical structure behind a mechanism whilst preserving the quality of science it represents. Although this may not directly replicate real-world scenarios, it can provide an accurate test of the robustness of a mechanism and the equations within it. I work on the assumption that the equations describing each reaction are representative of experimental results, and in simplifying these, their usefulness in modelling the real data is preserved. This section describes the experimental setup for the experiment.
 
 
 \subsection{The Mechanism}
-The mechanism used is the Common Representative Intermediates (CRI) Mechanism v2.2 ,\cite{criv2}. This is an already reduced version of the MCM,where species are grouped based on their ozone formation potential - i.e. the \ch{c-C} and \ch{c-H} ratio of bonds. 
-Reductions have been made on a compound-by-compound basis and compared to the MCM using a series of 5 day box-model simulations,\cite{cri}. 
+The mechanism used is the Common Representative Intermediates (CRI) Mechanism v2.2,\citep{criv2}. This is an already reduced version of the MCM, where species are grouped based on their ozone formation potential - i.e. the \ch{c-C} and \ch{c-H} ratio of bonds. 
+Reductions have been made on a compound-by-compound basis and compared to the MCM using a series of 5-day box-model simulations, \citep{cri}. 
 
-\paragraph*{Why further simplify the CRI network}
+\paragraph*{Why further simplify the CRI network?}\label{sec:whycri}
 
-CRI v2.2 is a mechanism containing 422 species (1261 reactions). Although this is significantly smaller than the full MCM, it may still prove problematic if used within a global model - for comparison the GEOS-Chem standard chemistry is approcimately half the size of this. Additionally the 2.0 was reduced a further 5 times from its base size. Since this has yet to be done for v2.2, it would be an interesting test to see how far it may be reduced using new and untried methods, whilst still being able to manually inspect simulation results.
+CRI v2.2 is a mechanism of 422 species and 1261 reactions. Although this is significantly smaller than the full MCM, it may still prove problematic if used within a global model - for comparison the GEOS-Chem\footnote{A global 3D model of atmospheric chemistry driven by meteorology from NASA's Goddard Earth Observing System (GEOS), \citep{geos}.} standard chemistry is approximately half the size of this, \cite{geosgit}.
 
 \subsection{The Box-Model}
-The box model used shall be an adapted version of the Dynamically Simple Model of Atmospheric Chemical Complexity (DSMACC) [ref doi, ref DSMACC]. This has had several changes which allow for multiple parallel runs, easy extraction of rates, fluxes and the jacobian matrix as well as a simple ncurses interface for loading and parsing new files. \\
+The box model used shall be an adapted version of the Dynamically Simple Model of Atmospheric Chemical Complexity (DSMACC) \cite{dsmacc,dsmaccgit}. This has had several changes which allow for multiple parallel runs, easy extraction of rates, fluxes and the jacobian matrix as well as a simple Ncurses interface for loading and parsing new files. 
 
-The DSMACC model works by using the Kinetic Pre Processor (KPP) [REF] to generate Fortran code, which can then be used to integrate the provided mechanism. As there were some issues presented with this a pre-pre parser code was used on the mechanism before running KPP, and a post parser on some of the files to provide the desired output. 
+The DSMACC model works by using the Kinetic PreProcessor (KPP), \citep{kpp}, to generate Fortran code, which can then be used to integrate the provided mechanism. As there were some issues presented with this a pre-pre parser code was used on the mechanism before running KPP, and a post parser on some of the files to provide the desired output. 
 
 \subsection{Model Inputs}
-The aim of this experiment is not to replicate a specific case study or senario. Instead we extract all non-lumped species which appear in both CRI and the MCM and provide an assortment of initial condition concentrations to cover the entriety of the input space.
+The aim of this experiment is not to replicate a specific case study or scenario. Instead, we extract all non-lumped species which appear in both CRI and the MCM and provide an assortment of initial condition concentrations to cover the entirety of the input space.
 
-To select the inital conditions there exist several sampling styles \cite{sampling}. The most common style is the random or `Monte Carlo' approach, however this does not guarantee a homogenious distribution of points. A lattice or grid approach is also possible, but that can result in a large number of sample points to produce an complete distribution of the input space. To overcome this a latin hypercube can be used. This is a generalisation of the latin square  -  a square matrix containing n items, arranged in such a way that they only appear once in each row and column (akin to a sudoku puzzle) \cite{lsq}. This presents better covarage of the input space, which shall be setup as follows:
+To select the initial conditions there exist several sampling styles \cite{sampling}. The most common style is the random or `Monte Carlo' approach, however, this does not guarantee a homogeneous distribution of points. A lattice or grid approach is also possible, but that can result in a large number of sample points to produce a complete distribution of the input space. To overcome this a Latin hypercube can be used. This is a generalisation of the Latin square  -  a square matrix containing n items, arranged in such a way that they only appear once in each row and column (akin to a sudoku puzzle) \cite{lsq}. The experimental setup uses a Latin hypercube to define the initial condition range for 148 species and 300 simulations follow the formula below:
 
 \begin{equation}
 \text{concentration}
@@ -28,5 +28,3 @@ To select the inital conditions there exist several sampling styles \cite{sampli
     \end{cases}
 \label{eqn:icslhs}
   \end{equation}
-
-This process is used to create the inital conditions files for X species and 300 simulations. 
