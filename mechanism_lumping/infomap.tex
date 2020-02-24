@@ -1,47 +1,37 @@
-
-\section{Graph based reduction}
-It has been shown that the graph-based representation of the atmospheric chemical network proves useful in both the visual and mathematical analysis of simulation results (\autoref{chaptervis,chaptermetric}). It therefore follows that the network representation of mechanism may also have its uses in the simplification, and thus reduction, of chemical complexity.  This section will outline the basic methods of modularity (or clustering) detection with the graph framework, the different methods in which this may be done and eventually apply it to a case example representative of the chemistry within the London environment.
-
-
-
-
-
+\section{Graph based reduction}\label{sec:graphreduction}
+It has been shown that the graph-based representation of the atmospheric chemical network proves useful in both the visual and mathematical analysis of simulation results (\autoref{chaptervis,chaptermetric}). It, therefore, follows that the network representation of mechanism may also have its uses in the simplification, and thus reduction, of chemical complexity.  This section will outline the basic methods of modularity (cluster) detection with the graph framework, the different methods in which this may be done and eventually apply it to a case example representative of the chemistry within the London environment.
 
 
 
 
 \subsection{Graph parallels. }
-Although there are many graph based methods that exist within the reduction realm, most of these concentrate on the generation of skeletal methods through the building of a directed tree (subcategory of graphs from source to target) - LIST of refs and sentence of all skeletal methods. Path flux analysis (Sun et al 2010)\\
 
-Instead we may find ourselves applying graph theory to solve other reduction methods. For instance we can trace back influence through connecting edges using dijkstras shortest path algorithm (CH2 ref) - analogous to the connectivity method, or a leave one out approach combined with pagerank to access the effects of removing a node.\\
+\textit{
+EDIT\\
+Although many graph-based methods exist within the reduction realm, most of these concentrate on the generation of skeletal methods through the building of a directed tree (a subcategory of graphs from source to target) - LIST of refs and sentence of all skeletal methods. Path flux analysis (Sun et al 2010)\\
+Instead, we may find ourselves applying graph theory to solve other reduction methods. For instance, we can trace back influence through connecting edges using Dijkstra's shortest path algorithm (CH2 ref) - analogous to the connectivity method, or a leave one out approach combined with PageRank to access the effects of removing a node.
+}
 
-We can use the graph structure to analyse changes of reactions or relationships between species. This can provide an alternative representation and method to access such data. Additionally we may use graph clustering techniques to locate groups of highly connected, fast reacting/strongly related species. This has applications in both understanding the data, but more importantly chemical lumping. In creating a graph from the mechanism, we not only encode information about the chemical structure, but also the rate of reaction in the graph. In grouping species by high numbers of reactions between them with fast fluxes we can take a QSSA style approach to reduction, and assume that since the rate of reaction between them is much much faster than those outside a cluster, they may be grouped together. This will be explored in PART II [ref link].
-
-
-
-
-
-
-
+Graph structure can be used to analyse changes of reactions or relationships between species - providing an alternative representation and method to access such data. Additionally, clustering techniques may be used to locate groups of highly connected, fast reacting/strongly related species. This has applications in both understanding the data, but more importantly chemical lumping. In creating a graph from a model simulation, we not only encode information about the chemical structure, but also the influence between species in the mechanism. By grouping species which have a strong dependence upon each other, we can simplify the provided network or mechanism. 
 
  \subsection{Types of Graph Clustering}
-Unlike vector clustering algorithms (such as DBSCAN, UMAP and K-means, as discussed in SEV\autoref{veccluster}), graph clustering metrics do not rely on the spatial orientation of the data to determine groups or `clusters'. Instead these may partition the network into segments, group nodes by structual equivalence or explore the `flow' dynamics of the network.
+Unlike vector clustering algorithms (such as DBSCAN, UMAP and K-means - see \autoref{veccluster}), graph clustering metrics do not rely on the spatial orientation of the data to determine groups or `clusters'. Instead, these may partition the network into segments, group nodes by structural equivalence or explore the `flow' dynamics of the network.
 
-Algorithms such as Label Propagation \citep{labelprop} and spinglass \citep{spinglass} work by randomly assigning nodes with a property or label. This property is then transferred to its neighbours. Other algorithms such as the nested block model can decompose a graph into clusters of like properties, \citep{communitygraph}. These are often grouped in the form of topological equivalence which can be either:
+Algorithms such as Label Propagation \citep{labelprop} and spin-glass \citep{spinglass} work by randomly assigning nodes with property or label. This property is then transferred to its neighbours. Other algorithms such as the nested block model can decompose a graph into clusters of like properties, \citep{communitygraph}. These are often grouped in the form of topological equivalence which can be either:
 \begin{itemize}
     \item[-]\textit{structual equivalence} - vertices are similar if they have like neighbours, \citep{strueq}.
     \item[-]\textit{regular eqivalence} - retrieves nodes with similar connection patterns (e.g. parent - child node hierarchicl structures), \citep{regequiv}.
 \end{itemize}
 This works in a similar way to an autoencoder (ref auto \autoref{section}), where topological similarities are used to simplify (or encode) the network structure, in a way which it may be again decoded.
 
-Finally there exist a set of `flow' based models which use the network dynamics to determine the modularity of a network. These are discussed below.
+Finally, there exist a set of `flow' based models which use the network dynamics to determine the modularity of a network. These are discussed below.
 
-\subsection{Walk/Flow Based Clustering}
-As temporal networks result in a change (magnitude, or type) of relationships between items. Such changes in the network dynamics are encoded within the edges of a graph. To account for this, the primary function of random walk or `flow' algorithms is to capture the the changes between the real-world systems represented by the network.
+\subsection{Walk/Flow-Based Clustering}
+Temporal networks result in a change in the relationships between items (magnitude/type). Such changes in the network dynamics are encoded within the edges of a graph. To account for this, the primary function of a random walk or `flow' algorithms is to capture the changes between the real-world systems represented by the network.
 
-In (SECTION SILHO) the silhouette coefficient was discussed. This compares the vector position of clusters with regards to the distance of data points between them. Translating this to the graph framework, topological (graph) clustering defines a cluster, or module, as a region with a greater inter-cluster degree or density\footnote{The number of links or edges between items in the same group.} compared to their intra-cluster density\footnote{The number of edges to other clusters}. This results in a system, that if sorted by group, has more links between elements of the same group than with those in other groups - this can be seen within the sorted adjacency matrix in (Xhaapter 1 REF).
+In (SECTION SILHO) the silhouette coefficient was used to compares the vector position of clusters with regards to the distance of data points between them. Translating this to the graph framework, topological (graph) clustering defines a cluster, or module, as a region with a greater inter-cluster degree or density\footnote{The number of links or edges between items in the same group.} compared to their intra-cluster density\footnote{The number of edges to other clusters}. This results in a system, that is sorted by group, has more links between elements of the same group than with those in other groups - such patterns can be seen within the sorted adjacency matrix in (Chapter 1 REF).
 
-Since flow based methods are more interested in the network dynamics, than structure, the number of links or density is replaces with the time a random `walker' spends `trapped' between a set of nodes. A real-wold analogy would be to view the flow of water in a slowly filling river, \autoref{fig:hpp}. Here a walker (or water molecle) traverses the entirety of the river/graph network, occasionally getting trapped between a set of nodes. Here although the water is still moving, it ends up spending more time going back and fort between a set of nodes, than exploring the rest of the network. It is these regions of stalled progress that form our network clusters.
+Since flow-based methods are more interested in the network dynamics, than structure, the number of links or density is replaced with the time a random `walker' spends `trapped' between a set of nodes. A real-world analogy would be to view the flow of water in a slowly filling river, \autoref{fig:hpp}. Here a walker (or water molecule) traverses the entirety of the river/graph network, occasionally getting trapped between a set of nodes. Here although the water is still moving, it ends up spending more time going back and forth between a set of nodes, than exploring the rest of the network. It is these regions of stalled progress that form network clusters.
 
 \begin{figure}[H]
     \centering
@@ -49,102 +39,113 @@ Since flow based methods are more interested in the network dynamics, than struc
 \caption{\textbf{The proposed plans for the change of the UK National Watersports Centre Whitewater Course (Holme Pierrepont).} Walk based clustering is analogous to the movement of a river. Clusters (or modules) are identified as areas where the `flow' becomes trapped, much like water in the pools immediately following a hydraulic jump. Source: \cite{hpp} }\label{fig:hpp}
 \end{figure}
 
-The Loudvain clustering algorithm is one of the most popular of the clustering algorithms due to its algorithmic and qualatative robustness, \citep{loudvain,loudrobust}. On the simplest level this works by maximising the modularity for each configuration. Modularity is a value between positive and negative unity which measures the density of edge between inter and intra communities and compares it to an equivalent random network.
-The Loudvain is a hierarchical clustering algorith, this means that after each iteration all nodes which belong to the same cluster are consolidated to form a new `grouped' item. Inter-cluster links are converted into self-links, and intra-cluster links are updated accordingly [REF INCLUDE LAYERS OF hierarchi VCRI'
+\subsection{Louvain Clustering}
 
-Similar to the Loudvain algorithm is the \cite{infomap}'s Infomap. Here each node within the network is assigned its own module. These are then perturbed to neighbouring nodes should such a mode lead to a decrease in the map equation (a flow-based method which operates on system dynamics rather than structure - \citep{mapeqn}). The process is repeated until no further reductions are possible.
+The Louvain clustering algorithm is one of the most popular of the clustering algorithms due to its algorithmic and qualitative robustness, \citep{loudvain,loudrobust}. On the simplest level, this works by maximising the modularity for each configuration. Modularity is a value between positive and negative unity which measures the density of edge between inter and intra communities and compares it to an equivalent random network.
+The Louvain is a hierarchical clustering algorithm, this means that after each iteration all nodes which belong to the same cluster are consolidated to form a new `grouped' item. Inter-cluster links are converted into self-links, and intra-cluster links are updated accordingly [REF INCLUDE LAYERS OF hierarchy VCRI'
+
+
+\subsection{Infomap for graphical clustering }
+
+Similar to the Louvain algorithm is the \cite{infomap}'s Infomap. Here each node within the network is assigned its module. These are then perturbed to neighbouring nodes should such a mode lead to a decrease in the map equation (a flow-based method which operates on system dynamics rather than structure - \citep{mapeqn}). The process is repeated until no further reductions are possible.
 
 TWO LEVEL
 
 MULITLEVERL
 
-%Clustering algorithms seek to capture the intuitive notion that nodes should be connected to many nodes in the same community (intra-cluster density) but connected to few nodes in other communities (inter-cluster sparsity). We compare four clustering algorithms in this study. Each scales to networks of greater than one million nodes.
+%Clustering algorithms seek to capture the intuitive notion that nodes should be connected to many nodes in the same community (intra-cluster density) but connected to a few nodes in other communities (inter-cluster sparsity). We compare four clustering algorithms in this study. Each scales to networks of greater than one million nodes.
 
 % https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4938516/
 %
-% The Infomap algorithm [18] is based on the principles of information theory. Infomap characterizes the problem of finding the optimal clustering of a graph as the problem of finding a description of minimum information of a random walk on the graph. The algorithm maximizes an objective function called the Minimum Description Length [19, 20], and in practice an acceptable approximation to the optimal solution can be found quickly. Previous studies have found Infomap’s performance to remain stable for networks with up to 100,000 nodes [3].
+% The Infomap algorithm [18] is based on the principles of information theory. Infomap characterizes the problem of finding the optimal clustering of a graph as the problem of finding a description of minimum information of a random walk on the graph. The algorithm maximizes an objective function called the Minimum Description Length [19, 20], and in practice, an acceptable approximation to the optimal solution can be found quickly. Previous studies have found Infomap’s performance to remain stable for networks with up to 100,000 nodes [3].
 
 % Modularity
 % The modularity of a graph compares the presence of each intra-cluster edge of the graph with the probability that that edge would exist in a random graph [23, 24]. Although modularity has been shown to have a resolution limit [25], some of the most popular clustering algorithms use it as an objective function [15, 16]. Modularity is given by Eq (1),
 %
-% ∑k(ekk−a2k
+% ∑k(Ekk−a2k
 
-% Analogously, the field-of-view limit marks an upper limit on the size of communities that Louvain and Infomap can detect [36]. Infomap’s lack of a resolution limit causes it to suffer acutely from the field-of-view limit and identify smaller clusters than Louvain identifies. In this way, the resolution limit and the field-of-view limit favor Louvain over Infomap in our experiments with large communities.
+% Analogously, the field-of-view limit marks an upper limit on the size of communities that Louvain and Infomap can detect [36]. Infomap’s lack of a resolution limit causes it to suffer acutely from the field-of-view limit and identify smaller clusters than Louvain identifies. In this way, the resolution limit and the field-of-view limit favour Louvain over Infomap in our experiments with large communities.
 
-\subsection{Infomap for graphical clustering }
 
-Although there are a wide range of availiable clustering technques, there are several reasons that the infomap method works well. The main two criterions in selecting an algorithm for grouping atmospheric reactions are that the algorithm can deal with a directed network (chemistry is directional) and that it needs to be able to handle temopral data (since concentration and photolysis conditions change with time, this plays an important role within the system). The infomap algorithm implements a directed approach, improving on the core loudvain core algorithm it is built upon. In addition to this it is able to implement a multi-level clustering approach which has been shown to capture nodel-layer interaction in temporal networks,\citep{infointermittent}.
 
-Using the intial conditions for London from the last chapter (\autoref{tab:icsmetric}), a spun up simulation run with the CRI v2.2 mechanism was run. Since this does not contain \ch{c5h11cho}, MVK, MACR or Limonene, these species are omitted from the initialisation. Following a spinup to steady state, a graph is generated for noon after 1 day of an unconstrained run. The infomap algorithm is then applied to the generated graph.
+\subsection{Selection Criteria for graph Clustering}
 
-The coursest level of clustering is shown in \autoref{fig:iml1}. Here nodes are coloured by their cluster, and approximate polygon hulls surround the nodes closest to the median cluster centre. Much like the findings in (CHAPTER STRT), it is seen that different sections of the graph network repesent different types of chemistry - for example hull 4 contains aromatic species, hull 2 contains the products of linear alkanes and hull 3 contains the terpines.
+The main two criteria in selecting an algorithm for grouping atmospheric reactions are:
+
+\begin{itemize}
+    \item[1.] The algorithm can deal with a directed network - chemistry is directional.
+    \item[2.] The algorithm can handle temporal data - The chemistry within a system changes depending on the time of day. This is mainly due to the change in the amount of sunlight available to photolysis reactions. 
+\end{itemize}
+
+As the InfoMap algorithm implements a directed approach coupled with a multi-level clustering approach able to capture node-layer interaction in temporal networks,\citep{infointermittent}, it makes a good candidate for the task of mechanism reduction. 
+
+\subsection{Evaluation of InfoMap on a real simulation.}
+
+Using the initial conditions for London from (\autoref{tab:icsmetric}), a spun up simulation run with the CRI v2.2 mechanism was run. Since this does not contain \ch{c5h11cho}, MVK, MACR or Limonene, these species are omitted from the initialisation. Following a spinup to steady-state, a graph is generated for noon after 1 day of an unconstrained run. The InfoMap algorithm is then applied to the generated graph.
+
+The coarsest level of clustering is shown in \autoref{fig:iml1}. Here nodes are coloured by their cluster, and approximate polygon hulls surround the nodes closest to the median cluster centre. Much like the findings in (CHAPTER STRT), it is seen that different sections of the graph network represent different types of chemistry - for example, hull 4 contains aromatic species, hull 2 contains the products of linear alkanes and hull 3 contains the terpenes.
 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{fig/crigroups.png}
-  \caption{\textbf{}}
+  \caption{\textbf{A graph of CRI v2.2 showing the hulls of the first level of hierarchical clustering.} Nodes are coloured by the splits in branches, and the hulls enclose the nodes which lie within 95\% of the (median) centre of the cluster.}
     \label{fig:iml1}
 \end{figure}
 
-Since the infomap provides a finer level of clustering which has originated from this, it is important to evaluate this. Using a graph-hull approach, as in \autoref{fig:iml1}, becomes cluttered and unusable. Instead a bubble plot may be used. Although this sacrafices the ability to view links, it allows for the complete overview of the hierarchical structure. In \autoref{fig:imbubble} shows the nested structure of each clustered group. In an electronic mail correspondance with \cite{correspondance} the origin of the naming convention of reduced species was explained. Using this, individual nodes are categoriesed by their prefixes. This allows the further categorisation of the chemistry withich has been grouped into a category.
+Since the InfoMap provides a finer level of clustering which has originated from this, it is important to evaluate this. Using a graph-hull approach, as in \autoref{fig:iml1}, becomes cluttered and unusable. Instead, a bubble plot may be used. Although this sacrifices the ability to view links, it allows for the complete overview of the hierarchical structure. In \autoref{fig:imbubble} shows the nested structure of each clustered group. In an electronic mail correspondence with \cite{correspondance} the origin of the naming convention of reduced species was explained. Using this, individual nodes are coloured by their prefixes. This allows the further categorisation of the species structure within each category. 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{fig/imapbubble.pdf}
-  \caption{\textbf{}node sizes are representative of the $\log_{10}$ number of walkers that have become trapped by the flow algorithm at a location}
+  \includegraphics[width=.95\textwidth]{fig/imapbubble.pdf}
+  \caption{\textbf{Species structure within each cluster.} A nested bubble chart is used to show the full hierarchical structure of the mechanism. This allows us to evaluate the species structure/type that has been extracted in each level of the hierarchical split. Node sizes are representative of the $\log_{10}$ number of walkers that have become trapped by the flow algorithm at a location. }
     \label{fig:imbubble}
 \end{figure}
 
 
- \twopagepicture{t}{t}{mechanism_lumping/tree.pdf}{\textbf{A radial treemap showing the hierarchical clustering of the CRI mechanism.} The simulation results used are representative of the chemistry within London at Noon localtime and generated using DSMACC and the infomap algorithm.
+ \twopagepicture{t}{t}{mechanism_lumping/tree.pdf}{\textbf{A radial treemap showing the hierarchical clustering of the CRI mechanism.} The simulation results used are representative of the chemistry within London at Noon local time and generated using DSMACC and the InfoMap algorithm.
  }{fig:imap2page}{1.0}{0}
 
 
 \subsubsection{Species type and clustering}
-Although a nested bubble chart is an intituive way to represent groups within a graph, a tree approach is more suited to revealing the hierarchical structure of the network. \autoref{fig:imap2page} shows the same simulation represented in the form of a tree. Here branches are numerically labled on each level - this allows us to navigate the structure using a sequence of numbers, e.g. to get to 1.5.\ch{c4h6} we take the first branch from the centre, followed by the fith branch after that.
+Although the nested bubble chart is an intuitive way to represent groups within a graph, a tree approach is more suited to revealing the hierarchical structure of the network, \autoref{fig:imap2page}. Here branches are numerically labelled on each level, allowing us to navigate the structure using a sequence of numbers (e.g. to get to 1.5.\ch{c4h6} we take the first branch from the centre, followed by the fifth branch after that).
 
-This split structure allow a general overview of the mechanism structure, as well as the reasoning/process of the clustering algorith. As was seen in \autoref{fig:iml1} the first level split shows branches 1,2 and 5 having origins from linear (n-) alkanes. This can be seen through both the emiited species (bold) and the \emph{RN} prefix of the species. Here the linear alkanes can react with OH to extract a hydrogen and then from an \ce{RO2}, or produce a cabonyl \emph{\ce{CARBxx}}, which can then go on to produce the \emph{\ce{RNxxO2}} peroxy radical.
+This split notation allows a general overview of the mechanism structure, as well as the reasoning/process of the clustering algorithm. The first level split in \autoref{fig:iml1} shows branches 1,2 and 5 to have origins in the linear (n-) alkane species. This can be seen through both the emitted species (bold) and the \emph{RN} prefix of the species. Here the linear alkanes can react with OH to extract hydrogen and then from a \ce{RO2}, or produce a carbonyl \emph{\ce{CARBxx}}, which can then go on to produce the \emph{\ce{RNxxO2}} peroxy radical.
 
-The with the exception of benzine in 2.14, branches 3 and 4 contain the aromoatic species in the network.  Branches 4.\{2,5,9,11\} all consist of \emph{\ce{RAxxO2}} species, which are the procuct of the addition of OH to toluene/benzine ringed species. 4.\{1,7,8\} and 1.5 contain peroxy radicals formed from the degregation of conjugated dienes (two alkene groups separated by a single bond, where some sharing of electrons may occur) \emph{\ce{RUxxO2}}. For the CRI v2.2 mechanism these are only isoprene and 1,3-butadiene. Such peroxy radicals often go on to form unsaturated carbonyls, as denoted by \emph{\ce{UCARBxx}}.
+Except for benzine in 2.14, branches 3 and 4 contain the aromatic species in the network.  Branches 4.\{2,5,9,11\} all consist of \emph{\ce{RAxxO2}} species, which are the product of the addition of OH to toluene/benzine ringed species. 4.\{1,7,8\} and 1.5 contain peroxy radicals formed from the degradation of conjugated dienes (two alkene groups separated by a single bond, where some sharing of electrons may occur) \emph{\ce{RUxxO2}}. For the CRI v2.2 mechanism these are only isoprene and 1,3-butadiene. Such peroxy radicals often go on to form unsaturated carbonyls, as denoted by \emph{\ce{UCARBxx}}.
 
 Branch 3 contains the monoterpenes. This can be seen in 3.\{2,5\} ($\alpha-$pinene) and 3.6 ($\beta-$pinenen). Here peroxy radicals formed from the reaction with the e\textbf{n}docyclinc\footnote{Inside the pinene ring.} and e\textbf{x}docyclinc\footnote{Outside the pinene ring.} double bonds of $\alpha-$ and $\beta-$ pinene are denoted with the prefix \emph{\ce{RTN}} and \emph{\ce{RTX}}.
 
-The \emph{\ce{RIxxO2}} prefix was originally used for the peroxy radicals iso (`i-') alkanes and their cabonyl products - branches 3.\{1,4\}, however they tend to mainly be used for smaller branched precursors which produce acetone (\ch{CH3COCH3}) as a majour product in their oxidation chain (branch 3.1). As acetone is a particularly unreactive carbonyl, the fact that it is water soluble means that they may be washed out of the atmosphere by precipitation, \citep{acetonerain}. This may has been seen to interrupt the ozone formation process under regional-scale photochemical smog conditions in north-western Europe [ - from M.Jenkins PAPER? do you know what this is ].
+The \emph{\ce{RIxxO2}} prefix was originally used for the peroxy radicals iso (`i-') alkanes and their carbonyl products - branches 3.\{1,4\}, however, they tend to mainly be used for smaller branched precursors which produce acetone (\ch{CH3COCH3}) as a major product in their oxidation chain (branch 3.1). As acetone is a particularly unreactive carbonyl, the fact that it is water-soluble means that they may be washed out of the atmosphere by precipitation, \citep{acetonerain}. This may have been seen to interrupt the ozone formation process under regional-scale photochemical smog conditions in north-western Europe [ - from M.Jenkins PAPER? do you know what this is ].
 
-
-Finally, since the CRI index is representative of the oxidation potential it is common to see speacies containing the CRI value within a cluster. Cluster typically contain a combination of carbonyl (\ch{R(=O)R}',\emph{CARBxx}), hydroperoxy (\ch{R-OOH},\emph{RxxOOH}), peroxy (\ch{ROO.}, \emph{\ce{RxxO2}}) and nitrate (\ch{R-ONO2},\emph{\ch{NO3}}) groups. For the lumped species, it can be common for an \ch{RO2} species to react with NO or \ch{NO3} to produce a carbonyl with a CRI index of two values lower. This can be attributed to the loss of an oxygen and the formation of a double bond? (what is the long reaction for the MCM, it seems les direct). Similarly a reaction with NO or \ch{ho2} can produce a hydroperoxy or nitrate species, which in turn react with OH to produce the an equivalent carbonyl.
+Finally, since the CRI index is representative of the oxidation potential it is common to see species containing the CRI value within a cluster. Cluster typically contain a combination of carbonyl (\ch{R(=O)R}',\emph{CARBxx}), hydroperoxy (\ch{R-OOH},\emph{RxxOOH}), peroxy (\ch{ROO.}, \emph{\ce{RxxO2}}) and nitrate (\ch{R-ONO2},\emph{\ch{NO3}}) groups. For the lumped species, it can be common for a \ch{RO2} species to react with NO or \ch{NO3} to produce a carbonyl with a CRI index of two values lower. This can be attributed to the loss of oxygen and the formation of a double bond? (what is the long reaction for the MCM, it seems less direct). Similarly, a reaction with NO or \ch{ho2} can produce a hydroperoxy or nitrate species, which in turn react with OH to produce the an equivalent carbonyl.
 
 
 %% good paper for introduction acetone
-
-\subsubsection{Inter and Intra links}
- Typically the quality of clustering can be assessed using the adjacency matrix of a graph. In sortting the axis by cluster groups, squares of high density inter connections should become apparent in an adjacency heatmap. Unfortunately for an atmospheric chemistry mechanism, the size and sparseness of a graph, makes this an infeisable method to visually acess the nodcluster node ratios. Instead we can adapt the nodes presented by the treemap in \autoref{fig:imap2page} and replacing the hierarchical structure, with one representing the original graph.
-
--  greatest group, dark
-
-- inter group to green - these are central on graph plot. important smaller
-
-
-   \begin{figure}[H]
-     \centering
-     \includegraphics[width=1.1\textwidth]{fig/treeplot.pdf}
-     \caption{\textbf{Treeplot.} }
-         \label{fig:imtreeplot}
-   \end{figure}
-
-
+% 
+% \subsubsection{Inter and Intra links}
+%  Typically the quality of clustering can be assessed using the adjacency matrix of a graph. In sortting the axis by cluster groups, squares of high density inter connections should become apparent in an adjacency heatmap. Unfortunately for an atmospheric chemistry mechanism, the size and sparseness of a graph, makes this an infeisable method to visually acess the nodcluster node ratios. Instead we can adapt the nodes presented by the treemap in \autoref{fig:imap2page} and replacing the hierarchical structure, with one representing the original graph.
+% 
+% 
+%    \begin{figure}[H]
+%      \centering
+%      \includegraphics[width=1.1\textwidth]{fig/treeplot.pdf}
+%      \caption{\textbf{The L1 cluster graph using the tree layout from \autoref{fig:imap2page}. } This can be used to explore intra cluster relationships.  }
+%          \label{fig:imtreeplot}
+%    \end{figure}
+% 
+% 
 
 
 
  \subsubsection{Number of clusters}
-Sometimes it may be required to have slightly smaller or larger numbers of clusters. The infomap algorithm contains a \emph{preffered number of modules} parameter which can either terminate the algorithm early, should the number be reached, or continue splitting if it has not. Since we are interesed in merging smaller numbers of nodes together, this can be seen as a useful parameter to have. However, in selecting a number too large, (e.g. 200 clusters, which should result in groups of 2-3 nodes), it is seen that much of the hierarchical information from the network is lost, \autoref{fig:im200}. It is for this reason that forcing the number of nodes without reason will not be attempted.
+Sometimes it may be required to have preset (target) number of clusters. The InfoMap algorithm contains a \emph{preffered number of modules} parameter which can either terminate the algorithm early, should the number be reached (or continue splitting if it has not). Since we are interested in merging smaller numbers of nodes, this can be seen as a useful parameter to have. However, in selecting a number too large, (e.g. 200 clusters, which should result in groups of 2-3 nodes), it is seen that much of the hierarchical information from the network is lost, \autoref{fig:im200}. It is for this reason that forcing the number of nodes without reason will not be attempted.
 
 
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{fig/manygroups.pdf}
-    \caption{\textbf{A radial tree of the infomap algorithm with a forced number of groups.} }
+    \includegraphics[width=.8\textwidth]{fig/manygroups.pdf}
+    \caption{\textbf{A radial tree of the InfoMap algorithm with a forced number of groups.} Here a loss of hierarchical structure can be seen when compared to \autoref{fig:imap2page}. By setting a high number of required clusters, many species are grouped by themselves, which does not provide a useful output for mechanism lumping. }
         \label{fig:im200}
   \end{figure}
 
