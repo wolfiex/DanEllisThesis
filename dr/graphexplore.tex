@@ -1,0 +1,226 @@
+
+\section{Presentation and plotting.}
+The simplification and visualisation of the MCM subset of N species and X reactions representing the chemistry within Beijing during the summer of YYYY is presented. We use properties of molecule structure and functional groups to partition species into like groupings. This is done through mechanistic network representation (force graphs), linear mathematics (principal component methods), force-like visualisation (t-SNE and UMAP) and neural network auto-encoders. For each example, several types of possible inputs are used, and the output reduces to two dimensions for visualisation. Each DR model can be fine-tuned to produce optimal results, however, due to the time and length constrictions of this chapter arbitrary values similar to those used by default have been chosen for the input parameters. It is taken that this section aims to juxtapose the many methods as a means of determining which may be suitable for the clustering of measured/simulated data (Chapter NEXT).
+
+\subsection{Visualisation}
+Once reduced to two dimensions the results are plotted using two different methods (outlined below).
+
+\subsubsection{Graph visualisation}
+To represent graphs we take an approach similar to previous chapters. Here nodes are represented as circles, sized according to the number of functional groups or the amount a specific group exists. To reduce clutter links between spatially distant species are bundled (\cite{edgebundle}), whilst those close together are not changed (a technique similar to that used in \cite{graphtsne}. Nodes are assigned properties and may be matched using full or partial matches to their names, functional groups or smiles strings. Interactivity through the use of mouseover events are used to accomplish the level of exploratory data analysis required for this task.
+
+\subsubsection{Latent Space / Embedding visualisation}
+When data is reduced to two dimensions, we may represent it in the form of an x-y scatter plot. To do this, we first normalise the model output such that it lies between 1 and 0. This removed the need for axis and allows us to compare different outputs directly. As an indicator node groupings are clustered using the DSBSCAN algorithm from sci-kit learn \cite{scikit,DBSCAN}. This selects nodes residing between the maximum distance of 0.02 between the two samples (dimensions. Here trends are once again hi-lighted and labelled with the use of automated and manual exploration aided by interactivity.
+
+\paragraph{Four Colours Theorem}
+When plotted, the number of clusters detected often exceeds the number of categorical colours available. In an attempt to reduce these we apply a greedy implementation of the four colours theorem \cite{fourcolour}.
+The four colour theorem states that each map may be coloured with no more than 4 colours. More explicitly than any two regions (e.g. a country if we are looking at world map may not share the same colour as this causes ambiguity between results. This is especially true when trying to visually differentiate different clusters by colour. The algorithm developed uses the Delaunay tesselation scripts contained within DataDrivenDocuments.js (d3js) \cite{d3js}. This partitions our plane into polygon-regions with boundaries at the furthest distance from each point (Voronoi cells) \cite{delaunay}. Using this we may start at a randomly assigned cell providing it with a colour. We then recursively iterate through all neighbours assigning them with the lowest possible colour that does not occur within any of their neighbours. Although such a greedy approach does not produce an optimum result it allows for the colouring of data with $\le 5$ distinct colours.
+
+
+\qfig{4fig/4colour.png}{fig:4col}{An example 4 colour matching using the first implementation of the above algorithm - Observable Notebook : \cite{4colobs}}{.7\textwidth}
+
+\paragraph{Exposing data}
+Since much of the initial exploration was done using manual intervention and interaction, we found clusters of nodes would often occupy the same space within a graph. There exist two solutions, one of which involves reducing the size of the dots to prevent overlaps, however, this does not always prove useful and often results in difficulties when trying to select a node. The alternative is to apply the d3 force-directed algorithm combined with a level of collision detection. \\
+
+Nodes are configured in such a way that experience a strong attraction force to their respective $(x,y)$ coordinates. The collision algorithm then repels them from existing within the radius of other nodes. This transforms any clusters of stacked nodes into adjacent groupings around the common centre, in turn making it possible to select each node individually.
+
+\paragraph{Gooey Effect (Gaussian Blur)}
+When comparing the existence of certain properties it is often to use colour as an encoding. To prevent distraction through the recognition of separate points, it may be found that blurring adjacent points into a single mass whilst representing information of interest using a variable colour gradient, reduces the cognitive load on the end-user (especially when it comes to dense plots consisting of multiple points.
+
+The simplest way to do this is to apply a gooey-style filter (a method used for creating water droplet style effects in web animations). This works through the merging of ... and a Gaussian blurring matrix of INSERT HERE.
+
+
+\section{Results}
+
+\subsection{The Network Approach}
+
+The oxford dictionary describes a network as `a group or system of interconnected people or things' \cite{definenetwork}. Such an idea may be applied to a chemical system through representing species as our nodes or items and the reactions that exist between them as the interconnected links binding them together. This analogy lends itself to not only producing a holistic representation of how species are related to each other but the use of visualisation in determining like properties.
+
+\subsubsection{Visualising the Mechanism}
+
+A chemical mechanism contains all\footnote{Sometimes this may be all probable reactions concerning a research aim.} possible reactions between a subset of species. It, therefore, follows that information about the structure of each species has been used to determine the existence and rate of a reaction. Since reactions may be broken down into reactants and products, it is possible to construct a node-link style directional graph with links going from each reactant to each product.\\
+
+In using a type of force-directed algorithms, we apply the OpenOrd layout \cite{ord} to the subset of chemistry derived from the YYYY Beijing campaign [REF!]. This uses a combination of simulated annealing\footnote{A method inspired by metallurgy where the material is slowly heated and cooled to remove internal stresses} and edge cutting to overcome local minima and produce visually distinct clusters of highly connected nodes, \autoref{fig:graph}.
+
+\qfig{4fig/graph/n_carbons.png}{fig:graph}{A graph representing the Beijing data set described in XX. Colours represent the number of carbons for each species (light == more), and node size shows the number of functional groups. }{.9\textwidth}
+
+
+
+
+
+\subsubsection{Functional group location within the graph}
+
+Carbon - Hydrogen chains are the backbone of all organic chemistry. Alkanes are saturated hydrocarbons which are unlikely to react. If we remove hydrogen, we free up an electron and form an unsaturated alkyl chain. With the addition of a functional group, we increase the reactivity of such a species, making it more likely to form a bond with something else. This is called functionalisation. Comparing \autoref{fig:graph} and \autoref{fig:graphother} we see that in general, as the number of carbons decreases, the number of non-carbon atoms increases. This may be explained through the iterative oxidation of primary emitted carbon chains, to ultimately produce \ce{CO2} and water (not shown on the graph)\footnote{Carbon monoxide is located at the centre of the graph where all the links converge. Although the MCM does not explicitly include carbon dioxide, one of a hand full of channels from which this forms involves a reaction with \ce{CO}, which is why so many reactions go into it}.
+
+\paragraph{Reactivity and the Graph}
+Within the field of geochemistry van Krevelen diagrams are commonly used to to show the evolution (and in turn oxidation) of coal and oils.
+
+This is done through looking at the ratio of Oxygen to Carbon and Hydrogen to Carbon within a specific species - the notion being that in oxidation, Hydrogen-Carbon links are replaced with Oxygen [ADD LIST OF REFS HERE - original paper hard to find]. In looking at such ratios, we may evaluate the extent of oxidation a species has experienced and draw parallels between their relative structural significance.  \cite{krsig}.
+
+To confirm our hypothesis that the chemistry within the graph begins with large hydrocarbons, which are then oxidised in a cascade of reactions to ultimately form \ce{co} we may colour nodes using the total possible O-C ratio. This can be calculated as by:
+
+\begin{equation}
+    Ratio = \frac{O-C \ bonds}{Total \ potentially  \  available \ H-C \ bonds.}
+\end{equation}
+
+Since it is structurally improbable that all hydrogen's in a carbon chain are replaced by Oxygen, there are fewer values within the (top) yellow range of the colourmap, \autoref{fig:ocratio}. However is is evident that in general the closer we get to \ce{CO}, the higher our O-C:O-H ratio.
+
+%
+%\qfig{4fig/graph/n_other.png}{fig:graphother}{A graph representing the Beijing. Hilighted colours represent the number of atoms other than carbon within a species (light == more). Node size shows the number of functional groups. }{.9\textwidth}
+%
+\qfig{4fig/graph/oxidised_ratio.png}{fig:ocratio}{Oxidised ratio - the percentage of all possible oxidation }{.9\textwidth}
+
+
+
+
+
+% We may further explore the groups presented in \autoref{fig:graph} by viewing the location of species containing different functional groups. Since
+
+
+\paragraph{Graph Embeddings and Multifunctionality}
+\autoref{cover} shows that species in the MCM often have multiple possible functional groups, each of which may react with different species. We know that species in a mechanism are connected with regards to their reaction. We are interested to see if these are separated within the force directed graph layout. Upon initial inspection (through the use of manual interaction) similarity between both naming convention and smiles strings exists within the graph, \autoref{fig:graphnames} and \autoref{fig:graphsmiles}. Here an example subset of some of the matches found using the javascript document query matching function are shown.
+
+%$^$ denotes the start of the string, .$*$ a match anywhere and $\$$ at the end.
+
+
+\qfig{4fig/graph/namegraph.png}{fig:graphnames}{Partial name matches for species within the network}{.9\textwidth}
+
+\qfig{4fig/graph/smilesgraph.png}{fig:graphsmiles}{Partial smiles matches for species within the network}{.9\textwidth}
+
+
+From this we start to build a picture - we know that that as species react, much of the time we alter a bond or functionalisation, whist retaining the general structure of the molecule. Many reactions are also cyclic, with for example an alcohol being lost, and then reattached again. Additionally like structures will have similar reaction patterns, and very likely react with the same species / inorganics. Since force-directed graphs rely on links between items to produce the final embedding, it serves that such features constrain connected species towards a common location - for example the Aromatic region (orange *c in \autoref{fig:graphsmiles}).\\
+
+Since reactions are gouverned by functional groups, we wish to see if such information may be extracted from the structure of the mechanism. Functional group abundance for each species may be calculated to provide the percentage of species in the graph that should contain it \autoref{tab:percentfunctional}. In the next section we look at each functional group, how it reacts and their distribution across the subset and graph.
+
+\begin{table}
+\begin{tabular}{lr}
+\toprule
+Species Name &  Percentage likelyness \\ \midrule
+
+Alcohol        &   52.91\% \\
+Ketone         &   42.61\% \\
+Aldehyde       &   20.10\% \\
+Nitrate        &   13.60\% \\
+Peroxalkyl rad &   11.49\% \\
+Alkoxy rad     &    8.40\% \\
+Aromatic rings &    5.40\% \\
+Ether          &    4.34\% \\
+Ester          &    3.93\% \\
+PAN            &    3.24\% \\
+Carb. Acid     &    1.92\% \\
+Per. Acid      &    1.65\% \\
+Criegee        &    1.61\% \\
+\bottomrule \\
+\end{tabular}
+
+    \label{tab:percentfunctional}
+    \caption{Percentage probability of a species at random from the extracted subset containing each functional group. }
+\end{table}
+
+
+
+
+\paragraph{Alcohol: R-OH}
+
+
+
+An alcohol can be described as a species containing the hydroxyl functional group (\ch{OH}). These are very common in organic chemistry due to their simple formation (the addition of Oxygen to an unpaired electron). \autoref{fig:graph_Alcohol} shows species containing the functional group are evenly distributed throughout the mechanism. The two most common reactions for these are
+
+\begin{equation*}
+R:OH \rightarrow{{+OH}} R:O.
+\end{equation*}
+
+\begin{equation*}
+R:OH \leftarrow{~hv} R:O.
+\end{equation*}
+
+and
+
+\begin{equation*}
+R:OH \rightarrow{{+NO_2}} R:=O (+NO)  \rightarrow{{+ ~hv|NO_3|OH}} RO.  \rightarrow{{+HO_2}} R:OH (+O_3)
+\end{equation*}
+
+Reactions of species containing an alcohol group often do react with other available functionalgroups.
+
+
+\paragraph{Ketone: R-C(=O)-R'}
+Ketones consist of an aldehyde chain containing a carbonyl group. Ketones are thought of simple functional groups as the carbonyl is not paired to another functional group (e.g. Carboxylic Acid or Esters). These are again common throughtout the mechanism and do not local to a specific group of species, \autoref{fig:graph_Ketone}. \\
+
+The most common reactions are...
+
+Everything or not at all?
+
+
+\paragraph{Aldehyde: R-C(=O)H}
+Aldehydes consist of a formyl functional group (a carbon double bound to an oxigen and singly bound to a Hydrogen), and may often be found in essential oils. This functional group makes them more reactive...
+When observing \autoref{fig:graph_Aldehyde} we see that many of the aldehydes appear within the central cluster, (around Carbon monoxide where many of the shorter length and more oxidised species are). There is another grouping just above this, where the benzine derivative exist. On the left many of the aldehyde grouping are part of large (6/7) long carbon chains containing only Hydrogen and oxygen. It is worth noting that within the graph, Formaldehyde (\ce{HCHO}) is located at the nexus, left of centre. Similar to this many of the aldehyde groups appear to exist within species containing many reactions between themselves, and to others. \\
+
+
+
+
+
+Aldehydes are often generated t
+
+
+
+\paragraph{Nitrate: R-O-\ce{NO2}}
+
+
+
+
+These are relatively well distributed throughout the graph and commonly react with both Aldehydes and Ketones, which are both also well distributed and in abundance, to convert these into alcohol or PAN groups and Nitrogen dioxide. The most likely reaction pathways for this would be \\
+
+ THe cluster INB1NBCO3H and INAHPPAN derviatives?
+This is clear withinin .. .
+
+
+\paragraph{Peroxalkyl Radical: R-O-OH}
+Common
+
+
+
+
+
+\paragraph{Alkoxy Radical: R-OH }
+
+This is an alkyl chain (Carbon and Hydrogen) bound to a single Oxygen group.
+
+
+\paragraph{Ether: R-O-R'}
+
+Ethers are two alkyl (Carbon and Hydrogen) groups joined by a single oxygen. These have relatively low boiling points and have an aplication in the removal of alcohol functional groups through binding with the oxygen and expelling the hydrogen. Their ---- nature places them in close proximity to aromatic and PAN clusters on the graph.
+
+
+\paragraph{Ester: R-C(=O)-O-R'}
+Esters are compounds often derived from acids, in which at-least one OH group is replaced by an -O-alkyl (Carbon and Hydrogen) group. This suggests a similar reactivity style to ethers....
+
+\paragraph{PAN: R(=O)-O-O-N(=O)O}
+
+A secondary pollutant which is thermally unstable and decomposes to form \ce{NO2}. Peroxy Acetyl Nitrates are a found within photochemical smog (ozone events) and are more stable than ozone. This makes them important when considering the long-range transport of smog related pollution.
+
+
+\paragraph{Carb. Acid: s R–C(=O)-OH}
+///
+\paragraph{Per. Acid}
+\paragraph{Criegee}
+
+
+
+
+
+
+% \autoref{cover}
+
+
+% \newpage
+% Autoencoders :
+
+% https://towardsdatascience.com/dimensionality-reduction-for-machine-learning-80a46c2ebb7e
+
+% I\\
+
+
+% http://mlexplained.com/2018/09/14/paper-dissected-visualizing-data-using-t-sne-explained/
+
+%https://mlexplained.com/2018/09/14/paper-dissected-visualizing-data-using-t-sne-explained/
+
+% https://gist.github.com/mbohun/3126926

@@ -45,6 +45,7 @@ for i in fbib:
     keys.extend(re.findall(r'@[^{]*{(.*),',txt))
     
     with open(i) as bibtex_file:
+        print(i)
         bdata = bibtexparser.load(bibtex_file, BibTexParser(common_strings = True))
         entries.extend(bdata.get_entry_list())
         

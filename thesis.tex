@@ -67,7 +67,7 @@
 %\thispagestyle{empty}
     \begin{figure}[#1]
         \raggedleft
-        \vspace*{-.17\textheight}
+        \vspace*{-.035\textheight}
         \adjustbox{trim=0 0cm {.49\width} 0cm,clip}{\includegraphics[height={#6}\textheight,angle=#7]{#3}}%
     \caption{#4}\label{#5}
     \end{figure}
@@ -77,7 +77,7 @@
         \vspace*{-.1007\textheight}
         \adjustbox{trim={.49\width} 0cm 0 0cm,clip}{\includegraphics[height={#6}\textheight,angle=#7]{#3}}%
     \end{figure}
-    
+    \thispagestyle{empty}
     
 \vfill
     \clearpage
@@ -91,7 +91,7 @@
 
 
 
-
+\title{Understanding Atmospheric Chemistry using Graph-Theory, Visualisation and Machine Learning. }
 \author{Dan Ellis }
 \date{March 2020}
 
@@ -106,14 +106,14 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{5}
 %\cleardoublepage
-\setcounter{page}{0}
-\setcounter{chapter}{0}
-% \maketitle
+%\setcounter{page}{0}
+%\setcounter{chapter}{0}
+ \maketitle
 \cleardoublepage{}
 \setlength{\footnotesep}{0.5cm}
 \raggedbottom %group writing to top of page!
 
-\blankpage
+%\blankpage
 \restoregeometry
 \vspace*{0.15\paperheight}
 \begin{center}
@@ -140,14 +140,19 @@
 
  \newpage
 
-\include{./0_intro}
+%\include{./0_intro}
 
  
-% Chapter 6
-%\include{./5_centrality}
-% Chapter 6
+% Chapter 4
+%\include{./4_centrality}
 
-%\include{./6_lumping}
+
+% Chapter 5
+% \include{./5_lumping}
+
+% Chapter 6
+\include{./6_DR}
+
 
 \newpage
 %
