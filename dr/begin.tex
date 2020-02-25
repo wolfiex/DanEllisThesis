@@ -1,18 +1,18 @@
 \section{Species of the MCM and ways to represent them.}\label{sec:drinput}
-The master chemical system (as defined in all previous chapters), represents our foremost knowledge of gas phase chemistry within the troposhere. It has been shown that due to its creation protocol (\autoref{fig:protocol}), much of the information about a species structure is encoded within the reaction pathways it can take. This section explores the different methods of representing a species structure, with the aim of providing a machine built algorithm with the greatest amount of information about each species and its functionality. To do this a range of input types will be evaluated against a number of different dimensionality reduction algorithms with the aim of isolating which chemical properties are most `picked up'. 
+The master chemical system (as defined in all previous chapters), represents our foremost knowledge of gas-phase chemistry within the troposphere. It has been shown that due to its creation protocol (\autoref{fig:protocol}), much of the information about a species structure is encoded within the reaction pathways it can take. This section explores the different methods of representing a species structure, intending to provide a machine built algorithm with the greatest amount of information about each species and its functionality. To do this a range of input types will be evaluated against several dimensionality reduction algorithms to isolate which chemical properties are most `picked up'. 
 
 \subsection{Input generation}
-The MCM provides species information in the form of a species `smiles' (\autoref{sec:smiles}) and the IUPAC InChi string \citep{inchi}. Within this chapter we use only the smiles string, which is either manually processed using regular expressions or with the aid of pythons RDKIT package \citep{rdkit}. There are seven different methods for representing the chemsitry, each of which are outlined below. 
+The MCM provides species information in the form of a species `smiles' (\autoref{sec:smiles}) and the IUPAC InChi string \citep{inchi}. Within this chapter, we use only the smiles string, which is either manually processed using regular expressions or with the aid of pythons RDKIT package \citep{rdkit}. There are seven different methods for representing the chemistry, each of which are outlined below. 
 
 
 \subsection{Manual Categorisation}
-Reactions within the MCM are determined by a set of rules (PROTOCOL SECTION). These are designed to mimic the process a chemist my discover new species, and often rely on the bond availability and functionalisation of a species. Since the present functional groups are the benchmark of whether a DR algorithm has sucessfuly separated species structure, it make sense to run a unit test using the known functional groups of a species as the input. 
+Reactions within the MCM are determined by a set of rules (PROTOCOL SECTION). These are designed to mimic the process a chemist my discover new species and often rely on the bond availability and functionalisation of a species. Since the present functional groups are the benchmark of whether a DR algorithm has successfully separated species structure, it makes sense to run a unit test using the known functional groups of a species as the input. 
 
-To genearate the functional groups the regular expressions in \autoref{tab:fngroups} are used\footnote{To see the structure of each functional group type, go to \autoref{appendix:fngroups}.} on the smiles strings (described in \autoref{sec:smiles}) for each species. In extracting the functional groups we are able to plot the likelyness a species with a certain group is likely to have another using a chord diagram - \autoref{fig:covermcm}. Since most species are found to contain a multitude of functional groups, the separation of these into `tidy' clustered groups seems unlikely.      
+To generate the functional groups the regular expressions in \autoref{tab:fngroups} are used\footnote{To see the structure of each functional group type, go to \autoref{appendix:fngroups}.} on the smiles strings (described in \autoref{sec:smiles}) for each species. In extracting the functional groups we can plot the likeliness a species with a certain group is likely to have another using a chord diagram - \autoref{fig:covermcm}. Since most species are found to contain a multitude of functional groups, the separation of these into `tidy' clustered groups seems unlikely.      
 
 
 %
-% Except for dissociation, species reactions are often dictated by their functional groups. Species in the MCM are usually represented as functionalised alkanes (A saturated hydrocarbon in the form of $C_nH_{2n+2}$). In removing a hydrogen we form an alkyl chain. This allows for the potential of forming a bond with other atoms. By themselves alkyl chains are mostly un-reactive, however in gaining additional functional groups (functionalisation) their reactivity increases.%
+% Except for dissociation, species reactions are often dictated by their functional groups. Species in the MCM are usually represented as functionalised alkanes (A saturated hydrocarbon in the form of $C_nH_{2n+2}$). In removing hydrogen we form an alkyl chain. This allows for the potential of forming a bond with other atoms. By themselves alkyl chains are mostly un-reactive, however in gaining additional functional groups (functionalisation) their reactivity increases.%
 
 
 
@@ -58,7 +58,7 @@ Peroxyacyl rad & \verb! \\ w\(=O\)O\[O\.{0,1}\]!\\&\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{4fig/coverfig.jpg}
-    \caption{\textbf{The multifunctionality of the MCM.} A chord diagram showing the functionalisatoin of a species within the MCM. Arc sizes represent what percentage of all functional groups in the MCM mechanism a group contains. Translucent areas of no outwards links represent species with multiples of a certain functional group, of which Alcohols and Ketones have the most.  
+    \caption{\textbf{The multifunctionality of the MCM.} A chord diagram showing the functionalisation of a species within the MCM. Arc sizes represent what percentage of all functional groups in the MCM mechanism a group contains. Translucent areas of no outwards links represent species with multiples of a certain functional group, of which Alcohols and Ketones have the most.  
     Source: \citep{cover} }
     \label{fig:covermcm}
 \end{figure}
@@ -66,15 +66,15 @@ Peroxyacyl rad & \verb! \\ w\(=O\)O\[O\.{0,1}\]!\\&\\
 
 
 \subsection{Tokenization}
-As computer algorithms are unable to understand words, or their meaning, we have to first categorise the data into groups. Tokenisation is the conversion of a string into characters and representing them with a numerical equivalent. In doing so a string of characters can be converted into a numerical vector, allowing for its representation in a latent vector space. 
+As computer algorithms are unable to understand words or their meaning, we have to first categorise the data into groups. Tokenisation is the conversion of a string into characters and representing them with a numerical equivalent. In doing so a string of characters can be converted into a numerical vector, allowing for its representation in a latent vector space. 
 Within our input selection, we have two sets of inputs we can convert. These are the species names, and their smiles string representation. 
 
 
 
 \subsubsection{Species Names}
-In \autoref{ch4} it was shown that the dedicated species names for species in the CRI mechanism were often representative of their structural properties. This addage also applies for the MCM, where an intitive naminc convention has been selected. This is is often derrived as part of the construction protocol, where a species names reflects its own, or its precursors structure (which it will have atleast in-part inherited).
+In \autoref{ch4} it was shown that the dedicated species names for species in the CRI mechanism were often representative of their structural properties. This adage also applies for the MCM, where an intuitive naming convention has been selected. This is often derived as part of the construction protocol, where a species names reflect its own, or its precursor's structure (which it will have at least in-part inherited).
 
-Although this is not the most robust method of defining structure, it allows for an easy test of the algorithms, for which the user can quickly compare the human readable output. 
+Although this is not the most robust method of defining the structure, it allows for an easy test of the algorithms, for which the user can quickly compare the human-readable output. 
 
 %\begin{table}[H]
 %\centering
@@ -96,10 +96,10 @@ Although this is not the most robust method of defining structure, it allows for
 \subsubsection{SMILES strings}\label{sec:smiles}
 
 
- Smiles (`Simplified Molecular-Input Line-Entry System') provide a human-readable representation of molecular structure,
- \citep{smiles}. They provide a linear human-readable representation of the chemical structure within a molecule. This makes it easy for us to visually check the structure of a species without any additional work. In addition their role in generating the molecular fingerprints in \autoref{sec:fingerprints} makes it a useful comparison to make when evaluating methods of structure representation. 
+ Smiles (`Simplified Molecular-Input Line-Entry System') provide a human-readable representation of the molecular structure,
+ \citep{smiles}. They provide a linear human-readable representation of the chemical structure within a molecule. This makes it easy for us to visually check the structure of a species without any additional work. Besides, their role in generating the molecular fingerprints in \autoref{sec:fingerprints} makes it a useful comparison to make when evaluating methods of structure representation. 
 
-\paragraph*{Construction Methodoly of SMILES strings}
+\paragraph*{Construction Methodology of SMILES strings}
 Smiles strings are constructed in three parts. We begin with a species backbone, then add break cycles and branches producing a smiles string. A visual description of this procedure is given below. 
 
 \begin{enumerate}
@@ -108,7 +108,7 @@ Smiles strings are constructed in three parts. We begin with a species backbone,
 
     \item This may within itself contain aromatic rings denoted by the lowercase carbons and a number corresponding to the location of each break cycle. \autoref{fig:st3}
 
-    \item Finally all the functional groups and branches attached to the main backbone are added. These are nested within parenthesis to show that they are not part of the skeletal backbone. \autoref{fig:st4}
+    \item Finally all the functional groups and branches attached to the main backbone are added. These are nested within the parenthesis to show that they are not part of the skeletal backbone. \autoref{fig:st4}
 \end{enumerate}
 
 
@@ -148,16 +148,16 @@ Smiles strings are constructed in three parts. We begin with a species backbone,
 \end{figure}
 
 
-\subsubsection{Graph Inspired}
+\subsection{Graph Inspired}
 
-\autoref{ch2} - \ref{ch4} have shown the role of graphs in revealing network properties and structure. Graphs in themselves are able to simplify relational data into two/three dimensions for visualisation and algorithmic clustering. Continuing this trend we can represent a species strucuture in the form of a graph (\autoref{sec:specgraph}), as well as converting the structure of a mechanism for dimensionality reduction (\autoref{sec:n2vec})
+\autoref{ch2} - \ref{ch4} have shown the role of graphs in revealing network properties and structure. Graphs in themselves can simplify relational data into two/three dimensions for visualisation and algorithmic clustering. Continuing this trend we can represent a species structure in the form of a graph (\autoref{sec:specgraph}), as well as converting the structure of a mechanism for dimensionality reduction (\autoref{sec:n2vec})
 
 
-\paragraph{The species graph (fingerprint)}\label{sec:specgraph}
+\subsubsection{The species graph (fingerprint)}\label{sec:specgraph}
 
-The structure of a species has long represented using a graph-like layout, \autoref{ch2}. It therefore follows that other methods for representing the graph structure would also apply. One such method is the use of an adjacency (or relational) matrix to describe the relationships between atoms and bonds in a species. Such a methodolgy is already used in the construction of bond and z-matrixes, \citep{mcmgen,zmatrix}. 
+The structure of a species has long represented using a graph-like layout, \autoref{ch2}. It, therefore, follows that other methods for representing the graph structure would also apply. One such method is the use of an adjacency (or relational) matrix to describe the relationships between atoms and bonds in a species. Such a methodology is already used in the construction of bond and z-matrixes, \citep{mcmgen,zmatrix}. 
 
-The construction of a structure matrix/graph begins with a chemical species. Here the relationships between atoms (\autoref{fig:graphmol}) is converted into an adjacency matrix (\autoref{fig:adjmol}). However since species have different numbers of each atom, a template allowing us to compare different graphs is required. To do this a maximum occurance table (\autoref{table:my_maxoccur}) is created. Here for example BCARY \ch{C15H24}, a sesqueterpine contains the most carbon atoms of any species within the MCM. This universal matrix is now able to contain any possible combination of atoms in a species. 
+The construction of a structure matrix/graph begins with a chemical species. Here the relationships between atoms (\autoref{fig:graphmol}) is converted into an adjacency matrix (\autoref{fig:adjmol}). However since species have different numbers of each atom, a template allowing us to compare different graphs is required. To do this a maximum occurrence table (\autoref{table:my_maxoccur}) is created. Here, for example, BCARY \ch{C15H24}, a sesquiterpene contains the most carbon atoms of any species within the MCM. This universal matrix is now able to contain any possible combination of atoms in a species. 
 
 As machine learning algorithms only vectors as an input, it is possible to decompose the $37^2$ element adjacency matrix into rows, which can then be joined together, Using this method we create a flat array (vector) of 259 elements (518 bytes) which can be used to represent our species.
 
@@ -195,38 +195,37 @@ As machine learning algorithms only vectors as an input, it is possible to decom
      \end{subfigure}
 
         \caption{ \textbf{Constructing a graph from species structure.} 
-        (a) shows the maximum number of times an atom occurs for any single species in the MCM. (b) depicts the graph-like chemical structure of \ce{INB1NBCO3}. This is a highly processed species stemming from Isoprene, and this makes for a good example of the bond matrix. Finally a matrix representing the bonds in \ce{INB1NBCO3} is created from the maximum possible occurance matrix from (a). For simplicity, empty row/column pairs have been removed to produce (c). This matrix will always be symmetrical as the bonds do not have a direction.}
+        (a) shows the maximum number of times an atom occurs for any single species in the MCM. (b) depicts the graph-like chemical structure of \ce{INB1NBCO3}. This is a highly processed species stemming from Isoprene, and this makes for a good example of the bond matrix. Finally, a matrix representing the bonds in \ce{INB1NBCO3} is created from the maximum possible occurrence matrix from (a). For simplicity, empty row/column pairs have been removed to produce (c). This matrix will always be symmetrical as the bonds do not have a direction.}
         \label{fig:bondmat}
 \end{figure}
 
 
-\paragraph{Node Embeddings (node2vec)}\label{sec:n2vec}
-\autoref{ch2} and \autoref{ch3} showed that the underlying structure of a chemistry mechanism graph contains information about the species and reactions within it. This is seen in \autoref{fig:vk}, where colour represents the ratio of potential oxidation of a species. Here as emitted species become progressively more processed, the number of bonds which may be oxidised deminishes (lighter colours near the centre) until they eventually form carbon dioxide and water. 
+\subsubsection{Node Embeddings (node2vec)}\label{sec:n2vec}
+\autoref{ch2} and \autoref{ch3} showed that the underlying structure of a chemistry mechanism graph contains information about the species and reactions within it. This is seen in \autoref{fig:vk}, where colour represents the ratio of potential oxidation of a species. Here as emitted species become progressively more processed, the number of bonds which may be oxidised diminishes (lighter colours near the centre) until they eventually form carbon dioxide and water. 
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{4fig/graph/oxidised_ratio.png}
   \caption{\textbf{The graph of an MCM subset representing the chemistry within Beijing.} Here colours show the increase of \ce{O-C} ratio as species are oxidised (lighter). All emitted species ultimately tend towards carbon monoxide which is at the centre of the graph. }
   \label{fig:vk}
 \end{figure}
 
-This type of strucutral information can be extracted through the use of a natural language processing package capable of transforming a graph into a vector - node2vec \citep{node2vec}. Since this may also be used for dimensionality reduction, it shall be described in the next section (\autoref{sec:n2v}).
+This type of structural information can be extracted through the use of a natural language processing package capable of transforming a graph into a vector - node2vec \citep{node2vec}. Since this may also be used for dimensionality reduction, it shall be described in the next section (\autoref{sec:n2v}).
 
 
 
 
-\subsubsection{Molecular Fingerprints}\label{sec:fingerprints}
+\subsection{Molecular Fingerprints}\label{sec:fingerprints}
 
+In the field of chemical informatics, molecular fingerprints (or structural keys) are used to encode and query structural properties of species. Their binary representation makes them suitable for dimensionality reduction and the exploration of fo chemical space (a type of property space constructed using pre-determined properties and boundary conditions).
 
-Molecular fingerprints (structural keys) are a way of encoding molecule structure into a queryable series of binary digits. These are predominately used in the filed of chemical-informatics as means of exploring chemical space (a type of property space constructed using pre-determined properties and boundary conditions). Properties are often split into structural and psyico-chemical groups, allowing for the use of data mining techniques in search of molecule similarity (with uses such as the discovery of natural analogues to circumvent side effects and in-tolerances \citep{analog}). Unlike line notations, such as smiles and InChi, molecular fingerprints provide a multi-dimensional classification for chemical species which makes them ideal for machine learning inputs.
+Here species properties are often split into structural and psyico-chemical groups - which has used such as the discovery of natural analogues (which circumvent problems such as intolerances in medicine \citep{analog}). Although there exist many different types of molecular fingerprints, the two main ones that will be explored are molecular quantum numbers (MQN) and the molecular access system (MACCS). 
 
-\paragraph{Molecular Quantum Numbers (MQN)}
-In chemistry the shape, phase and electron occupancy of an atom may be described through the use of four quantum numbers\footnote{These are $n$ principle quantum number, $I$ angular momentum quantum number, $M_i$ magnetic quantum number and $M_s$ spin quantum number.}. The rationalisation of elements based on their structure, and by consequence reactivity, has led to the most iconic tool of the modern-day chemist - the periodic table\footnote{Increasing atomic numbers follow the principal quantum number.} \citep{periodic}. In representing a molecule as a set of 42 quantum numbers, MQN fingerprints produce a multi-dimensional mapping of atom, bond, polarity and topology count \citep{MQN}. Its binary nature not only... application..
+\subsubsection{Molecular Quantum Numbers (MQN)}
+In chemistry the shape, phase and electron occupancy of an atom may be described through the use of four quantum numbers: the $n$ principle quantum number, $I$ angular momentum quantum number, $M_i$ magnetic quantum number and $M_s$ spin quantum number. The rationalisation of elements based on their structure, and by consequence reactivity, has led to the most iconic tool of the modern-day chemist - the periodic table, where increasing atomic numbers follow the principal quantum number, \citep{periodic}. In representing a molecule as a set of 42 quantum numbers, MQN fingerprints produce a multi-dimensional mapping of atom, bond, polarity and topology count \citep{MQN}. 
 
-[ref fae others... ]
+% [ref fae others... ]
 
-\paragraph{Molecular ACCess System (MACCS)}
-MACCS keys are a 164\footnote{Although they are 166-bit keys, there is no real agreement to what the 44th keys' purpose is, and therefore it is often omitted. Within RDKIT this is denoted by a $?$ \citep{rdkitcode}.} bit structural keys formulated through answering a series of structure-related questions. Developed by MDL Information Systems \citep{maccs}, their main purpose lies in being a SMILES Arbitrary Target Specification (SMARTS) system for substructure searching. However their distinct structure key format
-
-makes them highly suitable for similarity detection. In many cases, the optimised version of MACCS keys is cited (\citep{optimised}), although most use cases exploit a variation of the undocumented 166bit keys. We use the implementation presented by \citep{rdkit,rdkitcode} for all molecular fingerprints in this section.
+\subsubsection{Molecular ACCess System (MACCS)}
+MACCS keys are a 164\footnote{They are 166-bit keys, although there is no real agreement to what the 44th keys' purpose is, and therefore it is often omitted. Within RDKIT this is denoted by a $?$ \citep{rdkitcode}.} bit structural keys formulated through answering a series of structure-related questions. Developed by MDL Information Systems \citep{maccs}, their main purpose lies in being a SMILES Arbitrary Target Specification (SMARTS) system for substructure searching. However, their distinct structure key format makes them highly suitable for similarity detection. In many cases, the optimised version of MACCS keys is cited (\citep{optimised}), although most use cases exploit a variation of the undocumented 166bit keys. We use the implementation presented by \citep{rdkit,rdkitcode} for all molecular fingerprints in this section.

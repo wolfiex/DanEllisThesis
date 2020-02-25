@@ -1,31 +1,30 @@
 \section{ Dimensionality Reduction Methods}
+In the last section we described a number of methods in which the chemical structure of a species could be incoded for direct comparison. However since each input is made up of a multitude of elements, it is still not a simple task determine the differences and similarity between all species in a mechanims. Dimensionality reduction is the process of reducing the number of random variables and only presentind a set of principal values, by mapping a high-dimensional space into a low-dimensional one, \citep{drrandom}. This allows us to flatten a multivariate input into the two dimension required for a simple scatter plot.
 
-Computational algorithms are often described as a black box. This is due to their structure, where we begin with a set of inputs, $X$. These then have a series of operations applied to them, $f(X)$, eventually producing the corresponding output $Y$. In the case of simple linear regression, this intermediate process may be calculated easily by hand. Unfortunately for large datasets, or complex iterative models, this becomes somewhat impractical. Additionally, algorithms such as neural networks or genetic (evolutionary) algorithms may also require the changing of items or hyper-parameters in-situ.
-It is for this reason models need to be evaluated, ensuring that they not only run correctly but register the correct set of features we are interested in.
+In this section we begin by explaining the data preperation required for dimensionality reduction (\autoref{sec:pref}) before desribing the different possible methods of reducing the dimensions of a dataset. 
 
-For predictive models, an adaptation of the leave-one-out method of assessment is commonly applied. Data is split into a $2/3:1/3$ ratio, whereupon the model is trained on two-thirds of the data, and evaluated in its predictive capabilities on the remaining third. This process is repeated with many permutations of the data to determine an overall model variance. Unfortunately, since we wish to use machine learning (ML) for exploratory data analysis, we need to take a different approach to evaluating the usefulness of a model. Here we take a known property, which through prior knowledge should be highlighted by the models, and compare the output categories output with these.
+% 
+% Computational algorithms are often described as a black box. This is due to their structure, where we begin with a set of inputs, $X$. These then have a series of operations applied to them, $f(X)$, eventually producing the corresponding output $Y$. In the case of simple linear regression, this intermediate process may be calculated easily by hand. Unfortunately for large datasets, or complex iterative models, this becomes somewhat impractical. Additionally, algorithms such as neural networks or genetic (evolutionary) algorithms may also require the changing of items or hyper-parameters in-situ.
+% It is for this reason models need to be evaluated, ensuring that they not only run correctly but register the correct set of features we are interested in.
+% 
+% For predictive models, an adaptation of the leave-one-out method of assessment is commonly applied. Data is split into a $2/3:1/3$ ratio, whereupon the model is trained on two-thirds of the data, and evaluated in its predictive capabilities on the remaining third. This process is repeated with many permutations of the data to determine an overall model variance. Unfortunately, since we wish to use machine learning (ML) for exploratory data analysis, we need to take a different approach to evaluating the usefulness of a model. Here we take a known property, which through prior knowledge should be highlighted by the models, and compare the output categories output with these.
+% 
+% 
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=.5\textwidth]{4fig/xy.pdf}
+%   \caption{The general flow chart of flow within a machine learnt model.}
+%   \label{xy}
+% \end{figure}
 
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=.5\textwidth]{4fig/xy.pdf}
-  \caption{The general flow chart of flow within a machine learnt model.}
-  \label{xy}
-\end{figure}
-\subsection{Preperation of the data}
-Depending on the data, it is likely that the values may need to be cleaned or adjusted to produce the desired results. Although not needed in the context of this chapter, methods such as standardisation may be required when comparing different datasets in future work. It, therefore, makes sense that such information is provided, and the terms defined, below.
+\subsection{Preperation of the data}\label{sec:prep}
+Real-world data is rarely preformatted in such a way that it can be used directly within a computational model. Often values need to be cleaned and corrected to be fit for purpose. In the interest of completeness the two main methods of data adjustment for machine learning are outlined below. These are normalisation and standardisation. 
 
-\subsubsection{Standardisation}
-Sometimes we may have data which varies in magnitude across different components. Since this will be improperly weighting the output, we need to standardise our data before feeding it into an algorithm. The simplest method is to divide the variation of each point from the mean by the standard deviation of $S$. This gives us a score between {-1,1}, describing how many standard deviations a point is from the mean, \autoref{eqn:z}. In statistics this is  known as the z-score\footnote{Possibly because of the American spelling of standardiZation?}
 
-\begin{equation}
-    z(x_i) = \frac{x_i - \mu_x}{S}
-    \label{eqn:z}
-\end{equation}
-
-\subsubsection{Normalisation}
-If the data selected is all either
-r dimensionless, or of the same unit, it may be remapped between the range of {0,1}. This allows the easy interpretation of humans and algorithms alike, where the closer to 1 a value is, the higher its influence. We may normalise the data through the following equation:
+\subsubsection*{Normalisation}
+In the data is without (dimensionless) or of a single unit, it is poissble to rescale the data between a range - most commonly {0,1}. In doing so it is possible to interperate the importance of a value in contrast to the largest recorded value. This gives us a percentage scale spanning the range of the data. Such a range is useful in the definition of colourmaps and describing a values importance relative to the dataset. 
+To rescale a dataset we shift the minimum value to zero, then divide by the new maximum of the dataset (Note this is equivalent to the range of the unshifted dataset.)
 
 \begin{equation}
     n(x_i) = \frac{x_i - \min_x }{\max_x - \min_x}
@@ -34,16 +33,25 @@ r dimensionless, or of the same unit, it may be remapped between the range of {0
 
 
 
-\subsection{Principle Component Analysis}
-Principle component analysis (PCA) is a commonly used technique in x, y z. In the field of chemical informatics, it is often used to xxxxxx[ref]. The algorithm works by linearly simplifying a set of variables, by discovering the components which account for the most variability within the dataset - the principal components \cite{pca,pca2}.
+\subsubsection*{Standardisation}
+If the components we wish to compare are of differing units, or are expressed with a different scale, normalising them would not produce meaninful data. Instead it is possible to standardise the data by looking at each points deviation from the mean. This is done by dividing the variation of each point from the mean by the standard deviation of $S$ and results in a value between \{-1,1\}, \autoref{eqn:z}. In statistics this is known as the `z-score'\footnote{Possibly because of the American spelling of standardi\textbf{Z}ation?}
 
-The process used by PCA can be thought of as trying to find the direction of the data, such that its projection has the largest variability. We may think of this as `adjusting the axis` in such a way that they best represent the variability within the data. Such methods allow us to determine which components (or dimensions) within a dataset contain the most change, and which may, in turn, be eliminated - for example most of the variability in \autoref{fig:2dpca} is contained in the first component, meaning that we may remove the second without a great loss to the quality of data. Such methods have applications in compression and signal filtering [REF rEF]
+\begin{equation}
+    z(x_i) = \frac{x_i - \mu_x}{S}
+    \label{eqn:z}
+\end{equation}\\    
+
+
+\subsection{Principle Component Analysis}
+One of the most well known dimensionality reduction methods is the determination of the principal components through the use of Principal Component Analysis (PCA). PCA works on the assumption that components within a dataset are linear combinations of eachother. By simplifying these linear combinations, it is possible to identify the components which explain the most variability in a dataset - these are the principal components \citep{pca,pca2}.
+
+A simpler interpretation of this would be to adjust the direction of each axis of the data, such that its projection has the largest variability. In doing so it is possible to determine which components contribute the most to changes in the dataset. An example of this is seen in \autoref{fig:2dpca} where the second component of the original data may be removed with little effect on the overall result of the data. Such methods have applications in compression and signal filtering [REF REF]
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.5\textwidth]{./4fig/pca2d.png}
-    \caption{An example of 2D  PCA - do this plot. (MAKE)}
+    \includegraphics[width=.8\textwidth]{./4fig/pca2d.png}
+    \caption{\textbf{Determining the Principal Compnent of a sample dataset.} It can be seen that in a change in axis to follow the first principal component (right), it is possible to explain most of the variation in the samle dataset (left). Source: \citep{pcaim}}
     \label{fig:2dpca}
 \end{figure}
 
@@ -52,7 +60,7 @@ The process used by PCA can be thought of as trying to find the direction of the
 \emph{\textbf{Note:} The basic statistics/mathematics required to understand this section is shown in \autoref{apendix:pca}. Please read this if you are not familiar with any of the terms below.
 }
 
-The mathematics behind PCA consists of first calculating the covariance matrix. This is an $n \times n$ matrix outlining how strongly each variable changes with every other. Using this we can calculate both the eigenvalues and eigenvectors of the matrix \footnote{These need to be unit vectors, although most packages already do this out of the box.}. This may be done using a computational package such as numpy or scipy \cite{numpy,scipy}.
+The mathematics behind PCA consists of first calculating the covariance matrix. This is an $n \times n$ matrix outlining how strongly each variable changes with every other. Using this we can calculate both the eigenvalues and eigenvectors of the matrix \footnote{These need to be unit vectors, although most packages already do this out of the box.}. This may be done using a computational package such as numpy or scipy \citep{numpy,scipy}.
 
 We can now sort the eigenvector columns by influence using their eigenvalues. This way a feature data-set can be produced by removing vectors of low influence. The final feature dataset can now be transposed and multiplied by the transpose of the original dataset. This produces an output dataset containing each principal component of the desired dimension.
 
@@ -60,7 +68,7 @@ We can now sort the eigenvector columns by influence using their eigenvalues. Th
 
 \subsection{t-Distributed Stochastic Neighbor Embedding (t-SNE)}
 
-t-SNE is an algorithm designed with visualisation in mind \cite{tsne}. Rather than representing the data through a series of linear transformations, t-SNE uses local relationships to create a low-dimensional mapping, much in the same way as a fully connected force graph, \autoref{fig:tsneforcegraph}. This allows the ability to capture non-linear structures in the data which cannot be done through linear mapping methods (e.g. PCA).
+t-SNE is an algorithm designed with visualisation in mind \citep{tsne}. Rather than representing the data through a series of linear transformations, t-SNE uses local relationships to create a low-dimensional mapping, much in the same way as a fully connected force graph, \autoref{fig:tsneforcegraph}. This allows the ability to capture non-linear structures in the data which cannot be done through linear mapping methods (e.g. PCA).
 
 The algorithm itself can be broken down into two parts[REF ttsne introduction paper]:
 \begin{itemize}
@@ -91,7 +99,7 @@ The crowding problem is a product of the `curse of dimensionality. This is becau
 %
 % The general process is given by the etymological dissection of the acronym, with `t'  standing for the student T probability distribution and S, N (stochastic and neighbour) explaining the use of the distribution across neighbouring points in space.
 
-In the original paper \cite{tsne}, the algorithm is described using the etymologic dissection of its name.
+In the original paper \citep{tsne}, the algorithm is described using the etymologic dissection of its name.
 
 \paragraph{Step 1}
 First we begin with Stochastic Neigbour Embedding (SNE) - the distribution across neignbouring datapoints in our high dimension space. This is done by converting the high dimensional Euclidian distances between points into conditional probabilities representing their similarity:
@@ -167,7 +175,7 @@ Auto-encoders are a subclass of neural networks which are primarily used for dim
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{4fig/ae.pdf}
-\caption{An example autoencoder structure which reduces a 16 dimentional input to 2. Draw with the aid of \cite{drawae}}
+\caption{An example autoencoder structure which reduces a 16 dimentional input to 2. Draw with the aid of \citep{drawae}}
 \end{figure}
 
 
@@ -215,17 +223,17 @@ To demonstrate the effect of these we take a sample isopleth of Methane and Ozon
 %
 % Graph auto-encoders are an extension to these, applying the auto-encoder structure to a GNN. Here we may feed information about the relationships between items in our network, as well as the features representing them.
 %
-% This method of representation has its purpose in both classification and link prediction. In terms of an autoencoder, we may use this to extract the graph embeddings at a lower dimension. In \cite{karatAE} it is shown that GAEs are able to extract an embedding of the graph communities within a network. In other papers, GAEs have been used for matrix completion, and in-turn link prediction \cite{gaelink}. This makes them a potentially powerful tool in the visualisation, understanding and prediction of atmospheric chemical graphs.
+% This method of representation has its purpose in both classification and link prediction. In terms of an autoencoder, we may use this to extract the graph embeddings at a lower dimension. In \citep{karatAE} it is shown that GAEs are able to extract an embedding of the graph communities within a network. In other papers, GAEs have been used for matrix completion, and in-turn link prediction \citep{gaelink}. This makes them a potentially powerful tool in the visualisation, understanding and prediction of atmospheric chemical graphs.
 
 
 \subsection{Node2Vec}\label{sec:n2v}
- Node2Vec is an embedding algorithm designed to generate vector representations of the nodes in an \textit{undirected} and \textit{unweighted} network. This not only allows the input of graph derived relationships into other models, but can also be more computationally efficient, by circumventing the need for expensive composition, whilst producing better predictions on some network-related tasks compared to more classical methods, such as PCA \cite{node2vec}.
+ Node2Vec is an embedding algorithm designed to generate vector representations of the nodes in an \textit{undirected} and \textit{unweighted} network. This not only allows the input of graph derived relationships into other models, but can also be more computationally efficient, by circumventing the need for expensive composition, whilst producing better predictions on some network-related tasks compared to more classical methods, such as PCA \citep{node2vec}.
 
 
 \begin{figure}[H]
   \centering
 \includegraphics[width=\textwidth]{4fig/n2vproc.png}
-\caption{The process of converting a graph into a vector using Node2Vec. Source:\cite{n2vimg}}\label{fig:n2vprocess}
+\caption{The process of converting a graph into a vector using Node2Vec. Source:\citep{n2vimg}}\label{fig:n2vprocess}
 \end{figure}
 
 
@@ -242,18 +250,18 @@ ISOPRENE \rightarrow OH \rightarrow TISOPA \rightarrow ISOPBO_2 \rightarrow TISO
 The probability and path depend both on a set of arguments and a random seed provided to the model. The return and input parameters $p,q$ determine how fast we explore the network and our probability to leave the neighbourhood, \autoref{fig:n2vedge}. In a network, where the previous path is from $t$ to $v$, we may calculate the probability of returning to $t$ as $1/p$, going to a mutual node connected between $t$ and $v$ as 1, and viewing a new node as $1/q$.
 If $q>1$ we have a high probability to end up at nodes close to $t$, and with $q<1$ we are likely to explore other nodes. Additionally if we chose $p> \max{q,1}$ we are less likely to return to an already visited node ($p < \min{q,1}$ is likely to generate a backwards step). Since we wish to generate a `local' view, but do not wish to return to $t$ we select  $q \ge 1$ and $p > q$ our parameters as  $p = 2.0,q=1.1$.  In the case of a weighted graph (something that we are \textit{not} exploring within this chapter) the resultant $alpha$ value calculated is further multiplied by the edge weight.
 
-To run the simulation we use the python 2 code provided by the original paper \cite{node2vec} with a set of 50000 random walks, each of length 9. The reasoning behind this is that we have a large graph, with a power-law like structure (within only a couple of steps we are connected to every other species within the network - that is if we do not include the inorganics, which in this case we are).
+To run the simulation we use the python 2 code provided by the original paper \citep{node2vec} with a set of 50000 random walks, each of length 9. The reasoning behind this is that we have a large graph, with a power-law like structure (within only a couple of steps we are connected to every other species within the network - that is if we do not include the inorganics, which in this case we are).
 
 \textit{NOTE: This process takes over a week to compute, and then the binary file containing all walks in character form approaches 10 GB, for the complete MCM. ...in serial... }
 
 \begin{figure}[H]
   \centering
 \includegraphics[width=0.5\textwidth]{4fig/n2vedge.png}
-\caption{Calculation of the random walk path. Source:\cite{node2vec}}\label{fig:n2vedge}
+\caption{Calculation of the random walk path. Source:\citep{node2vec}}\label{fig:n2vedge}
 \end{figure}
 
 \subsubsection{Word2Vec}
-Once we have constructed our random path `sentences', we can make use of the well renowned word2vec algorithm developed by Google \cite{w2v}. The word2vec algorithm is similar to an auto-encoder in many regards, but rather than learning word embeddings through reconstruction, it looks at the words (or species in our case) which neighbour each other in our corpus. This form of representation has found many uses beyond the realm of natural language processing. Some of these are objects, people, code, tiles,genes and graphs \cite{objects,people,code,tile,gene,graph2vec}.
+Once we have constructed our random path `sentences', we can make use of the well renowned word2vec algorithm developed by Google \citep{w2v}. The word2vec algorithm is similar to an auto-encoder in many regards, but rather than learning word embeddings through reconstruction, it looks at the words (or species in our case) which neighbour each other in our corpus. This form of representation has found many uses beyond the realm of natural language processing. Some of these are objects, people, code, tiles,genes and graphs \citep{objects,people,code,tile,gene,graph2vec}.
 
 
 
