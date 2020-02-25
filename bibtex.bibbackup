@@ -413,7 +413,6 @@ and Tomlin, Alison S.},
    author = {Martin Ester and Hans-peter Kriegel and Jörg Sander and Xiaowei Xu},
    pages = {226--231},
    publisher = {AAAI Press},
-   school = {-},
    title = {A Density-Based Algorithm For Discovering Clusters In Large Spatial Databases With Noise},
    year = {1996}
 }
@@ -672,6 +671,16 @@ and Chen, Bin and Wild, David},
    year = {2005}
 }
 
+@misc{fgps,
+   author = {Andy Brunning},
+   booktitle = {{Twitter}},
+   howpublished = {\url{https://twitter.com/compoundchem/status/1230953094474862592/photo/1}},
+   note = {Accessed: 2020-2-24},
+   title = {{Functional Groups In Organic Chemistry}},
+   url = {https://twitter.com/compoundchem/status/1230953094474862592/photo/1},
+   year = {2020}
+}
+
 @article{fourcolour,
    author = {Appel, K. and Haken, W.},
    fjournal = {Bulletin of the American Mathematical Society},
@@ -907,6 +916,24 @@ No X -Limited Conditions}},
    title = {Idf Response Functions.},
    url = {https://upload.wikimedia.org/wikipedia/commons/0/05/Plot_IDF_functions.png},
    year = {2020}
+}
+
+@article{inchi,
+   author = {Heller, Stephen and McNaught, Alan and Stein, Stephen and
+Tchekhovskoi, Dmitrii and Pletnev, Igor},
+   doi = {10.1186/1758-2946-5-7},
+   issn = {1758-2946},
+   journal = {Journal of cheminformatics},
+   language = {en},
+   month = {January},
+   number = {1},
+   pages = {7},
+   pmc = {PMC3599061},
+   pmid = {23343401},
+   title = {{Inchi - The Worldwide Chemical Structure Identifier Standard}},
+   url = {http://dx.doi.org/10.1186/1758-2946-5-7},
+   volume = {5},
+   year = {2013}
 }
 
 @article{infointermittent,
@@ -1486,6 +1513,13 @@ https://doi.org/10.1021/acscentsci.6b00219
    title = {Neural Networks For The Prediction Of Organic Chemistry Reactions},
    volume = {2},
    year = {2016}
+}
+
+@article{node2vec,
+   author = {Aditya Grover and Jure Leskovec},
+   note = {Accessed: 2019-10-21},
+   title = {Node2Vec: Scalable Feature Learning For Networks},
+   year = {2019}
 }
 
 @misc{numpy,
