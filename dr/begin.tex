@@ -153,72 +153,72 @@ Smiles strings are constructed in three parts. We begin with a species backbone,
 \autoref{ch2} - \ref{ch4} have shown the role of graphs in revealing network properties and structure. Graphs in themselves are able to simplify relational data into two/three dimensions for visualisation and algorithmic clustering. Continuing this trend we can represent a species strucuture in the form of a graph (\autoref{sec:specgraph}), as well as converting the structure of a mechanism for dimensionality reduction (\autoref{sec:n2vec})
 
 
-\paragraph{The species graph}\label{sec:specgraph}
+\paragraph{The species graph (fingerprint)}\label{sec:specgraph}
 
-As noted in \citep{mcmgen}, it is possible to represent molecular structure to
-a computer using a bond matrix. A bond matrix is the adjacency matrix derived from representing a molecule in the form of a simple graph - where nodes represent atoms and edges the bonds between them. This means that we can take the ball-stick structure of a chemical species \autoref{fig:graphmol}, and convert it into a relation matrix with values corresponding to the number of nodes \autoref{fig:adjmol} This is similar to the concept of z-matrixes, which are often used in chemistry to represent atoms in a molecule in the form of Cartesian coordinates through the use of bonds, and bond angles \citep{zmatrix}.
+The structure of a species has long represented using a graph-like layout, \autoref{ch2}. It therefore follows that other methods for representing the graph structure would also apply. One such method is the use of an adjacency (or relational) matrix to describe the relationships between atoms and bonds in a species. Such a methodolgy is already used in the construction of bond and z-matrixes, \citep{mcmgen,zmatrix}. 
 
-Since we wish to compare species of differing numbers of atoms, \autoref{table:my_maxoccur}, we create a universal matrix capable of containing any foreseeable bond-atom combination in the form of a subgraph. This produces a $37^2$ element adjacency matrix. The above matrix can now be flattened (separated into rows with each row joined in series to produce a single array of dimension [1,$37^2$]). This produces a model input of 259 elements and 518 bytes.
+The construction of a structure matrix/graph begins with a chemical species. Here the relationships between atoms (\autoref{fig:graphmol}) is converted into an adjacency matrix (\autoref{fig:adjmol}). However since species have different numbers of each atom, a template allowing us to compare different graphs is required. To do this a maximum occurance table (\autoref{table:my_maxoccur}) is created. Here for example BCARY \ch{C15H24}, a sesqueterpine contains the most carbon atoms of any species within the MCM. This universal matrix is now able to contain any possible combination of atoms in a species. 
 
-
-\begin{table}[h]
-    \centering
-    \begin{tabular}{c|c}
-    \textbf{Atom} & \textbf{Max}\\\hline
-    &\\
-        C & 15 \\
-        Cl & 4 \\
-        O & 12\\
-        N&3\\
-        S&1\\
-        BR&2
-    \end{tabular}
-    \caption{Maximum occurance of each atom within a single species}
-    \label{table:my_maxoccur}
-\end{table}
-
+As machine learning algorithms only vectors as an input, it is possible to decompose the $37^2$ element adjacency matrix into rows, which can then be joined together, Using this method we create a flat array (vector) of 259 elements (518 bytes) which can be used to represent our species.
 
 
 \begin{figure}[H]
      \centering
-     \begin{subfigure}[b]{0.495\textwidth}
+     \begin{subfigure}[b]{0.325\textwidth}
+         \centering
+         \begin{tabular}{c|c}
+         \textbf{Atom} & \textbf{Max}\\
+         \hline\hline
+         &\\
+             C & 15 \\
+             Cl & 4 \\
+             O & 12\\
+             N&3\\
+             S&1\\
+             BR&2\\
+         \end{tabular}
+          \caption{}
+         \label{table:my_maxoccur}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.325\textwidth}
          \centering
          \includegraphics[width=\textwidth,height=.8\textwidth]{4fig/INB1NBCO3.pdf}
-         \caption{Chemical structure drawn using \citep{rdkit}}
+         \caption{}
          \label{fig:graphmol}
      \end{subfigure}
      \hfill
-     \begin{subfigure}[b]{0.495\textwidth}
+     \begin{subfigure}[b]{0.325\textwidth}
          \centering
          \includegraphics[width=\textwidth,height=.8\textwidth]{4fig/INB1NBCO3_adj.png}
-         \caption{Corresponding adjacency matrix.}
+          \caption{}
          \label{fig:adjmol}
      \end{subfigure}
 
-        \caption{ The molecular structure of \ce{INB1NBCO3}, one of the more functionalized species in the MCM, represented as a graph with nodes of consisting of either Oxygen, Carbon or Nitrogen and its adjacency matrix. Note that this is symmetrical since bonds are not directional.}
+        \caption{ \textbf{Constructing a graph from species structure.} 
+        (a) shows the maximum number of times an atom occurs for any single species in the MCM. (b) depicts the graph-like chemical structure of \ce{INB1NBCO3}. This is a highly processed species stemming from Isoprene, and this makes for a good example of the bond matrix. Finally a matrix representing the bonds in \ce{INB1NBCO3} is created from the maximum possible occurance matrix from (a). For simplicity, empty row/column pairs have been removed to produce (c). This matrix will always be symmetrical as the bonds do not have a direction.}
         \label{fig:bondmat}
 \end{figure}
 
 
-\paragraph{MCM graph: Node Embeddings}\label{sec:n2vec}
-
-As shown in chapter YYY, representing the reactions within a mechanism in the form of a graph exposes patterns presented by the generation protocol, and thus the species chemical structure. We saw this through the categorisation of graph structures into aromatics, terpenes and an alkane/alkenes REF, and through van-krevelin ratios showing the progressive oxidation of species, to the production of \ch{Co2} (CO in the mcm) and water, \autoref{fig:vk}.
+\paragraph{Node Embeddings (node2vec)}\label{sec:n2vec}
+\autoref{ch2} and \autoref{ch3} showed that the underlying structure of a chemistry mechanism graph contains information about the species and reactions within it. This is seen in \autoref{fig:vk}, where colour represents the ratio of potential oxidation of a species. Here as emitted species become progressively more processed, the number of bonds which may be oxidised deminishes (lighter colours near the centre) until they eventually form carbon dioxide and water. 
 
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{4fig/graph/oxidised_ratio.png}
-  \caption{A graph representing the MCM mechanism derived from measured emissions in Beijing. This shows an increase of the O-C ratio as species are oxidised towards CO (center).  }
+  \caption{\textbf{The graph of an MCM subset representing the chemistry within Beijing.} Here colours show the increase of \ce{O-C} ratio as species are oxidised (lighter). All emitted species ultimately tend towards carbon monoxide which is at the centre of the graph. }
   \label{fig:vk}
 \end{figure}
 
-
-We can make use of the fact that chemical structure is encoded within the mechanism through its construction process. To extract this we may use node2vec, \citep{node2vec}, a program used to covert the structure of a graph into a numerical vector for use in machine learning. This is discussed in detail in  \autoref{sec:n2v}.
+This type of strucutral information can be extracted through the use of a natural language processing package capable of transforming a graph into a vector - node2vec \citep{node2vec}. Since this may also be used for dimensionality reduction, it shall be described in the next section (\autoref{sec:n2v}).
 
 
 
 
 \subsubsection{Molecular Fingerprints}\label{sec:fingerprints}
+
+
 Molecular fingerprints (structural keys) are a way of encoding molecule structure into a queryable series of binary digits. These are predominately used in the filed of chemical-informatics as means of exploring chemical space (a type of property space constructed using pre-determined properties and boundary conditions). Properties are often split into structural and psyico-chemical groups, allowing for the use of data mining techniques in search of molecule similarity (with uses such as the discovery of natural analogues to circumvent side effects and in-tolerances \citep{analog}). Unlike line notations, such as smiles and InChi, molecular fingerprints provide a multi-dimensional classification for chemical species which makes them ideal for machine learning inputs.
 
 \paragraph{Molecular Quantum Numbers (MQN)}

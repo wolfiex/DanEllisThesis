@@ -1,3 +1,88 @@
-\section{Results: Part I}
+\section{Results}
+% 
+% There exist many methods to define the chemical structure of the species within the MCM. In this section we shall attempt to evaluate their effectiveness for exhibiting the defining functional groups and charactaristics used for constructing the mechanism. In order to do this, we shall use a range of linear and non-linear DR techneques as a means of clustering the data. 
 
-There exist many methods to define the chemical structure of the species within the MCM. In this section we shall attempt to evaluate their effectiveness for exhibiting the defining functional groups and charactaristics used for constructing the mechanism. In order to do this, we shall use a range of linear and non-linear DR techneques as a means of clustering the data. 
+\subsection{CLuster distribution}
+
+Start with the visual comparison and compare it with the silhouette values. 
+
+
+
+
+\paragraph*{Principle Component Analysis}
+
+
+\begin{table}[H]
+    \centering
+        \subimport{tables/}{silhouettepca.tex}
+        \caption{The inputs to the PCA dimensionality reduction algorithm sorted by the best obtained silhoette coefficient.  }
+        \label{tab:pcasil}
+\end{table}
+
+
+
+\begin{landscape}
+\begin{figure}[H]
+    \subimport{tables/}{pcadr.tex}
+    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimsnsions using Principle Component analysis.}
+    Each graphs has indergone several clustering algorithms under a range of parameters. The result with the best silhouette coefficient have been chosen. Colours follow the greedy 4 colour theorem and are there only to indicate contrast between cluster boundaries.}
+    \label{fig:pcavis}
+\end{figure}
+\end{landscape}
+
+
+
+
+
+
+\paragraph*{Auto Encoder Encoding}
+
+\begin{table}[H]
+    \centering
+        \subimport{tables/}{silhouetteae.tex}
+        \caption{The inputs to the AutoEncoder dimensionality reduction algorithm sorted by the best obtained silhoette coefficient.  }
+        \label{tab:aesil}
+\end{table}
+
+
+
+
+
+\begin{landscape}
+\begin{figure}[H]
+    \subimport{tables/}{aedr.tex}
+    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimsnsions using an AutoEncoder.}
+    Each graphs has indergone several clustering algorithms under a range of parameters. The result with the best silhouette coefficient have been chosen. Colours follow the greedy 4 colour theorem and are there only to indicate contrast between cluster boundaries.}
+    \label{fig:aevis}
+\end{figure}
+\end{landscape}
+
+
+
+
+
+
+
+
+
+
+\paragraph*{t-Distrubuted Stochastic Neighbor Embedding}
+
+\begin{table}[H]
+    \centering
+        \subimport{tables/}{silhouettetsne.tex}
+        \caption{The inputs to the t-SNE dimensionality reduction algorithm sorted by the best obtained silhoette coefficient.  }
+        \label{tab:tsnesil}
+\end{table}
+
+
+
+
+\begin{landscape}
+\begin{figure}[H]
+    \subimport{tables/}{tsnedr.tex}
+    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimsnsions using t-SNE.}
+    Each graphs has indergone several clustering algorithms under a range of parameters. The result with the best silhouette coefficient have been chosen. Colours follow the greedy 4 colour theorem and are there only to indicate contrast between cluster boundaries.}
+    \label{fig:tsnevis}
+\end{figure}
+\end{landscape}
