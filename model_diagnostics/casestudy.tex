@@ -18,7 +18,7 @@ The concept of a neural network originated within the field of neuroscience. In 
         \label{fig:perceptron}
 \end{figure}
 
-\subsubsection{The Multi-Layer Perceptron}
+\subsubsection{The Multi-Layer Perceptron}\label{sec:perceptron}
 Limitations of the perceptron include the classification of complex patterns such as the XOR problem (where a category appears between two other categories e.g. {1|0|1} - this cannot be classified by a single linear split). In taking inspiration from nature, \autoref{fig:layercortex}, it is possible to overcome this with the use of multiple layers. This creates a deep ($>2$ two hidden (non-input) layers of perceptrons\footnote{These are sometimes referred to as Linear Threshold Units.}) artificial neural network (ANN) 
 
 The multi-layer perceptron (MLP) model now represents a simple feed-forward network, much like a decision tree. However, unlike a decision tree, the MLP ANN can describe the probability a branch is taken using non-linear activation (threshold) functions. These are discussed in detail as part of \autoref{sec:ae}. The weighting thresholds for each neuron are then calculated by backwards propagation of results through the network until a suitably good result is produced. 
