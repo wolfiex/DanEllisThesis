@@ -13,7 +13,7 @@ def make(filename):
     #err = os.popen('pdflatex '+filename) # .read()
     
     p = subprocess.Popen(['pdflatex',filename], stdout=subprocess.PIPE)
-    err = p.communicate()[0].decode('utf8').encode('utf8')
+    err = p.communicate()[0].decode('utf-8',errors='ignore')
     print('.')
     print(re.findall(r'[Ww]arning:.*line\s\d+\.',str(err)) )
 
