@@ -7,16 +7,19 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[sectionbib]{natbib}
+
+\usepackage[svgnames]{xcolor}
 \usepackage{chapterbib}
 \usepackage[version=4]{mhchem}
 \usepackage{hyperref,booktabs,algpseudocode,algorithm,booktabs,titlesec,setspace,relsize,import}
-\usepackage{amsmath,xcolor,graphicx,float,subcaption,graphicx,}
+\usepackage{amsmath,graphicx,float,subcaption,graphicx,}
 \usepackage[toc,page]{appendix}
 \usepackage[bindingoffset=25mm, left=15mm, right=15mm,top=30mm, bottom=20mm]{geometry}
 \usepackage[space=true]{grffile}
 \usepackage{fancyhdr,booktabs,algpseudocode,algorithm,tikz}
 \usepackage{pdflscape}
-
+\usepackage{adjustbox}
+\usepackage{afterpage}
 
 
 \newcommand{\chapterbib}{
@@ -87,8 +90,15 @@
 }
 \makeatother
 
-\usepackage{adjustbox}
-\usepackage{afterpage}
+
+
+% location,label,caption,width
+
+\definecolor{c1}{HTML}{004F9D}
+\definecolor{c2}{HTML}{00775B}
+\definecolor{c3}{HTML}{FF9000}
+\definecolor{c4}{HTML}{F71735}
+\definecolor{c5}{HTML}{C10053}
 
 
 
@@ -105,7 +115,9 @@
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
 
 \setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{5}
+\setcounter{tocdepth}{3}
+
+%todepth5 is paragraph
 %\cleardoublepage
 %\setcounter{page}{0}
 %\setcounter{chapter}{0}
@@ -143,16 +155,18 @@
 
 %\include{./0_intro}
 
- 
-% Chapter 4
-%\include{./4_centrality}
+% Chapter 3
+\include{./3_graphs}
 
-
-% Chapter 5
-% \include{./5_lumping}
-
-% Chapter 6
-\include{./6_DR}
+% % Chapter 4
+% %\include{./4_centrality}
+% 
+% 
+% % Chapter 5
+% % \include{./5_lumping}
+% 
+% % Chapter 6
+% \include{./6_DR}
 
 
 \newpage
