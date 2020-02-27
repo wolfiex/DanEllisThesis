@@ -1,7 +1,7 @@
 @misc{4colobs,
    author = {{Daniel Ellis}},
    booktitle = {{Observable}},
-   howpublished = {\url{https://observablehq.com/@wolfiex/d3-fourcolour-voronoi}},
+   howpublished = {{\url{https://observablehq.com/@wolfiex/d3-fourcolour-voronoi}}},
    month = {July},
    note = {Accessed: 2019-7-6},
    title = {{D3-Fourcolour Voronoi}},
@@ -23,6 +23,7 @@
 
 @book{accidental,
    author = {Roberts, R.M.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=hf57X0s4aPwC}}},
    isbn = {9780471602033},
    lccn = {lc88033638},
    publisher = {Wiley},
@@ -37,6 +38,7 @@
    author = {Andersson-Sk{\"o}ld, Yvonne and Grennfelt, Peringe and Pleijel,
 Karin},
    doi = {10.1080/10473289.1992.10467060},
+   howpublished = {{\url{https://doi.org/10.1080/10473289.1992.10467060}}},
    issn = {1047-3289},
    journal = {Journal of the Air \& Waste Management Association},
    number = {9},
@@ -49,10 +51,19 @@ Concepts}},
    year = {1992}
 }
 
+@misc{adj,
+   author = {Bostock, Mike},
+   howpublished = {{\url{https://bost.ocks.org/mike/miserables/}}},
+   note = {Accessed: 2019-12-4},
+   title = {{Les Mis{\'E}Rables Co-Occurrence}},
+   url = {https://bost.ocks.org/mike/miserables/},
+   year = {2019}
+}
+
 @misc{aeim,
    author = {{Dataman}},
    booktitle = {{Medium}},
-   howpublished = {\url{https://towardsdatascience.com/convolutional-autoencoders-for-image-noise-reduction-32fce9fc1763}},
+   howpublished = {{\url{https://towardsdatascience.com/convolutional-autoencoders-for-image-noise-reduction-32fce9fc1763}}},
    note = {Accessed: 2020-2-26},
    publisher = {Towards Data Science},
    title = {{Convolutional Autoencoders For Image Noise Reduction}},
@@ -73,10 +84,22 @@ Concepts}},
    year = {2018}
 }
 
+@inproceedings{aestheticsgraphvis,
+   author = {Bennett, Chris and Ryall, Jody and Spalteholz, Leo and Gooch, Amy},
+   booktitle = {Computational Aesthetics in Graphics, Visualization, and Imaging},
+   doi = {10.2312/COMPAESTH/COMPAESTH07/057-064},
+   isbn = {978-3-905673-43-2},
+   issn = {1816-0859},
+   publisher = {The Eurographics Association},
+   title = {{The Aesthetics Of Graph Visualization}},
+   year = {2007}
+}
+
 @article{allmodels,
    annote = {doi: 10.1080/01621459.1976.10480949},
    author = {Box, George E P},
    doi = {10.1080/01621459.1976.10480949},
+   howpublished = {{\url{https://www.tandfonline.com/doi/abs/10.1080/01621459.1976.10480949}}},
    issn = {0162-1459},
    journal = {Journal of the American Statistical Association},
    month = {December},
@@ -92,6 +115,7 @@ Concepts}},
 @article{alluvial,
    author = {Rosvall, Martin and Bergstrom, Carl T},
    doi = {10.1371/journal.pone.0008694},
+   howpublished = {{\url{http://dx.doi.org/10.1371/journal.pone.0008694}}},
    issn = {1932-6203},
    journal = {PloS one},
    language = {en},
@@ -112,6 +136,7 @@ Rodriguez-Gaztelumendi, A and Massaly, N and Temp, J and Durmaz,
 V and Sabri, P and Reidelbach, M and Machelska, H and Weber, M
 and Stein, C},
    doi = {10.1126/science.aai8636},
+   howpublished = {{\url{http://dx.doi.org/10.1126/science.aai8636}}},
    issn = {0036-8075, 1095-9203},
    journal = {Science},
    language = {en},
@@ -128,15 +153,40 @@ Receptor Conformations}},
 
 @article{approx,
    author = {Sanjoy Mahajan},
+   howpublished = {{\url{http://web.mit.edu/6.055/book/book-draft.pdf}}},
    journal = {MIT OpenCourseWare},
    title = {{The Art Of Approximation In Science And Engineering.}},
    url = {http://web.mit.edu/6.055/book/book-draft.pdf},
    year = {2008}
 }
 
+@inproceedings{arc,
+   author = {M. {Wattenberg}},
+   booktitle = {IEEE Symposium on Information Visualization, 2002. INFOVIS 2002.},
+   doi = {10.1109/INFVIS.2002.1173155},
+   issn = {1522-404X},
+   keywords = {data visualisation;arc diagrams;structure visualization;string data;compiled code;Data visualization;DNA;Chaos;Performance analysis;Displays;Histograms;Frequency;Image sequence analysis;Autocorrelation;Pixel},
+   month = {Oct},
+   pages = {110-116},
+   title = {Arc Diagrams: Visualizing Structure In Strings},
+   year = {2002}
+}
+
+@book{archaic,
+   author = {Nissen, H.J. and Damerow, P. and Englund, R.K. and Englund, R.K. and Larsen, P. and Larsen, R.K.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=YBAzXV4YtQ8C}}},
+   isbn = {9780226586595},
+   lccn = {lc93000909},
+   publisher = {University of Chicago Press},
+   title = {Archaic Bookkeeping: Early Writing And Techniques Of Economic Administration In The Ancient Near East},
+   url = {https://books.google.co.uk/books?id=YBAzXV4YtQ8C},
+   year = {1993}
+}
+
 @article{atompairdef,
    author = {Jel{\'\i}nek, Jan and {\v S}koda, Petr and Hoksza, David},
    doi = {10.1186/s12859-017-1921-4},
+   howpublished = {{\url{http://dx.doi.org/10.1186/s12859-017-1921-4}}},
    issn = {1471-2105},
    journal = {BMC bioinformatics},
    keywords = {Data mining; Molecular fingerprints; Prediction; Protein-protein
@@ -158,6 +208,7 @@ To Predict Protein-Protein Interaction Sites}},
    annote = {doi: 10.1021/ci00046a002},
    author = {Carhart, Raymond E and Smith, Dennis H and Venkataraghavan, R},
    doi = {10.1021/ci00046a002},
+   howpublished = {{\url{https://pubs.acs.org/doi/abs/10.1021/ci00046a002}}},
    issn = {0095-2338},
    journal = {Journal of chemical information and computer sciences},
    month = {May},
@@ -169,6 +220,29 @@ Definition And Applications}},
    url = {https://pubs.acs.org/doi/abs/10.1021/ci00046a002},
    volume = {25},
    year = {1985}
+}
+
+@misc{beck,
+   author = {Henry Beck},
+   booktitle = {{Londontopia}},
+   howpublished = {{\url{https://londontopia.net/site-news/featured/london-icon-tube-map/}}},
+   month = {April},
+   note = {Accessed: 2019-10-6},
+   title = {{London Icon: A History Of Harry Beck'S Iconic Tube Map}},
+   url = {https://londontopia.net/site-news/featured/london-icon-tube-map/},
+   year = {2017}
+}
+
+@book{beforeCuneiform,
+   author = {Schmandt-Besserat, D.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=\_G74dDQO8gUC}}},
+   isbn = {9780292707832},
+   lccn = {lc90023615},
+   publisher = {University of Texas Press},
+   series = {Before Writing},
+   title = {Before Writing, Vol. I: From Counting To Cuneiform},
+   url = {https://books.google.co.uk/books?id=\_G74dDQO8gUC},
+   year = {1992}
 }
 
 @article{between,
@@ -201,6 +275,76 @@ Definition And Applications}},
    year = {1991}
 }
 
+@inbook{bezier,
+   address = {Berlin, Heidelberg},
+   author = {Goodrich, Michael T.
+and Wagner, Christopher G.},
+   booktitle = {Graph Drawing: 6th International Symposium, GD' 98 Montr{\'e}al, Canada, August 13--15, 1998 Proceedings},
+   doi = {10.1007/3-540-37623-2_12},
+   howpublished = {{\url{http://dx.doi.org/10.1007/3-540-37623-2_12}}},
+   isbn = {978-3-540-37623-1},
+   pages = {153--166},
+   publisher = {Springer Berlin Heidelberg},
+   title = {A Framework For Drawing Planar Graphs With Curves And Polylines},
+   url = {http://dx.doi.org/10.1007/3-540-37623-2_12},
+   year = {1998}
+}
+
+@book{beziercomputer,
+   author = {Mortenson, M.E.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=YmQy799flPkC}}},
+   isbn = {9780831131111},
+   lccn = {99010096},
+   publisher = {Industrial Press},
+   title = {Mathematics For Computer Graphics Applications},
+   url = {https://books.google.co.uk/books?id=YmQy799flPkC},
+   year = {1999}
+}
+
+@book{beziermath,
+   author = {Hazewinkel, M.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=3ndQH4mTzWQC}}},
+   isbn = {9780792347095},
+   lccn = {87026437},
+   number = {v. 1},
+   publisher = {Springer Netherlands},
+   series = {Encyclopaedia of Mathematics},
+   title = {Encyclopaedia Of Mathematics: Supplement},
+   url = {https://books.google.co.uk/books?id=3ndQH4mTzWQC},
+   year = {1997}
+}
+
+@article{bigdatamine,
+   address = {New York, NY, USA},
+   author = {Fan, Wei and Bifet, Albert},
+   doi = {10.1145/2481244.2481246},
+   howpublished = {{\url{https://doi.org/10.1145/2481244.2481246}}},
+   issn = {1931-0145},
+   issue_date = {April 2013},
+   journal = {SIGKDD Explor. Newsl.},
+   month = {April},
+   number = {2},
+   numpages = {5},
+   pages = {1–5},
+   publisher = {Association for Computing Machinery},
+   title = {Mining Big Data: Current Status, And Forecast To The Future},
+   url = {https://doi.org/10.1145/2481244.2481246},
+   volume = {14},
+   year = {2013}
+}
+
+@techreport{bigdataorigin,
+   author = {Francis X. Diebold},
+   howpublished = {{\url{https://ideas.repec.org/p/pen/papers/13-003.html}}},
+   institution = {Penn Institute for Economic Research, Department of Economics, University of Pennsylvania},
+   month = {August},
+   number = {13-003},
+   title = {A Personal Perspective On The Origin(S) And Development Of Big Data: The Phenomenon, The Term, And The Discipline, Second Version},
+   type = {PIER Working Paper Archive},
+   url = {https://ideas.repec.org/p/pen/papers/13-003.html},
+   year = {2012}
+}
+
 @article{biogeo,
    author = {Spencer, Robert G M and Hernes, Peter J and Ruf, Rosmarie and
 Baker, Andy and Dyda, Rachael Y and Stubbins, Aron and Six, Johan},
@@ -223,12 +367,33 @@ Of Congo}},
    arxivid = {1810.07215},
    author = {Hobson, Elizabeth A and M{\o}nster, Dan and DeDeo, Simon},
    eprint = {1810.07215},
+   howpublished = {{\url{http://arxiv.org/abs/1810.07215}}},
    month = {October},
    primaryclass = {q-bio.PE},
    title = {{Strategic Heuristics Underlie Animal Dominance Hierarchies
 And Provide Evidence Of Group-Level Social Knowledge}},
    url = {http://arxiv.org/abs/1810.07215},
    year = {2018}
+}
+
+@book{birds,
+   author = {Ackerman, J.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=3z\_sCgAAQBAJ}}},
+   isbn = {9781472114372},
+   publisher = {Little, Brown Book Group},
+   title = {The Genius Of Birds: The Intelligent Life Of Birds},
+   url = {https://books.google.co.uk/books?id=3z\_sCgAAQBAJ},
+   year = {2016}
+}
+
+@misc{birdsongs,
+   author = {Haruka Wada},
+   howpublished = {{\url{https://www.nature.com/scitable/knowledge/library/the-development-of-birdsong-16133266}}},
+   note = {Accessed: 2019-5-17},
+   publisher = {Nature Education Knowledge},
+   title = {{The Development Of Birdsong | Learn Science At Scitable}},
+   url = {https://www.nature.com/scitable/knowledge/library/the-development-of-birdsong-16133266},
+   year = {2010}
 }
 
 @article{blood,
@@ -250,17 +415,104 @@ Induces Red Blood Cell Aging}},
    year = {2014}
 }
 
+@article{borneo,
+   author = {Edwards, P M and Evans, M J and Furneaux, K L and Hopkins, J and
+Ingham, T and Jones, C and Lee, J D and Lewis, A C and Moller, S
+J and Stone, D and Whalley, L K and Heard, D E},
+   doi = {10.5194/acp-13-9497-2013},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/13/9497/2013/}}},
+   issn = {1680-7316},
+   journal = {Atmospheric Chemistry and Physics},
+   language = {en},
+   month = {September},
+   number = {18},
+   pages = {9497--9514},
+   publisher = {Copernicus GmbH},
+   title = {{Oh Reactivity In A South East Asian Tropical Rainforest During
+The Oxidant And Particle Photochemical Processes (Op3) Project}},
+   url = {https://www.atmos-chem-phys.net/13/9497/2013/},
+   volume = {13},
+   year = {2013}
+}
+
+@incollection{brightness,
+   address = {Boston},
+   author = {Colin Ware},
+   booktitle = {Information Visualization (Third Edition) },
+   doi = {http://dx.doi.org/10.1016/B978-0-12-381464-7.00003-X},
+   edition = {Third Edition},
+   editor = {Ware, Colin },
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/B978012381464700003X}}},
+   isbn = {978-0-12-381464-7},
+   pages = {69 - 94},
+   publisher = {Morgan Kaufmann},
+   series = {Interactive Technologies},
+   title = {Chapter Three - Lightness, Brightness, Contrast, And Constancy },
+   url = {http://www.sciencedirect.com/science/article/pii/B978012381464700003X},
+   year = {2013}
+}
+
 @inbook{britanicaplanet,
    author = {J M Hayes,John P Rafferty},
    booktitle = {{Encyclop{\ae}dia Britannica}},
+   howpublished = {{\url{https://www.britannica.com/topic/evolution-of-the-atmosphere-1703862}}},
    title = {{Processes Affecting The Composition Of The Early Atmosphere}},
    url = {https://www.britannica.com/topic/evolution-of-the-atmosphere-1703862},
    year = {1998}
 }
 
+@article{bundle,
+   author = {Holten, Danny and Van Wijk, Jarke J.},
+   doi = {10.1111/j.1467-8659.2009.01450.x},
+   howpublished = {{\url{http://dx.doi.org/10.1111/j.1467-8659.2009.01450.x}}},
+   issn = {1467-8659},
+   journal = {Computer Graphics Forum},
+   keywords = {I.3.3 [Computer Graphics]: Picture/Image Generation—Line and Curve Generation, I.3.5 [Computer Graphics]: Computational Geometry and Object Modeling—Physically Based Modeling},
+   number = {3},
+   pages = {983--990},
+   publisher = {Blackwell Publishing Ltd},
+   title = {Force-Directed Edge Bundling For Graph Visualization},
+   url = {http://dx.doi.org/10.1111/j.1467-8659.2009.01450.x},
+   volume = {28},
+   year = {2009}
+}
+
+@article{bundlepioneer,
+   author = {D. Holten},
+   doi = {10.1109/TVCG.2006.147},
+   issn = {1077-2626},
+   journal = {IEEE Transactions on Visualization and Computer Graphics},
+   keywords = {curve fitting;data visualisation;splines (mathematics);tree data structures;trees (mathematics);B-spline curve;adjacency relation visualization;compound graph;hierarchical data;hierarchical edge bundles;tree visualization method;visual clutter;Cables;Data visualization;Displays;Social network services;Software systems;Spline;Tree data structures;Tree graphs;Wires;Network visualization;curves;edge aggregation;edge bundling;edge concentration;graph visualization;hierarchies;node-link diagrams;tree visualization;treemaps.},
+   month = {Sept},
+   number = {5},
+   pages = {741-748},
+   title = {Hierarchical Edge Bundles: Visualization Of Adjacency Relations In Hierarchical Data},
+   volume = {12},
+   year = {2006}
+}
+
+@article{butane,
+   author = {Jenkin, Michael E and Saunders, Sandra M and Pilling, Michael J},
+   doi = {10.1016/S1352-2310(96)00105-7},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S1352231096001057}}},
+   issn = {0004-6981, 1352-2310},
+   journal = {Atmospheric environment},
+   keywords = {VOC oxidation; tropospheric chemistry; secondary pollutants;
+oxidants; ozone; free radical reactions; mechanisms; modelling},
+   month = {January},
+   number = {1},
+   pages = {81--104},
+   title = {{The Tropospheric Degradation Of Volatile Organic Compounds: A
+Protocol For Mechanism Development}},
+   url = {http://www.sciencedirect.com/science/article/pii/S1352231096001057},
+   volume = {31},
+   year = {1997}
+}
+
 @article{butterfly,
    author = {Boeing, Geoff},
    doi = {10.3390/systems4040037},
+   howpublished = {{\url{https://www.mdpi.com/2079-8954/4/4/37}}},
    journal = {Systems},
    language = {en},
    month = {November},
@@ -274,10 +526,266 @@ Self-Similarity And The Limits Of Prediction}},
    year = {2016}
 }
 
+@article{cave,
+   author = {-M. Chazine, J},
+   doi = {10.1353/asi.2005.0006},
+   howpublished = {{\url{https://muse.jhu.edu/article/185391}}},
+   issn = {1535-8283},
+   journal = {Asian Perspectives},
+   number = {1},
+   pages = {219--230},
+   publisher = {University of Hawai'i Press},
+   title = {{Rock Art, Burials, And Habitations: Caves In East Kalimantan}},
+   url = {https://muse.jhu.edu/article/185391},
+   volume = {44},
+   year = {2005}
+}
+
+@misc{cavepic,
+   author = {Schroth, Christian},
+   howpublished = {{\url{https://www.facebook.com/AncientEnthusiast/photos/a.849792428414625/2618224274904756/?type=3&theater}}},
+   note = {Accessed: 2019-10-2},
+   title = {{Horses Panel, Chauvet Cave}},
+   url = {https://www.facebook.com/AncientEnthusiast/photos/a.849792428414625/2618224274904756/?type=3&theater},
+   year = {2019}
+}
+
+@inbook{ch1,
+   address = {Cham},
+   author = {Kerren, Andreas
+and Purchase, Helen C.
+and Ward, Matthew O.},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_1},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_1}}},
+   isbn = {978-3-319-06793-3},
+   pages = {1--9},
+   publisher = {Springer International Publishing},
+   title = {Introduction To Multivariate Network Visualization},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_1},
+   year = {2014}
+}
+
+@inbook{ch10,
+   address = {Cham},
+   author = {Jankun-Kelly, T. J.
+and Dwyer, Tim
+and Holten, Danny
+and Hurter, Christophe
+and N{\"o}llenburg, Martin
+and Weaver, Chris
+and Xu, Kai},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_10},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_10}}},
+   isbn = {978-3-319-06793-3},
+   pages = {207--235},
+   publisher = {Springer International Publishing},
+   title = {Scalability Considerations For Multivariate Graph Visualization},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_10},
+   year = {2014}
+}
+
+@inbook{ch2,
+   address = {Cham},
+   author = {Diehl, Stephan
+and Telea, Alexandru C.},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_2},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_2}}},
+   isbn = {978-3-319-06793-3},
+   pages = {13--36},
+   publisher = {Springer International Publishing},
+   title = {Multivariate Networks In Software Engineering},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_2},
+   year = {2014}
+}
+
+@inbook{ch3,
+   address = {Cham},
+   author = {Muelder, Chris
+and Gou, Liang
+and Ma, Kwan-Liu
+and Zhou, Michelle X.},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_3},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_3}}},
+   isbn = {978-3-319-06793-3},
+   pages = {37--59},
+   publisher = {Springer International Publishing},
+   title = {Multivariate Social Network Visual Analytics},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_3},
+   year = {2014}
+}
+
+@inbook{ch4,
+   address = {Cham},
+   author = {Kohlbacher, Oliver
+and Schreiber, Falk
+and Ward, Matthew O.},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_4},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_4}}},
+   isbn = {978-3-319-06793-3},
+   pages = {61--73},
+   publisher = {Springer International Publishing},
+   title = {Multivariate Networks In The Life Sciences},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_4},
+   year = {2014}
+}
+
+@inbook{ch5,
+   address = {Cham},
+   author = {Pretorius, A. Johannes
+and Purchase, Helen C.
+and Stasko, John T.},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_5},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_5}}},
+   isbn = {978-3-319-06793-3},
+   pages = {77--95},
+   publisher = {Springer International Publishing},
+   title = {Tasks For Multivariate Network Analysis},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_5},
+   year = {2014}
+}
+
+@inbook{ch6,
+   address = {Cham},
+   author = {Wybrow, Michael
+and Elmqvist, Niklas
+and Fekete, Jean-Daniel
+and von Landesberger, Tatiana
+and van Wijk, Jarke J.
+and Zimmer, Bj{\"o}rn},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_6},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_6}}},
+   isbn = {978-3-319-06793-3},
+   pages = {97--125},
+   publisher = {Springer International Publishing},
+   title = {Interaction In The Visualization Of Multivariate Networks},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_6},
+   year = {2014}
+}
+
+@inbook{ch6graphredability,
+   address = {Boston, MA},
+   author = {Purchase, Helen C.
+and Colpoys, Linda
+and Carrington, David
+and McGill, Matthew},
+   booktitle = {Software Visualization: From Theory to Practice},
+   doi = {10.1007/978-1-4615-0457-3_6},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-1-4615-0457-3_6}}},
+   isbn = {978-1-4615-0457-3},
+   pages = {149--178},
+   publisher = {Springer US},
+   title = {Uml Class Diagrams: An Empirical Study Of Comprehension},
+   url = {http://dx.doi.org/10.1007/978-1-4615-0457-3_6},
+   year = {2003}
+}
+
+@inbook{ch7,
+   address = {Cham},
+   author = {Roberts, Jonathan C.
+and Yang, Jing
+and Kohlbacher, Oliver
+and Ward, Matthew O.
+and Zhou, Michelle X.},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_7},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_7}}},
+   isbn = {978-3-319-06793-3},
+   pages = {127--150},
+   publisher = {Springer International Publishing},
+   title = {Novel Visual Metaphors For Multivariate Networks},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_7},
+   year = {2014}
+}
+
+@inbook{ch8,
+   address = {Cham},
+   author = {Archambault, Daniel
+and Abello, James
+and Kennedy, Jessie
+and Kobourov, Stephen
+and Ma, Kwan-Liu
+and Miksch, Silvia
+and Muelder, Chris
+and Telea, Alexandru C.},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_8},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_8}}},
+   isbn = {978-3-319-06793-3},
+   pages = {151--174},
+   publisher = {Springer International Publishing},
+   title = {Temporal Multivariate Networks},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_8},
+   year = {2014}
+}
+
+@inbook{ch9,
+   address = {Cham},
+   author = {Schreiber, Falk
+and Kerren, Andreas
+and B{\"o}rner, Katy
+and Hagen, Hans
+and Zeckzer, Dirk},
+   booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+   doi = {10.1007/978-3-319-06793-3_9},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-06793-3_9}}},
+   isbn = {978-3-319-06793-3},
+   pages = {175--206},
+   publisher = {Springer International Publishing},
+   title = {Heterogeneous Networks On Multiple Levels},
+   url = {http://dx.doi.org/10.1007/978-3-319-06793-3_9},
+   year = {2014}
+}
+
+@inproceedings{chord,
+   author = {A. {Jalali}},
+   booktitle = {2016 IEEE Tenth International Conference on Research Challenges in Information Science (RCIS)},
+   doi = {10.1109/RCIS.2016.7549281},
+   issn = {2151-1357},
+   keywords = {business data processing;data mining;data visualisation;social networking (online);social network visualization;process mining;chord diagrams;data-driven information;business process management;BPM;social network pattern discovery;Social network services;Data visualization;Business;Measurement;Visualization;Unified modeling language;Handover;Business Process;Visualization;Social Network;Chord Diagram;Process Mining},
+   month = {June},
+   pages = {1-6},
+   title = {Reflections On The Use Of Chord Diagrams In Social Network Visualization In Process Mining},
+   year = {2016}
+}
+
+@misc{circ,
+   author = {Jonathan Fisher},
+   booktitle = {{Londonist}},
+   howpublished = {{\url{https://londonist.com/2013/01/alternative-tube-maps-circles-within-circles}}},
+   month = {January},
+   note = {Accessed: 2019-10-6},
+   title = {{Alternative Tube Maps: Circles Within Circles}},
+   url = {https://londonist.com/2013/01/alternative-tube-maps-circles-within-circles},
+   year = {2013}
+}
+
+@article{clfo,
+   author = {Bohnenstengel, {S. I.} and Belcher, {S. E.} and A. Aiken and Allan, {J. D.} and G. Allen and A. Bacak and Bannan, {T. J.} and Barlow, {J. F.} and Beddddows, {D. C S} and Blossss, {W. J.} and Booth, {A. M.} and C. Chemel and O. Coceal and {Di Marco}, {C. F.} and Dubey, {M. K.} and Faloon, {K. H.} and Flemiming, {Z. L.} and M. Furger and Gietl, {J. K.} and Graves, {R. R.} and Green, {D. C.} and Grimmimmimmond, {C. S B} and Halios, {C. H.} and Hamiamiamilton, {J. F.} and Harrisison, {R. M.} and Heal, {M. R.} and Heard, {D. E.} and C. Helfter and Herndon, {S. C.} and Holmes, {R. E.} and Hopkins, {J. R.} and Jones, {A. M.} and Kelly, {F. J.} and S. Kotthaus and B. Langford and Lee, {J. D.} and Leigh, {R. J.} and Alastair Lewis and Lidster, {R. T.} and Lopez-Hilfiker, {F. D.} and McQuaidaid, {J. B.} and C. Mohr and Monks, {P. S.} and E. Nemimitz and Ng, {N. L.} and Percival, {C. J.} and Pr{\'e}v{\^o}t, {A. S H} and Ricketts, {H. M A} and R. Sokhi and D. Stone and Thornton, {J. A.} and Tremper, {A. H.} and Valach, {A. C.} and S. Vissississer and Whalley, {L. K.} and Williamsiamsiamsiams, {L. R.} and L. Xu and Young, {D. E.} and P. Zotter},
+   doi = {10.1175/BAMS-D-12-00245.1},
+   issn = {0003-0007},
+   journal = {Bulletin of the American Meteorological Society},
+   language = {English},
+   month = {5},
+   number = {5},
+   pages = {779--804},
+   publisher = {American Meteorological Society},
+   title = {Meteorology, Air Quality, And Health In London: The Clearflo Project},
+   volume = {96},
+   year = {2015}
+}
+
 @article{closeness,
    author = {Sabidussi, Gert},
    day = {01},
    doi = {10.1007/BF02289527},
+   howpublished = {{\url{https://doi.org/10.1007/BF02289527}}},
    issn = {1860-0980},
    journal = {Psychometrika},
    month = {Dec},
@@ -291,6 +799,7 @@ Self-Similarity And The Limits Of Prediction}},
 
 @article{closeness-book,
    author = {poliaktiv},
+   howpublished = {{\url{https://www.politaktiv.org/documents/10157/29141/SocNet_TheoryApp.pdf}}},
    title = {{Social Network Analysis: Theory And Applications}},
    url = {https://www.politaktiv.org/documents/10157/29141/SocNet_TheoryApp.pdf},
    year = {2011}
@@ -298,7 +807,7 @@ Self-Similarity And The Limits Of Prediction}},
 
 @misc{clustereval,
    author = {sklearn},
-   howpublished = {\url{https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html}},
+   howpublished = {{\url{https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html}}},
    note = {Accessed: 2019-10-21},
    title = {{Comparing Different Clustering Algorithms On Toy Datasets ---
 Scikit-Learn 0.21.3 Documentation}},
@@ -309,6 +818,7 @@ Scikit-Learn 0.21.3 Documentation}},
 @article{cm,
    author = {Tur{\'a}nyi, Tam{\'a}s},
    doi = {10.1007/BF01166355},
+   howpublished = {{\url{https://doi.org/10.1007/BF01166355}}},
    issn = {0259-9791, 1572-8897},
    journal = {Journal of mathematical chemistry},
    month = {September},
@@ -338,6 +848,7 @@ Applications}},
    author = {Small, Henry},
    doi = {10.1002/asi.4630240406},
    eprint = {https://asistdl.onlinelibrary.wiley.com/doi/pdf/10.1002/asi.4630240406},
+   howpublished = {{\url{https://asistdl.onlinelibrary.wiley.com/doi/abs/10.1002/asi.4630240406}}},
    journal = {Journal of the American Society for Information Science},
    number = {4},
    pages = {265-269},
@@ -350,15 +861,34 @@ Applications}},
 @misc{code,
    author = {Alon, Uri and Zilberstein, Meital and Levy, Omer and Yahav, Eran},
    doi = {10.1145/3290353},
+   howpublished = {{\url{http://dl.acm.org/citation.cfm?doid=3302515.3290353}}},
    month = {January},
    title = {{Code2Vec: Learning Distributed Representations Of Code}},
    url = {http://dl.acm.org/citation.cfm?doid=3302515.3290353},
    year = {2019}
 }
 
+@incollection{colour,
+   address = {Boston},
+   author = {Colin Ware},
+   booktitle = {Information Visualization (Third Edition) },
+   doi = {http://dx.doi.org/10.1016/B978-0-12-381464-7.00004-1},
+   edition = {Third Edition},
+   editor = {Ware, Colin },
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/B9780123814647000041}}},
+   isbn = {978-0-12-381464-7},
+   pages = {95 - 138},
+   publisher = {Morgan Kaufmann},
+   series = {Interactive Technologies},
+   title = {Chapter Four - Color },
+   url = {http://www.sciencedirect.com/science/article/pii/B9780123814647000041},
+   year = {2013}
+}
+
 @article{communitygraph,
    author = {Fortunato, Santo},
    doi = {10.1016/j.physrep.2009.11.002},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S0370157309002841}}},
    issn = {0370-1573},
    journal = {Physics reports},
    keywords = {Graphs; Clusters; Statistical physics},
@@ -375,6 +905,7 @@ Applications}},
    author = {Pasupa, Kitsuchart},
    booktitle = {{Artificial Intelligence and Soft Computing}},
    doi = {10.1007/978-3-642-38610-7\_28},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-642-38610-7_28}}},
    pages = {297--308},
    publisher = {Springer Berlin Heidelberg},
    title = {{A Comparison Of Dimensionality Reduction Techniques In Virtual
@@ -383,17 +914,115 @@ Screening}},
    year = {2013}
 }
 
+@article{compusergenerated,
+   address = {Piscataway, NJ, USA},
+   author = {Dwyer, Tim and Lee, Bongshin and Fisher, Danyel and Quinn, Kori Inkpen and Isenberg, Petra and Robertson, George and North, Chris},
+   doi = {http://dx.doi.org/10.1109/TVCG.2009.109},
+   issn = {1077-2626},
+   journal = {IEEE Transactions on Visualization and Computer Graphics},
+   number = {6},
+   pages = {961{\textendash}968},
+   publisher = {IEEE Educational Activities Department},
+   title = {A Comparison Of User-Generated And Automatic Graph Layouts},
+   volume = {15},
+   year = {2009}
+}
+
+@article{confluent17,
+   author = {Bach, Benjamin and Riche, Nathalie Henry and Hurter, Christophe
+and Marriott, Kim and Dwyer, Tim},
+   doi = {10.1109/TVCG.2016.2598958},
+   howpublished = {{\url{http://dx.doi.org/10.1109/TVCG.2016.2598958}}},
+   issn = {1077-2626, 1941-0506},
+   journal = {IEEE transactions on visualization and computer graphics},
+   language = {en},
+   month = {January},
+   number = {1},
+   pages = {541--550},
+   pmid = {27875170},
+   title = {{Towards Unambiguous Edge Bundling: Investigating Confluent
+Drawings For Network Visualization}},
+   url = {http://dx.doi.org/10.1109/TVCG.2016.2598958},
+   volume = {23},
+   year = {2017}
+}
+
+@misc{confluient19,
+   author = {Henry Förster and Robert Ganian and Fabian Klute and Martin Nöllenburg},
+   eprint = {1908.05345},
+   journal = {arXiv},
+   primaryclass = {cs.CG},
+   title = {On Strict (Outer-)Confluent Graphs},
+   year = {2019}
+}
+
+@misc{confpic,
+   author = {Benjamin Bach},
+   howpublished = {{\url{https://aviz.fr/~bbach/confluentgraphs/}}},
+   note = {Accessed: 2020-1-9},
+   title = {{Confluent Graphs}},
+   url = {https://aviz.fr/~bbach/confluentgraphs/},
+   year = {2020}
+}
+
 @book{connectivity,
    address = {Berlin, Heidelberg},
    author = {Tur{\'a}nyi, Tam{\'a}s
 and Tomlin, Alison S.},
    booktitle = {Analysis of Kinetic Reaction Mechanisms},
    doi = {10.1007/978-3-662-44562-4_7},
+   howpublished = {{\url{https://doi.org/10.1007/978-3-662-44562-4_7}}},
    pages = {183--312},
    publisher = {Springer Berlin Heidelberg},
    title = {Reduction Of Reaction Mechanisms},
    url = {https://doi.org/10.1007/978-3-662-44562-4_7},
    year = {2014}
+}
+
+@article{conscat,
+   author = {Hannah Fairfield},
+   howpublished = {{\url{https://www.nytimes.com/interactive/2012/09/17/science/driving-safety-in-fits-and-starts.html}}},
+   issn = {0362-4331},
+   journal = {The New York Times},
+   month = {September},
+   title = {{Driving Safety, In Fits And Starts}},
+   url = {https://www.nytimes.com/interactive/2012/09/17/science/driving-safety-in-fits-and-starts.html},
+   year = {2012}
+}
+
+@article{continuity,
+   acmid = {942167},
+   author = {Ware, Colin and Purchase, Helen and Colpoys, Linda and McGill, Matthew},
+   doi = {10.1057/palgrave.ivs.9500013},
+   howpublished = {{\url{http://dx.doi.org/10.1057/palgrave.ivs.9500013}}},
+   issn = {1473-8716},
+   issue_date = {June 2002},
+   journal = {Information Visualization},
+   keywords = {aesthetics, cognitive modeling, graph layout, network visualization},
+   month = {June},
+   number = {2},
+   numpages = {8},
+   pages = {103--110},
+   publisher = {Palgrave Macmillan},
+   title = {Cognitive Measurements Of Graph Aesthetics},
+   url = {http://dx.doi.org/10.1057/palgrave.ivs.9500013},
+   volume = {1},
+   year = {2002}
+}
+
+@inbook{convexdrawingcplanar,
+   address = {Berlin, Heidelberg},
+   author = {Nagamochi, Hiroshi
+and Kuroya, Katsutoshi},
+   booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
+   doi = {10.1007/978-3-540-24595-7_34},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-540-24595-7_34}}},
+   isbn = {978-3-540-24595-7},
+   pages = {369--380},
+   publisher = {Springer Berlin Heidelberg},
+   title = {Convex Drawing For C-Planar Biconnected Clustered Graphs},
+   url = {http://dx.doi.org/10.1007/978-3-540-24595-7_34},
+   year = {2004}
 }
 
 @article{cook,
@@ -411,7 +1040,7 @@ and Tomlin, Alison S.},
 
 @misc{cover,
    author = {Daniel Ellis},
-   howpublished = {\url{https://s100.copyright.com/AppDispatchServlet?startPage=i&publisherName=Wiley&publication=kin&contentID=10.1002%2Fkin.21180&endPage=i&title=Cover+Image%2C+Volume+50%2C+Issue+6}},
+   howpublished = {{\url{https://s100.copyright.com/AppDispatchServlet?startPage=i&publisherName=Wiley&publication=kin&contentID=10.1002%2Fkin.21180&endPage=i&title=Cover+Image%2C+Volume+50%2C+Issue+6}}},
    note = {Accessed: 2019-6-6},
    title = {{Chemical Kinetic Interactions Cover Image}},
    url = {https://s100.copyright.com/AppDispatchServlet?startPage=i&publisherName=Wiley&publication=kin&contentID=10.1002%2Fkin.21180&endPage=i&title=Cover+Image%2C+Volume+50%2C+Issue+6},
@@ -421,6 +1050,7 @@ and Tomlin, Alison S.},
 @article{cri,
    author = {M.E. Jenkin and L.A. Watson and S.R. Utembe and D.E. Shallcross},
    doi = {https://doi.org/10.1016/j.atmosenv.2008.07.028},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S1352231008006742}}},
    issn = {1352-2310},
    journal = {Atmospheric Environment},
    number = {31},
@@ -439,10 +1069,20 @@ and Tomlin, Alison S.},
    year = {2019}
 }
 
+@misc{d3annotate,
+   author = {Lu, Susie},
+   howpublished = {{\url{https://d3-annotation.susielu.com/}}},
+   note = {Accessed: 2019-12-16},
+   title = {{D3-Annotate}},
+   url = {https://d3-annotation.susielu.com/},
+   year = {2019}
+}
+
 @misc{d3js,
    added-at = {2012-11-08T12:33:57.000+0100},
    author = {Bostock, Mike},
    biburl = {https://www.bibsonomy.org/bibtex/24fdb2faa7a94a7248a7fb5725aaa5afa/maxirichter},
+   howpublished = {{\url{http://d3js.org/}}},
    interhash = {9e3b5ed5b36799e856b35165b06248af},
    intrahash = {4fdb2faa7a94a7248a7fb5725aaa5afa},
    keywords = {browser css3 data html5 javascript visualization web},
@@ -460,10 +1100,27 @@ and Tomlin, Alison S.},
    year = {1996}
 }
 
+@article{defconscat,
+   author = {Haroz, Steve and Kosara, Robert and Franconeri, Steven L},
+   doi = {10.1109/TVCG.2015.2502587},
+   howpublished = {{\url{http://dx.doi.org/10.1109/TVCG.2015.2502587}}},
+   issn = {1077-2626, 1941-0506},
+   journal = {IEEE transactions on visualization and computer graphics},
+   language = {en},
+   month = {September},
+   number = {9},
+   pages = {2174--2186},
+   pmid = {26600062},
+   title = {{The Connected Scatterplot For Presenting Paired Time Series}},
+   url = {http://dx.doi.org/10.1109/TVCG.2015.2502587},
+   volume = {22},
+   year = {2016}
+}
+
 @misc{definenetwork,
    author = {Oxford},
    booktitle = {{Lexico Dictionaries | English}},
-   howpublished = {\url{https://www.lexico.com/en/definition/network}},
+   howpublished = {{\url{https://www.lexico.com/en/definition/network}}},
    note = {Accessed: 2019-6-16},
    publisher = {Lexico Dictionaries},
    title = {{Network | Definition Of Network In English By Lexico Dictionaries}},
@@ -508,7 +1165,7 @@ and Spiliopoulou, Myra},
 @misc{degreetwitter,
    author = {Gemma, Joyce},
    booktitle = {{Brandwatch}},
-   howpublished = {\url{https://www.brandwatch.com/blog/react-influential-men-and-women-2017/}},
+   howpublished = {{\url{https://www.brandwatch.com/blog/react-influential-men-and-women-2017/}}},
    note = {Accessed: 2019-4-28},
    title = {{The Most Influential Men And Women On Twitter 2017}},
    url = {https://www.brandwatch.com/blog/react-influential-men-and-women-2017/},
@@ -519,6 +1176,7 @@ and Spiliopoulou, Myra},
    author = {Watson, D. F.},
    doi = {10.1093/comjnl/24.2.167},
    eprint = {http://oup.prod.sis.lan/comjnl/article-pdf/24/2/167/967258/240167.pdf},
+   howpublished = {{\url{https://doi.org/10.1093/comjnl/24.2.167}}},
    issn = {0010-4620},
    journal = {The Computer Journal},
    month = {01},
@@ -532,6 +1190,7 @@ and Spiliopoulou, Myra},
 
 @book{descartes,
    author = {Descartes, Ren{\'e} and Lafleur, Laurence J},
+   howpublished = {{\url{http://selfpace.uconn.edu/class/percep/DescartesMeditations.pdf}}},
    publisher = {Bobbs-Merrill New York},
    title = {{Meditations On First Philosophy}},
    url = {http://selfpace.uconn.edu/class/percep/DescartesMeditations.pdf},
@@ -541,6 +1200,7 @@ and Spiliopoulou, Myra},
 @article{detailedmcm,
    author = {Bloss, C. and Wagner, V. and Jenkin, M. E. and Volkamer, R. and Bloss, W. J. and Lee, J. D. and Heard, D. E. and Wirtz, K. and Martin-Reviejo, M. and Rea, G. and Wenger, J. C. and Pilling, M. J.},
    doi = {10.5194/acp-5-641-2005},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/5/641/2005/}}},
    journal = {Atmospheric Chemistry and Physics},
    number = {3},
    pages = {641--664},
@@ -552,6 +1212,7 @@ and Spiliopoulou, Myra},
 
 @article{dev-social-analysis,
    author = {Freeman, Linton C},
+   howpublished = {{\url{http://moreno.ss.uci.edu/91.pdf}}},
    note = {Accessed: 2020-2-5},
    title = {{The Development Of Social Network Analysis---With An Emphasis On
 Recent Events}},
@@ -562,6 +1223,7 @@ Recent Events}},
 @article{dft,
    author = {B.G. Oliveira and F.S. Pereira and R.C.M.U. de AraÃºjo and M.N. Ramos},
    doi = {https://doi.org/10.1016/j.cplett.2006.06.019},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S000926140600861X}}},
    issn = {0009-2614},
    journal = {Chemical Physics Letters},
    number = {1},
@@ -575,6 +1237,7 @@ Recent Events}},
 @article{drag,
    author = {Hopkins, Philip F and Squire, Jonathan},
    doi = {10.1093/mnras/sty1982},
+   howpublished = {{\url{https://academic.oup.com/mnras/article-pdf/480/2/2813/25498305/sty1982.pdf}}},
    issn = {0035-8711},
    journal = {Monthly notices of the Royal Astronomical Society},
    month = {October},
@@ -592,6 +1255,7 @@ Recent Events}},
    booktitle = {{Advances in Neural Information Processing Systems 25}},
    doi = {10.21105/joss.00747},
    editor = {Pereira, F and Burges, C J C and Bottou, L and Weinberger, K Q},
+   howpublished = {{\url{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}}},
    pages = {1097--1105},
    publisher = {Curran Associates, Inc.},
    title = {{Imagenet Classification With Deep Convolutional Neural Networks}},
@@ -599,10 +1263,21 @@ Recent Events}},
    year = {2012}
 }
 
+@book{dream,
+   author = {Freud, S. and Cronin, A.J.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=U0t8CgAAQBAJ}}},
+   isbn = {9781446547410},
+   publisher = {Read Books Limited},
+   title = {The Interpretation Of Dreams},
+   url = {https://books.google.co.uk/books?id=U0t8CgAAQBAJ},
+   year = {2013}
+}
+
 @article{drrandom,
    author = {Roweis, Sam T. and Saul, Lawrence K.},
    doi = {10.1126/science.290.5500.2323},
    eprint = {https://science.sciencemag.org/content/290/5500/2323.full.pdf},
+   howpublished = {{\url{https://science.sciencemag.org/content/290/5500/2323}}},
    issn = {0036-8075},
    journal = {Science},
    number = {5500},
@@ -617,6 +1292,7 @@ Recent Events}},
 @article{drug,
    author = {Yu-ChenLo},
    doi = {https://doi.org/10.1016/j.drudis.2018.05.010},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S1359644617304695}}},
    issn = {1359-6446},
    journal = {Drug Discovery Today},
    number = {8},
@@ -630,6 +1306,7 @@ Recent Events}},
 @article{drviz,
    author = {Choi, Jong Youl and Bae, Seung-Hee and Qiu, Judy and Fox, Geoffrey
 and Chen, Bin and Wild, David},
+   howpublished = {{\url{http://grids.ucs.indiana.edu/ptliupages/publications/ecmls2010_submission_13.pdf}}},
    title = {{Browsing Large Scale Cheminformatics Data With Dimension Reduction}},
    url = {http://grids.ucs.indiana.edu/ptliupages/publications/ecmls2010_submission_13.pdf},
    year = {2019}
@@ -638,6 +1315,7 @@ and Chen, Bin and Wild, David},
 @article{dsmacc,
    author = {Emmerson, K. M. and Evans, M. J.},
    doi = {10.5194/acp-9-1831-2009},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/9/1831/2009/}}},
    journal = {Atmospheric Chemistry and Physics},
    number = {5},
    pages = {1831--1845},
@@ -645,6 +1323,22 @@ and Chen, Bin and Wild, David},
    url = {https://www.atmos-chem-phys.net/9/1831/2009/},
    volume = {9},
    year = {2009}
+}
+
+@article{dunmore,
+   author = {Dunmore, {R. E.} and Hopkins, {J. R.} and Lidster, {R. T.} and Lee, {J. D.} and Evans, {M. J.} and Rickard, {A. R.} and Lewis, {A. C.} and Hamilton, {J. F.}},
+   day = {7},
+   doi = {10.5194/acp-15-9983-2015},
+   issn = {1680-7316},
+   journal = {Atmospheric Chemistry and Physics},
+   language = {English},
+   month = {9},
+   number = {17},
+   pages = {9983--9996},
+   publisher = {Copernicus Publications},
+   title = {Diesel-Related Hydrocarbons Can Dominate Gas Phase Reactive Carbon In Megacities},
+   volume = {15},
+   year = {2015}
 }
 
 @article{eades,
@@ -656,11 +1350,19 @@ and Chen, Bin and Wild, David},
    year = {1984}
 }
 
+@inproceedings{Eades,
+   author = {Peter Eades},
+   booktitle = {proceedings},
+   title = {A Heuristic For Graph Drawing},
+   year = {1984}
+}
+
 @article{edgebundle,
    acmid = {1187772},
    address = {Piscataway, NJ, USA},
    author = {Holten, Danny},
    doi = {10.1109/TVCG.2006.147},
+   howpublished = {{\url{https://doi.org/10.1109/TVCG.2006.147}}},
    issn = {1077-2626},
    issue_date = {September 2006},
    journal = {IEEE Transactions on Visualization and Computer Graphics},
@@ -673,6 +1375,22 @@ and Chen, Bin and Wild, David},
    url = {https://doi.org/10.1109/TVCG.2006.147},
    volume = {12},
    year = {2006}
+}
+
+@article{edgeprune,
+   author = {Dianati, Navid},
+   doi = {10.1103/PhysRevE.93.012304},
+   howpublished = {{\url{https://link.aps.org/doi/10.1103/PhysRevE.93.012304}}},
+   issue = {1},
+   journal = {Phys. Rev. E},
+   month = {Jan},
+   numpages = {8},
+   pages = {012304},
+   publisher = {American Physical Society},
+   title = {Unwinding The Hairball Graph: Pruning Algorithms For Weighted Complex Networks},
+   url = {https://link.aps.org/doi/10.1103/PhysRevE.93.012304},
+   volume = {93},
+   year = {2016}
 }
 
 @article{eigen,
@@ -691,6 +1409,7 @@ and Chen, Bin and Wild, David},
 @article{eigen2,
    author = {Phillip Bonacich},
    doi = {https://doi.org/10.1016/j.socnet.2007.04.002},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S0378873307000342}}},
    issn = {0378-8733},
    journal = {Social Networks},
    keywords = {Centrality, Eigenvector},
@@ -714,9 +1433,21 @@ and Chen, Bin and Wild, David},
    year = {1905}
 }
 
+@book{emotional,
+   author = {Norman, D.A.},
+   howpublished = {{\url{https://books.google.nl/books?id=h\_wAbnGlOC4C}}},
+   isbn = {9780465051366},
+   lccn = {2003010123},
+   publisher = {Basic Books},
+   title = {Emotional Design: Why We Love (Or Hate) Everyday Things},
+   url = {https://books.google.nl/books?id=h\_wAbnGlOC4C},
+   year = {2005}
+}
+
 @article{examples_centrality,
    author = {Borgatti, Stephen P},
    doi = {10.1016/j.socnet.2004.11.008},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S0378873304000693}}},
    issn = {0378-8733},
    journal = {Social networks},
    keywords = {Centrality; Network flow; Typology},
@@ -729,19 +1460,111 @@ and Chen, Bin and Wild, David},
    year = {2005}
 }
 
+@article{eyestory,
+   author = {Michal, Audrey L and Franconeri, Steven L},
+   doi = {10.1186/s41235-017-0059-2},
+   howpublished = {{\url{http://dx.doi.org/10.1186/s41235-017-0059-2}}},
+   issn = {2365-7464},
+   journal = {Cognitive research: principles and implications},
+   keywords = {Embodied cognition; Graph comprehension; Relations; STEM
+learning; Visual routines},
+   language = {en},
+   month = {March},
+   number = {1},
+   pages = {20},
+   pmc = {PMC5357663},
+   pmid = {28367500},
+   title = {{Visual Routines Are Associated With Specific Graph
+Interpretations}},
+   url = {http://dx.doi.org/10.1186/s41235-017-0059-2},
+   volume = {2},
+   year = {2017}
+}
+
+@inproceedings{eyetrack,
+   author = {Pohl, Mathias and Schmitt, Markus and Diehl, Stephan},
+   booktitle = {Computational Aesthetics in Graphics, Visualization, and Imaging},
+   doi = {10.2312/COMPAESTH/COMPAESTH09/049-056},
+   isbn = {978-3-905674-17-0},
+   issn = {1816-0859},
+   publisher = {The Eurographics Association},
+   title = {{Comparing The Readability Of Graph Layouts Using Eyetracking And Task-Oriented Analysis}},
+   year = {2009}
+}
+
+@article{fa,
+   author = {Jacomy, Mathieu and Venturini, Tommaso and Heymann, Sebastien and
+Bastian, Mathieu},
+   doi = {10.1371/journal.pone.0098679},
+   howpublished = {{\url{http://dx.doi.org/10.1371/journal.pone.0098679}}},
+   issn = {1932-6203},
+   journal = {PloS one},
+   month = {June},
+   number = {6},
+   pages = {e98679},
+   pmc = {PMC4051631},
+   pmid = {24914678},
+   title = {{Forceatlas2, A Continuous Graph Layout Algorithm For Handy Network
+Visualization Designed For The Gephi Software}},
+   url = {http://dx.doi.org/10.1371/journal.pone.0098679},
+   volume = {9},
+   year = {2014}
+}
+
+@inproceedings{fds,
+   author = {Roberts, Jonathan C.},
+   booktitle = {Eurographics 2011 - Education Papers},
+   doi = {10.2312/EG2011/education/029-036},
+   editor = {S. Maddock and J. Jorge},
+   issn = {1017-4656},
+   publisher = {The Eurographics Association},
+   title = {{The Five Design-Sheet (Fds) Approach For Sketching Information Visualization Designs}},
+   year = {2011}
+}
+
+@inbook{fdvsrandomcomparison,
+   address = {Berlin, Heidelberg},
+   author = {Brandenburg, Franz J.
+and Himsolt, Michael
+and Rohrer, Christoph},
+   booktitle = {Graph Drawing: Symposium on Graph Drawing, GD '95 Passau, Germany, September 20--22, 1995 Proceedings},
+   doi = {10.1007/BFb0021792},
+   howpublished = {{\url{http://dx.doi.org/10.1007/BFb0021792}}},
+   isbn = {978-3-540-49351-8},
+   pages = {76--87},
+   publisher = {Springer Berlin Heidelberg},
+   title = {An Experimental Comparison Of Force-Directed And Randomized Graph Drawing Algorithms},
+   url = {http://dx.doi.org/10.1007/BFb0021792},
+   year = {1996}
+}
+
 @misc{fgps,
    author = {Andy Brunning},
    booktitle = {{Twitter}},
-   howpublished = {\url{https://twitter.com/compoundchem/status/1230953094474862592/photo/1}},
+   howpublished = {{\url{https://twitter.com/compoundchem/status/1230953094474862592/photo/1}}},
    note = {Accessed: 2020-2-24},
    title = {{Functional Groups In Organic Chemistry}},
    url = {https://twitter.com/compoundchem/status/1230953094474862592/photo/1},
    year = {2020}
 }
 
+@misc{forrester,
+   author = {Dan Ellis and
+Tomás Sherwen},
+   doi = {10.5281/zenodo.3346817},
+   howpublished = {{\url{https://doi.org/10.5281/zenodo.3346817}}},
+   month = {July},
+   publisher = {Zenodo},
+   title = {Wolfiex/Treesurgeon: Wollemia},
+   url = {https://doi.org/10.5281/zenodo.3346817},
+   version = {v1.3},
+   year = {2019}
+}
+
 @article{fourcolour,
    author = {Appel, K. and Haken, W.},
    fjournal = {Bulletin of the American Mathematical Society},
+   howpublished = {{\url{https://projecteuclid.org:443/euclid.bams/1183538218}}},
    journal = {Bull. Amer. Math. Soc.},
    month = {09},
    number = {5},
@@ -756,7 +1579,7 @@ and Chen, Bin and Wild, David},
 @misc{frankenstein,
    author = {Ellis, Daniel},
    booktitle = {{Medium}},
-   howpublished = {\url{https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190}},
+   howpublished = {{\url{https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190}}},
    note = {Accessed: 2020-2-5},
    publisher = {Towards Data Science},
    title = {{Using Tf-Idf To Form Descriptive Chapter Summaries Via
@@ -774,11 +1597,21 @@ Keyword Extraction}},
    year = {1991}
 }
 
+@article{frmd,
+   abstractnote = {Force Directed Representation of Multivariate Data},
+   author = {Dan Ellis},
+   doi = {10.5281/zenodo.3586009},
+   publisher = {Zenodo},
+   title = {Wolfiex/Frmd: 2016},
+   year = {2016}
+}
+
 @article{gaelink,
    archiveprefix = {arXiv},
    arxivid = {1706.02263},
    author = {van den Berg, Rianne and Kipf, Thomas N and Welling, Max},
    eprint = {1706.02263},
+   howpublished = {{\url{http://arxiv.org/abs/1706.02263}}},
    journal = {arhiv},
    month = {June},
    primaryclass = {stat.ML},
@@ -791,6 +1624,7 @@ Keyword Extraction}},
    author = {Du, Jingcheng and Jia, Peilin and Dai, Yulin and Tao, Cui and
 Zhao, Zhongming and Zhi, Degui},
    doi = {10.1186/s12864-018-5370-x},
+   howpublished = {{\url{http://dx.doi.org/10.1186/s12864-018-5370-x}}},
    issn = {1471-2164},
    journal = {BMC genomics},
    keywords = {Distributed representation; Embedding; Gene co-expression;
@@ -808,10 +1642,21 @@ Co-Expression}},
    year = {2019}
 }
 
+@book{genomics,
+   author = {Hunt, G.J. and Gadau, J.R.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=lvItDwAAQBAJ}}},
+   isbn = {9782889450800},
+   publisher = {Frontiers Media SA},
+   series = {Frontiers Research Topics},
+   title = {Advances In Genomics And Epigenomics Of Social Insects},
+   url = {https://books.google.co.uk/books?id=lvItDwAAQBAJ},
+   year = {2017}
+}
+
 @misc{geoclock,
    author = {{Woudloper}},
    booktitle = {{Wikipedia, The Free Encyclopedia}},
-   howpublished = {\url{https://en.wikipedia.org/w/index.php?title=History_of_Earth&oldid=940308026}},
+   howpublished = {{\url{https://en.wikipedia.org/w/index.php?title=History_of_Earth&oldid=940308026}}},
    month = {February},
    note = {Accessed: 2020-2-21},
    title = {{History Of Earth}},
@@ -824,6 +1669,7 @@ Co-Expression}},
 Cliff S and Upstill-Goddard, Robert C and Aiken, George R and
 Mopper, Kenneth},
    doi = {10.1021/es703014q},
+   howpublished = {{\url{http://dx.doi.org/10.1021/es703014q}}},
    issn = {0013-936X},
    journal = {Environmental science \& technology},
    language = {en},
@@ -838,9 +1684,19 @@ Matter Functionality}},
    year = {2008}
 }
 
+@article{geos,
+   author = {GEOS-Chem},
+   howpublished = {{\url{http://acmg.seas.harvard.edu/geos/geos_pub.html}}},
+   note = {Accessed: 2020-2-23},
+   title = {{Geos-Chem Publications}},
+   url = {http://acmg.seas.harvard.edu/geos/geos_pub.html},
+   year = {2020}
+}
+
 @article{geosgit,
    author = {The International GEOS-Chem Community},
    doi = {10.5281/zenodo.3676008},
+   howpublished = {{\url{https://doi.org/10.5281/zenodo.3676008}}},
    month = {February},
    note = {{Please see the LICENSE.txt and AUTHORS.txt files 
 in the root folder for the GEOS-Chem license
@@ -858,6 +1714,7 @@ chem.org and wiki.geos-chem.org.}},
 @article{geosrf,
    author = {Keller, C. A. and Evans, M. J.},
    doi = {10.5194/gmd-12-1209-2019},
+   howpublished = {{\url{https://www.geosci-model-dev.net/12/1209/2019/}}},
    journal = {Geoscientific Model Development},
    number = {3},
    pages = {1209--1225},
@@ -877,6 +1734,16 @@ chem.org and wiki.geos-chem.org.}},
    year = {2009}
 }
 
+@book{goodideas,
+   author = {Johnson, S.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=3H2Xg5qxz-8C}}},
+   isbn = {9781101444207},
+   publisher = {Penguin Publishing Group},
+   title = {Where Good Ideas Come From},
+   url = {https://books.google.co.uk/books?id=3H2Xg5qxz-8C},
+   year = {2010}
+}
+
 @article{google,
    author = {Lawrence Page and Sergey Brin and Rajeev Motwani and Terry Winograd},
    institution = {Stanford InfoLab},
@@ -890,11 +1757,43 @@ chem.org and wiki.geos-chem.org.}},
    year = {1999}
 }
 
+@inbook{gossip,
+   address = {Boston, MA},
+   author = {Dunbar, R. I. M.},
+   booktitle = {New Aspects of Human Ethology},
+   doi = {10.1007/978-0-585-34289-4_5},
+   editor = {Schmitt, Alain
+and Atzwanger, Klaus
+and Grammer, Karl
+and Sch{\"a}fer, Katrin},
+   howpublished = {{\url{https://doi.org/10.1007/978-0-585-34289-4_5}}},
+   isbn = {978-0-585-34289-4},
+   pages = {77--89},
+   publisher = {Springer US},
+   title = {Groups, Gossip, And The Evolution Of Language},
+   url = {https://doi.org/10.1007/978-0-585-34289-4_5},
+   year = {1997}
+}
+
+@inproceedings{graphmetnew,
+   author = {Martyn Taylor and Peter Rodgers},
+   booktitle = {Ninth International Conference on Information Visualisation, 06-08 July 2005, London, England: Proceedings},
+   howpublished = {{\url{http://kar.kent.ac.uk/14297/}}},
+   keywords = {Graph Drawing},
+   month = {October},
+   pages = {651--656},
+   publisher = {IEEE Computer Society},
+   title = {Applying Graphical Design Techniques To Graph Visualisation},
+   url = {http://kar.kent.ac.uk/14297/},
+   year = {2005}
+}
+
 @article{graphtsne,
    acmid = {3128423},
    address = {Chichester, UK},
    author = {Kruiger, J. F. and Rauber, P. E. and Martins, R. M. and Kerren, A. and Kobourov, S. and Telea, A. C.},
    doi = {10.1111/cgf.13187},
+   howpublished = {{\url{https://doi.org/10.1111/cgf.13187}}},
    issn = {0167-7055},
    issue_date = {June 2017},
    journal = {Comput. Graph. Forum},
@@ -911,6 +1810,7 @@ chem.org and wiki.geos-chem.org.}},
 
 @book{handsonml,
    author = {G{\'e}ron, A.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=khpYDgAAQBAJ}}},
    isbn = {9781491962268},
    publisher = {O'Reilly Media},
    title = {Hands-On Machine Learning With Scikit-Learn And Tensorflow: Concepts, Tools, And Techniques To Build Intelligent Systems},
@@ -922,6 +1822,7 @@ chem.org and wiki.geos-chem.org.}},
    address = {New York, NY, USA},
    author = {Kleinberg, Jon M},
    doi = {10.1145/324133.324140},
+   howpublished = {{\url{http://doi.acm.org/10.1145/324133.324140}}},
    issn = {0004-5411},
    journal = {Journal of the ACM},
    month = {September},
@@ -938,6 +1839,7 @@ chem.org and wiki.geos-chem.org.}},
    annote = {doi: 10.1137/S0036144503424786},
    author = {Langville, A and Meyer, C},
    doi = {10.1137/S0036144503424786},
+   howpublished = {{\url{https://doi.org/10.1137/S0036144503424786}}},
    issn = {0036-1445},
    journal = {SIAM Review},
    month = {January},
@@ -952,6 +1854,7 @@ chem.org and wiki.geos-chem.org.}},
 
 @article{hitsweb,
    author = {Kumar, Ravi and Upfal, Eli},
+   howpublished = {{\url{http://cs.brown.edu/research/webagent/pods-2000.pdf}}},
    title = {{The Web As A Graph}},
    url = {http://cs.brown.edu/research/webagent/pods-2000.pdf},
    year = {2000}
@@ -961,6 +1864,7 @@ chem.org and wiki.geos-chem.org.}},
    author = {Ling, Z. H. and Guo, H. and Lam, S. H. M. and Saunders, S. M. and Wang, T.},
    doi = {10.1002/2014JD021794},
    eprint = {https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1002/2014JD021794},
+   howpublished = {{\url{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2014JD021794}}},
    journal = {Journal of Geophysical Research: Atmospheres},
    keywords = {atmospheric photochemical reactivity, photochemical box model, Master Chemical Mechanism, Hong Kong},
    number = {17},
@@ -979,6 +1883,7 @@ Wegener, R and Wahner, A and Kanaya, Y and Yoshino, A and
 Nishida, S and Kajii, Y and Martinez, M and Kubistin, D and
 Harder, H and Lelieveld, J and Elste, T and Plass-D{\"u}lmer, C
 and Stange, G and Berresheim, H and Schurath, U},
+   howpublished = {{\url{https://www.academia.edu/29719780/HO_x_budgets_during_HOxComp_A_case_study_of_HO_x_chemistry_under_NO_x_-limited_conditions}}},
    issn = {0148-0227},
    journal = {Journal of geophysical research},
    number = {D3},
@@ -992,7 +1897,7 @@ No X -Limited Conditions}},
 @misc{hpp,
    author = {Pete Cornes},
    booktitle = {{Nottingham HPP whitewater course users group}},
-   howpublished = {\url{https://hppconcern.wordpress.com/2008/08/04/proposed-plans-for-holme-pierrepont-whitewater-course/}},
+   howpublished = {{\url{https://hppconcern.wordpress.com/2008/08/04/proposed-plans-for-holme-pierrepont-whitewater-course/}}},
    month = {Aug},
    note = {Accessed: 2020-2-15},
    title = {{Proposed Plans For Holme Pierrepont Whitewater Course}},
@@ -1000,8 +1905,23 @@ No X -Limited Conditions}},
    year = {2008}
 }
 
+@inbook{humanaesthetic,
+   address = {Berlin, Heidelberg},
+   author = {Purchase, Helen},
+   booktitle = {Graph Drawing: 5th International Symposium, GD '97 Rome, Italy, September 18--20, 1997 Proceedings},
+   doi = {10.1007/3-540-63938-1_67},
+   howpublished = {{\url{http://dx.doi.org/10.1007/3-540-63938-1_67}}},
+   isbn = {978-3-540-69674-2},
+   pages = {248--261},
+   publisher = {Springer Berlin Heidelberg},
+   title = {Which Aesthetic Has The Greatest Effect On Human Understanding?},
+   url = {http://dx.doi.org/10.1007/3-540-63938-1_67},
+   year = {1997}
+}
+
 @article{idfpic,
    author = {Mquantin},
+   howpublished = {{\url{https://upload.wikimedia.org/wikipedia/commons/0/05/Plot_IDF_functions.png}}},
    journal = {wikipedia commons},
    note = {Accessed: 2020-2-5},
    title = {Idf Response Functions.},
@@ -1013,6 +1933,7 @@ No X -Limited Conditions}},
    author = {Heller, Stephen and McNaught, Alan and Stein, Stephen and
 Tchekhovskoi, Dmitrii and Pletnev, Igor},
    doi = {10.1186/1758-2946-5-7},
+   howpublished = {{\url{http://dx.doi.org/10.1186/1758-2946-5-7}}},
    issn = {1758-2946},
    journal = {Journal of cheminformatics},
    language = {en},
@@ -1030,6 +1951,7 @@ Tchekhovskoi, Dmitrii and Pletnev, Igor},
 @article{infointermittent,
    author = {Aslak, Ulf and Rosvall, Martin and Lehmann, Sune},
    doi = {10.1103/PhysRevE.97.062312},
+   howpublished = {{\url{https://link.aps.org/doi/10.1103/PhysRevE.97.062312}}},
    issue = {6},
    journal = {Phys. Rev. E},
    month = {Jun},
@@ -1046,6 +1968,7 @@ Tchekhovskoi, Dmitrii and Pletnev, Igor},
    author = {Rosvall, Martin and Bergstrom, Carl T.},
    doi = {10.1073/pnas.0706851105},
    eprint = {https://www.pnas.org/content/105/4/1118.full.pdf},
+   howpublished = {{\url{https://www.pnas.org/content/105/4/1118}}},
    issn = {0027-8424},
    journal = {Proceedings of the National Academy of Sciences},
    number = {4},
@@ -1057,9 +1980,39 @@ Tchekhovskoi, Dmitrii and Pletnev, Igor},
    year = {2008}
 }
 
+@inproceedings{inter,
+   acmid = {263521},
+   address = {New York, NY, USA},
+   author = {Ryall, Kathy and Marks, Joe and Shieber, Stuart},
+   booktitle = {Proceedings of the 10th Annual ACM Symposium on User Interface Software and Technology},
+   doi = {10.1145/263407.263521},
+   howpublished = {{\url{http://doi.acm.org/10.1145/263407.263521}}},
+   isbn = {0-89791-881-9},
+   keywords = {collaborative interfaces, constraint-based layout, drawing tools, graph drawing},
+   location = {Banff, Alberta, Canada},
+   numpages = {8},
+   pages = {97--104},
+   publisher = {ACM},
+   series = {UIST '97},
+   title = {An Interactive Constraint-Based System For Drawing Graphs},
+   url = {http://doi.acm.org/10.1145/263407.263521},
+   year = {1997}
+}
+
+@book{interaction1,
+   address = {Boston, MA, USA},
+   author = {Shneiderman, Ben},
+   edition = {3rd},
+   isbn = {0201694972},
+   publisher = {Addison-Wesley Longman Publishing Co., Inc.},
+   title = {Designing The User Interface: Strategies For Effective Human-Computer Interaction},
+   year = {1997}
+}
+
 @article{iodene,
    author = {Sherwen, T. and Chance, R. J. and Tinel, L. and Ellis, D. and Evans, M. J. and Carpenter, L. J.},
    doi = {10.5194/essd-11-1239-2019},
+   howpublished = {{\url{https://www.earth-syst-sci-data.net/11/1239/2019/}}},
    journal = {Earth System Science Data},
    number = {3},
    pages = {1239--1262},
@@ -1069,9 +2022,24 @@ Tchekhovskoi, Dmitrii and Pletnev, Igor},
    year = {2019}
 }
 
+@article{IPSEPCOLA,
+   affiliation = {Monash University, Australia. Tim.Dwyer@infotech.monash.edu.au},
+   author = {Dwyer, Tim and Koren, Yehuda and Marriott, Kim},
+   journal = {IEEE Trans. Vis. Comput. Graph.},
+   language = {en},
+   month = {September},
+   number = {5},
+   pages = {821--828},
+   title = {{Ipsep-Cola}: An Incremental Procedure For Separation
+Constraint Layout Of Graphs},
+   volume = {12},
+   year = {2006}
+}
+
 @article{isopmcm,
    author = {Jenkin, M. E. and Young, J. C. and Rickard, A. R.},
    doi = {10.5194/acp-15-11433-2015},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/15/11433/2015/}}},
    journal = {Atmospheric Chemistry and Physics},
    number = {20},
    pages = {11433--11459},
@@ -1083,6 +2051,7 @@ Tchekhovskoi, Dmitrii and Pletnev, Igor},
 
 @book{jacob,
    author = {Brasseur, G.P. and Jacob, D.J.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=k9\_PDgAAQBAJ}}},
    isbn = {9781108210959},
    publisher = {Cambridge University Press},
    title = {Modeling Of Atmospheric Chemistry},
@@ -1097,6 +2066,7 @@ Max Welling},
    bibsource = {dblp computer science bibliography, https://dblp.org},
    biburl = {https://dblp.org/rec/bib/journals/corr/KipfW16},
    eprint = {1609.02907},
+   howpublished = {{\url{http://arxiv.org/abs/1609.02907}}},
    journal = {CoRR},
    timestamp = {Mon, 13 Aug 2018 16:48:31 +0200},
    title = {Semi-Supervised Classification With Graph Convolutional Networks},
@@ -1108,6 +2078,7 @@ Max Welling},
 @article{katz,
    author = {Goh, K I and Kahng, B and Kim, D},
    doi = {10.1103/PhysRevLett.87.278701},
+   howpublished = {{\url{http://dx.doi.org/10.1103/PhysRevLett.87.278701}}},
    issn = {0031-9007},
    journal = {Physical review letters},
    language = {en},
@@ -1123,6 +2094,7 @@ Max Welling},
 
 @book{kinetics,
    author = {T Turanyi and AS Tomlin},
+   howpublished = {{\url{http://eprints.whiterose.ac.uk/84294/}}},
    month = {January},
    pages = {1 -- 376},
    publisher = {Springer},
@@ -1131,10 +2103,38 @@ Max Welling},
    year = {2015}
 }
 
+@book{kirk,
+   author = {Kirk, A.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=wNpsDAAAQBAJ}}},
+   isbn = {9781473966314},
+   publisher = {SAGE Publications},
+   title = {Data Visualisation: A Handbook For Data Driven Design},
+   url = {https://books.google.co.uk/books?id=wNpsDAAAQBAJ},
+   year = {2016}
+}
+
+@article{kirkpatrick,
+   abstract = {There is a deep and useful connection between statistical mechanics (the behavior of systems with many degrees of freedom in thermal equilibrium at a finite temperature) and multivariate or combinatorial optimization (finding the minimum of a given function depending on many parameters). A detailed analogy with annealing in solids provides a framework for optimization of the properties of very large and complex systems. This connection to statistical mechanics exposes new information and provides an unfamiliar perspective on traditional optimization problems and methods.},
+   author = {Kirkpatrick, S. and Gelatt, C. D. and Vecchi, M. P.},
+   doi = {10.1126/science.220.4598.671},
+   eprint = {http://science.sciencemag.org/content/220/4598/671.full.pdf},
+   howpublished = {{\url{http://science.sciencemag.org/content/220/4598/671}}},
+   issn = {0036-8075},
+   journal = {Science},
+   number = {4598},
+   pages = {671--680},
+   publisher = {American Association for the Advancement of Science},
+   title = {Optimization By Simulated Annealing},
+   url = {http://science.sciencemag.org/content/220/4598/671},
+   volume = {220},
+   year = {1983}
+}
+
 @inproceedings{kmeans,
    address = {Berkeley, Calif.},
    author = {MacQueen, J.},
    booktitle = {Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Statistics},
+   howpublished = {{\url{https://projecteuclid.org/euclid.bsmsp/1200512992}}},
    pages = {281--297},
    publisher = {University of California Press},
    title = {Some Methods For Classification And Analysis Of Multivariate Observations},
@@ -1145,6 +2145,7 @@ Max Welling},
 @article{krsig,
    author = {Kim, Sunghwan and Kramer, Robert W and Hatcher, Patrick G},
    doi = {10.1021/ac034415p},
+   howpublished = {{\url{https://www.ncbi.nlm.nih.gov/pubmed/14710810}}},
    issn = {0003-2700},
    journal = {Analytical chemistry},
    language = {en},
@@ -1172,6 +2173,7 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
    author = {Kullback, S. and Leibler, R. A.},
    doi = {10.1214/aoms/1177729694},
    fjournal = {The Annals of Mathematical Statistics},
+   howpublished = {{\url{https://doi.org/10.1214/aoms/1177729694}}},
    journal = {Ann. Math. Statist.},
    month = {03},
    number = {1},
@@ -1186,6 +2188,7 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
 @article{labelprop,
    author = {Raghavan, Usha Nandini and Albert, R\'eka and Kumara, Soundar},
    doi = {10.1103/PhysRevE.76.036106},
+   howpublished = {{\url{https://link.aps.org/doi/10.1103/PhysRevE.76.036106}}},
    issue = {3},
    journal = {Phys. Rev. E},
    month = {Sep},
@@ -1207,7 +2210,7 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
 
 @article{layercortex,
    author = {Santiago Ramon Cajal},
-   howpublished = {\url{https://upload.wikimedia.org/wikipedia/commons/5/5b/Cajal_cortex_drawings.png}},
+   howpublished = {{\url{https://upload.wikimedia.org/wikipedia/commons/5/5b/Cajal_cortex_drawings.png}}},
    journal = {web},
    note = {Accessed: 2020-2-4},
    title = {Cortex Drawings},
@@ -1215,8 +2218,18 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
    year = {2020}
 }
 
+@misc{lesmis,
+   author = {Donald Knuth},
+   howpublished = {{\url{https://www-cs-faculty.stanford.edu/~knuth/sgb.html}}},
+   note = {Accessed: 2019-12-4},
+   title = {{Knuth: The Stanford Graphbase}},
+   url = {https://www-cs-faculty.stanford.edu/~knuth/sgb.html},
+   year = {2019}
+}
+
 @book{lessmore,
    author = {Reinhardt, A.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=zyK4AAAAIAAJ}}},
    isbn = {9780670134519},
    lccn = {75019041},
    publisher = {Viking Press},
@@ -1226,9 +2239,26 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
    year = {1975}
 }
 
+@article{lewis97,
+   author = {Lewis, {A C} and Bartle, {K D} and Heard, {D E} and McQuaid, {J B} and Pilling, {M J} and Seakins, {P W}},
+   day = {21},
+   issn = {0956-5000},
+   journal = {JOURNAL OF THE CHEMICAL SOCIETY-FARADAY TRANSACTIONS},
+   keywords = {VOLATILE ORGANIC-COMPOUNDS, OXIDATION-PRODUCTS, MASS-SPECTROMETRY, NONMETHANE HYDROCARBONS, ATMOSPHERIC OXIDATION, SULFUR, ISOPRENE, FOREST, TROPOSPHERE, ATLANTIC},
+   language = {English},
+   month = {8},
+   number = {16},
+   pages = {2921--2927},
+   publisher = {Royal Society of Chemistry},
+   title = {In Situ, Gas Chromatographic Measurements Of Non-Methane Hydrocarbons And Dimethyl Sulfide At A Remote Coastal Location (Mace Head, Eire) July-August 1996},
+   volume = {93},
+   year = {1997}
+}
+
 @article{lhs,
    abstract = {Two types of sampling plans are examined as alternatives to simple random sampling in Monte Carlo studies. These plans are shown to be improvements over simple random sampling with respect to variance for a class of estimators which includes the sample mean and the empirical distribution function.},
    author = {M. D. McKay and R. J. Beckman and W. J. Conover},
+   howpublished = {{\url{http://www.jstor.org/stable/1268522}}},
    issn = {00401706},
    journal = {Technometrics},
    number = {2},
@@ -1243,6 +2273,7 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
 @article{lif1,
    author = {Dillon, Terry J. and Tucceri, María E. and Crowley, John N.},
    doi = {10.1039/B611116E},
+   howpublished = {{\url{http://dx.doi.org/10.1039/B611116E}}},
    issue = {44},
    journal = {Phys. Chem. Chem. Phys.},
    pages = {5185-5198},
@@ -1256,6 +2287,7 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
 @article{lif2,
    author = {Bloss, W. J. and Lee, J. D. and Bloss, C. and Heard, D. E. and Pilling, M. J. and Wirtz, K. and Martin-Reviejo, M. and Siese, M.},
    doi = {10.5194/acp-4-571-2004},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/4/571/2004/}}},
    journal = {Atmospheric Chemistry and Physics},
    number = {2},
    pages = {571--583},
@@ -1267,6 +2299,7 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
 
 @article{lifetime,
    author = {Whitehouse, L E and Tomlin, A S and Pilling, M J},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/4/2057/2004/acp-4-2057-2004.pdf}}},
    journal = {Atmospheric Chemistry and Physics},
    pages = {2057--2081},
    title = {{Systematic Reduction Of Complex Tropospheric Chemical Mechanisms,
@@ -1301,8 +2334,27 @@ Part Ii: Lumping Using A Time-Scale Based Approach}},
    year = {2001}
 }
 
+@inbook{lombardi,
+   address = {Berlin, Heidelberg},
+   author = {Chernobelskiy, Roman
+and Cunningham, Kathryn I.
+and Goodrich, Michael T.
+and Kobourov, Stephen G.
+and Trott, Lowell},
+   booktitle = {Graph Drawing: 19th International Symposium, GD 2011, Eindhoven, The Netherlands, September 21-23, 2011, Revised Selected Papers},
+   doi = {10.1007/978-3-642-25878-7_31},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-642-25878-7_31}}},
+   isbn = {978-3-642-25878-7},
+   pages = {320--331},
+   publisher = {Springer Berlin Heidelberg},
+   title = {Force-Directed Lombardi-Style Graph Drawing},
+   url = {http://dx.doi.org/10.1007/978-3-642-25878-7_31},
+   year = {2012}
+}
+
 @article{lorenzbutterfly,
    author = {Edward N. Lorenz},
+   howpublished = {{\url{https://static.gymportalen.dk/sites/lru.dk/files/lru/132_kap6_lorenz_artikel_the_butterfly_effect.pdf}}},
    journal = {Americal Association For The Advancement of Science},
    title = {Predictability: Does The Flap Of A Butterfly’S Wings In Brazil Set Off A Tornado In
 Texas? },
@@ -1313,6 +2365,7 @@ Texas? },
 @article{loudrobust,
    author = {Lu, Hao and Halappanavar, Mahantesh and Kalyanaraman, Ananth},
    doi = {10.1016/j.parco.2015.03.003},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S0167819115000472}}},
    issn = {0167-8191},
    journal = {Parallel computing},
    keywords = {Community detection; Parallel graph heuristics; Graph coloring;
@@ -1328,6 +2381,7 @@ Graph clustering},
 @article{loudvain,
    author = {Vincent D Blondel and Jean-Loup Guillaume and Renaud Lambiotte and Etienne Lefebvre},
    doi = {10.1088/1742-5468/2008/10/p10008},
+   howpublished = {{\url{https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008}}},
    journal = {Journal of Statistical Mechanics: Theory and Experiment},
    month = {oct},
    number = {10},
@@ -1344,6 +2398,7 @@ Graph clustering},
    author = {Yadolah Dodge},
    booktitle = {The Concise Encyclopedia of Statistics},
    doi = {10.1007/978-0-387-32833-1_223},
+   howpublished = {{\url{https://doi.org/10.1007/978-0-387-32833-1_223}}},
    isbn = {978-0-387-32833-1},
    pages = {297--297},
    publisher = {Springer New York},
@@ -1359,12 +2414,41 @@ Graph clustering},
    year = {1984}
 }
 
+@inproceedings{mantra,
+   acmid = {834354},
+   address = {Washington, DC, USA},
+   author = {Shneiderman, Ben},
+   booktitle = {Proceedings of the 1996 IEEE Symposium on Visual Languages},
+   howpublished = {{\url{http://dl.acm.org/citation.cfm?id=832277.834354}}},
+   isbn = {0-8186-7508-X},
+   keywords = {visualization, information visualization, graphical user interfaces},
+   pages = {336--},
+   publisher = {IEEE Computer Society},
+   series = {VL '96},
+   title = {The Eyes Have It: A Task By Data Type Taxonomy For Information Visualizations},
+   url = {http://dl.acm.org/citation.cfm?id=832277.834354},
+   year = {1996}
+}
+
+@misc{mapbox,
+   author = {Ellis, Daniel},
+   booktitle = {{Medium}},
+   howpublished = {{\url{https://towardsdatascience.com/generating-a-logo-with-mapbox-gl-and-python-2c44a357f462}}},
+   month = {November},
+   note = {Accessed: 2019-11-7},
+   publisher = {Towards Data Science},
+   title = {{Editing Generating A Logo With Mapbox Gl And Python.}},
+   url = {https://towardsdatascience.com/generating-a-logo-with-mapbox-gl-and-python-2c44a357f462},
+   year = {2019}
+}
+
 @article{mapeqn,
    author = {Rosvall, M.
 and Axelsson, D.
 and Bergstrom, C. T.},
    day = {01},
    doi = {10.1140/epjst/e2010-01179-1},
+   howpublished = {{\url{https://doi.org/10.1140/epjst/e2010-01179-1}}},
    issn = {1951-6401},
    journal = {The European Physical Journal Special Topics},
    month = {Nov},
@@ -1376,9 +2460,20 @@ and Bergstrom, C. T.},
    year = {2009}
 }
 
+@article{marsstory,
+   author = {Martin, K and Miller, E},
+   howpublished = {{\url{https://www.jstor.org/stable/41411379}}},
+   journal = {Language Arts},
+   publisher = {JSTOR},
+   title = {{Storytelling And Science}},
+   url = {https://www.jstor.org/stable/41411379},
+   year = {1988}
+}
+
 @article{mcmgen,
    author = {Aumont, B. and Szopa, S. and Madronich, S.},
    doi = {10.5194/acp-5-2497-2005},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/5/2497/2005/}}},
    journal = {Atmospheric Chemistry and Physics},
    number = {9},
    pages = {2497--2517},
@@ -1388,9 +2483,18 @@ and Bergstrom, C. T.},
    year = {2005}
 }
 
+@misc{mcmhist,
+   author = {Mike Jenkins},
+   howpublished = {slide deck},
+   note = {Presentation for the EPSR group, Imperial Collage},
+   title = {{History Of The Master Chemical Mechanism (Mcm) And Its Development Protocols}},
+   year = {2002}
+}
+
 @article{mcmorigin,
    author = {Michael E. Jenkin and Sandra M. Saunders and Michael J. Pilling},
    doi = {https://doi.org/10.1016/S1352-2310(96)00105-7},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S1352231096001057}}},
    issn = {1352-2310},
    journal = {Atmospheric Environment},
    number = {1},
@@ -1405,6 +2509,7 @@ and Bergstrom, C. T.},
    author = {Saunders, S. M. and Jenkin, M. E. and Derwent, R. G. and Pilling, M. J.},
    hal_id = {hal-00295229},
    hal_version = {v1},
+   howpublished = {{\url{https://hal.archives-ouvertes.fr/hal-00295229}}},
    journal = {{Atmospheric Chemistry and Physics}},
    month = {February},
    number = {1},
@@ -1420,6 +2525,7 @@ and Bergstrom, C. T.},
 @article{mcmpartB,
    author = {Jenkin, M. E. and Saunders, S. M. and Wagner, V. and Pilling, M. J.},
    doi = {10.5194/acp-3-181-2003},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/3/181/2003/}}},
    journal = {Atmospheric Chemistry and Physics},
    number = {1},
    pages = {181--193},
@@ -1427,6 +2533,59 @@ and Bergstrom, C. T.},
    url = {https://www.atmos-chem-phys.net/3/181/2003/},
    volume = {3},
    year = {2003}
+}
+
+@misc{memory,
+   author = {Brian Foo},
+   howpublished = {{\url{http://memoryunderground.com/}}},
+   note = {Accessed: 2019-12-12},
+   title = {{Memory Underground - Convert Your Memories Into A Subway Map
+- Home}},
+   url = {http://memoryunderground.com/},
+   year = {2019}
+}
+
+@article{mercgraph,
+   archiveprefix = {arXiv},
+   arxivid = {1904.10814},
+   author = {Garc{\'\i}a-P{\'e}rez, Guillermo and Allard, Antoine and {\'A}ngeles Serrano, M and Bogu{\~n}{\'a}, Mari{\'a}n},
+   eprint = {1904.10814},
+   howpublished = {{\url{http://arxiv.org/abs/1904.10814}}},
+   journal = {arxiv},
+   month = {April},
+   primaryclass = {physics.soc-ph},
+   title = {{Mercator: Uncovering Faithful Hyperbolic Embeddings Of Complex Networks}},
+   url = {http://arxiv.org/abs/1904.10814},
+   year = {2019}
+}
+
+@article{metricgraphaesthetics,
+   author = {HELEN C. Purchase},
+   doi = {http://dx.doi.org/10.1006/jvlc.2002.0232},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S1045926X02902326}}},
+   issn = {1045-926X},
+   journal = {Journal of Visual Languages and Computing},
+   keywords = {Graph drawing, Aesthetics, Metrics},
+   note = {},
+   number = {5},
+   pages = {501 - 516},
+   title = {Metrics For Graph Drawing Aesthetics},
+   url = {http://www.sciencedirect.com/science/article/pii/S1045926X02902326},
+   volume = {13},
+   year = {2002}
+}
+
+@article{metropolis,
+   author = {Metropolis, Nicholas and Rosenbluth, Arianna W. and Rosenbluth, Marshall N. and Teller, Augusta H. and Teller, Edward},
+   doi = {http://dx.doi.org/10.1063/1.1699114},
+   howpublished = {{\url{http://scitation.aip.org/content/aip/journal/jcp/21/6/10.1063/1.1699114}}},
+   journal = {The Journal of Chemical Physics},
+   number = {6},
+   pages = {1087-1092},
+   title = {Equation Of State Calculations By Fast Computing Machines},
+   url = {http://scitation.aip.org/content/aip/journal/jcp/21/6/10.1063/1.1699114},
+   volume = {21},
+   year = {1953}
 }
 
 @article{milk,
@@ -1450,6 +2609,7 @@ Comparison With An Epd Study}},
    author = {Derwent, Richard G and Jenkin, Michael E and Saunders, Sandra M
 and Pilling, Michael J},
    doi = {10.1016/S1352-2310(98)00053-3},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S1352231098000533}}},
    issn = {0004-6981, 1352-2310},
    journal = {Atmospheric environment},
    keywords = {Ozone; PAN; organic compounds; NO; hydrocarbon reactivity;
@@ -1467,6 +2627,7 @@ Northwest Europe Calculated With A Master Chemical Mechanism}},
 @article{milk2,
    author = {Jenkin, Michael E and Hayman, Garry D},
    doi = {10.1016/S1352-2310(98)00261-1},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S1352231098002611}}},
    issn = {0004-6981, 1352-2310},
    journal = {Atmospheric environment},
    keywords = {VOC oxidation; Tropospheric chemistry; Ozone formation
@@ -1481,6 +2642,27 @@ Mechanistic Parameters}},
    url = {http://www.sciencedirect.com/science/article/pii/S1352231098002611},
    volume = {33},
    year = {1999}
+}
+
+@book{modelingpythonbees,
+   author = {De Smedt, T.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=Bp7KwpmFBzoC}}},
+   isbn = {9789057182600},
+   publisher = {Universiteit Antwerpen, Faculteit Letteren en Wijsbegeerte, Departement Taalkunde},
+   series = {Proefschriften UA-LW : taalkunde},
+   title = {Modeling Creativity: Case Studies In Python},
+   url = {https://books.google.co.uk/books?id=Bp7KwpmFBzoC},
+   year = {2013}
+}
+
+@misc{mol3d,
+   author = {Herman Bergwerf},
+   booktitle = {{MolView}},
+   howpublished = {{\url{http://molview.org/}}},
+   note = {Accessed: 2019-10-10},
+   title = {{Molview}},
+   url = {http://molview.org/},
+   year = {2019}
 }
 
 @inproceedings{mosaic,
@@ -1500,6 +2682,7 @@ and Kleiner, B.},
    author = {Nguyen, Kong T and Blum, Lorenz C and van Deursen, Ruud and
 Reymond, Jean-Louis},
    doi = {10.1002/cmdc.200900317},
+   howpublished = {{\url{http://dx.doi.org/10.1002/cmdc.200900317}}},
    issn = {1860-7179, 1860-7187},
    journal = {ChemMedChem},
    language = {en},
@@ -1515,6 +2698,7 @@ Reymond, Jean-Louis},
 
 @article{multicellular,
    author = {{University of Zurich}},
+   howpublished = {{\url{https://www.sciencedaily.com/releases/2013/01/130117084856.htm}}},
    journal = {Science Daily},
    month = {January},
    title = {{Great Oxidation Event: More Oxygen Through Multicellularity}},
@@ -1525,7 +2709,7 @@ Reymond, Jean-Louis},
 @misc{n2vimg,
    author = {Cohen, Elior},
    booktitle = {{Medium}},
-   howpublished = {\url{https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef}},
+   howpublished = {{\url{https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef}}},
    month = {April},
    note = {Accessed: 2019-10-22},
    publisher = {Towards Data Science},
@@ -1553,6 +2737,7 @@ Geometry And Stiffness}},
 @article{naturecitation,
    author = {Monastersky, Richard and Van Noorden, Richard},
    doi = {10.1038/d41586-019-03305-w},
+   howpublished = {{\url{http://dx.doi.org/10.1038/d41586-019-03305-w}}},
    issn = {0028-0836, 1476-4687},
    journal = {Nature},
    keywords = {History; Publishing},
@@ -1569,6 +2754,7 @@ Geometry And Stiffness}},
 
 @article{naturecover,
    author = {Albert-László Barabási},
+   howpublished = {{\url{https://www.nature.com/immersive/d42859-019-00121-0/public/pdf/nature-150-cover.pdf}}},
    journal = {Nature},
    note = {Accessed 20-01-2020},
    number = {7781},
@@ -1578,8 +2764,23 @@ Geometry And Stiffness}},
    year = {2019}
 }
 
+@article{neo,
+   author = {Leslie C. Aiello and R. I. M. Dunbar},
+   howpublished = {{\url{http://www.jstor.org/stable/2743982}}},
+   issn = {00113204, 15375382},
+   journal = {Current Anthropology},
+   number = {2},
+   pages = {184--193},
+   publisher = {[University of Chicago Press, Wenner-Gren Foundation for Anthropological Research]},
+   title = {Neocortex Size, Group Size, And The Evolution Of Language},
+   url = {http://www.jstor.org/stable/2743982},
+   volume = {34},
+   year = {1993}
+}
+
 @article{neoj4,
    author = {Needham, Mark and Hodler, Amy E},
+   howpublished = {{\url{https://neo4j.com/neoassets/graphbooks/Graph_Algorithms_Neo4j.pdf}}},
    isbn = {978-1-492-05781-9.},
    journal = {O'Reilly},
    title = {{Practical Examples In Apache Spark \& Neo4J}},
@@ -1592,6 +2793,7 @@ Geometry And Stiffness}},
    arxivid = {2001.09006},
    author = {Molontay, Roland and Nagy, Marcell},
    eprint = {2001.09006},
+   howpublished = {{\url{http://arxiv.org/abs/2001.09006}}},
    journal = {arXiv},
    month = {January},
    primaryclass = {physics.soc-ph},
@@ -1599,6 +2801,23 @@ Geometry And Stiffness}},
 Co-Authorship Network Analysis}},
    url = {http://arxiv.org/abs/2001.09006},
    year = {2020}
+}
+
+@inbook{networkrouting,
+   address = {Berlin, Heidelberg},
+   author = {Di Battista, Giuseppe
+and Mariani, Federico
+and Patrignani, Maurizio
+and Pizzonia, Maurizio},
+   booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
+   doi = {10.1007/978-3-540-24595-7_27},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-540-24595-7_27}}},
+   isbn = {978-3-540-24595-7},
+   pages = {295--306},
+   publisher = {Springer Berlin Heidelberg},
+   title = {Bgplay: A System For Visualizing The Interdomain Routing Evolution},
+   url = {http://dx.doi.org/10.1007/978-3-540-24595-7_27},
+   year = {2004}
 }
 
 @inproceedings{networkx,
@@ -1616,6 +2835,7 @@ Co-Authorship Network Analysis}},
 and Lim, Justin Wee Eng and Seow, Teck Keong and Chung, Maxey
 Ching Ming and Hu, Wei-Shou},
    doi = {10.1016/j.jbiotec.2003.09.007},
+   howpublished = {{\url{http://dx.doi.org/10.1016/j.jbiotec.2003.09.007}}},
    issn = {0168-1656},
    journal = {Journal of biotechnology},
    language = {en},
@@ -1628,6 +2848,20 @@ Mammalian Cells In Culture}},
    url = {http://dx.doi.org/10.1016/j.jbiotec.2003.09.007},
    volume = {107},
    year = {2004}
+}
+
+@article{neurone,
+   author = {Charles Duyckaerts and Gilles Godefroy},
+   doi = {https://doi.org/10.1016/S0891-0618(00)00064-8},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S0891061800000648}}},
+   issn = {0891-0618},
+   journal = {Journal of Chemical Neuroanatomy},
+   number = {1},
+   pages = {83 - 92},
+   title = {Voronoi Tessellation To Study The Numerical Density And The Spatial Distribution Of Neurones},
+   url = {http://www.sciencedirect.com/science/article/pii/S0891061800000648},
+   volume = {20},
+   year = {2000}
 }
 
 @article{neurotrauma,
@@ -1652,6 +2886,7 @@ Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D},
    author = {Newman, M. E. J.},
    doi = {10.1073/pnas.0307545100},
    eprint = {https://www.pnas.org/content/101/suppl_1/5200.full.pdf},
+   howpublished = {{\url{https://www.pnas.org/content/101/suppl_1/5200}}},
    issn = {0027-8424},
    journal = {Proceedings of the National Academy of Sciences},
    number = {suppl 1},
@@ -1661,6 +2896,50 @@ Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D},
    url = {https://www.pnas.org/content/101/suppl_1/5200},
    volume = {101},
    year = {2004}
+}
+
+@misc{newspaperrock,
+   author = {{ugc}},
+   booktitle = {{Atlas Obscura}},
+   howpublished = {{\url{http://www.atlasobscura.com/places/newspaper-rock}}},
+   month = {October},
+   note = {Accessed: 2019-12-9},
+   publisher = {Atlas Obscura},
+   title = {{Newspaper Rock}},
+   url = {http://www.atlasobscura.com/places/newspaper-rock},
+   year = {2019}
+}
+
+@article{nicelyanneal,
+   acmid = {234538},
+   address = {New York, NY, USA},
+   author = {Davidson, Ron and Harel, David},
+   doi = {10.1145/234535.234538},
+   howpublished = {{\url{http://doi.acm.org/10.1145/234535.234538}}},
+   issn = {0730-0301},
+   issue_date = {Oct. 1996},
+   journal = {ACM Trans. Graph.},
+   keywords = {aesthetics, graph drawing, simulated annealing},
+   month = {October},
+   number = {4},
+   numpages = {31},
+   pages = {301--331},
+   publisher = {ACM},
+   title = {Drawing Graphs Nicely Using Simulated Annealing},
+   url = {http://doi.acm.org/10.1145/234535.234538},
+   volume = {15},
+   year = {1996}
+}
+
+@misc{nightingale,
+   author = {Florence Nightingale},
+   howpublished = {{\url{https://www.rct.uk/collection/1075240/notes-on-matters-affecting-the-health-efficiency-and-hospital-administration-of}}},
+   note = {Accessed: 2019-10-10},
+   title = {{Notes On Matters Affecting
+The Health, Efficiency And Hospital Administration Of The
+British Army 1820-1910}},
+   url = {https://www.rct.uk/collection/1075240/notes-on-matters-affecting-the-health-efficiency-and-hospital-administration-of},
+   year = {1820}
 }
 
 @article{nnet,
@@ -1678,11 +2957,120 @@ https://doi.org/10.1021/acscentsci.6b00219
    year = {2016}
 }
 
+@inbook{noack,
+   address = {Berlin, Heidelberg},
+   author = {Noack, Andreas},
+   booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
+   doi = {10.1007/978-3-540-24595-7_40},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-540-24595-7_40}}},
+   isbn = {978-3-540-24595-7},
+   pages = {425--436},
+   publisher = {Springer Berlin Heidelberg},
+   title = {An Energy Model For Visual Graph Clustering},
+   url = {http://dx.doi.org/10.1007/978-3-540-24595-7_40},
+   year = {2004}
+}
+
+@article{noarredge,
+   author = {T. Dwyer and Y. Koren and K. Marriott},
+   doi = {10.1109/TVCG.2006.67},
+   issn = {1077-2626},
+   journal = {IEEE Transactions on Visualization and Computer Graphics},
+   keywords = {computational geometry;constraint handling;data visualisation;directed graphs;quadratic programming;constraint programming techniques;digraph;directed graph drawing;directed graph visualization;directional multidimensional scaling;force-directed placement algorithm;multivariate data;quadratic programming;undirected layout algorithm;Algorithm design and analysis;Application software;Multidimensional systems;Partitioning algorithms;Quadratic programming;Visualization;Directed graphs;force directed algorithms;graph drawing;hierarchy;majorization;quadratic programming.;Computer Graphics;Computer Simulation;Data Display;Databases, Factual;Image Interpretation, Computer-Assisted;Information Storage and Retrieval;Linear Models;User-Computer Interface},
+   month = {July},
+   number = {4},
+   pages = {536-548},
+   title = {Drawing Directed Graphs Using Quadratic Programming},
+   volume = {12},
+   year = {2006}
+}
+
 @article{node2vec,
    author = {Aditya Grover and Jure Leskovec},
    note = {Accessed: 2019-10-21},
    title = {Node2Vec: Scalable Feature Learning For Networks},
    year = {2019}
+}
+
+@inbook{nodeoverlap,
+   address = {Berlin, Heidelberg},
+   author = {Dwyer, Tim
+and Marriott, Kim
+and Stuckey, Peter J.},
+   booktitle = {Graph Drawing: 13th International Symposium, GD 2005, Limerick, Ireland, September 12-14, 2005. Revised Papers},
+   doi = {10.1007/11618058_15},
+   howpublished = {{\url{http://dx.doi.org/10.1007/11618058_15}}},
+   isbn = {978-3-540-31667-1},
+   pages = {153--164},
+   publisher = {Springer Berlin Heidelberg},
+   title = {Fast Node Overlap Removal},
+   url = {http://dx.doi.org/10.1007/11618058_15},
+   year = {2006}
+}
+
+@inproceedings{nodetrix,
+   author = {Agarwal, Shivam and Tomar, Amit and Sreevalsan-Nair, Jaya},
+   booktitle = {{Complex Networks \& Their Applications V}},
+   doi = {10.1007/978-3-319-50901-3\_46},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-319-50901-3_46}}},
+   pages = {579--591},
+   publisher = {Springer International Publishing},
+   title = {{Nodetrix-Multiplex: Visual Analytics Of Multiplex Small World
+Networks}},
+   url = {http://dx.doi.org/10.1007/978-3-319-50901-3_46},
+   year = {2017}
+}
+
+@inproceedings{nons,
+   acmid = {979966},
+   address = {Darlinghurst, Australia, Australia},
+   author = {Friedrich, Carsten and Schreiber, Falk},
+   booktitle = {Proceedings of the 27th Australasian Conference on Computer Science - Volume 26},
+   howpublished = {{\url{http://dl.acm.org/citation.cfm?id=979922.979966}}},
+   keywords = {graph drawing, graph visualization, layering},
+   location = {Dunedin, New Zealand},
+   numpages = {8},
+   pages = {369--376},
+   publisher = {Australian Computer Society, Inc.},
+   series = {ACSC '04},
+   title = {Flexible Layering In Hierarchical Drawings With Nodes Of Arbitrary Size},
+   url = {http://dl.acm.org/citation.cfm?id=979922.979966},
+   year = {2004}
+}
+
+@article{nonscientific,
+   author = {Dahlstrom, Michael F},
+   doi = {10.1073/pnas.1320645111},
+   howpublished = {{\url{http://dx.doi.org/10.1073/pnas.1320645111}}},
+   issn = {0027-8424, 1091-6490},
+   journal = {Proceedings of the National Academy of Sciences of the United
+States of America},
+   keywords = {ethics; persuasion},
+   language = {en},
+   month = {September},
+   pages = {13614--13620},
+   pmc = {PMC4183170},
+   pmid = {25225368},
+   title = {{Using Narratives And Storytelling To Communicate Science With
+Nonexpert Audiences}},
+   url = {http://dx.doi.org/10.1073/pnas.1320645111},
+   volume = {111 Suppl 4},
+   year = {2014}
+}
+
+@inproceedings{novern,
+   acmid = {962200},
+   author = {Lyons, Kelly A.},
+   booktitle = {Proceedings of the 1992 Conference of the Centre for Advanced Studies on Collaborative Research - Volume 1},
+   howpublished = {{\url{http://dl.acm.org/citation.cfm?id=962198.962200}}},
+   location = {Toronto, Ontario, Canada},
+   numpages = {11},
+   pages = {7--17},
+   publisher = {IBM Press},
+   series = {CASCON '92},
+   title = {Cluster Busting In Anchored Graph Drawing},
+   url = {http://dl.acm.org/citation.cfm?id=962198.962200},
+   year = {1992}
 }
 
 @misc{numpy,
@@ -1696,6 +3084,7 @@ https://doi.org/10.1021/acscentsci.6b00219
 @article{object,
    author = {{David Ping, Bing Xiang, Patrick Ng, Ramesh Nallapati, Saswata
 Chakravarty, and Cheng Tang}},
+   howpublished = {{\url{https://aws.amazon.com/blogs/machine-learning/introduction-to-amazon-sagemaker-object2vec/}}},
    journal = {Amazon Machine Learning Blog},
    month = {November},
    title = {{Introduction To Amazon Sagemaker: Object2Vec}},
@@ -1706,16 +3095,47 @@ Chakravarty, and Cheng Tang}},
 @phdthesis{objects,
    author = {Lynch, Helen},
    doi = {10.21427/D73W37},
+   howpublished = {{\url{http://dx.doi.org/10.21427/D73W37}}},
    title = {{Infant Places, Spaces And Objects: Exploring The Physical In
 Learning Environments For Infants Under Two}},
    url = {http://dx.doi.org/10.21427/D73W37},
    year = {2011}
 }
 
+@inbook{oneplace,
+   address = {Berlin, Heidelberg},
+   author = {G{\"o}rg, Carsten
+and Pohl, Mathias
+and Qeli, Ermir
+and Xu, Kai
+and Ebert, Achim
+and Meyer, J{\"o}rg},
+   booktitle = {Human-Centered Visualization Environments: GI-Dagstuhl Research Seminar, Dagstuhl Castle, Germany, March 5-8, 2006, Revised Lectures},
+   doi = {10.1007/978-3-540-71949-6_4},
+   howpublished = {{\url{http://dx.doi.org/10.1007/978-3-540-71949-6_4}}},
+   isbn = {978-3-540-71949-6},
+   pages = {163--230},
+   publisher = {Springer Berlin Heidelberg},
+   title = {Visual Representations},
+   url = {http://dx.doi.org/10.1007/978-3-540-71949-6_4},
+   year = {2007}
+}
+
+@misc{OpenVis,
+   author = {{Steven Franconeri}},
+   howpublished = {{\url{https://www.youtube.com/watch?v=Jq2Rc0WlYTE}}},
+   month = {August},
+   publisher = {Youtube},
+   title = {{Openvis Conference Proceedings}},
+   url = {https://www.youtube.com/watch?v=Jq2Rc0WlYTE},
+   year = {2018}
+}
+
 @article{optics,
    address = {New York, NY, USA},
    author = {Ankerst, Mihael and Breunig, Markus M. and Kriegel, Hans-Peter and Sander, J\"{o}rg},
    doi = {10.1145/304181.304187},
+   howpublished = {{\url{https://doi.org/10.1145/304181.304187}}},
    issn = {0163-5808},
    issue_date = {June 1999},
    journal = {SIGMOD Rec.},
@@ -1735,6 +3155,7 @@ Learning Environments For Infants Under Two}},
    author = {Durant, Joseph L and Leland, Burton A and Henry, Douglas R and
 Nourse, James G},
    doi = {10.1021/ci010132r},
+   howpublished = {{\url{https://www.ncbi.nlm.nih.gov/pubmed/12444722}}},
    issn = {0095-2338},
    journal = {Journal of chemical information and computer sciences},
    language = {en},
@@ -1751,11 +3172,50 @@ Nourse, James G},
 @article{ord,
    author = {Shawn Martin},
    doi = {10.1117/12.871402},
+   howpublished = {{\url{https://doi.org/10.1117/12.871402}}},
    journal = {.},
    title = {Openord: An Open-Source Toolbox For Large Graph Layout},
    url = {https://doi.org/10.1117/12.871402},
    volume = {7868},
    year = {2011}
+}
+
+@article{ortho,
+   acmid = {195598},
+   address = {Amsterdam, The Netherlands, The Netherlands},
+   author = {Di Battista, Giuseppe and Eades, Peter and Tamassia, Roberto and Tollis, Ioannis G.},
+   doi = {10.1016/0925-7721(94)00014-X},
+   howpublished = {{\url{http://dx.doi.org/10.1016/0925-7721(94)00014-X}}},
+   issn = {0925-7721},
+   issue_date = {Oct. 1994},
+   journal = {Comput. Geom. Theory Appl.},
+   month = {October},
+   number = {5},
+   numpages = {48},
+   pages = {235--282},
+   publisher = {Elsevier Science Publishers B. V.},
+   title = {Algorithms For Drawing Graphs: An Annotated Bibliography},
+   url = {http://dx.doi.org/10.1016/0925-7721(94)00014-X},
+   volume = {4},
+   year = {1994}
+}
+
+@article{Over2006,
+   author = {Over, Eelco A. B.
+and Hooge, Ignace T. C.
+and Erkelens, Casper J.},
+   day = {01},
+   doi = {10.3758/BF03192777},
+   howpublished = {{\url{https://doi.org/10.3758/BF03192777}}},
+   issn = {1554-3528},
+   journal = {Behavior Research Methods},
+   month = {May},
+   number = {2},
+   pages = {251--261},
+   title = {A Quantitative Measure For The Uniformity Of Fixation Density: The Voronoi Method},
+   url = {https://doi.org/10.3758/BF03192777},
+   volume = {38},
+   year = {2006}
 }
 
 @article{oxidation,
@@ -1766,6 +3226,7 @@ Albertus J B and Beukes, Nicolas J and Bekker, Andrey and Johnson,
 Thomas M and Konhauser, Kurt O and Lyons, Timothy W and Rouxel,
 Olivier J},
    doi = {10.1038/ngeo2122},
+   howpublished = {{\url{https://doi.org/10.1038/ngeo2122}}},
    issn = {1752-0894, 1752-0908},
    journal = {Nature geoscience},
    number = {4},
@@ -1782,6 +3243,7 @@ The Great Oxidation Event}},
    author = {Peret{\'o}, Juli},
    booktitle = {Encyclopedia of Astrobiology},
    doi = {10.1007/978-3-642-11274-4_1721},
+   howpublished = {{\url{https://doi.org/10.1007/978-3-642-11274-4_1721}}},
    isbn = {978-3-642-11274-4},
    pages = {1209--1209},
    publisher = {Springer Berlin Heidelberg},
@@ -1790,10 +3252,41 @@ The Great Oxidation Event}},
    year = {2011}
 }
 
+@incollection{pans,
+   address = {Oxford},
+   author = {H.B. Singh},
+   booktitle = {Encyclopedia of Atmospheric Sciences (Second Edition)},
+   doi = {https://doi.org/10.1016/B978-0-12-382225-3.00433-3},
+   edition = {Second Edition},
+   editor = {Gerald R. North and John Pyle and Fuqing Zhang},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/B9780123822253004333}}},
+   isbn = {978-0-12-382225-3},
+   pages = {251 - 254},
+   publisher = {Academic Press},
+   title = {Tropospheric Chemistry And Composition | Peroxyacetyl Nitrate},
+   url = {http://www.sciencedirect.com/science/article/pii/B9780123822253004333},
+   year = {2015}
+}
+
+@inbook{pattern,
+   address = {London},
+   author = {Dixon, Dan},
+   booktitle = {Understanding Digital Humanities},
+   doi = {10.1057/9780230371934_11},
+   howpublished = {{\url{http://dx.doi.org/10.1057/9780230371934_11}}},
+   isbn = {978-0-230-37193-4},
+   pages = {191--209},
+   publisher = {Palgrave Macmillan UK},
+   title = {Analysis Tool Or Research Methodology: Is There An Epistemology For Patterns?},
+   url = {http://dx.doi.org/10.1057/9780230371934_11},
+   year = {2012}
+}
+
 @article{pca,
    author = { Karl   Pearson   F.R.S. },
    doi = {10.1080/14786440109462720},
    eprint = {https://doi.org/10.1080/14786440109462720},
+   howpublished = {{\url{ https://doi.org/10.1080/14786440109462720}}},
    journal = {The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science},
    number = {11},
    pages = {559-572},
@@ -1807,6 +3300,7 @@ The Great Oxidation Event}},
 @article{pca2,
    author = {H. Hotelling},
    doi = {10.1037/h0071325},
+   howpublished = {{\url{https://doi.org/10.1037%2Fh0071325}}},
    journal = {Journal of Educational Psychology},
    number = {6},
    pages = {417--441},
@@ -1822,6 +3316,7 @@ The Great Oxidation Event}},
    booktitle = {{Statistics - Growing Data Sets and Growing Demand for Statistics}},
    doi = {10.5772/intechopen.75007},
    editor = {G{\"o}ksel, T{\"u}rkmen},
+   howpublished = {{\url{http://www.intechopen.com/books/statistics-growing-data-sets-and-growing-demand-for-statistics/application-of-principal-component-analysis-to-image-compression}}},
    isbn = {9781789843958, 9781789843965},
    month = {November},
    publisher = {InTech},
@@ -1833,7 +3328,7 @@ The Great Oxidation Event}},
 @misc{pcaim,
    author = {Victor Powell},
    booktitle = {{Explained Visually}},
-   howpublished = {\url{http://setosa.io/ev/principal-component-analysis/}},
+   howpublished = {{\url{http://setosa.io/ev/principal-component-analysis/}}},
    note = {Accessed: 2020-2-25},
    title = {{Principal Component Analysis Explained Visually}},
    url = {http://setosa.io/ev/principal-component-analysis/},
@@ -1842,6 +3337,7 @@ The Great Oxidation Event}},
 
 @techreport{pcamath,
    author = {Smith, Lindsay I},
+   howpublished = {{\url{http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf}}},
    institution = {otago},
    title = {{A Tutorial On Principal Components Analysis}},
    url = {http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf},
@@ -1851,6 +3347,7 @@ The Great Oxidation Event}},
 @article{pcanoise,
    author = {Hamadache, Moussa and Lee, Dongik},
    doi = {10.1007/s12555-015-0196-7},
+   howpublished = {{\url{https://doi.org/10.1007/s12555-015-0196-7}}},
    issn = {1598-6446, 2005-4092},
    journal = {International journal of control, automation, and systems},
    month = {April},
@@ -1867,6 +3364,7 @@ Bearing Fault Detection}},
 @article{pcareview,
    author = {Jolliffe, Ian T and Cadima, Jorge},
    doi = {10.1098/rsta.2015.0202},
+   howpublished = {{\url{http://dx.doi.org/10.1098/rsta.2015.0202}}},
    issn = {1364-503X, 1471-2962},
    journal = {Philosophical transactions. Series A, Mathematical, physical, and engineering sciences},
    language = {en},
@@ -1885,6 +3383,7 @@ Bearing Fault Detection}},
    author = {Vajda, S. and Valko, P. and Turainyi, T.},
    doi = {10.1002/kin.550170107},
    eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/kin.550170107},
+   howpublished = {{\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/kin.550170107}}},
    journal = {International Journal of Chemical Kinetics},
    number = {1},
    pages = {55-81},
@@ -1896,7 +3395,7 @@ Bearing Fault Detection}},
 
 @misc{people,
    author = {{People2Vec}},
-   howpublished = {\url{http://people2vec.org/}},
+   howpublished = {{\url{http://people2vec.org/}}},
    note = {Accessed: 2019-10-22},
    title = {{People2Vec}},
    url = {http://people2vec.org/},
@@ -1913,7 +3412,7 @@ Bearing Fault Detection}},
 
 @misc{perceptronimage,
    author = {Lab Cornell},
-   howpublished = {\url{https://en.wikipedia.org/w/index.php?title=Perceptron&oldid=935763442}},
+   howpublished = {{\url{https://en.wikipedia.org/w/index.php?title=Perceptron&oldid=935763442}}},
    note = {Accessed: 2020-2-4},
    title = {{Mark 1 Perceptron}},
    url = {https://en.wikipedia.org/w/index.php?title=Perceptron&oldid=935763442},
@@ -1922,6 +3421,7 @@ Bearing Fault Detection}},
 
 @article{perceptronmanual,
    author = {John Hay, Ben Lynch, David Smith},
+   howpublished = {{\url{https://apps.dtic.mil/dtic/tr/fulltext/u2/236965.pdf}}},
    journal = {Cornell Aeronautical Laboratory},
    title = {{Mark 1 Perceptron Operators' Manual}},
    url = {https://apps.dtic.mil/dtic/tr/fulltext/u2/236965.pdf},
@@ -1931,6 +3431,7 @@ Bearing Fault Detection}},
 @article{periodic,
    author = {Wang, Shu-Guang and Schwarz, W H Eugen},
    doi = {10.1002/anie.200800827},
+   howpublished = {{\url{http://dx.doi.org/10.1002/anie.200800827}}},
    issn = {1433-7851, 1521-3773},
    journal = {Angewandte Chemie},
    language = {en},
@@ -1946,6 +3447,7 @@ The New Century}},
 
 @article{phrase,
    author = {Boudin, Florian},
+   howpublished = {{\url{https://hal.archives-ouvertes.fr/hal-00850187/document}}},
    title = {{A Comparison Of Centrality Measures For Graph-Based Keyphrase
 Extraction}},
    url = {https://hal.archives-ouvertes.fr/hal-00850187/document},
@@ -1975,6 +3477,7 @@ Reactor From An Activated Sludge Inoculum}},
 and Pitts, Walter},
    day = {01},
    doi = {10.1007/BF02478259},
+   howpublished = {{\url{https://doi.org/10.1007/BF02478259}}},
    issn = {1522-9602},
    journal = {The bulletin of mathematical biophysics},
    month = {Dec},
@@ -1988,6 +3491,7 @@ and Pitts, Walter},
 
 @article{planet,
    author = {Woo, Marcus},
+   howpublished = {{\url{https://www.scientificamerican.com/article/planet-formation-its-a-drag/}}},
    issn = {0036-8733},
    journal = {Scientific American},
    month = {October},
@@ -2000,6 +3504,7 @@ and Pitts, Walter},
    annote = {doi: 10.1137/070710111},
    author = {Clauset, Aaron and Shalizi, Cosma Rohilla and Newman, M E J},
    doi = {10.1137/070710111},
+   howpublished = {{\url{https://doi.org/10.1137/070710111}}},
    issn = {0036-1445},
    journal = {SIAM Review},
    month = {November},
@@ -2020,9 +3525,33 @@ and Pitts, Walter},
    year = {2012}
 }
 
+@book{projections,
+   author = {Thomas, P.D.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=7a60MQEACAAJ}}},
+   publisher = {Coast and Geodetic Survey},
+   series = {Special publication},
+   title = {Conformal Projections In Geodesy And Cartography},
+   url = {https://books.google.co.uk/books?id=7a60MQEACAAJ},
+   year = {1952}
+}
+
+@article{protocol,
+   author = {Aumont, B and Szopa, S and Madronich, S},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/5/2497/2005/acp-5-2497-2005.pdf}}},
+   journal = {Atmospheric Chemistry and Physics},
+   pages = {2497--2517},
+   title = {{Modelling The Evolution Of Organic Carbon During Its Gas-Phase
+Tropospheric Oxidation: Development Of An Explicit Model Based On
+A Self Generating Approach}},
+   url = {https://www.atmos-chem-phys.net/5/2497/2005/acp-5-2497-2005.pdf},
+   volume = {5},
+   year = {2005}
+}
+
 @article{qssa,
    author = {Whitehouse, L. E. and Tomlin, A. S. and Pilling, M. J.},
    doi = {10.5194/acp-4-2025-2004},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/4/2025/2004/}}},
    journal = {Atmospheric Chemistry and Physics},
    number = {7},
    pages = {2025--2056},
@@ -2030,6 +3559,21 @@ and Pitts, Walter},
    url = {https://www.atmos-chem-phys.net/4/2025/2004/},
    volume = {4},
    year = {2004}
+}
+
+@article{raingold,
+   author = {Fruchterman, Thomas M. J. and Reingold, Edward M.},
+   doi = {10.1002/spe.4380211102},
+   eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/spe.4380211102},
+   howpublished = {{\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.4380211102}}},
+   journal = {Software: Practice and Experience},
+   keywords = {Graph drawing, Force-directed placement, Multi-level techniques, Simulated annealing},
+   number = {11},
+   pages = {1129-1164},
+   title = {Graph Drawing By Force-Directed Placement},
+   url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.4380211102},
+   volume = {21},
+   year = {1991}
 }
 
 @misc{rdkit,
@@ -2064,6 +3608,7 @@ Michał Nowotka and
 Karl Leswing and
 Jeff van Santen},
    doi = {10.5281/zenodo.2864247},
+   howpublished = {{\url{https://doi.org/10.5281/zenodo.2864247}}},
    month = {May},
    title = {Rdkit 2019-03-2 (Q1 2019) Release},
    url = {https://doi.org/10.5281/zenodo.2864247},
@@ -2072,6 +3617,7 @@ Jeff van Santen},
 
 @misc{rdkitcode,
    author = {rdkit},
+   howpublished = {{\url{https://github.com/rdkit/rdkit/blob/24f1737839c9302489cadc473d8d9196ad9187b4/rdkit/Chem/MACCSkeys.py}}},
    institution = {Github},
    title = {{Rdkit}},
    url = {\url{https://github.com/rdkit/rdkit/blob/24f1737839c9302489cadc473d8d9196ad9187b4/rdkit/Chem/MACCSkeys.py}},
@@ -2084,6 +3630,9 @@ Jeff van Santen},
    eprint = {
 https://doi.org/10.1080/0022250X.1994.9990134
 },
+   howpublished = {{\url{
+https://doi.org/10.1080/0022250X.1994.9990134
+}}},
    journal = {The Journal of Mathematical Sociology},
    number = {1},
    pages = {29-52},
@@ -2099,6 +3648,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
 @article{rfrr,
    author = {Breiman, Leo},
    doi = {10.1023/A:1010933404324},
+   howpublished = {{\url{https://doi.org/10.1023/A:1010933404324}}},
    issn = {0885-6125, 1573-0565},
    journal = {Machine learning},
    month = {October},
@@ -2126,6 +3676,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
 @article{sampling,
    author = { M. D.   Mckay  and  R. J.   Beckman  and  W. J.   Conover },
    doi = {10.1080/00401706.2000.10485979},
+   howpublished = {{\url{https://amstat.tandfonline.com/doi/abs/10.1080/00401706.2000.10485979}}},
    journal = {Technometrics},
    number = {1},
    pages = {55-61},
@@ -2136,9 +3687,21 @@ https://doi.org/10.1080/0022250X.1994.9990134
    year = {2000}
 }
 
+@book{sapiens,
+   author = {Harari, Y.N.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=FmyBAwAAQBAJ}}},
+   isbn = {9780062316103},
+   lccn = {2014028418},
+   publisher = {Harper},
+   title = {Sapiens: A Brief History Of Humankind},
+   url = {https://books.google.co.uk/books?id=FmyBAwAAQBAJ},
+   year = {2015}
+}
+
 @article{scalefreebad,
    author = {Broido, Anna D and Clauset, Aaron},
    doi = {10.1038/s41467-019-08746-5},
+   howpublished = {{\url{http://dx.doi.org/10.1038/s41467-019-08746-5}}},
    issn = {2041-1723},
    journal = {Nature communications},
    language = {en},
@@ -2156,6 +3719,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
 @article{scalefreeemail,
    author = {Ebel, Holger and Mielsch, Lutz-Ingo and Bornholdt, Stefan},
    doi = {10.1103/PhysRevE.66.035103},
+   howpublished = {{\url{https://link.aps.org/doi/10.1103/PhysRevE.66.035103}}},
    issue = {3},
    journal = {Phys. Rev. E},
    month = {Sep},
@@ -2172,6 +3736,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    author = {de Solla Price, Derek J.},
    doi = {10.1126/science.149.3683.510},
    eprint = {https://science.sciencemag.org/content/149/3683/510.full.pdf},
+   howpublished = {{\url{https://science.sciencemag.org/content/149/3683/510}}},
    issn = {0036-8075},
    journal = {Science},
    number = {3683},
@@ -2185,16 +3750,27 @@ https://doi.org/10.1080/0022250X.1994.9990134
 
 @misc{scholar,
    author = {Google},
-   howpublished = {\url{https://scholar.google.com/schhp?hl=en}},
+   howpublished = {{\url{https://scholar.google.com/schhp?hl=en}}},
    note = {Accessed: 2020-1-25},
    title = {{Google Scholar}},
    url = {https://scholar.google.com/schhp?hl=en},
    year = {2019}
 }
 
+@misc{sciamerican,
+   author = {Monta{\~n}ez, Amanda},
+   booktitle = {{Scientific American Blog Network}},
+   howpublished = {{\url{https://blogs.scientificamerican.com/sa-visual/how-science-visualization-can-help-save-the-world/}}},
+   note = {Accessed: 2020-1-4},
+   title = {{How Science Visualization Can Help Save The World}},
+   url = {https://blogs.scientificamerican.com/sa-visual/how-science-visualization-can-help-save-the-world/},
+   year = {2016}
+}
+
 @article{scikit,
    acmid = {2078195},
    author = {Pedregosa, Fabian and Varoquaux, Ga\"{e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and Vanderplas, Jake and Passos, Alexandre and Cournapeau, David and Brucher, Matthieu and Perrot, Matthieu and Duchesnay, \'{E}douard},
+   howpublished = {{\url{http://dl.acm.org/citation.cfm?id=1953048.2078195}}},
    issn = {1532-4435},
    issue_date = {2/1/2011},
    journal = {J. Mach. Learn. Res.},
@@ -2204,6 +3780,18 @@ https://doi.org/10.1080/0022250X.1994.9990134
    publisher = {JMLR.org},
    title = {Scikit-Learn: Machine Learning In Python},
    url = {http://dl.acm.org/citation.cfm?id=1953048.2078195},
+   volume = {12},
+   year = {2011}
+}
+
+@article{scikit-learn,
+   author = {Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+   journal = {Journal of Machine Learning Research},
+   pages = {2825--2830},
+   title = {Scikit-Learn: Machine Learning In {P}Ython},
    volume = {12},
    year = {2011}
 }
@@ -2226,6 +3814,27 @@ https://doi.org/10.1080/0022250X.1994.9990134
    year = {1949}
 }
 
+@article{shapinginfo,
+   acmid = {1477423},
+   address = {Piscataway, NJ, USA},
+   author = {Ziemkiewicz, Caroline and Kosara, Robert},
+   doi = {10.1109/TVCG.2008.171},
+   howpublished = {{\url{http://dx.doi.org/10.1109/TVCG.2008.171}}},
+   issn = {1077-2626},
+   issue_date = {November 2008},
+   journal = {IEEE Transactions on Visualization and Computer Graphics},
+   keywords = {Cognition, Cognition, visualization theory, metaphors, hierarchies, evaluation, Index Terms\&\#8212, evaluation, hierarchies, metaphors, visualization theory},
+   month = {November},
+   number = {6},
+   numpages = {8},
+   pages = {1269--1276},
+   publisher = {IEEE Educational Activities Department},
+   title = {The Shaping Of Information By Visual Metaphors},
+   url = {http://dx.doi.org/10.1109/TVCG.2008.171},
+   volume = {14},
+   year = {2008}
+}
+
 @article{silhouette,
    author = {Rousseeuw, Peter J. },
    bdsk-url-1 = {http://www.sciencedirect.com/science/article/pii/0377042787901257},
@@ -2234,6 +3843,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    date-added = {2019-09-15 20:11:13 +0100},
    date-modified = {2019-09-15 20:12:01 +0100},
    doi = {https://doi.org/10.1016/0377-0427(87)90125-7},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/0377042787901257}}},
    isbn = {0377-0427},
    journal = {Journal of Computational and Applied Mathematics},
    keywords = {Graphical display; cluster analysis; clustering validity; classification},
@@ -2243,6 +3853,25 @@ https://doi.org/10.1080/0022250X.1994.9990134
    url = {http://www.sciencedirect.com/science/article/pii/0377042787901257},
    volume = {20},
    year = {1987}
+}
+
+@article{sketchy,
+   address = {New York, NY, USA},
+   articleno = {Article 119},
+   author = {Sangkloy, Patsorn and Burnell, Nathan and Ham, Cusuh and Hays, James},
+   doi = {10.1145/2897824.2925954},
+   howpublished = {{\url{https://doi.org/10.1145/2897824.2925954}}},
+   issn = {0730-0301},
+   issue_date = {July 2016},
+   journal = {ACM Trans. Graph.},
+   month = {July},
+   number = {4},
+   numpages = {12},
+   publisher = {Association for Computing Machinery},
+   title = {The Sketchy Database: Learning To Retrieve Badly Drawn Bunnies},
+   url = {https://doi.org/10.1145/2897824.2925954},
+   volume = {35},
+   year = {2016}
 }
 
 @article{sklearn,
@@ -2267,9 +3896,18 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    year = {2014}
 }
 
+@article{slidedeck,
+   author = {John Mashey },
+   howpublished = {{\url{https://static.usenix.org/event/usenix99/invited_talks/mashey.pdf}}},
+   title = {{Big Data And The Next Wave Of Infrastress }},
+   url = {\url{https://static.usenix.org/event/usenix99/invited_talks/mashey.pdf}},
+   year = {1998}
+}
+
 @article{sm2,
    author = {Humphries, Mark D and Gurney, Kevin},
    doi = {10.1371/journal.pone.0002051},
+   howpublished = {{\url{http://dx.doi.org/10.1371/journal.pone.0002051}}},
    issn = {1932-6203},
    journal = {PloS one},
    language = {en},
@@ -2288,6 +3926,7 @@ Canonical Network Equivalence}},
 @article{smallworld,
    author = {Watts, D J and Strogatz, S H},
    doi = {10.1038/30918},
+   howpublished = {{\url{http://dx.doi.org/10.1038/30918}}},
    issn = {0028-0836},
    journal = {Nature},
    language = {en},
@@ -2304,6 +3943,7 @@ Canonical Network Equivalence}},
    annote = {doi: 10.1021/ci00057a005},
    author = {Weininger, David},
    doi = {10.1021/ci00057a005},
+   howpublished = {{\url{https://pubs.acs.org/doi/abs/10.1021/ci00057a005}}},
    issn = {0095-2338},
    journal = {Journal of chemical information and computer sciences},
    month = {February},
@@ -2320,6 +3960,7 @@ Introduction To Methodology And Encoding Rules}},
 @article{smilesdrawer,
    author = {Probst, Daniel and Reymond, Jean-Louis},
    doi = {10.1021/acs.jcim.7b00425},
+   howpublished = {{\url{http://dx.doi.org/10.1021/acs.jcim.7b00425}}},
    issn = {1549-9596, 1549-960X},
    journal = {Journal of chemical information and modeling},
    language = {en},
@@ -2334,9 +3975,58 @@ Structures Using Client-Side Javascript}},
    year = {2018}
 }
 
+@article{social,
+   author = {Hill, R A and Dunbar, R I M},
+   doi = {10.1007/s12110-003-1016-y},
+   howpublished = {{\url{http://dx.doi.org/10.1007/s12110-003-1016-y}}},
+   issn = {1045-6767},
+   journal = {Human nature},
+   keywords = {Frequency of contact; Group size; Humans; Neocortex size; Social
+networks},
+   language = {en},
+   month = {March},
+   number = {1},
+   pages = {53--72},
+   pmid = {26189988},
+   title = {{Social Network Size In Humans}},
+   url = {http://dx.doi.org/10.1007/s12110-003-1016-y},
+   volume = {14},
+   year = {2003}
+}
+
+@article{socialorigin,
+   author = {John Scott},
+   doi = {10.1177/0038038588022001007},
+   eprint = { 
+https://doi.org/10.1177/0038038588022001007
+},
+   howpublished = {{\url{ 
+https://doi.org/10.1177/0038038588022001007
+}}},
+   journal = {Sociology},
+   number = {1},
+   pages = {109-127},
+   title = {Social Network Analysis},
+   url = { 
+https://doi.org/10.1177/0038038588022001007
+},
+   volume = {22},
+   year = {1988}
+}
+
+@book{softvis3,
+   address = {Secaucus, NJ, USA},
+   author = {Diehl, Stephan},
+   isbn = {3540465049},
+   publisher = {Springer-Verlag New York, Inc.},
+   title = {Software Visualization: Visualizing The Structure, Behaviour, And Evolution Of Software},
+   year = {2007}
+}
+
 @article{spectral,
    author = {Vigna, Sebastiano},
    doi = {10.1017/nws.2016.21},
+   howpublished = {{\url{https://www.cambridge.org/core/journals/network-science/article/spectral-ranking/99ACDCD0CC1B774AB0041FB16AB43D1B}}},
    issn = {2050-1242, 2050-1250},
    journal = {Network Science},
    keywords = {ranking; centrality; eigenvectors},
@@ -2353,6 +4043,7 @@ Structures Using Client-Side Javascript}},
 @article{spinglass,
    author = {Newman, M. E. J. and Girvan, M.},
    doi = {10.1103/PhysRevE.69.026113},
+   howpublished = {{\url{https://link.aps.org/doi/10.1103/PhysRevE.69.026113}}},
    issue = {2},
    journal = {Phys. Rev. E},
    month = {Feb},
@@ -2365,9 +4056,41 @@ Structures Using Client-Side Javascript}},
    year = {2004}
 }
 
+@book{storyanimal,
+   author = {Gottschall, J.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=Gd3lT5yP3ZQC}}},
+   isbn = {9780547391403},
+   lccn = {2011042372},
+   publisher = {Houghton Mifflin Harcourt},
+   title = {The Storytelling Animal: How Stories Make Us Human},
+   url = {https://books.google.co.uk/books?id=Gd3lT5yP3ZQC},
+   year = {2012}
+}
+
+@article{storytelling,
+   acmid = {381653},
+   address = {New York, NY, USA},
+   author = {Gershon, Nahum and Page, Ward},
+   doi = {10.1145/381641.381653},
+   howpublished = {{\url{http://doi.acm.org/10.1145/381641.381653}}},
+   issn = {0001-0782},
+   issue_date = {Aug. 2001},
+   journal = {Commun. ACM},
+   month = {August},
+   number = {8},
+   numpages = {7},
+   pages = {31--37},
+   publisher = {ACM},
+   title = {What Storytelling Can Do For Information Visualization},
+   url = {http://doi.acm.org/10.1145/381641.381653},
+   volume = {44},
+   year = {2001}
+}
+
 @article{strueq,
    author = {Zhou, Haijun},
    doi = {10.1103/PhysRevE.67.061901},
+   howpublished = {{\url{https://link.aps.org/doi/10.1103/PhysRevE.67.061901}}},
    issue = {6},
    journal = {Phys. Rev. E},
    month = {Jun},
@@ -2384,6 +4107,7 @@ Structures Using Client-Side Javascript}},
    annote = {doi: 10.1198/016214508000000030},
    author = {Zabell, S L},
    doi = {10.1198/016214508000000030},
+   howpublished = {{\url{https://doi.org/10.1198/016214508000000030}}},
    issn = {0162-1459},
    journal = {Journal of the American Statistical Association},
    month = {March},
@@ -2396,8 +4120,43 @@ Structures Using Client-Side Javascript}},
    year = {2008}
 }
 
+@article{t2gcn,
+   archiveprefix = {arXiv},
+   arxivid = {1810.05997},
+   author = {Klicpera, Johannes and Bojchevski, Aleksandar and
+G{\"u}nnemann, Stephan},
+   eprint = {1810.05997},
+   howpublished = {{\url{http://arxiv.org/abs/1810.05997}}},
+   journal = {Arxiv},
+   month = {October},
+   primaryclass = {cs.LG},
+   title = {{Predict Then Propagate: Graph Neural Networks Meet
+Personalized Pagerank}},
+   url = {http://arxiv.org/abs/1810.05997},
+   year = {2018}
+}
+
+@misc{tablet,
+   author = {British-Museum},
+   booktitle = {{British Museum}},
+   howpublished = {{\url{https://www.britishmuseum.org/research/collection_online/collection_object_details.aspx?objectId=1547654&partId=1&searchText=tablet&from=bc&fromDate=4444&to=bc&toDate=3000&page=1}}},
+   note = {Accessed: 2019-5-28},
+   title = {{Tablet}},
+   url = {\url{https://www.britishmuseum.org/research/collection_online/collection_object_details.aspx?objectId=1547654&partId=1&searchText=tablet&from=bc&fromDate=4444&to=bc&toDate=3000&page=1}},
+   year = {BC}
+}
+
+@article{tephi,
+   author = {Ian Brooks},
+   howpublished = {{\url{http://www.met.reading.ac.uk/~sgs02rpa/TEACHING/Tephigram.pdf}}},
+   title = {{Tephigram.Pdf}},
+   url = {http://www.met.reading.ac.uk/~sgs02rpa/TEACHING/Tephigram.pdf},
+   year = {2019}
+}
+
 @article{terror,
    author = {Krebs, Valdis E},
+   howpublished = {{\url{http://ecsocman.hse.ru/data/517/132/1231/mappingterroristnetworks.pdf}}},
    issn = {0226-1766},
    journal = {Connections},
    number = {3},
@@ -2415,6 +4174,7 @@ and Langer, Stefan
 and Breitinger, Corinna},
    day = {01},
    doi = {10.1007/s00799-015-0156-0},
+   howpublished = {{\url{https://doi.org/10.1007/s00799-015-0156-0}}},
    issn = {1432-1300},
    journal = {International Journal on Digital Libraries},
    month = {Nov},
@@ -2429,6 +4189,7 @@ and Breitinger, Corinna},
 @article{theoreticalbio,
    author = {Andrew Morozov},
    doi = {https://doi.org/10.1016/j.jtbi.2016.07.007},
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/S0022519316301849}}},
    issn = {0022-5193},
    journal = {Journal of Theoretical Biology},
    keywords = {Public goods games, Adaptation, Optimality, RNA world, Selection, Adaptive dynamics, Inclusive fitness, Evolution of language, Drift selection, Evolutionary stability, Quorum sensing, Cooperation, Genetic drift, Speciation rate, Fitness landscape, Individual learning, Social learning},
@@ -2442,7 +4203,7 @@ and Breitinger, Corinna},
 
 @misc{threejs,
    author = {Ricardo Cabello},
-   howpublished = {\url{https://threejs.org/}},
+   howpublished = {{\url{https://threejs.org/}}},
    note = {Accessed: 2020-1-25},
    title = {{Three.Js -- Javascript 3D Library}},
    url = {https://threejs.org/},
@@ -2455,6 +4216,7 @@ and Breitinger, Corinna},
    author = {Jean, Neal and Wang, Sherrie and Samar, Anshul and Azzari,
 George and Lobell, David and Ermon, Stefano},
    eprint = {1805.02855},
+   howpublished = {{\url{http://arxiv.org/abs/1805.02855}}},
    month = {May},
    primaryclass = {cs.CV},
    title = {{Tile2Vec: Unsupervised Representation Learning For Spatially
@@ -2505,6 +4267,7 @@ Distributed Data}},
    annote = {doi: 10.2466/pr0.1957.3.h.377},
    author = {Noble, Clyde E},
    doi = {10.2466/pr0.1957.3.h.377},
+   howpublished = {{\url{https://doi.org/10.2466/pr0.1957.3.h.377}}},
    issn = {0033-2941},
    journal = {Psychological reports},
    month = {September},
@@ -2517,8 +4280,18 @@ Distributed Data}},
    year = {1957}
 }
 
+@misc{truthandbeauty,
+   author = {Moritz Stefaner},
+   howpublished = {{\url{https://truth-and-beauty.net/projects/multiplicity}}},
+   note = {Accessed: 2020-1-2},
+   title = {{Truth \& Beauty - Multiplicity}},
+   url = {https://truth-and-beauty.net/projects/multiplicity},
+   year = {2020}
+}
+
 @article{tsne,
    author = {Maaten, Laurens van der and Hinton, Geoffrey},
+   howpublished = {{\url{http://www.jmlr.org/papers/v9/vandermaaten08a.html}}},
    issn = {1532-4435, 1533-7928},
    journal = {Journal of machine learning research: JMLR},
    number = {Nov},
@@ -2532,7 +4305,7 @@ Distributed Data}},
 @misc{tsneexplain,
    author = {Strayer, Nick},
    booktitle = {{Observable}},
-   howpublished = {\url{https://observablehq.com/@nstrayer/t-sne-explained-in-plain-javascript}},
+   howpublished = {{\url{https://observablehq.com/@nstrayer/t-sne-explained-in-plain-javascript}}},
    month = {February},
    note = {Accessed: 2019-7-2},
    title = {{T-Sne Explained In Plain Javascript}},
@@ -2540,8 +4313,21 @@ Distributed Data}},
    year = {2018}
 }
 
+@book{tufte,
+   author = {Tufte, E.R.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=tWpHAAAAMAAJ}}},
+   lccn = {83156861},
+   number = {v. 914},
+   publisher = {Graphics Press},
+   series = {The Visual Display of Quantitative Information},
+   title = {The Visual Display Of Quantitative Information},
+   url = {https://books.google.co.uk/books?id=tWpHAAAAMAAJ},
+   year = {1983}
+}
+
 @article{tur1990,
    author = {Turiinyi, Tam6s},
+   howpublished = {{\url{http://garfield.chem.elte.hu/Turanyi/pdf/14_Turanyi_NJC_1990.PDF}}},
    issn = {1144-0546},
    journal = {New journal of chemistry = Nouveau journal de chimie},
    pages = {795--gO3},
@@ -2551,16 +4337,70 @@ Distributed Data}},
    year = {1990}
 }
 
+@article{tvg,
+   author = {G. Kumar and M. Garland},
+   doi = {10.1109/TVCG.2006.193},
+   issn = {1077-2626},
+   journal = {IEEE Transactions on Visualization and Computer Graphics},
+   keywords = {Algorithm design and analysis;Animation;Data mining;Data visualization;Filters;Heuristic algorithms;Information analysis;Layout;Stock markets;Tree graphs;Graph and network visualization;financial data visualization;hierarchy visualization;time series data},
+   month = {Sept},
+   number = {5},
+   pages = {805-812},
+   title = {Visual Exploration Of Complex Time-Varying Graphs},
+   volume = {12},
+   year = {2006}
+}
+
+@article{vislarge,
+   author = {K. {Ma} and C. W. {Muelder}},
+   doi = {10.1109/MC.2013.242},
+   issn = {1558-0814},
+   journal = {Computer},
+   month = {July},
+   number = {7},
+   pages = {39-46},
+   title = {Large-Scale Graph Visualization And Analytics},
+   volume = {46},
+   year = {2013}
+}
+
+@misc{vt,
+   author = {{VTL}},
+   howpublished = {{\url{http://visualthinking.psych.northwestern.edu/}}},
+   note = {Accessed: 2019-12-15},
+   title = {{Visual Thinking Lab}},
+   url = {http://visualthinking.psych.northwestern.edu/},
+   year = {2019}
+}
+
 @article{w2v,
    archiveprefix = {arXiv},
    arxivid = {1301.3781},
    author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean,
 Jeffrey},
    eprint = {1301.3781},
+   howpublished = {{\url{http://arxiv.org/abs/1301.3781}}},
    month = {January},
    primaryclass = {cs.CL},
    title = {{Efficient Estimation Of Word Representations In Vector Space}},
    url = {http://arxiv.org/abs/1301.3781},
+   year = {2013}
+}
+
+@incollection{ware,
+   address = {Boston},
+   author = {Colin Ware},
+   booktitle = {Information Visualization (Third Edition) },
+   doi = {http://dx.doi.org/10.1016/B978-0-12-381464-7.00002-8},
+   edition = {Third Edition},
+   editor = {Ware, Colin },
+   howpublished = {{\url{http://www.sciencedirect.com/science/article/pii/B9780123814647000028}}},
+   isbn = {978-0-12-381464-7},
+   pages = {31 - 68},
+   publisher = {Morgan Kaufmann},
+   series = {Interactive Technologies},
+   title = {Chapter Two - The Environment, Optics, Resolution, And The Display },
+   url = {http://www.sciencedirect.com/science/article/pii/B9780123814647000028},
    year = {2013}
 }
 
@@ -2572,9 +4412,19 @@ Jeffrey},
    year = {2019}
 }
 
+@misc{webstats,
+   author = {InternetLiveStats},
+   howpublished = {{\url{https://www.internetlivestats.com/total-number-of-websites/}}},
+   note = {Accessed: 2020-1-3},
+   title = {{Total Number Of Websites - Internet Live Stats}},
+   url = {https://www.internetlivestats.com/total-number-of-websites/},
+   year = {2020}
+}
+
 @article{whitehouse1,
    author = {Whitehouse, L. E. and Tomlin, A. S. and Pilling, M. J.},
    doi = {10.5194/acp-4-2025-2004},
+   howpublished = {{\url{https://www.atmos-chem-phys.net/4/2025/2004/}}},
    journal = {Atmospheric Chemistry and Physics},
    number = {7},
    pages = {2025--2056},
@@ -2584,8 +4434,21 @@ Jeffrey},
    year = {2004}
 }
 
+@book{wingedhorse,
+   author = {Descartes, R. and Cottingham, J. and Williams, B.},
+   howpublished = {{\url{https://books.google.co.uk/books?id=yMwiTTpwasgC}}},
+   isbn = {9780521558181},
+   lccn = {86012898},
+   publisher = {Cambridge University Press},
+   series = {Cambridge Texts in the History of Philosophy},
+   title = {Descartes: Meditations On First Philosophy: With Selections From The Objections And Replies},
+   url = {https://books.google.co.uk/books?id=yMwiTTpwasgC},
+   year = {1996}
+}
+
 @article{wired,
    author = {Anderson, Chris},
+   howpublished = {{\url{http://www.wired.com/print/science/discoveries/magazine/16-0}}},
    journal = {online},
    title = {{The End Of Theory: The Data Deluge Makes The Scientific Method
 Obsolete}},
@@ -2593,10 +4456,29 @@ Obsolete}},
    year = {2008}
 }
 
+@misc{worldmap,
+   author = {{Martin Grandjean}},
+   howpublished = {{\url{http://www.martingrandjean.ch/connected-world-air-traffic-network/}}},
+   note = {Accessed: 2019-12-16},
+   title = {{Connected World: Untangling The Air Traffic Network}},
+   url = {http://www.martingrandjean.ch/connected-world-air-traffic-network/},
+   year = {2016}
+}
+
+@article{yh,
+   author = {Hu, Yifan},
+   howpublished = {{\url{http://yifanhu.net/PUB/graph_draw.pdf}}},
+   journal = {web},
+   title = {{Efficient, High-Quality Force-Directed Graph Drawing}},
+   url = {"http://yifanhu.net/PUB/graph_draw.pdf"},
+   year = {2004}
+}
+
 @article{zmatrix,
    author = {Parsons, Jerod and Holmes, J Bradley and Rojas, J Maurice and
 Tsai, Jerry and Strauss, Charlie E M},
    doi = {10.1002/jcc.20237},
+   howpublished = {{\url{http://dx.doi.org/10.1002/jcc.20237}}},
    issn = {0192-8651},
    journal = {Journal of computational chemistry},
    language = {en},

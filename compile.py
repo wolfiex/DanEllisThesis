@@ -1,5 +1,5 @@
 
-import os, sys, glob, re
+import os, sys, glob, re, subprocess
 def make(filename):
     os.system('pdflatex '+filename)
     print('.')
@@ -10,9 +10,12 @@ def make(filename):
     print('.')    
     os.system('pdflatex '+filename)
     print('.')
-    err = os.popen('pdflatex '+filename).read()
+    #err = os.popen('pdflatex '+filename) # .read()
+    
+    p = subprocess.Popen(['pdflatex',filename], stdout=subprocess.PIPE)
+    err = p.communicate()[0].decode('utf8').encode('utf8')
     print('.')
-    print(re.findall(r'[Ww]arning:.*line\s\d+\.',err) )
+    print(re.findall(r'[Ww]arning:.*line\s\d+\.',str(err)) )
 
     for i,b in enumerate(bib):
         print ('-'*10,'\n',bf[i],'\n','-'*10)

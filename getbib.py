@@ -7,6 +7,9 @@ Checks:
     - missing Years
     - missing ID
     - missing Author
+    
+Additions:
+    - url to howpublished
 '''
 import glob, os, re
 import bibtexparser
@@ -21,6 +24,7 @@ fbib = glob.glob('./*/*.bib')
 
 print(fbib)
 
+stp = re.compile(r'"|\'|\{|\}|')
 
 def locate(x):
     return print('\u001b[31m' + os.popen('grep -inr "%s" */*.bib'%x).read() + '\u001b[0m')
@@ -67,6 +71,12 @@ for i in range(len(entries)):
         locate(entries[i]['ID'])
         entries[i]['year'] = '2020'
         print ('note="Accessed: 2020-1-1",')
+        
+    try:
+        url = entries[i]['url'].replace('\\url','')
+        entries[i]['howpublished']= '\\url{%s}'%stp.sub('',url)
+    except:
+        None
     
 
 dup(entries,'ID')
