@@ -1,54 +1,58 @@
 
 \section{Introduction}
+\autoref{ch1} viewed the imporance of a carefully selected visualisation/metaphor in the representation of scientific data. One such category is that of relational data, where we have a set of items, joined by a chosen relationship. Historicaly
+this type of problem has often been solved through the use of sociographs to show a set of items and the links between them. 
 
-The previous chapter established the importance of choosing the correct medium and metaphor for the understanding of complex datasets. For relational data exploring the relationship between any set of items, the sociograph style of representation was found to be the most effective. This chapter builds on that analogy and explores how this may be further improved. I start with looking at the current use of sociograms within chemistry (\autoref{sec:chemgraph}), the methods in which these can be made more useful (\autoref{syntatic},\autoref{semantic}), and finally apply this to a case study representing the atmospheric chemistry within the city of Beijing, China (\autoref{sec:chemcase}).
+Using that analogy, this chapter begins by looking at the use of sociograms in chemistry (\autoref{sec:chemgraph}) and the different ways in which these can help convey information to the reader (\autoref{syntatic}, \autoref{semantic}). These sections find the force directed graph to be the most suited for representing the chemical reactions within a mechanism, and therefore this shall be applied to the network of reactions representing the chemistry within an urban environment - Beijing (\autoref{sec:chemcase}).
 
-\subsection{Networks and their role within Visual Analytics (VA)} \label{sec:va}
-Networks are present everywhere - This ranges from interactions within social media to bank transactions, internet routing, animal migration (nature paper with good vis), epidemiology, transport, everywhere... \cite{worldmap,a,b,c}. This is because the sociogram (or graph) structure may be applied to any set of items which contain one or more relationships between them. With academia, networks have been invaluable to the field of gene-activation and metabolic pathways (Biology);\textit{EXAMPLE FIX: suspects and organised crime / terrorist cells (secret service or police) and the complex networks of relationships between system components and users (software engineering) \cite{IPSEPCOLA} }. Within the information visualisation field (InfoVis), items are referred to as nodes, or vertices, and their relationships are called edges, or links \cite{ch1}. These terms can be used interchangeably and will do, throughout this thesis. 
+
+\subsection{Networks and their role in Visual Analytics} \label{sec:va}
+Networks are present everywhere - this ranges from interactions within social media to bank transactions, internet routing, genetics to epidemiology \citep{worldmap, epidim, neo4j,netneuro,prbank,ch4,ch8,ch9}. This is because the sociogram (or graph) structure may be applied to any set of items which contain one or more relationships between them. In visualisation these `items' are often referred to as nodes/vertices, and their relationships edges or links \citep{ch1}. These terms can be used interchangeably and will do, throughout this thesis. 
 
 
 \subsection{Graphs in Chemistry}\label{sec:chemgraph}
-
-
-
-Node link representations have been a core part of the field of chemistry for many years. They are integral in the representation of molecules, using the ball-stick (graph) style analogy, both physically (with the aid of molecular model kits) or pictorially to show various structural properties, \autoref{fig:mol}. Using such analogies aid in the tasks of identifying the features, functional groups and bond properties of the species and how they can react.  
+Node-link representations have been a core part of the field of chemistry for many years, showing the types of bonds between different atoms. They are integral in the representation of molecules, using the ball-stick (graph) style analogy, both physically (with the aid of molecular model kits) or pictorially to show various structural properties (\autoref{fig:mol}). Using such analogies aid in the tasks of identifying the features, functional groups and bond properties of the species and how they can react.  
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.24\textwidth}
+    \begin{subfigure}[b]{0.34\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures_c1/mol2d.png}
-        \caption{2D `classic'\\ representation}
+        \includegraphics[width=\textwidth]{C141CO3.png}
+        \caption{2D `classic'}
     \end{subfigure}
-    \begin{subfigure}[b]{0.235\textwidth}
+    \begin{subfigure}[b]{0.35\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{figures_c1/mol3d.png}
-        \caption{3D representation}
+        \includegraphics[width=\textwidth]{C141CO33d.png}
+        \caption{3D}
     \end{subfigure}
-       \caption{\textbf{An example molecule represented in two and three dimensions.} These have been created  using the SmilesJS and Mol3D software, \cite{smiles, mol3d} }
+       \caption{\textbf{The molecule \ce{C141CO3} shown in both 2D and 3D node-link structures.} This is a the result of a series of inorganic species reactions and a desocciation from BCARY - the only sesqueterpine in the MCM.  3D visualisation by \citep{mol3d}. }
        \label{fig:mol}
 \end{figure}
 
-Within the master chemical mechanism (MCM) \cite{mcm}, referenced in \autoref{sec:dataset}, we see such properties used used to determine the reaction pathways species may undergo \autoref{fig:protocol}. In mechanistic development, the degradation of larger species is represented as a series of interconnected reactions in the form of a reaction cycle, \autoref{fig:butane}. Such patterns often have to be manually simplified to best represent the chemistry of the system. 
+\subsubsection{Using sociograms to describe reactions}
+
+A collection of reactions representing the chemistry of a region is called a mechanism. The Master Chemical Mechanism \citep{mcm} provides a collection of equation describing the gas phase chemistry which exists within the troposphere (\autoref{sec:dataset}). In its use in policy, and the evaluation of Air Quality Models (\citep{defra1}), it is often useful to understand the degregation process different VOCs undergo. In general this may be done using a series of interconnected reactions in the form of a reaction cycle (as shown in \autoref{fig:butane}). This type of sociograph shows the directional nature of chemical reactions and the relationships between different species. This has many similarities to a conventional directed graph, except that species (nodes) are sometimes duplicated to aid in the clarity of the figure.
+
+This is a great example of how the flow-like nature of a sociogram aids in the understanding of a potentially complex chemical system of 171 organic species and 600 reactions. Evolutionary traits, including teh genetic predisposition to interprate shapes faster than text (\citep{sapiens}) make the graph strucure a much better method for representing such a system.
 
 \begin{figure}[H]
     \centering
         \includegraphics[width=\textwidth]{figures_c1/butane.png}
 
-       \caption{\textbf{A systematic representation of the degregation of butane.} Source: \cite{butane} }
+       \caption{\textbf{A systematic representation of the degregation of butane.} Using this we are able to see the process \ce{C4H10} undergoes before its ultimate demise as carbon monoxide and water. Source: \citep{butane} }
        \label{fig:butane}
 \end{figure}
 
-This type of sociograph has many similarities with a simple directed graph. Links are representative of the direction of reaction and show the relationships between different species (the nodes). The main difference between this and a conventional graph is that species have been duplicated to aid clarity, a feature which will not occur with the core mechanism, and consequently any mathematical graph which may be generated from it. The flow-like nature makes this type of representation makes it easier to understand as a human, than any list of reactions could ever be. The reason for this lies in a combination of evolutionary traits, whereupon we are genetically predispositioned to comprehend patterns and intemperate shapes faster than written characters. 
+
 
 
 \subsection{Modeling chemistry as a directed graph.}
 
 Historically it is seen that the graph format has proven to be an efficient means of understanding the reactions within a mechanism. Traditionally these are constructed manually, with the designer making a series of choices on how best to place, and simplify the chemistry based on their application. As our understanding of chemistry improves and we begin to progress into automated and semi-automated mechanism construction. This makes the construction of mechanisms with tens of millions of species and billions of reaction possible. It is at this point where the manual design and simplification of reaction networks becomes infeasible. 
 
-Today automatic graph layouts allow us to generate multivariate and complex graphs easily. This means that, much like in the construction of a mechanism, we can rely on computer-aided design to generate a directed graph representation of the chemistry. \cite{sciamerican} states that "The beauty of a good information graphic is that it can tell a whole story in a single unit of visual content". This is particularly true for the use of directed graphs in chemistry where we can compare different mechanism subsets,(\autoref{fig:meccomp}) or model simulations (\autoref{sec:diurnal}).
+Today automatic graph layouts allow us to generate multivariate and complex graphs quickly. This means that, much like in the construction of a mechanism, we can rely on computer-aided design to generate a directed graph representation of the chemistry. \citep{sciamerican} states that "The beauty of a good information graphic is that it can tell a whole story in a single unit of visual content". This is particularly true for the use of directed graphs in chemistry where we can compare different mechanism subsets,(\autoref{fig:meccomp}) or model simulations (\autoref{sec:diurnal}).
 
-However, as with everything several problems emerge from the complete automation of a task. Firstly real-world data very rarely reacts how it is expected to. Here networks of high edge density often obfuscate the graph data, and produce what is only described as a `birds nest', `hairball' or `ball of yarn' within the literature, \cite{ch7}. Although such disasters and mishaps can be seen as moments of turbulence, they encourage a greater understanding of the design process and can catalyze to merge dissimilar ideas into an effective visualisation \cite{goodideas}. 
+However, as with everything, several problems emerge from the complete automation of a task. Firstly real-world data very rarely reacts how it is expected to. Here networks of high edge density often obfuscate the graph data and produce what is only described as a `birds nest', `hairball' or `ball of yarn' within the literature, \citep{ch7}. Although such disasters and mishaps can be seen as moments of turbulence, they encourage a greater understanding of the design process and can catalyze to merge unique ideas into an effective visualisation \citep{goodideas}. 
 
 
 
@@ -80,32 +84,32 @@ However, as with everything several problems emerge from the complete automation
 % “In fast-paced settings, it is important to know if the visualization is going to be so complex that the signals may be obscured,” explained Eugene Wu, an assistant professor of computer science and co-author of a paper on this method. For instance, 
 
 
-%in high-stakes medical settings, such as when physicians are reading EEGs in emergency rooms, the most important information needs to stand out quickly in a visualization, which can be obscured by a static of unnecessary data.
+%in high-stakes medical settings, such as when physicians are reading EEGs in emergency rooms, the most critical information needs to stand out quickly in a visualization, which can be obscured by static of unnecessary data.
 
 % Such developments could further empower scientists to discover trends and patterns in their data.
 
 % ILLUSTRATIONS THAT HELP US UNDERSTAND SCIENCE
-% Visualizing large quantities of complex information in an elegantly simple way is no easy task. That’s why Killer differentiates visual communication from design: the former is a specialized skill that involves juggling both form and function, so that you create something that’s not only beautiful, but meaningful as well.
+% Visualizing large quantities of complex information in an elegantly simple way is no easy task. That is why Killer differentiates visual communication from design: the former is a specialized skill that involves juggling both form and function so that you create something that’s not only beautiful but meaningful as well.
 
 
 
 % \\\\\
 
-% The beauty of a good information graphic is that it can tell a whole story in a single unit of visual content. As much as I’ve come to roll my eyes at the overused headline format, “[Such and Such Concept] Explained in One Graphic,” this convention does capture the strength of the graphic as a medium. (The headline certainly becomes less compelling when revised to read, “[Such and Such Concept] Explained in Several Paragraphs.”) Because while information graphics often do require their audience to do some reading, the text tends to be broken up into manageable chunks and arranged for easy consumption together with visual elements. 
+% The beauty of an excellent information graphic is that it can tell a whole story in a single unit of visual content. As much as I have come to roll my eyes at the overused headline format, “[Such and Such Concept] Explained in One Graphic,” this convention does capture the strength of the graphic as a medium. (The headline indeed becomes less compelling when revised to read, “[Such and Such Concept] Explained in Several Paragraphs.”) Because while information graphics often do require their audience to do some reading, the text tends to be broken up into manageable chunks and arranged for easy consumption together with visual elements. 
 
-% There is also something about an information graphic that inspires trust in its content; seeing a concept visualized gives it a certain amount of objective weight. Surely this idea can be used to ignoble ends, as seen in certain deliberately deceptive data visualizations. But more often than not, I believe it is harder to lie with a graphic than it is with words alone—if only because it requires much more effort to visualize something for which there exists no factual reference. 
+% There is also something about an information graphic that inspires trust in its content; seeing a concept visualized gives it a certain amount of actual weight. Surely this idea can be used to ignoble ends, as seen in certain deliberately deceptive data visualizations. Nevertheless, more often than not, I believe it is harder to lie with a graphic than it is with words alone—if only because it requires much more effort to visualize something for which there exists no factual reference. 
 
 % https://blogs.scientificamerican.com/sa-visual/how-science-visualization-can-help-save-the-world/
 
 \section{Graph Design}
-In the graph design process there are two main areas which require consideration - these are syntatic (\autoref{semantic}) and semantic (\autoref{syntatic}) representation. In this section I will explore the different automated graph layouts which can be used to represent our data (syntatic) and the methods in which we may increase the net amount of useful information presented to the user once the graph layout has completed (semantic). 
+In the graph design process, there are two main areas which require consideration - these are syntactic (\autoref{semantic}) and semantic (\autoref{syntatic}) representation. In this section, I will explore the different automated graph layouts which can be used to represent our data (syntactic) and the methods in which we may increase the net amount of useful information presented to the user once the graph layout has completed (semantic). 
 
 
 
 \subsection{Graph Syntatics}\label{syntatic}
 
  Syntactic representation considers how best to distribute the information on the given page for maximum impact. An example of this is seen in \autoref{fig:worldmap}, whereupon the flights between airports are represented using a force-directed graph layout (top), and their geolocation (bottom). 
- The graph provides a clearer representation on the relationships between airports, whilst the geo layout gives a more accurate representation of the distances between unconnected nodes (airports). Decisions on what syntatics best represent the feature of interest are an important part of the visualisation process. 
+ The graph provides a cleaner representation of the relationships between airports, whilst the geo layout gives a more accurate representation of the distances between unconnected nodes (airports). Decisions on what syntactic best represent the feature of interest are an essential part of the visualisation process. 
  
 \begin{figure}[H]
      \centering 
@@ -114,33 +118,33 @@ In the graph design process there are two main areas which require consideration
      \includegraphics[width=\textwidth]{figures_c1/layout/layoutforce.png}
      \includegraphics[width=\textwidth]{figures_c1/layout/layoutgeo.png}
      \end{subfigure}
-        \caption{\textbf{Comparison of different representations of flight data by \cite{worldmap}.} The top figure shows the data represented by a force directed graph layout (described below) and a Geo-layout showing each point at its location on the Earth.}
+        \caption{\textbf{Comparison of different representations of flight data by \citep{worldmap}.} The top figure shows the data represented by a force directed graph layout (described below) and a Geo-layout showing each point at its location on the Earth.}
         \label{fig:worldmap}
 \end{figure}
 
 
 \subsubsection{Criterion Choices}
-Since chemical networks can provide a wealth of information, this can prove challenging to both user cognition and  physical (computational) resources \cite{ch1}.There are many metrics for improving a visualisations aesthetics, \cite{metricgraphaesthetics}, however theseare often evaluated only for a limited number of criterions. This makes it diffucult to accurately quantify the changes in user-readability, especially if these are treated differently than was originally intended, \cite{eyetrack}. 
+Since chemical networks can provide a wealth of information, this can prove challenging to both user cognition and physical (computational) resources \citep{ch1}. There are many metrics for improving a visualisations aesthetics, \citep{metricgraphaesthetics}, however, these are often evaluated only for a limited number of criteria. This makes it difficult to accurately quantify the changes in user-readability, especially if these are treated differently than was originally intended, \citep{eyetrack}. 
 
 
 \paragraph*{Edge Crossing and Bends} \label{edgecross}
-One of the greatest limitations to understanding a graph is the number of crossing edges \cite{humanaesthetic}. Experimentation with eye tracking software found that in determing information about the structure of a system users spent more time looking at the edges than the nodes themselves, \cite{eyetrack}. 
+One of the greatest limitations to understanding a graph is the number of crossing edges \citep{humanaesthetic}. Experimentation with eye-tracking software found that in determining information about the structure of a system, users spent more time looking at the edges than the nodes themselves, \citep{eyetrack}. 
 
-Several styles of layout algorithms (e.g. force-directed, orthogonal) aim to reduce these by introducing repulsive forces, or constraining the shape of each edge within the graph. The use of orthogonal designs has been proven for circuit chematics and transport networks, however they lose any information that may be encoded in a nodes relative location. A reduction of the accuracy is also seen in simple tasks where users are required to name the nodes along a chosen path compared to a force directed layout (58/100:92/100), \cite{eyetrack}. Finally the use of bends may be misleading as users can perceive them as multiple separate objects \cite{aestheticsgraphvis}.
+Several styles of layout algorithms (e.g. force-directed, orthogonal) aim to reduce these by introducing repulsive forces or constraining the shape of each edge within the graph. The use of orthogonal designs has been proven for circuit schematics and transport networks, however, they lose any information that may be encoded in a nodes relative location. A reduction of the accuracy is also seen in simple tasks where users are required to name the nodes along a chosen path compared to a force-directed layout (58/100:92/100), \citep{eyetrack}. Finally, the use of bends may be misleading as users can perceive them as multiple separate objects \citep{aestheticsgraphvis}.
     
  
 \paragraph*{Node Distribution}
-Having nodes equally distributed across the visualisation area can also increase the readablity of a grap. In addition to preventing overlapping edges, equally distributed networks with medium lengh edges greatly improves the `flow' of the diagram. Coupling this with graphical-symmetry is seen as the next most important user-ranked preference, \cite{ch6graphredability}. 
+Having nodes equally distributed across the visualisation area can also increase the readability of a graph. In addition to preventing overlapping edges, equally distributed networks with medium length edges greatly improve the `flow' of the diagram. Coupling this with graphical-symmetry is seen as the next most important user-ranked preference, \citep{ch6graphredability}. 
 
 
 \paragraph*{Node Overlap}
-As with overlapping edges, if two nodes are positioned in the same point in space it makes it difficult to read a graph. Historically many algorithms treat nodes as point masses which would makes it dificult of designers to remove the overlap betwen them \cite{nodeoverlap}.
+As with overlapping edges, if two nodes are positioned in the same point in space, it makes it difficult to read a graph. Historically many algorithms treat nodes as point masses which would make it difficult of designers to remove the overlap between them \citep{nodeoverlap}.
 
-To remove any node overlap there are two main methods, \cite{IPSEPCOLA}. These are:
+To remove any node overlap, there are two main methods, \citep{IPSEPCOLA}. These are:
 
 \begin{itemize}
-\item [1.] Create a layout design capable of taking node size (e.g., \cite{nons}) into concideration. These designs tend to be layout specific and not absolute in removing all overlap between nodes. 
-\item [2.] This requires a level of post processing in the form of a `layout adjustment'. Here we reposition nodes after a chosen layout has finished computing. The drawback of this method is that information contained in the graph's shape may be degraded. This can be done through the use of collision detection, or moving nodes to the centre of the vernouli cells \cite{novern}. 
+\item [1.] Create a layout design capable of taking node size (e.g., \citep{nons}) into consideration. These designs tend to be layout specific and not absolute in removing all overlap between nodes. 
+\item [2.] This requires a level of post-processing in the form of a `layout adjustment'. Here we reposition nodes after a chosen layout has finished computing. The drawback of this method is that information contained in the graph's shape may be degraded. This can be done through the use of collision detection, or moving nodes to the centre of the vernouli cells \citep{novern}. 
 \end{itemize}
 
 
@@ -155,17 +159,17 @@ To remove any node overlap there are two main methods, \cite{IPSEPCOLA}. These a
 
 \subsection{Automated Graph Drawing Layouts}\label{sec:drawing}
 
-In their design and evaluation, automatic graph drawing algorithms are created as to minimise a specific criterion. In this subsection I explore several graph drawing algorithms, and juxtapose them to determine which may be best suited for the applictaion to atmospheric chemistry model representation. To do this a MCM subset representative of the APHH Beijing campaign [?ref?] is used. This provides the foundation for a real-world case study which may be simulated in a chemical model. 
+In their design and evaluation, automatic graph drawing algorithms are created to minimise a specific criterion. In this subsection, I explore several graph drawing algorithms and juxtapose them to determine which may be best suited for the application to atmospheric chemistry model representation. To do this, an MCM subset representative of the APHH Beijing campaign [?ref?] is used. This provides the foundation for a real-world case study which may be simulated in a chemical model. 
 
 \subsubsection{Replication of hand-drawing methods}
-With the rise of computation many traditional visualisations were adapted for computer aided generation. Fields of architecture and circuit design adopted computational software to alleviate some of the difficulties presented by large or complex designs. Similar ideas such as the use of automatically generated transit maps  can be used to link chronological or topological items such as ideas, \cite{memory}. \autoref{fig:mem} shows all the possible paths for the oxidation of methane to produce carbon dioxide (and water). Although such methods can be useful in showing isolated path ways, they provide a convoluted representation of large interconnected systems and require some manual intervention. 
+With the rise of computation, many traditional visualisations were adapted for the computer-aided generation. Fields of architecture and circuit design adopted computational software to alleviate some of the difficulties presented by large or complex designs. Similar ideas such as the use of automatically generated transit maps can be used to link chronological or topological items such as ideas, \citep{memory}. \autoref{fig:mem} shows all the possible paths for the oxidation of methane to produce carbon dioxide (and water). Although such methods can be useful in showing isolated pathways, they provide a convoluted representation of large interconnected systems and require some manual intervention. 
 
 
 
 \begin{figure}[H]
      \centering
      \includegraphics[width=0.25\textwidth]{figures_c1/layout/memory.png}
-         \caption{\textbf{A transit map showing all the possible routes from methane to carbon dioxide.} This was drawn using MemoryMap (\cite{memory}) and uses a version of the MCM methane subset, where carbon dioxide has been introduced. }
+         \caption{\textbf{A transit map showing all the possible routes from methane to carbon dioxide.} This was drawn using MemoryMap (\citep{memory}) and uses a version of the MCM methane subset, where carbon dioxide has been introduced. }
         \label{fig:mem}
 \end{figure}
 
@@ -174,7 +178,7 @@ With the rise of computation many traditional visualisations were adapted for co
 
 
 \subsubsection{Projection Based}\label{sec:merc}
-One of the oldest fields of data visualisation fall in the realm of cartography. Here the shapes and distances between points on the surface of the earth (an oblate spheroid) are mathematically mapped onto a 1D plane for graphing purposes \cite{projections}. Since the process of dimensionality reduction will produce inherent distortions within the final product, we end up with a range of map projections, with each striving to achieve a different aim, \autoref{fig:projections}. The Pierce Quincucial for example is a conformal mapping technique mapping the surface of a sphere to a square with very little deviation in scale and the ability to be tessellated in all directions. The Mercator  on the other hand is a cylindrical projection which grew in popularity due to its unique ability to represent any course of constant bearing\footnote{Also known as a `rhumb`, or `loxodrome`, and consists of an arc crossing all meridians of longitude at the same angle.} as a linear segment within the shipping and navigation industry. 
+One of the oldest fields of data visualisation fall in the realm of cartography. Here the shapes and distances between points on the surface of the earth (an oblate spheroid) are mathematically mapped onto a 1D plane for graphing purposes \citep{projections}. Since the process of dimensionality reduction will produce inherent distortions within the final product, we end up with a range of map projections, with each striving to achieve a different aim, \autoref{fig:projections}. The Pierce Quincuncial, for example, is a conformal mapping technique mapping the surface of a sphere to a square with minimal deviation in scale and the ability to be tessellated in all directions. The Mercator, on the other hand, is a cylindrical projection which grew in popularity due to its unique ability to represent any course of constant bearing\footnote{Also known as a `rhumb`, or `loxodrome`, and consists of an arc crossing all meridians of longitude at the same angle.} as a linear segment within the shipping and navigation industry. 
 
 \begin{figure}[H]
      \centering
@@ -192,11 +196,11 @@ One of the oldest fields of data visualisation fall in the realm of cartography.
      \includegraphics[width=\textwidth]{figures_c1/layout/mercator.png}
      \caption{Mercator}
      \end{subfigure}
-        \caption{\textbf{A selection of map projections.} These have been created using DataDrivenDocuments (\cite{d3}) and show a range of methods for mapping the spheroid shape of the Earth onto a 2D plane. }
+        \caption{\textbf{A selection of map projections.} These have been created using DataDrivenDocuments (\citep{d3}) and show a range of methods for mapping the spheroid shape of the Earth onto a 2D plane. }
       \label{fig:projections}
 \end{figure}
 
-More recently, the mathematics of mapping a large dimension onto a simpler one have been applied to the problem of graph representation. \cite{mercgraph} uses the hyperbolic latent geometry of the Mercator layout to provide a 2D embedding for real-world complex networks. This produces a polar representation of the system, where relationships of like species are of the same angle, with nodes of a high degree being closer to the centre (low $r$ value). This produces a layout, \autoref{fig:merc}, where primary emitted species (orange dots) are uniformly (radially) distributed and important (highly connected) nodes close to the centre (small radial component). Although the Mercator embedding does reduce the `hairball' problem experienced by other layouts, it does not take edge weight/direction or self loops. This means that it works well for the representation of the general network layout, but cannot be used for advanced data exploration concerning simulation results.  
+More recently, the mathematics of mapping a large dimension onto a simpler one has been applied to the problem of graph representation. \citep{mercgraph} uses the latent hyperbolic geometry of the Mercator layout to provide a 2D embedding for complex real-world networks. This produces a polar representation of the system, where relationships of related species are of the same angle, with nodes of a high degree being closer to the centre (low $r$ value). This produces a layout, \autoref{fig:merc}, where primary emitted species (orange dots) are uniformly (radially) distributed and influential (highly connected) nodes close to the centre (small radial component). Although the Mercator embedding does reduce the `hairball' problem experienced by other layouts, it does not take edge weight/direction or self-loops. This means that it works well for the representation of the general network layout, but cannot be used for advanced data exploration concerning simulation results.  
 
 
 \begin{figure}[H]
@@ -217,21 +221,21 @@ More recently, the mathematics of mapping a large dimension onto a simpler one h
 
 \subsubsection{Force-Directed}
 
-Force directed graph layouts are the results of the Spring-Electrical model. This was first introduced by \cite{Eades}, and further improved by \cite{raingold}. Force-directed layouts are in essence a simple physics simulation of of like-charged particles (or nodes). These particles are repulsed by eachother, much like protons experiencing Coulomb repulsion, and try to get as far away from each other. Should a relationship exist between two nodes, we introduce an attractive force between them. These attractive forces act much like springs drawing the nodes back together. 
+Force-directed graph layouts are the results of the Spring-Electrical model. This was first introduced by \citep{Eades} and further improved by \citep{raingold}. Force-directed layouts are in essence a simple physics simulation of like-charged particles (or nodes). These particles are repulsed by each other, much like protons experiencing Coulomb repulsion, and try to get as far away from each other. Should a relationship exist between two nodes, we introduce an attractive force between them. These attractive forces act much like springs drawing the nodes back together. 
 
-In the case of a weighted graph (where each link (or relationship) has a value associated with it, we can adjust the spring coefficient of the attractive force to reflect this. This results in a layout where strongly connected objects are drawn together, and weakly connected ones further away. Uses for this type of representation have been seen biology, social networks, and with this thesis atmospheric chemistry \cite{ch3,ch4}.
+In the case of a weighted graph (where each link (or relationship) has a value associated with it, we can adjust the spring coefficient of the attractive force to reflect this. This results in a layout where strongly connected objects are drawn together, and weakly connected ones further away. Uses for this type of representation have been seen biology, social networks, and with this thesis atmospheric chemistry \citep{ch3,ch4}.
 
 
 
 \paragraph*{Barnes Hut Algorithm}
-Since calculating the attractive/repulsive forces for each node of a large graph can be computationally intensive, many force directed layouts rely on the Barnes-Hut approximation.
+Since calculating the attractive/repulsive forces for each node of a large graph can be computationally intensive, many force-directed layouts rely on the Barnes-Hut approximation.
 
 This solves the N-body problem of pairwise reactions between nodes, $O(n^2)$, by approximating long-range reactions by grouping such nodes and applying a single action on their centre of mass- reducing the computational time to $n \log n$.  
 
-To do this, first a spatial index of each node is constructed (see below). This can either be done using a quadtree (2D) or octree (3D) algorithm. Next the centres of mass are calculated, and finally the repulsive forces for the graph are approximated. 
+To do this, first, a spatial index of each node is constructed (see below). This can either be done using a quadtree (2D) or octree (3D) algorithm. Next, the centres of mass are calculated, and finally, the repulsive forces for the graph are approximated. 
 
 \textbf{Quadtree Construction:}
-A quadtree is the recursive partitioning of two dimensional space into a set of quadrants (a set of 4 squares). This process is repeated, with each square then being divided into 4 itself, until there is only a single point within a cell\footnote{See \autoref{fig:quadtile} for a complete evolution of the methane quadtree.}. This converts a network, into a hierarchical tree representation of the nested quadrants in which each point resides (a quadtree), \autoref{fig:quadgroup}. 
+A quadtree is the recursive partitioning of two-dimensional space into a set of quadrants (a set of 4 squares). This process is repeated, with each square then being divided into four itself, until there is only a single point within a cell\footnote{See \autoref{fig:quadtile} for a complete evolution of the methane quadtree.}. This converts a network, into a hierarchical tree representation of the nested quadrants in which each point resides (a quadtree), \autoref{fig:quadgroup}. 
 
 
 \begin{figure}[H]
@@ -251,56 +255,12 @@ A quadtree is the recursive partitioning of two dimensional space into a set of 
 \end{figure}
 
 \paragraph{Force Atlas 2}
-The force atlas 2 \cite{fa} algorithm is a force directed layout designed primarily for scale-free\footnote{Definition in next chapter.} network spatilisation. It is primarily designed for the use of networks consisting of 10 to 10,000 nodes and uses barns-hut approximation for the calculation of forces. Attractive forces are derived from the spring-electric model, and follow the trend of $F_a = -k.d$, where k is the spring constant and d is the distance between the two nodes. Optional features for the graph include dissuasion by degree (separating nodes with a high number of total links/reactions), logarithmic attraction forces, adjustable gravity (attraction the centre of mass of the system to prevent disconnected components from drifting away) and collision detection to prevent overlapping nodes. 
+The force atlas two \citep{fa} algorithms is a force-directed layout designed primarily for scale-free\footnote{Definition in next chapter.} network spatialization. It is primarily designed for the use of networks consisting of 10 to 10,000 nodes and uses barns-hut approximation for the calculation of forces. Attractive forces are derived from the spring-electric model, and follow the trend of $F_a = -k.d$, where k is the spring constant and d is the distance between the two nodes. Optional features for the graph include dissuasion by degree (separating nodes with a high number of total links/reactions), logarithmic attraction forces, adjustable gravity (attraction the centre of mass of the system to prevent disconnected components from drifting away) and collision detection to prevent overlapping nodes. 
 
 \paragraph{Yifan Hu}
-The Yifan Hu graph layout, \cite{yh}, is a multi-level graph drawing algorithm which uses the barnes-hut algorithm with an octree layout. As with the force atlas algorith, Yifan Hu also has an adaptive cooling aspect to it. This means that as the algorithm is run, its energy is progressively reduced, allowing the system to settle within a low energy state.  
+The Yifan Hu graph layout, \citep{yh}, is a multi-level graph drawing algorithm which uses the Barnes-hut algorithm with an octree layout. As with the force atlas algorithm, Yifan Hu also has an adaptive cooling aspect to it. This means that as the algorithm is run, its energy is progressively reduced, allowing the system to settle within a low energy state.  
 
-The main difference within the algorithm however is the use of the multilevel approach. This has been applied to graph partitioning [11,12,23], matric ordering [24] and the travelling salesman problem [5]. This works by graph coarsening (coalescing neighbouring nodes and weighting them), running the algorithm on the course graph, prolongation and then refining the results. This produces an algorithm that runs faster than the Force Atlas, however is constrained to only working on un-directed edges.
-
-% [10] G. Karypis and V. Kumar, “Multilevel k-way Partitioning Scheme for Irregular Graphs,”
-% Journal of Parallel and Distributed Computing, 48(1), 1998 pp. 96–129.
-% [11] B. Hendrickson and R. Leland, “A Multilevel Algorithm for Partitioning Graphs,”
-% Technical Report SAND93-1301, Albuquerque, NM: Sandia National Laboratories,
-% 1993. Also in Proceeding of Supercomputing’95 (SC95), San Diego, CA
-% www.supercomp.org/sc95/proceedings/509_BHEN/SC95.HTM.
-% [12] C. Walshaw, M. Cross, and M. G. Everett, “Parallel Dynamic Graph Partitioning for
-% Adaptive Unstructured Meshes,” Journal of Parallel and Distributed Computing, 47(2),
-% 1997 pp. 102–108.
-% [13] D. Harel and Y. Koren, “A Fast Multi-Scale Method for Drawing Large Graphs,” Journal
-% of Graph Algorithms and Applications, 6(3), 2002 pp. 179–202.
-% [14] R. Hadany and D. Harel, “A Multi-Scale Algorithm for Drawing Graphs Nicely,”
-% Discrete Applied Mathematics, 113(1), 2001 pp. 3–21.
-% 70 Yifan Hu
-% The Mathematica Journal 10:1 © 2006 Wolfram Media, Inc.
-% [15] P. Gajer, M. T. Goodrich, and S. G. Kobourov, “A Fast Multi-Dimensional Algorithm for
-% Drawing Large Graphs,” Lecture Notes in Computer Science, 1984, New York:
-% Springer-Verlag, 2000 pp. 211–221.
-% [16] D. Tunkelang, “A Numerical Optimization Approach to General Graph Drawing,”
-% Ph.D. thesis, School of Computer Science, Carnegie Mellon University, Pittsburgh, PA,
-% 1999.
-% [17] A. Quigley and P. Eades, “Fade: Graph Drawing, Clustering, and Visual Abstraction,”
-% Lecture Notes in Computer Science, 1984, New York: Springer-Verlag, 2000
-% pp. 183–196.
-% [18] A. Quigley, “Large Scale Relational Information Visualization, Clustering, and Abstraction,” Ph.D. thesis, Department of Computer Science and Software Engineering,
-% University of Newcastle, Australia, 2001.
-% [19] R. Davison and D. Harel, “Drawing Graphs Nicely Using Simulated Annealing,” ACM
-% Transactions on Graphics, 15(4), 1996 pp. 301–331.
-% [20] R. Fletcher, Practical Methods of Optimization, 2nd ed., New York: John Wiley & Sons,
-% 2000.
-% [21] K. J. Pulo, “Recursive Space Decompositions in Force-Directed Graph Drawing Algorithms,” in Proceedings of the Australian Symposium on Information Visualisation
-% (InVis.au 2001), Sydney, Australia (P. Eades and T. Pattison, eds.), Conferences in
-% Research and Practice in Information Technology Series, 9, Darlinghurst, Australia:
-% Australian Computer Society, 2001 pp. 95–102.
-% [22] S. Pfalzner and P. Gibbon, Many-Body Tree Methods in Physics, New York: Cambridge
-% University Press, 1996.
-% [23] A. Gupta, G. Karypis, and V. Kumar, “Highly Scalable Parallel Algorithms for Sparse
-% Matrix Factorization,” IEEE Transactions on Parallel and Distributed Systems, 8(5), 1997
-% pp. 502–520.
-% [24] Y. F. Hu and J. A. Scott, “A Multilevel Algorithm for Wavefront Reduction,” SIAM
-% Journal on Scientific Computing, 23(4), 2001 pp.1352–1375.
-% [25] C. Walshaw, “A Multilevel Approach to the Travelling Salesman Problem,” Operations
-% Research, 50(5), 2002 pp. 862–877. 
+The main difference within the algorithm, however, is the use of the multilevel approach. This has been applied to graph partitioning [11,12,23], matric ordering [24] and the travelling salesman problem [5]. This works by graph coarsening (coalescing neighbouring nodes and weighting them), running the algorithm on the course graph, prolongation and then refining the results. This produces an algorithm that runs faster than the Force Atlas, however, is constrained to only working on un-directed edges.
 
 \paragraph{OpenOrd}
 
@@ -310,9 +270,9 @@ INSERT SOMETHING HERE
 
 
 \paragraph*{Simulated Annealing}
-Most iterative layouts are updated interactively from some initial configuration. In most cases this results in a minimum configuration however this is generally a local minimum rather than the desired global minimum \cite{nicelyanneal}. To overcome this the work of \cite{metropolis}, which was later formulated in general terms by \cite{kirkpatrick} was used to lay the foundation for simulated annealing algorithms.
+Most iterative layouts are updated interactively from some initial configuration. In most cases this results in a minimum configuration; however this is generally a local minimum rather than the desired global minimum \citep{nicelyanneal}. To overcome this, the work of \citep{metropolis}, which was later formulated in general terms by \citep{kirkpatrick} was used to lay the foundation for simulated annealing algorithms.
 
-Annealing is usually used to describe the slow cooling applied to liquids for them to reach a crystalline (totally ordered, minimum energy) form. Relating this to the spring-electrical model, it can be seen that if the atoms(nodes) are cooled too rapidly, they will from amorphous structures representing the local minima, as opposed to the desired global one.  If cooled slowly, our graph is allowed to find a thermal equilibrium at every temperature. Working from this idea, a slow cooling constant is applied, whilst occasionally supplying the system with short bursts of energy, that may allow it to overcome local minima. 
+Annealing is usually used to describe the slow cooling applied to liquids for them to reach a crystalline (totally ordered, minimum energy) form. Relating this to the spring-electrical model, it can be seen that if the atoms(nodes) are cooled too rapidly, they will form amorphous structures representing the local minima, as opposed to the desired global one.  If cooled slowly, our graph is allowed to find a thermal equilibrium at every temperature. Working from this idea, a slow cooling constant is applied, whilst occasionally supplying the system with short bursts of energy, that may allow it to overcome local minima. 
 
 
 
@@ -320,17 +280,17 @@ Annealing is usually used to describe the slow cooling applied to liquids for th
 
 \subsubsection{Layout Selection}
 
-Criteria, such as ability to isolate the shortest path (in our case most reactive flux), are important in determining the usefulness of a graph. Comparing different layouts \cite{eyetrack} found 68\% of user chosen routes to reflect the shortest path between them. This is due to the force directed layout placing a greater emphasis on node positions and distance than other layouts. For comparison the same study found this to be 40\% for hierarchical layouts, and only 2\% for orthogonal ones. In this subsection I look at the use of different graph layouts, and their effect on the user readability of a graph. 
+Criteria, such as the ability to isolate the shortest path (in our case most reactive flux), are essential in determining the usefulness of a graph. Comparing different layouts \citep{eyetrack} found 68\% of user-chosen routes to reflect the shortest path between them. This is due to the force-directed layout placing a greater emphasis on node positions and distance than other layouts. For comparison, the same study found this to be 40\% for hierarchical layouts and only 2\% for orthogonal ones. In this subsection, I look at the use of different graph layouts, and their effect on the user readability of a graph. 
 
 
 \paragraph{Node Distribution}\label{sec:nodedist}
 
-It is known that in partitioning the screen into quartiles with equal numbers of nodes (homogeneity) greatly improves the usability of a graph and increases symmetry, \cite{ch6graphredability}. The main problem with node-link diagrams is that in represeneting complex data using an algorithmic layout can often result in regions of dense, indecipherable links, called hairballs, \cite{vislarge}. Hairballs obscure nodes and edges within a region, maiking it impossible to read. Methods such as the pruning of edges, \cite{edgeprune} can be applied to networks as a means of reducing the complexity. This may be applied post computation (syntatic representation), which results in the loss of information, or during the algorithmic approximation in the OpenOrd algorithm, to produce clearer node positioning, with the edges re-introduced at the visualisation level. 
+It is known that in partitioning the screen into quartiles with equal numbers of nodes (homogeneity) considerably improves the usability of a graph and increases symmetry, \citep{ch6graphredability}. The main problem with node-link diagrams is that in representing complex data using an algorithmic layout can often result in regions of dense, indecipherable links, called hairballs, \citep{vislarge}. Hairballs obscure nodes and edges within a region, making it impossible to read. Methods such as the pruning of edges, \citep{edgeprune} can be applied to networks as a means of reducing the complexity. This may be applied post computation (syntactic representation), which results in the loss of information, or during the algorithmic approximation in the OpenOrd algorithm, to produce clearer node positioning, with the edges re-introduced at the visualisation level. 
 
 In deciding which layout algorithm produces the best graph-node homogeneity, a kernel density approach is used to compare node distributions across 2D space in \autoref{fig:merc}b and \autoref{fig:densitycompare}. 
-Here small localised areas of higher density, surrounded with sharp changes in density (shown by the contour lines) is preferabe. Such a distribution would hilight the modularity of a graph and allow for the distinction between groups of species with many reactions between them, but few in another group. Graphs with a high homogeneity can be determined through the use of $x$ and $y$ kernel density plots. Here a homogenious graph will have a uniform distribution across both axis. However as we also wish to locate regions of chemistry with a high modularity (clustering), a uniformly distributed graph would not suffice. Instead we look for a near-uniform oscillatory distribution with an equal amplitude for each peak and trough.Using these criteria the Mercator (\autoref{fig:merc}b), tsNet (\autoref{fig:ts}) and Force Atlas (\autoref{fig:fa}) score the highest, with OpenOrd and Yifan containing a gaussian-like distribution across both axis which is conducive to producing a hariball. 
+Here small localised areas of higher density, surrounded with sharp changes in density (shown by the contour lines) is preferable. Such a distribution would highlight the modularity of a graph and allow for the distinction between groups of species with many reactions between them, but few in another group. Graphs with a high homogeneity can be determined through the use of $x$ and $y$ kernel density plots. Here a homogeneous graph will have a uniform distribution across both axes. However, as we also wish to locate regions of chemistry with high modularity (clustering), a uniformly distributed graph would not suffice. Instead, we look for a near-uniform oscillatory distribution with an equal amplitude for each peak and trough. Using these criteria the Mercator (\autoref{fig:merc}b), tsNet (\autoref{fig:ts}) and Force Atlas (\autoref{fig:fa}) score the highest, with OpenOrd and Yifan containing a gaussian-like distribution across both axes which is conducive to producing a hairball. 
 
-Next we apply prior knowlege about the graph we are trying to visualise. Here we know that the chemistry within a mechanism is determined by the oxidation of a set of primary emitted VOCs. It therefore follows that for an ideal graph layout each primary emitted species should belong to its area of high density, and not entwined within the hairball. Immediately this notion elimiates the Yifan Hu (\autoref{fig:yfan}) and Mercator (\autoref{fig:merc}b) layouts, since these both contain a high density of primary emitted species (orange crosses) within a single dense region. Using this criterion, the tsNET graph (\autoref{fig:ts}) provides the best representation, followed by the OpenOrd and ForceAtlas layout. 
+Next, we apply prior knowledge about the graph we are trying to visualise. Here we know that the chemistry within a mechanism is determined by the oxidation of a set of primary emitted VOCs. It, therefore, follows that for an ideal graph layout, each primary emitted species should belong to its area of high density, and not entwined within the hairball. Immediately this notion eliminates the Yifan Hu (\autoref{fig:yfan}) and Mercator (\autoref{fig:merc}b) layouts since these both contain a high density of primary emitted species (orange crosses) within a single dense region. Using this criterion, the tsNET graph (\autoref{fig:ts}) provides the best representation, followed by the OpenOrd and ForceAtlas layout. 
 
 
 \begin{figure}[H]
@@ -364,9 +324,9 @@ Next we apply prior knowlege about the graph we are trying to visualise. Here we
 
 
 \paragraph{Node Density}
-Having explored the spatial distribution of nodes within a graph, it is important to determine which layout produces the best node density variation not only across the $x$ and $y$ directions. Here we desire a degree of regular anisotropy to produce `clusters' of densely connected nodes sparsely separated in space. To calculate the distribution between dense and sparsely packed nodes, it is possible to use Voronoi tesselation. Here each node acts as a seed, and the plane is partitioned into a series of $n$ cells, where $n$ is the number of nodes. Each cell or polygon is calculated such that a polygon boundary is determined by all the points which lie closer to its source seed than any other- mathematically this would be defined as the perpendicular bisectors of the lines between all points. The result is somewhat similar to a box full of bubbles, where each bubble fills the largest area it can before meeting another. Next the area of each polygon is calculated and saved to produce a dataset representative of the complete density distribution between nodes. Here larger areas represents a species with distant neighbours (spatially), and a small one, an area of high diensity. The method of using vernouli teselation for the calculation of density has been used in the study of neurones, \cite{neurone} and areas of fixation when viewing images, \cite{fixation}. 
-The last part of this process involves colouring the based on the normalised polygon area values and plotted within \autoref{fig:vornoicompare}. This allows for the easy location of layouts with high isotropy (\autoref{aoo},\autoref{ats}), which only contain many cells of a similar size, and consequently only exhibit a slight colour gradient difference between points. Although such layouts are spatially efficent, they do not reveal any additional information about the network structure. 
-The colouring can also reveal the the spatial modularity of the graph. Here it is seen that the mercator, despite having a great $x-y$ node distribution, still contains large areas of unoccupied space due to its non linear density distribution. Under this criterion the ForceAtlas and YifanHu layouts (\autoref{afa},\autoref{ayfan}) perform best, with distinct modules of high density appearing to be distributed across the graph. 
+Having explored the spatial distribution of nodes within a graph, it is important to determine which layout produces the best node density variation not only across the $x$ and $y$ directions. Here we desire a degree of regular anisotropy to produce `clusters' of densely connected nodes sparsely separated in space. To calculate the distribution between dense and sparsely packed nodes, it is possible to use Voronoi tesselation. Here each node acts as a seed, and the plane is partitioned into a series of $n$ cells, where $n$ is the number of nodes. Each cell or polygon is calculated such that a polygon boundary is determined by all the points which lie closer to its source seed than any other- mathematically this would be defined as the perpendicular bisectors of the lines between all points. The result is somewhat similar to a box full of bubbles, where each bubble fills the largest area it can before meeting another. Next, the area of each polygon is calculated and saved to produce a dataset representative of the complete density distribution between nodes. Here larger areas represents a species with distant neighbours (spatially), and a small one, an area of high density. The method of using vernouli teselation for the calculation of density has been used in the study of neurones, \citep{neurone} and areas of fixation when viewing images, \citep{fixation}. 
+The last part of this process involves colouring the based on the normalised polygon area values and plotted within \autoref{fig:vornoicompare}. This allows for the clear location of layouts with high isotropy (\autoref{aoo},\autoref{ats}), which only contain many cells of a similar size, and consequently only exhibit a slight colour gradient difference between points. Although such layouts are spatially efficent, they do not reveal any additional information about the network structure. 
+The colouring can also reveal the the spatial modularity of the graph. Here it is seen that the mercator, despite having a high $x-y$ node distribution, still contains large areas of unoccupied space due to its non linear density distribution. Under this criterion the ForceAtlas and YifanHu layouts (\autoref{afa},\autoref{ayfan}) perform best, with distinct modules of high density appearing to be distributed across the graph. 
 
 
 
@@ -409,9 +369,9 @@ The colouring can also reveal the the spatial modularity of the graph. Here it i
 
 \paragraph{Mathematical Analysis and Layout selection}
 In addition to the qualitative approach through visualisation, it is also possible represent the polygon areas for each layout in the form of several boxplots, \autoref{abox}. The interquartile (IQR) range for each layout represents the range of polygon areas. A large IQR signifies a greater distribution between low and high density  areas. 
-In addition to this we are interested in having a greater ratio of smaller area polygons to larger ones. Within the boxplot, this would be represented by having a median which is closer to, or approaching the $25^{th}$ quartile ( the lower box boundary).
+In addition to this we are interested in having a higher ratio of smaller area polygons to larger ones. Within the boxplot, this would be represented by having a median which is closer to, or approaching the $25^{th}$ quartile ( the lower box boundary).
 
-Applying these citerions to \autoref{abox}, shows Mercator to provide the best result. However in combining this with our previous observations, is is noted that although the ratios approach our ideal range, its radial shape is not conducive to the general represenation of modularity within a network. The layout with the largest IQR is produced using tsNET algorithm. Although this produces a well distributed algorithm, its inability to handle directed edges and high median rule it out as a possible candidate. The OpenOrd layout can reduce the number of hariballs within a graph through the use of simulated annealing and edgecutting, however it is also this property which in this case has resulted in a homogenious isotropic node distribution (as seen by the small IQR with a large median value). Unfortunately this is not seen as the most effective at hilighting the underlying structure of the chemical mechanism. 
+Applying these citerions to \autoref{abox}, shows Mercator to provide the best result. However in combining this with our previous observations, is is noted that although the ratios approach our ideal range, its radial shape is not conducive to the general represenation of modularity within a network. The layout with the largest IQR is produced using tsNET algorithm. Although this produces a well distributed algorithm, its inability to handle directed edges and high median rule it out as a possible candidate. The OpenOrd layout can reduce the number of hariballs within a graph through the use of simulated annealing and edgecutting, however it is also this property which in this case has resulted in a homogenious isotropic node distribution (as seen by the small IQR with a sizeable median value). Unfortunately this is not seen as the most effective at hilighting the underlying structure of the chemical mechanism. 
 
 This leaves the Force Atlas 2 and Yifan Hu layouts. Out of these the Yfan Hu layout fares better with regards to the box plot, yeilding an overall lower box, with a similar IQR and median ratio. Here its lower median suggests more high density nodes, with a similar distribution to the Force Atlas. This makes sense, since the two algorithms share many similarities, however once again the inability to handle directed edges makes it unsuitable for our application. 
 
@@ -431,14 +391,14 @@ This leaves the Force Atlas as the preffered layout for the visualisation of che
 
 \subsection{Graph Semantics}\label{semantic}
 
-Deciding the correct semantic representation for a visualisation is often just as important as the selecting the correct syntatic style. Semantic features are often applied post generation \cite{aestheticsgraphvis} and have uses in the encoding of additional information and clarifying any results within the data. As a means of achieving both an aesthetically pleasing outcome, and an easy to understand visualisation, we must first consider what features we, or the reader, are most interested in. Once this has been decided, we begin to explore various methods for representing them. 
+Deciding the correct semantic representation for a visualisation is often just as important as the selecting the correct syntatic style. Semantic features are often applied post generation \citep{aestheticsgraphvis} and have uses in the encoding of additional information and clarifying any results within the data. As a means of achieving both an aesthetically pleasing outcome, and an easy to understand visualisation, we must first consider what features we, or the reader, are most interested in. Once this has been decided, we begin to explore various methods for representing them. 
 
 \subsubsection{Limitations}
 
 When selecting visualisation semantics, there are several limitations that we must consider. 
 
 \paragraph*{Visual}
-When it comes to Visual analytics the greatest bottleneck is due to the resolving power of the eye - this is known as an acutie. Acuities are a measure of the angle of an observed object with the viewer's eye using arcs (one arc equates to $\frac{1}{60}^{th}$ of a degree). This provides a unit of measurement for the total amount of information density we can feasibly perceive, \cite{ware}. 
+When it comes to Visual analytics the most significant bottleneck is due to the resolving power of the eye - this is known as an acutie. Acuities are a measure of the angle of an observed object with the viewer's eye using arcs (one arc equates to $\frac{1}{60}^{th}$ of a degree). This provides a unit of measurement for the total amount of information density we can feasibly perceive, \citep{ware}. 
 
  In ophthalmology there exist four types of  acuities: 
 \begin{itemize}
@@ -449,20 +409,20 @@ When it comes to Visual analytics the greatest bottleneck is due to the resolvin
 \end{itemize}
 
 These provide a set of considerations which may be used to assess a visualisation. Depending on what encoding we use, it is possible to improve/hinder the readers ability to percieve information, \autoref{acuity}. An example of this would be that for a Macbook Pro retina screen\footnote{A retina screen, is half the maximum possible resolution of the human eye at a 30cm distance. Additionally the operating system interpolates in sets of 4 pixels, such that the image displayed may not be at full resolution.}, where at 87 pixels/cm\footnote{at 57cm from the screen} we can display at most 2 million resolvable nodes. If we wished to add links between nodes, the total resolvable items is reduced to one million
-\cite{ch10}. 
+\citep{ch10}. 
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=.6]{figures_c1/acuity.png}
 \end{center}
-\caption{Important acuities in visualisation, Source: \cite{ch10,ware}}\label{acuity}
+\caption{Important acuities in visualisation, Source: \citep{ch10,ware}}\label{acuity}
 \end{figure}
 
 
 \paragraph*{Cognitive}
-Although it may be possible to distinguish 1 million nodes and links visually, interpreting and understanding these presents another problem. The visual thinking laboratories, \cite{vt}, have a range of publications exploring how presentation can improve though, cognition and communication between info-graphic and reader. \cite{OpenVis}, explains that the time required to interpret a visualisation is directly related to the encoding used to hi-light the data within it. Also problems of `intentional blindness' and misinterpretation are problems which are often occurred with poorly thought out encodings.  
+Although it may be possible to distinguish 1 million nodes and links visually, interpreting and understanding these presents another problem. The visual thinking laboratories, \citep{vt}, have a range of publications exploring how presentation can improve though, cognition and communication between info-graphic and reader. \citep{OpenVis}, explains that the time required to interpret a visualisation is directly related to the encoding used to hi-light the data within it. Also problems of `intentional blindness' and misinterpretation are problems which are often occurred with poorly thought out encodings.  
 
-In considering the cognitive load of a visualisation, \cite{emotional} provides a list of three categories which should be explored:
+In considering the cognitive load of a visualisation, \citep{emotional} provides a list of three categories which should be explored:
 
 
 \begin{itemize}
@@ -475,9 +435,9 @@ This is usually due to our inherent ability to locate patterns and changes due t
 \end{itemize}
 
 \paragraph*{Technological}
-In addition to human limitations, there may be restrictions due to the medium a visualisation is created/presented on. In addition to monitor resolution issue earlier, much scientific research is constrained by the size, resolution and colour quality of the presentation mediums used for talks, printing or posters. \cite{ware} explains that a printer capable of producing 1200 dots per inch squared, can only do this for black/white binary images. If for instance 256-greyscale is used, the resulting resolution is then at-least 10 times smaller. This is because printers a Monet style approach to create shading and colour. It therefore follows that at full CYMK, the output resolution will be worse. 
+In addition to human limitations, there may be restrictions due to the medium a visualisation is created/presented on. In addition to monitor resolution issue earlier, much scientific research is constrained by the size, resolution and colour quality of the presentation mediums used for talks, printing or posters. \citep{ware} explains that a printer capable of producing 1200 dots per inch squared, can only do this for black/white binary images. If for instance 256-greyscale is used, the resulting resolution is then at-least 10 times smaller. This is because printers a Monet style approach to create shading and colour. It therefore follows that at full CYMK, the output resolution will be worse. 
 
-It is also important to have a graph fitting the same overall shape of the canvas on which it is presented, \cite{graphmetnew}. This not only makes optimal use of any space available, but also reduces the visual complexity as it minimises the number of distinct shapes available to the user. 
+It is also essential to have a graph fitting the same overall shape of the canvas on which it is presented, \citep{graphmetnew}. This not only makes optimal use of any space available, but also reduces the visual complexity as it minimises the number of distinct shapes available to the user. 
 
 
 
@@ -488,13 +448,13 @@ It is also important to have a graph fitting the same overall shape of the canva
 
 
 \subsubsection{Node Encoding}
-Within a graph, the nodes represent the set of items we are exploring. Each of these often contain a multitude of features and properties relating directly to them, be it the user details for a retail/fraud network, or the chemical composition and concentration of a species in the MCM. Features of a node describe and additional properties and may be used to determine its interaction with other nodes\footnote{This is further explored in Chapter 4}, \cite{protocol}. It is for this reason that graph convoluted neural networks, \cite{t2gcn}, require a  `feature matrix' describing each node, in addition to the network structure and edge weightings. Within a visualisation, a node may be represented in a range of ways. 
+Within a graph, the nodes represent the set of items we are exploring. Each of these often contain a multitude of features and properties relating directly to them, be it the user details for a retail/fraud network, or the chemical composition and concentration of a species in the MCM. Features of a node describe and additional properties and may be used to determine its interaction with other nodes\footnote{This is further explored in Chapter 4}, \citep{protocol}. It is for this reason that graph convoluted neural networks, \citep{t2gcn}, require a  `feature matrix' describing each node, in addition to the network structure and edge weightings. Within a visualisation, a node may be represented in a range of ways. 
 
 \paragraph*{\color{c4}Circle attributes}
 
 
 
-The simplest of these range from the use of colour, shape, size, thickness and stroke (outline) to indicate a group. Here it is possible to provide information such as a species concentration based on its size, its importance with its colour, its degree with its opacity and its category with its stroke colour \cite{brightness,colour}. Such descisions depend on what properties you are trying to show. For instance red species in \autoref{fig:nodestyle} are primary emitted VOCs, orange species exist between both the MCM and the CRI (see figure caption) mechanism, and blue ones are lumped species which do not appear as part of the MCM.  
+The simplest of these range from the use of colour, shape, size, thickness and stroke (outline) to indicate a group. Here it is possible to provide information such as a species concentration based on its size, its importance with its colour, its degree with its opacity and its category with its stroke colour \citep{brightness,colour}. Such descisions depend on what properties you are trying to show. For instance red species in \autoref{fig:nodestyle} are primary emitted VOCs, orange species exist between both the MCM and the CRI (see figure caption) mechanism, and blue ones are lumped species which do not appear as part of the MCM.  
 
 
 \paragraph*{\color{c1}Chemical Structure}
@@ -502,16 +462,16 @@ Traditional chemical diagrams use the chemical structure to depict the types of 
 
 \paragraph*{\color{c2}Species Name}
 
-Much like the chemical structure, a species name is proven useful in explaining to the user its chemical properties (often due to prior knowledge, or the ability to look this up). Unfortunately since names have differing lengths, this can cause problems, especially with large numbers of closely located nodes. A solution to this may be to adjust the font size to fit in within the circle radius of the node. However this does come with its problems - for instance very small nodes may have text smaller than a pixel, or the misleading notion that longer names are less important, since they are represented by a smaller font. 
+Much like the chemical structure, a species name is proven useful in explaining to the user its chemical properties (often due to prior knowledge, or the ability to look this up). Unfortunately since names have differing lengths, this can cause problems, especially with large numbers of closely located nodes. A solution to this may be to adjust the font size to fit in within the circle radius of the node. However this does come with its problems - for instance tiny nodes may have text smaller than a pixel, or the misleading notion that longer names are less important, since they are represented by a smaller font. 
 
 
 \paragraph*{\color{c3}Interactivity}
 
-Ben Shneiderman's famous mantra goes: \emph{`overview first, zoom and filter, details on demand'} \\ \cite{mantra}. This goes hand in hand with the philosophy used within the design of an interactive visualisation.
+Ben Shneiderman's famous mantra goes: \emph{`overview first, zoom and filter, details on demand'} \\ \citep{mantra}. This goes hand in hand with the philosophy used within the design of an interactive visualisation.
 
-For complicated systems, interactivity plays a vital role in unraveling complexity and reducing clutter \cite{interaction1}. It allows the user to actively query only the items that they are interested in whilst still displaying all the information in a single location \cite{oneplace}. 
+For complicated systems, interactivity plays a vital role in unraveling complexity and reducing clutter \citep{interaction1}. It allows the user to actively query only the items that they are interested in whilst still displaying all the information in a single location \citep{oneplace}. 
 
-A comprehensive list of all available interaction types and styles are provided in \cite{ch6}. Some examples of interaction are:\\ 
+A comprehensive list of all available interaction types and styles are provided in \citep{ch6}. Some examples of interaction are:\\ 
 
 \begin{table}[h]
     \centering
@@ -555,7 +515,7 @@ A comprehensive list of all available interaction types and styles are provided 
 \end{figure}
 
 \paragraph*{\color{c5}External Labeling}
-In cases where interactivity is not possible, such as papers, books and this thesis, an alternative approach to data selection has to be employed. Here nodes which are central to the explanation of a certain point are filtered by the author, and displayed through the use of external labels. It is found that having links at 45 and 90 degree angles (such as in transport maps) lead to a clearer layouts and better distinction from the links already within the graph. Automatically generated labels within the thesis are made using \cite{d3annotate}.
+In cases where interactivity is not possible, such as papers, books and this thesis, an alternative approach to data selection has to be employed. Here nodes which are central to the explanation of a certain point are filtered by the author, and displayed through the use of external labels. It is found that having links at 45 and 90 degree angles (such as in transport maps) lead to a clearer layouts and better distinction from the links already within the graph. Automatically generated labels within the thesis are made using \citep{d3annotate}.
 
 
 
@@ -575,7 +535,7 @@ In cases where interactivity is not possible, such as papers, books and this the
 \subsubsection{Edge Properties}
 
 
-Defining the purpose of graph-energy models as: a means for creating a visualisation from which the viewer can infer properties of the data \cite{noack}, it can be seen that this criterion is easily met in small and sparse graphs. However non-planar examples with high edge density (lots of links) can easily result in tangled results with impractical running times \cite{tvg}. In most cases attaining an optimal solutions here seems to be computationally infeasible \cite{nicelyanneal}. This is generally because graphs primarily focus on hi-lighting a specific purpose or following a set of aesthetic heuristics \cite{eyetrack}. 
+Defining the purpose of graph-energy models as: a means for creating a visualisation from which the viewer can infer properties of the data \citep{noack}, it can be seen that this criterion is easily met in small and sparse graphs. However non-planar examples with high edge density (lots of links) can easily result in tangled results with impractical running times \citep{tvg}. In most cases attaining an optimal solutions here seems to be computationally infeasible \citep{nicelyanneal}. This is generally because graphs primarily focus on hi-lighting a specific purpose or following a set of aesthetic heuristics \citep{eyetrack}. 
 
 Butane model 
 
@@ -601,7 +561,7 @@ this may cause unecessary clutter for larger networks. Instead it is often usefu
 
 
 \paragraph{Edge Direction}
-When using a directional graph it is convention to use arrow heads to represent this. However in high density regions it is often found that arrow heads take up precious real estate in the drawing area \cite{noarredge}. As an alternative, colour and line-type can be used to represent the direction instead. This example can be seen in the routing networks presented by \cite{networkrouting}. One example applicable for chemistry would be the use of dashed lines to represent mono-directional relationships, and continuous lines for bidirectional ones. 
+When using a directional graph it is convention to use arrow heads to represent this. However in high density regions it is often found that arrow heads take up precious real estate in the drawing area \citep{noarredge}. As an alternative, colour and line-type can be used to represent the direction instead. This example can be seen in the routing networks presented by \citep{networkrouting}. One example applicable for chemistry would be the use of dashed lines to represent mono-directional relationships, and continuous lines for bidirectional ones. 
 
 
 
@@ -611,10 +571,10 @@ When using a directional graph it is convention to use arrow heads to represent 
 
 
 \paragraph{Edge Shape}
-Edge shape is important, as it is the medium we use to represent relationships within a graph. For orthogonal graphs, poly-line curved edges are used to provide a layout which is simpler and easier to read \cite{ortho}. For asymetric graph drawings circular Lombardi-style curves and cubic brezier lines have been used to reduce the clutter in high edge-density drawings, \cite{lombardi,bezier}. \autoref{fig:curvededge} shows a selection of different edge types for the Butane MCM subset.The liear network (\autoref{fig:curvededge}a ) consists of straight lines betwen nodes. If a multi-edge graph is required, it is impossible to represent this as all edges between two nodes follow the same path. To improve on this a quadratic arc (\autoref{fig:curvededge} b) can be used. This presents a symmetric representation where each edge is revealed. Finally bezier curves (described below) can be used to show an asymetric representation of the multi-edge graph (\autoref{fig:curvededge}c). Both sets of curved representation rely on a set of control points, allowing the designer to control the curve shape, steepness and asymmetry. 
+Edge shape is essential, as it is the medium we use to represent relationships within a graph. For orthogonal graphs, poly-line curved edges are used to provide a layout which is simpler and easier to read \citep{ortho}. For asymetric graph drawings circular Lombardi-style curves and cubic brezier lines have been used to reduce the clutter in high edge-density drawings, \citep{lombardi,bezier}. \autoref{fig:curvededge} shows a selection of different edge types for the Butane MCM subset.The liear network (\autoref{fig:curvededge}a ) consists of straight lines betwen nodes. If a multi-edge graph is required, it is impossible to represent this as all edges between two nodes follow the same path. To improve on this a quadratic arc (\autoref{fig:curvededge} b) can be used. This presents a symmetric representation where each edge is revealed. Finally bezier curves (described below) can be used to show an asymetric representation of the multi-edge graph (\autoref{fig:curvededge}c). Both sets of curved representation rely on a set of control points, allowing the designer to control the curve shape, steepness and asymmetry. 
 
 \paragraph*{Bezier Curves}
-Bezier curves are named after Pierre Bezier who used them in the bodywork design of Renault cars in the 1960s \cite{beziermath}. Since then they have been widely used in graphs,computer graphics, font design and animation/interactivity response \cite{bezier,beziermath,beziercomputer}. Bezier curves come in a range of possible dimensions, cubic beziers are the most commonly used within network visualisation. These contain four control points respectively which can be used to determine the shallowness of the curve through design. In general relatively shallow curves are prefered, as these do not introduce unecessary edge crossing or abrupt changes, which have been shown to hinder a users ability to isolate items of interest, \cite{ch6graphredability}.
+Bezier curves are named after Pierre Bezier who used them in the bodywork design of Renault cars in the 1960s \citep{beziermath}. Since then they have been widely used in graphs,computer graphics, font design and animation/interactivity response \citep{bezier,beziermath,beziercomputer}. Bezier curves come in a range of possible dimensions, cubic beziers are the most commonly used within network visualisation. These contain four control points respectively which can be used to determine the shallowness of the curve through design. In general relatively shallow curves are prefered, as these do not introduce unecessary edge crossing or abrupt changes, which have been shown to hinder a users ability to isolate items of interest, \citep{ch6graphredability}.
 
 
 \begin{figure}[H]
@@ -645,7 +605,7 @@ Bezier curves are named after Pierre Bezier who used them in the bodywork design
 
 
 \paragraph{Edge Bundling }
-Pioneered by \cite{bundlepioneer}, edge bundling techniques are an effective way to reduce visual clutter. Much like a force graph, edges are represented as a string of lined points. This allows for edges to be pulled together (attracted to one another) and produces a visualisation akin to moving water droplets on a hydrophobic surface. \autoref{fig:edgebundling} shows how in changing the amount of atraction between edges, it is possible to reduce clutter in a visualisation. 
+Pioneered by \citep{bundlepioneer}, edge bundling techniques are an effective way to reduce visual clutter. Much like a force graph, edges are represented as a string of lined points. This allows for edges to be pulled together (attracted to one another) and produces a visualisation akin to moving water droplets on a hydrophobic surface. \autoref{fig:edgebundling} shows how in changing the amount of atraction between edges, it is possible to reduce clutter in a visualisation. 
 
 
 \begin{figure}[H]
@@ -675,19 +635,19 @@ Pioneered by \cite{bundlepioneer}, edge bundling techniques are an effective way
 
 \paragraph{Power, Routing and Confluence graphs.}
 
-Confluent graphs use a graph drawing method in which edges are not drawn as individual distinguishable geometric objects, but rather as a crossing free system of arcs and junctions. \cite{confluient19}. Their design is similar to that of the edge bundling algorithm, except that rather than bundling edges spatially (a design which may introduce ambiguity), the bundling is done based on connectivity and can help reduce clutter by grouping multiple edges where the all target nodes are also connected to all the source nodes, \autoref{fig:confpic},\cite{confpic}. 
+Confluent graphs use a graph drawing method in which edges are not drawn as individual distinguishable geometric objects, but rather as a crossing free system of arcs and junctions. \citep{confluient19}. Their design is similar to that of the edge bundling algorithm, except that rather than bundling edges spatially (a design which may introduce ambiguity), the bundling is done based on connectivity and can help reduce clutter by grouping multiple edges where the all target nodes are also connected to all the source nodes, \autoref{fig:confpic},\citep{confpic}. 
 
 \begin{figure}[H]
      \centering
      \includegraphics[width=.9\textwidth]{figures_c1/layout/confluent/example.png}
-        \caption{\textbf{An example of confluent bundling. } From left to right -  A traditional network, Edge bundling, Power Graph and Confluent graph representations. Source: \cite{confpic}}
+        \caption{\textbf{An example of confluent bundling. } From left to right -  A traditional network, Edge bundling, Power Graph and Confluent graph representations. Source: \citep{confpic}}
       \label{fig:confpic}
 \end{figure}
 
 Using butane as an example the construction of a confluent shall be covered. The first step in the process is to create
 a power graph of our network. Power graphs are a representation of complex networks where sets of items identical source and target links are lumped or grouped within a single item. This is then converted into a routing graph, \autoref{fig:conf1}. To do this multiple edges which may be bundled have a `routing' node added to guide them. Next basis-splines, using the routing nodes as control points, are used to map the graph\footnote{These are similar to bezier curves but require a degree, $p$, $n+1$ control points, and a knot vector of $m+1$ points. Note: Knots are the things that make the curve continuous }, \autoref{fig:conf2}. Finally crossing links are removed, leaving the confluent graph, \autoref{fig:conf4}. 
 
-Confluent drawings have been found to have many applications (e.g. the ego-centric author network and social interaction graph), they generally perform best in sparce networks with locally dense clusters of a tree like structure \cite{confluent17}. Although sparse, the cyclic nature of atmospheric chemistry does not allow for a sufficient reduction in complexity to make them a suitable improvement over traditional graphs. The use of very close fitting basis-splines in addition to a routing graph (confluent graph with crossing artifacts), may however help to simplify specific layouts or mechanism subsets with a certain amoung of tweaking. 
+Confluent drawings have been found to have many applications (e.g. the ego-centric author network and social interaction graph), they generally perform best in sparce networks with locally dense clusters of a tree like structure \citep{confluent17}. Although sparse, the cyclic nature of atmospheric chemistry does not allow for a sufficient reduction in complexity to make them a suitable improvement over traditional graphs. The use of very close fitting basis-splines in addition to a routing graph (confluent graph with crossing artifacts), may however help to simplify specific layouts or mechanism subsets with a certain amoung of tweaking. 
 
 \begin{figure}[H]
      \centering
@@ -713,18 +673,18 @@ Confluent drawings have been found to have many applications (e.g. the ego-centr
 
 
 \paragraph{ Edge Angle / Continuity}
-Visual representation utilises our conscious and unconscious pattern recognition and intuition abilities \cite{pattern}. To avoid apophenia (finding patterns where they do not exist), careful  consideration has to be placed in the design of a graph layout. 
-Although edge corssing is ofthen though of as the most import aesthetic metric, finding a continuity between inward and outbound edges of a node was found to be if equal importance \cite{continuity}.
+Visual representation utilises our conscious and unconscious pattern recognition and intuition abilities \citep{pattern}. To avoid apophenia (finding patterns where they do not exist), careful  consideration has to be placed in the design of a graph layout. 
+Although edge corssing is ofthen though of as the most import aesthetic metric, finding a continuity between inward and outbound edges of a node was found to be if equal importance \citep{continuity}.
 
-Reducing the angle between related edges increases readability and allows the behavioural process to correctly infer information about a graph. This process can be compared to predicting the direction of turbulent vs laminar flow. In addition to this edges should be spaced evenly around node, maximising the minimum-edge-angle between all edges of a node \cite{aestheticsgraphvis}. 
+Reducing the angle between related edges increases readability and allows the behavioural process to infer information about a graph correctly. This process can be compared to predicting the direction of turbulent vs laminar flow. In addition to this edges should be spaced evenly around node, maximising the minimum-edge-angle between all edges of a node \citep{aestheticsgraphvis}. 
 
 
 
 \subsection{Temporal Projection}
-Story-telling has been an effective method to convey information, experience and cultural values for almost as long as people have been around. Many real-life physical processes occur over time and thus allow the use of a story-telling analogy. \cite{storytelling} provides a generic structure which begins with creating a general overview of the subject. Events are then animated in order of occurrence and defined as we go along. Finally any remaining conflicts and uncertainty is addressed, and these are rectified.  
+Story-telling has been an effective method to convey information, experience and cultural values for almost as long as people have been around. Many real-life physical processes occur over time and thus allow the use of a story-telling analogy. \citep{storytelling} provides a generic structure which begins with creating a general overview of the subject. Events are then animated in order of occurrence and defined as we go along. Finally any remaining conflicts and uncertainty is addressed, and these are rectified.  
 Using this as a template for our graphs, we find that the content is usually given in the form of a title or figure description, the evolution as the visualisation, and finally the reflection and resolution through the use of user interaction (e.g., node hi-lighting, zoom or animation).
 
-Since very few graph layouts support dynamic time-varying graphs \cite{tvg}, several methods of visualising temporal events have been developed. 
+Since very few graph layouts support dynamic time-varying graphs \citep{tvg}, several methods of visualising temporal events have been developed. 
 %Independent application to of these runs the risk of producing temporally incoherent visualisations. 
 Although storylines can be useful for drawing the evolution of simple systems, these break down when dealing with large numbers of dependant variables. Force-directed layouts may be adapted, to suit these better, whereupon the initial positions of the previous node endpoints are used as the initial positions for consequential simulations. Three methods of representing these are shown in Figure \ref{temporal}.
 
@@ -758,10 +718,10 @@ Although storylines can be useful for drawing the evolution of simple systems, t
 \end{figure}
 
 
-Finally, user-interaction such as hi-lighting key nodes/links, zoom and animation\footnote{\cite{ch8} notes that animation poses high demands on the users visual memory, and that snapshots are likely to miss underlying patterns.  For this reason an interactive techniques that can allow retrospective selection of timesteps allows for a good compromise between these.} may be used to clarify information at the reflection stage.
+Finally, user-interaction such as hi-lighting key nodes/links, zoom and animation\footnote{\citep{ch8} notes that animation poses high demands on the users visual memory, and that snapshots are likely to miss underlying patterns.  For this reason an interactive techniques that can allow retrospective selection of timesteps allows for a good compromise between these.} may be used to clarify information at the reflection stage.
 
 \subsection{Additional Dimensions}
-Additional dimensions can be used to emphasise certain aspects of our graphs. For instance multiple layers may be used in a directional graph to separate the importance of the nodes \cite{IPSEPCOLA}. \autoref{3D} shows the first, second and third generation species of a mechanism containing isoprene in three dimensions. Such a visualisation may be explored interactively, with the aid of a computaional input device (a mouse, keyboard or device gyroscope), or with the aid of red-cyan 3D glasses (for non-interactive mediums such as print). 
+Additional dimensions can be used to emphasise certain aspects of our graphs. For instance multiple layers may be used in a directional graph to separate the importance of the nodes \citep{IPSEPCOLA}. \autoref{3D} shows the first, second and third generation species of a mechanism containing isoprene in three dimensions. Such a visualisation may be explored interactively, with the aid of a computaional input device (a mouse, keyboard or device gyroscope), or with the aid of red-cyan 3D glasses (for non-interactive mediums such as print). 
 
  Different layers can be used to separate of primary VOCs, from species which result in their production (+1 layers) and loss (-1 layers).
  Temporal data, such as that in \autoref{temporal} can also be presented in this format. The only drawback is the high possibility of obfusciation which may result from many layers of overlapping information. 
@@ -784,7 +744,7 @@ To conclude we apply many of the tools described above to a simple case study. W
 This allows a simplified view of the different properties which affect the visualisation of the graph produced. 
 
 \subsection{Syntatic representation} 
-Since we shall be using simulation data, we require a layout which deals with both direction and edge weights. In the spirit of zero and Protagoras\footnote{Famous for the phrase `man is the measure of all things' suggesting that we are constrained by our experiences}, we opt of the spring-like description presented by the Force Atlas 2 algorithm. This feature hi-lights fast reactions by bringing nodes together. Such a property has been observed to help users select the shortest path within a network, \cite{eyetrack}. Here users picked the shortest path an average of 68\% for force directed graphs, compared to 40\% for hierarchical and 2\% for orthogonal layouts. Such properties can help us locate any trends in fast reactions which may control the chemistry within a system. 
+Since we shall be using simulation data, we require a layout which deals with both direction and edge weights. In the spirit of zero and Protagoras\footnote{Famous for the phrase `man is the measure of all things' suggesting that we are constrained by our experiences}, we opt of the spring-like description presented by the Force Atlas 2 algorithm. This feature hi-lights fast reactions by bringing nodes together. Such a property has been observed to help users select the shortest path within a network, \citep{eyetrack}. Here users picked the shortest path an average of 68\% for force directed graphs, compared to 40\% for hierarchical and 2\% for orthogonal layouts. Such properties can help us locate any trends in fast reactions which may control the chemistry within a system. 
 
 
 \subsection{Semantic representation}
@@ -808,7 +768,7 @@ Since the graph presented contains only a handful of species, our screen real-es
 \end{figure}
 
 \subsection{Local vs Global minimum }
-Since computers are deterministic, so are the calculations they perform\footnote{Within a certain precision...}. In starting nodes from the same physical location and exerting the same force upon them, a force directed simulation will result in the nodes settling in the same locations. Since we use this `final' resting as the basis of our visual analysis, it is important to find out if it represents the global minimum of the graph, or is merely a combination of the layout parameters and random seed. 
+Since computers are deterministic, so are the calculations they perform\footnote{Within an absolute precision...}. In starting nodes from the same physical location and exerting the same force upon them, a force directed simulation will result in the nodes settling in the same locations. Since we use this `final' resting as the basis of our visual analysis, it is essential to find out if it represents the global minimum of the graph, or is merely a combination of the layout parameters and random seed. 
 
 To do this we take a selection of 360 randomly initiated simulations, applying a monte carlo approach to simulation parameters and initial node placement. The force directed algorithm is then allowed to run with progressively decreasing energy until it reaches a stable equilibrium. Once this has been done we 
 
@@ -882,7 +842,7 @@ To demonstrate this example we take an example shortest path (A-B-C-D) where A i
 \end{figure}
  
  
- To plot the correlation we use a Force Directed Representation of Multivariate Data (FRMD), written to show relationships between variables for data \cite{frmd}. This takes multivariate data and plots it in a inverse, fully connected graph\footnote{This is similar to the t-SNE dimensionality reduction technique [REF SECT]}. \autoref{fig:frmd_full} shows the a three dimensional comparison between a species deviation in resting position, degree and metric value.  Here nodes are connected to each category with a series of fixed `rods` or links. The length of each rod is adjusted such that it reflects the normalised value of its influence due to its origin category. This works by effectively `pushing` the node towards its category name. This allows us to partition the data into groups with similar properties, or extremes - for example \ce{CH3O2,HO2} and OH all have high degree values (>10 links) and low deviation in their local minimia locations. \ce{H2, CH3OH, CH3OOH} on the other hand have a wide range of possible local minima (deviation), which may be attributed to their low degree values. Formaldehyde on the other hand has both a high location deviation, as well as degree in general. These results suggest that for the higher metric values (small node size and near the bottom due to the 1-metric data set) the results are split between highly constrained species (due to a large number of links and a small deviation) and those which have many local minimia, and few links. 
+ To plot the correlation we use a Force Directed Representation of Multivariate Data (FRMD), written to show relationships between variables for data \citep{frmd}. This takes multivariate data and plots it in a inverse, fully connected graph\footnote{This is similar to the t-SNE dimensionality reduction technique [REF SECT]}. \autoref{fig:frmd_full} shows the a three dimensional comparison between a species deviation in resting position, degree and metric value.  Here nodes are connected to each category with a series of fixed `rods` or links. The length of each rod is adjusted such that it reflects the normalised value of its influence due to its origin category. This works by effectively `pushing` the node towards its category name. This allows us to partition the data into groups with similar properties, or extremes - for example \ce{CH3O2,HO2} and OH all have high degree values (>10 links) and low deviation in their local minimia locations. \ce{H2, CH3OH, CH3OOH} on the other hand have a wide range of possible local minima (deviation), which may be attributed to their low degree values. Formaldehyde on the other hand has both a great location deviation, as well as degree in general. These results suggest that for the higher metric values (small node size and near the bottom due to the 1-metric data set) the results are split between highly constrained species (due to a large number of links and a small deviation) and those which have many local minimia, and few links. 
  
  
  
@@ -893,9 +853,9 @@ To demonstrate this example we take an example shortest path (A-B-C-D) where A i
      \label{fig:frmd_full}
      \end{figure}
      
-     We can also reduce the number of dimensions of the FRMD visualisation from 3 to two. In taking only two features and encoding the third through either size or colour we can sometimes present a clearer correlation between items. Within these visualisations we have imbalanced nodes on the horizontal, with higher values pushing the node towards its respective label. In cases where the relationship is approximately equal with both features the nodes exist on the vertical plane between each feature. Here low ranked equality lies close to the center line. Higher correlated matches are result in rods longer than the horizontal distance between both features. This causes a vertical displacement separating the nodes from the horizontal. 
+     We can also reduce the number of dimensions of the FRMD visualisation from 3 to two. In taking only two features and encoding the third through either size or colour we can sometimes present a more unambiguous correlation between items. Within these visualisations we have imbalanced nodes on the horizontal, with higher values pushing the node towards its respective label. In cases where the relationship is approximately equal with both features the nodes exist on the vertical plane between each feature. Here low ranked equality lies close to the center line. Higher correlated matches are result in rods longer than the horizontal distance between both features. This causes a vertical displacement separating the nodes from the horizontal. 
      
-     \autoref{fig:frmd_devdeg} shows the relationship between the location deviation and a nodes degree. Here, as with the 3 dimensional plot, we have a group of species which have a low degree coupled with a high location deviation, and a set of highly constrained species with >10 links. Similarly \ce{HCHO}, having a high number in both, is pushed away from the horizontal. As the metric value is encoded in the colour, we see that this has a stronger correlation with degree than deviation, which is expected since this plays a central role in the calculation of the freedom metric. 
+     \autoref{fig:frmd_devdeg} shows the relationship between the location deviation and a nodes degree. Here, as with the 3 dimensional plot, we have a group of species which have a low degree coupled with a large location deviation, and a set of highly constrained species with >10 links. Similarly \ce{HCHO}, having a high number in both, is pushed away from the horizontal. As the metric value is encoded in the colour, we see that this has a stronger correlation with degree than deviation, which is expected since this plays a central role in the calculation of the freedom metric. 
      
     \begin{figure}[H]
          \centering
@@ -906,7 +866,7 @@ To demonstrate this example we take an example shortest path (A-B-C-D) where A i
 
     
 
-Having seen how node degree fares against the actual deviation of each node, it is time to compare this against our metric. In \autoref{fig:frmd_devmet} we see a much narrower band of nodes along the horizontal. This suggests a greater correlation between the two values - the ranking within each category are of a similar magnitude. 
+Having seen how node degree fares against the actual deviation of each node, it is time to compare this against our metric. In \autoref{fig:frmd_devmet} we see a much narrower band of nodes along the horizontal. This suggests a better correlation between the two values - the ranking within each category are of a similar magnitude. 
 
 
      \begin{figure}[H]
@@ -929,7 +889,7 @@ Having seen how node degree fares against the actual deviation of each node, it 
 Using a spun up model initiated from the campaign results XX Beijing (Where did I get these?) we compare the distribution of links within a model. In f[FIG XX] we see the graph shape change due to the presence of photons. 
 
 
-To perform a sensitivity study on the initial positions of nodes within the force atlas algorithm, a graph consisting of links and weightings is constructed using a box model simulation of the Beijing summer environment at mid-day and feed it the gephi software, \cite{gephi} - an open source software designed for the exploration of networks. We then scrip the java code to perform the functions in \autoref{fig:flowrepeat}. As part of this, nodes are initiated with a random position, the force atlas 2 layout is then run and then the graph is rotated and translated such that it is centred around carbon monoxide and has a 45 degree angle between this and formaldehyde. This step constrains the general orientation of the graph, allowing us to analyse the generated graphs for global and local minima. The final step is to save a copy of the generated graph layout and repeat to generate a data set, a subset of which is shown in  \autoref{fig:all}
+To perform a sensitivity study on the initial positions of nodes within the force atlas algorithm, a graph consisting of links and weightings is constructed using a box model simulation of the Beijing summer environment at mid-day and feed it the gephi software, \citep{gephi} - an open source software designed for the exploration of networks. We then scrip the java code to perform the functions in \autoref{fig:flowrepeat}. As part of this, nodes are initiated with a random position, the force atlas 2 layout is then run and then the graph is rotated and translated such that it is centred around carbon monoxide and has a 45 degree angle between this and formaldehyde. This step constrains the general orientation of the graph, allowing us to analyse the generated graphs for global and local minima. The final step is to save a copy of the generated graph layout and repeat to generate a data set, a subset of which is shown in  \autoref{fig:all}
 
     \begin{figure}[H]
          \centering
@@ -961,9 +921,9 @@ Using \autoref{fig:all} the pattern recognition capabilities of the human mind i
      \end{figure}
 
 \paragraph{Pattern Matching using t-SNE}
-t-Distributed Stochastic Neighbor Embedding (t-SNE) is a dimensionality reduction technique used in automatic categorisation of images or photographs \cite{truthandbeauty,sketchy}. This is the same process as referenced in EARLIERREF and described in detail within Chapter... 
+t-Distributed Stochastic Neighbor Embedding (t-SNE) is a dimensionality reduction technique used in automatic categorisation of images or photographs \citep{truthandbeauty,sketchy}. This is the same process as referenced in EARLIERREF and described in detail within Chapter... 
 
-To compare the generated networks, we flatten the pixel matrix for each centered image in the dataset, and assign the output list to each filename. The resultant dataframe is then fed into the t-SNE algorithm in the Scikit Learn package, \cite{scikit-learn}. This reduces the logical list of pixels for each image into a two dimensional representation of their similarity. We plot each file, for its $(x,y)$ coordinate, and isolate clusters of similarity using density contours in 
+To compare the generated networks, we flatten the pixel matrix for each centered image in the dataset, and assign the output list to each filename. The resultant dataframe is then fed into the t-SNE algorithm in the Scikit Learn package, \citep{scikit-learn}. This reduces the logical list of pixels for each image into a two dimensional representation of their similarity. We plot each file, for its $(x,y)$ coordinate, and isolate clusters of similarity using density contours in 
 
     \begin{figure}[H]
          \centering
