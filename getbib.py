@@ -74,7 +74,9 @@ for i in range(len(entries)):
         
     try:
         url = entries[i]['url'].replace('\\url','')
-        entries[i]['howpublished']= '\\url{%s}'%stp.sub('',url)
+        entries[i]['note']= '\\url{%s}'%stp.sub('',url)
+        del entries[i]['url']
+        del entries[i]['howpublished']
     except:
         None
     
