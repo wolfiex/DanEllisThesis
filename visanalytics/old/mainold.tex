@@ -1,0 +1,99 @@
+\documentclass[twoside,reqno]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage[version=4]{mhchem}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+\usepackage{setspace}
+% \usepackage[showframe]{geometry}
+\usepackage[]{geometry}
+\newcommand{\ch}[1]{\MakeUppercase{\ce{#1}}}  % version 1
+\newcommand{\multiref}[2]{\autoref{#1}-\ref{#2}} % from - to
+\newcommand{\qfig}[4]{\begin{figure}[H]\centering\includegraphics[width=#4]{#1}\caption{#3}\label{#2}\end{figure}\newpage}
+% location,label,caption,width
+
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+ \algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ :}
+
+\def\blankpage{%
+      \clearpage%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-1}%
+      \null%
+      \clearpage}
+
+%%%%%%
+\setcounter{secnumdepth}{5}
+
+\newcommand{\qfig}[4]{\begin{figure}[H]\centering\includegraphics[width=#4]{#1}\caption{#3}\label{#2}\end{figure}}
+% location,label,caption,width
+
+
+\title{From Social Networks to the Atmosphere}
+\author{Dan Ellis }
+\date{March 2019}
+
+\begin{document}
+% \newgeometry{oneside}
+
+
+% \maketitle
+\chapter{From Social Networks to the Atmosphere}
+\restoregeometry
+\begin{center}
+\begin{quotation}
+  \large{\emph{\textbf{``The complexities of cause and effect defy analysis.''} }  }  \\
+  \begin{tabular}{l@{}}- Douglas Adams, \textit{Dirk Gently's Holistic Detective Agency}
+ \end{tabular}
+ \end{quotation}
+\end{center}
+
+\newpage
+%\blankpage
+\doublespacing
+% \onehalfspacing
+\newpage
+\tableofcontents
+\newpage
+\setlength{\footnotesep}{0.5cm}
+\raggedbottom %group writing to top of page!
+
+
+\input{intro.tex}
+\input{graph.tex}
+
+
+
+
+
+
+
+
+
+\paragraph{partst}
+
+https://www.overleaf.com/project/5ccf562ac45e5d41672f0803ds
+
+% \chapter{What is a network?}
+% \section{History and applications}
+% Wha
+% \sections{Style of Network}
+
+
+% \sections{Scalablility}
+
+
+
+\bibliographystyle{apalike} 
+\bibliography{vis,background}
+% \bibliographystyle{unsrt}
+
+\end{document}

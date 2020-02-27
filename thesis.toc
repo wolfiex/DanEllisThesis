@@ -1,47 +1,43 @@
 \gdef \the@ipfilectr {@-1}
-\contentsline {chapter}{\numberline {1} Computational Learning, Visualisation and Clustering:}{1}{chapter.1}
+\contentsline {chapter}{\numberline {1}Applying Visual Analytics to the Atmospheric Chemistry Network}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduction}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Species of the MCM and ways to represent them.}{5}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Input generation}{5}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Manual Categorisation}{6}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Tokenization}{7}{subsection.1.2.3}
-\contentsline {subsubsection}{\numberline {1.2.3.1}Species Names}{8}{subsubsection.1.2.3.1}
-\contentsline {subsubsection}{\numberline {1.2.3.2}SMILES strings}{8}{subsubsection.1.2.3.2}
-\contentsline {subsection}{\numberline {1.2.4}Graph Inspired}{9}{subsection.1.2.4}
-\contentsline {subsubsection}{\numberline {1.2.4.1}The species graph (fingerprint)}{9}{subsubsection.1.2.4.1}
-\contentsline {subsubsection}{\numberline {1.2.4.2}Node Embeddings (node2vec)}{10}{subsubsection.1.2.4.2}
-\contentsline {subsection}{\numberline {1.2.5}Molecular Fingerprints}{11}{subsection.1.2.5}
-\contentsline {subsubsection}{\numberline {1.2.5.1}Molecular Quantum Numbers (MQN)}{12}{subsubsection.1.2.5.1}
-\contentsline {subsubsection}{\numberline {1.2.5.2}Molecular ACCess System (MACCS)}{12}{subsubsection.1.2.5.2}
-\contentsline {section}{\numberline {1.3} Dimensionality Reduction Methods}{12}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Preperation of the data}{13}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Principle Component Analysis}{14}{subsection.1.3.2}
-\contentsline {subsubsection}{\numberline {1.3.2.1}Mathematical explanation of PCA}{14}{subsubsection.1.3.2.1}
-\contentsline {subsection}{\numberline {1.3.3}t-Distributed Stochastic Neighbor Embedding (t-SNE)}{15}{subsection.1.3.3}
-\contentsline {subsubsection}{\numberline {1.3.3.1}Mathematical explanation of t-SNE}{16}{subsubsection.1.3.3.1}
-\contentsline {paragraph}{Step 1}{16}{section*.10}
-\contentsline {subparagraph}{Perplexity}{16}{equation.1.3.3}
-\contentsline {paragraph}{Step 2}{17}{equation.1.3.3}
-\contentsline {subsection}{\numberline {1.3.4}PCA vs t-SNE, a quick comparison.}{17}{subsection.1.3.4}
-\contentsline {subsection}{\numberline {1.3.5}The Auto-Encoder (AE)}{19}{subsection.1.3.5}
-\contentsline {subsubsection}{\numberline {1.3.5.1}Demonstration of non-linear activation functions}{20}{subsubsection.1.3.5.1}
-\contentsline {subsection}{\numberline {1.3.6}Node2Vec}{21}{subsection.1.3.6}
-\contentsline {subsubsection}{\numberline {1.3.6.1}Sentence construction by sampling of a network}{22}{subsubsection.1.3.6.1}
-\contentsline {subsubsection}{\numberline {1.3.6.2}Word2Vec}{23}{subsubsection.1.3.6.2}
-\contentsline {subsection}{\numberline {1.3.7}Summary}{23}{subsection.1.3.7}
-\contentsline {section}{\numberline {1.4}Visualisation of clustering}{23}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Viewing the 2D species embeddings}{24}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Exposing overlapping data}{24}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Gooey Effect (Gaussian Blur)}{24}{subsection.1.4.3}
-\contentsline {subsection}{\numberline {1.4.4}Four Colours Theorem}{24}{subsection.1.4.4}
-\contentsline {section}{\numberline {1.5}Cluster Evaluation}{25}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Automated selection of clusters}{25}{subsection.1.5.1}
-\contentsline {subsubsection}{\numberline {1.5.1.1}Clustering (Silhouette) coefficient}{27}{subsubsection.1.5.1.1}
-\contentsline {subsection}{\numberline {1.5.2}Feature Extraction}{27}{subsection.1.5.2}
-\contentsline {subsubsection}{\numberline {1.5.2.1}Random Forrests}{27}{subsubsection.1.5.2.1}
-\contentsline {subsubsection}{\numberline {1.5.2.2}Calculating importance using Random Forrests}{28}{subsubsection.1.5.2.2}
-\contentsline {section}{\numberline {1.6}Results}{29}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Cluster distribution}{29}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Feature selection comparison}{35}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Individual Cluster Comparison}{35}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.1.1}Networks and their role within Visual Analytics (VA)}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Graphs in Chemistry}{4}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Modeling chemistry as a directed graph.}{6}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}Graph Design}{7}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Graph Syntatics}{7}{subsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.1.1}Criterion Choices}{8}{subsubsection.1.2.1.1}
+\contentsline {subsection}{\numberline {1.2.2}Automated Graph Drawing Layouts}{10}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.1}Replication of hand-drawing methods}{10}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2.2}Projection Based}{11}{subsubsection.1.2.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.3}Force-Directed}{12}{subsubsection.1.2.2.3}
+\contentsline {paragraph}{Force Atlas 2}{13}{figure.caption.9}
+\contentsline {paragraph}{Yifan Hu}{14}{figure.caption.9}
+\contentsline {paragraph}{OpenOrd}{14}{figure.caption.9}
+\contentsline {subsubsection}{\numberline {1.2.2.4}Layout Selection}{14}{subsubsection.1.2.2.4}
+\contentsline {paragraph}{Node Distribution}{15}{subsubsection.1.2.2.4}
+\contentsline {paragraph}{Node Density}{16}{figure.caption.10}
+\contentsline {paragraph}{Mathematical Analysis and Layout selection}{19}{figure.caption.11}
+\contentsline {subsection}{\numberline {1.2.3}Graph Semantics}{19}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Limitations}{20}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.2}Node Encoding}{22}{subsubsection.1.2.3.2}
+\contentsline {subsubsection}{\numberline {1.2.3.3}Edge Properties}{25}{subsubsection.1.2.3.3}
+\contentsline {paragraph}{Muti-variate edges}{26}{subsubsection.1.2.3.3}
+\contentsline {paragraph}{Edge Direction}{26}{figure.caption.16}
+\contentsline {paragraph}{Edge Shape}{27}{figure.caption.16}
+\contentsline {paragraph}{Edge Bundling }{29}{figure.caption.17}
+\contentsline {paragraph}{Power, Routing and Confluence graphs.}{30}{figure.caption.18}
+\contentsline {paragraph}{ Edge Angle / Continuity}{32}{figure.caption.22}
+\contentsline {subsection}{\numberline {1.2.4}Temporal Projection}{32}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}Additional Dimensions}{34}{subsection.1.2.5}
+\contentsline {section}{\numberline {1.3}A Chemistry case study}{34}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Syntatic representation}{35}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Semantic representation}{35}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Local vs Global minimum }{36}{subsection.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.3.1}Approximation of degrees of freedom}{36}{subsubsection.1.3.3.1}
+\contentsline {subsection}{\numberline {1.3.4}A model of Beijing}{43}{subsection.1.3.4}
+\contentsline {subsubsection}{\numberline {1.3.4.1}Trends in the Chemistry}{44}{subsubsection.1.3.4.1}
+\contentsline {paragraph}{Network shape}{44}{subsubsection.1.3.4.1}
+\contentsline {paragraph}{Pattern Matching using t-SNE}{46}{figure.caption.33}
+\contentsline {section}{\numberline {1.4}Summary}{47}{section.1.4}
 \gdef \the@ipfilectr {}
