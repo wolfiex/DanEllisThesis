@@ -61,7 +61,7 @@ for c in chp:
         cmb.write('\n')
         cmb.write(open(''.join(i)).read())
         
-        #ros.system('mv %s%s %sgrouped/'%(i[0],i[1],dirloc) )
+        os.system('mv %s%s %sgrouped/'%(i[0],i[1],dirloc) )
         
     print ('Moved',where,c)
     
