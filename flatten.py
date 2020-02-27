@@ -10,7 +10,7 @@ import numpy as np
 
 time = os.popen('date').read() 
 
-start = input('type go\n')
+start = input('type go')
 if start != 'go': 
     sys.exit('no go')
 
@@ -43,6 +43,7 @@ for c in chp:
     else:
         dirloc = list(dirloc)[0]
         
+    ikljfslk1=lkjlk
     dall = ''.join(dall).replace('\\subimport','%\\subimport').replace('\\chapterbib','\\subimport{%s}{combigned.tex} \n\n\\chapterbib'%dirloc)
 
     
