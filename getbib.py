@@ -79,7 +79,10 @@ for i in range(len(entries)):
         del entries[i]['howpublished']
     except:
         None
-    
+    try:del entries[i]['keywords']
+    except:None
+    try:del entries[i]['abstract']
+    except:None
 
 dup(entries,'ID')
 dup(entries, 'title')

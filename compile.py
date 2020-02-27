@@ -1,5 +1,8 @@
 
 import os, sys, glob, re, subprocess
+
+
+
 def make(filename):
     os.system('pdflatex '+filename)
     print('.')
