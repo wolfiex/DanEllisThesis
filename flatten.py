@@ -1,5 +1,7 @@
 '''
 Merge individual files into one 
+
+select tex files as arguments
 '''
 
 
@@ -20,7 +22,7 @@ if backup:
 
 print ('commit =', time)
 
-chp = glob.glob('*_*.tex')
+chp = sys.argv[1:]#glob.glob('*_*.tex')
 loc = re.compile(r'.*\{(.*)\}\{(.*)\}')    
 
 for c in chp:
