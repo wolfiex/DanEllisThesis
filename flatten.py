@@ -25,6 +25,8 @@ print ('commit =', time)
 chp = sys.argv[1:]#glob.glob('*_*.tex')
 loc = re.compile(r'.*\{(.*)\}\{(.*)\}')    
 
+print ('flattening ',chp)
+
 for c in chp:
     dall = open(c,'r').readlines()
     data = list(filter(lambda x : 'subimport' in x and '%' not in x , dall))
