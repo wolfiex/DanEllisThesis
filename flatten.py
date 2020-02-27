@@ -1,5 +1,7 @@
 '''
 Merge individual files into one 
+
+select tex files as arguments
 '''
 
 
@@ -8,7 +10,7 @@ import numpy as np
 
 time = os.popen('date').read() 
 
-start = input('type go')
+start = input('type go\n')
 if start != 'go': 
     sys.exit('no go')
 
@@ -20,7 +22,7 @@ if backup:
 
 print ('commit =', time)
 
-chp = glob.glob('*_*.tex')
+chp = sys.argv[1:]#glob.glob('*_*.tex')
 loc = re.compile(r'.*\{(.*)\}\{(.*)\}')    
 
 print ('flattening ',chp)
@@ -41,7 +43,6 @@ for c in chp:
     else:
         dirloc = list(dirloc)[0]
         
-    ikljfslk1=lkjlk
     dall = ''.join(dall).replace('\\subimport','%\\subimport').replace('\\chapterbib','\\subimport{%s}{combigned.tex} \n\n\\chapterbib'%dirloc)
 
     
