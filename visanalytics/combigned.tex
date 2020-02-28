@@ -15,12 +15,12 @@ node-link representations have been a core part of the field of chemistry for ma
 
 \begin{figure}[h]
     \centering
-    \begin{subfigure}[b]{0.34\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{C141CO3.png}
         \caption{2D `classic'}
     \end{subfigure}
-    \begin{subfigure}[b]{0.35\textwidth}
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{C141CO33d.png}
         \caption{3D}
@@ -61,7 +61,7 @@ Having established that a graph network ties in both modern and historical metho
 
 \section{Graph Syntatics}\label{syntatic}
 
- Syntactic representation considers how best to distribute information on a page for maximum impact. This can be seen between the force-directed graph (top) and geographical location (bottom) layouts in \autoref{fig:worldmap}. Although the geo layout gives a more accurate representation of the distances between unconnected nodes (airports), the force-directed graph provides greater insight into the relationships (flights) between each airport. This highlights the importance of choosing a suitable syntactic representation to highlight the features of interest. The remainder of this section discusses the syntactic choices required for the visualisation of a complex chemical mechanism. 
+ Syntactic representation considers how best to distribute information on a page for maximum impact. This can be seen between the force-directed graph (top) and geographical location (bottom) layouts in \autoref{fig:worldmap}. Although the geographical layout gives a more accurate representation of the distances between unconnected nodes (airports), a force-directed graph provides greater insight into the relationships (flights) between each airport. This highlights the importance of choosing a suitable syntactic representation to highlight the features of interest. The remainder of this section discusses the syntactic choices required for the visualisation of a complex chemical mechanism. 
 
  
 \begin{figure}[H]
@@ -80,20 +80,20 @@ Having established that a graph network ties in both modern and historical metho
 As chemical networks provide a wealth of information on the reactions within a system, this can prove challenging to user cognition and computational resources \citep{ch1}. In selecting the best possible graph layout, there are many metrics designed around the improving of visualisations aesthetics \citep{metricgraphaesthetics} however, these have often only been evaluated with a handful of criterions in mind. Such metrics can make it difficult to accurately quantify the changes in user-readability, especially if they are not treated as originally intended \citep{eyetrack}. 
 
 
-\subsubsection*{Edge Crossing and Bends} \label{edgecross}
-One of the greatest limitations to understanding a graph is the number of crossing edges \citep{humanaesthetic}. Experimentation with eye-tracking software found that in determining information about the structure of a system, users spent more time looking at the edges than the nodes themselves \citep{eyetrack}. 
+\subsubsection*{Edge Crossing} \label{edgecross}
+One of the greatest limitations to understanding a graph is the number of overlaping (crossing) edges \citep{humanaesthetic}, especially since users often spend most of their time looking at the edges of a graph in order to understand it \citep{eyetrack}. 
 
-Several styles of layout algorithms (e.g. force-directed, orthogonal) aim to reduce these by introducing repulsive forces or constraining the shape of each edge within the graph. The use of orthogonal designs has been proven for circuit schematics and transport networks, however, they lose any information that may be encoded in a nodes relative location. A reduction of the accuracy is also shown in simple tasks where users are required to name the nodes along a chosen path compared to a force-directed layout (58/100:92/100) \citep{eyetrack}. Finally, the use of bends may be misleading as users can perceive them as multiple separate objects \citep{aestheticsgraphvis}.
+There exist several type of graph layout algorims which aim to reduce the amount of overlapping edges in a graph. The two most common ones are force-directed and orthogonal. Orthogonal designs are those of straight edges at 90 degree angles, such as in architectural or circuit schematics. Force directed graphs (\autoref{sec:forcedirected}) are a graph layout is designed to simulate a phsical system, where node positions are the result of the push and pull of the edges between them. In the task selecting nodes from a specific path, users were twice as more accurate using this layout than the orthogonal one \citep{eyetrack}.
+
+ % 
+ % Finally, the use of bends may be misleading as users can perceive them as multiple separate objects \citep{aestheticsgraphvis}.
     
  
-\subsubsection*{Node Distribution}
-Having nodes equally distributed across the visualisation area can also increase the readability of a graph. In addition to preventing overlapping edges, equally distributed networks with medium length edges greatly improve the `flow' of the diagram. Coupling this with graphical-symmetry is shown as the next most important user-ranked preference \citep{ch6graphredability}. 
+\subsubsection*{Node Distribution and Overlap}
 
+The distribution of nodes across the page can both hinder or increase the readability of a graph - especially since larger nodes may obfuscate smaller ones in the same location. Generating a graph of an equal node distribution with medium edge length was found to greatly imporve the `flow' of the graph. Coupling this with graphical-symmetry, this forms the second most important user-ranked preference \citep{ch6graphredability}. 
 
-\subsubsection*{Node Overlap}
-As with overlapping edges, if two nodes are positioned in the same point in space, it makes it difficult to read a graph. Historically many algorithms treat nodes as point masses which would make it difficult of designers to remove the overlap between them \citep{nodeoverlap}.
-
-To remove any node overlap, there are two main methods \citep{IPSEPCOLA}. These are:
+In addition to the selection of a layout with a better distribution of nodes, there are several methods in which overlapping nodes may be removed. Although many algorithms aim to reduce this, the treatment of nodes as `point masses' make it difficult to account for overlapping points \citep{nodeoverlap}. In general there are two methods in which overlapping nodes may be reduced \citep{IPSEPCOLA}:
 
 \begin{itemize}
 \item [1.] Create a layout design capable of taking node size (e.g. \citep{nons}) into consideration. These designs tend to be layout specific and not absolute in removing all overlap between nodes. 
@@ -114,7 +114,7 @@ With the rise of computation, many traditional visualisations were adapted for t
 
 \begin{figure}[H]
      \centering
-     \includegraphics[width=0.25\textwidth]{figures_c1/layout/memory.png}
+     \includegraphics[width=0.25\textwidth, angle=90]{figures_c1/layout/memory.png}
          \caption{\textbf{A transit map showing all the possible routes from methane to carbon dioxide.} This was drawn using MemoryMap (\citep{memory}) and uses a version of the MCM methane subset, where carbon dioxide has been introduced. }
         \label{fig:mem}
 \end{figure}
@@ -165,7 +165,7 @@ More recently, the mathematics of mapping a large dimension onto a simpler one h
         \label{fig:merc}
 \end{figure}
 
-\subsubsection{Force-Directed}
+\subsubsection{Force-Directed}\label{sec:forcedirected}
 
 Force-directed graph layouts are the results of the Spring-Electrical model. This was first introduced by \citep{Eades} and further improved by \citep{raingold}. Force-directed layouts are in essence a simple physics simulation of like-charged particles (or nodes). These particles are repulsed by each other, much like protons experiencing Coulomb repulsion, and try to get as far away from each other. Should a relationship exist between two nodes, we introduce an attractive force between them. These attractive forces act much like springs drawing the nodes back together. 
 
