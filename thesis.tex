@@ -90,6 +90,76 @@
 }
 \makeatother
 
+% \newcommand{\Autoref}[1]{%
+%   \begingroup%
+%   \def\chapterautorefname{Chapter}%
+%   \def\sectionautorefname{Section}%
+%   \def\subsectionautorefname{Subsection}%
+%   \def\subsubsectionautorefname{Subsubsection}%
+%   \def\paragraphautorefname{paragraph}%
+%   \autoref{#1}%
+%   \endgroup%
+% }
+
+%just do it for all
+\def\chapterautorefname{Chapter}%
+\def\sectionautorefname{Section}%
+\def\subsectionautorefname{Subsection}%
+\def\subsubsectionautorefname{Subsubsection}%
+\def\paragraphautorefname{Paragraph}%
+\def\tableautorefname{Table}
+\def\equationautorefname{Equation}
+
+
+% %titleify section headers
+\usepackage{titlecaps}
+% \usepackage{xparse}
+    % 
+
+
+
+    \let\svsubsubsection\subsubsection
+    \DeclareDocumentCommand\subsubsection{ s m }{% s = star, m = mandatory arg
+       \IfBooleanTF{#1}{%
+          \svsubsubsection*{\titlecap{#2}}
+       }{%
+         \svsubsubsection{\titlecap{#2}}
+       }%
+    }
+    
+    \let\svsubsection\subsection
+    % \def\subsection#1{\svsubsection{\titlecap{#1}}}
+    \DeclareDocumentCommand\subsection{ s m }{% s = star, m = mandatory arg
+       \IfBooleanTF{#1}{%
+          \svsubsection*{\titlecap{#2}}
+       }{%
+         \svsubsection{\titlecap{#2}}
+       }%
+    }
+    
+    \let\svsection\section
+    % \def\section#1{\svsection{\titlecap{#1}}}
+    \let\svsection\subsection
+    \DeclareDocumentCommand\section{ s m }{% s = star, m = mandatory arg
+       \IfBooleanTF{#1}{%
+          \svsection*{\titlecap{#2}}
+       }{%
+         \svsection{\titlecap{#2}}
+       }%
+    }
+    
+    
+    % 
+    % \let\svparagraph\paragraph
+    % \DeclareDocumentCommand\paragraph{ s m }{% s = star, m = mandatory arg
+    %    \IfBooleanTF{#1}{%
+    %       \svparagraph*{\titlecap{#2}}
+    %    }{%
+    %      \svparagraph{\titlecap{#2}}
+    %    }%
+    % }
+
+
 
 
 % location,label,caption,width
@@ -143,6 +213,7 @@
 \end{center}
 
 
+
 \tableofcontents
 % \listoffigures
 % \listoftables
@@ -153,19 +224,21 @@
 
  \newpage
 
+
+
 %\include{./0_intro}
-
-% Chapter 3
-\include{./3_graphs}
-
+% 
+% % Chapter 3
+%  \include{./3_graphs}
+% 
 % % Chapter 4
-% %\include{./4_centrality}
+% \include{./4_centrality}
 % 
 % 
 % % Chapter 5
-% % \include{./5_lumping}
-% 
-% % Chapter 6
+%  \include{./5_lumping}
+
+% Chapter 6
 \include{./6_DR}
 
 
