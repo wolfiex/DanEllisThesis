@@ -38,9 +38,9 @@ for f in dirs:
     wht = f[1]
     i = f[2]
     
-    sf = '''\\begin{subfigure}[b]{0.5\\textwidth}
+    sf = '''\\begin{subfigure}[b]{0.22\\linewidth}
     \\centering
-    \\includegraphics[width=\\textwidth]{outputs/%s/%s/legend.png}
+    \\includegraphics[height =\textwidth,angle=-90]{outputs/%s/%s/legend.png}
     \\caption{%s}
     \\label{fig:legend_%s_%s}
 \\end{subfigure}'''%(wht,i,i,wht,i)
