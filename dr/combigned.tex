@@ -1,10 +1,10 @@
 
 \section{Introduction}
 
-\subsection*{Historical significance}
+\subsection*{Historical Significance}
 The established process of trial and error has always underpinned our survival \citep{TrialandError}. Babies are born to rely on a set of sensory reflexes and a framework for physical reasoning \citep{pr}, and with these, we develop methods to navigate the influence of change within a physical, and auditory space \citep{objects}. This method of decision making is reflected in our adult lives with ideas and actions being limited in choice by our intuition and experience \citep{descartes}. In science, we apply a methodological framework consisting of a continuous assessment of scepticism, educated guessing (hypothesising) and rigorous practical testing. Specialists accrue years of practical and theoretical knowledge within a narrow field and can identify areas of potential gain and futility. Yet even with all prior experience, the discovery of new and untested techniques involve the tortuous traipsing through a sea of uncertainty. Such a methods sometimes prove fruitful, through accidental discoveries of items such as x-rays, penicillin... \citep{accidental}; finding novel applications for existing methods such as optical tweezers for chemistry or the abstract field of maths utilised by Einstein [REF], but more often than not end in the constant evolution of a pre-existing project with no apparent result. 
 
-\subsection*{Theory and Simulation in Science}
+\subsection*{Theory And Simulation In Science}
 
 Until recently much of the experimentation possible was limited by resources, levels of knowledge available technology. With the increase of computation power, we have been able to not only increase our understanding but also run theoretical simulations to guide exploratory efforts with an impact on real-world applications \citep{dft,lion,theoreticalbio,drug}. However, as our ability to record and produce data increases, the need for the scientific method diminishes \citep{wired}. Here the application of `big data' tools and algorithms can provide insights and correlations much more compelling than the predictive capabilities of constantly changing models - ``Since all models are wrong the scientist cannot obtain
 a "correct" one by excessive elaboration'' - \cite{allmodels}. As our level of attainable technology increases, so does the complexity of the data collected. New datasets tend to be large, complex and highly multivariate. Although this dramatically improves the quality of science, the difficulty lies in trying to represent it in such a way that we may successfully access the reliability of the results. Since simple bar and line graphs are no longer applicable, one solution falls within a class of unsupervised machine learning techniques called dimensionality reduction (DR).
@@ -22,7 +22,7 @@ The master chemical system (as defined in all previous chapters), represents our
 
 This section explores the different methods of representing a species structure, intending to provide a machine built algorithm with the highest amount of information about each species and its functionality. A range of input types will be evaluated against several dimensionality reduction algorithms to isolate which chemical properties are most `picked up'. 
 
-\subsection{Input generation}
+\subsection{Input Generation}
 The MCM provides species information in the form of a species `smiles' (\autoref{sec:smiles}) and the IUPAC InChi string \citep{inchi}. Within this chapter, we use only the smiles string, which is either manually processed using regular expressions or with the aid of pythons RDKIT package \citep{rdkit}. There are seven different methods for representing the chemistry; these are outlined below. 
 
 
@@ -98,7 +98,7 @@ In \autoref{ch4} it was shown that the dedicated species names for species in th
 Although this is not the most robust method of defining the structure, it allows for a straightforward test of the algorithms, for which the user can quickly compare the human-readable output. 
 
 
-\subsubsection{SMILES strings}\label{sec:smiles}
+\subsubsection{Smiles Strings}\label{sec:smiles}
 
 
  Smiles (`Simplified Molecular-Input Line-Entry System') provide a human-readable representation of the molecular structure,
@@ -158,7 +158,7 @@ The construction of a SMILES string happens in three parts:
 \autoref{ch2} - \ref{ch4} have shown the role of graphs in revealing network properties and structure. Graphs in themselves can simplify relational data into two/three dimensions for visualisation and algorithmic clustering. Continuing this trend, we can represent a species structure in the form of a graph (\autoref{sec:specgraph}), as well as converting the structure of a mechanism for dimensionality reduction (\autoref{sec:n2vec})
 
 
-\subsubsection{The species graph (fingerprint)}\label{sec:specgraph}
+\subsubsection{The Species Graph (Fingerprint)}\label{sec:specgraph}
 
 The structure of a species has long represented using a graph-like layout, \autoref{ch2}. It, therefore, follows that other methods for representing the graph structure would also apply. One such way is the use of an adjacency (or relational) matrix to describe the relationships between atoms and bonds in a species. Such a methodology is already used in the construction of bond and z-matrixes \citep{mcmgen,zmatrix}. 
 
@@ -205,7 +205,7 @@ As machine learning algorithms only vectors as an input, it is possible to decom
 \end{figure}
 
 
-\subsubsection{Node Embeddings (node2vec)}\label{sec:n2vec}
+\subsubsection{Node Embeddings (Node2Vec)}\label{sec:n2vec}
 \autoref{ch2} and \autoref{ch3} showed that the underlying structure of a chemistry mechanism graph contains information about the species and reactions within it. In \autoref{fig:vk} colour represents the ratio of potential oxidation of a species. Here as emitted species become progressively more processed, the number of bonds which may be oxidised diminishes (lighter colours near the centre) until they eventually form carbon dioxide and water. 
 
 
@@ -227,12 +227,12 @@ In the field of chemical informatics, molecular fingerprints (or structural keys
 
 Here species properties are often split into structural and psyico-chemical groups - which has used such as the discovery of natural analogues (which circumvent problems such as intolerances in medicine \citep{analog}). Although there exist many different types of molecular fingerprints, the two main ones that will be explored are molecular quantum numbers (MQN) and the molecular access system (MACCS). 
 
-\subsubsection{Molecular Quantum Numbers (MQN)}
+\subsubsection{Molecular Quantum Numbers (Mqn)}
 In chemistry the shape, phase and electron occupancy of an atom may be described through the use of four quantum numbers: the $n$ principle quantum number, $I$ angular momentum quantum number, $M_i$ magnetic quantum number and $M_s$ spin quantum number. The rationalisation of elements based on their structure, and by consequence reactivity, has led to the most iconic tool of the modern-day chemist - the periodic table, where increasing atomic numbers follow the principal quantum number \citep{periodic}. In representing a molecule as a set of 42 quantum numbers, MQN fingerprints produce a multi-dimensional mapping of atom, bond, polarity and topology count \citep{MQN}. 
 
 % [ref fae others... ]
 
-\subsubsection{Molecular ACCess System (MACCS)}
+\subsubsection{Molecular Access System (Maccs)}
 MACCS keys are a 164\footnote{They are 166-bit keys, although there is no real agreement to what the 44th keys' purpose is, and therefore it is often omitted. Within RDKIT this is denoted by a $?$ \citep{rdkitcode}.} bit structural keys formulated through answering a series of structure-related questions. Developed by MDL Information Systems \citep{maccs}, their main purpose lies in being a SMILES Arbitrary Target Specification (SMARTS) system for substructure searching. However, their distinct structure key format makes them highly suitable for similarity detection. In many cases, the optimised version of MACCS keys is cited (\citep{optimised}), although most use cases exploit a variation of the undocumented 166bit keys. We use the implementation presented by \citep{rdkit,rdkitcode} for all molecular fingerprints in this section.
 
 
@@ -241,7 +241,7 @@ In the last section, we described several methods in which the chemical structur
 
 In this section, we begin by explaining the data preparation required for dimensionality reduction (\autoref{sec:pref}) before describing the different possible methods of reducing the dimensions of a dataset. 
 
-\subsection{Preperation of the data}\label{sec:prep}
+\subsection{Preperation Of The Data}\label{sec:prep}
 Real-world data is rarely preformatted in such a way that it can be used directly within a computational model. Often values need to be cleaned and corrected to be fit for purpose. In the interest of completeness, the two main methods of data adjustment for machine learning are outlined below. These are normalisation and standardisation. 
 
 
@@ -282,7 +282,7 @@ A more straightforward interpretation of this would be to adjust the direction o
 \end{figure}
 
 
-\subsubsection{Mathematical explanation of PCA}
+\subsubsection{Mathematical Explanation Of Pca}
 \emph{\textbf{Note:} The basic statistics/mathematics required to understand this section is shown in \autoref{apendix:pca}. Please read this if you are not familiar with any of the terms below.
 }
 
@@ -292,7 +292,7 @@ We can now sort the eigenvector columns by influence using their eigenvalues—t
 
 
 
-\subsection{t-Distributed Stochastic Neighbor Embedding (t-SNE)}\label{sec:overcrowd}
+\subsection{T-Distributed Stochastic Neighbor Embedding (T-Sne)}\label{sec:overcrowd}
 
 t-SNE is an algorithm designed with visualisation in mind \citep{tsne}. Rather than representing the data through a series of linear transformations, t-SNE uses local relationships to create a low-dimensional mapping, much in the same way as a fully connected force graph, \autoref{fig:tsneforcegraph}. This allows the ability to capture non-linear structures in the data which cannot be accomplished through linear mapping methods (e.g. PCA).
 
@@ -325,7 +325,7 @@ and is described in \autoref{sec:mathtsne}.The main reason t-SNE produces good r
 
 
 
-\subsubsection{Mathematical explanation of t-SNE}\label{sec:mathtsne}
+\subsubsection{Mathematical Explanation Of T-Sne}\label{sec:mathtsne}
 %https://mlexplained.com/2018/09/14/paper-dissected-visualizing-data-using-t-sne-explained/
 
 %
@@ -361,7 +361,7 @@ The optimisation of this equation is achieved through the use of \emph{gradient 
 
 
 
-\subsection{PCA vs t-SNE, a quick comparison.}
+\subsection{Pca Vs T-Sne, A Quick Comparison.}
 
 PCA has been around for much longer than t-SNE, and its uses are well established within the scientific community - an example of this would be the use of sensitivity analysis within mechanism reduction \citep{kinetics}. It is fast, simple and easy to use and very intuitive. The PCA algorithm works by creating a lower-dimensional embedding which best preserves the overall variance of the dataset. Clusters created from the algorithm are grouped in ways, such that they retain the highest variance of the data.
 
@@ -406,7 +406,7 @@ Since the distance between clusters within t-SNE does not hold the same mathemat
 
 
 
-\subsection{The Auto-Encoder (AE)}
+\subsection{The Auto-Encoder (Ae)}
 Auto-encoders are a subclass of neural networks with primary use in compressing data (dimensionality reduction). Rather than predicting a numerical output, AutoEncoders focus on the construction and deconstruction of data through the use of an encoder and decoder pair. The encoder takes an n-dimensional input and applies a compression, reducing it to the number of dimensions in the bottleneck layer. The reduced dataset is then reconstructed within the decoder. Such a process not only allows for an easy understanding of the error of the reduced data but can also be used in the filtration of noisy or pixelated data \citep{aenoise,aeim} and as an input to more complex machine learning models.\
 
 
@@ -421,7 +421,7 @@ There are two features of an autoencoder that make it powerful. The first is the
 
 
 
-\subsubsection{Demonstration of non-linear activation functions}
+\subsubsection{Demonstration Of Non-Linear Activation Functions}
 
 To demonstrate the effect of these we take a sample isopleth of Methane and Ozone, reduce it to two dimensions. This is then reconstructed back into three dimensions using the DR algorithms. 
 \autoref{fig:aeiso} shows the difference between the original dataset (\autoref{fig:iorig}) and that of the PCA (\autoref{fig:ipca}) and AutoEncoder (\autoref{fig:iae}) reconstructions. Here we see a loss in the non-linearity of the original data for the PCA reconstruction. However, the use of a non-linear (tanh) activation function within AutoEncoder produces a result much closer to the original. Use of a linear activation function, however, produces a similar result to the PCA algorithm. 
@@ -474,7 +474,7 @@ This methodology allowed for the use of word2vec algorithm, converting the walk 
 
 
 
-\subsubsection{Sentence construction by sampling of a network}
+\subsubsection{Sentence Construction By Sampling Of A Network}
 The probability and path depend both on a set of arguments and a random seed provided to the model. The return and input parameters ($p\ \&\ q$) determine how fast we explore the network and our probability to leave the neighbourhood, \autoref{fig:n2vedge}. In a system, where the previous path is from $t$ to $v$, we may calculate the probability of returning to $t$ as $1/p$, going to a mutual node connected between $t$ and $v$ as 1, and viewing a new node as $1/q$.
 If $q>1$ we have a high probability to end up at nodes close to $t$, and with $q<1$ we are likely to explore other nodes. Additionally if we chose $p> \max{q,1}$ we are less likely to return to an already visited node ($p < \min{q,1}$ is likely to generate a backwards step). Since we wish to generate a `local' view, but do not wish to return to $t$ we select  $q \ge 1$ and $p > q$ our parameters as  $p = 2.0,q=1.1$.  In the case of a weighted graph (something that we are \textit{not} exploring within this chapter) the resultant $alpha$ value calculated is further multiplied by the edge weight.
 
@@ -511,11 +511,11 @@ Having defined each method, we next explain how they will be evaluated (\autoref
 
 In assessing the validity of clustered space, we require a level of exploratory data analysis. To reveal features of interest, we plot the reduced 2D dataset and apply interactivity coupled with a selection of visualisation techniques described below. This section outlines the different visualisation methods which are used.
 
-\subsection{Viewing the 2D species embeddings}
+\subsection{Viewing The 2D Species Embeddings}
 Since the different DR algorithms return data on various scales, comparison between the outputs is not straightforward. To overcome this outputs in $x$ and $y$ are normalised (scaled between \{0,1\}), before being plotted as a scatterplot. 
 
 
-\subsection{Exposing overlapping data}
+\subsection{Exposing Overlapping Data}
 If the nodes within a tight-knit cluster overlap, this can cause obfuscate the results and limit the user's ability to select them. As an initial test, node sizes can be reduced. However, this may often result in points too small to pick. The other solution which was used is to create a force-directed graph where each point is strongly attracted to their initial position. Here we can apply collision detection, while still preserving the overall grouping of nodes within a cluster - a technique that was seen in \autoref{ch4}.
 
 
@@ -550,7 +550,7 @@ The previous section discussed methods of visualising the reduced data for use w
 
 
 
-\subsection{Automated selection of clusters}\label{sec:drclustt}
+\subsection{Automated Selection Of Clusters}\label{sec:drclustt}
     When it comes to clustering data points in a dataset, there exist a range of methods which may accomplish a task, \autoref{fig:clustereval}. Most often, the k-means \citep{kmeans}, is used as it is fast and straightforward to understand. However, its linear method of partitioning cannot capture the splits between non-linear relationships of real data. The other problem is that an estimate for the number of expected clusters is required - something that is often unknown without prior understanding of the data. When this is the case, often it is easier to select the nodes with interactivity manually.
 
 In contrast, density-based clustering techniques such as GMM (\citep{scikit}) or DBSCAN (\citep{DBSCAN}) tend to be better at locating non-linear trends in the data. The DBSCAN algorithm asses the distribution of data across a specific location. This allows clusters with a high density of datapoints to be located without the need for a predefined number as an input. Another method: OPTICS (Ordering Points To Identify the Clustering Structure) \citep{optics}, shall be used\footnote{ If using Python 2, the library for this needs to be extracted from the sci-kit-learn library for python3 package and altered to run with the previous version. (See copy in attached code.)}. This is an adaptation of the DBSCAN algorithm which does not require the specification of a minimum distance between points (for the density estimate)- instead, we specify a gradient for the distribution and the minimum number of points for a cluster to be classified.
@@ -574,7 +574,7 @@ In selecting a value for the results section, several clustering algorithms, wit
 
 
 
-\subsubsection{Clustering (Silhouette) coefficient}\label{sec:silo}
+\subsubsection{Clustering (Silhouette) Coefficient}\label{sec:silo}
 The silhouette measure is a tool used for acessing the validity of a set of clusters. Here each cluster is represented as a silhouette, based on the comparison of its tightness and separation. To calculate the silhoette coefficient we look at the intra-cluster $a$ and the mean inter-cluster\footnote{Inside and between different clusters.} distance $b$. The silhouette cluster can then be described using \ref{silhouette,sklearn}:
 
 \begin{equation}
@@ -592,7 +592,7 @@ Upon establishing a set of DR datasets, and their groups (the clusters of specie
 \subsubsection{Random Forrests}
 Random forests \citep{rfrr}, are a subset of ML algorithms called ensemble learning. This means that they train a large number of decision trees, each on a random subset of the original features. A decision tree is a tree formed from a series of conditionals\footnote{Questions with a True/False answer}, much like a perceptron network (\autoref{sec:perceptron}) with binary activation functions. Random forests introduce a level of additional randomness by selecting only a subset on which to create each decision tree. This may introduce a higher bias, but lowers the overall model variance, which creates a better (more robust) model. Such methods have been applied to replacing the computationally expensive process of chemistry integration of GEOS-Chem (a global 3D model of tropospheric chemistry) \citep{geosrf} and the prediction of global sea-surface iodine based on observations coupled with sea-surface temperature, depth, and salinity \citep{iodene}.
 
-\subsubsection{Calculating importance using Random Forrests}
+\subsubsection{Calculating Importance Using Random Forrests}
 Since random forests are in essence a collection of decision trees, it is possible to generate a `decision tree aggregate' to visualise the ensemble structure of the random forest \citep{forrester} (\autoref{fig:iodenetree}). Alternatively, if all that is required is the relative importance of each feature, the RandomForrestClassifier from \cite{sklearn} provides a quick and easy way of understanding which features matter, 
 \citep{handsonml}. This works by aggregating the weighted nodes which use a certain feature using the number of samples and then scales the result to 1. We use this method to access the overall importance of features within each DR output and identify the differences between clusters.
 %bagging an aggregate collection of TreeS
@@ -618,7 +618,7 @@ Since random forests are in essence a collection of decision trees, it is possib
 % 
 There exist many methods to define the chemical structure of the species within the MCM. In this section, we attempt to evaluate their effectiveness for exhibiting the defining functional groups and characteristics used for constructing the mechanism. First, we explore the distribution of clusters and the ability of different DR algorithms to visually separate various groups of chemistry (\autoref{sec:cldist}). Next, the functional groups (taken from the MCM development protocol) are explored within each DR algorithm (\autoref{sec:fsclust}). Finally, a selected example for each DR method is taken and explored in further detail (\autoref{sec:selectcomp}).
 
-\subsection{Cluster distribution}\label{sec:cldist}
+\subsection{Cluster Distribution}\label{sec:cldist}
 
 Start with the visual comparison and compare it with the silhouette values. 
 
@@ -699,7 +699,7 @@ Start with the visual comparison and compare it with the silhouette values.
 
 
 
-\subsection{Feature selection comparison}\label{sec:fsclust}
+\subsection{Feature Selection Comparison}\label{sec:fsclust}
 
 \begin{figure}[H]
     \subimport{tables/}{pcalegend.tex}
