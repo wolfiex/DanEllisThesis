@@ -19,7 +19,7 @@ if backup:
 
 print ('commit =', time)
 
-heading = re.compile(r'(?<=\\section\*{0,1}\{).*?(?=\})')
+heading = re.compile(r'(?<=\\section\{).*?(?=\})')
 
 #|\\chapter\*{0,1}\{(.*?)\}|\\paragraph\*{0,1}\{(.*?)\}')   
  
