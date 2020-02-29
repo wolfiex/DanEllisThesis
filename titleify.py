@@ -22,7 +22,7 @@ print ('commit =', time)
 classes = []
 for i in 'section subsection subsubsection paragraph'.split():
     for j in ['','*']:
-        classes.append( '(?<=\%s%s{).*?(?=})'%(i,j))
+        classes.append( '(?<=\\%s%s\{).*?(?=})'%(i,j))
         
 print (classes)
 
