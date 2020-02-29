@@ -20,7 +20,7 @@ if backup:
 print ('commit =', time)
 
 classes = []
-for i in 'section subsection subsubsection paragraph'.split():
+for i in 'section subsection subsubsection'.split():
     for j in ['','\*']:
         classes.append( r'(?<=\\%s%s\{).*?(?=})'%(i,j))
         
