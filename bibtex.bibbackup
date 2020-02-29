@@ -2379,6 +2379,13 @@ and Bergstrom, C. T.},
    year = {2019}
 }
 
+@misc{metabolic,
+   author = {Gerhard Michal},
+   note = {\url{https://www.roche.com/sustainability/philanthropy/science_education/pathways/pathways-ordering.htm}},
+   title = {{Metabolic Pathways}},
+   year = {1965}
+}
+
 @article{metricgraphaesthetics,
    author = {HELEN C. Purchase},
    doi = {http://dx.doi.org/10.1006/jvlc.2002.0232},
