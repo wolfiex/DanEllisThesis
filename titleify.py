@@ -19,7 +19,15 @@ if backup:
 
 print ('commit =', time)
 
-heading = re.compile(r'(?<=\\section\{).*?(?=\})')
+classes = []
+for i in 'section subsection subsubsection paragraph'.split():
+    for j in ' *'.split():
+        classes.append( '(?<=\\%s%s\{).*?(?=\})'%(i,j))
+        
+print (classes)
+
+
+heading = re.compile(r'')
 
 #|\\chapter\*{0,1}\{(.*?)\}|\\paragraph\*{0,1}\{(.*?)\}')   
  
@@ -29,10 +37,10 @@ for f in files:
         print(f)
         text = open(f,'r').read()
         new = heading.sub( lambda x: str(x.group()).title(), text)
-
-        with open(f,'w') as replace:
-            replace.write(new)
-            
+        # 
+        # with open(f,'w') as replace:
+        #     replace.write(new)
+        # 
             
             
             
