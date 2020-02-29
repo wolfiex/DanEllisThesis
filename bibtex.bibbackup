@@ -1041,12 +1041,7 @@ and Kuroya, Katsutoshi},
 }
 
 @article{defra1,
-   author = {Dick Derwent,
-Andrea Fraser,
-John Abbott,
-Mike Jenkin,
-Paul Willis,
-Tim Murrells},
+   author = {Dick Derwent,Andrea Fraser,John Abbott,Mike Jenkin},
    issue = {3},
    note = {\url{https://uk-air.defra.gov.uk/assets/documents/reports/cat05/1006241607_100608_MIP_Final_Version.pdf}},
    title = {{Evaluating The Performance Of Air Quality Models}},
