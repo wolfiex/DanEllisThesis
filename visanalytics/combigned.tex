@@ -358,6 +358,16 @@ Here we begin by partitioning the graph plane into the same number of cells as o
 Finally we calculate the areas of each plolygon and use it to represent the density distribution between neighbouring nodes of our graph. To simplify the visual analysis of each graph, these are also coloured in \autoref{fig:vornoicompare}. 
 
 
+\paragraph*{Visual study of node clustering}
+
+The method of using Vornouli tessellation for the calculation of density has been used in the study of neurones \citep{neurone} and areas of fixation when viewing images \citep{fixation}. We apply it to the nodes of a set of force-directed graphs to determine the graph layout which provided the best high-low density ratio for the atmospheric chemical mecahnism of a Beijing environment.
+ 
+Using Vornouli tessellation in \autoref{fig:vornoicompare} we find that 
+the OpenOrd and tsNET (\autoref{fig:aoo},\autoref{fig:ats}) layouts have the highest isotropy - containing cells of similar sizes and consequently a small colour gradient. This suggest that these are spatially efficient layouts as they do not reveal any additional information about nodes of similar chemistry. 
+
+In contrast the Mercator layout, despite having a high $x-y$ node distribution, contains large areas of unoccupied space due to its non-linear density distribution. Using this measure of spatial modularity we find that the ForceAtlas2 and YifanHu (\autoref{fig:afa},\autoref{fig:ayfan}) graphs have distinct modules of high density distributed across the entire graph, which is what is what we expected from the MCM network.
+
+
 
 \begin{figure}[H]
      \centering
@@ -391,23 +401,13 @@ Finally we calculate the areas of each plolygon and use it to represent the dens
         \label{fig:vornoicompare}
 \end{figure}
 
-\paragraph*{Visual study of node clustering}
-
-The method of using Vornouli tessellation for the calculation of density has been used in the study of neurones \citep{neurone} and areas of fixation when viewing images \citep{fixation}. We apply it to the nodes of a set of force-directed graphs to determine the graph layout which provided the best high-low density ratio for the atmospheric chemical mecahnism of a Beijing environment.
- 
-Using Vornouli tessellation in \autoref{fig:vornoicompare} we find that 
-the OpenOrd and tsNET (\autoref{fig:aoo},\autoref{fig:ats}) layouts have the highest isotropy - containing cells of similar sizes and consequently a small colour gradient. This suggest that these are spatially efficient layouts as they do not reveal any additional information about nodes of similar chemistry. 
-
-In contrast the Mercator layout, despite having a high $x-y$ node distribution, contains large areas of unoccupied space due to its non-linear density distribution. Using this measure of spatial modularity we find that the ForceAtlas2 and YifanHu (\autoref{fig:afa},\autoref{fig:ayfan}) graphs have distinct modules of high density distributed across the entire graph, which is what is what we expected from the MCM network.
-
-
 
 
 \paragraph*{Mathematical Analysis And Layout Selection}
 In contrast to the qualitative analysis of the visualisation, it is also possible to calculate the distribution of polygon areas (and this node dispersion) of each graph through the use of a boxplot (\autoref{fig:abox}), in addition to the minimum, maximum and outlier properties, a boxplot allows for the comparison for the inter-quartile range (IQR) between graphs. If these values are large, they signify a bigger distribution between sparsely and densely grouped nodes (a commodity that is desired). The medians location within the IQR can also be used to indicate the dominant size of polygon within the graph. Here a larger number of smaller polygons is desired, and can be seen by a median approaching the lower box boundary ($25^{th}$ quartile).
 
 \begin{figure}[H]
-\centering \includegraphics[width=.7\textwidth]{figures_c1/area/log10layoutbox.png}
+\centering \includegraphics[width=.6\textwidth]{figures_c1/area/log10layoutbox.png}
 \caption{\textbf{Voronoi $\log_{10}$(Area) BoxPlot for all plots in \autoref{fig:vornoicompare}.} This provides a mathematical analysis for the areas around each node within a graph. }
 \label{fig:abox}
 \end{figure}
@@ -551,13 +551,13 @@ A comprehensive list of all available interaction types and styles are provided 
 \end{itemize}
 
 \end{tabular}
-    \caption{\textbf{A selection of interactive methods.}}
+    %\caption{\textbf{A selection of interactive methods.}}
     \label{tab:interactive}
-\end{table}
+\end{table}\\
 
 \begin{figure}[H]
      \centering
-     \includegraphics[width=0.7\textwidth]{figures_c1/layout/CObranches.png}
+     \includegraphics[width=0.65\textwidth]{figures_c1/layout/CObranches.png}
         \caption{\textbf{Using mouseover edge-selection to hilight all links related to a node. } This figure shows how in using interactivity it is possible to reduce clutter and filter the information presented by a densely populated graph. In this case the mercator projection (\autoref{sec:merc}) is used, with reactions relating to Carbon Monoxide (centre) hilighted. Orange lines represent reactions producing CO whist the red (some of which may be hidden) are of reactions with CO.  }
       \label{fig:tooltip}
 \end{figure}
@@ -576,10 +576,7 @@ In cases where interactivity is not possible, such as papers, books and this the
 \subsubsection{Edge Properties}
 
 
-Defining the purpose of graph-energy models as: a means for creating a visualisation from which the viewer can infer properties of the data \citep{noack}, it can be shown that this criterion is easily met in small and sparse graphs. However non-planar examples with high edge density (lots of links) can easily result in tangled results with impractical running times \citep{tvg}. In most cases attaining an optimal solutions here seems to be computationally infeasible \citep{nicelyanneal}. This is generally because graphs primarily focus on hi-lighting a specific purpose or following a set of aesthetic heuristics \citep{eyetrack}. 
-
-Butane model 
-
+Defining the purpose of force-directed (graph-energy) models as: a means for creating a visualisation from which the viewer can infer properties of the data \citep{noack}, it can be shown that this criterion is easily met in small and sparse graphs. However non-planar examples with high edge density (lots of links) can easily result in tangled results with impractical running times \citep{tvg}. In most cases attaining an optimal solutions here seems to be computationally infeasible \citep{nicelyanneal}. This is generally because graphs primarily focus on hi-lighting a specific purpose or following a set of aesthetic heuristics \citep{eyetrack}. 
 
 \paragraph{Muti-variate edges}
 Since there are multiple relationships between species, it is important to decide if simplifying the network would be of benefit. Although it is possible to \autoref{fig:multiedge}.. 
