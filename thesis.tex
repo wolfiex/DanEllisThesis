@@ -116,7 +116,7 @@
 % \usepackage{xparse}
     % 
 
-
+% Just make titlify python scripts
 
     \let\svsubsubsection\subsubsection
     \DeclareDocumentCommand\subsubsection{ s m }{% s = star, m = mandatory arg
@@ -137,17 +137,16 @@
        }%
     }
     
-    \let\svsection\section
-    % \def\section#1{\svsection{\titlecap{#1}}}
-    \let\svsection\subsection
-    \DeclareDocumentCommand\section{ s m }{% s = star, m = mandatory arg
-       \IfBooleanTF{#1}{%
-          \svsection*{\titlecap{#2}}
-       }{%
-         \svsection{\titlecap{#2}}
-       }%
-    }
-    
+    % \let\svsection\section
+    % % \def\section#1{\svsection{\titlecap{#1}}}
+    % \DeclareDocumentCommand\section{ s m }{% s = star, m = mandatory arg
+    %    \IfBooleanTF{#1}{%
+    %       \svsection*{\titlecap{#2}}
+    %    }{%
+    %      \svsection{\titlecap{#2}}
+    %    }%
+    % }
+    % 
     
     % 
     % \let\svparagraph\paragraph
@@ -229,7 +228,7 @@
 %\include{./0_intro}
 % 
 % % Chapter 3
-%  \include{./3_graphs}
+ \include{./3_graphs}
 % 
 % % Chapter 4
 % \include{./4_centrality}
@@ -239,7 +238,7 @@
 %  \include{./5_lumping}
 
 % Chapter 6
-\include{./6_DR}
+%\include{./6_DR}
 
 
 \newpage

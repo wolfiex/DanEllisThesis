@@ -7,20 +7,22 @@ This chapter begins by looking at the use of sociograms in chemistry (\autoref{s
 
 
 \subsection{Networks and their role in Visual Analytics} \label{sec:va}
-Networks are present everywhere - this ranges from interactions within social media to bank transactions, internet routing, genetics to epidemiology \citep{worldmap, epidim, neo4j,netneuro,prbank,ch4,ch8,ch9}. This is because the sociogram (or graph) structure may be applied to any set of items which contain one or more relationships between them. In visualisation, these `items' are often referred to as nodes/vertices, and their relationships edges or links \citep{ch1}. These terms can be used interchangeably and will do, throughout this thesis. 
+Networks are present everywhere - this ranges from interactions within social media to bank transactions, internet routing, genetics to epidemiology \citep{worldmap, epidim,neoj4,netneuro,prbank,ch4,ch8,ch9}. This is because the sociogram (or graph) structure may be applied to any set of items which contain one or more relationships between them. In visualisation, these `items' are often referred to as nodes/vertices, and their relationships as edges/links \citep{ch1}. These terms will be used interchangeably throughout this thesis. 
 
 
 \subsection{Graphs in Chemistry}\label{sec:chemgraph}
-node-link representations have been a core part of the field of chemistry for many years, showing the types of bonds between different atoms. They are integral in the representation of molecules, using the ball-stick (graph) style analogy, both physically (with the aid of molecular model kits) or pictorially to show various structural properties (\autoref{fig:mol}). Using such analogies aid in the tasks of identifying the features, functional groups and bond properties of the species and how they can react.  
+Node-link representations have been at the core of chemistry for many years. They have been used to show the bonds between atoms and are integral to the representation of molecules - both physically (with the aid of molecular model kits) or pictorially to show various structural properties (\autoref{fig:mol}). These graph-like analogies provide a pseudo-physical representation of the molecules and their reactions in a way that is intuitive to the user. 
 
-\begin{figure}[h]
+
+
+\begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.34\textwidth}
         \centering
         \includegraphics[width=\textwidth]{C141CO3.png}
         \caption{2D `classic'}
     \end{subfigure}
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.34\textwidth}
         \centering
         \includegraphics[width=\textwidth]{C141CO33d.png}
         \caption{3D}
@@ -31,7 +33,7 @@ node-link representations have been a core part of the field of chemistry for ma
 
 \subsubsection{Using sociograms to describe reactions}
 
-A collection of reactions representing the chemistry of a region is called a mechanism. The Master Chemical Mechanism \citep{mcm} provides a collection of equations describing the gas-phase chemistry which exists within the troposphere (\autoref{sec:dataset}). In its use in policy, and the evaluation of Air Quality Models (\citep{defra1}), it is often useful to understand the degradation process different VOCs undergo. In general, this may be done using a series of interconnected reactions in the form of a reaction cycle (as shown in \autoref{fig:butane}). This type of sociograph shows the directional nature of chemical reactions and the relationships between different species. This has many similarities to a conventional directed graph, except that species (nodes) are sometimes duplicated (for example \ce{OH, HO2, O2} in \autoref{fig:butane}) to aid in the clarity of the figure.
+A collection of reactions representing the chemistry of a region is called a mechanism. The Master Chemical Mechanism \citep{mcm} provides a collection of equations describing the gas-phase chemistry which exists within the troposphere (\autoref{sec:dataset}). In its use in policy, and the evaluation of Air Quality Models (\citep{defra1}), it is often useful to understand the degradation process different VOCs undergo. In general, this may be done using a series of interconnected reactions in the form of a reaction cycle (\autoref{fig:butane}). This type of sociograph shows the directional nature of chemical reactions and the relationships between different species. This has many similarities to a conventional directed graph, except that species (nodes) are sometimes duplicated (for example \ce{OH, HO2, O2} in \autoref{fig:butane}) to aid in the clarity of the figure.
 
 This is an excellent example of how the flow-like nature of a sociogram aids in the understanding of a potentially complex chemical system of 171 organic species and 600 reactions. Evolutionary traits, including the genetic predisposition to interpret shapes faster than text (\citep{sapiens}) make the graph structure a much better method for representing such a system.
 
@@ -43,7 +45,17 @@ This is an excellent example of how the flow-like nature of a sociogram aids in 
        \label{fig:butane}
 \end{figure}
 
-
+\begin{landscape}[h]
+\begin{figure}[h]
+    \centering
+    
+    \vspace*{-0.025\paperheight}
+        \includegraphics[height=1.01\textwidth]{roche.pdf}
+    \vspace*{-0.015\paperheight}
+       \caption{\textbf{The Roche Metabolic Pathways of the human body. }This example demonstrates the ability to manually represent the complex chemistry of the body using a graph structure. (Original A0 version is available at the source). Source: \citep{metabolic} }
+       \label{fig:metabolic}
+\end{figure}
+\end{landscape}
 
 
 \subsection{Modeling chemistry as a directed graph.}
