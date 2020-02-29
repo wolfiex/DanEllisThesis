@@ -11,7 +11,7 @@ import numpy as np
 time = os.popen('date').read() 
 
 
-backup = False
+backup = True
 
 if backup:
     os.system('git add -A')
@@ -19,15 +19,21 @@ if backup:
 
 print ('commit =', time)
 
-heading = re.compile(r'\\[sub]{0,6}section\*{0,1}\{(.0*)\}|\\chapter\*{0,1}\{(.0*)\}|\\paragraph\*{0,1}\{(.0*)\}')   
+heading = re.compile(r'\\[sub]{0,6}section\*{0,1}\{(.*)\}|\\chapter\*{0,1}\{(.*)\}|\\paragraph\*{0,1}\{(.*)\}')   
  
 files = glob.glob('*/combigned.tex')
 
 for f in files:
         print(f)
-        
-        text= open(f,'r').read()
-        for i in heading.finditer(text):
-            print (i)
+        text = open(f,'r').read()
+        new = heading.sub( lambda x: str(x.group()).title(), text)
+
+        with open(f,'w') as replace:
+            replace.write(new)
+            
+            
+            
+            
+
     
 print('fi')
