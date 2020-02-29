@@ -38,7 +38,7 @@ for f in files:
         text = open(f,'r').read()
         new = heading.sub( lambda x: str(x.group()).title(), text)
         
-        print(heading.findall(text))
+        print(heading.findall(new))
         # 
         # with open(f,'w') as replace:
         #     replace.write(new)
