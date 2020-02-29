@@ -7,6 +7,8 @@
 \contentsline {subsection}{\numberline {1.1.3}\titlecap {Modeling Chemistry As A Directed Graph.}}{5}{subsection.1.1.3}
 \contentsline {section}{\numberline {1.2}Graph Syntatics}{8}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}\titlecap {Selecting The Correct Evaluation Criteria.}}{9}{subsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.1.1}\titlecap {Edge Crossing}}{10}{subsubsection.1.2.1.1}
+\contentsline {subsubsection}{\numberline {1.2.1.2}\titlecap {Node Distribution And Overlap}}{11}{subsubsection.1.2.1.2}
 \contentsline {subsection}{\numberline {1.2.2}\titlecap {Automated Graph Drawing Layouts}}{11}{subsection.1.2.2}
 \contentsline {subsubsection}{\numberline {1.2.2.1}\titlecap {Replication Of Hand-Drawin Methods}}{11}{subsubsection.1.2.2.1}
 \contentsline {subsubsection}{\numberline {1.2.2.2}\titlecap {Projection Based}}{12}{subsubsection.1.2.2.2}
@@ -15,31 +17,31 @@
 \contentsline {paragraph}{Yifan Hu}{16}{figure.caption.10}
 \contentsline {paragraph}{OpenOrd}{17}{figure.caption.10}
 \contentsline {paragraph}{tsNET}{18}{figure.caption.10}
-\contentsline {subsubsection}{\numberline {1.2.2.4}\titlecap {Layout Selection}}{18}{subsubsection.1.2.2.4}
-\contentsline {paragraph}{Node Distribution}{19}{subsubsection.1.2.2.4}
-\contentsline {paragraph}{Node Density}{20}{figure.caption.11}
-\contentsline {paragraph}{Mathematical Analysis and Layout selection}{23}{figure.caption.12}
-\contentsline {section}{\numberline {1.3}Graph Semantics}{24}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}\titlecap {Limitations}}{24}{subsection.1.3.1}
-\contentsline {paragraph}{Visual}{24}{subsection.1.3.1}
+\contentsline {section}{\numberline {1.3}Selecting The Best Graph Drawing Layout.}{18}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}\titlecap {Node Distribution}}{19}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}\titlecap {Node Density}}{20}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}\titlecap {Mathematical Analysis And Layout Selection}}{23}{subsection.1.3.3}
+\contentsline {section}{\numberline {1.4}Graph Semantics}{24}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}\titlecap {Limitations}}{24}{subsection.1.4.1}
+\contentsline {paragraph}{Visual}{24}{subsection.1.4.1}
 \contentsline {paragraph}{Cognitive}{25}{figure.caption.14}
 \contentsline {paragraph}{Technological}{26}{figure.caption.14}
-\contentsline {subsubsection}{\numberline {1.3.1.1}\titlecap {Node Encoding}}{26}{subsubsection.1.3.1.1}
-\contentsline {subsubsection}{\numberline {1.3.1.2}\titlecap {Edge Properties}}{30}{subsubsection.1.3.1.2}
-\contentsline {paragraph}{Muti-variate edges}{30}{subsubsection.1.3.1.2}
+\contentsline {subsubsection}{\numberline {1.4.1.1}\titlecap {Node Encoding}}{26}{subsubsection.1.4.1.1}
+\contentsline {subsubsection}{\numberline {1.4.1.2}\titlecap {Edge Properties}}{30}{subsubsection.1.4.1.2}
+\contentsline {paragraph}{Muti-variate edges}{30}{subsubsection.1.4.1.2}
 \contentsline {paragraph}{Edge Direction}{31}{figure.caption.18}
 \contentsline {paragraph}{Edge Shape}{31}{figure.caption.18}
 \contentsline {paragraph}{Edge Bundling }{34}{figure.caption.19}
 \contentsline {paragraph}{Power, Routing and Confluence graphs.}{35}{figure.caption.20}
 \contentsline {paragraph}{ Edge Angle / Continuity}{37}{figure.caption.24}
-\contentsline {subsection}{\numberline {1.3.2}\titlecap {Temporal Projection}}{37}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}\titlecap {Additional Dimensions}}{39}{subsection.1.3.3}
-\contentsline {section}{\numberline {1.4}A Chemistry Case Study}{39}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}\titlecap {Syntatic Representation}}{40}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}\titlecap {Semantic Representation}}{40}{subsection.1.4.2}
-\contentsline {section}{\numberline {1.5}A Model Of Beijing}{41}{section.1.5}
-\contentsline {subsubsection}{\numberline {1.5.0.1}\titlecap {Trends In The Chemistry}}{42}{subsubsection.1.5.0.1}
-\contentsline {paragraph}{Network shape}{42}{subsubsection.1.5.0.1}
+\contentsline {subsection}{\numberline {1.4.2}\titlecap {Temporal Projection}}{37}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}\titlecap {Additional Dimensions}}{39}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}A Chemistry Case Study}{39}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}\titlecap {Syntatic Representation}}{40}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}\titlecap {Semantic Representation}}{40}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.6}A Model Of Beijing}{41}{section.1.6}
+\contentsline {subsubsection}{\numberline {1.6.0.1}\titlecap {Trends In The Chemistry}}{42}{subsubsection.1.6.0.1}
+\contentsline {paragraph}{Network shape}{42}{subsubsection.1.6.0.1}
 \contentsline {paragraph}{Pattern Matching using t-SNE}{44}{figure.caption.30}
-\contentsline {section}{\numberline {1.6}Summary}{45}{section.1.6}
+\contentsline {section}{\numberline {1.7}Summary}{45}{section.1.7}
 \gdef \the@ipfilectr {}
