@@ -183,7 +183,6 @@ One of the oldest fields of data visualisation fall in the realm of cartography.
       \label{fig:projections}
 \end{figure}
 
-More recently, the mathematics of mapping a large dimension onto a simpler one has been applied to the problem of graph representation. \citep{mercgraph} uses the latent hyperbolic geometry of the Mercator layout to provide a 2D embedding for complex real-world networks. This produces a polar representation ($r$ and $\theta$) of the system, where relationships of related species are of the same angle ($\theta$), with nodes of a high degree are closer to the centre (low $r$ value, where $r$ is the radius from the centre). Using the chemical mechanism from the APHH  Beijing campaing (described above), this produces a layout, (\autoref{fig:merc}) where (a) shows the graph-based representation including links, and (b) shows the density distribution for all nodes. \autoref{fig:merc}b shows that primary emitted species (orange dots) are uniformly (radially) distributed for angles and \autoref{fig:merc}a reveals that influential nodes with a high degree (highly connected) are located close to the centreof the graph. Although the Mercator embedding does reduce the `hairball' problem experienced by other layouts, it does not take edge weight/direction or self-loops. This means that it works well for the representation of the general network layout, but cannot be used for advanced data exploration concerning simulation results.  
 
 
 \begin{figure}[H]
@@ -201,6 +200,10 @@ More recently, the mathematics of mapping a large dimension onto a simpler one h
         \caption{\textbf{The Mercator Projection.} (a) represents output from the mercator graph layout algorithm. (b) provides a kernel density analysis of the node distribution within this. Here (a) shows graph structure by revealing the density of connections between different nodes, whilst (b) reveals the density of nodes at a specific location. }
         \label{fig:merc}
 \end{figure}
+
+More recently, the mathematics of mapping a large dimension onto a simpler one has been applied to the problem of graph representation. \citep{mercgraph} uses the latent hyperbolic geometry of the Mercator layout to provide a 2D embedding for complex real-world networks. This produces a polar representation ($r$ and $\theta$) of the system, where relationships of related species are of the same angle ($\theta$), with nodes of a high degree are closer to the centre (low $r$ value, where $r$ is the radius from the centre). Using the chemical mechanism from the APHH  Beijing campaing (described above), this produces a layout, (\autoref{fig:merc}) where (a) shows the graph-based representation including links, and (b) shows the density distribution for all nodes. \autoref{fig:merc}b shows that primary emitted species (orange dots) are uniformly (radially) distributed for angles and \autoref{fig:merc}a reveals that influential nodes with a high degree (highly connected) are located close to the centreof the graph. Although the Mercator embedding does reduce the `hairball' problem experienced by other layouts, it does not take edge weight/direction or self-loops. This means that it works well for the representation of the general network layout, but cannot be used for advanced data exploration concerning simulation results.  
+
+
 
 \subsubsection{Force-Directed}\label{sec:forcedirected}
 
@@ -274,7 +277,7 @@ Node positions are then determined by the mimimisation of the cost matrix using 
 
 
 
-\section{Selecting the best graph drawing layout.}
+\section{Selecting The Best Graph Drawing Layout.}
 
 \autoref{sec:edgecross} explained the importance of removing overlapping edges and \autoref{sec:ndist}, the desire of having a well distributed graph layout. This subsubsection builds on those criterions, assessing all the graph layouts described within this section (Mercator, Force Atlas 2, Yifan Hu, OpenOrd and tsNET). These all use the chemical mechanism representing species within the APHH campaign in Beijing \citep{aphh}. Here we look at the distribution (\autoref{sec:nodedist}) and density (\autoref{sec:nodedensitya}) as they affect a users ability to isolate the shortest path (fastest flux).
 
@@ -291,15 +294,24 @@ This is due to the force-directed layout placing a greater emphasis on node posi
 
 \subsection{Node Distribution}\label{sec:nodedist}
 
-It is known that in partitioning the screen into quartiles with equal numbers of nodes (homogeneity) considerably improves the usability of a graph and increases symmetry \citep{ch6graphredability}. The main problem with node-link diagrams is that in representing complex data using an algorithmic layout can often result in regions of dense, indecipherable links, called hairballs \citep{vislarge}. Hairballs obscure nodes and edges within a region, making it impossible to read. Methods such as the pruning of edges \citep{edgeprune} can be applied to networks as a means of reducing the complexity. This may be applied post computation (syntactic representation), which results in the loss of information, or during the algorithmic approximation in the OpenOrd algorithm, to produce clearer node positioning, with the edges re-introduced at the visualisation level. 
+\autoref{sec:ndist} explained the importance of node distribution within a graph visualisation. Additionally \cite{ch6graphredability} explains that if we partition the viewing medium into quartiles, and poopulate each quadrant with an equal number of nodes (homogeneity), this drastically improved the usability and symmetry of a graph.
 
-In deciding which layout algorithm produces the best graph-node homogeneity, a kernel density approach is used to compare node distributions across 2D space in \autoref{fig:merc}b and \autoref{fig:densitycompare}. 
-Here small localised areas of higher density, surrounded with sharp changes in density (shown by the contour lines) is preferable. Such a distribution would highlight the modularity of a graph and allow for the distinction between groups of species with many reactions between them, but few in another group. Graphs with a high homogeneity can be determined through the use of $x$ and $y$ kernel density plots. Here a homogeneous graph will have a uniform distribution across both axes. However, as we also wish to locate regions of chemistry with high modularity (clustering), a uniformly distributed graph would not suffice. Instead, we look for a near-uniform oscillatory distribution with an equal amplitude for each peak and trough. Using these criteria the Mercator (\autoref{fig:merc}b), tsNet (\autoref{fig:ts}) and Force Atlas (\autoref{fig:fa}) score the highest, with OpenOrd and Yifan containing a gaussian-like distribution across both axes which is conducive to producing a hairball. 
+The problem is that for complex real-world graphs is that they often contain nodes with many reactions between them (\autoref{fig:fullmcm}). Such regions of dense, indecipherable links (often reffered to as hairballs \citep{vislarge}), obscure nodes and edges within a region, making it impossible to read.
 
-Next, we apply prior knowledge about the graph we are trying to visualise. Here we know that the chemistry within a mechanism is determined by the oxidation of a set of primary emitted VOCs. It, therefore, follows that for an ideal graph layout, each primary emitted species should belong to its area of high density, and not entwined within the hairball. Immediately this notion eliminates the Yifan Hu (\autoref{fig:yfan}) and Mercator (\autoref{fig:merc}b) layouts since these both contain a high density of primary emitted species (orange crosses) within a single dense region. Using this criterion, the tsNET graph (\autoref{fig:ts}) provides the best representation, followed by the OpenOrd and ForceAtlas layout. 
-
+Methods such as edge pruning \citep{edgeprune} (removing unimportant links) can be used to reduce complexity. This process may be done either post computation (syntactic representation) - resulting in a loss of information, or during the algorithmic approximation (e.g within the OpenOrd algorithm) - where any removed edges are then re-introduced in after the final layout has been generated.
 
 
+\begin{figure}[H]
+     \centering
+     \includegraphics[width=.7\textwidth]{figures_c1/mcmhairball.png}
+        \caption{\textbf{A graph of the full MCM - a hariball.} The high number of nodes and edges (especially those to inorganic species), causes a high degree of ofsuscation, rendering the graph unusuable. Species with a large number of reactions (links), are labeled.}
+        \label{fig:fullmcm}
+\end{figure}
+
+\subsubsection{Evaluating node distribution for the Beijing mechanism}
+
+
+In deciding which layout algorithm produces the best graph-node homogeneity, a kernel density approach is used to compare node distributions across 2D space in \autoref{fig:densitycompare}, and the mercator density plot from earlier (\autoref{fig:merc}b). 
 
 \begin{figure}[H]
      \centering
@@ -327,6 +339,15 @@ Next, we apply prior knowledge about the graph we are trying to visualise. Here 
         \caption{ }
         \label{fig:densitycompare}
 \end{figure}
+
+Here small localised areas of higher density, surrounded with sharp changes in density (shown by the contour lines) is preferable. Such a distribution would highlight the modularity of a graph and allow for the distinction between groups of species with many reactions between them, but few in another group. Graphs with a high homogeneity can be determined through the use of $x$ and $y$ kernel density plots. Here a homogeneous graph will have a uniform distribution across both axes. However, as we also wish to locate regions of chemistry with high modularity (clustering), a uniformly distributed graph would not suffice. Instead, we look for a near-uniform oscillatory distribution with an equal amplitude for each peak and trough. Using these criteria the Mercator (\autoref{fig:merc}b), tsNet (\autoref{fig:ts}) and Force Atlas (\autoref{fig:fa}) score the highest, with OpenOrd and Yifan containing a gaussian-like distribution across both axes which is conducive to producing a hairball. 
+
+Next, we apply prior knowledge about the graph we are trying to visualise. Here we know that the chemistry within a mechanism is determined by the oxidation of a set of primary emitted VOCs. It, therefore, follows that for an ideal graph layout, each primary emitted species should belong to its area of high density, and not entwined within the hairball. Immediately this notion eliminates the Yifan Hu (\autoref{fig:yfan}) and Mercator (\autoref{fig:merc}b) layouts since these both contain a high density of primary emitted species (orange crosses) within a single dense region. Using this criterion, the tsNET graph (\autoref{fig:ts}) provides the best representation, followed by the OpenOrd and ForceAtlas layout. 
+
+
+
+
+
 
 
 \subsection{Node Density}\label{sec:nodedensitya}
@@ -368,7 +389,7 @@ The colouring can also reveal the the spatial modularity of the graph. Here it i
         \label{fig:vornoicompare}
 \end{figure}
 
-\subsection{Mathematical Analysis and Layout selection}
+\subsection{Mathematical Analysis And Layout Selection}
 In addition to the qualitative approach through visualisation, it is also possible represent the polygon areas for each layout in the form of several boxplots, \autoref{fig:abox}. The interquartile (IQR) range for each layout represents the range of polygon areas. A large IQR signifies a greater distribution between low and high density  areas. 
 In addition to this we are interested in having a higher ratio of smaller area polygons to larger ones. Within the boxplot, this would be represented by having a median which is closer to, or approaching the $25^{th}$ quartile ( the lower box boundary).
 
