@@ -1,0 +1,49 @@
+\gdef \the@ipfilectr {@-1}
+\contentsline {chapter}{\numberline {1}Applying Visual Analytics to the Atmospheric Chemistry Network}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}\titlecap {Networks And Their Role In Visual Analytics}}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}\titlecap {Graphs In Chemistry}}{4}{subsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.2.1}\titlecap {Using Sociograms To Describe Reactions}}{5}{subsubsection.1.1.2.1}
+\contentsline {subsection}{\numberline {1.1.3}\titlecap {Modeling Chemistry As A Directed Graph.}}{5}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}Graph Syntatics}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}\titlecap {Selecting The Correct Evaluation Criteria.}}{9}{subsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.1.1}\titlecap {Edge Crossing}}{10}{subsubsection.1.2.1.1}
+\contentsline {subsubsection}{\numberline {1.2.1.2}\titlecap {Node Distribution And Overlap}}{11}{subsubsection.1.2.1.2}
+\contentsline {subsection}{\numberline {1.2.2}\titlecap {Automated Graph Drawing Layouts}}{11}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.1}\titlecap {Replication Of Hand-Drawing Methods}}{11}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2.2}\titlecap {Projection Based}}{12}{subsubsection.1.2.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.3}\titlecap {Force-Directed}}{14}{subsubsection.1.2.2.3}
+\contentsline {paragraph}{Force Atlas 2}{15}{figure.caption.10}
+\contentsline {paragraph}{Yifan Hu}{15}{figure.caption.10}
+\contentsline {paragraph}{OpenOrd}{17}{figure.caption.10}
+\contentsline {paragraph}{tsNET}{18}{figure.caption.10}
+\contentsline {section}{\numberline {1.3}Selecting The Best Graph Drawing Layout.}{18}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}\titlecap {Graph-Node distribution}}{19}{subsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.1.1}\titlecap {Evaluating Node Distribution For The Beijing Mechanism}}{20}{subsubsection.1.3.1.1}
+\contentsline {subsubsection}{\numberline {1.3.1.2}\titlecap {Distribution of Primary Emitted VOCs}}{21}{subsubsection.1.3.1.2}
+\contentsline {subsubsection}{\numberline {1.3.1.3}\titlecap {Calculation of Spatial Clustering}}{21}{subsubsection.1.3.1.3}
+\contentsline {section}{\numberline {1.4}Graph Semantics}{25}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}\titlecap {Limitations}}{25}{subsection.1.4.1}
+\contentsline {paragraph}{Visual}{25}{subsection.1.4.1}
+\contentsline {paragraph}{Cognitive}{26}{figure.caption.15}
+\contentsline {paragraph}{Technological}{27}{figure.caption.15}
+\contentsline {subsection}{\numberline {1.4.2}\titlecap {Node Encoding}}{27}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}\titlecap {Edge Properties}}{31}{subsection.1.4.3}
+\contentsline {subsubsection}{\numberline {1.4.3.1}\titlecap {Muti-variate edges}}{31}{subsubsection.1.4.3.1}
+\contentsline {subsubsection}{\numberline {1.4.3.2}\titlecap {Edge Direction}}{31}{subsubsection.1.4.3.2}
+\contentsline {subsubsection}{\numberline {1.4.3.3}\titlecap {Edge Shape}}{31}{subsubsection.1.4.3.3}
+\contentsline {subsubsection}{\numberline {1.4.3.4}\titlecap {Edge Bundling }}{34}{subsubsection.1.4.3.4}
+\contentsline {subsubsection}{\numberline {1.4.3.5}\titlecap {Power, Routing and Confluence.}}{35}{subsubsection.1.4.3.5}
+\contentsline {subsubsection}{\numberline {1.4.3.6}\titlecap { Angle / Continuity}}{38}{subsubsection.1.4.3.6}
+\contentsline {subsection}{\numberline {1.4.4}\titlecap {Temporal Projection}}{39}{subsection.1.4.4}
+\contentsline {subsection}{\numberline {1.4.5}\titlecap {Additional Dimensions}}{41}{subsection.1.4.5}
+\contentsline {subsection}{\numberline {1.4.6}\titlecap {Summary}}{41}{subsection.1.4.6}
+\contentsline {section}{\numberline {1.5}A Chemistry Case Study}{42}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}\titlecap {Syntatic Representation}}{42}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}\titlecap {Semantic Representation}}{42}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.6}A Model Of Beijing}{43}{section.1.6}
+\contentsline {subsubsection}{\numberline {1.6.0.1}\titlecap {Trends In The Chemistry}}{45}{subsubsection.1.6.0.1}
+\contentsline {paragraph}{Network shape}{45}{subsubsection.1.6.0.1}
+\contentsline {paragraph}{Pattern Matching using t-SNE}{47}{figure.caption.30}
+\contentsline {section}{\numberline {1.7}Summary}{48}{section.1.7}
+\gdef \the@ipfilectr {}
