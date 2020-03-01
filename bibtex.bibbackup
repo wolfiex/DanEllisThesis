@@ -169,6 +169,16 @@ Receptor Conformations}},
    year = {1993}
 }
 
+@inproceedings{arcss,
+   author = {Deering, Michael F},
+   booktitle = {{2nd International Immersive Projection Technology Workshop}},
+   journal = {Sun Microsystems},
+   note = {\url{https://www.swift.ac.uk/about/files/vision.pdf}},
+   title = {{The Limits Of Human Vision}},
+   volume = {2},
+   year = {1998}
+}
+
 @article{atompairdef,
    author = {Jel{\'\i}nek, Jan and {\v S}koda, Petr and Hoksza, David},
    doi = {10.1186/s12859-017-1921-4},
@@ -1005,6 +1015,14 @@ and Kuroya, Katsutoshi},
    timestamp = {2012-11-08T12:33:57.000+0100},
    title = {D3.Js - Data-Driven Documents},
    year = {2012}
+}
+
+@misc{daygraph,
+   author = {Ellis, Daniel},
+   institution = {Github},
+   note = {\url{https://github.com/wolfiex/DanEllisThesis/blob/master/daynight_26mb.gif}},
+   title = {{Animation Of The Evolution Of Chemistry Graph Of Beijing.}},
+   year = {2018}
 }
 
 @inproceedings{DBSCAN,
@@ -3446,6 +3464,13 @@ https://doi.org/10.1080/0022250X.1994.9990134
    title = {Statistics Of The Network Of Organic Chemistry},
    volume = {3},
    year = {2018}
+}
+
+@misc{rule8,
+   author = {{Ben Shneiderman}},
+   note = {\url{http://www.cs.umd.edu/~ben/goldenrules.html}},
+   title = {The Eight Golden Rules Of Interface Design},
+   year = {1985}
 }
 
 @article{sampling,
