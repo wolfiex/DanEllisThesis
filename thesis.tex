@@ -112,30 +112,30 @@
 
 
 % %titleify section headers
-\usepackage{titlecaps}
-% \usepackage{xparse}
-    % 
-
-% Just make titlify python scripts
-
-    \let\svsubsubsection\subsubsection
-    \DeclareDocumentCommand\subsubsection{ s m }{% s = star, m = mandatory arg
-       \IfBooleanTF{#1}{%
-          \svsubsubsection*{\titlecap{#2}}
-       }{%
-         \svsubsubsection{\titlecap{#2}}
-       }%
-    }
-    
-    \let\svsubsection\subsection
-    % \def\subsection#1{\svsubsection{\titlecap{#1}}}
-    \DeclareDocumentCommand\subsection{ s m }{% s = star, m = mandatory arg
-       \IfBooleanTF{#1}{%
-          \svsubsection*{\titlecap{#2}}
-       }{%
-         \svsubsection{\titlecap{#2}}
-       }%
-    }
+% \usepackage{titlecaps}
+% % \usepackage{xparse}
+%     % 
+% 
+% % Just make titlify python scripts
+% 
+%     \let\svsubsubsection\subsubsection
+%     \DeclareDocumentCommand\subsubsection{ s m }{% s = star, m = mandatory arg
+%        \IfBooleanTF{#1}{%
+%           \svsubsubsection*{\titlecap{#2}}
+%        }{%
+%          \svsubsubsection{\titlecap{#2}}
+%        }%
+%     }
+% 
+%     \let\svsubsection\subsection
+%     % \def\subsection#1{\svsubsection{\titlecap{#1}}}
+%     \DeclareDocumentCommand\subsection{ s m }{% s = star, m = mandatory arg
+%        \IfBooleanTF{#1}{%
+%           \svsubsection*{\titlecap{#2}}
+%        }{%
+%          \svsubsection{\titlecap{#2}}
+%        }%
+%     }
     
     % \let\svsection\section
     % % \def\section#1{\svsection{\titlecap{#1}}}
@@ -238,7 +238,7 @@
 %  \include{./5_lumping}
 
 % Chapter 6
-%\include{./6_DR}
+\include{./6_DR}
 
 
 \newpage
