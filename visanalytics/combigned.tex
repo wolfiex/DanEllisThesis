@@ -481,7 +481,7 @@ It is also essential to have a graph fitting the same overall shape of the canva
 
 
 
-\subsubsection{Node Encoding}
+\subsection{Node Encoding}
 Within a graph the nodes or vertexes are representation for the set of items we have an interest in. In addition to the relationships between them, items often contain a multitude of features which describe them. Examples of these may be user information for a person, categories of characters or the chemical composition / concentration for a species in the MCM.
 
 Each of these additional properties can contain valueble information for the itnerpretation of the graph, and the interactions between nodes. It is for this reason that graph convoluted neural networks \citep{t2gcn} require a  `feature matrix' describing each node, in addition to the network structure and edge weightings. 
@@ -553,7 +553,7 @@ A comprehensive list of all available interaction types and styles are provided 
 \end{tabular}
     %\caption{\textbf{A selection of interactive methods.}}
     \label{tab:interactive}
-\end{table}\\
+\end{table}
 
 \begin{figure}[H]
      \centering
@@ -573,21 +573,20 @@ In cases where interactivity is not possible, such as papers, books and this the
 
 
 
-\subsubsection{Edge Properties}
+\subsection{Edge Properties}
 
 
 Defining the purpose of force-directed (graph-energy) models as: a means for creating a visualisation from which the viewer can infer properties of the data \citep{noack}, it can be shown that this criterion is easily met in small and sparse graphs. However non-planar examples with high edge density (lots of links) can easily result in tangled results with impractical running times \citep{tvg}. In most cases attaining an optimal solutions here seems to be computationally infeasible \citep{nicelyanneal}. This is generally because graphs primarily focus on hi-lighting a specific purpose or following a set of aesthetic heuristics \citep{eyetrack}. 
 
-\paragraph{Muti-variate edges}
-Since there are multiple relationships between species, it is important to decide if simplifying the network would be of benefit. Although it is possible to \autoref{fig:multiedge}.. 
-this may cause unecessary clutter for larger networks. Instead it is often useful to simplify the graph, and encode the edge properties within the vector object. This allows the user to retreave any additional information by hovering over the edge or connecting nodes, as required. Should the topic of interest require a specific property, then it would also be possible to remove, or hide, all edges which do not contain it. This produces an interactive graphic containing all the required information, as and when needed, without the unecessary clutter of having every reaction shown. 
-
-\begin{figure}[H]
-     \centering
-     \includegraphics[width=.7\textwidth]{figures_c1/edgetype/multiquadratic.png}
-        \caption{\textbf{Multiple edges coloured by type of reaction.} Using the overarching categories of reaction type (see fig wuclan) each type of reaction between two nodes can be visualised using the multi-link format. Photolysis (Bright green), Radical/Other (Amazonite / Teal) Decomposition (Honolulu Blue), RO2(Space Cadet / Purple)}
-      \label{fig:multiedge}
-\end{figure}
+\subsubsection{Muti-variate edges}
+Since there are multiple relationships between species, it is important to decide if simplifying the network would be of benefit. Although it is possible, multiple edges may cause unecessary clutter for larger networks. Instead it is often useful to simplify the number of edges in the network, and encode the edge properties within the vector object. This allows the user to retreave any additional information by hovering over the edge or connecting nodes, as required. Should the topic of interest require a specific property, then it would also be possible to remove, or hide, all edges which do not contain it. This produces an interactive graphic containing all the required information, as and when needed, without the unecessary clutter of having every reaction shown. 
+% 
+% \begin{figure}[H]
+%      \centering
+%      \includegraphics[width=.7\textwidth]{figures_c1/edgetype/multiquadratic.png}
+%         \caption{\textbf{Multiple edges coloured by type of reaction.} Using the overarching categories of reaction type (see fig wuclan) each type of reaction between two nodes can be visualised using the multi-link format. Photolysis (Bright green), Radical/Other (Amazonite / Teal) Decomposition (Honolulu Blue), RO2(Space Cadet / Purple)}
+%       \label{fig:multiedge}
+% \end{figure}
 
 % %
 % Photolysis (Bright green), Radical/Other (Amazonite / Teal)
@@ -598,8 +597,8 @@ this may cause unecessary clutter for larger networks. Instead it is often usefu
 
 
 
-\paragraph{Edge Direction}
-When using a directional graph it is convention to use arrow heads to represent this. However in high density regions it is often found that arrow heads take up precious real estate in the drawing area \citep{noarredge}. As an alternative, colour and line-type can be used to represent the direction instead. This example can be shown in the routing networks presented by \citep{networkrouting}. One example applicable for chemistry would be the use of dashed lines to represent mono-directional relationships, and continuous lines for bidirectional ones. 
+\subsubsection{Edge Direction}
+When using a directional graph it is convention to use arrow heads to represent the direction of flow. However in high density regions it is often found that arrow heads take up precious real estate in the drawing area \citep{noarredge}. As an alternative, colour and line-type can be used to represent the direction instead - this was seen in \autoref{fig:quadmeth} (the quadtree example). This example can be shown in the routing networks presented by \citep{networkrouting}. One example applicable for chemistry would be the use of dashed lines to represent mono-directional relationships, and continuous lines for bi-directional ones. 
 
 
 
@@ -608,30 +607,32 @@ When using a directional graph it is convention to use arrow heads to represent 
 
 
 
-\paragraph{Edge Shape}
-Edge shape is essential, as it is the medium we use to represent relationships within a graph. For orthogonal graphs, poly-line curved edges are used to provide a layout which is simpler and easier to read \citep{ortho}. For asymetric graph drawings circular Lombardi-style curves and cubic brezier lines have been used to reduce the clutter in high edge-density drawings \citep{lombardi,bezier}. \autoref{fig:curvededge} shows a selection of different edge types for the Butane MCM subset.The liear network (\autoref{fig:curvededge}a ) consists of straight lines betwen nodes. If a multi-edge graph is required, it is impossible to represent this as all edges between two nodes follow the same path. To improve on this a quadratic arc (\autoref{fig:curvededge} b) can be used. This presents a symmetric representation where each edge is revealed. Finally bezier curves (described below) can be used to show an asymetric representation of the multi-edge graph (\autoref{fig:curvededge}c). Both sets of curved representation rely on a set of control points, allowing the designer to control the curve shape, steepness and asymmetry. 
+\subsubsection{Edge Shape}
+Edge shape is essential, as it is the medium we use to represent relationships within a graph. For orthogonal graphs (\autoref{sec:edgecross}), multiple lines are used to simplify the complexity of a graph and reduce edge crossings \citep{ortho}. In increasing the number of lines within an edge, these multi(poly)-line graphs can be modified to give drawing with nicely curved edges. In a similar manner it is possible to replace the edges in a straight-line graph with Lombardi-style curves or cubic breziers \citep{lombardi,bezier}. 
+
+Using a mechanism describing the reactions of Butane in the MCM, we compare a number of edge shapes (\autoref{fig:curvededge}). In this graph each node has multiple edges between nodes (multi-link). Each edge represents a different reaction between the species. \autoref{fig:curvededge}a shows the straight line representation of each graph. Since each edge represents the shortest distance between two nodes, any additional reactions pairs betweeen similar nodes are hidden from view. If using this type of representation it is advised to take the net edge direction and weight between the values. An improvement to the straight-line graph comes from the use of quadratic cuves (\autoref{fig:curvededge}b). This allows for the symmetric distribution of edges within the graph. If instead an asymetric representation for each edge is required it is possible to use a bezier curve (described below) instead of a quadratic edge (\autoref{fig:curvededge}c). These can proviede additional information through the use of control points, which can alter the shape, steepness and asymmetry of each link. 
 
 \paragraph*{Bezier Curves}
-Bezier curves are named after Pierre Bezier who used them in the bodywork design of Renault cars in the 1960s \citep{beziermath}. Since then they have been widely used in graphs,computer graphics, font design and animation/interactivity response \citep{bezier,beziermath,beziercomputer}. Bezier curves come in a range of possible dimensions, cubic beziers are the most commonly used within network visualisation. These contain four control points respectively which can be used to determine the shallowness of the curve through design. In general relatively shallow curves are prefered, as these do not introduce unecessary edge crossing or abrupt changes, which have been shown to hinder a users ability to isolate items of interest \citep{ch6graphredability}.
+Bezier curves are named after Pierre Bezier who used them in the bodywork design of Renault cars in the 1960s \citep{beziermath}. Since then they have been widely used in graphs,computer graphics, font design and animation/interactivity response \citep{bezier,beziermath,beziercomputer}. Bezier curves come in a range of possible dimensions, cubic beziers are the most commonly used within network visualisation. These contain four control points respectively which can be used to determine the shallowness of the curve through design. In general, relatively shallow curves are prefered, as these do not introduce unecessary edge crossing or abrupt changes, which have been shown to hinder a users ability to isolate items of interest \citep{ch6graphredability}.
 
 
 \begin{figure}[H]
      \centering
-      \begin{subfigure}[b]{.32\textheight}
+      \begin{subfigure}[b]{.292\textheight}
          \centering
      \includegraphics[width=\textwidth]{figures_c1/edgetype/linearsingle.png} \caption{Linear (single-edge)}
      \end{subfigure}\\
-    \begin{subfigure}[b]{.32\textheight}
+    \begin{subfigure}[b]{.292\textheight}
          \centering
      \includegraphics[width=\textwidth]{figures_c1/edgetype/multiquadraticgray.png}
      \caption{Quadratic (multi-edge)}
      \end{subfigure}\\
-     \begin{subfigure}[b]{.32\textheight}
+     \begin{subfigure}[b]{.292\textheight}
          \centering
      \includegraphics[width=\textwidth]{figures_c1/edgetype/multibeziergray.png}
      \caption{Bezier (multi-edge)}
      \end{subfigure}
-        \caption{\textbf{A selection of edge shapes for the butane network.}       }
+        \caption{\textbf{A selection of edge shapes for the butane network.} These show linear (a), quadratic (b) and bezier (c) edge shapes for the same network. In general the the bezier curves appear to provide the most aesthetically pleasing graphs shapes.       }
       \label{fig:curvededge}
 \end{figure}
 
@@ -642,8 +643,8 @@ Bezier curves are named after Pierre Bezier who used them in the bodywork design
 
 
 
-\paragraph{Edge Bundling }
-Pioneered by \citep{bundlepioneer}, edge bundling techniques are an effective way to reduce visual clutter. Much like a force graph, edges are represented as a string of lined points. This allows for edges to be pulled together (attracted to one another) and produces a visualisation akin to moving water droplets on a hydrophobic surface. \autoref{fig:edgebundling} shows how in changing the amount of atraction between edges, it is possible to reduce clutter in a visualisation. 
+\subsubsection{Edge Bundling }
+Pioneered by \cite{bundlepioneer}, edge bundling techniques are an effective way to reduce visual clutter. Much like a force graph, edges are represented as a string of lined points. This allows for edges to be pulled together (attracted to one another) and produces a visualisation akin to moving water droplets on a hydrophobic surface. \autoref{fig:edgebundling} shows how in changing the amount of atraction between edges, it is possible to reduce clutter in a visualisation. 
 
 
 \begin{figure}[H]
@@ -667,50 +668,51 @@ Pioneered by \citep{bundlepioneer}, edge bundling techniques are an effective wa
  \includegraphics[width=\textwidth]{figures_c1/layout/merc4.png}
  \caption{$\theta = .65$}
  \end{subfigure}
-        \caption{\textbf{How the compatibility threshold affects edge bundling.} In increasing the amount edges are attracted it is possible to improve the clarity of a graph. However there reaches a point where this distortion can worsen the result, confusing the reader, or creating a false positive. For this reason, I generaly use only a slight bundling value $> 0.7$.}
+        \caption{\textbf{How the compatibility threshold affects edge bundling using the Mercator graph from \autoref{sec:merc}.} In increasing the amount edges are attracted ($\theta$) it is possible to improve the clarity of a graph. However there reaches a point where this distortion can worsen the result, confusing the reader, or creating a false positive. For this reason, I generaly use only a slight bundling value $> 0.7$.}
       \label{fig:edgebundling}
 \end{figure}
 
-\paragraph{Power, Routing and Confluence graphs.}
+\subsubsection{Power, Routing and Confluence.}
 
-Confluent graphs use a graph drawing method in which edges are not drawn as individual distinguishable geometric objects, but rather as a crossing free system of arcs and junctions. \citep{confluient19}. Their design is similar to that of the edge bundling algorithm, except that rather than bundling edges spatially (a design which may introduce ambiguity), the bundling is done based on connectivity and can help reduce clutter by grouping multiple edges where the all target nodes are also connected to all the source nodes, \autoref{fig:confpic},\citep{confpic}. 
+Confluent graphs use a graph drawing method in which edges are not drawn as individual distinguishable geometric objects, but rather as a crossing free system of arcs and junctions. \citep{confluient19}. Their design is similar to that of the edge bundling algorithm, except that rather than bundling edges spatially (a design which may introduce ambiguity), the bundling is done based on connectivity and can help reduce clutter by grouping multiple edges where the all target nodes are also connected to all the source nodes (\autoref{fig:confpic}) \citep{confpic}. 
 
 \begin{figure}[H]
      \centering
-     \includegraphics[width=.9\textwidth]{figures_c1/layout/confluent/example.png}
-        \caption{\textbf{An example of confluent bundling. } From left to right -  A traditional network, Edge bundling, Power Graph and Confluent graph representations. Source: \citep{confpic}}
+     \includegraphics[width=.75\textwidth]{figures_c1/layout/confluent/example2.png}\\
+     \includegraphics[width=.75\textwidth]{figures_c1/layout/confluent/example.png}\\
+        \caption{\textbf{An example of confluent bundling. } A traditional network (a), Edge bundling (b), Power Graph (c) and Confluent graph (d) representations. Source: \citep{confpic}}
       \label{fig:confpic}
 \end{figure}
 
-Using butane as an example the construction of a confluent shall be covered. The first step in the process is to create
-a power graph of our network. Power graphs are a representation of complex networks where sets of items identical source and target links are lumped or grouped within a single item. This is then converted into a routing graph, \autoref{fig:conf1}. To do this multiple edges which may be bundled have a `routing' node added to guide them. Next basis-splines, using the routing nodes as control points, are used to map the graph\footnote{These are similar to bezier curves but require a degree, $p$, $n+1$ control points, and a knot vector of $m+1$ points. Note: Knots are the things that make the curve continuous }, \autoref{fig:conf2}. Finally crossing links are removed, leaving the confluent graph, \autoref{fig:conf4}. 
+Using the oxidation of butane as an example we shall explore the construction process of a confluent. Starting with the network presented in \autoref{fig:curvededge}, we create a power graph - 
+power graphs are a representation of complex networks where sets of items identical source and target links are lumped or grouped within a single item. Next multiple edges which follow the same path are bundled through a `routing' node to create the routing graph in \autoref{fig:conf1}. The newly created routing nodes are now used as control points for the mapping of the graph using basis-splines\footnote{These are similar to bezier curves but require a degree ($p$), $n+1$ control points, and a knot vector of $m+1$ points. Knots are the things that make the curve continuous } (\autoref{fig:conf2}). Finally any crossing links are remove leaving the confluent graph in \autoref{fig:conf4}. 
 
 Confluent drawings have been found to have many applications (e.g. the ego-centric author network and social interaction graph), they generally perform best in sparce networks with locally dense clusters of a tree like structure \citep{confluent17}. Although sparse, the cyclic nature of atmospheric chemistry does not allow for a sufficient reduction in complexity to make them a suitable improvement over traditional graphs. The use of very close fitting basis-splines in addition to a routing graph (confluent graph with crossing artifacts), may however help to simplify specific layouts or mechanism subsets with a certain amoung of tweaking. 
 
 \begin{figure}[H]
      \centering
-     \includegraphics[width=.7\textwidth]{figures_c1/layout/confluent/1.png}
+     \includegraphics[width=.8\textwidth]{figures_c1/layout/confluent/1.png}
         \caption{\textbf{The routing graph of the butane mechanism.} Here paths which contain two or more bundles have an extra `routing' node introduced (orange stroke) }
       \label{fig:conf1}
 \end{figure}
 
 \begin{figure}[H]
      \centering
-     \includegraphics[width=.7\textwidth]{figures_c1/layout/confluent/2.png}
+     \includegraphics[width=.8\textwidth]{figures_c1/layout/confluent/2.png}
         \caption{\textbf{Confluent graph with crossing artifacts.} The routing graph with the addition of basis-splines using the orange routing nodes in \autoref{fig:conf1} as control points.}
       \label{fig:conf2}
 \end{figure}
 
 \begin{figure}[H]
      \centering
-     \includegraphics[width=.6\textwidth]{figures_c1/layout/confluent/4.png}
+     \includegraphics[width=.8\textwidth]{figures_c1/layout/confluent/4.png}
         \caption{\textbf{Confluent graphs without crossing artifacts.} The remaining confluent graph with crossing edges removed. }
       \label{fig:conf4}
 \end{figure}
 
 
 
-\paragraph{ Edge Angle / Continuity}
+\subsubsection{ Angle / Continuity}
 Visual representation utilises our conscious and unconscious pattern recognition and intuition abilities \citep{pattern}. To avoid apophenia (finding patterns where they do not exist), careful  consideration has to be placed in the design of a graph layout. 
 Although edge corssing is ofthen though of as the most import aesthetic metric, finding a continuity between inward and outbound edges of a node was found to be if equal importance \citep{continuity}.
 
@@ -719,12 +721,12 @@ Reducing the angle between related edges increases readability and allows the be
 
 
 \subsection{Temporal Projection}
-Story-telling has been an effective method to convey information, experience and cultural values for almost as long as people have been around. Many real-life physical processes occur over time and thus allow the use of a story-telling analogy. \citep{storytelling} provides a generic structure which begins with creating a general overview of the subject. Events are then animated in order of occurrence and defined as we go along. Finally any remaining conflicts and uncertainty is addressed, and these are rectified.  
+Story-telling has been an effective method to convey information, experience and cultural values for almost as long as people have been around. Many real-life physical processes occur over time and thus allow the use of a story-telling analogy. \cite{storytelling} provides a generic structure which begins with creating a general overview of the subject. Events are then animated in order of occurrence and defined as we go along. Finally any remaining conflicts and uncertainty is addressed, and these are rectified.  
 Using this as a template for our graphs, we find that the content is usually given in the form of a title or figure description, the evolution as the visualisation, and finally the reflection and resolution through the use of user interaction (e.g., node hi-lighting, zoom or animation).
 
 Since very few graph layouts support dynamic time-varying graphs \citep{tvg}, several methods of visualising temporal events have been developed. 
 %Independent application to of these runs the risk of producing temporally incoherent visualisations. 
-Although storylines can be useful for drawing the evolution of simple systems, these break down when dealing with large numbers of dependant variables. Force-directed layouts may be adapted, to suit these better, whereupon the initial positions of the previous node endpoints are used as the initial positions for consequential simulations. Three methods of representing these are shown in Figure \ref{temporal}.
+Although storylines can be useful for drawing the evolution of simple systems, these break down when dealing with large numbers of dependant variables. Force-directed layouts may be adapted, to suit these better, whereupon the initial positions of the previous node endpoints are used as the initial positions for consequential simulations. Three methods of representing these are shown in \autoref{fig:temporal}.
 
 
 \begin{figure}[H]
@@ -752,7 +754,7 @@ Although storylines can be useful for drawing the evolution of simple systems, t
     \caption{}
     \end{subfigure}
        \caption{\textbf{Film style representation of temporal changes in a network.} Showing the temporal changes from a model simulation of the beijing atmosphere. (a) shows a weighted graph at midnight. With the addition of daylight, the chemistry speeds up causing the force graph to contract, changing the overall network shape (the faster reactions have a stronger attractive force).}
-     \label{fig:edgebundling}
+     \label{fig:temporal}
 \end{figure}
 
 
