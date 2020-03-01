@@ -726,7 +726,7 @@ Using this as a template for our graphs, we find that the content is usually giv
 
 Since very few graph layouts support dynamic time-varying graphs \citep{tvg}, several methods of visualising temporal events have been developed. 
 %Independent application to of these runs the risk of producing temporally incoherent visualisations. 
-Although storylines can be useful for drawing the evolution of simple systems, these break down when dealing with large numbers of dependant variables. Force-directed layouts may be adapted, to suit these better, whereupon the initial positions of the previous node endpoints are used as the initial positions for consequential simulations. Three methods of representing these are shown in \autoref{fig:temporal}.
+Although storylines can be useful for drawing the evolution of simple systems, these break down when dealing with large numbers of dependant variables. Force-directed layouts may be adapted, to suit these better, whereupon the initial positions of the previous node endpoints are used as the initial positions for consequential simulations. Three methods of representing these are shown in \citep{daygraph} - screenshots of which are shown in \autoref{fig:temporal}.
 
 
 \begin{figure}[H]
@@ -753,7 +753,7 @@ Although storylines can be useful for drawing the evolution of simple systems, t
     \includegraphics[width=\textwidth]{figures_c1/layout/confluent/100.png} 
     \caption{}
     \end{subfigure}
-       \caption{\textbf{Film style representation of temporal changes in a network.} Showing the temporal changes from a model simulation of the beijing atmosphere. (a) shows a weighted graph at midnight. With the addition of daylight, the chemistry speeds up causing the force graph to contract, changing the overall network shape (the faster reactions have a stronger attractive force).}
+       \caption{\textbf{Film style representation of temporal changes in a network.} Showing the temporal changes from a model simulation of the beijing atmosphere. (a) shows a weighted graph at midnight. With the addition of daylight, the chemistry speeds up causing the force graph to contract, changing the overall network shape (the faster reactions have a stronger attractive force). The animation of this can be found at \url{https://github.com/wolfiex/DanEllisThesis/blob/master/daynight_26mb.gif}}
      \label{fig:temporal}
 \end{figure}
 
@@ -761,10 +761,10 @@ Although storylines can be useful for drawing the evolution of simple systems, t
 Finally, user-interaction such as hi-lighting key nodes/links, zoom and animation\footnote{\citep{ch8} notes that animation poses high demands on the users visual memory, and that snapshots are likely to miss underlying patterns.  For this reason an interactive techniques that can allow retrospective selection of timesteps allows for a good compromise between these.} may be used to clarify information at the reflection stage.
 
 \subsection{Additional Dimensions}
-Additional dimensions can be used to emphasise certain aspects of our graphs. For instance multiple layers may be used in a directional graph to separate the importance of the nodes \citep{IPSEPCOLA}. \autoref{3D} shows the first, second and third generation species of a mechanism containing isoprene in three dimensions. Such a visualisation may be explored interactively, with the aid of a computaional input device (a mouse, keyboard or device gyroscope), or with the aid of red-cyan 3D glasses (for non-interactive mediums such as print). 
+Additional dimensions can be used to emphasise certain aspects of our graphs. For instance multiple layers may be used in a directional graph to separate the importance of the nodes \citep{IPSEPCOLA}. \autoref{fig:3D} shows the first, second and third generation species of a mechanism containing isoprene in three dimensions, where each layer in the third direction represents a different generation of species. Such a visualisation may be explored interactively, with the aid of a computaional input device (a mouse, keyboard or device gyroscope), or with the aid of red-cyan 3D glasses (for non-interactive mediums such as print). 
 
  Different layers can be used to separate of primary VOCs, from species which result in their production (+1 layers) and loss (-1 layers).
- Temporal data, such as that in \autoref{temporal} can also be presented in this format. The only drawback is the high possibility of obfusciation which may result from many layers of overlapping information. 
+ Temporal data (e.g. \autoref{fig:temporal}) can also be presented in this format. The only drawback is the high possibility of obfusciation which may result from many layers of overlapping information. 
 
 
 
@@ -775,20 +775,22 @@ Additional dimensions can be used to emphasise certain aspects of our graphs. Fo
       \label{fig:3D}
 \end{figure}
 
+\subsection{Summary}
+In this section the different semantic methods have been explored. It is found that additional information such as concentration or functional groups may be represented as node size/colour and that there are a range of edge plotting styles that may be used to reduce clutter. 
 
+In the next section we combine both semantic and syntatic represntation and apply it to an atmospheric chemical mechanism. Using the graph visualisation tools described above we acess the quality of information which may be inferred through represneting a mechanism in this way.
 
 
 \section{A Chemistry Case Study}\label{sec:chemcase}
-To conclude we apply many of the tools described above to a simple case study. We select a MCM subset containing methane as the only primary emitted species, and run it throught the Dynamically simple model of atmospheric chemical complexity (DSMACC) [ref] using the initial conditions of XYZ. We run this forwards to steady state and extract the flux between species on noon. The edge weight is the net flux (product of the species concentration * the rate of reaction for all reactions), normalised to a value between 1 and zero. 
-
-This allows a simplified view of the different properties which affect the visualisation of the graph produced. 
+To conclude we apply many of the tools described above to a simple case study. We select a MCM subset containing methane as the only primary emitted species, and run it throught the Dynamically simple model of atmospheric chemical complexity (DSMACC) \citep{dsmacc,dsmaccgit} using the initial conditions provided in \autoref{tab:icsmetric}. We run this forwards to steady state and extract the flux between species on noon. The edge weight is the net flux (product of the species concentration multiplied by the rate of reaction for all reactions between those species and products), normalised to a value between 1 and zero. 
+%   This allows a simplified view of the different properties which affect the visualisation of the graph produced. 
 
 \subsection{Syntatic Representation} 
-Since we shall be using simulation data, we require a layout which deals with both direction and edge weights. In the spirit of zero and Protagoras\footnote{Famous for the phrase `man is the measure of all things' suggesting that we are constrained by our experiences}, we opt of the spring-like description presented by the Force Atlas 2 algorithm. This feature hi-lights fast reactions by bringing nodes together. Such a property has been observed to help users select the shortest path within a network \citep{eyetrack}. Here users picked the shortest path an average of 68\% for force directed graphs, compared to 40\% for hierarchical and 2\% for orthogonal layouts. Such properties can help us locate any trends in fast reactions which may control the chemistry within a system. 
+Since we shall be using simulation data, we require a layout which deals with both direction and edge weights. The spring-like description of the  ForceAtlas2 is chosen from \autoref{syntatic} . This feature highlights fast reactions by bringing nodes together. Such a property has been observed to help users select the shortest path within a network \citep{eyetrack}. Here users picked the shortest path an average of 68\% for force directed graphs, compared to 40\% for hierarchical and 2\% for orthogonal layouts. Such properties can help us locate any trends in fast reactions which may control the chemistry within a system. 
 
 
 \subsection{Semantic Representation}
-Since the graph presented contains only a handful of species, our screen real-estate allows the listing of names for each node. Node sizes are scaled to represent the concentration of each species at that time point, and edges are coloured to represent the strength of each relationship between them. 
+Since the graph presented contains only a handful of species, our screen real-estate allows the listing of names for each node. Node sizes are scaled to represent the concentration of each species at that time point, and edges are coloured to represent the strength of each relationship between them. Here pink edges represent a fast flux and blue ones a slow one. In comparing the the change in graph shape between a weighted \autoref{fig:resmeth}b and unweighted \autoref{fig:resmeth}a graph, we can see that nodes connected by a high edge weight (fast flux) are drawn closer to eachother than those with a slow flux.
 
 
 \begin{figure}[H]
@@ -801,9 +803,9 @@ Since the graph presented contains only a handful of species, our screen real-es
      \begin{subfigure}[b]{.4\textwidth}
          \centering
      \includegraphics[width=\textwidth]{figures_c1/tap3/ch4_weighted_s1-eps-converted-to.pdf}
-     \caption{Connected $\hat{\Gamma} = flux$}
+     \caption{Connected weighted (flux)}
      \end{subfigure}
-        \caption{Basic steps within in the the graph production process}
+        \caption{\textbf{A weighted and unweighted force diagram of the methane mechanism.} Here it is seen that upon weighting, edges with a faster flux (pink) are drawn closer than those of a weaker one (blue).}
       \label{fig:resmeth}
 \end{figure}
 % 
