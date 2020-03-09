@@ -1,3 +1,4 @@
+\RequirePackage{fix-cm}
 \documentclass[twoside,openleft,reqno,a4paper,final]{book}
 %%% Remove the next two lines if you want the figures at their place
 %\usepackage[figuresonly,nolists,nomarkers]{endfloat}
@@ -7,19 +8,25 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[sectionbib]{natbib}
-
+\usepackage[toc,page]{appendix}
 \usepackage[svgnames]{xcolor}
 \usepackage{chapterbib}
 \usepackage[version=4]{mhchem}
+\newcommand{\size}[2]{{\fontsize{#1}{0}\selectfont#2}}
+%\usepackage{verbatim}
+
+
 \usepackage{hyperref,booktabs,algpseudocode,algorithm,booktabs,titlesec,setspace,relsize,import}
-\usepackage{amsmath,graphicx,float,subcaption,graphicx,}
-\usepackage[toc,page]{appendix}
+\usepackage{amsmath,graphicx,float,subcaption}
 \usepackage[bindingoffset=25mm, left=15mm, right=15mm,top=30mm, bottom=20mm]{geometry}
 \usepackage[space=true]{grffile}
 \usepackage{fancyhdr,booktabs,algpseudocode,algorithm,tikz}
 \usepackage{pdflscape}
 \usepackage{adjustbox}
 \usepackage{afterpage}
+\usepackage{chemfig}
+
+
 
 
 \newcommand{\chapterbib}{
@@ -82,7 +89,7 @@
         \adjustbox{trim={.49\width} 0cm 0 0cm,clip}{\includegraphics[height={#6}\textheight,angle=#7]{#3}}%
     \end{figure}
     \thispagestyle{empty}
-    
+
 \vfill
     \clearpage
     }
@@ -114,10 +121,10 @@
 % %titleify section headers
 % \usepackage{titlecaps}
 % % \usepackage{xparse}
-%     % 
-% 
+%     %
+%
 % % Just make titlify python scripts
-% 
+%
 %     \let\svsubsubsection\subsubsection
 %     \DeclareDocumentCommand\subsubsection{ s m }{% s = star, m = mandatory arg
 %        \IfBooleanTF{#1}{%
@@ -126,7 +133,7 @@
 %          \svsubsubsection{\titlecap{#2}}
 %        }%
 %     }
-% 
+%
 %     \let\svsubsection\subsection
 %     % \def\subsection#1{\svsubsection{\titlecap{#1}}}
 %     \DeclareDocumentCommand\subsection{ s m }{% s = star, m = mandatory arg
@@ -136,7 +143,7 @@
 %          \svsubsection{\titlecap{#2}}
 %        }%
 %     }
-    
+
     % \let\svsection\section
     % % \def\section#1{\svsection{\titlecap{#1}}}
     % \DeclareDocumentCommand\section{ s m }{% s = star, m = mandatory arg
@@ -146,9 +153,9 @@
     %      \svsection{\titlecap{#2}}
     %    }%
     % }
-    % 
-    
-    % 
+    %
+
+    %
     % \let\svparagraph\paragraph
     % \DeclareDocumentCommand\paragraph{ s m }{% s = star, m = mandatory arg
     %    \IfBooleanTF{#1}{%
@@ -202,7 +209,7 @@
 \begin{quotation}
     \centering
   \large{\emph{\textbf{Veritatem inquirenti, semel in vita de omnibus,\\ quantum fieri potest, esse dubitandu:}\\
- In order to seek truth, it is necessary once in the course of our life, to doubt, as far as possible, of all things. }  }  
+ In order to seek truth, it is necessary once in the course of our life, to doubt, as far as possible, of all things. }  }
 \vspace{\baselineskip}\linebreak
   \begin{flushright}\small{
   - Descartes, Rene, \textit{Principles of Philosophy}
@@ -224,21 +231,53 @@
  \newpage
 
 
-% Introduction 0 
+
+% Acknowlegements
+%
+% Andrew and Mat- mainly putting up with me, and being very informative
+%
+% earth0 - for keeping working until the very end.
+%
+% Family, for which I wish I had spent more time with rather than beign squirreled away in an office.
+%
+% Extended `family' (\href{www.westminsterboatingbase.co.uk}{Westminster Boating Base}) who helped keep me sane irrespective to the severe watersport withdrawal, and kept me employed, inviting me to work the annual France whitewater trips
+%
+% Friends and Collegues: Rosie, Tomas, Ben, Mike, Killian, Pete, Peter
+%
+% And generally everyone else who has been part of my life within this period.
+
+
+
+
+% % Introduction 0
 \include{./0_intro}
-% 
+%
+%
+% % Ch1 0
+% \include{./1_visual}
 % % Chapter 3
 % \include{./3_graphs}
-% 
+%
 % % Chapter 4
 % \include{./4_centrality}
-% 
-% 
+%
+%
 % % Chapter 5
 %  \include{./5_lumping}
 
 % Chapter 6
 %\include{./6_DR}
+
+\begin{appendices}
+
+\subimport{dr/}{appendix.tex}
+\subimport{appendices/}{misc.tex}
+\subimport{appendices/}{keywords.tex}
+
+% \chapterbib
+\end{appendices}
+
+
 
 
 \newpage
