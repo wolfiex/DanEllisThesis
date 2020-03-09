@@ -1,0 +1,171 @@
+\documentclass[twoside,openleft,reqno,a4paper,final]{book}
+%%% Remove the next two lines if you want the figures at their place    
+%\usepackage[figuresonly,nolists,nomarkers]{endfloat}
+%\renewcommand{\processdelayedfloats}{}
+\usepackage{soul}%strikeout \st
+\usepackage{rotating}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[version=4]{mhchem}
+\usepackage{hyperref,booktabs,algpseudocode,algorithm,booktabs,titlesec,setspace,relsize}
+\usepackage{amsmath, graphicx,float,subcaption}
+\usepackage[svgnames]{xcolor}
+\usepackage{chemfig}
+
+\usepackage[toc,page]{appendix}
+%\pagenumbering{roman}  http://www.markschenk.com/tensegrity/latexexplanation.html
+ %A4 (210 mm x 297 mm)  https://tex.stackexchange.com/questions/20538/what-is-the-right-order-when-using-frontmatter-tableofcontents-mainmatter
+%\addtolength{\textwidth}{12mm}%210
+%\addtolength{\evensidemargin}{-4mm}
+%\addtolength{\oddsidemargin}{-8mm}
+%\addtolength{\textheight}{35mm}%297
+\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+\usepackage[bindingoffset=25mm, left=15mm, right=15mm,top=30mm, bottom=20mm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter~-~#1}{}}
+ \fancyhf{}
+  \fancyhead[LE]{\itshape   \thepage}
+ \fancyhead[RE]{\itshape  \nouppercase{\rightmark}} %\nouppercase !
+  \fancyhead[LO]{\itshape  \nouppercase{\leftmark }}%thechapter
+ \fancyhead[RO]{\itshape  \thepage} %\nouppercase !
+%  \cfoot{\thepage}
+%\renewcommand{\footrulewidth}{\headrulewidth}
+\pagestyle{fancy}
+
+\newcommand{\ch}[1]{\MakeUppercase{\ce{#1}}}  % version 1
+\newcommand{\multiref}[2]{\autoref{#1}-\ref{#2}} % from - to
+\newcommand{\qfig}[4]{\begin{figure}[H]\centering\includegraphics[width=#4]{#1}\caption{#3}\label{#2}\end{figure}\newpage}
+% location,label,caption,width
+
+
+% \usepackage[space=true]{grffile}
+
+
+\def\blankpage{%
+      \clearpage%
+      \thispagestyle{empty}%
+      \addtocounter{page}{-2}%
+      \null%
+      \clearpage}
+
+
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ :}
+
+
+%
+%\newcommand{\groupfig}[1]{
+%\newpage
+%\begin{figure}[H]
+%\centering\includegraphics[width=\textwidth]{./4fig/graph/fngraphs/#1.pdf}\\
+%\centering\includegraphics[width=.4\textwidth]{./4fig/fngroups/fng_#1.pdf}
+%\caption{A network graph of highlighting the number of times the #1 functional group appears within a species (one, two three or four). Underneath is a graph showing the net sum of functional groups and equatitions for the subset. This can be used to categorise the most common reaction style (if there exists one) of the functional group.  }
+%\label{fig:graph_#1}
+%\end{figure}
+
+%\newpage
+%}
+%
+%
+%\newcommand{\dfig}[4]{
+%\newpage
+%\begin{figure}[H]
+%\centering\includegraphics[width=.45\textwidth]{#1}
+%\centering\includegraphics[width=.45\textwidth]{#2}
+%\caption{ Colouring #4 }
+%\label{#3}
+%\end{figure}
+%\newpage
+%}
+
+
+
+% location,label,caption,width
+
+\definecolor{c1}{HTML}{004F9D}
+\definecolor{c2}{HTML}{00775B}
+\definecolor{c3}{HTML}{FF9000}
+\definecolor{c4}{HTML}{F71735}
+\definecolor{c5}{HTML}{C10053}
+
+
+\author{Dan Ellis }
+\date{March 2019}
+
+
+
+
+\begin{document}
+% \newgeometry{oneside}
+
+
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{4}
+%\cleardoublepage
+\setcounter{page}{200}
+\setcounter{chapter}{1}
+
+% \maketitle
+\cleardoublepage{}
+
+
+
+
+
+
+
+
+
+
+
+\chapter{ The Importance of Visualisation:  From Social Networks to the Atmosphere }
+\cleardoublepage{}
+\restoregeometry
+\vspace*{0.15\paperheight} 
+
+
+
+\begin{center}
+\begin{quotation}
+  \large{\emph{\textbf{``If you really want to understand something, the best way is to try and explain it to someone else. That forces you to sort it out in your mind. ... By the time you’ve sorted out a complicated idea into little steps that even a stupid machine can deal with, you’ve learned something about it yourself.\footnote{ Omitted at ellipsis : ``And the more slow and dim-witted your pupil, the more you have to break things down into more and more simple ideas. And that’s really the essence of programming.''}''} }  }  \\
+  \begin{flushright}
+  - Douglas Adams, \textit{Dirk Gently's Holistic Detective Agency} 
+
+  \end{flushright}
+ \end{quotation}
+\end{center}
+
+
+%\blankpage
+\doublespacing
+% \onehalfspacing
+
+\newpage
+\setlength{\footnotesep}{0.5cm}
+\raggedbottom % group writing to top of page!
+
+\tableofcontents
+\newpage
+%%
+%%
+\input{intro.tex}
+%% relationships.
+\input{network.tex}
+% % graph specific. 
+
+
+
+
+\bibliographystyle{apalike} 
+\bibliography{vis,background,tap2}
+% \bibliographystyle{unsrt}
+
+\end{document}
