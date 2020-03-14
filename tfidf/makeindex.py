@@ -22,6 +22,7 @@ for f in files:
         title.append(re.findall(r'\\chapter\{(.*)\}',dir)[0])
 
         text = re.sub(r'[\._\W\s\d]+',' ',re.sub('-','',text ))
+        text = re.sub('\\.* ','',text )
         corpus.append(text)
     except:None
 
@@ -56,5 +57,5 @@ for i in df.iterrows():
     #tfidf=tfidf[:-2]
     tfidf+='} }'
 
-with open('keywords.tex','w') as f:
+with open('../appendices/keywords.tex','w') as f:
     f.write(tfidf)
