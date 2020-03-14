@@ -616,24 +616,17 @@ Since random forests are in essence a collection of decision trees, it is possib
 
 \section{Results}\label{sec:drres}
 %
-There exist many methods to define the chemical structure of the species within the MCM. In this section, we attempt to evaluate their effectiveness for exhibiting the defining functional groups and characteristics used for constructing the mechanism. First, we explore the distribution of clusters and the ability of different DR algorithms to visually separate various groups of chemistry (\autoref{sec:cldist}). Next, the functional groups (taken from the MCM development protocol) are explored within each DR algorithm (\autoref{sec:fsclust}). Finally, a selected example for each DR method is taken and explored in further detail (\autoref{sec:selectcomp}).
+There exist many methods to of defining the chemical structure of species within the MCM. This section evaluates the different structural representations (\autoref{sec:drinput}) and the ability of DR algorithms to separate the chemical space within which these lie into a two dimensional scatterplot. 
 
-\subsection{Cluster Distribution}\label{sec:cldist}
+% 
+% exhibiting th defining functional groups and characteristics used for constructing the mechanism. First, we explore the distribution of clusters and the ability of different DR algorithms to visually separate various groups of chemistry (\autoref{sec:cldist}). Next, the functional groups (taken from the MCM development protocol) are explored within each DR algorithm (\autoref{sec:fsclust}). Finally, a selected example for each DR method is taken and explored in further detail (\autoref{sec:selectcomp}).
 
-Start with the visual comparison and compare it with the silhouette values.
+\subsection{Visual Overview}\label{sec:cldist}
+Explorative data analysi invloves a degree of figure interativity. \autoref{ch1} described the imporance of visualisation in employing the pattern cognitive functions of the human brain, and \autoref{ch2} explained the importance of having an evenly distributed datapoints to aid the understanding of graphs. This subsection combignes the two ideas in the usage of dimsenionality recduction to exploit patterns within a dataset. 
 
+Using the techneques in \label{sec:drvis} we explore the visual distribution of different dimensionality reduction methods across all input types. This subsection explores the spatial distribution of groups (blobs) in the figures. The colours represent the automatically calculated clusters, which shall be looked at in a more analytical method within \autoref{sec:mathclustanalysis}. The individial meanings of clusters are also explored in \autoref{sec:fsclust}.
 
-
-
-\paragraph*{Principle Component Analysis}
-
-
-\begin{table}[H]
-    \centering
-        \subimport{tables/}{silhouettepca.tex}
-        \caption{The inputs to the PCA dimensionality reduction algorithm sorted by the best obtained silhoette coefficient.  }
-        \label{tab:pcasil}
-\end{table}
+Using priciple component analysis, the linear decomposition results in a uniform distribution of datapoints, often forming lines of simialar properties - \autoref{pcavis}. Since an AutoEncoder with linear activation functions will produce identical results to the PCA algorithm, it is not surprising that some of the linear separation (especially for ordinal data such as (b) functional groups and (f) protocol groups ) can be seen across the two algorithms. However since compression using the AutoEncoder does not discard data, and can allow for non-linear relationships, this produces better grouped clusters, especially for the smiles (g) input - \autoref{fig:aevis}. Whereas the spatial positioning in both PCA and AE contains an inherent meaning about the data (distances have a meaning), t-SNE is a non-linear DR method, where the distance and positioning of a cluseter holds no such information. Instead it uses a graph-like force model to group features of similarity. The result of this is one where items are better separated, but their separation contains little to no meaning about the dataset. Out of the three discussed methods, t-SNE makes it the easiest to visually isolate clusters from their neighbours (\autoref{fig:tsnevis}). This has its application in data exploration and communication of the results. 
 
 
 
@@ -647,11 +640,49 @@ Start with the visual comparison and compare it with the silhouette values.
 \end{landscape}
 
 
+\begin{landscape}
+\begin{figure}[H]
+    \subimport{tables/}{aedr.tex}
+    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimensions using an AutoEncoder.}
+    Each graph has undergone several clustering algorithms under a range of parameters. The result with the best silhouette coefficient has been chosen. Colours follow the greedy four colour theorem and are there only to indicate the contrast between cluster boundaries.}
+    \label{fig:aevis}
+\end{figure}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{figure}[H]
+    \subimport{tables/}{tsnedr.tex}
+    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimensions using t-SNE.}
+    Each graph has undergone several clustering algorithms under a range of parameters. The result with the best silhouette coefficient has been chosen. Colours follow the greedy four colour theorem and are there only to indicate the contrast between cluster boundaries.}
+    \label{fig:tsnevis}
+\end{figure}
+\end{landscape}
 
 
 
+\subsection{Mathematical Cluster Analysis}\label{sec:mathclustanalysis}
+\autoref{sec:fsclust} explores the distribution of functional groups within automatically selected clusters. Here the silhouette coefficient (\autoref{sec:silo}) is used to determine the vector clustering technique and its input configuration for the output of a DR algorithm. The silhouette coefficient can be used to give a mathematical representaion of the goodness of fit of points within a specific cluster. Using the best selected method of auto classification (\autoref{sec:drclustt}) we compare the silhouette coefficients and the number of clusters for each input and DR algorithm. 
 
-\paragraph*{Auto Encoder Encoding}
+Tables \ref{tab:pcasil} - \ref{tab:tsnesil} show the silhouette coefficients and number of groups for each DR algorithm. Inputs for each algorithm are ranked in order of their silhouette coefficient, where the closer to 1 the value, the better the clustering. 
+
+Ordinal inputs such as functional groups or the protocol categories consistently rank the highest within each algorithm. This is beacuse the algorithms only have to idenitfy permutations of each category and classify the species into these. It is noted that the t-SNE silhouette coefficient for these is ~30\% lower than for PCA and AE algorithms. However the number of groups located is also greatly reduced from 140 to 106. This suggests that the vector clustering algorithms have tried to combign datapoints into a group, which has come at a cost to the silhouette value. 
+
+Next we have the smiles strings. These are ranked highly for both AE and t-SNE algorithms, which agrees with the visial evaluation of \autoref{fig:aevis}(g) and \autoref{fig:tsnevis}(g). The ranking of the PCA decomposition of the smiles input is almost half of that of the others, but yet contains a similer number of groups. This can be explained by the lattice style structure of \autoref{fig:pcavis}(g) which is not conducive to the easy grouping of points - especially by an unsupervised algorithm. 
+
+Both node2vec and MACCS 
+ 
+
+
+Finally the graph-based fingerprint input is consistently the lowest scorring in the silhouette coefficient. I
+
+\begin{table}[H]
+    \centering
+        \subimport{tables/}{silhouettepca.tex}
+        \caption{The inputs to the PCA dimensionality reduction algorithm sorted by the best obtained silhoette coefficient.  }
+        \label{tab:pcasil}
+\end{table}
+
 
 \begin{table}[H]
     \centering
@@ -663,21 +694,6 @@ Start with the visual comparison and compare it with the silhouette values.
 
 
 
-
-\begin{landscape}
-\begin{figure}[H]
-    \subimport{tables/}{aedr.tex}
-    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimensions using an AutoEncoder.}
-    Each graph has undergone several clustering algorithms under a range of parameters. The result with the best silhouette coefficient has been chosen. Colours follow the greedy four colour theorem and are there only to indicate the contrast between cluster boundaries.}
-    \label{fig:aevis}
-\end{figure}
-\end{landscape}
-
-
-
-
-\paragraph*{t-Distributed Stochastic Neighbor Embedding}
-
 \begin{table}[H]
     \centering
         \subimport{tables/}{silhouettetsne.tex}
@@ -688,14 +704,8 @@ Start with the visual comparison and compare it with the silhouette values.
 
 
 
-\begin{landscape}
-\begin{figure}[H]
-    \subimport{tables/}{tsnedr.tex}
-    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimensions using t-SNE.}
-    Each graph has undergone several clustering algorithms under a range of parameters. The result with the best silhouette coefficient has been chosen. Colours follow the greedy four colour theorem and are there only to indicate the contrast between cluster boundaries.}
-    \label{fig:tsnevis}
-\end{figure}
-\end{landscape}
+
+
 
 
 
@@ -739,6 +749,13 @@ Starting with species name (h) the number of Oxygens and Carbons are
 
 
 \section{Conclusions}
+
+tsne best - but has to be rerun 
+
+others can have data fed into them and reconstructed. 
+
+
+
 
 DR can be used to find patterns in dataset
 which is best
