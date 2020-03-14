@@ -1,4 +1,57 @@
+\chapter{Graphs and Networks}
+
+
+\section{Heavily Labeled Citation Graph}\label{appendix:fullauthor}
+
+\begin{figure}[H]
+     \centering
+         \includegraphics[width=\textwidth]{WACLauthor.png}
+        \caption{ \textbf{The labelled co-author network -} as  referenced in \autoref{ch3} }
+        
+\end{figure}
+\newpage
+
+
+\section{Centrality on the UK rail network.}\label{appendix:rail}
+
+The data in the following section was extracted from OpenStreetData using overpass turbo \url{https://overpass-turbo.eu}. Here ways within the geographic information system mapping (GIS) format are represented as paths between locations (i.e. a graph). Following some simple procesing, the distance of each section was calculated and a weighted graph represented the UK rail network was generated. This was then used to form a rudementary analysis of the graph structure using centrality metrics (shown below). 
+
+\textbf{NOTE:}\\
+\textit{Since the network is extracted from a GIS datafile, nodes within the rail network include not only stations, but also switches, routing nodes and crossings. Although this can be filtered, the iterative reconstruction of a graph for the entire UK is a lengthy process - one which I am unable to do at the time of writing (there are 90011 nodes which make up the entirety of the UK rail network, most of which need to be removed, and their links rerouted).}
+
+
+\begin{figure}[H]
+     \centering
+\begin{subfigure}[b]{.49\textwidth}
+     \centering
+         \includegraphics[width=\textwidth]{rail/degree.png}
+        \caption{ \textbf{Degree Centrality.}}
+\end{subfigure}
+\begin{subfigure}[b]{.49\textwidth}
+     \centering
+         \includegraphics[width=\textwidth]{rail/centrality.png}
+        \caption{ \textbf{Closeness Centrality.}}
+\end{subfigure}
+ 
+\begin{subfigure}[b]{.49\textwidth}
+     \centering
+         \includegraphics[width=\textwidth]{rail/betweenness.png}
+        \caption{ \textbf{Betweenness Centrality.}}
+\end{subfigure}
+\begin{subfigure}[b]{.49\textwidth}
+     \centering
+         % \includegraphics[width=\textwidth]{rail/pagerank.png}
+        \caption{ \textbf{PageRank Centrality.} Colours are groups from the modularity clustering algorithm which partitions the network into highly connected areas or `cliques'.}
+\end{subfigure}
+\end{figure}
+
+
+
+
 \chapter{Miscellaneous}
+
+
+
 
 \section{Correspondance with Mike Jenkin}\label{appendix:correspondance}
 Mike Jenkin 11th September 2019
@@ -54,10 +107,10 @@ TNCARBxx and TXCARBxx: This terminology is used for carbonyl compounds, formed f
 
 
 
-
 \section{Functional Groups}\label{appendix:fngroups}
 \begin{figure}[H]
 \centering
 \includegraphics[width=.9\textheight,angle=90]{fngroups.png}
 {Source:\cite{fgps}}
 \end{figure}
+
