@@ -5,7 +5,7 @@ os.system('git add -A')
 
 
 size = os.path.getsize('thesis.pdf')/(1024*1024)
-print ('thesis size: %.2f MB'%size)
+print ('\n\nthesis size: %.2f MB\n\n'%size)
 
 if size>100:
     print('removing thesis.pdf - its too large')

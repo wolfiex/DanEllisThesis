@@ -7,9 +7,15 @@ def runme(x):
 
 
 data = glob.glob('../*/*/legend.png')
+data = glob.glob('../*/*_data.csv')
 
-#mp.Pool(4).map(run,data)
+mp.Pool(4).map(runme,data)
 
+'''
+
+RUN with ipython 
+
+'''
 
 
 for f in data:
