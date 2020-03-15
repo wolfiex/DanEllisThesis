@@ -1,4 +1,15 @@
-\begin{tabular}{llllll}
+
+% % %In the preamble
+% \usepackage{array}
+% \newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+% \begin{tabular}{lcrH}
+% ... hides  H column 
+% \end{tabular}
+% n complicated column styles are reused multiple times. Here, we will use it to hide the column content.
+% 
+% The following code defines a new column type H that packs its content into a box of zero size. To remove the intercolumn space after the column we use: @{}.
+
+\begin{tabular}{HlHlHH}
 \toprule
 {} &         London &         Cape Verde &           Beijing &           Borneo &          Nan-Mean \\
 \midrule

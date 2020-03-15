@@ -115,7 +115,7 @@ KL divergence (also known as relative entropy) is a measure of distance between 
 \chapter{Neural Network Activation Functions}\label{appendix:activation}
 
 
-\section{Binary Step}.\\\\
+\section{Binary Step}.\\
 This is a simple threshold function. If the input is above the threshold, the message is passed on. This makes it efficient, but unable to classify a single input into multiple categories. This can be likened to a yes|no decision tree.
 
 \begin{equation}
@@ -135,7 +135,7 @@ f(x) =
 
 
 
-\section{Linear}.\\\\
+\section{Linear}.\\
 
 This produces a signal proportional to the input multiplied by each neurons weight. It is an improvement over the step function as it allows for multiple outputs. It does however mean that we are unable to use backpropagation (gradient descent) to train the model. In adition to not being able to improve a model, all the layers in the neural network collapse into a single layer. This means that the final layer will always be a linear function of the first layer. This eliminates all the merits which may be gained from deep learning. A neural network with a linear activation function is simply a linear regression model.
 
@@ -148,7 +148,8 @@ This produces a signal proportional to the input multiplied by each neurons weig
 \caption{Linear activation function.}
 \end{figure}
 
-\section{Sigmoid / Logistic}.\\\\
+\section{Sigmoid / Logistic}.\\
+
 The first of the non-linear activation functions. It has a smooth gradient providing smooth output values which are bound between 1 and 0, normalising the output of each neuron. The main disadvantage is that is falls foul the vanishing gradient problem - for extreme values of $x$ there is close to no change in the prediction. This may result in either early termination of the training, or a slow training cycle in obtaining adequate precision. The activations is computationally expensive and the outputs are not zero centred.
 
 \begin{equation}
@@ -161,7 +162,7 @@ The first of the non-linear activation functions. It has a smooth gradient provi
 \end{figure}
 
 
-\section{Hyperbolic Tangent}.\\\\
+\section{Hyperbolic Tangent}.\\
 Much like the sigmoid function in both advantages and disadvantages. The hyperbolic tangent function provides a smooth curve which is zero centred. It is however computationally expensive and suffers from the vanishing gradient problem.
 
 \begin{equation}
@@ -174,7 +175,7 @@ Much like the sigmoid function in both advantages and disadvantages. The hyperbo
 \end{figure}
 
 
-\section{Rectified Linear Unit}.\\\\
+\section{Rectified Linear Unit}.\\
 A commonly used activation for large deep neural networks, due to its computational efficiency and quick convergence. It is non-linear although it appears like a linear function, and allows for back propagation. It does however suffer from the dying ReLU problem - when inputs tend to zero or below, the gradient of the function becomes zero and the network cannot perform backpropagation to learn.
 
 \begin{equation}
@@ -192,7 +193,7 @@ f(x) =
 
 
 
-\section{Swish}.\\\\
+\section{Swish}.\\
 https://arxiv.org/abs/1710.05941v1
 \textbf{\textit{a new, self-gated activation function discovered by researchers at Google. According to their paper, it performs better than ReLU with a similar level of computational efficiency. In experiments on ImageNet with identical models running ReLU and Swish, the new function achieved top -1 classification accuracy 0.6-0.9\% higher.}}
 
