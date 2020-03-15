@@ -1,0 +1,79 @@
+\BOOKMARK [0][-]{chapter.1}{ Chemical model diagnostics using graph theory and metrics. }{}% 1
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Graph Metrics}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.2.1}{Centrality metrics and academic publishing.}{section.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.2.2}{The Master Chemical Mechanism \(MCM\)}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.3}{Data Collection}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.4}{Visualising the data.}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.5}{Filtering the data}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.6}{The Co-citation Network}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.7}{The Co-authorship network}{section.1.2}% 10
+\BOOKMARK [1][-]{section.1.3}{Metric analysis}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.3.1}{Degree Centrality}{section.1.3}% 12
+\BOOKMARK [2][-]{subsection.1.3.2}{Closness Centrality}{section.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.3.3}{Betweenness}{section.1.3}% 14
+\BOOKMARK [2][-]{subsection.1.3.4}{Spectral methods and matrix analysis}{section.1.3}% 15
+\BOOKMARK [2][-]{subsection.1.3.5}{Page Rank}{section.1.3}% 16
+\BOOKMARK [3][-]{subsubsection.1.3.5.1}{The Google Matrix}{subsection.1.3.5}% 17
+\BOOKMARK [3][-]{subsubsection.1.3.5.2}{Solving the algebra}{subsection.1.3.5}% 18
+\BOOKMARK [3][-]{subsubsection.1.3.5.3}{Prediction}{subsection.1.3.5}% 19
+\BOOKMARK [2][-]{subsection.1.3.6}{Conclusions}{section.1.3}% 20
+\BOOKMARK [1][-]{section.1.4}{Classifying the Master Chemical Mechanism network}{chapter.1}% 21
+\BOOKMARK [2][-]{subsection.1.4.1}{Network density}{section.1.4}% 22
+\BOOKMARK [2][-]{subsection.1.4.2}{Small world Phenomena}{section.1.4}% 23
+\BOOKMARK [2][-]{subsection.1.4.3}{Power Law and Scale-free graphs}{section.1.4}% 24
+\BOOKMARK [2][-]{subsection.1.4.4}{Describing the MCM network}{section.1.4}% 25
+\BOOKMARK [1][-]{section.1.5}{Graph Construction methodology }{chapter.1}% 26
+\BOOKMARK [2][-]{subsubsection.1.5.0.1}{Concentration time series}{section.1.5}% 27
+\BOOKMARK [3][-]{subsubsection.1.5.0.2}{Rate of Production and Loss}{subsubsection.1.5.0.1}% 28
+\BOOKMARK [3][-]{subsubsection.1.5.0.3}{The Jacobian}{subsubsection.1.5.0.1}% 29
+\BOOKMARK [2][-]{subsection.1.5.1}{Graph construction methodology for simulated data}{section.1.5}% 30
+\BOOKMARK [2][-]{subsection.1.5.2}{A practical Example using the MCM}{section.1.5}% 31
+\BOOKMARK [1][-]{section.1.6}{Case study}{chapter.1}% 32
+\BOOKMARK [2][-]{subsection.1.6.1}{Establishing Initial Conditions from observational data}{section.1.6}% 33
+\BOOKMARK [3][-]{subsubsection.1.6.1.1}{The origin of Artificial Neural Networks}{subsection.1.6.1}% 34
+\BOOKMARK [3][-]{subsubsection.1.6.1.2}{The Multi-Layer Perceptron}{subsection.1.6.1}% 35
+\BOOKMARK [3][-]{subsubsection.1.6.1.3}{Applying the MLPRegressor to Observational data}{subsection.1.6.1}% 36
+\BOOKMARK [3][-]{subsubsection.1.6.1.4}{Model Initialisation Procedure}{subsection.1.6.1}% 37
+\BOOKMARK [3][-]{subsubsection.1.6.1.5}{Extracting the required results}{subsection.1.6.1}% 38
+\BOOKMARK [3][-]{subsubsection.1.6.1.6}{Unifying the results}{subsection.1.6.1}% 39
+\BOOKMARK [2][-]{subsection.1.6.2}{Comparing Results}{section.1.6}% 40
+\BOOKMARK [3][-]{subsubsection.1.6.2.1}{What is TF-IDF}{subsection.1.6.2}% 41
+\BOOKMARK [3][-]{subsubsection.1.6.2.2}{Metric Comparison}{subsection.1.6.2}% 42
+\BOOKMARK [3][-]{subsubsection.1.6.2.3}{Individual Categories}{subsection.1.6.2}% 43
+\BOOKMARK [2][-]{subsection.1.6.3}{Senario Analysis}{section.1.6}% 44
+\BOOKMARK [2][-]{subsection.1.6.4}{Providing an overall overview using the TF-IDF and the metric sum.}{section.1.6}% 45
+\BOOKMARK [1][-]{section.1.7}{Calculating production sensitivity using personalised page rank.}{chapter.1}% 46
+\BOOKMARK [2][-]{subsection.1.7.1}{Testing}{section.1.7}% 47
+\BOOKMARK [2][-]{subsection.1.7.2}{Source Analysis using the Jacobian}{section.1.7}% 48
+\BOOKMARK [2][-]{subsection.1.7.3}{Verdict}{section.1.7}% 49
+\BOOKMARK [1][-]{section.1.8}{Conclusions}{chapter.1}% 50
+\BOOKMARK [0][-]{section*.50}{Appendices}{}% 51
+\BOOKMARK [0][-]{Appendix.a.A}{Supplementary Mathematics}{}% 52
+\BOOKMARK [1][-]{section.a.A.1}{PCA}{Appendix.a.A}% 53
+\BOOKMARK [2][-]{subsection.a.A.1.1}{Statistics}{section.a.A.1}% 54
+\BOOKMARK [2][-]{subsection.a.A.1.2}{Matrices and Eigenvectors}{section.a.A.1}% 55
+\BOOKMARK [1][-]{section.a.A.2}{t-SNE}{Appendix.a.A}% 56
+\BOOKMARK [2][-]{subsection.a.A.2.1}{Student T distribution}{section.a.A.2}% 57
+\BOOKMARK [3][-]{subsubsection.a.A.2.1.1}{T-Score}{subsection.a.A.2.1}% 58
+\BOOKMARK [2][-]{subsection.a.A.2.2}{Kullback-Leiber \(KL\) divergence}{section.a.A.2}% 59
+\BOOKMARK [0][-]{Appendix.a.B}{Neural Network Activation Functions}{}% 60
+\BOOKMARK [1][-]{section.a.B.1}{Binary Step}{Appendix.a.B}% 61
+\BOOKMARK [1][-]{section.a.B.2}{Linear}{Appendix.a.B}% 62
+\BOOKMARK [1][-]{section.a.B.3}{Sigmoid / Logistic}{Appendix.a.B}% 63
+\BOOKMARK [1][-]{section.a.B.4}{Hyperbolic Tangent}{Appendix.a.B}% 64
+\BOOKMARK [1][-]{section.a.B.5}{Rectified Linear Unit}{Appendix.a.B}% 65
+\BOOKMARK [1][-]{section.a.B.6}{Swish}{Appendix.a.B}% 66
+\BOOKMARK [1][-]{section.a.B.7}{A note on backpropagation}{Appendix.a.B}% 67
+\BOOKMARK [0][-]{Appendix.a.C}{Graphs and Networks}{}% 68
+\BOOKMARK [1][-]{section.a.C.1}{Heavily Labeled Citation Graph}{Appendix.a.C}% 69
+\BOOKMARK [1][-]{section.a.C.2}{Centrality on the UK rail network.}{Appendix.a.C}% 70
+\BOOKMARK [0][-]{Appendix.a.D}{Miscellaneous}{}% 71
+\BOOKMARK [1][-]{section.a.D.1}{Correspondance with Mike Jenkin}{Appendix.a.D}% 72
+\BOOKMARK [1][-]{section.a.D.2}{Functional Groups}{Appendix.a.D}% 73
+\BOOKMARK [0][-]{Appendix.a.E}{Chapter Keywords}{}% 74
+\BOOKMARK [1][-]{section.a.E.1}{ Introduction }{Appendix.a.E}% 75
+\BOOKMARK [1][-]{section.a.E.2}{ The Importance of Visualisation: From Social Networks to the Atmosphere }{Appendix.a.E}% 76
+\BOOKMARK [1][-]{section.a.E.3}{Applying Visual Analytics to the Atmospheric Chemistry Network}{Appendix.a.E}% 77
+\BOOKMARK [1][-]{section.a.E.4}{ Chemical model diagnostics using graph theory and metrics. }{Appendix.a.E}% 78
+\BOOKMARK [1][-]{section.a.E.5}{ Computational Learning of Species Structure using Visualisation and Vector Clustering}{Appendix.a.E}% 79
