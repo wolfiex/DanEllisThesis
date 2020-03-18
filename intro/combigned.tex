@@ -256,9 +256,13 @@ Scientific understanding is the product of many cycles of trial and error, \auto
     \label{fig:devcycle}
 \end{figure}
 
-ESM
- A series of box models.
  \subsection{The Dynamically Simple Model of Atmospheric Chemical Complexity}
+
+The Dynamically Simple Model of Atmospheric Chemical Complexity (DSMACC) is a simple  box model designed for the comparison of a range of gas-phase chemical schemes under different conditions \citep{dsmacc}.
+The model uses the  Kinetic PreProcessor (KPP) to convert a chemical mechanim into the set of ordinary differential equations which can be solved using a suite of FORTRAN numberical integrators it provides \citep{kpp}. The Tropospheric and Ultraviolet (TUV) \citep{tuv} is used to calcualte the strenghts of different photolysis reactions for the mechanism. These are calculated at the start of a simulation and then predicted using cubic splines \citep{dsmaccgit}. This is the model setup that will be used to propagate the chemistry throughout this thesis. 
+
+
+
 
 
  % Early simulations, such
