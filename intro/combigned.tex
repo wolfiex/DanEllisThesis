@@ -12,7 +12,7 @@ It is with that I begin this thesis with the beginning of the planet, its atmosp
 \subsection{Formation of the Atmosphere}
  ~4.5 billion years ago the Earth began as a disk of dust and gas orbiting our sun. The movement of such gasses produces a resonant drag instability, which causes them to clump together \citep{drag,planet}. As these `clumps' become denser, other forces come in to play and further increase their size. These eventually produced the hot mix of gas and solid, which was to become Earth.
  As the Earth cooled, the volatile components of the primordial gas cloud surrounding it begins to form an atmosphere. %Volcanic eruptions (outgassing) from the Earth's surface
-At this point, oxygen was not only absent in the atmopshere but also had many sinks within the Earths anoxidised crust. It was not until oxygenic photosynthesis (\citep{oxygenicphotosynthesis}) that the concentrations of oxygen in the atmosphere started to increase. Eventually the development of multicellular cyanobacteria\footnote{The phylum of photosynthetic prokaryotic (cells not containing a distinct nucleus) bacteria - e.g. blue-green algae} resulted in biologically induced oxygen accumulating in the atmosphere, \citep{multicellular}. This led to the most significant climate event in the history of the planet: the Great Oxygenation Event (2.5 billion years ago), \citep{oxidation}. This increase in oxygen allowed organisms to become larger and more active, eventually resulting in the human race.
+At this point, oxygen was not only absent in the atmosphere but also had many sinks within the Earths anoxidised crust. It was not until oxygenic photosynthesis (\citep{oxygenicphotosynthesis}) that the concentrations of oxygen in the atmosphere started to increase. Eventually the development of multicellular cyanobacteria\footnote{The phylum of photosynthetic prokaryotic (cells not containing a distinct nucleus) bacteria - e.g. blue-green algae} resulted in biologically induced oxygen accumulating in the atmosphere, \citep{multicellular}. This led to the most significant climate event in the history of the planet: the Great Oxygenation Event (2.5 billion years ago), \citep{oxidation}. This increase in oxygen allowed organisms to become larger and more active, eventually resulting in the human race.
 
 
 \subsection{Rise of the Homo Sapiens (`Wise Man')}
@@ -42,21 +42,20 @@ The atmosphere consists mainly of Nitrogen and Oxygen (forming 99\% of its total
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{who.png}
-  \caption{\textbf{Reported eaths attributed to air pollution by country (2016)}A cartogram cloropleth showing the number of premature deaths attributed to ambient air pollution per 100,000. The colour bar range is from 9 (light blue) to 170 (navy) people.  Data Source:\citep{whodata}}
+  \caption{\textbf{Reported eaths attributed to air pollution by country (2016)}A cartogram (and cloropleth) showing the number of premature deaths attributed to ambient air pollution per 100,000. The colour bar range is from 9 in canada (light blue) to 170 in eastern Europe (navy) people.  Data Source:\citep{whodata}}
   \label{fig:who}
 \end{figure}
 
 % \section{composition of the atmosphere}
 %
-\subsection{Protective barrier - the ozone hole}\label{sec:ozonerole}
+\subsection{Stratospheric Ozone - the Protective barrier}\label{sec:ozonerole}
 Ozone plays a vital role in the stratosphere. This was seen in the 1980s where the use of Cloro Floro Carbon (CFC) aerosols resulted in the thinning of the atmospheric ozone \citep{ozonehole}\footnote{Here the chlorine attacks the double bond and `steals' an oxygen atom from the \ch{O3} molecule.}. This resulted in an increase in UV-B radiation, and in consequence skin cancers, immune suppression and disorders of the eye \citep{o3damage}. However, since their ban in the Montreal Protocol, the atmospheric hole in the ozone has recently recovered to levels similar to its discovery 35 years ago \citep{ozonerepair}.
 
 
 \subsection{Changing Climate} \label{sec:climatechange}
 Over the last 30 years, a large body of scientists has established that humans have a warming effect on the planet \citep{IPCC1990Science,IPCC1995Science,IPCC2007Science,IPCC2013Science,ipbes}. Here it has been shown that changes in temperature can lead to the melting of glaciers, rise of sea levels, extreme weather events and the extinction of many species.
 
-
-\citep{failparis}
+The impact of this resulted in the nations of the world to develop a `legally binding' agreement to combat climate change (the Paris agreement) \citep{paris1,paris}. However, a recent analysis on the current state of the world outlines that the failure to set, implement and without adequate targets and procedures within the last decade mean that we now need to do `four times the work, or [do it in] one-third of the time' \citep{failparis}.
 
 
 
@@ -186,21 +185,21 @@ Its loss depends on the NO mixing ratio, where if NO $>10$ pptv, \ch{HO2} will r
 %%%%%%%%%%%%%%%%%%%%
 
 \section{Modelling the Earth}
-In the previous section, the air quality and its detrimental effects on human health were seen to influence policy for cities and industry. Koyoto, Islands suing power stations.
+In the previous section, the air quality and its detrimental effects on human health were seen to influence policy for cities and industry.
 For a policy to be passed there needs to not only evidence of the problem but a strong suggestion that any proposed changes will have the desired effect. As it is not possible to perform experiments on complex, and often unknown, chemistry at every location on the planet, we are forced to rely on the numerical simulation of the Earth System, and the constituent parts within it.
 \subsection{Earth System Models (ESM)}
   ESMs are models capable of predict past or future interactions of the planetary system. They represent our foremost understanding of the complex interplay between land-surface (geosphere), ocean (hydrosphere), ice (cryosphere) and the air (atmosphere), and act as a surrogate to manual experimentation -  which is just not possible on the global scale.
-ESMs can be split into their individual parts. One example of this is the Chemistry section of the Goddard Earth Observing System (an integrated ESM and data assimilation model hosted by NASA's Goddard space flight centre \citep{geosgit}) - GEOS Chem. GEOS-Chem is a global 3D model of atmospheric chemistry which is driven by the meteorology provided by NASA \citep{geos}. Here the Earth is split up into cubic sphere cells longitudinally and latitudinally, as well as vertically (\autoref{fig:gcm})\footnote{This image is not from GEOS-Chem.}. Each one of these cells performs several perturbations of the chemistry within them before any long-lived species are transported, and the process is repeated. If extracted separately, a single one of these cells may be used to explore the sensitivity of different species for a range of input conditions. This is the bases of the atmospheric box model.
+ESMs can be split into individual parts. One example of this is the Chemistry section of the Goddard Earth Observing System (an integrated ESM and data assimilation model hosted by NASA's Goddard space flight centre \citep{geosgit}) - GEOS Chem. GEOS-Chem is a global 3D model of atmospheric chemistry which is driven by the meteorology provided by NASA \citep{geos}. Here the Earth is split up into cubic cells longitudinally, latitudinally, and vertically (\autoref{fig:gcm})\footnote{This image is not from GEOS-Chem.}. Each one of these cells performs several perturbations of the chemistry within them before any long-lived species are transported, and the process is repeated. If extracted separately, a single one of these cells may be used to explore the sensitivity of different species for a range of input conditions. This is the bases of the atmospheric box model.
 \begin{figure}
   \centering
   \includegraphics[width=0.6\textwidth]{gcm.jpg}
-  \caption{\textbf{A diagram showing the longitudinal, lateral and vertical decomposition of a 3D global model.} (NOT GeosChem.) Source: \citep{gcm}}
+  \caption{\textbf{A diagram showing the longitudinal, lateral and vertical decomposition of a 3D global model.} (Diagram not of GeosChem.) Source: \citep{gcm}}
   \label{fig:gcm}
 \end{figure}
 \section{The 0D Chemical Box Model}
 In exploring the sensitivities of individual species within a simulation, it is possible to use a zero-dimensional box model. This is, in essence, a single cell within the global structure which has been constrained in location and height (pressure). A box model allows for better in-depth analysis of the chemistry within a model, without any of the overhead of having to run it for the entire planet. Such studies make zero-dimensional models perfectly suited for studying the sensitivity of chemical schemes under a range of conditions, for example, \citep{dsmacc}.
 
-In general, a box model consists of two main parts - a mathematical representation of the reactions in the atmosphere and the rate they occur (this is known as a mechanism) and a method to propagate this chemistry forwards in time (the integrator). 
+In general, a box model consists of two main parts - a mathematical representation of the reactions in the atmosphere and the rate they occur (this is known as a mechanism); and a method to propagate this chemistry forwards in time (the integrator). 
 
 % 
 % It is then possible to take the many species, their rates or reaction and loss to produce a chemical mechanism detailing their properties in real life.
@@ -211,13 +210,15 @@ In general, a box model consists of two main parts - a mathematical representati
 Mechanisms are at the heart of every chemistry simulation. They are a mathematical representation of the possible reactions ( and the rates at which these may occur ) for every s
 
 
+\textbf{DFKJLKDSJFKLDJSKLJFKLDJSKLFJDSKLJFKJDKSLJFKLJSDKL}
+
 The atmosphere consists of thousands of species, with tens of thousands of reactions between them.
 These models represent real-world reactions
 In modelling these, we can describe their rate of production and loss concerning the species they react with.
 
 
 \subsection{Numerical integration}
-For example, it is possible to figure out how quickly each species in a reaction is changing if the reaction mechanism (the exact way it happens) and some simple data are known. This representation of how quickly the concentrations are changing is the same as a slope or derivative. Integration allows us to find the actual change over time and not just how quickly the change is happening. Fo r example, given the following reaction,
+It is possible to figure out how quickly each species in a reaction is changing if the reaction mechanism (the exact way it happens) and some simple data are known. This representation of how quickly the concentrations are changing is the same as a slope or derivative. Integration allows us to find the actual change over time and not just how quickly the change is happening. Fo r example, given the following reaction,
 In a mechanism, we are concerned with calculating how quickly a species changes within the chemical system. Taking the reaction of \ch{N2O5} (\autoref{eqn:numerical1}), we can write the rate of change for each species over time (\autoref{eqn:numerical2})\footnote{This is also known as the flux.}. In integrating this equation, we are able to calculate the actual change in concentration (\autoref{eqn:numerical3}) - this is the foundation of atmospheric models.
 \begin{equation}
 \ce{N2O5 ->    NO2} + \ce{NO3}
@@ -232,12 +233,25 @@ In a mechanism, we are concerned with calculating how quickly a species changes 
 \label{eqn:numerical3}
 \end{equation}
 \subsubsection{Non-Stiff Equations}
-Computational systems cannot integrate numbers analytically we rely on a series of computational algorithms. Since integration is the calculation of the area under a curve, the simplest of these
+Non-stiff ordinary differential equations are made up components which all evolve at similar timescales. They can easuly be solved by explicit (calculate the next step using the current time only) numerical methods which can be solved with the forward Euler\footnote{\textbf{Euler:}Evaluate gradient at the time point, move forward in time and repeat.}, Runge Kutta \footnote{\textbf{RK4:}The next value is determined by the present value combigned with the weighted avarage of 4 increments across an interval $h$.} or Verlet methods\footnote{\textbf{Verlet:}A central difference method to find the gradient using the avarage of a forwards and backwards timestep.} \citep{advnummeth,wild}.   
+
+
+% 
+% Computational systems cannot integrate numbers analytically we rely on a series of computational algorithms. Since integration is the calculation of the area under a curve, the simplest of these
 %https://www.ukca.ac.uk/images/b/b1/Solvers_for_web.pdf
 \subsubsection{Numerically stiff equations (atmospheric chemistry)}
-\autoref{fig:timescales} shows the lifetimes of species can range between x orders of magnitude. Similarly, the components for each reaction (differential equation) evolve on significantly different timescales. This makes the atmospheric chemical mechanism
+Unfortunately, chemical lifetimes within the atmosphere range several orders of magnitude (\autoref{fig:timescales}). This creates a numerically stiff system that requires the step size to be chosen based on the most rapid component, which can lead to inefficiency in the computation of the entire system. Solvers for stiff equations usually create and evaluate the Jacobian matrix (a matrix of second-order partial derivatives describing the effect species have on each other). 
+
+Standard solvers include Backward Differentiation Formulas (known as the `gear' method and implemented as the LSODE solver in \citep{kpp}),  implicit Runge Kutta and the Rosenbrock methods. Gear methods are multistep methods with high stability and have been applied to a range of atmospheric chemistry models \citep{gear, geos, fundamentals}. 
+The Rosenbrock method can be likened to a linearly-implicit Runge Kutta method which uses the Jacobian matrix directly within the integration formula (solved at each stage) to avoid solving for a non-linear system \citep{solvers}. This provides an efficient solver with modest accuracy (less than $10^{-5}$) which is more than suitable for use within atmospheric chemistry calculations \citep{solvers,rosenbrock}. 
+
+
 \subsection{The model development cycle}
 Scientific understanding is the product of many cycles of trial and error, \autoref{fig:devcycle}. In atmospheric chemistry, we start with a hypothesis or a question, e.g. will change X has a negative response on Y. We then construct a theoretical model to represent the chemistry within. This chemistry is updated to reflect the rates and reactions that have been recorded in laboratory/chamber experiments. This cycle is then repeated until the model, and real-world observations produce a comparable result.
+It is essential to point out that improving the predictive capabilities of a model are iterative tasks which both feedback and respond to changes in our understanding of atmospheric reactions. 
+
+
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{devcycle.png}
@@ -245,13 +259,10 @@ Scientific understanding is the product of many cycles of trial and error, \auto
     \label{fig:devcycle}
 \end{figure}
 
-ESM
- A series of box models.
  \subsection{The Dynamically Simple Model of Atmospheric Chemical Complexity}
 
- 
- The Dynamically Simple Model of Atmospheric Chemical Complexity (DSMACC) is a simple box model designed for the comparison of a range of gas-phase chemical schemes under different conditions \citep{dsmacc}.
- The model uses the  Kinetic PreProcessor (KPP) to convert a chemical mechanism into the set of ordinary differential equations which can be solved using a suite of FORTRAN numerical integrators it provides \citep{kpp}. The Tropospheric and Ultraviolet (TUV) model from \cite{tuv} is used to calculate the strengths of different photolysis reactions for the mechanism. These are determined at the start of a simulation and then predicted using cubic splines \citep{dsmaccgit}. This is the model setup that will be used to propagate the chemistry throughout this thesis. 
+Within this thesis, the Dynamically Simple Model of Atmospheric Chemical Complexity (DSMACC) shall be used to run model simulations. This a simple box model designed for the comparison of a range of gas-phase chemical schemes under different conditions \citep{dsmacc}.
+ The DSMACC model uses the Kinetic PreProcessor (KPP) to convert a chemical mechanism into the set of ordinary differential equations which can be solved using a suite of FORTRAN numerical integrators it provides \citep{kpp}. The Tropospheric and Ultraviolet (TUV) model from \cite{tuv} is used to calculate the strengths of different photolysis reactions for the mechanism. These are determined at the start of a simulation and then predicted using cubic splines \citep{dsmaccgit}. This is the model setup that will be used to propagate the chemistry forwards in time using the Rosebrock integrator. 
 
 
 
@@ -264,4 +275,5 @@ ESM
 \section{Thesis Layout}
 This thesis will explore a series of methods for describing and understanding the complex chemistry which may exist as part of an atmospheric chemistry mechanism. The mechanism used is a near-explicit representation of our foremost understanding of how gas-phase chemistry in the troposphere reacts - the Master Chemical Mechanism, \citep{mcm}.
 We begin by exploring the use of visualisation to convey complex scientific data (\autoref{ch1}). Next, we apply this to the representation of species in a mechanism and the relationships between them. It is found that the node-link style graph format is the most beneficial, the use of which is then explored further (\autoref{ch2}).
-However, in doing so, sizeable complex networks are shown to reach the limits of human cognition and visual representation. A series of mathematic metrics are used to leverage our understanding of the species in a chemical network using graph theory (\autoref{ch3}). The use of computation to aid in graph analysis is further extended when graph clustering methods are applied as a method to similar group species within a chemical network (\autoref{ch4}). Finally in a bid towards the use of neural graph networks (see future work, \autoref{sec:futurework}), a range of different chemical representations for machine learning are explored using a number of dimensionality reduction algorithms (\autoref{ch5}).
+However, in doing so, sizeable complex networks are shown to reach the limits of human cognition and visual representation. A series of mathematic metrics are used to leverage our understanding of the species in a chemical network using graph theory (\autoref{ch3}). The use of computation to aid in graph analysis is further extended when graph clustering methods are applied as a method to similar group species within a chemical network (\autoref{ch4}). Finally in a bid towards the use of neural graph networks (see future work, \autoref{sec:futurework}), a range of different chemical representations for machine learning are explored using several dimensionality reduction algorithms (\autoref{ch5}).
+

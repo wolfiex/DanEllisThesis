@@ -3406,6 +3406,17 @@ Interaction}},
    year = {2015}
 }
 
+@article{paris1,
+   author = {Phillips, Sara},
+   journal = {ABC News},
+   language = {en},
+   month = {December},
+   note = {\url{https://www.abc.net.au/news/2015-12-12/world-adopts-climate-deal-at-paris-talks/7023712}},
+   publisher = {Australian Broadcasting Corporation},
+   title = {{Cheers As World Adopts Historic Paris Climate Deal}},
+   year = {2015}
+}
+
 @inbook{pattern,
    address = {London},
    author = {Dixon, Dan},
@@ -4490,6 +4501,14 @@ Distributed Data}},
    year = {1990}
 }
 
+@misc{tuv,
+   author = {Br{\"a}uer, Peter},
+   institution = {Github},
+   note = {\url{https://github.com/pb866/TUV_DSMACC}},
+   title = {{Tuv 5.2X Dsmacc}},
+   year = {2020}
+}
+
 @article{tvg,
    author = {G. Kumar and M. Garland},
    doi = {10.1109/TVCG.2006.193},
@@ -4589,9 +4608,9 @@ Jeffrey},
 }
 
 @article{who,
-   author = {World Health Organization},
+   author = {WHO},
    note = {\url{https://www.who.int/airpollution/ambient/health-impacts/en/}},
-   title = {{Who | Ambient Air Pollution: Health Impacts}},
+   title = {{World Health Organization | Ambient Air Pollution: Health Impacts}},
    year = {2018}
 }
 
@@ -4600,6 +4619,13 @@ Jeffrey},
    note = {\url{https://www.who.int/airpollution/data/en/}},
    title = {{World Health Organization | Ambient And Household Air Pollution And Health}},
    year = {2016}
+}
+
+@article{wild,
+   author = {Oliver Wild},
+   note = {\url{https://www.ukca.ac.uk/images/b/b1/Solvers_for_web.pdf}},
+   title = {{Chemical Solvers - A Slide Deck From The Ukca Theory And Practice Workshop}},
+   year = {2015}
 }
 
 @book{wingedhorse,
