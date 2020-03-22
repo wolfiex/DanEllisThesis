@@ -1,0 +1,52 @@
+\gdef \the@ipfilectr {@-1}
+\contentsline {chapter}{\numberline {1} Visualisation and its use in understanding Complex Data }{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}communicatory practices of early humans}{4}{subsection.1.1.1}
+\contentsline {section}{\numberline {1.2}Introduction}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Visualisation Design}{6}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Storytelling}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Metaphor Selection}{7}{subsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.2.1}Nature-Inspired}{8}{subsubsection.1.3.2.1}
+\contentsline {subsubsection}{\numberline {1.3.2.2}Man-made}{8}{subsubsection.1.3.2.2}
+\contentsline {subsubsection}{\numberline {1.3.2.3}Composite}{9}{subsubsection.1.3.2.3}
+\contentsline {subsubsection}{\numberline {1.3.2.4}Domain Specific}{10}{subsubsection.1.3.2.4}
+\contentsline {section}{\numberline {1.4}Visualising Relationships}{13}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}The Dataset}{13}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}The sociograph}{14}{subsection.1.4.2}
+\contentsline {subsubsection}{\numberline {1.4.2.1}The Chord Diagram}{15}{subsubsection.1.4.2.1}
+\contentsline {subsubsection}{\numberline {1.4.2.2}Circular Edge Bundling}{16}{subsubsection.1.4.2.2}
+\contentsline {subsubsection}{\numberline {1.4.2.3}Direct representation of the relational matrix}{17}{subsubsection.1.4.2.3}
+\contentsline {subsubsection}{\numberline {1.4.2.4}Arc Diagrams}{18}{subsubsection.1.4.2.4}
+\contentsline {subsubsection}{\numberline {1.4.2.5}The traditional network graph}{23}{subsubsection.1.4.2.5}
+\contentsline {subsection}{\numberline {1.4.3}Summary}{24}{subsection.1.4.3}
+\gdef \the@ipfilectr {}
+\contentsline {chapter}{Appendices}{29}{section*.17}
+\contentsline {chapter}{\numberline {A}Supplementary Mathematics}{31}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}PCA}{31}{section.a.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Statistics}{31}{subsection.a.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Matrices and Eigenvectors}{32}{subsection.a.A.1.2}
+\contentsline {section}{\numberline {A.2}t-SNE}{33}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Student T distribution}{33}{subsection.a.A.2.1}
+\contentsline {subsubsection}{\numberline {A.2.1.1}T-Score}{33}{subsubsection.a.A.2.1.1}
+\contentsline {subsection}{\numberline {A.2.2}Kullback-Leiber (KL) divergence}{33}{subsection.a.A.2.2}
+\contentsline {chapter}{\numberline {B}Neural Network Activation Functions}{35}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Binary Step}{35}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Linear}{35}{section.a.B.2}
+\contentsline {section}{\numberline {B.3}Sigmoid / Logistic}{36}{section.a.B.3}
+\contentsline {section}{\numberline {B.4}Hyperbolic Tangent}{37}{section.a.B.4}
+\contentsline {section}{\numberline {B.5}Rectified Linear Unit}{37}{section.a.B.5}
+\contentsline {section}{\numberline {B.6}Swish}{38}{section.a.B.6}
+\contentsline {section}{\numberline {B.7}\textbf {A note on backpropagation}}{38}{section.a.B.7}
+\contentsline {chapter}{\numberline {C}Graphs and Networks}{39}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Heavily Labeled Citation Graph}{40}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Centrality on the UK rail network.}{41}{section.a.C.2}
+\contentsline {chapter}{\numberline {D}Miscellaneous}{43}{Appendix.a.D}
+\contentsline {section}{\numberline {D.1}Correspondance with Mike Jenkin}{43}{section.a.D.1}
+\contentsline {section}{\numberline {D.2}Functional Groups}{47}{section.a.D.2}
+\contentsline {chapter}{\numberline {E}Chapter Keywords}{49}{Appendix.a.E}
+\contentsline {section}{\numberline {E.1} Introduction }{49}{section.a.E.1}
+\contentsline {section}{\numberline {E.2} The Importance of Visualisation: From Social Networks to the Atmosphere }{50}{section.a.E.2}
+\contentsline {section}{\numberline {E.3}Applying Visual Analytics to the Atmospheric Chemistry Network}{50}{section.a.E.3}
+\contentsline {section}{\numberline {E.4} Chemical model diagnostics using graph theory and metrics. }{51}{section.a.E.4}
+\contentsline {section}{\numberline {E.5} Computational Learning of Species Structure using Visualisation and Vector Clustering}{51}{section.a.E.5}
+\contentsline {section}{\numberline {E.6} Conclusion }{52}{section.a.E.6}
