@@ -34,7 +34,7 @@ The increase in the ability to gather useful data has resulted in difficulty whe
 Numerical algorithms derived from the field of Graph Theory can be used to circumvent the need for individual graph analysis and provide us with information about the network. One such subset of numerical algorithms are regarded as "centrality metrics", and may be used to rank the role and importance (centrality) of a node \citep{squaretower}. In the following sub-section, the four most common centrality metrics are discussed and applied to the MCM citation network. 
 
 
-\subsection{Centrality metrics and academic publishing.}
+\subsection{Centrality Metrics And Academic Publishing.}
 
 
 One common application for graph analysis and visualisation is the representation and prediction of citation counts within academic journals \citep{cocite,google,naturecitation,netcoauthor}. Here network-visualisation techniques may be used to highlight the origins of a paper. For instance, \autoref{fig:naturecover} shows the multi-disciplinary research which underpins six prominent discoveries in the last 150 years. 
@@ -43,7 +43,7 @@ The next section looks at the four most common centrality metrics and explores t
 
 
 
-\subsection{The Master Chemical Mechanism (MCM)}\label{sec:metricmcm}
+\subsection{The Master Chemical Mechanism (Mcm)}\label{sec:metricmcm}
 
 The MCM, \citep{mcm}, is a near explicit representation of our foremost understanding of gas-phase tropospheric chemistry. The mechanism describes the oxidation of 143 primary emitted VOCs and the respective rates at which this occurs. It has been tested on over 300 chamber experiments and used as a benchmarking mechanism to assist the development of reduced mechanism, providing a useful means for the evaluation of air quality models \citep{defra1}.
 
@@ -68,7 +68,7 @@ To generate a dataset on papers related to the MCM. The academic search engine (
 In taking the top 1000 citations for each page, a network of 15744 papers and 30178 citations\footnote{Note: this had the potential of returning up to 1000,000 nodes} is created. This process made use of an edited version of the  \emph{etudier} Github repository, \citep{web}.
 
 
-\subsection{Visualising the data.}
+\subsection{Visualising The Data.}
 
 The initial visualisation of the dataset is accomplished through the use of THREE.js \citep{threejs}. This makes use of WebGL bindings and allows for the efficient viewing, querying and interacting of the data in 3 dimensions. This helped identify the temporal changes within the network by mapping a papers publication year to the $z$ direction, \autoref{fig:weball}, as discussed in \autoref{sec:filter3d}. 
 
@@ -107,7 +107,7 @@ The initial visualisation of the dataset is accomplished through the use of THRE
 \end{figure}
 
 
-\subsection{Filtering the data}\label{sec:filter3d}
+\subsection{Filtering The Data}\label{sec:filter3d}
 
 
 In the method used to web scrape data, there are several features which need to be corrected/removed. The reasons for this are discussed below.
@@ -167,13 +167,13 @@ Finally, the extracted network also contains many disconnected component subgrap
 
 
 
-\subsection{The Co-citation Network}\label{sec:cocitep}
+\subsection{The Co-Citation Network}\label{sec:cocitep}
 
 The document coupling techniques of co-citation was introduced in the 1970s as an alternative approach for quantifying the results within the science citation index \citep{cocite}. Rather than representing a graph using backpropagation (through the use of referencing and citation counts), a co-citation network introduces a link between papers if, and only if, they have been cited together. Although this loses the directionality of a graph, it allows us to show forward propagating trends between papers within the same field. 
 
 Applying the above method allows us to reduce the citation graph of 451 papers and 5402 edges to an undirected co-citation graph of 2758 edges - halving the number of original links between papers. 
 
-\subsection{The Co-authorship network}
+\subsection{The Co-Authorship Network}
 An alternative to exploring which papers which are cited together are to look at their authors. Here undirected links are drawn between authors on the same paper. This style of analysis was used to show that the number of papers per author, and the total number of authors per paper can vary between research fields, \citep{newmancoauthor}. In combining this with a series of network centrality metrics, \citep{coauthornew} revealed that it is possible to discern promising researchers from both iter and Intra disciplinary groups. 
 
 In building a co-authorship network for the MCM, we can identify authors who publish together\footnote{ Disclaimer: as mentioned earlier, not all authors for every paper were recorded by the web scraping algorithm} and highlight research groups who work with the MCM, \autoref{fig:authorgroup}. This shows how authors with a similar geographic location/institution are more likely to publish together. The largest cluster here falls under the MCM developer team, which resides between the University of Leeds and York. Next two German institutions which are heavily involved in the atmospheric chemistry field (Julich and Max Planck), followed by an assortment of Chinese authors, mainly centred around the Beijing or Hong Kong region. 
@@ -191,7 +191,7 @@ In building a co-authorship network for the MCM, we can identify authors who pub
 \textit{See \autoref{appendix:fullauthor} for a heavily labelled version of the graph above graph showing the co-author network on work relating the Master Chemical Mechanism. }
 
 
-\section{Metric analysis}\label{sec:graphcentrality}
+\section{Metric Analysis}\label{sec:graphcentrality}
 
 The co-author network (\autoref{fig:authorgroup}) can be used to demonstrate the functions of each centrality metric. This subsection will access the efficiency of graph centrality metrics in their ability to identify influential nodes within a network. 
 
@@ -279,7 +279,7 @@ Authors with a high betweenness in \autoref{fig:betauth} are seen to lie along t
 % 
 % \input{tables/betweenness_Citation.tex}
 % \input{tables/betweenness_Co-Citation.tex}
-\subsection{Spectral methods and matrix analysis}
+\subsection{Spectral Methods And Matrix Analysis}
 
 Graphs can often be represented in the form of relationship (adjacency) matrixes (ref Chapter 1). This allows us to apply the theory of linear maps, such as eigenvectors and values, to stochiometric data in matrix form. Such methods have been around since the 1950s, \citep{seeley}, but mainly became popular with the release of Larry Page's page-rank algorithm \citep{google} - the algorithm that began google. These methods, in addition to the HITS algorithm (\autoref{hits}), make use of a graphs native matrix representation to calculate node importance. Spectral algorithms can be broken down into four categories \citep{spectral}:
 
@@ -357,7 +357,7 @@ $M$&-&\textit{Normalised markov matrix}
 \end{center}
 
 
-\subsubsection{Solving the algebra}
+\subsubsection{Solving The Algebra}
 
 Once defined, the google matrix is solved by propagating a one's vector, $r$ of length $n$, where $n$ is the number of papers (or items) using Algorithm \ref{eqn:forwards}.
 
@@ -401,11 +401,11 @@ In this section, we have explored the use of centrality metrics to provide us wi
 % \input{tables/pagerank_Co-Citation.tex}
 
 
-\section{Classifying the Master Chemical Mechanism network}\label{sec:globalclass}
+\section{Classifying The Master Chemical Mechanism Network}\label{sec:globalclass}
 
 Having shown that graph metrics can help the roles of individual nodes within the network, I will now apply them to an atmospheric chemical system. Since computational efficiency and resources are often a limiting factor, many applications of the MCM only require a small subset of the entire mechanism. For this reason, it may be of interest to compare these against each other, in an attempt to classify the type of network the MCM chemistry falls under. In this section, we apply graph theory to the entire MCM network to determine its defining characteristics. This is achieved through the analysis of several hundred Monte Carlo selected subsets of the MCM. Each of these is a different combination of the primary emitted VOC's within the MCM v3.3.1.
 
-\subsection{Network density}\label{sec:netdensity}
+\subsection{Network Density}\label{sec:netdensity}
 Network density is the easiest metric to understand. Visually this can induce complexity and obscure aspects in a graph; mathematically, it can greatly increase the computation time for metrics or algorithms. By definition, we can define network density as a measure of how well connected a node is to every other node. Mathematically it is the ratio of edges against the total number of possible edges for a complete graph\footnote{A complete graph is one where every node is connected to every other node.} of the same size. In chemical terms, we can use this to determine the sparsity of the graph (which has applications on model integrator selection) and give us insights on the chemical structure.  In \autoref{fig:density}, higher numbers of species (nodes) results in an overall decrease in the node-edge ratio - its density. This suggests a modular or hierarchical structure, where new species directly react only with a set number of species, and not the entire mechanism. An explanation for this is that the addition of larger species introduce new branches within the chemistry, which then need to be oxidised before they are small enough to react with the species from a different branch.  Since these branches are somewhat isolated from the rest of the chemistry, they decrease the network density, even though their addition may increase the amount of chemistry that occurs within it.
 
 \begin{figure}[H]
@@ -415,7 +415,7 @@ Network density is the easiest metric to understand. Visually this can induce co
         \label{fig:density}
 \end{figure}
 
-\subsection{Small world Phenomena}
+\subsection{Small World Phenomena}
 Within the biological or social sciences the small world phenomenon, colloquially known as `six degrees of separation', is a common occurrence within network structure \citep{smallworld}. Such networks have a large number of localised clusters (cliques) all with a short path length between their elements \citep{sm2}. This makes it easy to reach all parts of a network with only a couple of hops/reactions. In the initial interactive explorations of graph visualisation, it was found that in selecting the reactions of a node, and consequently the reactions of all the nodes which react with them, very quickly a large proportion of the network was highlighted. This suggests that the network may follow the small world phenomena, especially as it is a sparse network, \autoref{sec:netdensity}.
 
 One of the possible methods for establishing the small world-ness of a graph by calculating the omega ($\omega$) coefficient \citep{networkx}:
@@ -439,7 +439,7 @@ In assessing the network structure of the MCM, a Monte Carlo (random) approach w
 
 
 
-\subsection{Power Law and Scale-free graphs}
+\subsection{Power Law And Scale-Free Graphs}
 In real-world applications, it is common to have a hierarchical structure. These are often seen in the increase of citation counts in academic papers \citep{scalefreepapers}, email threads \citep{scalefreeemail} and the world wide web \citep{neoj4}. Unlike random or small-world graphs, scale-free graphs take a hub-and-spoke structure (\autoref{fig:gstructure}), which follows a power-law distribution - that is that scaling probability $p(x) \propto x^{-\alpha}$, where $\alpha$ is a constant and known as the scaling parameter.
 
 \cite{scalefreebad} suggests that scale-free networks are rare, and often misdiagnosed with incorrect tests, or the misinterpretation of power-law features in a network. Similarly, \cite{plexp} suggests that even if the data distribution of a graph is well represented by the power-law distribution, in many cases a logarithmic or exponential distribution may have a better fit. 
@@ -466,18 +466,18 @@ Using the MCM subsets from \autoref{fig:smw}, \autoref{fig:ksd} shows that out o
         \label{fig:ksd}
 \end{figure}
 
-\subsection{Describing the MCM network}
+\subsection{Describing The Mcm Network}
 To conclude, the MCM network exhibits both small world and scale-free (power-law) characteristics. This agrees with previous knowledge about the apparent network structure (\autoref{ch2}). Here large primary emitted hydrocarbons produce branches of a hierarchical nature, as they are progressively broken down into smaller species. Since smaller species are then able to react with a much higher range of species, they then begin to form a tightly connected core, which exhibits many small-world features. 
 
 Having classified the MCM network type, the next section will look at how MCM based simulation results can be converted into the graph structure for more in-depth analysis, \autoref{sec:metriccase}.
 
 
-\section{Graph Construction methodology }\label{sec:chem}
+\section{Graph Construction Methodology }\label{sec:chem}
 
 Thus far, we have only applied a qualitative analysis of the relationships between species in a mechanism. Although this can educate us about the chemistry within a specific system, often a quantitative value for the rate of reaction between different species is required when undergoing scientific evaluation or policy advice. A chemical mechanism is placed within an atmospheric model, initial concentrations are supplied, and the chemistry is propagated forwards\footnote{Or backwards if the adjoint is used.} in time. Currently, there exist three primary model diagnostics which we may use to analyse the importance or role of a species from a simulation (model) output, concentration time-series, rates of loss and the Jacobian.
 
 
-\subsubsection{Concentration time series}
+\subsubsection{Concentration Time Series}
 
 The simplest of these methods look at the abundance of a  species at a specific point in the atmosphere (its concentration ad a specific time). As time moves forwards, chemicals within the atmosphere undergo a range of reactions which result in the making and breaking of bonds - thus the changing from one species to another. 
 
@@ -494,7 +494,7 @@ This then photolyses back to nitrogen oxide, releasing oxygen which may go on to
         \label{fig:concentration}
 \end{figure}
 
-\subsubsection{Rate of Production and Loss}
+\subsubsection{Rate Of Production And Loss}
 
 Analysing the concentration-time profiles allows the comparison of how a series of scenarios or runs change concerning their initial conditions and simulation length. Although these can tell us how, and how much, each species changes over time, it does not rank or quantifies the specific reactions to which this may be attributed. Rate of Production Analysis (ROPA)\footnote{and loss} provides a method for establishing the total contribution from each reaction by calculating the change of concentration (concerning time) for the produced species - the instantaneous reaction Flux.
 
@@ -564,7 +564,7 @@ These partial equations can then be aggregated for all reactions that contain th
 
 
 
-\subsection{Graph construction methodology for simulated data}\label{sec:graphconstruction}
+\subsection{Graph Construction Methodology For Simulated Data}\label{sec:graphconstruction}
 
 Having covered the general definition of a Jacobian matrix and how it is constructed, we can now apply it to the context of mechanism analysis and comprehension. The first analogy that needs to be made is that for the flux is the change of a species concentration in time (the first differential with respect to time, $d/dt$). If we consider the change in a species concentration as a `displacement', we can think of the flux as its `velocity'.
 Similarly, the Jacobian provides us with a description of how the individual flux of a species changes concerning the concentration (or displacement) or another species (the second-order partial differential). This is analogous to the acceleration of the object or particle we first displaced. In using the jacobian, we have constructed a relational matrix which outlines the effect a nominal change of a species has on all other species - a concept which is the foundation of the connectivity method (a mechanism reduction technique where all but essential and important species are removed) \citep{connectivity}.
@@ -573,13 +573,13 @@ Since the format of a jacobian is already in the form of a relational matrix, it
 
 
 
-\subsubsection*{ A note on using the Flux instead of the Jacobian }
+\subsubsection*{ A Note On Using The Flux Instead Of The Jacobian }
 \textit{
 Depending on the model setup or the users' capabilities, extraction of the jacobian matrix for each timestep may not be possible. In many cases, the reaction rates and concentration may still be available, allowing for the calculation of reaction fluxes throughout the simulation. If this is the case, the total flux can be calculated using the method described in  \autoref{eqn:ode}. From this, an edge-weighted by a reaction flux can be created from every reactant to each product. This generates a multi-graph (A graph with multiple edges between nodes) which may be simplified by taking the net flux value for all edges between two nodes. \\
 However, the potential for human/coding error, additional simplification and a non-explicit definition of the contribution of each species make the use of a Jacobian much more efficient in network generation from a chemical mechanism. 
 }
 
-\subsection{A practical Example using the MCM}\label{sec:jacpractical}
+\subsection{A Practical Example Using The Mcm}\label{sec:jacpractical}
 
 Taking a single equation from the MCM, we may calculate the jacobian relationships between species and convert them into a graph. A randomly chosen ethane reaction (\autoref{eqn:line}) from a simple mechanism was chosen. It must be noted that in general, it is unusual in the MCM that alkyl radicals react rapidly and extremely well with \ce{O2} to from stabilised peroxy radicals, \citep{mcmorigin}. In general, the reaction would consist of the following two steps:
  \ce{C2H6 + OH ->[\kappa_1] C2H5. + H2O}
@@ -754,15 +754,15 @@ As links in the graph are of the same units, we can simplify the equations by pr
 \end{figure}
 
 
-\section{Case study}\label{sec:metriccase}
+\section{Case Study}\label{sec:metriccase}
 In this section, the centrality metrics discussed in \autoref{sec:graphcentrality} are applied to a range of scenarios. These range from polluted urban environments such as London \citep{clfo} and Beijing \cite{aphh}, to marine and terrestrial forest- Cape Verde \cite{capeverde} and Borneo \citep{borneo}. We determine the main drivers for the chemistry and compare the species which are important across each simulation.  
 
-\subsection{Establishing Initial Conditions from observational data}
+\subsection{Establishing Initial Conditions From Observational Data}
 Within experimental data assimilation, it is not uncommon to face problems which result in unreliable or missing data. These can range from anything as little as measuring below the instrument sensitivity to powercuts and equipment damage/theft from the local wildlife. This can result in problems when analysing the results and combining them to create a simulation of the chemistry for that environment. 
 
 To overcome this, traditionally a combination of data filtration, smoothing and interpolation are required. Although it is possible to fit a diurnal profile, through iterative methods of comparison, and cubic splines, a simpler to implement the method (especially if more data will be added at a later date) is through the use of a Multi-Layer Perceptron Regressor model (MLPRegressor) as provided by the Python package Scikit-Learn, \citep{sklearn}. This is described below.
 
-\subsubsection{The origin of Artificial Neural Networks}
+\subsubsection{The Origin Of Artificial Neural Networks}
 The concept of a neural network originated within the field of neuroscience. In biological neurons, signals are sent through the use of electrical impulses using their synapses. When a sufficient number of signals are received within a short timeframe, a neurone will respond, often firing a range of its signals. Using this as a foundation, \cite{pitts} presented a computational model of the biological neuron - the artificial neuron. This has a series of binary inputs and produces a single binary output. This idea was later improved with the invention of the perceptron - a linear classifier which classifies categories by separating them with a straight line. Invented by \cite{perceptron}, this was popularised as a device representative of a modern-day shallow neural network - \citep{perceptronmanual}, \autoref{fig:perceptron}. Unlike the artificial neuron, however, the perceptron can take non-binary (numerical) inputs of an associated weight which allows for the computation of simple linear binary classification. Much like Logistic regression, the perceptron produces a positive or negative classification based on a certain threshold\footnote{It is worth noting that while a Logistic Regression classifier can output a class probability, the use of a hard threshold means that this is not done within the perceptron algorithm \citep{handsonml}}. 
 
 
@@ -794,7 +794,7 @@ This is done through the use of a `training dataset' - a set of input-output pai
         \label{fig:layercortex}
 \end{figure}
 
-\subsubsection{Applying the MLPRegressor to Observational data}
+\subsubsection{Applying The Mlpregressor To Observational Data}
 In the application of any type of machine aided algorithms, it is important to evaluate the results provided. In this section, the results of 12 years of data collected as part of the [CAPE VERDE CAMPAIGN] are shown (these contain measurements spanning the entirety of 12 years, which produce the clearest tests for the algorithm). A MLPRegressor of 10 hidden layers, and a hyperbolic tan (tanh) activation function is used \autoref{sec:appendix:tanh}. Additionally, the limited-memory Broyden–Fletcher–Goldfarb–Shanno (l-BFGS) solver (a quasi-newton method which minimises the inverse of the Hessian matrix\footnote{ The hessian is a square matrix of second-order partial derivatives of a scalar-valued function/field describing the local curvature of a function (of many variables).} to steer through space and obtain a solution) and an adaptive learning rate\footnote{Each time the model improvement fails to decrease the learning loss, the learning rate is reduced by 1/5. This means smaller jumps are made towards the curve peak. } is used. 
 
 The input of the regressor is in the form of a month and an hour, to represent each measurement. This allows it to find not only daily trends but also seasonal trends within the data. Once trained, the regressor is then used to predict a diurnal profile for each month based on the observational data provided. For simplicity $\log_{10}$ values of the concentrations obtained have been used. The predicted MLPRegressor line is compared to a transparent scatterplot for all the results. In addition to this, a boxplot showing the Inter Quartile Range (The range between the 25th and 75th percentile), median and mean (green line) plotted alongside to evaluate the predictor output. In this study, we only take the values for the month of June (or closest available depending on the dataset). 
@@ -840,7 +840,7 @@ In general observational measurements are not able to detect all the species pre
 
 \textit{NOTE: It should be noted that some of the concentration plots may appear to lose their diurnal dependability. This may be attributed to the changing order of magnitude of the concentrations, and that the species are still responding as expected. }
 
-\subsubsection{Extracting the required results}
+\subsubsection{Extracting The Required Results}
 Model diagnostics such as concentration and the net flux passing through a species may be extracted directly from the DSMACC box model. These provide the baseline comparison and can be directly compared to the graph metrics. Species concentration tells us the abundance of different species, and the net-flux tells us how fast this is changing in time. 
 
 As some species may have a fast inwards and outwards flux (low net-flux), the absolute flux is also included. Finally, the sensitivity of each species for other species is also extracted (the jacobian matrix). This serves to not only generate the graph used to represent the chemistry, (\autoref{sec:graphconstruction}) but also to identify the overall influence a species has on others in the network. This can be calculated by taking the net sum of the influence a species has on every other from the Jacobian. This is analogous to calculating the outdegree of a node in the jacobian network. 
@@ -903,7 +903,7 @@ As some species may have a fast inwards and outwards flux (low net-flux), the ab
 
 
 
-\subsubsection{Unifying the results}
+\subsubsection{Unifying The Results}
 Each metric provides a different range in which it ranks the importance of a node. All results are scaled to the range \{0,1\}, where one is the highest. Entries, where the results span several orders of magnitude (e.g. concentration, flux, influence), are flattened using the $\log_{10}$ scale before being normalised. 
 
 
@@ -912,7 +912,7 @@ Each metric provides a different range in which it ranks the importance of a nod
 This subsection juxtaposes the use of traditional model diagnostic methods against a selection of graph metrics. As there are several thousand species within each simulation run, the keyword extraction algorithm Term Frequency - Inverse Document Frequency (TF-IDF), is used to identify the top most prominent species for each metric (traditional and graph). From this, the ten highest-ranking species from each category are collated into a single diagram for comparison. 
 
 
-\subsubsection{What is TF-IDF}
+\subsubsection{What Is Tf-Idf}
 TF-IDF is a numerical statistic used in text natural language processing and text mining. It is designed to identify the importance of a word concerning its context. 
 
 It provides a value for the frequency a word appears within a document, offset by the number of times it appears in other documents within the corpus - It is for this reason that 83\% of text recommender systems in digital libraries use TF-IDF, \citep{tf83}. 
@@ -1117,12 +1117,12 @@ Similar to London, the fast photochemical tracers are identified, although some 
 
 
   
-\subsubsection*{Ability to match traditional metrics}
+\subsubsection*{Ability To Match Traditional Metrics}
 All graph construction
 Colours - all purple, suggests a general agreement
 photochemical tracers
 
-\subsection{Providing an overall overview using the TF-IDF and the metric sum.}
+\subsection{Providing An Overall Overview Using The Tf-Idf And The Metric Sum.}
 In the previous section, it was shown that centrality metrics can be used to complement the use of traditional metrics in the analysis of the chemical network. As each metric represents a different aspect of importance, should a single ranking value for a node be required, it is possible to take the average sum of all three metric values. Looking at \multiref{fig:heatcv}{fig:heatbj} it is possible to see similar trends in colour gradient between the purples of the traditional metrics of flux and concentration with the total metric sum (the blue column). This suggests that it is possible to compare each scenario with the use of the metric sum. 
 
 In selecting the ten highest-ranking species from the mean centrality metric table for each simulation, \autoref{tab:groupcomp} can be created. Unlike the previous method, we are now looking at species which are important across all metrics in a simulation. For Borneo species produced from Heptane, Hexane, Isoprene and Limonene are seen as important. Cape Verde, similar to before, has a selection of Benzine related products such as Phenolic and Catecholic compounds. Beijing consists mainly of Quinones and Dialdehydes which are both derivatives of Benzene. London again has Benzine related compounds, mixed with the fast photochemical indicators, which were also ranked highly in \autoref{fig:heatl}. Looking at the highest-ranking sum (NaN-mean), it is seen that isoprene, hept/hexane and glyoxal products highlighted as the most consistently important across all four simulations. 
@@ -1142,7 +1142,7 @@ In selecting the ten highest-ranking species from the mean centrality metric tab
 
 
 
-\section{Calculating production sensitivity using personalised page rank.}
+\section{Calculating Production Sensitivity Using Personalised Page Rank.}
 
 In \label{sec:pagerank} the results of the PageRank algorithm was obtained by solving for the eigenvalues and vectors of the google matrix. It was also mentioned that an equivalent method to get a result may be obtained by propagating the one's vector (a 1D vector of unity) in small increments (Equation \autoref{eqn:forwards}). This works much like the integrator within a chemical box model, except rather than updating the species concentration with each time step, we move information between each node. 
 
@@ -1177,7 +1177,7 @@ Using this analogy it, therefore, follows that should we reverse the direction o
 
 
 
-\subsection{Source Analysis with PageRank}
+\subsection{Source Analysis With Pagerank}
 As with all scientific processes, it is important to first test the algorithm on a small, comprehensible example. To do this we start with the creation of \ch{ch2oo} within the Borneo mechanism. This is a direct product of isoprene. In tracing back all the species precursors the mechanism for its creation can be described as: 
 
 \begin{equation}
@@ -1271,7 +1271,7 @@ C527NO3   & -9.990000e-07 \\
 \label{tab:ch2oo}
 \end{table} 
 
-\subsection{Source Analysis using the Jacobian}
+\subsection{Source Analysis Using The Jacobian}
 
 
 A bit about the maths, and procedure. 
