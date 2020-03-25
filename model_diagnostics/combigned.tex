@@ -43,7 +43,7 @@ The next section looks at the four most common centrality metrics and explores t
 
 
 
-\subsection{The Master Chemical Mechanism (Mcm)}\label{sec:metricmcm}
+\subsection{The Master Chemical Mechanism (MCM)}\label{sec:metricmcm}
 
 The MCM, \citep{mcm}, is a near explicit representation of our foremost understanding of gas-phase tropospheric chemistry. The mechanism describes the oxidation of 143 primary emitted VOCs and the respective rates at which this occurs. It has been tested on over 300 chamber experiments and used as a benchmarking mechanism to assist the development of reduced mechanism, providing a useful means for the evaluation of air quality models \citep{defra1}.
 
@@ -467,7 +467,7 @@ Using the MCM subsets from \autoref{fig:smw}, \autoref{fig:ksd} shows that out o
         \label{fig:ksd}
 \end{figure}
 
-\subsection{Describing The Mcm Network}
+\subsection{Describing The MCM Network}
 To conclude, the MCM network exhibits both small world and scale-free (power-law) characteristics. This agrees with previous knowledge about the apparent network structure (\autoref{ch2}). Here large primary emitted hydrocarbons produce branches of a hierarchical nature, as they are progressively broken down into smaller species. Since smaller species are then able to react with a much higher range of species, they then begin to form a tightly connected core, which exhibits many small-world features.
 
 Having classified the MCM network type, the next section will look at how MCM based simulation results can be converted into the graph structure for a more in-depth analysis, \autoref{sec:metriccase}.
@@ -580,7 +580,7 @@ Depending on the model setup or the users' capabilities, extraction of the jacob
 However, the potential for human/coding error, additional simplification and a non-explicit definition of the contribution of each species make the use of a Jacobian much more efficient in network generation from a chemical mechanism.
 }
 
-\subsection{A Practical Example Using The Mcm}\label{sec:jacpractical}
+\subsection{A Practical Example Using The MCM}\label{sec:jacpractical}
 
 Taking a single equation from the MCM, we may calculate the jacobian relationships between species and convert them into a graph. A randomly chosen ethane reaction (\autoref{eqn:line}) from a simple mechanism was chosen. It must be noted that in general, it is unusual in the MCM that alkyl radicals react rapidly and extremely well with \ce{O2} to from stabilised peroxy radicals, \citep{mcmorigin}. In general, the reaction would consist of the following two steps:
  \ce{C2H6 + OH ->[\kappa_1] C2H5. + H2O}
@@ -1238,8 +1238,7 @@ NAPINBO   &  -1840.391917\\
 \ch{NAPINBO2}  &     -0.037366\\
 \bottomrule
 \end{tabular}
-\caption{The net flux of the three species: NAPINBOOH, NAPINBO, \ch{NAPINBO2},\\ taken from a simulation of Borneo at
-2020-06-24  12:09:56 }
+\caption{The net flux of the three species: NAPINBOOH, NAPINBO, \ch{NAPINBO2},\\ taken from a simulation of Borneo at 2020-06-24  12:09:56 }
 \label{tab:nc101vdot}
 \end{table}
 
@@ -1322,8 +1321,7 @@ $J_{precursor -> NC101CO}$ & Value \\
 \ce{NAPINBOOH -> NC101CO}  &      0.000001 \\
 \bottomrule
 \end{tabular}
-\caption{The influence on \ch{NC101CO} from other species,\\ taken from a simulation of Borneo at
-2020-06-24  12:09:56 }
+\caption{The influence on \ch{NC101CO} from other species,\\ taken from a simulation of Borneo at 2020-06-24  12:09:56 }
 \label{tab:nc101jac}
 \end{table}
 
@@ -1337,7 +1335,7 @@ In assessing the source of a species production, we can use the Jacobian matrix,
 
 \begin{figure}[H]
      \centering
-     \includegraphics[width=\textwidth]{figures_c3/ch2_distance.pdf}
+     \includegraphics[width=.7\textwidth]{figures_c3/ch2_distance.pdf}
         \caption{\textbf{Showing total the influence from each species on HCHO for a sample MCM subset of Butane.}  }
         \label{fig:backtrace}
 \end{figure}
