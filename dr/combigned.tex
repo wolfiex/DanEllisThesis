@@ -292,7 +292,7 @@ We can now sort the eigenvector columns by influence using their eigenvalues—t
 
 
 
-\subsection{T-Distributed Stochastic Neighbor Embedding (T-Sne)}\label{sec:overcrowd}
+\subsection{T-Distributed Stochastic Neighbor Embedding (t-SNE)}\label{sec:overcrowd}
 
 t-SNE is an algorithm designed with visualisation in mind \citep{tsne}. Rather than representing the data through a series of linear transformations, t-SNE uses local relationships to create a low-dimensional mapping, much in the same way as a fully connected force graph, \autoref{fig:tsneforcegraph}. This allows the ability to capture non-linear structures in the data which cannot be accomplished through linear mapping methods (e.g. PCA).
 
@@ -325,7 +325,7 @@ and is described in \autoref{sec:mathtsne}.The main reason t-SNE produces good r
 
 
 
-\subsubsection{Mathematical Explanation Of T-Sne}\label{sec:mathtsne}
+\subsubsection{Mathematical Explanation Of t-SNE}\label{sec:mathtsne}
 %https://mlexplained.com/2018/09/14/paper-dissected-visualizing-data-using-t-sne-explained/
 
 %
@@ -361,7 +361,7 @@ The optimisation of this equation is achieved through the use of \emph{gradient 
 
 
 
-\subsection{Pca Vs T-Sne, A Quick Comparison.}
+\subsection{Pca Vs t-SNE, A Quick Comparison.}
 
 PCA has been around for much longer than t-SNE, and its uses are well established within the scientific community - an example of this would be the use of sensitivity analysis within mechanism reduction \citep{kinetics}. It is fast, simple and easy to use and very intuitive. The PCA algorithm works by creating a lower-dimensional embedding which best preserves the overall variance of the dataset. Clusters created from the algorithm are grouped in ways, such that they retain the highest variance of the data.
 

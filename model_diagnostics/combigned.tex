@@ -904,7 +904,7 @@ Each metric provides a different range in which it ranks the importance of a nod
 This subsection juxtaposes the use of traditional model diagnostic methods against a selection of graph metrics. As there are several thousand species within each simulation run, the keyword extraction algorithm Term Frequency - Inverse Document Frequency (TF-IDF), is used to identify the top most prominent species for each metric (traditional and graph). From this, the ten highest-ranking species from each category are collated into a single diagram for comparison.
 
 
-\subsubsection{What Is Tf-Idf}
+\subsubsection{What Is TF-IDF}
 TF-IDF is a numerical statistic used in text natural language processing and text mining. It is designed to identify the importance of a word concerning its context.
 
 It provides a value for the frequency a word appears within a document, offset by the number of times it appears in other documents within the corpus - It is for this reason that 83\% of text recommender systems in digital libraries use TF-IDF, \citep{tf83}.
@@ -1112,7 +1112,7 @@ Similar to London, the fast photochemical tracers are identified, although some 
 % Colours - all purple, suggests a general agreement
 % photochemical tracers
 
-\subsection{Providing An Overall Overview Using The Tf-Idf And The Metric Sum.}
+\subsection{Providing An Overall Overview Using The TF-IDF And The Metric Sum.}
 In the previous section, it was shown that centrality metrics can be used to complement the use of traditional metrics in the analysis of the chemical network. As each metric represents a different aspect of importance, should a single ranking value for a node be required, it is possible to take the average sum of all three metric values. Looking at \multiref{fig:heatcv}{fig:heatbj} it is possible to see similar trends in colour gradient between the purples of the traditional metrics of flux and concentration with the total metric sum (the blue column). This suggests that it is possible to compare each scenario with the use of the metric sum.
 
 In selecting the ten highest-ranking species from the mean centrality metric table for each simulation, \autoref{tab:groupcomp} can be created. Unlike the previous method, we are now looking at species which are essential across all metrics in a simulation.
