@@ -1,0 +1,345 @@
+\RequirePackage{fix-cm}
+\documentclass[twoside,openleft,reqno,a4paper,final]{book}
+%%% Remove the next two lines if you want the figures at their place
+%\usepackage[figuresonly,nolists,nomarkers]{endfloat}
+%\renewcommand{\processdelayedfloats}{}
+
+\usepackage{soul}%strikeout \st
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[sectionbib]{natbib}
+\usepackage[toc,page]{appendix}
+\usepackage[svgnames]{xcolor}
+\usepackage{chapterbib}
+\usepackage[version=4]{mhchem}
+\newcommand{\size}[2]{{\fontsize{#1}{0}\selectfont#2}}
+%\usepackage{verbatim}
+
+
+\usepackage{hyperref,booktabs,algpseudocode,algorithm,booktabs,titlesec,setspace,relsize,import}
+\usepackage{amsmath,graphicx,float,subcaption}
+\usepackage[bindingoffset=25mm, left=15mm, right=15mm,top=30mm, bottom=20mm]{geometry}
+\usepackage[space=true]{grffile}
+\usepackage{fancyhdr,booktabs,algpseudocode,algorithm,tikz}
+\usepackage{pdflscape}
+\usepackage{adjustbox}
+\usepackage{afterpage}
+\usepackage{chemfig}
+
+
+%In the preamble H is a hidden column type
+\usepackage{array}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+\newcommand{\chapterbib}{
+\newpage
+\bibliographystyle{apalike}
+\bibliography{bibtex}
+}
+
+%\pagenumbering{roman}  http://www.markschenk.com/tensegrity/latexexplanation.html
+ %A4 (210 mm x 297 mm)  https://tex.stackexchange.com/questions/20538/what-is-the-right-order-when-using-frontmatter-tableofcontents-mainmatter
+%\addtolength{\textwidth}{12mm}%210
+%\addtolength{\evensidemargin}{-4mm}
+%\addtolength{\oddsidemargin}{-8mm}
+%\addtolength{\textheight}{35mm}%297
+\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+\setcitestyle{square}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter~-~#1}{}}
+ \fancyhf{}
+  \fancyhead[LE]{\itshape   \thepage}
+ \fancyhead[RE]{\itshape  \nouppercase{\rightmark}} %\nouppercase !
+  \fancyhead[LO]{\itshape  \nouppercase{\leftmark }}%thechapter
+ \fancyhead[RO]{\itshape  \thepage} %\nouppercase !
+\pagestyle{fancy}
+\newcommand{\ch}[1]{\MakeUppercase{\ce{#1}}}  % version 1
+\newcommand{\multiref}[2]{\autoref{#1}-\ref{#2}} % from - to
+\usetikzlibrary{arrows}
+\algnewcommand\algorithmicforeach{\textbf{for each}}
+\algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+\def\blankpage{%
+      \clearpage%%
+      \thispagestyle{empty}%
+      \addtocounter{page}{0}%
+      \null%
+      \clearpage}
+
+%DOUBLE PAGE FIG
+\makeatletter
+\newcommand*{\twopagepicture}[7]{%
+
+\afterpage{%
+\clearpage% flush all other floats
+\ifodd\value{page}
+%\else% uncomment this else to get odd/even instead of even/odd
+    \expandafter\afterpage% put it on the next page if this one is odd
+\fi
+{%
+%\thispagestyle{empty}
+    \begin{figure}[#1]
+        \raggedleft
+        \vspace*{-.035\textheight}
+        \adjustbox{trim=0 0cm {.49\width} 0cm,clip}{\includegraphics[height={#6}\textheight,angle=#7]{#3}}%
+    \caption{#4}\label{#5}
+    \end{figure}
+    \thispagestyle{empty}
+    \begin{figure}[#1]
+        \raggedright
+        \vspace*{-.1007\textheight}
+        \adjustbox{trim={.49\width} 0cm 0 0cm,clip}{\includegraphics[height={#6}\textheight,angle=#7]{#3}}%
+    \end{figure}
+    \thispagestyle{empty}
+
+\vfill
+    \clearpage
+    }
+    }
+}
+\makeatother
+
+% \newcommand{\Autoref}[1]{%
+%   \begingroup%
+%   \def\chapterautorefname{Chapter}%
+%   \def\sectionautorefname{Section}%
+%   \def\subsectionautorefname{Subsection}%
+%   \def\subsubsectionautorefname{Subsubsection}%
+%   \def\paragraphautorefname{paragraph}%
+%   \autoref{#1}%
+%   \endgroup%
+% }
+
+%just do it for all
+\def\chapterautorefname{Chapter}%
+\def\sectionautorefname{Section}%
+\def\subsectionautorefname{Subsection}%
+\def\subsubsectionautorefname{Subsubsection}%
+\def\paragraphautorefname{Paragraph}%
+\def\tableautorefname{Table}
+\def\equationautorefname{Equation}
+
+
+% %titleify section headers
+% \usepackage{titlecaps}
+% % \usepackage{xparse}
+%     %
+%
+% % Just make titlify python scripts
+%
+%     \let\svsubsubsection\subsubsection
+%     \DeclareDocumentCommand\subsubsection{ s m }{% s = star, m = mandatory arg
+%        \IfBooleanTF{#1}{%
+%           \svsubsubsection*{\titlecap{#2}}
+%        }{%
+%          \svsubsubsection{\titlecap{#2}}
+%        }%
+%     }
+%
+%     \let\svsubsection\subsection
+%     % \def\subsection#1{\svsubsection{\titlecap{#1}}}
+%     \DeclareDocumentCommand\subsection{ s m }{% s = star, m = mandatory arg
+%        \IfBooleanTF{#1}{%
+%           \svsubsection*{\titlecap{#2}}
+%        }{%
+%          \svsubsection{\titlecap{#2}}
+%        }%
+%     }
+
+    % \let\svsection\section
+    % % \def\section#1{\svsection{\titlecap{#1}}}
+    % \DeclareDocumentCommand\section{ s m }{% s = star, m = mandatory arg
+    %    \IfBooleanTF{#1}{%
+    %       \svsection*{\titlecap{#2}}
+    %    }{%
+    %      \svsection{\titlecap{#2}}
+    %    }%
+    % }
+    %
+
+    %
+    % \let\svparagraph\paragraph
+    % \DeclareDocumentCommand\paragraph{ s m }{% s = star, m = mandatory arg
+    %    \IfBooleanTF{#1}{%
+    %       \svparagraph*{\titlecap{#2}}
+    %    }{%
+    %      \svparagraph{\titlecap{#2}}
+    %    }%
+    % }
+
+
+
+
+% location,label,caption,width
+
+\definecolor{c1}{HTML}{004F9D}
+\definecolor{c2}{HTML}{00775B}
+\definecolor{c3}{HTML}{FF9000}
+\definecolor{c4}{HTML}{F71735}
+\definecolor{c5}{HTML}{C10053}
+
+
+
+\makeatletter
+\renewcommand{\maketitle}{
+
+\thispagestyle{empty}
+\begin{center}
+\pagestyle{empty}
+\phantom{.}  %necessary to add space on top before the title
+\vspace{1.5cm}
+
+{\Huge \bf \@title\par}
+\vspace{2cm}
+
+{\LARGE \@author}\\[.7cm]
+
+{\Large\@date}
+
+\vspace{6cm}
+
+The University of York, Chemistry Department
+
+Submitted in accordance with the requirements\\
+    For the degree of Doctor of Philosophy\\ in Atmospheric Chemistry
+
+\vspace{1.3cm}
+
+
+\textbf{I declare that this thesis is a presentation of original work and I am the sole author. This work has not previously been presented for an award at this, or any other, University. All sources are acknowledged as References.}
+
+\vspace{1cm}
+\includegraphics[width=.3\textwidth]{UOY.eps}
+
+\end{center}
+}\makeatother
+
+
+
+
+
+
+\title{Understanding Atmospheric Chemistry Using Graph-Theory, Visualisation and Machine Learning}
+\author{Daniel Ellis}
+
+\date{March 2020}
+
+
+\begin{document}
+% \newgeometry{oneside}
+
+\frontmatter
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+
+
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%todepth5 is paragraph
+%\cleardoublepage
+%\setcounter{page}{0}
+%\setcounter{chapter}{0}
+ \maketitle
+
+
+
+
+\cleardoublepage{}
+\setlength{\footnotesep}{0.5cm}
+\raggedbottom %group writing to top of page!
+
+%\blankpage
+\restoregeometry
+\vspace*{0.15\paperheight}
+\begin{center}
+\begin{quotation}
+    \centering
+  \large{\emph{\textbf{Veritatem inquirenti, semel in vita de omnibus,\\ quantum fieri potest, esse dubitandu:}\\
+ In order to seek truth, it is necessary once in the course of our life, to doubt, as far as possible, of all things. }  }
+\vspace{\baselineskip}\linebreak
+  \begin{flushright}\small{
+  - Descartes, Rene, \textit{Principles of Philosophy}
+  }
+\end{flushright}
+ \end{quotation}
+\end{center}
+
+
+
+\tableofcontents
+% \listoffigures
+% \listoftables
+\newpage
+\mainmatter
+
+
+
+ \newpage
+
+
+
+% Acknowlegements
+%
+% Andrew and Mat- mainly putting up with me, and being very informative
+%
+% earth0 - for keeping working until the very end.
+%
+% Family, for which I wish I had spent more time with rather than beign squirreled away in an office.
+%
+% Extended `family' (\href{www.westminsterboatingbase.co.uk}{Westminster Boating Base}) who helped keep me sane irrespective to the severe watersport withdrawal, and kept me employed, inviting me to work the annual France whitewater trips
+%
+% Friends and Collegues: Rosie, Tomas, Ben, Mike, Killian, Pete, Peter
+%
+% And generally everyone else who has been part of my life within this period.
+
+
+%
+%
+% % Introduction 0
+% \include{./0_intro}
+%
+% % Ch1 0
+%  \include{./1_visual}
+% % %
+% % Chapter 2
+% \include{./2_graphs}
+% %
+% % Chapter 3
+% \include{./3_centrality}
+%
+%
+% % Chapter 4
+%  \include{./4_lumping}
+%
+% % Chapter 5
+%  \include{./5_DR}
+% %
+% %
+% % Conclusion
+%  \include{./6_conclusion}
+% %
+
+\cleardoublepage\makeatletter\@openrightfalse\makeatother
+\begin{appendices}
+% %
+\subimport{dr/}{appendix.tex}
+\subimport{appendices/}{misc.tex}
+\subimport{appendices/}{keywords.tex}
+
+% \chapterbib
+\end{appendices}
+
+
+
+
+\newpage
+%
+%\bibliographystyle{apalike}
+%\bibliography{bibtex}
+%% \bibliographystyle{unsrt}
+
+
+
+\end{document}
