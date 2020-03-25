@@ -1,5 +1,5 @@
 '''
-Merge individual files into one 
+Merge individual files into one
 
 select tex files as arguments
 '''
@@ -8,7 +8,7 @@ select tex files as arguments
 import os,glob,re,sys
 import numpy as np
 
-time = os.popen('date').read() 
+time = os.popen('date').read()
 
 
 backup = True
@@ -23,29 +23,29 @@ classes = []
 for i in 'section subsection subsubsection'.split():
     for j in ['','\*']:
         classes.append( r'(?<=\\%s%s\{).*?(?=})'%(i,j))
-        
+
 print (classes)
 
 
 heading = re.compile(r'|'.join(classes))
 
-#|\\chapter\*{0,1}\{(.*?)\}|\\paragraph\*{0,1}\{(.*?)\}')   
- 
+#|\\chapter\*{0,1}\{(.*?)\}|\\paragraph\*{0,1}\{(.*?)\}')
+
 files = glob.glob('*/combigned.tex')
 
 for f in files:
         print(f)
         text = open(f,'r').read()
-        new = heading.sub( lambda x: str(x.group()).title(), text)
-        
+        new = heading.sub( lambda x: str(x.group()).title().replace('Mcm','MCM').replace('Voc','VOC'), text)
+
         # print(heading.findall(new))
-        
+
         with open(f,'w') as replace:
             replace.write(new)
-        
-            
-            
-            
 
-    
+
+
+
+
+
 print('fi')

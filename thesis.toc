@@ -1,0 +1,82 @@
+\gdef \the@ipfilectr {@-1}
+\contentsline {chapter}{\numberline {1} Chemical model diagnostics using graph theory and metrics. }{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}Graph Metrics}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Centrality Metrics And Academic Publishing.}{5}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}The Master Chemical Mechanism (Mcm)}{6}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Data Collection}{8}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Visualising The Data.}{8}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}Filtering The Data}{10}{subsection.1.2.5}
+\contentsline {subsection}{\numberline {1.2.6}The Co-Citation Network}{11}{subsection.1.2.6}
+\contentsline {subsection}{\numberline {1.2.7}The Co-Authorship Network}{12}{subsection.1.2.7}
+\contentsline {section}{\numberline {1.3}Metric Analysis}{13}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Degree Centrality}{14}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Closness Centrality}{16}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Betweenness}{18}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Spectral Methods And Matrix Analysis}{19}{subsection.1.3.4}
+\contentsline {subsection}{\numberline {1.3.5}Page Rank}{20}{subsection.1.3.5}
+\contentsline {subsubsection}{\numberline {1.3.5.1}The Google Matrix}{21}{subsubsection.1.3.5.1}
+\contentsline {subsubsection}{\numberline {1.3.5.2}Solving The Algebra}{22}{subsubsection.1.3.5.2}
+\contentsline {subsubsection}{\numberline {1.3.5.3}Prediction}{22}{subsubsection.1.3.5.3}
+\contentsline {subsection}{\numberline {1.3.6}Conclusions}{23}{subsection.1.3.6}
+\contentsline {section}{\numberline {1.4}Classifying The Master Chemical Mechanism Network}{24}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Network Density}{24}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Small World Phenomena}{25}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Power Law And Scale-Free Graphs}{26}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}Describing The Mcm Network}{28}{subsection.1.4.4}
+\contentsline {section}{\numberline {1.5}Graph Construction Methodology }{28}{section.1.5}
+\contentsline {subsubsection}{\numberline {1.5.0.1}Concentration Time Series}{29}{subsubsection.1.5.0.1}
+\contentsline {subsubsection}{\numberline {1.5.0.2}Rate Of Production And Loss}{29}{subsubsection.1.5.0.2}
+\contentsline {subsubsection}{\numberline {1.5.0.3}The Jacobian}{32}{subsubsection.1.5.0.3}
+\contentsline {subsection}{\numberline {1.5.1}Graph Construction Methodology For Simulated Data}{33}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}A Practical Example Using The Mcm}{34}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.6}Case Study}{37}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Establishing Initial Conditions From Observational Data}{37}{subsection.1.6.1}
+\contentsline {subsubsection}{\numberline {1.6.1.1}The Origin Of Artificial Neural Networks}{38}{subsubsection.1.6.1.1}
+\contentsline {subsubsection}{\numberline {1.6.1.2}The Multi-Layer Perceptron}{38}{subsubsection.1.6.1.2}
+\contentsline {subsubsection}{\numberline {1.6.1.3}Applying The Mlpregressor To Observational Data}{40}{subsubsection.1.6.1.3}
+\contentsline {subsubsection}{\numberline {1.6.1.4}Model Initialisation Procedure}{46}{subsubsection.1.6.1.4}
+\contentsline {subsubsection}{\numberline {1.6.1.5}Extracting The Required Results}{46}{subsubsection.1.6.1.5}
+\contentsline {subsubsection}{\numberline {1.6.1.6}Unifying The Results}{51}{subsubsection.1.6.1.6}
+\contentsline {subsection}{\numberline {1.6.2}Comparing Results}{51}{subsection.1.6.2}
+\contentsline {subsubsection}{\numberline {1.6.2.1}What Is Tf-Idf}{51}{subsubsection.1.6.2.1}
+\contentsline {subsubsection}{\numberline {1.6.2.2}Metric Comparison}{53}{subsubsection.1.6.2.2}
+\contentsline {subsubsection}{\numberline {1.6.2.3}Individual Categories}{54}{subsubsection.1.6.2.3}
+\contentsline {subsection}{\numberline {1.6.3}Senario Analysis}{55}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}Providing An Overall Overview Using The Tf-Idf And The Metric Sum.}{60}{subsection.1.6.4}
+\contentsline {section}{\numberline {1.7}Calculating Production Sensitivity Using Personalised Page Rank.}{61}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}Source Analysis With Pagerank}{62}{subsection.1.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Source Analysis Using The Jacobian}{64}{subsection.1.7.2}
+\contentsline {subsection}{\numberline {1.7.3}Verdict}{65}{subsection.1.7.3}
+\contentsline {section}{\numberline {1.8}Conclusions}{66}{section.1.8}
+\gdef \the@ipfilectr {}
+\contentsline {chapter}{Appendices}{77}{section*.50}
+\contentsline {chapter}{\numberline {A}Supplementary Mathematics}{78}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}PCA}{78}{section.a.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Statistics}{78}{subsection.a.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Matrices and Eigenvectors}{79}{subsection.a.A.1.2}
+\contentsline {section}{\numberline {A.2}t-SNE}{80}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Student T distribution}{80}{subsection.a.A.2.1}
+\contentsline {subsubsection}{\numberline {A.2.1.1}T-Score}{80}{subsubsection.a.A.2.1.1}
+\contentsline {subsection}{\numberline {A.2.2}Kullback-Leiber (KL) divergence}{80}{subsection.a.A.2.2}
+\contentsline {chapter}{\numberline {B}Neural Network Activation Functions}{81}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Binary Step}{81}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Linear}{81}{section.a.B.2}
+\contentsline {section}{\numberline {B.3}Sigmoid / Logistic}{82}{section.a.B.3}
+\contentsline {section}{\numberline {B.4}Hyperbolic Tangent}{83}{section.a.B.4}
+\contentsline {section}{\numberline {B.5}Rectified Linear Unit}{83}{section.a.B.5}
+\contentsline {section}{\numberline {B.6}Swish}{84}{section.a.B.6}
+\contentsline {section}{\numberline {B.7}\textbf {A note on backpropagation}}{84}{section.a.B.7}
+\contentsline {chapter}{\numberline {C}Graphs and Networks}{85}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Heavily Labeled Citation Graph}{86}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Centrality on the UK rail network.}{87}{section.a.C.2}
+\contentsline {chapter}{\numberline {D}Miscellaneous}{89}{Appendix.a.D}
+\contentsline {section}{\numberline {D.1}Correspondance with Mike Jenkin}{89}{section.a.D.1}
+\contentsline {section}{\numberline {D.2}Functional Groups}{93}{section.a.D.2}
+\contentsline {chapter}{\numberline {E}Chapter Keywords}{94}{Appendix.a.E}
+\contentsline {section}{\numberline {E.1} Introduction }{94}{section.a.E.1}
+\contentsline {section}{\numberline {E.2} The Importance of Visualisation: From Social Networks to the Atmosphere }{95}{section.a.E.2}
+\contentsline {section}{\numberline {E.3}Applying Visual Analytics to the Atmospheric Chemistry Network}{95}{section.a.E.3}
+\contentsline {section}{\numberline {E.4} Chemical model diagnostics using graph theory and metrics. }{96}{section.a.E.4}
+\contentsline {section}{\numberline {E.5} Computational Learning of Species Structure using Visualisation and Vector Clustering}{96}{section.a.E.5}
+\contentsline {section}{\numberline {E.6} Conclusion }{97}{section.a.E.6}

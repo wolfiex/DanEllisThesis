@@ -1,3 +1,10 @@
+
+
+\begin{table}[H]
+\centering
+\small
+
+%%%%%%%
 \begin{tabular}{p{0.2\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.16\textwidth}}
 \toprule
 Species & Beijing(APHH) & Borneo(OP3) &  London(ClearFlo) &  CapeVerde \\
@@ -45,6 +52,23 @@ $\alpha$-\ce{PINENE}\footnotemark
 \ce{PBENZ}     &  3.996e-10 &                        &                      &                 \\
 \ce{HONO}      &  6.479e-10 &                        &            4.109e-10 &                 \\
 \ce{MACR}      &            &              6.948e-11 &            1.862e-11 &                 \\
+
+%%%%%%%%%%%%%%%
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{p{0.2\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.16\textwidth}p{0.16\textwidth}}
+\toprule
+Species & Beijing(APHH) & Borneo(OP3) &  London(ClearFlo) &  CapeVerde \\
+\midrule
+
+%%%%%%%%%%%%%%
+
 {PENT1ENE}  &            &                        &            2.383e-11 &                 \\
 \ce{MVK}       &            &                        &            2.091e-11 &                 \\
 \ce{NPROPOL}   &            &                        &            2.883e-10 &                 \\
@@ -59,3 +83,11 @@ $\alpha$-\ce{PINENE}\footnotemark
 \ce{PAN}       &            &                        &            1.791e-10 &                 \\
 \bottomrule
 \end{tabular}
+
+
+\caption{(2-page split) The initial conditions created from the MLPRegressor prediction of observational data. Although not specified the concentration for methane is set by the model at 1770ppb, the temperature is 298K, and water vapour is at 2\%. \textbf{* Starred values are of the wrong units and should be multiplied by 1000. As there was no time to rerun these, their results have been omitted from this chapter.}}
+\label{tab:icsmetric}
+\end{table}
+
+\footnotetext{This is written as ?-pinene in the merged CEDA dataset for the Borneo OP3 campaign. This is due to character conversion errors.}
+\footnotetext{The concentration for these is split evenly between both species}
