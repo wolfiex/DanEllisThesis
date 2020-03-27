@@ -1,4 +1,4 @@
-
+    
 \section{Introduction}
 
 \subsection*{Historical Significance}
@@ -737,8 +737,9 @@ In establishing that the input format is responsible for the splitting of cluste
  
  As was touched on  in \autoref{sec:mathclustanalysis} the MACCS input consists of a series of logical questions about a species strucuture. Since many of those questions regard the existance of a Nitrogen atom, data was separated species with a Nitrate or PAN group, and those without. In making a series of decisions on which cluster a species falls under, this biggest most recurring branch for the RandomForrestClassifier (imagine of temperature in \autoref{fig:iodenetree}) falls under the existance of a Nitrate group. 
  
- The main inconcistency between clusters and DR algorithms comes from the node2vec embedding (e) - much of which can be explained by the poor perfomance of the DR and clustering algorithsms of separating the chemistry into groups (see plots in \autoref{sec:cldist}). 
-
+ The main inconcistency between clusters and DR algorithms comes from the node2vec embedding (e) - much of which can be explained by the poor perfomance of the DR and clustering algorithsms of separating the chemistry into groups (see plots in \autoref{sec:cldist}). \autoref{sec:selectcomp} continues this analysis by comparing output with $<3$ clusters each against the graph plots presented in this subsection. Continuing from this, the content of individual groupings is explored for outplut with multiple clusters. 
+ 
+ 
 \begin{figure}[H]
     \subimport{tables/}{pcalegend.tex}
     \caption{\textbf{Comparing feature importance for PCA clusters.} Importance ranges are trimmed at 40\% for comparison. Some categories may contain values greater than this. All bars sum to 100\%.}
@@ -756,8 +757,41 @@ In establishing that the input format is responsible for the splitting of cluste
 \end{figure}
 
 
-\subsection{Individual Cluster Comparison}\label{sec:selectcomp}
+\subsection{Cluster Comparison}\label{sec:selectcomp}
 
+\subsection{Bi / Tri cluster groups }
+
+\begin{landscape}
+\begin{figure}[H]
+    \centering
+         \includegraphics[width=1.35\textheight]{./outputs/PCA/maccs/group.png}
+         \\ (a) PCA \\
+     \hfill
+            \includegraphics[width=1.35\textheight]{./outputs/t-SNE/maccs/group.png}
+        \\ (b) t-SNE
+        \caption{ \textbf{Comparing individual clusters between MACCS for PCA and t-SNE algorithm output.} }
+        \label{fig:biMACCS}
+\end{figure}
+\end{landscape}
+
+
+
+\begin{landscape}
+\begin{figure}[H]
+    \centering
+         \includegraphics[width=1.35\textheight]{./outputs/PCA/node2vec/group.png}
+         \\ (a) PCA \\
+     \hfill
+            \includegraphics[width=1.35\textheight]{./outputs/AE/node2vec/group.png}
+        \\ (b) AE
+        \caption{ \textbf{Comparing individual clusters between MACCS for PCA and t-SNE algorithm output.} }
+        \label{fig:biMACCS}
+\end{figure}
+\end{landscape}
+
+
+
+\subsubsection{MultiCluster groups}
 
 
 
@@ -767,22 +801,27 @@ In establishing that the input format is responsible for the splitting of cluste
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{outputs/t-SNE/mqn_all.pdf}
+    \includegraphics[width=\textwidth]{outputs/PCA/fingerprints_all.pdf}
+    \caption{\textbf{Case Study 1: PCA graph-fingerprint} We compare the functional group distribution for individual clusters within the PCA 2D representation of the graph-fingerprint input.}
+    \label{fig:pcagraphcase}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=\textwidth]{outputs/AE/smiles_all.pdf}
+    \caption{\textbf{Case Study 1: AE SMILES} We compare the functional group distribution for individual clusters within the AE 2D representation of the SMILES input.}
+    \label{fig:aesmilescase}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{outputs/t-SNE/mqn_all.pdf}
     \caption{\textbf{Case Study 1: t-SNE MQN.} We compare the functional group distribution for individual clusters within the t-SNE 2D representation of the Mollecular Quantum Number fingerprint.}
     \label{fig:tsnemqncase}
 \end{figure}
-
-
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{outputs/AE/smiles_all.pdf}
-    \caption{\textbf{Case Study 1: AE SMILES} We compare the functional group distribution for individual clusters within the AE 2D representation of the SMILES input.}
-    \label{fig:tsnemqncase}
-\end{figure}
-
-
 
 
 
