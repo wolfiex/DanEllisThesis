@@ -36,7 +36,7 @@ files = glob.glob('*/combigned.tex')
 for f in files:
         print(f)
         text = open(f,'r').read()
-        new = heading.sub( lambda x: str(x.group()).title().replace('Mcm','MCM').replace('Voc','VOC').replace('Tf-Idf','TF-IDF').replace('T-Sne','t-SNE'), text)
+        new = heading.sub( lambda x: str(x.group()).title().replace('Mcm','MCM').replace('Voc','VOC').replace('Tf-Idf','TF-IDF').replace('T-Sne','t-SNE').replace('Smiles','SMILES').replace('Mqn','MQN').replace('Maccs','MACCS'), text)
 
         # print(heading.findall(new))
 

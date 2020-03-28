@@ -1,0 +1,77 @@
+\BOOKMARK [0][-]{chapter.1}{ Computational Learning of Species Structure using Visualisation and Vector Clustering}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Historical Significance}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Theory And Simulation In Science}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Chapter Aims}{section.1.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Species Of The MCM And Ways To Represent Them.}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.2.1}{Input Generation}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.2}{Manual Categorisation}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.3}{Tokenization}{section.1.2}% 9
+\BOOKMARK [3][-]{subsubsection.1.2.3.1}{Species Names}{subsection.1.2.3}% 10
+\BOOKMARK [3][-]{subsubsection.1.2.3.2}{SMILES Strings}{subsection.1.2.3}% 11
+\BOOKMARK [2][-]{subsection.1.2.4}{Graph Inspired}{section.1.2}% 12
+\BOOKMARK [3][-]{subsubsection.1.2.4.1}{The Species Graph \(Fingerprint\)}{subsection.1.2.4}% 13
+\BOOKMARK [3][-]{subsubsection.1.2.4.2}{Node Embeddings \(Node2Vec\)}{subsection.1.2.4}% 14
+\BOOKMARK [2][-]{subsection.1.2.5}{Molecular Fingerprints}{section.1.2}% 15
+\BOOKMARK [3][-]{subsubsection.1.2.5.1}{Molecular Quantum Numbers \(Mqn\)}{subsection.1.2.5}% 16
+\BOOKMARK [3][-]{subsubsection.1.2.5.2}{Molecular Access System \(Maccs\)}{subsection.1.2.5}% 17
+\BOOKMARK [1][-]{section.1.3}{ Dimensionality Reduction Methods}{chapter.1}% 18
+\BOOKMARK [2][-]{subsection.1.3.1}{Preperation Of The Data}{section.1.3}% 19
+\BOOKMARK [2][-]{subsection.1.3.2}{Principle Component Analysis \(PCA\)}{section.1.3}% 20
+\BOOKMARK [3][-]{subsubsection.1.3.2.1}{Mathematical Explanation Of Pca}{subsection.1.3.2}% 21
+\BOOKMARK [2][-]{subsection.1.3.3}{T-Distributed Stochastic Neighbor Embedding \(t-SNE\)}{section.1.3}% 22
+\BOOKMARK [3][-]{subsubsection.1.3.3.1}{Mathematical Explanation Of t-SNE}{subsection.1.3.3}% 23
+\BOOKMARK [2][-]{subsection.1.3.4}{Pca Vs t-SNE, A Quick Comparison.}{section.1.3}% 24
+\BOOKMARK [2][-]{subsection.1.3.5}{The Auto-Encoder \(Ae\)}{section.1.3}% 25
+\BOOKMARK [3][-]{subsubsection.1.3.5.1}{Demonstration Of Non-Linear Activation Functions}{subsection.1.3.5}% 26
+\BOOKMARK [2][-]{subsection.1.3.6}{Node2Vec}{section.1.3}% 27
+\BOOKMARK [3][-]{subsubsection.1.3.6.1}{Sentence Construction By Sampling Of A Network}{subsection.1.3.6}% 28
+\BOOKMARK [3][-]{subsubsection.1.3.6.2}{Word2Vec}{subsection.1.3.6}% 29
+\BOOKMARK [2][-]{subsection.1.3.7}{Summary of Dimensionality reduction methods}{section.1.3}% 30
+\BOOKMARK [1][-]{section.1.4}{Visualisation Of Clustering}{chapter.1}% 31
+\BOOKMARK [2][-]{subsection.1.4.1}{Viewing The 2D Species Embeddings}{section.1.4}% 32
+\BOOKMARK [2][-]{subsection.1.4.2}{Exposing Overlapping Data}{section.1.4}% 33
+\BOOKMARK [2][-]{subsection.1.4.3}{Gooey Effect \(Gaussian Blur\)}{section.1.4}% 34
+\BOOKMARK [2][-]{subsection.1.4.4}{Four Colours Theorem}{section.1.4}% 35
+\BOOKMARK [1][-]{section.1.5}{Cluster Evaluation}{chapter.1}% 36
+\BOOKMARK [2][-]{subsection.1.5.1}{Automated Selection Of Clusters}{section.1.5}% 37
+\BOOKMARK [3][-]{subsubsection.1.5.1.1}{Clustering \(Silhouette\) Coefficient}{subsection.1.5.1}% 38
+\BOOKMARK [2][-]{subsection.1.5.2}{Feature Extraction}{section.1.5}% 39
+\BOOKMARK [3][-]{subsubsection.1.5.2.1}{Random Forrests}{subsection.1.5.2}% 40
+\BOOKMARK [3][-]{subsubsection.1.5.2.2}{Calculating Importance Using Random Forrests}{subsection.1.5.2}% 41
+\BOOKMARK [1][-]{section.1.6}{Results}{chapter.1}% 42
+\BOOKMARK [2][-]{subsection.1.6.1}{Visual Overview}{section.1.6}% 43
+\BOOKMARK [2][-]{subsection.1.6.2}{Mathematical Cluster Analysis}{section.1.6}% 44
+\BOOKMARK [2][-]{subsection.1.6.3}{Feature Selection Comparison}{section.1.6}% 45
+\BOOKMARK [2][-]{subsection.1.6.4}{Individual Cluster Comparison}{section.1.6}% 46
+\BOOKMARK [1][-]{section.1.7}{Conclusions}{chapter.1}% 47
+\BOOKMARK [0][-]{section*.28}{Appendices}{}% 48
+\BOOKMARK [0][-]{Appendix.a.A}{Supplementary Mathematics}{}% 49
+\BOOKMARK [1][-]{section.a.A.1}{PCA}{Appendix.a.A}% 50
+\BOOKMARK [2][-]{subsection.a.A.1.1}{Statistics}{section.a.A.1}% 51
+\BOOKMARK [2][-]{subsection.a.A.1.2}{Matrices and Eigenvectors}{section.a.A.1}% 52
+\BOOKMARK [1][-]{section.a.A.2}{t-SNE}{Appendix.a.A}% 53
+\BOOKMARK [2][-]{subsection.a.A.2.1}{Student T distribution}{section.a.A.2}% 54
+\BOOKMARK [3][-]{subsubsection.a.A.2.1.1}{T-Score}{subsection.a.A.2.1}% 55
+\BOOKMARK [2][-]{subsection.a.A.2.2}{Kullback-Leiber \(KL\) divergence}{section.a.A.2}% 56
+\BOOKMARK [0][-]{Appendix.a.B}{Neural Network Activation Functions}{}% 57
+\BOOKMARK [1][-]{section.a.B.1}{Binary Step}{Appendix.a.B}% 58
+\BOOKMARK [1][-]{section.a.B.2}{Linear}{Appendix.a.B}% 59
+\BOOKMARK [1][-]{section.a.B.3}{Sigmoid / Logistic}{Appendix.a.B}% 60
+\BOOKMARK [1][-]{section.a.B.4}{Hyperbolic Tangent}{Appendix.a.B}% 61
+\BOOKMARK [1][-]{section.a.B.5}{Rectified Linear Unit}{Appendix.a.B}% 62
+\BOOKMARK [1][-]{section.a.B.6}{Swish}{Appendix.a.B}% 63
+\BOOKMARK [1][-]{section.a.B.7}{A note on backpropagation}{Appendix.a.B}% 64
+\BOOKMARK [0][-]{Appendix.a.C}{Graphs and Networks}{}% 65
+\BOOKMARK [1][-]{section.a.C.1}{Heavily Labeled Citation Graph}{Appendix.a.C}% 66
+\BOOKMARK [1][-]{section.a.C.2}{Centrality on the UK rail network.}{Appendix.a.C}% 67
+\BOOKMARK [0][-]{Appendix.a.D}{Miscellaneous}{}% 68
+\BOOKMARK [1][-]{section.a.D.1}{Correspondance with Mike Jenkin}{Appendix.a.D}% 69
+\BOOKMARK [1][-]{section.a.D.2}{Functional Groups}{Appendix.a.D}% 70
+\BOOKMARK [0][-]{Appendix.a.E}{Chapter Keywords}{}% 71
+\BOOKMARK [1][-]{section.a.E.1}{ Introduction }{Appendix.a.E}% 72
+\BOOKMARK [1][-]{section.a.E.2}{ The Importance of Visualisation: From Social Networks to the Atmosphere }{Appendix.a.E}% 73
+\BOOKMARK [1][-]{section.a.E.3}{Applying Visual Analytics to the Atmospheric Chemistry Network}{Appendix.a.E}% 74
+\BOOKMARK [1][-]{section.a.E.4}{ Chemical model diagnostics using graph theory and metrics. }{Appendix.a.E}% 75
+\BOOKMARK [1][-]{section.a.E.5}{ Computational Learning of Species Structure using Visualisation and Vector Clustering}{Appendix.a.E}% 76
+\BOOKMARK [1][-]{section.a.E.6}{ Conclusion }{Appendix.a.E}% 77
