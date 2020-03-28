@@ -1,4 +1,4 @@
-    
+
 \section{Introduction}
 
 \subsection{Historical Significance}
@@ -638,7 +638,7 @@ There exist many methods to of defining the chemical structure of species within
 <<<<<<< HEAD
 Explorative data analysi invloves a degree of figure interativity. \autoref{ch1} described the imporance of visualisation in employing the pattern cognitive functions of the human brain, and \autoref{ch2} explained the importance of having an evenly distributed datapoints to aid the understanding of graphs. This subsection combignes the two ideas in the usage of dimsenionality recduction to exploit patterns within a dataset.
 =======
-Explorative data analysis invloves a degree of figure interativity. \autoref{ch1} described the imporance of visualisation in employing the pattern cognitive functions of the human brain, and \autoref{ch2} explained the importance of having an evenly distributed datapoints to aid the understanding of graphs. This subsection combignes the two ideas in the usage of dimsenionality recduction to exploit patterns within a dataset. 
+Explorative data analysis invloves a degree of figure interativity. \autoref{ch1} described the imporance of visualisation in employing the pattern cognitive functions of the human brain, and \autoref{ch2} explained the importance of having an evenly distributed datapoints to aid the understanding of graphs. This subsection combignes the two ideas in the usage of dimsenionality recduction to exploit patterns within a dataset.
 
 Using the techneques in \autoref{sec:drvis} we explore the visual distribution of different dimensionality reduction methods across all input types. This subsection explores the spatial distribution of groups (blobs) in the 2D dimensionally reduced dataset. The colours represent the automatically calculated clusters (which are further explored analytically in \autoref{sec:mathclustanalysis}).
 This is then built upon using three case studies, where individual cluster distributions are compared (\autoref{sec:fsclust}).
@@ -701,17 +701,17 @@ Both node2vec and MACCS
 =======
 
 \autoref{sec:cldist} explored the visual appeal of the plotted clusters. For large systems the individual selection of many clustering algothim outputs is inpractical, so the analysis of DR methods has been automated (\autoref{sec:drclustt}). Similarly we can once again apply the silhouette coefficient (\autoref{sec:silo})
-to compare the best output for each input and DR algorithm. 
+to compare the best output for each input and DR algorithm.
 
-Outputs for the number of groups the DR output has been clustered in, and its corresponding silhoette coefficent are shown in Tables \ref{tab:pcasil} - \ref{tab:tsnesil}. These shall be discussed by name rather than being refereced each time for ease in reading.  
-Inputs for each algorithm are ranked in order of their silhouette coefficient (the closer to 1 the value, the better the clustering). 
+Outputs for the number of groups the DR output has been clustered in, and its corresponding silhoette coefficent are shown in Tables \ref{tab:pcasil} - \ref{tab:tsnesil}. These shall be discussed by name rather than being refereced each time for ease in reading.
+Inputs for each algorithm are ranked in order of their silhouette coefficient (the closer to 1 the value, the better the clustering).
 
-Ordinal inputs such as functional groups or the protocol categories consistently rank the highest within each algorithm. This is beacuse the algorithms only have to idenitfy permutations of each category and classify the species into these. It is noted that the t-SNE silhouette coefficient for these is ~30\% lower than for PCA and AE algorithms. However the number of groups located is also greatly reduced from 140 to 106. This suggests that the vector clustering algorithms have tried to combine datapoints into a group, which has come at a cost to the silhouette value. 
+Ordinal inputs such as functional groups or the protocol categories consistently rank the highest within each algorithm. This is beacuse the algorithms only have to idenitfy permutations of each category and classify the species into these. It is noted that the t-SNE silhouette coefficient for these is ~30\% lower than for PCA and AE algorithms. However the number of groups located is also greatly reduced from 140 to 106. This suggests that the vector clustering algorithms have tried to combine datapoints into a group, which has come at a cost to the silhouette value.
 
 Next the SMILES strings are ranked highly for both AE and t-SNE algorithms. Visually this agrees with \autoref{fig:aevis}(g) and \autoref{fig:tsnevis}(g), where these are much better separated than \autoref{fig:pcavis}(g). The PCA ranking is almost half of other algorithms, but contains a much smaller number of `clusters'. This can be attributed to its periodic lattice-like spacing of points which are not conducive to producing good vector clustering groups in an unsupervised algorithm.
 
 MACCS keys, although providing a modest silhoette score across most DR algorithms, often only have 2 or three clusters. The reason for this is that dimensionality reductions of these often separates species into two groups, those with Nitrogen elements and those without (\autoref{fig:maccsmath}). The reason for this is that many of the questions upon which the MACCS fingerprint is based on concern themselves with Nitrogen species \cite{rdkitcode}. Group composition and cluster analysis is discussed in \autoref{sec:fsclust} and \autoref{sec:selectcomp}.\\
- 
+
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{outputs/PCA/maccs/group.png}
     \caption{\textbf{The individual decomposition of clusters in \autoref{fig:pcavis}(c)}This shows that the main difference between the two clusters is the existance of Nitrogen elements within Nitrate and Peroxyacetyl Nitrate (PAN) groups. The table on the right acts as a key for the colours and shows the overall impotance of each feature in separating an item into the various clusters (using an ensemble of decision trees).}
@@ -720,11 +720,11 @@ MACCS keys, although providing a modest silhoette score across most DR algorithm
 
 Similar to SMILES strings mollecular quantum numbers result in plots consisting of a regular rows of data with like-properties (\autoref{fig:pcavis}-\ref{fig:tsnevis}(d)) - making it diffucult for the clustering algorithms to correctly select each group. This property makes it suitable for usage in the field of chemical informatics where molecules with similar properties are desired \citep{mqnpca}, but less so for establishing an overarching categorisation of species within a mechanism.
 
-Finally the graph-based fingerprint input is consistently the lowest scorring in the silhouette coefficient. Visually this can be attrbuted to the mismatching of cluster number to the number of visually separate clusters  (\autoref{fig:pcavis}-\ref{fig:tsnevis}(a)). The random distribution of these visual `specs' suggests that the custom graph-fingerpring is not the most informative input for use with DR and clustering algorithms. 
+Finally the graph-based fingerprint input is consistently the lowest scorring in the silhouette coefficient. Visually this can be attrbuted to the mismatching of cluster number to the number of visually separate clusters  (\autoref{fig:pcavis}-\ref{fig:tsnevis}(a)). The random distribution of these visual `specs' suggests that the custom graph-fingerpring is not the most informative input for use with DR and clustering algorithms.
 
 >>>>>>> 33ff093c79903cf746ef699549855e52fcfbe417
 
-Overall combigning the visual representation of selected clusters (\autoref{sec:cldist}) with the silhouette scores, show that the clustering algorithms struggle with the prediction of correct groups. Although the silhouette coefficient is a good metric for determining the density of points around a cluster, it should be used with the aid of other metrics if selecting the best results from an automated clustering process. Additionally the automatic clustering process can include a feedback from the goodness of fit metrics, which can allow for the finer tuning of clustering algorithm parameters in future. 
+Overall combigning the visual representation of selected clusters (\autoref{sec:cldist}) with the silhouette scores, show that the clustering algorithms struggle with the prediction of correct groups. Although the silhouette coefficient is a good metric for determining the density of points around a cluster, it should be used with the aid of other metrics if selecting the best results from an automated clustering process. Additionally the automatic clustering process can include a feedback from the goodness of fit metrics, which can allow for the finer tuning of clustering algorithm parameters in future.
 
 
 \begin{table}[H]
@@ -765,15 +765,15 @@ Comparing all three DR algorithms, we see that the shape (and this group importa
 
 In establishing that the input format is responsible for the splitting of clusters into groups, we look at what the relationsip of these are. In this section, the characters (a-h) refer to \textbf{all} the corresponding subplots in Figures \ref{fig:pcalegend}-\ref{fig:tsnelegend}.
 
- In the Common Representative Intermediates (CRI) mechanism the ratio of C-H and C-O bonds are used to lump species with the same oxidation capacity \citep{cri}. This makes the ratio of carbons to oxygens an important defining charactaristic between them. The number of each of these elements is consistantly an important feature for all of the input styles, with the exception of the gecko protocol (f) categories. Here the number of carbons or oxygens does not fit any of the reaction branches meaning that there is no way for the dimensionality reduction algorithm to know these. Instead Alcohol and Carbonyl groups are seen as the most important in separting the chemistry which may be due to the number of species undergoing each type of reaction. 
- 
- Species names (h) have prefixes (e.g. C$xx$) and suffices (e.g. -OOH -\ch{NO3} -\ch{O2} -OL) which allow an easy way for a user to distinguish the types of species, but also the DR algorithms. These show the second best separation of aromatic species, most likely attributed to the common naming convention e.g. (`BENZ', `PIN' , `TMB'). Similarly the SMILES string (g) shows a human readable representation of molecules structure. Since this is explictly defined, the SMILES input provides the greatest uniformity in group types when anaysing cluster composition. As aromatic compounds are represented using a lower case `c', this makes them easy to distinguish (especially in the case of AE \autoref{fig:aelegend}g). 
- 
- As was touched on  in \autoref{sec:mathclustanalysis} the MACCS input consists of a series of logical questions about a species strucuture. Since many of those questions regard the existance of a Nitrogen atom, data was separated species with a Nitrate or PAN group, and those without. In making a series of decisions on which cluster a species falls under, this biggest most recurring branch for the RandomForrestClassifier (imagine of temperature in \autoref{fig:iodenetree}) falls under the existance of a Nitrate group. 
- 
- The main inconcistency between clusters and DR algorithms comes from the node2vec embedding (e) - much of which can be explained by the poor perfomance of the DR and clustering algorithsms of separating the chemistry into groups (see plots in \autoref{sec:cldist}). \autoref{sec:selectcomp} continues this analysis by comparing output with $<3$ clusters each against the graph plots presented in this subsection. Continuing from this, the content of individual groupings is explored for outplut with multiple clusters. 
- 
- 
+ In the Common Representative Intermediates (CRI) mechanism the ratio of C-H and C-O bonds are used to lump species with the same oxidation capacity \citep{cri}. This makes the ratio of carbons to oxygens an important defining charactaristic between them. The number of each of these elements is consistantly an important feature for all of the input styles, with the exception of the gecko protocol (f) categories. Here the number of carbons or oxygens does not fit any of the reaction branches meaning that there is no way for the dimensionality reduction algorithm to know these. Instead Alcohol and Carbonyl groups are seen as the most important in separting the chemistry which may be due to the number of species undergoing each type of reaction.
+
+ Species names (h) have prefixes (e.g. C$xx$) and suffices (e.g. -OOH -\ch{NO3} -\ch{O2} -OL) which allow an easy way for a user to distinguish the types of species, but also the DR algorithms. These show the second best separation of aromatic species, most likely attributed to the common naming convention e.g. (`BENZ', `PIN' , `TMB'). Similarly the SMILES string (g) shows a human readable representation of molecules structure. Since this is explictly defined, the SMILES input provides the greatest uniformity in group types when anaysing cluster composition. As aromatic compounds are represented using a lower case `c', this makes them easy to distinguish (especially in the case of AE \autoref{fig:aelegend}g).
+
+ As was touched on  in \autoref{sec:mathclustanalysis} the MACCS input consists of a series of logical questions about a species strucuture. Since many of those questions regard the existance of a Nitrogen atom, data was separated species with a Nitrate or PAN group, and those without. In making a series of decisions on which cluster a species falls under, this biggest most recurring branch for the RandomForrestClassifier (imagine of temperature in \autoref{fig:iodenetree}) falls under the existance of a Nitrate group.
+
+ The main inconcistency between clusters and DR algorithms comes from the node2vec embedding (e) - much of which can be explained by the poor perfomance of the DR and clustering algorithsms of separating the chemistry into groups (see plots in \autoref{sec:cldist}). \autoref{sec:selectcomp} continues this analysis by comparing output with $<3$ clusters each against the graph plots presented in this subsection. Continuing from this, the content of individual groupings is explored for outplut with multiple clusters.
+
+
 \begin{figure}[H]
     \subimport{tables/}{pcalegend.tex}
     \caption{\textbf{Comparing feature importance for PCA clusters.} Importance ranges are trimmed at 40\% for comparison. Some categories may contain values greater than this. All bars sum to 100\%.}
