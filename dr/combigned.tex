@@ -779,10 +779,10 @@ Using the DR output where only two/three groups are located by the clustering al
 \begin{landscape}
 \begin{figure}[H]
 
-         \includegraphics[width=1.45\textheight]{./outputs/PCA/maccs/group.png}
+         \includegraphics[width=1.65\textheight]{./outputs/PCA/maccs/group.png}
          \\ (a) PCA \\
      \hfill
-            \includegraphics[width=1.45\textheight]{./outputs/t-SNE/maccs/group.png}
+            \includegraphics[width=1.65\textheight]{./outputs/t-SNE/maccs/group.png}
         \\ (b) t-SNE
         \caption{ \textbf{Comparing individual clusters between MACCS for PCA and t-SNE algorithm output.} The bar chart to the right is the cumelative chart which represents the splits in deciding the cluster a species falls into from \autoref{sec:fsclust}. Unlabeled bar charts to the left represent the partitioning of species within an individual cluster.}
         \label{fig:biMACCS}
@@ -793,10 +793,10 @@ Using the DR output where only two/three groups are located by the clustering al
 
 \begin{landscape}
 \begin{figure}[H]
-         \includegraphics[width=1.45\textheight]{./outputs/PCA/node2vec/group.png}
+         \includegraphics[width=1.65\textheight]{./outputs/PCA/node2vec/group.png}
          \\ (a) PCA \\
      \hfill
-            \includegraphics[width=1.45\textheight]{./outputs/AE/node2vec/group.png}
+            \includegraphics[width=1.65\textheight]{./outputs/AE/node2vec/group.png}
         \\ (b) AE
         \caption{ \textbf{Comparing individual clusters between node2vec for PCA and t-SNE algorithm output.} The bar chart to the right is the cumelative chart which represents the splits in deciding the cluster a species falls into from \autoref{sec:fsclust}. Unlabeled bar charts to the left represent the partitioning of species within an individual cluster.}
         \label{fig:biN2V}
@@ -820,6 +820,14 @@ Next we observe several mutli clustered examples from all DR algorithms. We star
     \label{fig:pcagraphcase}
 \end{figure}
 
+\newpage
+
+Next we explore the AE algorithm. Here the smiles input separates the data into more defined groups. This becomes apparent with specific functional groups only appearing within individual cluaters (\autoref{fig:aesmilescase}) - as opposed to the gradients seen in \autoref{fig:pcagraphcase}. Here all the aromatic species are contained within the central (pink cluster). Similarly the green and brown clusters do not contain any nitrates, and most of the PAN species are within the grey cluster in the top right. The better separation of clusters aids in the identification of groups (by the automated vector clustering algorithm) as well as hilighting the process undergone within the DR algorithm to partition the data.
+
+
+
+
+
 
 \begin{figure}[H]
     \centering
@@ -828,7 +836,8 @@ Next we observe several mutli clustered examples from all DR algorithms. We star
     \label{fig:aesmilescase}
 \end{figure}
 
-
+Finally we expore the t-SNE DR algorithm using the MQN inputs (\autoref{fig:tsnemqncase}). Previously it is found that the t-SNE produces the most well defined clusters, the cost of which comes from losing information about group similarity encoded in the distance separating them. Here \ce{RCO3} containg species are located in the middle turquoise cluster, PAN species in the top right (lime) cluster and th aromatic speices are all in the pink cluster at the bottom.
+The brown and purple clusters (top left) contain no carbonyl groups, and the purple, grray (top left) and orange (mid right) contain not Nitrates. It is evident that the t-SNE provides the best spatial distribution of groups. However inspecting cluster colours visually suggests that the automatical vector clustering algorithm has not necessarily located the best combination of groups. As was suggested in \autoref{sec:mathclustanalysis} a more dynamic method of tuing the clustering algorithm hyperparameters may result in better cluster selection - which may better separate each cluster's species category.
 
 \begin{figure}[H]
     \centering
