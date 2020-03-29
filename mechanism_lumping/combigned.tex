@@ -36,7 +36,7 @@ As with any problem, the first step to simplifying a complex task involves the p
 Since atmospheric chemical mechanism forms a numerically stiff system (\autoref{ch0}), a reduction in the number of reactions within a mechanism leads to a reduction in the computational burden experienced by a model each iteration forwards in time. Classically the identification of important reactions may be accomplished through the use or rate of production and loss analysis (\autoref{sec:ropa}). This allows us to filter reactions contributing less than 5\% (in the MCM reaction pathways $<5\%$ are disregarded) to the formation of any species we are interested in. Other methods using principal component analysis of the sensitivity of species (PCAS) also exist and are discussed in \citep{PCAS,wyche}.
 
 
-\subsection{Species removal}
+\subsection{Species Removal}
 Similar to reaction removal, the removal of species is useful because the removing or combining of species inherently reduces or simplifies the reactions within a mechanism.  This method also has added benefit of reducing the size of the jacobian matrix used to propagate the chemical system forwards. For large systems which do not use a sparse framework, storing a $n^2$ matrix in memory can prove difficult.
 
 Many methods of species reduction are possible. The simplest of these is through the use of trial and error \citep{tur1990} (Method 1). Here the consuming reactions for a species are removed, and if the resulting deviation in results between the full and reduced mechanism is small within a certain threshold, their results are retained. The main downside to this is that it only works on a per-species level, which may be very resource-consuming for large mechanisms.
@@ -102,13 +102,13 @@ To select the initial conditions there exist several sampling styles \citep{samp
     \end{cases}
 \label{eqn:icslhs}
   \end{equation}
-\section{Graph based reduction}\label{sec:graphreduction}
+\section{Graph Based Reduction}\label{sec:graphreduction}
 It has been shown that a graph-based representation of the atmospheric chemical network proves useful in both the visual and mathematical analysis of simulation results (\autoref{chaptervis,chaptermetric}). It, therefore, follows that the network representation of mechanism may also have its uses in the simplification, and thus reduction, of chemical complexity.  This section will outline the basic methods of modularity (cluster) detection with the graph framework, the different methods in which this may be done and eventually apply it to a case example representative of the chemistry within the London environment.
 
 
 
 
-\subsection{Graph parallels}
+\subsection{Graph Parallels}
 
 % \textit{
 % EDIT\\
@@ -118,7 +118,7 @@ It has been shown that a graph-based representation of the atmospheric chemical 
 
 Graph structure can be used to analyse changes of reactions or relationships between species - providing an alternative representation and method to access such data. Additionally, clustering techniques may be used to locate groups of highly connected, fast reacting/strongly related species. This has applications in both understanding the data, but more importantly, chemical lumping. In creating a graph from a model simulation, we encode not only information about the chemical structure, but also the influence between species in the mechanism. By grouping species which have a strong dependence upon each other, we can simplify the provided network or mechanism.
 
- \subsection{Types of Graph Clustering}
+ \subsection{Types Of Graph Clustering}
 Unlike vector clustering algorithms (such as DBSCAN, UMAP and K-means - see \autoref{veccluster}), graph clustering metrics do not rely on the spatial orientation of the data to determine groups or `clusters'. Instead, these may partition the network into segments, group nodes by structural equivalence or explore the `flow' dynamics of the network.
 
 Algorithms such as Label Propagation \citep{labelprop} and spin-glass \citep{spinglass} work by randomly assigning nodes with a property or label. This property is then transferred to its neighbours. Other algorithms such as the nested block model can decompose a graph into clusters of similar properties, \citep{communitygraph}. These are often grouped in the form of topological equivalence which can be either:
@@ -168,7 +168,7 @@ As the number of partitions grows exponentially with the number of nodes\footnot
 
 
 
-\section{Selection Criteria for graph Clustering}
+\section{Selection Criteria For Graph Clustering}
 
 The main two criteria in selecting an algorithm for grouping atmospheric reactions are:
 
@@ -179,7 +179,7 @@ The main two criteria in selecting an algorithm for grouping atmospheric reactio
 
 As the InfoMap algorithm implements a directed approach coupled with a multi-level clustering approach able to capture node-layer interaction in temporal networks,\citep{infointermittent}, it makes the right candidate for the task of mechanism reduction.
 
-\section{Evaluation of InfoMap on a real simulation.}
+\section{Evaluation Of Infomap On A Real Simulation.}
 
 Using the initial conditions for London from (\autoref{tab:icsmetric}), a spun up model simulation with the CRI v2.2 mechanism was run. Since this does not contain \ch{c5h11cho}, MVK, MACR or Limonene as primary species, these are omitted from the initialisation. Following a spinup to radical steady-state, a graph is generated for noon after one day of an unconstrained run. The InfoMap algorithm is then applied to the generated graph.
 
@@ -207,7 +207,7 @@ As the InfoMap algorithm provides a finer level of clustering, it is essential t
  }{fig:imap2page}{1.0}{0}
 
 
-\subsection{Species type and clustering}
+\subsection{Species Type And Clustering}
 The bubble chart provides an intuitive way to represent groups for interactive or small systems but is less useful for larger numbers of species and print (\autoref{fig:imbubble}). Instead, a tree approach is better suited to revealing the hierarchical structure of the network, as shown in \autoref{fig:imap2page}. Here branches are numerically labelled on each level, allowing us to navigate the structure using a sequence of numbers (e.g. to get to \ch{c4h6} we take the first branch from the centre, followed by the fifth branch after that resulting in the notation 1 . 5 . \ch{c4h6}).
 
 This split notation allows a general overview of the mechanism structure, as well as the reasoning/process of the clustering algorithm. The first level split in \autoref{fig:iml1} shows branches 1,2 and 5 to have origins in the linear (n-) alkane species. This can be seen through both the emitted species (bold) and the \emph{RN} prefix of the species. Here the linear alkanes can react with OH to extract hydrogen and then from a \ce{RO2}, or produce a carbonyl \emph{\ce{CARBxx}}, which can then go on to produce the \emph{\ce{RNxxO2}} peroxy radical.
@@ -223,7 +223,7 @@ Finally, since the CRI index is representative of the oxidation potential, it is
 
 %% good paper for introduction acetone
 %
-% \subsubsection{Inter and Intra links}
+% \subsubsection{Inter And Intra Links}
 %  Typically, the quality of clustering can be assessed using the adjacency matrix of a graph. In sorting the axis by cluster groups, squares of high-density interconnections should become apparent in an adjacency heatmap. Unfortunately for an atmospheric chemistry mechanism, the size and sparseness of a graph, makes this an infeisable method to visually access the nodcluster node ratios. Instead we can adapt the nodes presented by the treemap in \autoref{fig:imap2page} and replacing the hierarchical structure, with one representing the original graph.
 %
 %
@@ -238,7 +238,7 @@ Finally, since the CRI index is representative of the oxidation potential, it is
 
 
 
- \subsection{Number of clusters}
+ \subsection{Number Of Clusters}
 Sometimes it may be required to have a preset (target) number of clusters. The InfoMap algorithm contains a \emph{preffered number of modules} parameter which can either terminate the algorithm early, should the number be reached (or continue splitting if it has not). Since we are interested in merging smaller numbers of nodes, this can be seen as a useful parameter to have. However, in selecting a number too large, (e.g. 200 clusters, which should result in groups of 2-3 nodes), it is seen that much of the hierarchical information from the network is lost, \autoref{fig:im200}. It is for this reason that forcing the number of nodes without reason will not be attempted.
 
 
@@ -254,12 +254,12 @@ Sometimes it may be required to have a preset (target) number of clusters. The I
 
 
 
-  \section{Reduction through Lifetime}\label{sec:lifetime}
+  \section{Reduction Through Lifetime}\label{sec:lifetime}
   In \autoref{sec:chemlump} is was mentioned that a species lifetime could be used to decide on which species may be lumped together. Here \cite{lifetime} found that large groups of species within the MCM had similar or identical lifetimes and that in many cases this could be attributed to similar/identical rate coefficients for the same type of reaction. This was then used as a methodology for automatic mechanism reduction.
 
   This section describes a method in which this may be performed without prior knowledge of the mechanism. Natural language processing tools are applied first to determine species of a similar lifetime across a range of timesteps (\autoref{sec:euclid}), and then their standardised temporal profiles are compared (\autoref{sec:cosine}). However, we first begin by defining the lifetime of a species.
 
-  \subsubsection{Calculating the lifetime}
+  \subsubsection{Calculating The Lifetime}
   The chemical lifetime is of a species is defined by calculating the lifetime of a species against the loss of individual reactions:
 
 
@@ -311,10 +311,10 @@ Where $i$ corresponds to the index of species A in the matrix, since this is a l
 
 
 
-  \subsection{Comparing Magnitude and Direction}
+  \subsection{Comparing Magnitude And Direction}
 The most significant changes of a reaction rate within a simulation are due to photolytic reactions. Here the solar zenith angle determines the amount of radiation which can reach (and excite) a molecule. Since the chemical lifetime of a species takes into account its loss due to other reaction, such temporal changes in reaction rates need to be taken into account. The simplest method is to construct a vector for each species, showing how their lifetimes change over time. In doing so, we can apply natural language processing techniques, such as euclidean (magnitude) and cosine (angle) distance, co compare them.
 
-  \subsubsection{Euclidian distance} \label{sec:euclid}
+  \subsubsection{Euclidian Distance} \label{sec:euclid}
   This is the simplest method of vector comparison and works by calculating the distance between all points in two vectors. For the vectors
 
   \begin{equation}
@@ -394,7 +394,7 @@ The most significant changes of a reaction rate within a simulation are due to p
    The agreement of both metrics suggests a similarity between the lifetime values and their change in time for simulation. This is in agreement of with the $x-y$ plot of the species. In selecting species that are part of the same initial cluster and have a high agreement between both similarities, it is possible to gauge the suitability for two species to be lumped together.
 
 
-  \subsection{A quick concentration comparison}
+  \subsection{A Quick Concentration Comparison}
   Having described how the similarity distances work, \autoref{fig:metric} showed the locations of the best and worst matched pairs. This subsection looks a the differences between these using a log10 ensemble of the concentrations for the 300 simulations used in the results section. \autoref{fig:bestworst}(a,b) show that the best matching pairs contain an easy to match flat decay curve, with the worst \autoref{fig:bestworst}(c,d) often containing a combination of a species which decays with one which undergoes a photolytic reaction.
 
 
@@ -436,7 +436,7 @@ The most significant changes of a reaction rate within a simulation are due to p
 
 In order to get a representation of the mechanism, we run 300 randomly initiated scenarios (\autoref{sec:lumpinputs}). The experimental setup is one such that it is possible to add more data points at a later date. From each simulation, the no diagonal elements of the jacobian are used to construct a graph representative of the aggregated hourly means of the simulation output. Each of these graphs is then run through the infomap algorithm, and a grouping/clustering produced. Each infomap is run 100 times, where the result with the best fit (shortest code length) is taken - this is an optional parameter on the algorithm.
 
-\subsection{The co-grouping network}
+\subsection{The Co-Grouping Network}
 
 To aggregate the groupings produced by each algorithm an $n\times n$ matrix is created for each of the ($n$) species in the mechanism. This is treated as a relational graph matrix. If species A is in the same group as species B, then a link (or value +1) is added to the [A,B] (A\ce{->}B) and [B,A] (B\ce{->}A) column. Using this matrix format, it is possible to generate a graph showing the relationship between species that were clustered in the same group.
 
@@ -470,7 +470,7 @@ In the context of this section, we select only relationships that appear in over
 \label{fig:infomapprune}
 \end{figure}
 
-\subsection{Comparing daytime and nighttime groups}
+\subsection{Comparing Daytime And Nighttime Groups}
 In determining a group of species which are commonly clustered together in most simulation results, we are next interested in seeing if these groups change with day or night.
 
 To do this, we use an alluvial diagram \citep{alluvial}. This is a cross between a parallel-line plot and a Sankey diagram and is particularly suitable for showing the changes in clusters within a temporal network.
@@ -488,7 +488,7 @@ In taking the common clusters formed at midnight (\autoref{fig:alluvial} left)  
 
 
 
-\subsection{Determining cluster suitabiltiy}
+\subsection{Determining Cluster Suitabiltiy}
 Having selected clusters that appear for most graphs in the network, it is now important to assess the suitability of each node for being lumped together. Using a normalised similarity matrix, we extract the values for each of the lumped groups, \autoref{tab:lumppair}. Here the best values are provided by the PECOH and DIEK species, \autoref{fig:lumppair}a. These both have linear decaying concentrations within the same order of magnitude. This is probably due to PECOH being the only precursor to DIEK, where DIEK accounts for 0.436\% of its total products. This makes them a suitable candidate for lumping.
 \ce{HOCH2CO3H} and \ce{HOCH2CO3} make the worst possible lumping combinations. This is because the radical \ce{HOCH2CO3} can react with many of the inorganics, while \ce{HOCH2CO3H} can only dissociate into formaldehyde or react with OH to reproduce HOCH2CO3. Although these species both have differing profiles, of several orders of magnitude difference, their cyclic nature \ce{HOCH2CO3H <=>[OH][HO2] HOCH2CO3} most likely proved to trap the `flow' of the network, producing the cluster. Additionally there are also several clusters consisting of \ce{(N)RIxxOOH} and \ce{(N)RIxxO2} species. These are generally species formed from iso-alkanes (\autoref{appendix:correspondance}), and both produce acetaldehyde (\ce{CH3CHO}) as a product. Here the peroxy radical (\ce{R-O2}) produces a diurnal profile. Regardless of this, the cosine similarity is still relatively small. This may be attributed to the `flat' periods of slow decay that is experienced at nighttime (due to the reduction of available \ce{HO2} and \ce{NO}) which follow the loss trend of the peroxide (\ce{R-OOH}) species. Since OH addition and H-abstraction are both fast reactions these often form species with similar CRI numbers, the clustering algorithm often identifies peroxides and their peroxy radical equivalent as a group, \ce{RO2 <->[HO2][OH] ROOH}. \\
 

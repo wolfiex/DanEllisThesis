@@ -234,7 +234,7 @@ In chemistry the shape, phase and electron occupancy of an atom may be described
 
 % [ref fae others... ]
 
-\subsubsection{Molecular Access System (Maccs)}
+\subsubsection{Molecular Access System (MACCS)}
 MACCS keys are a 164\footnote{They are 166-bit keys, although there is no real agreement to what the 44th keys' purpose is, and therefore it is often omitted. Within RDKIT this is denoted by a $?$ \citep{rdkitcode}.} bit structural keys formulated through answering a series of structure-related questions. Developed by MDL Information Systems \citep{maccs}, their main purpose lies in being a SMILES Arbitrary Target Specification (SMARTS) system for substructure searching. However, their distinct structure key format makes them highly suitable for similarity detection. In many cases, the optimised version of MACCS keys is cited (\citep{optimised}), although most use cases exploit a variation of the undocumented 166bit keys. We use the implementation presented by \citep{rdkit,rdkitcode} for all molecular fingerprints in our work.
 
 
@@ -247,7 +247,7 @@ In this section, we begin by explaining the data preparation required for dimens
 Real-world data is rarely preformatted in such a way that it can be used directly within a computational model. Often values need to be cleaned and corrected to be fit for purpose. In the interest of completeness, the two main methods of data adjustment for machine learning are outlined below. These are (i) normalisation and (ii) standardisation.
 
 
-\subsubsection*{(i) Normalisation}
+\subsubsection*{(I) Normalisation}
 In the data is without (dimensionless) or of a single unit, it is possible to rescale the data between a range - most commonly {0,1}. In doing so, it is possible to interpret the importance of value in contrast to the largest recorded value. This gives us a percentage scale spanning the range of the data. Such a range is useful in the definition of colourmaps and describing the importance of value relative to the dataset.
 To rescale a dataset, we shift the minimum value to zero, then divide by the new maximum of the dataset (Note this is equivalent to the range of the unshifted dataset.)
 
@@ -258,7 +258,7 @@ To rescale a dataset, we shift the minimum value to zero, then divide by the new
 
 
 
-\subsubsection*{(ii) Standardisation}
+\subsubsection*{(Ii) Standardisation}
 If the components we wish to compare are of different units or are expressed with a different scale, normalising them can not produce meaningful data. Instead, it is possible to standardise the data by looking at each points deviation from the mean. Here the variation of the mean for a dataset is divided by the standard deviation to produce a value between \{-1,1\}, \autoref{eqn:z}. In statistics this is known as the `z-score'\footnote{Possibly because of the American spelling of standardi\textbf{Z}ation?}
 
 \begin{equation}
@@ -267,7 +267,7 @@ If the components we wish to compare are of different units or are expressed wit
 \end{equation}\\
 
 
-\subsection{Principle Component Analysis (PCA)}
+\subsection{Principle Component Analysis (Pca)}
 One of the most well-known dimensionality reduction methods is the determination of the principal components through the use of Principal Component Analysis (PCA). PCA increases the readability of a dataset by creating a set of new uncorrelated variables which maximise the variance \citep{pcareview}.
 
 
@@ -505,7 +505,7 @@ Once we have constructed our random path `sentences' (e.g. \autoref{eqn:w2varrow
 % http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
 %
 
-\subsection{Summary of Dimensionality reduction methods}
+\subsection{Summary Of Dimensionality Reduction Methods}
 There exist several methods of reducing a complex dataset into a smaller one. PCA is the simplest method to understand but is constrained to linear decompositions. AutoEncoders can have both a linear and non-linear response, based on the activation functions that they use, and t-SNE applies a non-linear grouping which mimics a complete force-directed graph.
 
 Having defined each method, we next explain how they will be evaluated (\autoref{sec:drvis}), before applying them to the MCM in \autoref{eqn:w2varrow}.
@@ -769,7 +769,7 @@ In this final subsection, we look at the composition of different clusters withi
 
 
 
-\subsection{Bi / Tri cluster groups } \label{sec:bigroups}
+\subsection{Bi / Tri Cluster Groups } \label{sec:bigroups}
 
 Using the DR output where only two/three groups are located by the clustering algorithms we have (\autoref{fig:biMACCS} and \autoref{fig:biN2V}). In exploring the MACCS key input for the PCA and t-SNE DR algorithms (\autoref{fig:biMACCS}) we find that for the cumulative importance bar charts we know that the existence of Nitrates is vital in the split determining which group a species falls into. This manifests itself as having a single cluster containing PAN and Nitrate species, with others not. In the t-SNE plot (\autoref{fig:biMACCS}b) we see that there exists a third group which is missing both Aldehyde and PAN functionalisation for each species. This is shown by the teal colour in \autoref{fig:tsnevis}c and resides between the Nitrogen-containing and Nitrogen-deficient groups.
 
@@ -805,7 +805,7 @@ Using the DR output where only two/three groups are located by the clustering al
 
 
 
-\subsubsection{MultiCluster groups}\label{sec:multigroups}
+\subsubsection{Multicluster Groups}\label{sec:multigroups}
 
 Next, we observe several multi clustered examples from all DR algorithms. We start with \autoref{fig:pcagraphcase} where the PCA algorithm has generated an extensive collection of points in an area. Unsurprisingly the clustering algorithm has failed to identify separate groups (as there is only one), and instead partitioned the data into six groups. Although not ideal, this still has its use in determining how species have been partitioned temporally. Here we find that nitrogen-containing species are positioned on the right side of the graph, and aromatic species are in the bottom half. \ce{RO2} containing species span the entirety of \autoref{fig:pcagraphcase}, but increase towards the left direction. This shows that although PCA was unable to separate the chemical species of the MCM into groups from the fingerprint input, it still presents patterns within the data such that the arrangement of groups can be seen when querying specific areas.
 
