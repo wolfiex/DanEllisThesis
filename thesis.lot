@@ -1,0 +1,12 @@
+\gdef \the@ipfilectr {@-1}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces A set of regular expressions that are used to determine the number of occurrences of a functional group within a SMILES string. These were written to scan the SMILES string an match specific patterns corresponding to each functional group. A similar process is used within \citep {rdkitcode} to construct MACCS keys (discussed later).\relax }}{6}{table.caption.6}
+\contentsline {table}{\numberline {1.2}{\ignorespaces The inputs to the PCA dimensionality reduction algorithm sorted by the best obtained silhoette coefficient. \relax }}{35}{table.caption.26}
+\contentsline {table}{\numberline {1.3}{\ignorespaces The inputs to the AutoEncoder dimensionality reduction algorithm sorted by the best obtained silhoette coefficient. \relax }}{35}{table.caption.27}
+\contentsline {table}{\numberline {1.4}{\ignorespaces The inputs to the t-SNE dimensionality reduction algorithm sorted by the best obtained silhoette coefficient. \relax }}{35}{table.caption.28}
+\gdef \the@ipfilectr {}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

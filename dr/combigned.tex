@@ -2,7 +2,7 @@
 \section{Introduction}
 
 \subsection{Historical Significance}
-The established process of trial and error has always underpinned our survival \citep{TrialandError}. Babies are born to rely on a set of sensory reflexes and a framework for physical reasoning \citep{pr}, and with these, we develop methods to navigate the influence of change within a physical, and auditory space \citep{objects}. This method of decision making is reflected in our adult lives with ideas and actions being limited in choice by our intuition and experience \citep{descartes}. In science, we apply a methodological framework consisting of a continuous assessment of scepticism, educated guessing (hypothesising) and rigorous practical testing. Specialists accrue years of practical and theoretical knowledge within a narrow field and can identify areas of potential gain and futility. Yet even with all prior experience, the discovery of new and untested techniques involve the tortuous traipsing through a sea of uncertainty. Such a methods sometimes prove fruitful, through accidental discoveries of items such as x-rays, penicillin... \citep{accidental}; finding novel applications for existing methods such as optical tweezers for chemistry or the abstract field of maths utilised by Einstein [REF], but more often than not end in the constant evolution of a pre-existing project with no apparent result.
+The established process of trial and error has always underpinned our survival \citep{TrialandError}. Babies are born to rely on a set of sensory reflexes and a framework for physical reasoning \citep{pr}, and with these, we develop methods to navigate the influence of change within a physical, and auditory space \citep{objects}. This method of decision making is reflected in our adult lives with ideas and actions being limited in choice by our intuition and experience \citep{descartes}. In science, we apply a methodological framework consisting of a continuous assessment of scepticism, educated guessing (hypothesising) and rigorous practical testing. Specialists accrue years of practical and theoretical knowledge within a narrow field and can identify areas of potential gain and futility. Nevertheless, even with all prior experience, the discovery of new and untested techniques involve the tortuous traipsing through a sea of uncertainty. Such methods sometimes prove fruitful, through accidental discoveries of items such as x-rays, penicillin... \citep{accidental}; finding novel applications for existing methods such as optical tweezers for chemistry or the abstract field of maths utilised by Einstein [REF], but more often than not end in the constant evolution of a pre-existing project with no apparent result.
 
 \subsection{Theory And Simulation In Science}
 
@@ -11,9 +11,9 @@ a "correct" one by excessive elaboration'' - \cite{allmodels}. As our level of a
 
 
 \subsection{Chapter Aims}
-In \autoref{ch1}, we looked at visual representation as a way of better understanding complex systems. \autoref{ch2} showed that the chemical properties could be inferred (visually) from the node-link graph structure of a mechanism. Similarly, \autoref{ch3} and \autoref{ch4} located the presence of important species and clusters of similar properties by applying mathematical algorithms to the graph network. As opposed to attempting to visualise complex data, this chapter looks at learning the structure of a chemical species and simplifying it into two dimensions. Here it is possible to extract key features of like-groups through the use of vector clustering, which unlike the graph clustering in \autoref{ch4} works by determining the density between points on a plane.
+In \autoref{ch1}, we looked at visual representation as a way of better understanding of complex systems. \autoref{ch2} showed that the chemical properties could be inferred (visually) from the node-link graph structure of a mechanism. Similarly, \autoref{ch3} and \autoref{ch4} located the presence of important species and clusters of similar properties by applying mathematical algorithms to the graph network. As opposed to attempting to visualise complex data, this chapter looks at learning the structure of a chemical species and simplifying it into two dimensions. Here it is possible to extract key features of like-groups through the use of vector clustering, which unlike the graph clustering in \autoref{ch4} works by determining the density between points on a plane.
 
-The chapter begins with the introduction of the chemical system, and the various methods for representing species structure within it (\autoref{sec:drinput}). Next, we define the dimensionality reduction methods, which are to be used to simplify the inputs above (\autoref{sec:dr}). This is followed by a brief overview of the visualisation methodology (\autoref{sec:visdr}). Finally, all three sections are combined to produce a set of result and conclusions about the use of DR to identify species structure. The aim of this chapter is to acess the efficiency of machine learnt (dimensionality reduced) models in simplifying chemical structure, and decide upon the best input for future deep learning tasks (e.g. for mechanism construction and emulation).
+The chapter begins with the introduction of the chemical system, and the various methods for representing species structure within it (\autoref{sec:drinput}). Next, we define the dimensionality reduction methods, which are to be used to simplify the inputs above (\autoref{sec:dr}). This is followed by a brief overview of the visualisation methodology (\autoref{sec:visdr}). Finally, all three sections are combined to produce a set of result and conclusions about the use of DR to identify species structure. The aim of this chapter is to access the efficiency of a machine learnt (dimensionality reduced) models in simplifying the chemical structure, and decide upon the best input for future deep learning tasks (e.g. for mechanism construction and emulation).
 
 
 
@@ -27,7 +27,7 @@ The MCM database provides species information in the form of a species `SMILES' 
 
 
 \subsection{Manual Categorisation}
-Reactions within the MCM are determined by a set of rules (\autoref{fig:protocol}). These mimic the process a chemist may use to build a species degregation mechanism and often rely on understanding the bond availability and functionalisation of a species. Since the present functional groups are the benchmark of whether a DR algorithm has successfully separated species structure, it makes sense to run a unit test using the known functional groups of a species as the input.
+Reactions within the MCM are determined by a set of rules (\autoref{fig:protocol}). These mimic the process a chemist may use to build a species degradation mechanism and often rely on understanding the bond availability and functionalisation of a species. Since the present functional groups are the benchmark of whether a DR algorithm has successfully separated species structure, it makes sense to run a unit test using the known functional groups of a species as the input.
 
 To generate the functional groups the regular expressions in \autoref{tab:fngroups} are used\footnote{To see the structure of each functional group type, go to \autoref{appendix:fngroups}.} on the SMILES strings (described in \autoref{sec:SMILES}) for each species. In extracting the functional groups, we can plot the likeliness a species with a certain group is likely to have another using a chord diagram - \autoref{fig:covermcm}. Since most species contain a multitude of functional groups, the separation of these into `tidy' clustered groups seems unlikely.
 
@@ -70,7 +70,7 @@ Peroxyacyl rad & \verb! \\ w\(=O\)O\[O\.{0,1}\]!\\&\\
 
     \end{tabular}
 
-    \caption{ A set of regular expressions that are used to determine the number of occurrences of a functional group within a SMILES string. These were written to scan the SMILES string an match specific patterns corresponding to each functional group. A similar process is used within \citep{rdkitcode} to construct MACCS keys (discussed later).}
+    \caption{ A set of regular expressions that are used to determine the number of occurrences of a functional group within a SMILES string. These were written to scan the SMILES string a match specific patterns corresponding to each functional group. A similar process is used within \citep{rdkitcode} to construct MACCS keys (discussed later).}
     \label{tab:fngroups}
 \end{table}\footnote{Check the correct table has been used.}
 
@@ -87,13 +87,13 @@ Peroxyacyl rad & \verb! \\ w\(=O\)O\[O\.{0,1}\]!\\&\\
 
 
 \subsection{Tokenization}
-As computer algorithms are unable to understand words or their meaning, we have to first categorise the data into groups. Tokenisation is the conversion of a string into characters and representing them with a numerical equivalent. In doing so, a string of characters can be converted into a numerical vector, allowing for its representation in a latent vector space.
+As computer algorithms are unable to understand words or their meaning, we have first to categorise the data into groups. Tokenisation is the conversion of a string into characters and representing them with a numerical equivalent. In doing so, a string of characters can be converted into a numerical vector, allowing for its representation in a latent vector space.
 Within our input selection, we have two sets of inputs we can convert. These are the species names, and their SMILES string representation.
 
 
 
 \subsubsection{Species Names}
-In \autoref{ch4} it was shown that the dedicated species names for species in the CRI mechanism were often representative of their structural properties. This also applies for the MCM, where an intuitive naming convention following the FACSIMILIE format is used. This is often derived as part of the construction protocol, where a species names reflect its own, or its precursor's structure (which it will have at least in-part inherited).
+In \autoref{ch4} it was shown that the dedicated species names for species in the CRI mechanism were often representative of their structural properties. This also applies for the MCM, where an intuitive naming convention following the FACSIMILE format is used. This is often derived as part of the construction protocol, where a species names reflect its own, or its precursor's structure (which it will have at least in-part inherited).
 
 Although this is not the most robust method of defining the structure, it allows for a straightforward test of the algorithms, for which the user can quickly compare the human-readable output.
 
@@ -207,7 +207,7 @@ As machine learning algorithms only use vectors as an input, it is possible to d
 
 
 \subsubsection{Node Embeddings (Node2Vec)}\label{sec:n2vec}
-\autoref{ch2} and \autoref{ch3} showed that the underlying structure of a chemistry mechanism graph contains information about the species and reactions within it.  Here as a species is oxidised the O-C ratio increases. Long chain VOCs are likely to fragmet into two radicals, producing smaller more oxidised species. Eventually this process leads to the production of carbon dioxide and water. \autoref{fig:vk} shows a subset of the MCM representing the chemistry in Beijing. Node colour and size show the increase of oxidation as species head towards CO at the centre) - lighter colour and larger node.
+\autoref{ch2} and \autoref{ch3} showed that the underlying structure of a chemistry mechanism graph contains information about the species and reactions within it.  Here as a species is oxidised the O-C ratio increases. Long-chain VOCs are likely to fragment into two radicals, producing smaller more oxidised species. Eventually, this process leads to the production of carbon dioxide and water. \autoref{fig:vk} shows a subset of the MCM representing the chemistry in Beijing. Node colour and size show the increase of oxidation as species head towards CO at the centre) - lighter colour and larger node.
 
 This type of structural information can be extracted through the use of a natural language processing package capable of transforming a graph into a vector - node2vec \citep{node2vec}. Since this may also be used for dimensionality reduction, it is described within the next section (\autoref{sec:n2v}).
 
@@ -215,7 +215,7 @@ This type of structural information can be extracted through the use of a natura
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{4fig/graph/oxidised_ratio.png}
-  \caption{\textbf{A graph of an MCM subset representing the chemistry within Beijing.} Here colours show the increase of \ce{O-C} ratio as species are oxidised (lighter). All emitted species ultimately tend towards carbon monoxide which is at the centre of the graph. Node clusters symbolise groups of species which react more between themselves and less with others (This graph only represents the mechanism structure).}
+  \caption{\textbf{A graph of an MCM subset representing the chemistry within Beijing.} Here colours show the increase of \ce{O-C} ratio as species are oxidised (lighter). All emitted species ultimately tend towards carbon monoxide, which is at the centre of the graph. Node clusters symbolise groups of species which react more between themselves and less with others (This graph only represents the mechanism structure).}
   \label{fig:vk}
 \end{figure}
 
@@ -227,10 +227,10 @@ This type of structural information can be extracted through the use of a natura
 
 In the field of chemical informatics, molecular fingerprints (or structural keys) are used to encode and query structural properties of species. Their binary representation makes them suitable for dimensionality reduction and the exploration of chemical space (a type of property space constructed using pre-determined features and boundary conditions).
 
-Here species properties are often split into structural and psyico-chemical groups - which has uses such as the discovery of natural analogues (which circumvent problems such as intolerances in medicine\footnote{Certain molecules can cause allergies in people, but whist their natural analogues do not. } \citep{analog}). Although there exist many different types of molecular fingerprints, the two main ones that will be explored are molecular quantum numbers (MQN) and the molecular access system (MACCS).
+Here species properties are often split into structural and psyico-chemical groups - which has used such as the discovery of natural analogues (which circumvent problems such as intolerances in medicine\footnote{Certain molecules can cause allergies in people, but whist their natural analogues do not. } \citep{analog}). Although there exist many different types of molecular fingerprints, the two main ones that will be explored are molecular quantum numbers (MQN) and the molecular access system (MACCS).
 
-\subsubsection{Molecular Quantum Numbers (Mqn)}
-In chemistry the shape, phase and electron occupancy of an atom may be described through the use of four quantum numbers: the $n$ principle quantum number, $I$ angular momentum quantum number, $M_i$ magnetic quantum number and $M_s$ spin quantum number. The rationalisation of elements based on their structure, and by consequence reactivity, has led to the most iconic tool of the modern-day chemist - the periodic table, where increasing atomic numbers follow the principal quantum number \citep{periodic}. In representing a molecule as a set of 42 quantum numbers, MQN fingerprints produce a multi-dimensional mapping of atom, bond, polarity and topology count \citep{MQN}.
+\subsubsection{Molecular Quantum Numbers (MQN)}
+In chemistry the shape, phase and electron occupancy of an atom may be described through the use of four quantum numbers: the $n$ principle quantum number, $I$ angular momentum quantum number, $M_i$ magnetic quantum number and $M_s$ spin quantum number. The rationalisation of elements based on their structure, and by consequence reactivity, has led to the most iconic tool of the modern-day chemist - the periodic table, where increasing atomic numbers follow the principal quantum number \citep{periodic}. In representing a molecule as a set of 42 quantum numbers, MQN fingerprints produce a multi-dimensional mapping of an atom, bond, polarity and topology count \citep{MQN}.
 
 % [ref fae others... ]
 
@@ -248,8 +248,8 @@ Real-world data is rarely preformatted in such a way that it can be used directl
 
 
 \subsubsection*{(i) Normalisation}
-In the data is without (dimensionless) or of a single unit, it is possible to rescale the data between a range - most commonly {0,1}. In doing so it is possible to interpret the importance of value in contrast to the largest recorded value. This gives us a percentage scale spanning the range of the data. Such a range is useful in the definition of colourmaps and describing the importance of value relative to the dataset.
-To rescale a dataset we shift the minimum value to zero, then divide by the new maximum of the dataset (Note this is equivalent to the range of the unshifted dataset.)
+In the data is without (dimensionless) or of a single unit, it is possible to rescale the data between a range - most commonly {0,1}. In doing so, it is possible to interpret the importance of value in contrast to the largest recorded value. This gives us a percentage scale spanning the range of the data. Such a range is useful in the definition of colourmaps and describing the importance of value relative to the dataset.
+To rescale a dataset, we shift the minimum value to zero, then divide by the new maximum of the dataset (Note this is equivalent to the range of the unshifted dataset.)
 
 \begin{equation}
     n(x_i) = \frac{x_i - \min_x }{\max_x - \min_x}
@@ -288,7 +288,7 @@ A more straightforward interpretation of this would be to adjust the direction o
 \emph{\textbf{Note:} The basic statistics/mathematics required to understand this section is shown in \autoref{apendix:pca}. Please read this if you are not familiar with any of the terms below.
 }
 
-The mathematics behind PCA consists of first calculating the covariance matrix - an $n \times n$ matrix outlining how strongly each variable changes with every other. Using this we can calculate both the eigenvalues and eigenvectors of the matrix \footnote{These need to be unit vectors, although most packages already do this out of the box.}. This can be done using a computational package such as numpy or scipy \citep{numpy,scipy}.
+The mathematics behind PCA consists of first calculating the covariance matrix - a $n \times n$ matrix outlining how strongly each variable changes with every other. Using this we can calculate both the eigenvalues and eigenvectors of the matrix \footnote{These need to be unit vectors, although most packages already do this out of the box.}. This can be done using a computational package such as numpy or scipy \citep{numpy,scipy}.
 
 We can now sort the eigenvector columns by influence using their eigenvalues—this way a feature dataset can be produced by removing vectors of low importance. The final feature dataset can now be transposed and multiplied by the transpose of the original dataset. This results in an output dataset containing each principal component of the desired dimension.
 
@@ -365,7 +365,7 @@ The optimisation of this equation is achieved through the use of \emph{gradient 
 
 \subsection{Pca Vs t-SNE, A Quick Comparison.}
 
-PCA has been around for much longer than t-SNE, and its uses are well established within the scientific community - an example of this give by \cite{wyche} where mechanisms can be separtaed into different pathways (on account of the underlying chemistry) and \cite{kinetics} where sensitivity analysis is used within mechanism reduction. It is fast, simple and easy to use and very intuitive. The PCA algorithm works by creating a lower-dimensional embedding which best preserves the overall variance of the dataset. Clusters created from the algorithm are grouped in ways, such that they retain the highest variance of the data.
+PCA has been around for much longer than t-SNE, and its uses are well established within the scientific community. In essence, an example of this give by \cite{wyche} where mechanisms can be separated into different pathways (on account of the underlying chemistry) and \cite{kinetics} where sensitivity analysis is used within mechanism reduction. It is fast, simple and easy to use and very intuitive. The PCA algorithm works by creating a lower-dimensional embedding which best preserves the overall variance of the dataset. Clusters created from the algorithm are grouped in ways, such that they retain the highest variance of the data.
 
 The main drawback of PCA is that it is a linear projection. If our data happened to be in a `swiss roll' (spiral) pattern, we would not be able to `unroll' it. The reason for this is that the PCA algorithm works by viewing the data from different perspectives, much like casting a shadow from various directions. With such an example, there is no one way we can do this that unfurls the spiral.
 
@@ -419,13 +419,13 @@ Auto-encoders are a subclass of neural networks with primary use in compressing 
 
 
 
-There are two features of an autoencoder that make it a particularly powerful tool. The first is the ability to sample your latent space using the decoder. The implications of this are that we can establish features that correspond to gaps between our data points - which can have its application if the data used is sparse or incomplete. Next comes the inherent non-linearity of the model. As an autoencoder is just a neural network, the amount of information passed through each link between layers is governed by an activation function. Should this activation function be linear, the reduced dimension will be much akin to a PCA decomposition. Where PCA reduces the dimensions of a dataset by discarding those with little effect on the variance, an autoencoder opts to combine it. Here the entirety of the dataset remains encoded within the links of the AE network. To decide how data flows along the edges of the network, a series of threshold (activation) functions are used for each layer. These are described in \autoref{appendix:activation}.
+There are two features of an autoencoder that make it a particularly powerful tool. The first is the ability to sample the latent space using the decoder. The implications of this are that we can establish features that correspond to gaps between our data points - which can have its application if the data used is sparse or incomplete. Next comes the inherent non-linearity of the model. As an autoencoder is just a neural network, the amount of information passed through each link between layers is governed by an activation function. Should this activation function be linear, the reduced dimension will be much akin to a PCA decomposition. Where PCA reduces the dimensions of a dataset by discarding those with little effect on the variance, an autoencoder opts to combine it. Here the entirety of the dataset remains encoded within the links of the AE network. To decide how data flows along the edges of the network, a series of threshold (activation) functions are used for each layer. These are described in \autoref{appendix:activation}.
 
 
 
 \subsubsection{Demonstration Of Non-Linear Activation Functions}
 
-To demonstrate the effect of these features we take a sample isopleth of Methane, NOx and Ozone from 300 box model simulations and reduce it to two dimensions. This is then reconstructed back into three dimensions using the DR algorithms.
+To demonstrate the effect of these features, we take a sample isopleth of Methane, NOx and Ozone from 300 box model simulations and reduce it to two dimensions. This is then reconstructed back into three dimensions using the DR algorithms.
 \autoref{fig:aeiso} shows the difference between the original dataset (\autoref{fig:iorig}) and that of the PCA (\autoref{fig:ipca}) and AutoEncoder (\autoref{fig:iae}) reconstructions. Here we see a loss in the non-linearity of the original data for the PCA reconstruction. However, the use of a non-linear (tanh) activation function within AutoEncoder produces a result much closer to the original. Use of a linear activation function, however, produces a similar result to the PCA algorithm.
 
 \begin{figure}[H]
@@ -464,7 +464,7 @@ Finally, Node2Vec is an embedding algorithm designed to generate vector represen
 \end{figure}
 
 
-The process of converting the graph structure (\autoref{fig:n2vprocess}) into a numerical vector node embedding starts by taking a series of $2^{nd}$ order random walks. These describe the neighbourhood of a node in the form of a set of random walk paths, much in the same way words are dependant on their neighbours within a sentence- for example in the OH initiated degregation of isoprene in the MCM result in the following path along the mechanism graph.:
+The process of converting the graph structure (\autoref{fig:n2vprocess}) into a numerical vector node embedding starts by taking a series of $2^{nd}$ order random walks. These describe the neighbourhood of a node in the form of a set of random walk paths, much in the same way words are dependant on their neighbours within a sentence- for example in the OH initiated degradation of isoprene in the MCM result in the following path along with the mechanism graph.:
 
 
 \begin{equation}
@@ -477,7 +477,7 @@ This methodology allowed for the use of word2vec algorithm, converting the walk 
 
 
 \subsubsection{Sentence Construction By Sampling Of A Network}
-The probability and path (as described above) depend both on a set of arguments and a random seed\footnote{Computers can never generate truely random numbers. If we want reproducability within models the random number generator can be initated with the same seed.} provided to the model.
+The probability and path (as described above) depend both on a set of arguments, and a random seed\footnote{Computers can never generate truly random numbers. If we want reproducibility within models, the random number generator can be initiated with the same seed.} provided to the model.
 
 \begin{figure}[H]
   \centering
@@ -489,7 +489,7 @@ The probability and path (as described above) depend both on a set of arguments 
  \autoref{fig:n2vedge} shows the return and input parameters ($p\ \&\ q$) determine how fast we explore the network and our probability to leave the neighbourhood. In a system, where the previous path is from $t$ to $v$, we may calculate the probability of returning to $t$ as $1/p$, going to a mutual node connected between $t$ and $v$ as 1, and viewing a new node as $1/q$.
 If $q>1$ we have a high probability to end up at nodes close to $t$, and with $q<1$ we are likely to explore other nodes. Additionally if we chose $p> \max{q,1}$ we are less likely to return to an already visited node ($p < \min{q,1}$ is likely to generate a backwards step). Since we wish to generate a `local' view, but do not wish to return to $t$ we select  $q \ge 1$ and $p > q$ our parameters as  $p = 2.0,q=1.1$.  In the case of a weighted graph (something that we are \textit{not} exploring within this chapter) the resultant $alpha$ value calculated is further multiplied by the edge weight.
 
-To generate the node2vec embeddings for each species we use the python2 code provided by the original paper by \cite{node2vec} with a set of 50000 random walks, each of length 9 product/reaction generations. The reasoning behind this is that we have a large graph, with a power-law like structure (where species are often heavily connected, \autoref{ch3}).
+To generate the node2vec embeddings for each species, we use the python2 code provided by the original paper by \cite{node2vec} with a set of 50000 random walks, each of length 9 product/reaction generations. The reasoning behind this is that we have a large graph, with a power-law like structure (where species are often heavily connected, \autoref{ch3}).
 
 \textit{NOTE: This process takes over a week to compute (in serial), and then the binary file containing all walks in character form approaches 10 GB, for the complete MCM. }
 
@@ -522,7 +522,7 @@ Since the different DR algorithms return data on various scales, comparison betw
 
 
 \subsection{Exposing Overlapping Data}
-If the nodes within a tight-knit cluster overlap, this can cause obfuscate the results and limit the user's ability to select them. As an initial test, node sizes can be reduced. However, this may often result in points too small to pick. Another solution is to create a force-directed graph where each point is strongly attracted to their initial position. Here we can apply collision detection, while still preserving the overall grouping of nodes within a cluster - a technique that was seen in \autoref{ch4}.
+If the nodes within a tight-knit cluster overlap, this can cause obfuscate the results and limit the user's ability to select them. As an initial test, node sizes can be reduced. However, this may often result in points too small to pick. Another solution is to create a force-directed graph where each point is strongly attracted to its initial position. Here we can apply collision detection, while still preserving the overall grouping of nodes within a cluster - a technique that was seen in \autoref{ch4}.
 
 
 \subsection{Gooey Effect (Gaussian Blur)}
@@ -535,7 +535,7 @@ Taking a quote from \cite{lessmore}:
 \subsection{Four Colours Theorem}\label{sec:4col}
 When plotted, the number of clusters detected often exceeds the number of categorical colours available. In cartography, it has been noted that the colouring of neighbouring polygons should at most take four colours. This is the origin of the four colours theorem \citep{fourcolour}, of which a greedy implementation is applied.
 
-The aim of this is to show item boundaries (for instance countries, or in our case clusters) while reducing ambiguity (if, say, two neighbours have the same colour). The algorithm uses the Delaunay tesselation from DataDrivenDocuments.js (d3js) \citep{d3js}. This partitions our plane into polygon-regions, each of which includes boundaries at the furthest distance from each point (Voronoi cells) \citep{delaunay}. First, we chose a random cell and assign it a colour.
+The aim of this is to show item boundaries (for instance countries, or in our case clusters) while reducing ambiguity (if, say, two neighbours have the same colour). The algorithm uses the Delaunay tesselation from DataDrivenDocuments.js (d3js) \citep{d3js}. This partitions our plane into polygon-regions, each of which includes boundaries at the furthest distance from each point (Voronoi cells) \citep{delaunay}. First, we chose a random cell and assigned it a colour.
 Next, all its neighbours are recursively iterated, giving them the lowest possible colour in a list, which does not match any of their neighbours. Although such a greedy approach does not produce an optimum result, it allows for the colouring of data with $\le 5$ distinct colours, as is shown in \autoref{fig:4col}.
 
 
@@ -557,7 +557,7 @@ The previous section discussed methods of visualising the reduced data for use w
 
 
 \subsection{Automated Selection Of Clusters}\label{sec:drclustt}
-    When it comes to clustering data points in a dataset, there exist a range of methods which may accomplish a task, \autoref{fig:clustereval}. Most often, the k-means \citep{kmeans}, is used as it is fast and straightforward to understand. However, its linear method of partitioning cannot capture the splits between non-linear relationships of real data. The other problem is that an estimate for the number of expected clusters is required - something that is often unknown without prior understanding of the data. When this is the case, often it is easier to select the nodes with interactivity manually.
+    When it comes to clustering data points in a dataset, there exist a range of methods which may accomplish a task, \autoref{fig:clustereval}. Most often, the k-means \citep{kmeans} is used as it is fast and straightforward to understand. However, its linear method of partitioning cannot capture the splits between non-linear relationships of real data. The other problem is that an estimate for the number of expected clusters is required - something that is often unknown without prior understanding of the data. When this is the case, often it is easier to select the nodes with interactivity manually.
 
 In contrast, density-based clustering techniques such as GMM (\citep{scikit}) or DBSCAN (\citep{DBSCAN}) tend to be better at locating non-linear trends in the data. The DBSCAN algorithm asses the distribution of data across a specific location. This allows clusters with a high density of datapoints to be located without the need for a predefined number as an input. Another method: OPTICS (Ordering Points To Identify the Clustering Structure) \citep{optics}, shall be used\footnote{ If using Python 2, the library for this needs to be extracted from the sci-kit-learn library for python3 package and altered to run with the previous version. (See copy in attached code.)}. This is an adaptation of the DBSCAN algorithm which does not require the specification of a minimum distance between points (for the density estimate)- instead, we specify a gradient for the distribution and the minimum number of points for a cluster to be classified.
 
@@ -567,7 +567,7 @@ In contrast, density-based clustering techniques such as GMM (\citep{scikit}) or
 
          \includegraphics[width=\textwidth]{4fig/clustereval.png}
 
-        \caption{\textbf{A comparison of different clustering methods on a toy dataset.} The plot shows the performance of several vector clustering algorithms in Scikit-Learn. Cluster algorithms are represented across the horizontal axis and several types of datasets are across the vertical. Clustered groups are coloured. Source: \citep{clustereval}}
+        \caption{\textbf{A comparison of different clustering methods on a toy dataset.} The plot shows the performance of several vector clustering algorithms in Scikit-Learn. Cluster algorithms are represented across the horizontal axis, and several types of datasets are across the vertical. Clustered groups are coloured. Source: \citep{clustereval}}
         \label{fig:clustereval}
 \end{figure}
 
@@ -593,21 +593,21 @@ This gives a value $-1 \le s(i) \le 1$. Values near zero suggest overlapping clu
 
 
 \subsection{Feature Extraction}\label{sec:drfeature}
-Upon establishing a set of DR datasets, and their groups (the clusters of species they contain), it is important to evaluate what input features they represent. Rather than doing this manually we make use of Random Forests - described below.
+Upon establishing a set of DR datasets, and their groups (the clusters of species they contain), it is important to evaluate what input features they represent. Rather than doing this manually, we make use of Random Forests - described below.
 
 \subsubsection{Random Forrests}
 Random forests \citep{rfrr}, are a subset of ML algorithms called ensemble learning. This means that they train a large number of decision trees, each on a random subset of the original features. A decision tree is a tree formed from a series of conditionals\footnote{Questions with a True/False answer}, much like a perceptron network (\autoref{sec:perceptron}) with binary activation functions. Random forests introduce a level of additional randomness by selecting only a subset on which to create each decision tree. This may introduce a higher bias, but lowers the overall model variance, which creates a better (more robust) model. Such methods have been applied to replacing the computationally expensive process of chemistry integration of GEOS-Chem (a global 3D model of tropospheric chemistry) \citep{geosrf} and the prediction of global sea-surface iodine based on observations coupled with sea-surface temperature, depth, and salinity \citep{iodene}.
 
 \subsubsection{Calculating Importance Using Random Forrests}
 Since random forests are in essence a collection of decision trees, it is possible to generate a `decision tree aggregate' to visualise the ensemble structure of the random forest \citep{forrester} (\autoref{fig:iodenetree}). Alternatively, if all that is required is the relative importance of each feature, the RandomForrestClassifier from \citep{sklearn} provides a quick and easy way of understanding which features matter,
-\citep{handsonml}. This works by aggregating the weighted nodes which use a certain feature using the number of samples and then scales the result to 1. We use this method to access the overall importance of features within each DR output and identify the differences between clusters.
+\citep{handsonml}. This works by aggregating the weighted nodes which use a particular feature using the number of samples and then scales the result to 1. We use this method to access the overall importance of features within each DR output and identify the differences between clusters.
 %bagging an aggregate collection of TreeS
 
 
 \begin{figure}[H]
      \centering
          \includegraphics[width=.55\textwidth]{4fig/Oi_prj_features_of_RFR(TEMP+DEPTH+ChlrA)_for_depth_5_white.pdf}
-        \caption{\textbf{A decision tree aggrogate from a random forrest plotted with the Epiphyte version of the TreeSurgeon program \citep{forrester}.} The data originates from \cite{iodene} and the imporance of Tempearature (blue), Depth (orange) and Chlorophyll $a$ (green). It is shown that all models create their first split based on the temperature (is it $>$21 degrees). In the case in is (right branch) the sea depth is seen as the most important variable to test (is it deeper than 26m). This sort of split allow us to get a feel for which (if any) properties are dominant in partitioning the data. }
+        \caption{\textbf{A decision tree aggregate from a random forest plotted with the Epiphyte version of the TreeSurgeon program \citep{forrester}.} The data originates from \cite{iodene} and the importance of Temperature (blue), Depth (orange) and Chlorophyll $a$ (green). It is shown that all models create their first split based on the temperature (is it $>$21 degrees). In the case it is (right branch) the sea depth is seen as the most important variable to test (is it deeper than 26m). This sort of split allows us to get a feel for which (if any) properties are dominant in partitioning the data. }
         \label{fig:iodenetree}
 \end{figure}
 
@@ -622,28 +622,28 @@ Since random forests are in essence a collection of decision trees, it is possib
 
 \section{Results}\label{sec:drres}
 %
-There exist many methods to of defining the chemical structure of species within the MCM. This section evaluates the different structural representations (\autoref{sec:drinput}) and the ability of DR algorithms to separate the chemical space within which these lie into a two dimensional scatterplot.
+There exist many methods of defining the chemical structure of species within the MCM. This section evaluates the different structural representations (\autoref{sec:drinput}) and the ability of DR algorithms to separate the chemical space within which these lie into a two-dimensional scatterplot.
 
 %
-% exhibiting th defining functional groups and characteristics used for constructing the mechanism. First, we explore the distribution of clusters and the ability of different DR algorithms to visually separate various groups of chemistry (\autoref{sec:cldist}). Next, the functional groups (taken from the MCM development protocol) are explored within each DR algorithm (\autoref{sec:fsclust}). Finally, a selected example for each DR method is taken and explored in further detail (\autoref{sec:selectcomp}).
+% exhibiting the defining functional groups and characteristics used for constructing the mechanism. First, we explore the distribution of clusters and the ability of different DR algorithms to visually separate various groups of chemistry (\autoref{sec:cldist}). Next, the functional groups (taken from the MCM development protocol) are explored within each DR algorithm (\autoref{sec:fsclust}). Finally, a selected example for each DR method is taken and explored in further detail (\autoref{sec:selectcomp}).
 
 \subsection{Visual Overview}\label{sec:cldist}
 
-Explorative data analysis invloves a degree of figure interativity. \autoref{ch1} described the imporance of visualisation in employing the pattern cognitive functions of the human brain, and \autoref{ch2} explained the importance of having an evenly distributed datapoints to aid the understanding of graphs. This subsection combignes the two ideas in the usage of dimsenionality recduction to exploit patterns within a dataset.
+Explorative data analysis involves a degree of figure interactivity. \autoref{ch1} described the importance of visualisation in employing the cognitive pattern functions of the human brain, and \autoref{ch2} explained the importance of having an evenly distributed data points to aid the understanding of graphs. This subsection combines the two ideas in the usage of dimensionality reduction to exploit patterns within a dataset.
 
-Using the techneques in \autoref{sec:drvis} we explore the visual distribution of different dimensionality reduction methods across all input types. This subsection explores the spatial distribution of groups (blobs) in the 2D dimensionally reduced dataset. The colours represent the automatically calculated clusters (which are further explored analytically in \autoref{sec:mathclustanalysis}).
+Using the techniques in \autoref{sec:drvis}, we explore the visual distribution of different dimensionality reduction methods across all input types. This subsection explores the spatial distribution of groups (blobs) in the 2D dimensionally reduced dataset. The colours represent the automatically calculated clusters (which are further explored analytically in \autoref{sec:mathclustanalysis}).
 This is then built upon using three case studies, where individual cluster distributions are compared (\autoref{sec:fsclust}).
 
 
-Using linear activation functions, an autoencoder will produce near-identical results to the PCA algorithm. Them ain difference is that rather than discarding components which represent little variance, the neural network (autoencoder) combignes their values when deciding on the output. Although ordinal data (\autoref{fig:aevis} b,f) still produce regular patterns, the non-linear (tanh) activation functions result in a greater separation between datapoints for the SMILES dataset (\autoref{fig:aevis}g).
+An autoencoder will produce near-identical results to the PCA algorithm, using linear activation functions. Them ain difference is that rather than discarding components which represent little variance, the neural network (autoencoder) combines their values when deciding on the output. Although ordinal data (\autoref{fig:aevis} b,f) still produce regular patterns, the non-linear (tanh) activation functions result in a greater separation between data points for the SMILES dataset (\autoref{fig:aevis}g).
 
-Unlike PCA and AE, t-SNE does not contain any inherent meaning behind the spatial potioning of points. Instead it provides a non-linear grouping of points through a graph-like force-directed model (all items are connected with the links weights desided by their relationship values). This results in the most visually pleasing output die to clusters increased separation. This property also  makes it the easiest to visually isolate clusters from their neighbours (\autoref{fig:tsnevis}) making it a useful tool for interactive data exploration or explaining groups within a figure.
+Unlike PCA and AE, t-SNE does not contain any inherent meaning behind the spatial positioning of points. Instead, it provides a non-linear grouping of points through a graph-like force-directed model (all items are connected with the weights of the links decided by their relationship values). This results in the most visually pleasing output die to clusters increased separation. This property also makes it the easiest to visually isolate clusters from their neighbours (\autoref{fig:tsnevis}), making it a useful tool for interactive data exploration or explaining groups within a figure.
 
 
 \begin{landscape}
 \begin{figure}[H]
     \subimport{tables/}{pcadr.tex}
-    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimensions using Principle Component analysis.}
+    \caption{\textbf{Comparing clusters for all inputs after a reduction to 2 dimensions using Principal Component analysis.}
     Each graph has undergone several clustering algorithms under a range of parameters. The result with the best silhouette coefficient has been chosen. Colours follow the greedy four colour theorem and are there only to indicate the contrast between cluster boundaries.}
     \label{fig:pcavis}
 \end{figure}
@@ -673,30 +673,30 @@ Unlike PCA and AE, t-SNE does not contain any inherent meaning behind the spatia
 
 \subsection{Mathematical Cluster Analysis}\label{sec:mathclustanalysis}
 
-\autoref{sec:cldist} explored the visual appeal of the plotted clusters. For large systems the individual selection of many clustering algothim outputs is inpractical, so the analysis of DR methods has been automated (\autoref{sec:drclustt}). Similarly we can once again apply the silhouette coefficient (\autoref{sec:silo})
+\autoref{sec:cldist} explored the visual appeal of the plotted clusters. For large systems, the selection of many clustering algorithm outputs is impractical, so the analysis of DR methods has been automated (\autoref{sec:drclustt}). Similarly, we can once again apply the silhouette coefficient (\autoref{sec:silo})
 to compare the best output for each input and DR algorithm.
 
-Outputs for the number of groups the DR output has been clustered in, and its corresponding silhoette coefficent are shown in Tables \ref{tab:pcasil} - \ref{tab:tsnesil}. These shall be discussed by name rather than being refereced each time for ease in reading.
+Outputs for the number of groups the DR output has been clustered in, and its corresponding silhouette coefficient are shown in Tables \ref{tab:pcasil} - \ref{tab:tsnesil}. These shall be discussed by name rather than being referenced each time for ease in reading.
 Inputs for each algorithm are ranked in order of their silhouette coefficient (the closer to 1 the value, the better the clustering).
 
-Ordinal inputs such as functional groups or the protocol categories consistently rank the highest within each algorithm. This is beacuse the algorithms only have to idenitfy permutations of each category and classify the species into these. It is noted that the t-SNE silhouette coefficient for these is ~30\% lower than for PCA and AE algorithms. However the number of groups located is also greatly reduced from 140 to 106. This suggests that the vector clustering algorithms have tried to combine datapoints into a group, which has come at a cost to the silhouette value.
+Ordinal inputs such as functional groups or the protocol categories consistently rank the highest within each algorithm. This is because the algorithms only have to identify the permutations of each category and classify the species into these. It is noted that the t-SNE silhouette coefficient for these is ~30\% lower than for PCA and AE algorithms. However, the number of groups located is also greatly reduced from 140 to 106. This suggests that the vector clustering algorithms have tried to combine data points into a group, which has come at a cost to the silhouette value.
 
-Next the SMILES strings are ranked highly for both AE and t-SNE algorithms. Visually this agrees with \autoref{fig:aevis}(g) and \autoref{fig:tsnevis}(g), where these are much better separated than \autoref{fig:pcavis}(g). The PCA ranking is almost half of other algorithms, but contains a much smaller number of `clusters'. This can be attributed to its periodic lattice-like spacing of points which are not conducive to producing good vector clustering groups in an unsupervised algorithm.
+Next, the SMILES strings are ranked highly for both AE and t-SNE algorithms. Visually this agrees with \autoref{fig:aevis}(g) and \autoref{fig:tsnevis}(g), where these are much better separated than \autoref{fig:pcavis}(g). The PCA ranking is almost half of other algorithms, but contains a much smaller number of `clusters'. This can be attributed to its periodic lattice-like spacing of points which are not conducive to producing good vector clustering groups in an unsupervised algorithm.
 
-MACCS keys, although providing a modest silhoette score across most DR algorithms, often only have 2 or three clusters. The reason for this is that dimensionality reductions of these often separates species into two groups, those with Nitrogen elements and those without (\autoref{fig:maccsmath}). The reason for this is that many of the questions upon which the MACCS fingerprint is based on concern themselves with Nitrogen species \citep{rdkitcode}. Group composition and cluster analysis is discussed in \autoref{sec:fsclust} and \autoref{sec:selectcomp}.\\
+MACCS keys, although providing a modest silhouette score across most DR algorithms, often only have two or three clusters. The reason for this is that dimensionality reduction of these often separate species into two groups, those with Nitrogen elements and those without (\autoref{fig:maccsmath}). This is because many of the questions on which the MACCS fingerprint is based concern themselves with Nitrogen species \citep{rdkitcode}. Group composition and cluster analysis is discussed in \autoref{sec:fsclust} and \autoref{sec:selectcomp}.\\
 
 \begin{figure}[H]
     \includegraphics[width=1.3\textwidth]{outputs/PCA/maccs/group.png}
-    \caption{\textbf{The individual decomposition of clusters in \autoref{fig:pcavis}(c)}This shows that the main difference between the two clusters is the existance of Nitrogen elements within Nitrate and Peroxyacetyl Nitrate (PAN) groups. The table on the right acts as a key for the colours and shows the overall impotance of each feature in separating an item into the various clusters (using an ensemble of decision trees).}
+    \caption{\textbf{The individual decomposition of clusters in \autoref{fig:pcavis}(c)}This shows that the main difference between the two clusters is the existence of Nitrogen elements within Nitrate and Peroxyacetyl Nitrate (PAN) groups. The table on the right acts as a key for the colours and shows the overall importance of each feature in separating an item into the various clusters (using an ensemble of decision trees).}
     \label{fig:maccsmath}
 \end{figure}
 
-Similar to SMILES strings mollecular quantum numbers result in plots consisting of a regular rows of data with like-properties (\autoref{fig:pcavis}-\ref{fig:tsnevis}(d)) - making it diffucult for the clustering algorithms to correctly select each group. This property makes it suitable for usage in the field of chemical informatics where molecules with similar properties are desired \citep{mqnpca}, but less so for establishing an overarching categorisation of species within a mechanism.
+Similar to SMILES strings molecular quantum numbers result in plots consisting of regular rows of data with like-properties (\autoref{fig:pcavis}-\ref{fig:tsnevis}(d)) - making it difficult for the clustering algorithms to select each group correctly. This property makes it suitable for usage in the field of chemical informatics where molecules with similar properties are desired \citep{mqnpca}, but less so for establishing an overarching categorisation of species within a mechanism.
 
-Finally the graph-based fingerprint input is consistently the lowest scorring in the silhouette coefficient. Visually this can be attrbuted to the mismatching of cluster number to the number of visually separate clusters  (\autoref{fig:pcavis}-\ref{fig:tsnevis}(a)). The random distribution of these visual `specs' suggests that the custom graph-fingerpring is not the most informative input for use with DR and clustering algorithms.
+Finally, the graph-based fingerprint input is consistently the lowest scoring in the silhouette coefficient. Visually this can be attributed to the mismatching of cluster number to the number of visually separate clusters  (\autoref{fig:pcavis}-\ref{fig:tsnevis}(a)). The random distribution of these visual `specs' suggests that the custom graph-fingerprint is not the most informative input for use with DR and clustering algorithms.
 %%%%%%
 
-Overall combigning the visual representation of selected clusters (\autoref{sec:cldist}) with the silhouette scores, show that the clustering algorithms struggle with the prediction of correct groups. Although the silhouette coefficient is a good metric for determining the density of points around a cluster, it should be used with the aid of other metrics if selecting the best results from an automated clustering process. Additionally the automatic clustering process can include a feedback from the goodness of fit metrics, which can allow for the finer tuning of clustering algorithm parameters in future.
+Overall combining the visual representation of selected clusters (\autoref{sec:cldist}) with the silhouette scores, show that the clustering algorithms struggle with the prediction of correct groups. Although the silhouette coefficient is a useful metric for determining the density of points around a cluster, it should be used with the aid of other metrics if selecting the best results from an automated clustering process. Additionally, the automatic clustering process can include feedback from the goodness of fit metrics, which can allow for the finer tuning of clustering algorithm parameters in future.
 
 
 \begin{table}[H]
@@ -731,19 +731,19 @@ Overall combigning the visual representation of selected clusters (\autoref{sec:
 
 \subsection{Feature Selection Comparison}\label{sec:fsclust}
 
-The previous subsection acessed how well DR algorithms were able to to  separate the chemistry of a mechanism into distinct, well defined, clusters. Now the content of each of those groups is looked at, comparing them to the  functional groups most responsible for the variation within the 2D compression of a chamical mechanism. Importance of each functional group in explaining cluster composition is obtained using a random forrest classifer (Figures \ref{fig:pcalegend}-\ref{fig:tsnelegend}).
+The previous subsection assessed how well DR algorithms were able to separate the chemistry of a mechanism into distinct, well-defined clusters. Now the content of each of those groups is looked at, comparing them to the functional groups most responsible for the variation within the 2D compression of a chemical mechanism. Importance of each functional group in explaining cluster composition is obtained using a random forest classifier (Figures \ref{fig:pcalegend}-\ref{fig:tsnelegend}).
 
 Comparing all three DR algorithms, we see that the shape (and this group importance) is persistent between each input across all algorithms. This means that although values may differ, the same functional groups are important between each DR algorithm - indicating that this is a property of the input style and not the type of dimensionality reduction technique selected.
 
-In establishing that the input format is responsible for the splitting of clusters into groups, we look at what the relationsip of these are. In this section, the characters (a-h) refer to \textbf{all} the corresponding subplots in Figures \ref{fig:pcalegend}-\ref{fig:tsnelegend}.
+In establishing that the input format is responsible for the splitting of clusters into groups, we look at what the relationship of these is. In this section, the characters (a-h) refer to \textbf{all} the corresponding subplots in Figures \ref{fig:pcalegend}-\ref{fig:tsnelegend}.
 
- In the Common Representative Intermediates (CRI) mechanism the ratio of C-H and C-O bonds are used to lump species with the same oxidation capacity \citep{cri}. This makes the ratio of carbons to oxygens an important defining charactaristic between them. The number of each of these elements is consistantly an important feature for all of the input styles, with the exception of the gecko protocol (f) categories. Here the number of carbons or oxygens does not fit any of the reaction branches meaning that there is no way for the dimensionality reduction algorithm to know these. Instead Alcohol and Carbonyl groups are seen as the most important in separting the chemistry which may be due to the number of species undergoing each type of reaction.
+ In the Common Representative Intermediates (CRI) mechanism, the ratio of C-H and C-O bonds are used to lump species with the same oxidation capacity \citep{cri}. This makes the ratio of carbons to oxygens an essential defining characteristic between them. The number of Oxygens and Carbons is a consistently important feature for all input styles (with the exception of the gecko protocol categories (f) ). Here the number of carbons or oxygens does not fit any of the reaction branches meaning that there is no way for the dimensionality reduction algorithm to know these. Instead, Alcohol and Carbonyl groups are seen as the most important in separating the chemistry, which may be due to the number of species undergoing each type of reaction.
 
- Species names (h) have prefixes (e.g. C$xx$) and suffices (e.g. -OOH, -\ch{NO3}, -\ch{O2}, -OL) which allow an easy way for a user to distinguish the types of species, but also the DR algorithms. These show the second best separation of aromatic species, most likely attributed to the common naming convention e.g. (`BENZ', `PIN' , `TMB'). Similarly the SMILES string (g) shows a human readable representation of molecules structure. Since this is explictly defined, the SMILES input provides the greatest uniformity in group types when anaysing cluster composition. As aromatic compounds are represented using a lower case `c', this makes them easy to distinguish (especially in the case of AE \autoref{fig:aelegend}g).
+ Species names (h) have prefixes (e.g. C$xx$) and suffices (e.g., -OOH, -\ch{NO3}, -\ch{O2}, -OL) which allow an easy way for a user to distinguish the types of species, but also the DR algorithms. These show the second-best separation of aromatic species, most likely attributed to the standard naming convention, e.g. (`BENZ', `PIN', `TMB'). Similarly, the SMILES string (g) shows a human-readable representation of the structure of the molecule. Since this is explicitly defined, the SMILES input provides the highest uniformity in group types when analysing cluster composition. As aromatic compounds are represented using a lower case `c', this makes them easy to distinguish (especially in the case of AE \autoref{fig:aelegend}g).
 
- As was touched on  in \autoref{sec:mathclustanalysis} the MACCS input consists of a series of logical questions about a species strucuture. Since many of those questions regard the existance of a Nitrogen atom, data was separated species with a Nitrate or PAN group, and those without. In making a series of decisions on which cluster a species falls under, this biggest most recurring branch for the RandomForrestClassifier (imagine of temperature in \autoref{fig:iodenetree}) falls under the existance of a Nitrate group.
+ As was touched on in \autoref{sec:mathclustanalysis} the MACCS input consists of a series of logical questions about a species structure. Since many of those questions regard the existence of a Nitrogen atom, data was separated species with a Nitrate or PAN group, and those without. In making a series of decisions on which cluster a species falls under, this largest most recurring branch for the RandomForrestClassifier (imagine of temperature in \autoref{fig:iodenetree}) falls under the existence of a Nitrate group.
 
- The main inconcistency between clusters and DR algorithms comes from the node2vec embedding (e) - much of which can be explained by the poor perfomance of the DR and clustering algorithsms of separating the chemistry into groups (see plots in \autoref{sec:cldist}). \autoref{sec:selectcomp} continues this analysis by comparing output with $<3$ clusters each against the graph plots presented in this subsection. Continuing from this, the content of individual groupings is explored for outplut with multiple clusters.
+ The main inconsistency between clusters and DR algorithms comes from the node2vec embedding (e) - much of which can be explained by the poor performance of the DR and clustering algorithms of separating the chemistry into groups (see plots in \autoref{sec:cldist}). \autoref{sec:selectcomp} continues this analysis by comparing output with $<3$ clusters each against the graph plots presented in this subsection. The content of individual groupings is explored for an output with multiple clusters.
 
 
 \begin{figure}[H]
@@ -765,15 +765,15 @@ In establishing that the input format is responsible for the splitting of cluste
 
 \subsection{Cluster Comparison}\label{sec:selectcomp}
 
-In this final subsection we look at the composition of different clusters within the dimensionally reduced dataset. We begin by looking at the simplest cells from \autoref{sec:cldist} - ones which only contain two or three cluster groups (\autoref{sec:bigroups}) and then move on to explore to explore three examples showing multiple clusters (\label{sec:multigroups}).
+In this final subsection, we look at the composition of different clusters within the dimensionally reduced dataset. We begin by looking at the simplest cells from \autoref{sec:cldist} - ones which only contain two or three cluster groups (\autoref{sec:bigroups}) and then move on to explore three examples showing multiple clusters (\label{sec:multigroups}).
 
 
 
 \subsection{Bi / Tri cluster groups } \label{sec:bigroups}
 
-Using the DR output where only two/three groups are located by the clustering algorithms we have (\autoref{fig:biMACCS} and \autoref{fig:biN2V}). In exploring the MACCS key input for the PCA and t-SNE DR algorithms (\autoref{fig:biMACCS}) we find that for the cumealtive imporance bar charts we know that the existence of Nitrates is important in the split determining which group a species falls into. This manefests itself as having a single cluster containing PAN and Nitrate species, with others not. In the t-SNE plot (\autoref{fig:biMACCS}b) we see that there exists a third group which is missing both Aldehyde and PAN funtionalisations for each species. This is shown by the teal colour in \autoref{fig:tsnevis}c and resides between the Nitrogen containing and Nitrogen deficient groups.
+Using the DR output where only two/three groups are located by the clustering algorithms we have (\autoref{fig:biMACCS} and \autoref{fig:biN2V}). In exploring the MACCS key input for the PCA and t-SNE DR algorithms (\autoref{fig:biMACCS}) we find that for the cumulative importance bar charts we know that the existence of Nitrates is vital in the split determining which group a species falls into. This manifests itself as having a single cluster containing PAN and Nitrate species, with others not. In the t-SNE plot (\autoref{fig:biMACCS}b) we see that there exists a third group which is missing both Aldehyde and PAN functionalisation for each species. This is shown by the teal colour in \autoref{fig:tsnevis}c and resides between the Nitrogen-containing and Nitrogen-deficient groups.
 
-\autoref{fig:biN2V} shows the comparison of the Node2Vec embedding using PCA and the AE DR algorithms. In \autoref{fig:pcavis}e and \autoref{fig:aevis}e it is seen that these are generally not separated into well partitioned clusters. Both groups consist of one large cluster (shown by the second bar chart of each row which contains all functional groups) and one or two fragment ones. In exploring the AE plot (\autoref{fig:biN2V}b) it is seen that as part of the cumelative plot (right), the -OOH functional group is an important separatory factor since the smaller of the two groups does not contain any species which contain a hydroperoxy functional group. In the PCA plot, although providing different cumelative results, again shows species within the smaller groups not containing any \ce{RO,RCO3,OOH,ONO2} or OOH functional groups. This can pottentially be due to the graph structure, where the random walker (which generates the node2vec embedding) has become trapped by a group of non-oxidised species.
+\autoref{fig:biN2V} shows the comparison of the Node2Vec embedding using PCA and the AE DR algorithms. In \autoref{fig:pcavis}e and \autoref{fig:aevis}e, it is seen that these are generally not separated into well-partitioned clusters. Both groups consist of one large cluster (shown by the second bar chart of each row which contains all functional groups) and one or two fragment ones. In exploring the AE plot (\autoref{fig:biN2V}b), it is seen that as part of the cumulative plot (right), the -OOH functional group is an important separatory factor since the smaller of the two groups does not contain any species which contain a hydroperoxy functional group. In the PCA plot, although providing different cumulative results, again shows species within the smaller groups not containing any \ce{RO, RCO3, OOH, ONO2} or OOH functional groups. This can potentially be due to the graph structure, where the random walker (which generates the node2vec embedding) has become trapped by a group of non-oxidised species.
 
 
 \begin{landscape}
@@ -807,7 +807,7 @@ Using the DR output where only two/three groups are located by the clustering al
 
 \subsubsection{MultiCluster groups}\label{sec:multigroups}
 
-Next we observe several mutli clustered examples from all DR algorithms. We start with \autoref{fig:pcagraphcase} where the PCA algorithm has generated a large collection of points in an area. Unsurprisingly the clustering algorithm has failed to identify separate groups (as there is only one), and instead partitioned the data into 6 groups. Although not idea, this still has its use in determining the how species have been partitioned temporally. Here we find that nitrogen containing species are positioned on the right side of the graph and aromatic species are in the bottom half. \ce{RO2} containing species span the entirety of \autoref{fig:pcagraphcase}, but increase towards the left direction. This shows that although PCA was unable to separate the chemical species of the MCM into groups from the fingerprint input, it still presents patterns within the data such that the arrangement of groups can be seen when querying specific areas.
+Next, we observe several multi clustered examples from all DR algorithms. We start with \autoref{fig:pcagraphcase} where the PCA algorithm has generated an extensive collection of points in an area. Unsurprisingly the clustering algorithm has failed to identify separate groups (as there is only one), and instead partitioned the data into six groups. Although not ideal, this still has its use in determining how species have been partitioned temporally. Here we find that nitrogen-containing species are positioned on the right side of the graph, and aromatic species are in the bottom half. \ce{RO2} containing species span the entirety of \autoref{fig:pcagraphcase}, but increase towards the left direction. This shows that although PCA was unable to separate the chemical species of the MCM into groups from the fingerprint input, it still presents patterns within the data such that the arrangement of groups can be seen when querying specific areas.
 
 
 
@@ -822,7 +822,7 @@ Next we observe several mutli clustered examples from all DR algorithms. We star
 
 \newpage
 
-Next we explore the AE algorithm. Here the smiles input separates the data into more defined groups. This becomes apparent with specific functional groups only appearing within individual cluaters (\autoref{fig:aesmilescase}) - as opposed to the gradients seen in \autoref{fig:pcagraphcase}. Here all the aromatic species are contained within the central (pink cluster). Similarly the green and brown clusters do not contain any nitrates, and most of the PAN species are within the grey cluster in the top right. The better separation of clusters aids in the identification of groups (by the automated vector clustering algorithm) as well as hilighting the process undergone within the DR algorithm to partition the data.
+Next, we explore the AE algorithm. Here the smiles input separates the data into more defined groups. This becomes apparent with specific functional groups only appearing within individual clusters (\autoref{fig:aesmilescase}) - as opposed to the gradients seen in \autoref{fig:pcagraphcase}. Here all the aromatic species are contained within the central (pink cluster). Similarly, the green and brown clusters do not contain any nitrates, and most of the PAN species are within the grey cluster in the top right. The better separation of clusters aids in the identification of groups (by the automated vector clustering algorithm) as well as highlighting the process undergone within the DR algorithm to partition the data.
 
 
 
@@ -835,9 +835,10 @@ Next we explore the AE algorithm. Here the smiles input separates the data into 
     \caption{\textbf{Case Study 1: AE SMILES} We compare the functional group distribution for individual clusters within the AE 2D representation of the SMILES input.}
     \label{fig:aesmilescase}
 \end{figure}
+\newpage
 
-Finally we expore the t-SNE DR algorithm using the MQN inputs (\autoref{fig:tsnemqncase}). Previously it is found that the t-SNE produces the most well defined clusters, the cost of which comes from losing information about group similarity encoded in the distance separating them. Here \ce{RCO3} containg species are located in the middle turquoise cluster, PAN species in the top right (lime) cluster and th aromatic speices are all in the pink cluster at the bottom.
-The brown and purple clusters (top left) contain no carbonyl groups, and the purple, grray (top left) and orange (mid right) contain not Nitrates. It is evident that the t-SNE provides the best spatial distribution of groups. However inspecting cluster colours visually suggests that the automatical vector clustering algorithm has not necessarily located the best combination of groups. As was suggested in \autoref{sec:mathclustanalysis} a more dynamic method of tuing the clustering algorithm hyperparameters may result in better cluster selection - which may better separate each cluster's species category.
+Finally, we explore the t-SNE DR algorithm using the MQN inputs (\autoref{fig:tsnemqncase}). Previously it is found that the t-SNE produces the most well-defined clusters, the cost of which comes from losing information about group similarity encoded in the distance separating them. Here \ce{RCO3} containing species are located in the central turquoise cluster, PAN species in the top right (lime) cluster and the aromatic species are all in the pink cluster at the bottom.
+The brown and purple clusters (top left) contain no carbonyl groups, and the purple, grey (top left) and orange (mid-right) contain not Nitrates. The t-SNE provides the best spatial distribution of groups. However, inspecting cluster colours visually suggests that the automatical vector clustering algorithm has not necessarily located the best combination of groups. As was suggested in \autoref{sec:mathclustanalysis} a more dynamic method of tuning the clustering algorithm hyperparameters may result in better cluster selection - which may better separate each cluster's species category.
 
 \begin{figure}[H]
     \centering
@@ -845,30 +846,14 @@ The brown and purple clusters (top left) contain no carbonyl groups, and the pur
     \caption{\textbf{Case Study 1: t-SNE MQN.} We compare the functional group distribution for individual clusters within the t-SNE 2D representation of the Mollecular Quantum Number fingerprint.}
     \label{fig:tsnemqncase}
 \end{figure}
-
-
-
-
-
-
-
-
+\newpage
 
 \section{Conclusions}
 
-tsne best - but has to be rerun
+This chapter aims to tie up the research presented in \autoref{ch1}-\ref{ch4} in preparation for future using Graph Convoluted Neural Networks \citep{gcn} to classify and even predict (generate) mechanisms (or at least attempt to). In \autoref{ch2} we showed that networks are a useful representation for the relational nature of species within the atmosphere, and then applied several mathematical techniques to it \autoref{ch3}-\ref{ch4}. This chapter looked at simplifying chemical structure used by many dimensionality reduction algorithms and using visualisation and computational algorithms to assess their ability at partitioning species into similar groups.
 
-others can have data fed into them and reconstructed.
+It was found that t-Distributed Stochastic Neighbor Embedding (a graph-based DR technique) provided the best results for species separation and visualisation. This provides a non-linear mapping of the relationships between items and does not omit any data (PCA) or require the selection of layers and activation functions (AE). It does, however, lose information about cluster similarity based on distance and cannot be used to compress (encode/decode) information - although neither of those features are required for our use.
 
+Additionally, several possible inputs for each dimensionality reduction algorithm were used. Since machines cannot understand the meaning of words, these are different representations of species structure we can put into a machine-learning algorithm to inform it of a species. Out of the non-ordinal inputs, it was found that tokenised SMILES strings and the Molecular Quantum Number fingerprint produced 2D visualisations with the best separation between clusters. Other inputs either caused large groups of overlapping nodes or had a strong dependency on a single species or functional group (e.g. MACCS and Nitrates).
 
-
-
-DR can be used to find patterns in dataset
-which is best
-
-interaction
-
-There are a range of inputs
-each showing a few different things.
-
-Depending on what properties we are intereste dwe may select accordingly
+It is suggested that within future work, the t-SNE dimensionality reduction algorithm is used if trying to visualise the different groups of a complex dataset. In the case of any machine learning algorithms, the MQN fingerprint should be used for generic examples, unless a specific feature is required from the input. If instead a more complex/larger input is required, it is also possible to apply any of the DR algorithms discussed to simplify it. Here the use of an AutoEncoder is suggested as the encoder-decoder pair allows for the testing of a trained model (as well as the ability to explore the embedded space). Although this can be achieved through the use of principal component analysis, this does not handle non-linear relationships and cannot be trained on a further dataset if one becomes available.

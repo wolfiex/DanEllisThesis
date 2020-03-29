@@ -3468,6 +3468,13 @@ Interaction}},
    year = {2015}
 }
 
+@misc{paris,
+   author = {UNFCCC},
+   note = {\url{https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement}},
+   title = {{The Paris Agreement | United Nations Climate Change}},
+   year = {2015}
+}
+
 @article{paris1,
    author = {Phillips, Sara},
    journal = {ABC News},
