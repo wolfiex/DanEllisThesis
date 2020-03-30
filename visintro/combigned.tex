@@ -176,7 +176,7 @@ Composite designs are not constrained to the combination of different metaphors.
      \centering
          \includegraphics[width=1.1\textwidth]{figures_c1/connectedscatter.png}
         \caption{\textbf{Examples of connected scatterplots} (a) A connected scatter-plot comparing the the number of vehicle related fatalites with the number miles driven per capita \citep{conscat}\\
-        (b) a plot showing how the corellation of two spatial variables are transformed from a classical scatter/line plot into a connected scatter-plot \citep{defconscat}. }
+        (b) a plot showing how the corellation of two spatial variables are transformed from a classical scatter/line plot into a connected scatter-plot \citep{defconscat}. Here the blue and green lines represent different values changing over time (orange) across the x axis. The figures to the right show howe different correlations are transformed into a connected scatter plot, where the variables (blue and green) are plotted across each axis, and time (orange) is shown as a line joining each datapoint. The datapoints are plotted in equal lengths of time, meaning that the distance between consequitive points informs us of the amount each variable has changed.}
         \label{fig:conscat}
 \end{figure}
 \newpage
@@ -292,30 +292,36 @@ The main downside of visualising the adjacency matrix is the sparsity of many re
 \end{figure}
 
 \subsubsection{Arc Diagrams}
-Arc diagrams are a subset of sociographs where items are represented as nodes along the horizontal. Relationships between nodes are then shown through the use of curved links (arcs). It is this that makes them particularly suited for the highlighting of repetition between music or DNA sequences, \citep{arc}. Using the MCM database, we can construct an arc diagram to explore how species containing the same combination of functional groups react. This is done by first determining all branch permutations from the protocol flowchart (\autoref{fig:protocol}). This produces 179 groups which are positioned across the $x$ axis in ascending group size (the more branches matched, the further to the right a group is positioned). The width of each group is determined from the number of species within it. Following links are added between the species based on what groups the product species from each reaction contain. \autoref{fig:arcdiagram} discretises reactions which produce products with an increased number of reaction pathways (positive arcs - top), from those which result in species with less (positive arcs - below). Here the cyclic nature of tropospheric chemistry can be seen, with many species producing larger, less stable, products, which then go on to react and decompose back into smaller ones. In some cases, a complete circle between two nodes can be indicative of a catalytic reaction.  Using interaction and selective shading, it is possible to isolate certain types of reactions and determine which of the functional groups are responsible for the change experienced within a reaction.
+Arc diagrams are a subset of sociographs where items are represented as nodes along the horizontal. Relationships between nodes are then shown through the use of curved links (arcs). It is this that makes them particularly suited for the highlighting of repetition between music or DNA sequences, \citep{arc}. Using the MCM database, we can construct an arc diagram to explore how species containing the same combination of functional groups react. This is done by first determining all branch permutations from the protocol flowchart (\autoref{fig:protocol}). This produces 179 groups which are positioned across the $x$ axis in ascending group size (the more branches matched, the further to the right a group is positioned).
 
-
-
-\begin{figure}[]
+\begin{figure}[H]
      \centering
      \includegraphics[width=.8\textwidth]{figures_c1/arc/arc_all.png}
      \caption{\textbf{An arc diagram from the MCM database derived by the protocol (\autoref{fig:protocol})}. All possible pathways for each species are extracted. These are then grouped and sorted by the number of functional group/pathways available. Species are shown along the blue line and sorted by increasing number groups to the right. Reaction pairs (reactant-product) are then depicted through the use of arcs. If a species reacts to produce a species with more functional groups, it is represented by a forwards facing arc. If the product contains a smaller number of functional groups, the drawn arc moves downwards and backwards.}
      \label{fig:arcdiagram}
 \end{figure}
 
+The width of each group is determined from the number of species within it. Following links are added between the species based on what groups the product species from each reaction contain. \autoref{fig:arcdiagram} discretises reactions which produce products with an increased number of reaction pathways (positive arcs - top), from those which result in species with less (positive arcs - below). Here the cyclic nature of tropospheric chemistry can be seen, with many species producing larger, less stable, products, which then go on to react and decompose back into smaller ones. In some cases, a complete circle between two nodes can be indicative of a catalytic reaction.  Using interaction and selective shading, it is possible to isolate certain types of reactions and determine which of the functional groups are responsible for the change experienced within a reaction.
+
 Although such a layout may seem daunting at first, with many lines, in all directions, filtering by type of reactions can draw attention to several features from the chemistry. In \autoref{ch0}, the importance of $HO_x$ cycle for the removal of VOCs and greenhouse gasses was discussed. For this reason, we begin by using arc diagrams to explore the relationship between OH and \ce{HO2} (\autoref{fig:ho2oh}).
 
-These are represented using individual versions of the complete arc plot, \autoref{fig:arcdiagram}, where the relevant reactions (i.e. containing the radical of choice) are the only ones highlighted in colour and increased in opacity, \autoref{fig:hv},\autoref{fig:oh}.
-It is possible to see that several groups form arcs highlighting the cyclic \ce{OH -> HO2} chemistry,
-\autoref{fig:rxnho2oh}. It is also visible that there are a significant number of OH reactions, which corresponds to our knowledge of the mechanism,
+\autoref{fig:ho2} and \autoref{fig:oh} show arc diagrams where the reactions of interest (photolysis and OH reactions respectively) highlighted in both colour and opacity. These enable us to see patterns between the radical cylcing of \ce{OH -> HO2} chemistry (\autoref{fig:rxnho2oh}). Here the cyclic reaction shown between the dashed lines corresponds to the reaction of \ch{RO2 <->[HO2][O2] ROOH} (\autoref{fig:rxnho2oh}).
 
-\begin{figure}[]
+Applying the same methodology to photolysis and hydroxide reactions, it the production of species containing fewer functional groups is seen in \autoref{fig:ohhv}. Within the highlighted reactions it is seen that a ROOH species undergoes a reaction with OH or photolyses (\autoref{fig:rxnohhv}). In the OH reaction, Hydrogen abstraction is performed to produce a RO2 species and water, \ch{ROOH ->[OH] RO2 + H2O}. Photolysis reactions however photolyse the double bond, \ch{ROOH ->[hv] RO2 + HO2}, reducing the number of functional groups - producing a larger arc. It should be mentioned that the ROOH can also react with \ch{o2} to produce an RO2, although this has not been hilighted.
+
+Finally Peroxy Acetyl Nitrates (PANs), play a vital role in the modelling of photochemical smog (ozone events), \citep{pans}. PANs an effective reservoir species with significant importance within the production of ozone in atmospheric chemistry models (especially if transportation is involved) \citep{finlayson}. Although they are very stable at cold temperatures, these can quickly decompose (thermally) to release $NO_x$ if warmed. In the MCM the thermal decomposition of PANS is determined by the KBPAN rate constant. In comparing reactions of \autoref{fig:kbpans}, with those of \autoref{fig:no2} (at rate KFPAN), we see a cycle between two arcs froming (\autoref{fig:pandir}). This can be explained by the reactions in \autoref{fig:rxnpan} which show that \ch{RC(O)OONO2 ->[KBPAN]  RC(O)O2} (+\ch{NO2}) \ch{ ->[NO2] RC(O)OONO2}.
+
+\textit{\textbf{NOTE:} A downside to the arc diagrams format that has been chosen is that for reactions between species of the same number of functional groups, there is no set direction. This can be seen in the positive arcs of  \autoref{fig:ro2}. }
+
+
+
+\begin{figure}[H]
      \centering
       \begin{subfigure}[b]{.4\textwidth}
          \centering
          \includegraphics[width=\textwidth]{figures_c1/arc/ho2oh.png}
          \caption{The most prominent branches. }
-         \label{fig:hv}
+         \label{fig:ho2oh}
      \end{subfigure}
       \begin{subfigure}[b]{.4\textwidth}
          \centering
@@ -341,8 +347,8 @@ It is possible to see that several groups form arcs highlighting the cyclic \ce{
      \begin{subfigure}[b]{.4\textwidth}
          \centering
          \includegraphics[width=\textwidth]{figures_c1/arc/ho2.png}
-         \caption{\ce{Hydroxyl}}
-         \label{fig:hv}
+         \caption{\ce{HydroPeroxy}}
+         \label{fig:ho2}
      \end{subfigure}
      \begin{subfigure}[b]{.4\textwidth}
          \centering
@@ -355,18 +361,14 @@ It is possible to see that several groups form arcs highlighting the cyclic \ce{
 \end{figure}
 
 
-In addition to the reaction with the hydroxide radical, species may also be broken down with the aid of a photon - i.e. photolysis. If we compare all photolytic reactions, within those of OH, it can be seen that for certain groups, there exist two possible reaction pathways, \autoref{fig:rxnohhvv}. Since the reaction with OH serves to strip the hydrogen, the resultant species has a similar number of functional groups. Photolysis reactions, however, breaks the double bond, producing a species with a much smaller number of groups. This may be seen in the difference of length in the arcs emanating from these species, \autoref{fig:ohhv}.
 
-
-
-
-\begin{figure}[]
+\begin{figure}[H]
      \centering
       \begin{subfigure}[b]{.4\textwidth}
          \centering
          \includegraphics[width=\textwidth]{figures_c1/arc/ohhv.png}
          \caption{The most prominent branches. }
-         \label{fig:hv}
+         \label{fig:ohhv}
      \end{subfigure}
       \begin{subfigure}[b]{.4\textwidth}
          \centering
@@ -395,17 +397,15 @@ In addition to the reaction with the hydroxide radical, species may also be brok
          \centering
          \includegraphics[width=\textwidth]{figures_c1/arc/OH2.png}
          \caption{Hydroxide}
-         \label{fig:oh}
+         \label{fig:oh2}
      \end{subfigure}
       \caption{\textbf{ Arc diagram features for photolysis and  hydroxide. reactions.  } Photolysis results in species with a reduced number of functional groups, and therefore longer arcs. OH reactions for the same species do not produce such a drastic change on group number, and therefore have a smaller arc lenght.}
         \label{fig:ohhv}
 \end{figure}
 
 
-Peroxy acetyl nitrates (PANs) play a vital role in the modelling of photochemical smog (ozone events), \citep{pans}. PANs are species which are very stable a cold temperatures but can quickly decompose and release $NO_x$ when warmed.
-As this is an essential species in the production of Ozone, this makes PANs an effective reservoir species with significant importance within atmospheric chemistry models (especially if transportation is involved). In the MCM the thermal decomposition of PANS is determined by the KBPAN rate constant. In comparing reactions of this, \autoref{fig:kbpans}, with those of \ce{NO2} (at rate KFPAN), the emergence of the species cycle is seen.
 
-\begin{figure}[h]
+\begin{figure}[H]
      \centering
       \begin{subfigure}[b]{.4\textwidth}
          \centering
@@ -452,41 +452,38 @@ As this is an essential species in the production of Ozone, this makes PANs an e
 % Finally, patterns that exist within certain groups can be explored. We know that for \ce{RO2}-\ce{RO2} reactions, there are three possible reaction pathways for the unpaired oxygen.
 
 
-\textit{\textbf{NOTE:} A downside to the arc diagrams format that has been chosen is that for reactions between species of the same number of functional groups, there is no set direction. This can be seen in the positive arcs of  \autoref{fig:ro2}. }
 
-
-
-
-\begin{figure}[H]
-     \centering
-      \begin{subfigure}[b]{.4\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{figures_c1/arc/RO2.png}
-         \caption{\ce{RO2 - RO2} }
-         \label{fig:ro2}
-     \end{subfigure}
-     \begin{subfigure}[b]{.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures_c1/arc/RO2HO2.png}
-        \caption{\ce{RO2+HO2}}
-        \label{fig:ro2ho2}
-    \end{subfigure}
-    \begin{subfigure}[b]{.4\textwidth}
-       \centering
-       \includegraphics[width=\textwidth]{figures_c1/arc/RO2NO.png}
-       \caption{\ce{RO2+NO}}
-       \label{fig:ro2no}
-   \end{subfigure}
-   \begin{subfigure}[b]{.4\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{figures_c1/arc/NO3.png}
-      \caption{\ce{NO3} }
-      \label{fig:no3}
-  \end{subfigure}
-\caption{\textbf{Categories with a net direction/trend.} It is possible to see the patterns in which certain reactions function.  }
-  \label{fig:ro2arc}
-\end{figure}
-
+%
+% \begin{figure}[H]
+%      \centering
+%       \begin{subfigure}[b]{.4\textwidth}
+%          \centering
+%          \includegraphics[width=\textwidth]{figures_c1/arc/RO2.png}
+%          \caption{\ce{RO2 - RO2} }
+%          \label{fig:ro2}
+%      \end{subfigure}
+%      \begin{subfigure}[b]{.4\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{figures_c1/arc/RO2HO2.png}
+%         \caption{\ce{RO2+HO2}}
+%         \label{fig:ro2ho2}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{.4\textwidth}
+%        \centering
+%        \includegraphics[width=\textwidth]{figures_c1/arc/RO2NO.png}
+%        \caption{\ce{RO2+NO}}
+%        \label{fig:ro2no}
+%    \end{subfigure}
+%    \begin{subfigure}[b]{.4\textwidth}
+%       \centering
+%       \includegraphics[width=\textwidth]{figures_c1/arc/NO3.png}
+%       \caption{\ce{NO3} }
+%       \label{fig:no3}
+%   \end{subfigure}
+% \caption{\textbf{Categories with a net direction/trend.} It is possible to see the patterns in which certain reactions function.  }
+%   \label{fig:ro2arc}
+% \end{figure}
+%
 
 
 \subsubsection{The Traditional Network Graph}\label{sec:tradnetconc}
