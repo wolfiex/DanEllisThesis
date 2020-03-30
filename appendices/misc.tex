@@ -7,17 +7,17 @@
      \centering
          \includegraphics[width=\textwidth]{WACLauthor.png}
         \caption{ \textbf{The labelled co-author network -} as  referenced in \autoref{ch3} }
-        
+
 \end{figure}
 \newpage
 
 
 \section{Centrality on the UK rail network.}\label{appendix:rail}
 
-The data in the following section was extracted from OpenStreetData using overpass turbo \url{https://overpass-turbo.eu}. Here ways within the geographic information system mapping (GIS) format are represented as paths between locations (i.e. a graph). Following some simple procesing, the distance of each section was calculated and a weighted graph represented the UK rail network was generated. This was then used to form a rudementary analysis of the graph structure using centrality metrics (shown below). 
+The data in the following section was extracted from OpenStreetData using overpass turbo \url{https://overpass-turbo.eu}. Here ways within the geographic information system mapping (GIS) format are represented as paths between locations (i.e. a graph). Following some simple processing, the distance of each section was calculated, and a weighted graph represented the UK rail network was generated. This was then used to form a rudimentary analysis of the graph structure using centrality metrics (shown below).
 
 \textbf{NOTE:}\\
-\textit{Since the network is extracted from a GIS datafile, nodes within the rail network include not only stations, but also switches, routing nodes and crossings. Although this can be filtered, the iterative reconstruction of a graph for the entire UK is a lengthy process - one which I am unable to do at the time of writing (there are 90011 nodes which make up the entirety of the UK rail network, most of which need to be removed, and their links rerouted).}
+\textit{Since the network is extracted from a GIS data file, nodes within the rail network include not only stations but also switches, routing nodes and crossings. Although this can be filtered, the iterative reconstruction of a graph for the entire UK is a lengthy process - one which I am unable to do at the time of writing (there are 90011 nodes which make up the entirety of the UK rail network, most of which need to be removed, and their links rerouted).}
 
 
 \begin{figure}[H]
@@ -32,7 +32,7 @@ The data in the following section was extracted from OpenStreetData using overpa
          \includegraphics[width=\textwidth]{rail/centrality.png}
         \caption{ \textbf{Closeness Centrality.}}
 \end{subfigure}
- 
+
 \begin{subfigure}[t]{.49\textwidth}
      \centering
          \includegraphics[width=\textwidth]{rail/betweenness.png}
@@ -59,13 +59,13 @@ Mike Jenkin 11th September 2019
 \textbf{Note on naming conventions in the CRI mechanism}\\
 
 {\fontfamily{cmtt}\selectfont \parbox{\textwidth}{
-The lumped or “common” species in the CRI mechanism are, by definition, used to represent a set of real species with different structures and properties. The criterion for lumping is the maximum number of NO-to-NO2 conversions (i.e. maximum number of ozone molecules) that the subsequent degradation can produce - and lumped species can therefore represent a large number of real species with different structures and properties.
+The lumped or “common” species in the CRI mechanism are, by definition, used to represent a set of real species with different structures and properties. The criterion for lumping is the maximum number of NO-to-NO2 conversions (i.e. maximum number of ozone molecules) that the subsequent degradation can produce - and lumped species can, therefore, represent a large number of real species with different structures and properties.
 \\}\\ \parbox{\textwidth}{
 In later expansions of the mechanism, the chemistry for species such as isoprene and terpenes defined intermediates that are representative of more restricted sets of real species. For these, it is possible to relate them to more restricted sets of MCM species that are the main contributors.
 \\}\\ \parbox{\textwidth}{
 Although I tried to be logical in naming, the mechanism was developed over many years with little or no funding and may therefore not be fully transparent and foolproof throughout. However, I think quite a lot of the naming is logical, as expanded on below.
 \\}\\ \parbox{\textwidth}{
-1) The numbers in most of the species names (the “CRI index”) are the number of NO-to-NO2 conversions that can result from the subsequent OH-initiated NO-propagated chemistry. For radical termination products (e.g. hydroperoxides formed from RO2 + HO2 and nitrates formed from RO2 + NO), this is a grey area, and the number is therefore the same as that for the precursor RO2 radical. In these cases it is simply a convenient label.
+1) The numbers in most of the species names (the “CRI index”) are the number of NO-to-NO2 conversions that can result from the subsequent OH-initiated NO-propagated chemistry. For radical termination products (e.g. hydroperoxides formed from RO2 + HO2 and nitrates formed from RO2 + NO), this is a grey area, and the number is, therefore, the same as that for the precursor RO2 radical. In these cases, it is simply a convenient label.
 \\}\\ \parbox{\textwidth}{
 2) There are a number of series of peroxy radicals, which are denoted RNxxO2, RIxxO2, RAxxO2, RExxO2, RUxxO2, RTNxxO2, RTXxxO2. These represent peroxy radicals with different structural features or formed from different types of precursor, as indicated below. Occasionally, extra peroxy radicals with the same CRI index are included by inserting a letter after the index (e.g. RNxxAO2) to increase flexibility of the mechanism. Peroxy radicals formed specifically from addition of NO3 to an alkene/diene are prefixed by “N”.
 \\}\\ \parbox{\textwidth}{
@@ -113,4 +113,3 @@ TNCARBxx and TXCARBxx: This terminology is used for carbonyl compounds, formed f
 \includegraphics[width=.9\textheight,angle=90]{fngroups.png}
 {Source:\cite{fgps}}
 \end{figure}
-

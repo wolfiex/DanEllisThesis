@@ -1,6 +1,6 @@
 
 import os, sys, glob, re, subprocess
-
+# import clean
 
 
 def make(filename):
@@ -10,11 +10,11 @@ def make(filename):
     bf = glob.glob('*.aux')
     for i in bf:
         bib.append(os.popen('bibtex '+i).read())
-    print('.')    
+    print('.')
     os.system('pdflatex '+filename)
     print('.')
     #err = os.popen('pdflatex '+filename) # .read()
-    
+
     p = subprocess.Popen(['pdflatex',filename], stdout=subprocess.PIPE)
     err = p.communicate()[0].decode('utf-8',errors='ignore')
     print('.')
@@ -26,24 +26,24 @@ def make(filename):
             print(j)
 
     print('Finished')
-    
+
 def autorun(globstr,filename):
-    import ipyReload as ipr 
+    import ipyReload as ipr
     #conda install -c wolfiex ipyreload
-    
+
     files = glob.glob(globstr)
-    
+
     def callback():
         make(filename)
-        
-    
+
+
     for i in files:
         print('watching ',i)
         ipr.watch(i,callback)
-        
-        
+
+
 if __name__ == '__main__':
-    
+
     try:
         if sys.argv[1]=='True':
             autorun('*/*.tex','thesis.tex')

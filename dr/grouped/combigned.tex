@@ -13,7 +13,7 @@ a "correct" one by excessive elaboration'' - \cite{allmodels}. As our level of a
 \subsection{Chapter Aims}
 In \autoref{ch1}, we looked at visual representation as a way of better understanding of complex systems. \autoref{ch2} showed that the chemical properties could be inferred (visually) from the node-link graph structure of a mechanism. Similarly, \autoref{ch3} and \autoref{ch4} located the presence of important species and clusters of similar properties by applying mathematical algorithms to the graph network. As opposed to attempting to visualise complex data, this chapter looks at learning the structure of a chemical species and simplifying it into two dimensions. Here it is possible to extract key features of like-groups through the use of vector clustering, which unlike the graph clustering in \autoref{ch4} works by determining the density between points on a plane.
 
-The chapter begins with the introduction of the chemical system, and the various methods for representing species structure within it (\autoref{sec:drinput}). Next, we define the dimensionality reduction methods, which are to be used to simplify the inputs above (\autoref{sec:dr}). This is followed by a brief overview of the visualisation methodology (\autoref{sec:drvis}). Finally, all three sections are combined to produce a set of result and conclusions about the use of DR to identify species structure. The aim of this chapter is to access the efficiency of a machine learnt (dimensionality reduced) models in simplifying the chemical structure, and decide upon the best input for future deep learning tasks (e.g. for mechanism construction and emulation).
+The chapter begins with the introduction of the chemical system, and the various methods for representing species structure within it (\autoref{sec:drinput}). Next, we define the dimensionality reduction methods, which are to be used to simplify the inputs above (\autoref{sec:dr}). This is followed by a brief overview of the visualisation methodology (\autoref{sec:visdr}). Finally, all three sections are combined to produce a set of result and conclusions about the use of DR to identify species structure. The aim of this chapter is to access the efficiency of a machine learnt (dimensionality reduced) models in simplifying the chemical structure, and decide upon the best input for future deep learning tasks (e.g. for mechanism construction and emulation).
 
 
 
@@ -33,6 +33,7 @@ To generate the functional groups the regular expressions in \autoref{tab:fngrou
 
 
 %
+% Except for dissociation, species reactions are often dictated by their functional groups. Species in the MCM are usually represented as functionalised alkanes (A saturated hydrocarbon in the form of $C_nH_{2n+2}$). In removing hydrogen, we form an alkyl chain. This allows for the potential of forming a bond with other atoms. By themselves alkyl chains are mostly un-reactive, however in gaining additional functional groups (functionalisation) their reactivity increases.%
 
 
 
@@ -50,6 +51,8 @@ Ester & \verb! [\^O](C\(=O\)O\b|OC\(=O\))C!\\&\\
 Ether & \verb! (\([\^O=]+\))*C(\([\^O=]+\))*O(\([\^O=]+\))*C(\([\^O=]+\))*!\\&\\
 
 Per. Acid & \verb! c\\(=O\\)OO$|^OO\\(=O\\)C!\\&\\
+
+% Hydroperoxide & \verb! COO$|C\\(OO|OO\\)C|^OOC!\\&\\
 
 Nitrate & \verb! O(NO2\b|NOO\b|N\(=O\)=O|\[N\+\](?:\[O-\\]|\(=O\)){2})!\\&\\
 
@@ -229,14 +232,16 @@ Here species properties are often split into structural and psyico-chemical grou
 \subsubsection{Molecular Quantum Numbers (MQN)}
 In chemistry the shape, phase and electron occupancy of an atom may be described through the use of four quantum numbers: the $n$ principle quantum number, $I$ angular momentum quantum number, $M_i$ magnetic quantum number and $M_s$ spin quantum number. The rationalisation of elements based on their structure, and by consequence reactivity, has led to the most iconic tool of the modern-day chemist - the periodic table, where increasing atomic numbers follow the principal quantum number \citep{periodic}. In representing a molecule as a set of 42 quantum numbers, MQN fingerprints produce a multi-dimensional mapping of an atom, bond, polarity and topology count \citep{MQN}.
 
+% [ref fae others... ]
+
 \subsubsection{Molecular Access System (MACCS)}
 MACCS keys are a 164\footnote{They are 166-bit keys, although there is no real agreement to what the 44th keys' purpose is, and therefore it is often omitted. Within RDKIT this is denoted by a $?$ \citep{rdkitcode}.} bit structural keys formulated through answering a series of structure-related questions. Developed by MDL Information Systems \citep{maccs}, their main purpose lies in being a SMILES Arbitrary Target Specification (SMARTS) system for substructure searching. However, their distinct structure key format makes them highly suitable for similarity detection. In many cases, the optimised version of MACCS keys is cited (\citep{optimised}), although most use cases exploit a variation of the undocumented 166bit keys. We use the implementation presented by \citep{rdkit,rdkitcode} for all molecular fingerprints in our work.
 
 
-\section{ Dimensionality Reduction Methods}\label{sec:dr}
+\section{ Dimensionality Reduction Methods}
 In the last section, we described several methods in which the chemical structure of a species could be encoded for direct comparison. However, since each input consists of a multitude of elements, it is still not a simple task to determine the differences and similarity between all species in mechanisms. Dimensionality reduction is the process of reducing the number of random variables and only presented a set of principal values, by mapping a high-dimensional space into a low-dimensional one \citep{drrandom}. This allows us to flatten a multivariate input into the two dimensions required for a simple scatter plot.
 
-In this section, we begin by explaining the data preparation required for dimensionality reduction (\autoref{sec:prep}) before describing the different possible methods of reducing the dimensions of a dataset through Principle Component Analysis, Auto Encoders and t-Distributed Stochastic Neighbor Embedding.
+In this section, we begin by explaining the data preparation required for dimensionality reduction (\autoref{sec:pref}) before describing the different possible methods of reducing the dimensions of a dataset through Principle Component Analysis, Auto Encoders and t-Distributed Stochastic Neighbor Embedding.
 
 \subsection{Preperation Of The Data}\label{sec:prep}
 Real-world data is rarely preformatted in such a way that it can be used directly within a computational model. Often values need to be cleaned and corrected to be fit for purpose. In the interest of completeness, the two main methods of data adjustment for machine learning are outlined below. These are (i) normalisation and (ii) standardisation.
@@ -323,8 +328,10 @@ The main reason t-SNE produces good results is that it can handle the \textbf{`c
 
 
 \subsubsection{Mathematical Explanation Of t-SNE}\label{sec:mathtsne}
+%https://mlexplained.com/2018/09/14/paper-dissected-visualizing-data-using-t-sne-explained/
 
 %
+% The general process is given by the etymological dissection of the acronym, with `t'  standing for the student T probability distribution and S, N (stochastic and neighbour) explaining the use of the distribution across neighbouring points in space.
 
 In the original paper \citep{tsne}, the algorithm is described using the etymologic dissection of its name (described below).
 
@@ -425,17 +432,20 @@ To demonstrate the effect of these features, we take a sample isopleth of Methan
 \begin{subfigure}{.33\textwidth}
   \centering
   \includegraphics[width=\textwidth]{4fig/original.png}
-  \caption{Original}  \label{fig:iorig}
+  \label{fig:iorig}
+  \caption{Original}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
   \centering
   \includegraphics[width=\textwidth]{4fig/rpca.png}
-  \caption{PCA}  \label{fig:ipca}
+  \label{fig:ipca}
+  \caption{PCA}
 \end{subfigure}%
 \begin{subfigure}{.33\textwidth}
   \centering
   \includegraphics[width=\textwidth]{4fig/rae.png}
-  \caption{AE (Tanh)}\label{fig:iae}
+  \label{fig:iae}
+  \caption{AE (Tanh)}
 \end{subfigure}%
 \caption{
 \textbf{Comparing the result of the 2D encoding and decoding of an Ozone-NOx-Methane isopleth.} The original data (a) is reduced to two dimensions and then reconstructed back into 3D. This is done with Principal Component Analysis (b) and an AutoEncoder (c). The original isopleth is created using  300 simulations of different
@@ -491,6 +501,8 @@ Once we have constructed our random path `sentences' (e.g. \autoref{eqn:w2varrow
 
 
 %
+% https://skymind.ai/wiki/word2vec
+% http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
 %
 
 \subsection{Summary Of Dimensionality Reduction Methods}
@@ -536,6 +548,9 @@ Next, all its neighbours are recursively iterated, giving them the lowest possib
 
 Having defined all the visualisation techniques we can now move on to explain the clustering algorithms which are used, and how `goodness of fit' may be measured in the clustering context.
 
+%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+
 \section{Cluster Evaluation}
 The previous section discussed methods of visualising the reduced data for use with interactive exploratory data analysis. In this section we look at the use of vector clustering algorithms\footnote{Vector clustering is the grouping of data based on their proximity or density to other nearby points} (\autoref{sec:drclustt}) to highlight groups in a 2D dataset, as well an automated method of assessing the quality of the clusters selected (\autoref{sec:silo}) and feature extraction (\autoref{sec:drfeature}).
 
@@ -566,7 +581,7 @@ In selecting a value for the results section, several clustering algorithms, wit
 
 
 \subsubsection{Clustering (Silhouette) Coefficient}\label{sec:silo}
-The silhouette measure is a tool used for acessing the validity of a set of clusters. Here each cluster is represented as a silhouette, based on the comparison of its tightness and separation. To calculate the silhoette coefficient we look at the intra-cluster $a$ and the mean inter-cluster\footnote{Inside and between different clusters.} distance $b$. The silhouette cluster can then be described using \citep{silhouette,sklearn}:
+The silhouette measure is a tool used for acessing the validity of a set of clusters. Here each cluster is represented as a silhouette, based on the comparison of its tightness and separation. To calculate the silhoette coefficient we look at the intra-cluster $a$ and the mean inter-cluster\footnote{Inside and between different clusters.} distance $b$. The silhouette cluster can then be described using \ref{silhouette,sklearn}:
 
 \begin{equation}
 s(i) = \frac{b(i)-a(i)}{\max{ a(i), b(i)}}
@@ -586,6 +601,7 @@ Random forests \citep{rfrr}, are a subset of ML algorithms called ensemble learn
 \subsubsection{Calculating Importance Using Random Forrests}
 Since random forests are in essence a collection of decision trees, it is possible to generate a `decision tree aggregate' to visualise the ensemble structure of the random forest \citep{forrester} (\autoref{fig:iodenetree}). Alternatively, if all that is required is the relative importance of each feature, the RandomForrestClassifier from \citep{sklearn} provides a quick and easy way of understanding which features matter,
 \citep{handsonml}. This works by aggregating the weighted nodes which use a particular feature using the number of samples and then scales the result to 1. We use this method to access the overall importance of features within each DR output and identify the differences between clusters.
+%bagging an aggregate collection of TreeS
 
 
 \begin{figure}[H]
@@ -597,6 +613,9 @@ Since random forests are in essence a collection of decision trees, it is possib
 
 
 %
+% Random Forrest Classifier from sklearn, top n features.
+% https://github.com/MaartenGr/CustomerSegmentation/blob/master/Customer%20Segmentation.ipynb
+% https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5732374/
 
 \textit{NOTE: The only downside is that Random Forrests are in themselves ML techniques which also need to be evaluated. To do this, as they are simply being used as indicators of cluster properties which we are to explore further, we can initiate a collection of 300 random Forrest classifiers, from which we take the median. A sort of ensemble learning from an ensemble. }
 
@@ -606,6 +625,7 @@ Since random forests are in essence a collection of decision trees, it is possib
 There exist many methods of defining the chemical structure of species within the MCM. This section evaluates the different structural representations (\autoref{sec:drinput}) and the ability of DR algorithms to separate the chemical space within which these lie into a two-dimensional scatterplot.
 
 %
+% exhibiting the defining functional groups and characteristics used for constructing the mechanism. First, we explore the distribution of clusters and the ability of different DR algorithms to visually separate various groups of chemistry (\autoref{sec:cldist}). Next, the functional groups (taken from the MCM development protocol) are explored within each DR algorithm (\autoref{sec:fsclust}). Finally, a selected example for each DR method is taken and explored in further detail (\autoref{sec:selectcomp}).
 
 \subsection{Visual Overview}\label{sec:cldist}
 
@@ -674,6 +694,7 @@ MACCS keys, although providing a modest silhouette score across most DR algorith
 Similar to SMILES strings molecular quantum numbers result in plots consisting of regular rows of data with like-properties (\autoref{fig:pcavis}-\ref{fig:tsnevis}(d)) - making it difficult for the clustering algorithms to select each group correctly. This property makes it suitable for usage in the field of chemical informatics where molecules with similar properties are desired \citep{mqnpca}, but less so for establishing an overarching categorisation of species within a mechanism.
 
 Finally, the graph-based fingerprint input is consistently the lowest scoring in the silhouette coefficient. Visually this can be attributed to the mismatching of cluster number to the number of visually separate clusters  (\autoref{fig:pcavis}-\ref{fig:tsnevis}(a)). The random distribution of these visual `specs' suggests that the custom graph-fingerprint is not the most informative input for use with DR and clustering algorithms.
+%%%%%%
 
 Overall combining the visual representation of selected clusters (\autoref{sec:cldist}) with the silhouette scores, show that the clustering algorithms struggle with the prediction of correct groups. Although the silhouette coefficient is a useful metric for determining the density of points around a cluster, it should be used with the aid of other metrics if selecting the best results from an automated clustering process. Additionally, the automatic clustering process can include feedback from the goodness of fit metrics, which can allow for the finer tuning of clustering algorithm parameters in future.
 

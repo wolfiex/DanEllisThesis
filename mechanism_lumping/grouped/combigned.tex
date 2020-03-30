@@ -60,7 +60,7 @@ B_i  = \sum_j(({y_i}/{f_i})({\partial f_i}/{\partial y_i}))^2 \label{connectivit
 
 \subsection{Lumping}
 
-Rather than removing species or reactions from a mechanism, we may combine them to form a new composite species. This is referred to as species lumping. To do this, we must first consider how we define species that are to be joined together, and then how their grouped reactions will contribute to every other species, it reacts with. Some of the more general types of lumping styles are outlined below.
+Rather than removing species or reactions from a mechanism, we may combine them to form a new composite species. This is referred to as species lumping. To do this, we must first consider how we define species that are to be joined together, and then how their grouped reactions will contribute to every other species it reacts with. Some of the more general types of lumping styles are outlined below.
 
 
 \subsubsection{Chemical Lumping}\label{sec:chemlump}
@@ -103,17 +103,23 @@ To select the initial conditions there exist several sampling styles \citep{samp
 \label{eqn:icslhs}
   \end{equation}
 \section{Graph Based Reduction}\label{sec:graphreduction}
-It has been shown that a graph-based representation of the atmospheric chemical network proves useful in both the visual and mathematical analysis of simulation results (\autoref{c2,c3}). It, therefore, follows that the network representation of mechanism may also have its uses in the simplification, and thus reduction, of chemical complexity.  This section will outline the basic methods of modularity (cluster) detection with the graph framework, the different methods in which this may be done and eventually apply it to a case example representative of the chemistry within the London environment.
+It has been shown that a graph-based representation of the atmospheric chemical network proves useful in both the visual and mathematical analysis of simulation results (\autoref{chaptervis,chaptermetric}). It, therefore, follows that the network representation of mechanism may also have its uses in the simplification, and thus reduction, of chemical complexity.  This section will outline the basic methods of modularity (cluster) detection with the graph framework, the different methods in which this may be done and eventually apply it to a case example representative of the chemistry within the London environment.
 
 
 
 
 \subsection{Graph Parallels}
 
+% \textit{
+% EDIT\\
+% Although many graph-based methods exist within the reduction realm, most of these concentrate on the generation of skeletal methods through the building of a directed tree (a subcategory of graphs from source to target) - LIST of refs and sentence of all skeletal methods. Path flux analysis (Sun et al 2010)\\
+% Instead, we may find ourselves applying graph theory to solve other reduction methods. For instance, we can trace back influence through connecting edges using Dijkstra's shortest path algorithm (CH2 ref) - analogous to the connectivity method, or a leave one out approach combined with PageRank to access the effects of removing a node.
+% }
+
 Graph structure can be used to analyse changes of reactions or relationships between species - providing an alternative representation and method to access such data. Additionally, clustering techniques may be used to locate groups of highly connected, fast reacting/strongly related species. This has applications in both understanding the data, but more importantly, chemical lumping. In creating a graph from a model simulation, we encode not only information about the chemical structure, but also the influence between species in the mechanism. By grouping species which have a strong dependence upon each other, we can simplify the provided network or mechanism.
 
  \subsection{Types Of Graph Clustering}
-Unlike vector clustering algorithms (such as DBSCAN, UMAP and K-means - see \autoref{sec:drclustt}), graph clustering metrics do not rely on the spatial orientation of the data to determine groups or `clusters'. Instead, these may partition the network into segments, group nodes by structural equivalence or explore the `flow' dynamics of the network.
+Unlike vector clustering algorithms (such as DBSCAN, UMAP and K-means - see \autoref{veccluster}), graph clustering metrics do not rely on the spatial orientation of the data to determine groups or `clusters'. Instead, these may partition the network into segments, group nodes by structural equivalence or explore the `flow' dynamics of the network.
 
 Algorithms such as Label Propagation \citep{labelprop} and spin-glass \citep{spinglass} work by randomly assigning nodes with a property or label. This property is then transferred to its neighbours. Other algorithms such as the nested block model can decompose a graph into clusters of similar properties, \citep{communitygraph}. These are often grouped in the form of topological equivalence which can be either:
 \begin{itemize}
@@ -213,9 +219,20 @@ Branch 3 contains the monoterpenes. This can be seen in 3.\{2,5\} ($\alpha-$pine
 The \emph{\ce{RIxxO2}} prefix was used initially for the peroxy radicals iso (`i-') alkanes and their carbonyl products - branches 3.\{1,4\}, however, they tend to mainly be used for smaller branched precursors which produce acetone (\ch{CH3COCH3}) as a significant product in their oxidation chain (branch 3.1). Acetone is a relatively unreactive carbonyl, the fact that it is water-soluble means that they may be washed out of the atmosphere by precipitation, \citep{acetonerain}. This may have been seen to interrupt the ozone formation process under regional-scale photochemical smog conditions in north-western Europe.
 
 Finally, since the CRI index is representative of the oxidation potential, it is common to see species containing the CRI value within a cluster. Cluster typically contain a combination of carbonyl (\ch{R(=O)R}',\emph{CARBxx}), hydroperoxy (\ch{R-OOH},\emph{RxxOOH}), peroxy (\ch{ROO.}, \emph{\ce{RxxO2}}) and nitrate (\ch{R-ONO2},\emph{\ch{NO3}}) groups. For the lumped species, it can be common for a \ch{RO2} species to react with NO or \ch{NO3} to produce a carbonyl with a CRI index of two values lower. This can be attributed to the loss of hydrogen in the oxidation process. Similarly, a reaction with NO or \ch{ho2} can produce a hydroperoxy or nitrate species, which in turn react with OH to produce the equivalent carbonyl.
+
+
+%% good paper for introduction acetone
+%
+% \subsubsection{Inter And Intra Links}
+%  Typically, the quality of clustering can be assessed using the adjacency matrix of a graph. In sorting the axis by cluster groups, squares of high-density interconnections should become apparent in an adjacency heatmap. Unfortunately for an atmospheric chemistry mechanism, the size and sparseness of a graph, makes this an infeisable method to visually access the nodcluster node ratios. Instead we can adapt the nodes presented by the treemap in \autoref{fig:imap2page} and replacing the hierarchical structure, with one representing the original graph.
 %
 %
-%
+%    \begin{figure}[H]
+%      \centering
+%      \includegraphics[width=1.1\textwidth]{fig/treeplot.pdf}
+%      \caption{\textbf{The L1 cluster graph using the tree layout from \autoref{fig:imap2page}. } This can be used to explore intra cluster relationships.  }
+%          \label{fig:imtreeplot}
+%    \end{figure}
 %
 %
 
@@ -264,10 +281,33 @@ Where $i$ corresponds to the index of species A in the matrix, since this is a l
 
   %
   %
+  % . In chemical simulations, this translates as the time it would take for a species concentration to decrease by two for a case where the production flux of that species is 0, and all rate constants remain constant. For the first-order decay of sample \autoref{eqn}, we can represent the decay using \autoref{decay}. This shows that the half-life of a species is independent of initial concentration.
   %
+  % \begin{equation}
+  % A \rightarrow[k] B
+  % \label{eqn}
+  % \end{equation}
   %
+  % \begin{equation}
+  % s(t) = a_0 \exp(-kt) \\
+  % \frac{a(t)}{a_0} = \exp(-kt) \\
+  % $$linearised this gives$$
+  % \ln (\frac{a(t)}{a_0}) = -kt
+  % $$ after $\tau_{1/2}$ the concentration is equal to $a_0/2$ of initial rate $a_0$, which gives $$
+  % \ln(\frac{\frac{a_0}{2}}{a_0}) = \ln(\frac{1}{2}) = \ln(2^{-1}) = -\ln2 = k\tau_{1/2}
+  % $$$$
+  % \tau_{\frac{1}{2}} = \frac{\ln 2}{k}
+  % \label{decay}
+  % \end{equation}
   %
+  % In species of the first order only, this may simplified to
+  % \begin{equation}
+  % a(t) = a_0 \exp (t  \sum_j k_j )
+  % $$ and therefore the half life may be written as the reciprocal sum of rate coefficients: $$
+  % \tau_A = 1 / \sum_j k_j
+  % \end{equation}
   %
+  % and is how lifetime is calculated for photochemical species [ref! modelling book, which references pilling and seakings].
 
 
 
@@ -508,33 +548,70 @@ PECOH DIEK & 0.0172 & 0.0011 \\
 
 %
 %
+% df.index = pd.MultiIndex.from_tuples(...
+%
+% df.euclid = df.euclid/df.euclid.max()
+% df.cosine = df.cosine/df.cosine.max()
+%
+%
+%
+% g = 'NRI15OOH NRI15O2,,NRI12OOH NRI12O2,,PHAN HOCH2CO3H,PHAN  HOCH2CO3,HOCH2CO3H HOCH2CO3,,RI14OOH RI14O2,,NRN9O2 NRN9OOH,,PECOH DIEK'.split(',')
+%
+%
+% s =''
+% for i in g:
+%     try:
+%         e = df.loc[tuple(sorted(i.split()))]
+%         s+= '%s & %.4f & %.4f //\n'%(i,e.euclid,e.cosine)
+%     except:
+%         s+= ' & & //\n'
+%
+%
+% print(s)
+%
+%
+% g = 'NRI15OOH NRI15O2,NRI12OOH NRI12O2,PHAN HOCH2CO3H HOCH2CO3,RI14OOH RI14O2,NRN9O2 NRN9OOH,PECOH DIEK'.split(',')
+%
+%
+% def get(x):
+%     import zhdf
+%     print (x)
+%     return zhdf.new('lhs_general.h5',groupid = x,selection='spec',prodloss=False).spec.compute()
+%
+% import multiprocessing as mp
+%
+% gps = mp.Pool(50).map(get,range(0,300))
 %
 %
 %
 %
+% g = 'RN27OOH RN37OOH,UDCARB20 UDCARB17,UDCARB14 UDCARB17,NRN9O2 NRN9OOH,PECOH DIEK'.split(',')
+%
+% g = 'C2H5CO3 CH3NO3,CH3CO3 CH3NO3,MACO3 CH3NO3'.split(',')
 %
 %
 %
+% g=['RTX24O2  RTX22O2']
 %
 %
+% for i in g:
+%     i = i.replace('-',' ').split()
+%     print(i)
 %
+%     plt.clf()
+%     ax = 0
+%     del ax
 %
+%     for a in gps:
+%         alpha = 0.06
+%         d = np.log10(a[i])
+%         try:
+%             ax = d.plot(ax = ax,alpha = alpha,subplots=True,legend=False)
+%         except:
+%             ax=d.plot(alpha = alpha,subplots=True)
 %
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
+%     plt.ylabel('Log10 Mixing Ratio')
+%     plt.savefig('-'.join(i)+'.pdf')
 
 
 
