@@ -1,4 +1,4 @@
-.DS_Store 
+.DS_Store
 thesis.pdf
 */*.aux
 */*.log
@@ -16,3 +16,4 @@ thesis.pdf
 *.sty
 *.bbl
 *.blg
+Ellis_106023483_Thesis.pdf
