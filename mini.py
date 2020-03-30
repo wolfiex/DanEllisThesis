@@ -15,3 +15,21 @@ if backup:
     os.system('git commit -m "minfy: %s"'%time)
 
 print ('commit =', time)
+
+files = glob.glob('*/combigned.tex')
+
+for i in files:
+
+    data = open(i,'r').read()
+
+    data = re.sub(r'\n\s*%[^\n]+','',data)
+
+    os.system('mv %s %s'%(i,i.replace('combigned','grouped/combigned')))
+
+    with open(i,'w') as f:
+        f.write(data)
+
+
+    print(i);
+
+print('fi')
