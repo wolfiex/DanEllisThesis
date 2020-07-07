@@ -9,7 +9,7 @@
         "electron-screenshot-updated": "^1.0.5"
     },
     "devDependencies": {
-        "electron": "^1.8.8",
+        "electron": "^7.2.4",
         "electron-packager": "^8.1.0",
         "electron-reload": "^1.5.0"
     },
