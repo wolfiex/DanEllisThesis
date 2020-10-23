@@ -2547,8 +2547,9 @@ Texas? },
 }
 
 @misc{maccs,
-   author = {MDL Information Systems/Symyx (MDL)},
+   author = {MDL},
    journal = {Santa Clara, CA},
+   note = {MDL Information SystemsSymyx (MDL)},
    title = {Maccs-Ii},
    year = {1984}
 }
