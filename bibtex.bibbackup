@@ -3671,6 +3671,16 @@ Extraction}},
    year = {2013}
 }
 
+@article{physapprox,
+   author = {Valentin N. Ostrovsky},
+   journal = {Hyle},
+   number = {2},
+   pages = {101--126},
+   title = {Towards A Philosophy Of Approximations In The 'Exact' Sciences},
+   volume = {11},
+   year = {2005}
+}
+
 @article{pilot,
    author = {Jeanningros, Y and Vlaeminck, S E and Kaldate, A and Verstraete,
 W and Graveleau, L},
@@ -3713,6 +3723,17 @@ and Pitts, Walter},
    note = {\url{https://www.scientificamerican.com/article/planet-formation-its-a-drag/}},
    title = {{Planet Formation? It'S A Drag}},
    year = {2018}
+}
+
+@book{platoform,
+   author = {Welton, W.A. and Benso, S. and Bowery, A.M.},
+   isbn = {9780739105146},
+   lccn = {2002117245},
+   note = {\url{https://books.google.co.uk/books?id=vbtbQk\_A0YoC}},
+   publisher = {Lexington Books},
+   series = {G - Reference, Information and Interdisciplinary Subjects Series},
+   title = {Plato'S Forms: Varieties Of Interpretation},
+   year = {2002}
 }
 
 @article{plexp,
@@ -4065,6 +4086,17 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    title = {The Net Of Reciprocal Influence: A Problem In Treating Sociometric Data},
    volume = {3},
    year = {1949}
+}
+
+@book{serendipity,
+   author = {Roberts, R.M.},
+   isbn = {9780471602033},
+   lccn = {lc88033638},
+   note = {\url{https://books.google.co.uk/books?id=hf57X0s4aPwC}},
+   publisher = {Wiley},
+   series = {Wiley Science Editions},
+   title = {Serendipity: Accidental Discoveries In Science},
+   year = {1989}
 }
 
 @article{shapinginfo,
