@@ -275,9 +275,9 @@ Submitted in accordance with the requirements\\
 
 \chapter*{Abstract}
 \parbox{.75\textwidth}{
-Atmospheric chemistry mechanisms play a pivotal role in our understanding of societal problems such as air pollution, climate change and stratospheric ozone loss. This thesis explores the benefits of representing these mechanisms in terms of a mathematic graph (or network) which connects species (nodes) through reactions (edges). Using the Master Chemical Mechanism run using the Dynamically Simple Box Model of Atmospheric Chemical Complexity we run simulations under several different representative scenarios and use graph theory and machine learning to visualise, understand and analyse the underlying chemical processes in the atmosphere.\\
+Atmospheric chemistry mechanisms play a pivotal role in our understanding of societal problems such as air pollution, climate change and stratospheric ozone loss. This thesis explores the benefits of representing these mechanisms in terms of a mathematic graph (or network) which connects species (nodes) through reactions (edges). We use the Dynamically Simple Model of Atmospheric Chemical Complexity and the Master Chemical Mechanism to explore the a number of real world senarios - using graph theory and machine learning to visualise, understand and analyse the underlying chemistry of the lower atmosphere.\\
 
-We begin by exploring different visualisation techniques to depict chemistry within the atmosphere. Here it is found that the sociograph framework provides the most (visually) intuitive delineation of the species and their reactions. However, for large, complex systems, this type of qseudo-qualitative analysis has its limitations - physical and cognitive. Instead, the relationships between species in the network are quantified using graph centrality metrics and then compared against well-established methods such as the jacobian and rate of production analysis. Further development of graph theory allows us to couple natural language processing, network decomposition, and clustering to identify species with similar lifetimes, reaction styles, or temporal profiles. \\
+We begin by exploring different visualisation techniques to depict chemistry within the atmosphere. It is found that the sociograph framework provides the most (visually) intuitive delineation of the species and their reactions. For large, complex systems, this type of qseudo-qualitative analysis has its limitations - physical and cognitive. Instead, the relationships between species in the network are quantified using graph centrality metrics and then compared against well-established methods such as the jacobian and rate of production analysis. Further development of graph theory allows us to couple natural language processing, network decomposition, and clustering to identify species with similar lifetimes, reaction styles, or temporal profiles. \\
 
 Having explored aspects of mechanism analysis, visualisation and reduction, we examine how varying representations of species structure can affect the patterns highlighted by unsupervised machine learning models. This is done by visualising them in 2D space and serves as a precursor to potential future work involving Graph Convoluted Neural Networks - thus consolidating the contents of this thesis.\\
 
@@ -314,6 +314,8 @@ Ultimately it is found that using a graph-theory approach can prove highly benef
 
 
 \tableofcontents
+\newpage
+\include{./glossary}
 \listoffigures
 \listoftables
 \newpage
@@ -321,28 +323,28 @@ Ultimately it is found that using a graph-theory approach can prove highly benef
 
 
 
-% Introduction 0
-\include{./0_intro}
-
-% Ch1 1
- \include{./1_visual}
+% % Introduction 0
+% \include{./0_intro}
 %
-% Chapter 2
-\include{./2_graphs}
+% % Ch1 1
+%  \include{./1_visual}
+% %
+% % Chapter 2
+% \include{./2_graphs}
+% %
+% % Chapter 3
+% \include{./3_centrality}
 %
-% Chapter 3
-\include{./3_centrality}
-
+% %
+% % Chapter 4 - done
+%  \include{./4_lumping}
 %
-% Chapter 4 - done
- \include{./4_lumping}
-
-% Chapter 5
- \include{./5_DR}
-%
-%
-% Conclusion
- \include{./6_conclusion}
+% % Chapter 5
+%  \include{./5_DR}
+% %
+% %
+% % Conclusion
+%  \include{./6_conclusion}
 %
 
 \cleardoublepage\makeatletter\@openrightfalse\makeatother
