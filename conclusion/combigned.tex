@@ -19,44 +19,50 @@ With the newly emerging age of `big data', the fields of data analysis and graph
 \newpage
 
 \section*{Reproducability}
+\addcontentsline{toc}{section}{\protect\numberline{}Reproducability}%
+
 The code used within this thesis is provided `as is' within the relevant repositories. There will be an attempt to make it more presentable and fully documented within the near future, but this has not yet happened. For many of the tasks it is possible to download a clean repository and implement any relevant changes yourself.
 
 \subsection*{The Box Model}
 
-Most of the work in this thesis relies on the use of the DSMACC Box model \citep{dsmacc}. In order to reproduce it the specific code I have used can be found in \url{https://github.com/wolfiex/DSMACC-testing}, however any box model which allows you to extract both the fluxes and Jacobian matrix may be used.
+Most of the work in this thesis relies on the use of the DSMACC Box model \citep{dsmacc}. In order to reproduce it the specific code I have used can be found in \citep{dsmaccgit}, however any box model which allows you to extract both the fluxes and Jacobian matrix may be used.
 
 \subsection*{Photolysis Calculations}
 
-Photolysis rates are calculated with version 5.2 of the Tropospheric and Ultraviolet and Visible codebase. Photolysis rates are calculated once at the start of each box model run and then interpolated with the use of cubic splines to provide the values required throughout the day. This can be located at \url{https://github.com/pb866/TUV_DSMACC/}, Photolysis rates within the J array correspond to the lines outlined in \verbose{./INPUTS/MCMTUV} and are hard wired within the \verbose{./MCMvXX.inc} include files.
+Photolysis rates are calculated with version 5.2 of the Tropospheric and Ultraviolet and Visible codebase. Photolysis rates are calculated once at the start of each box model run and then interpolated with the use of cubic splines to provide the values required throughout the day. This can be located at \citep{tuv}, Photolysis rates within the J array correspond to the lines outlined in \verb|./INPUTS/MCMTUV| and are hard wired within the \verb|./MCMvXX.inc| include files.
 
 \subsection*{The Master Chemical Mechanism}
-For the work, we have made use of various versions of the master chemical mechanism \citep{mcm}. Different versions of this and its reduced component (CRI) can be obtained from the MCM website: \url{mcm.york.ac.uk}. Alternatively the KPP presentation of all the mechanisms I have used are located within the \verbose{./mechanisms} folder within the DSMACC repository.
+For the work, we have made use of various versions of the master chemical mechanism \citep{mcm}. Different versions of this and its reduced component (CRI) can be obtained from the MCM website: \url{mcm.york.ac.uk}. Alternatively the KPP presentation of all the mechanisms I have used are located within the \verb|./mechanisms| folder in the DSMACC repository.
 
 
 \subsection*{Kinetic Pre-Processor}
-To transpose the chemical mechanism into a usable format, the kinetic pre-rpocessor rewrites the human readable first order ordinary differential equations into the FORTRAN readable code used within the integrator. Again a slightly altered version of KPP 2.3.01 used in GEOSChem (also known as flexchem) has been used. This is found at \url{https://github.com/wolfiex/kpp_2.3.01_gc/}
+To transpose the chemical mechanism into a usable format, the Kinetic Pre-Processor rewrites the human readable first order ordinary differential equations into FORTRAN95 code. The version of this originates from FlexChem  - the KPP rewrite used in GEOSChem (KPP 2.3.01). This is located at \url{https://github.com/wolfiex/kpp_2.3.01_gc/}
 
 \subsection*{ML libraries}
-Simple processing tasks as clustering , PCA and t-SNE generally make use of the Scikit-Learn package \citep{sklearn}. This is located in \url{https://github.com/scikit-learn/scikit-learn}. The t-SNE force graph is located under \url{https://github.com/wolfiex/tsNET} and the mercator layout \url{https://github.com/networkgeometry/mercator}.
-The code for a simple AutoEncoder is located within the DSMACC repository at \url{https://github.com/wolfiex/DSMACC-testing/blob/master/dsmacc/examples/rate_ae.py} and the Graph AutoEncoder at \url{https://github.com/tkipf/gae}.
+Simple processing tasks as clustering , PCA and t-SNE generally make use of the Scikit-Learn package \citep{sklearn}.
+Graph Layouts such at TSNET and Mercator can be found in \url{https://github.com/wolfiex/tsNET} and \url{https://github.com/networkgeometry/mercator}.
+
+The AutoEncoder  code can be found within the DSMACC repository at \url{https://github.com/wolfiex/DSMACC-testing/blob/master/dsmacc/examples/rate_ae.py} and the Graph AutoEncoder at \url{https://github.com/tkipf/gae}.
 
 
 Although not documented, the aim of this thesis was to work up to the use of a graph convolutional network such as the one in \url{https://github.com/wolfiex/gcn}.
 
 \subsection*{Chemial representation and Molecular Keys}
-Chemical species representation for SMILES and InCHI strings are taken directly from the MCM. Additional conversions into MACCS and MQN keys make use of the RDKIT  python package: \citep{rdkit} \url{https://github.com/rdkit/rdkit/}.
+Chemical species representation for SMILES and INCHI strings are taken directly from the MCM. Additional conversions into MACCS and MQN keys make use of the RDKIT  python package: \citep{rdkit}.
 
-\subsection{Observation and model run reproducibility}
-To reproduce the results made from field campaigns it is possible to extract the data directly from the CEDA repositories.
+\subsection*{Observation and model run reproducibility}
+To reproduce the results made from field campaigns it is possible to extract the data directly from the Centre for Environmental Data Analysis. The four field campaigns used are provided below.
 
 \begin{itemize}
  \item{\url{https://catalogue.ceda.ac.uk/uuid/648246d2bdc7460b8159a8f9daee7844}}
  \item {\url{https://catalogue.ceda.ac.uk/uuid/81892deb2dd5e7f0d26b9c587af45f3d}}
  \item{\url{https://catalogue.ceda.ac.uk/uuid/a457d9715f3c4bc295ef975932e491d9}}
  \item {\url{https://catalogue.ceda.ac.uk/uuid/cee49a1f044b79d5413b7a0282467508}}
- \item {\url{https://www.sciencedaily.com/releases/2013/01/130117084856.htm}}
 \end{itemize}
 
-These are then parsed and inserted as initial conditions for the model runs - some of which are spun up to steady state based on the users preference.
+Once downloaded, these are wrangled into the initial conditions CSV format for the use in model runs - some of which are spun up to steady state based on the users preference and aim of the study.
 
-Non-observational runs are initated through the use of a Latin hypercube format to provide a random assortment of initial concentrations within a pre-defined limit. An example of the intial conditions output for one run of these can be found in \url{https://github.com/wolfiex/DSMACC-testing/blob/master/InitCons/lhs_spinup.csv}
+Non-observational runs are initated through the use of a Latin hypercube format to provide a random assortment of initial concentrations within a pre-defined limit. An example of the intial conditions output for one run of these can be found in \url{https://github.com/wolfiex/DSMACC-testing/blob/master/InitCons/lhs_spinup.csv}.
+
+\bibliographystyle{apalike}
+\bibliography{bibtex}

@@ -1,5 +1,5 @@
 '''
-A program to span all folders and collate bibliography entries. 
+A program to span all folders and collate bibliography entries.
 
 Checks:
     - duplicated key names
@@ -7,7 +7,7 @@ Checks:
     - missing Years
     - missing ID
     - missing Author
-    
+
 Additions:
     - url to howpublished
 '''
@@ -21,6 +21,15 @@ os.system('mv bibtex.bib bibtex.bibbackup')
 fbib = glob.glob('./*/*.bib')
 
 
+title_correct=[
+['Voc','VOC'],
+['Dsmacc','DSMACC'],
+['Tuv','TUV'],
+['Geoschem','GEOSChem'],
+['Kpp','KPP'],
+['Mcm','MCM'],
+]
+
 
 print(fbib)
 
@@ -28,7 +37,7 @@ stp = re.compile(r'"|\'|\{|\}|')
 
 def locate(x):
     return print('\u001b[31m' + os.popen('grep -inr "%s" */*.bib'%x).read() + '\u001b[0m')
- 
+
 
 def dup(x,property):
     y = [i[property] for i in x]
@@ -47,12 +56,12 @@ keys = []
 for i in fbib:
     txt = open(i).read()
     keys.extend(re.findall(r'@[^{]*{(.*),',txt))
-    
+
     with open(i) as bibtex_file:
         print(i)
         bdata = bibtexparser.load(bibtex_file, BibTexParser(common_strings = True))
         entries.extend(bdata.get_entry_list())
-        
+
 
 for i in range(len(entries)):
     try:entries[i]['ID']
@@ -60,18 +69,23 @@ for i in range(len(entries)):
         print('--\n\n\nREMOVAL IMMINENT\n',entries[i])
         continue
 
-    try:entries[i]['title'] = entries[i]['title'].title()
+    try:
+        title = entries[i]['title'].title()
+        for j in title_correct:
+            title = title.replace(*j)
+        entries[i]['title'] = title
     except:
         print('--\n\n'+entries[i]['ID']+'\nNo title\n',entries[i])
         entries[i]['title'] = 'UNTITLED'
         locate(entries[i]['ID'])
+
     try:entries[i]['year']
     except:
         print('---\n\n'+entries[i]['ID']+'\nNo year\n',entries[i])
         locate(entries[i]['ID'])
         entries[i]['year'] = '2020'
         print ('note="Accessed: 2020-1-1",')
-        
+
     try:
         url = entries[i]['url'].replace('\\url','')
         entries[i]['note']= '\\url{%s}'%stp.sub('',url)
@@ -112,7 +126,7 @@ if len(set(db.entries_dict.keys())) != len(set(keys)):
 
 
 writer = BibTexWriter()
-writer.indent = '   ' 
+writer.indent = '   '
 writer.comma_first = False  # place the comma at the beginning of the line
 with open('bibtex.bib', 'w') as bibfile:
     bibfile.write(writer.write(db))

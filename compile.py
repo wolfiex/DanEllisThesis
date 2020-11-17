@@ -9,6 +9,8 @@ def make(filename):
     bib = []
     bf = glob.glob('*.aux')
     for i in bf:
+        os.popen('bibtex '+i)
+        os.popen('bibtex '+i)
         bib.append(os.popen('bibtex '+i).read())
     print('.')
     os.system('pdflatex '+filename)
