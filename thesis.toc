@@ -1,0 +1,134 @@
+\gdef \the@ipfilectr {@-1}
+\contentsline {section}{\numberline {}List of Abbreviations}{xiii}{chapter*.3}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-2}
+\contentsline {chapter}{\numberline {1} Introduction }{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Background}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}A Preface On Humanity And The Climate}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Formation Of The Atmosphere}{4}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Rise Of The Homo Sapiens (`Wise Man')}{4}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}Motivation (How The Atmosphere Affects Us)}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Air Quality - It Is The Air We Breathe}{6}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Stratospheric Ozone - The Protective Barrier}{7}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Changing Climate}{7}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Tropospheric Chemistry}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Ozone Production/Loss}{8}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}The Nox Cycle}{8}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Hox Cycle}{10}{subsection.1.3.3}
+\contentsline {section}{\numberline {1.4}Modelling The Earth}{11}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Earth System Models (ESM)}{12}{subsection.1.4.1}
+\contentsline {section}{\numberline {1.5}The 0D Chemical Box Model}{13}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Chemical Mechanisms}{13}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Numerical Integration}{13}{subsection.1.5.2}
+\contentsline {subsubsection}{\numberline {1.5.2.1}Non-Stiff Equations}{14}{subsubsection.1.5.2.1}
+\contentsline {subsubsection}{\numberline {1.5.2.2}Numerically Stiff Equations (Atmospheric Chemistry)}{14}{subsubsection.1.5.2.2}
+\contentsline {subsection}{\numberline {1.5.3}The Model Development Cycle}{14}{subsection.1.5.3}
+\contentsline {subsection}{\numberline {1.5.4}The Dynamically Simple Model Of Atmospheric Chemical Complexity}{15}{subsection.1.5.4}
+\contentsline {section}{\numberline {1.6}Thesis Layout}{15}{section.1.6}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-3}
+\contentsline {chapter}{\numberline {2} Visualisation and its use in understanding Complex Data }{21}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{24}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Communicatory Practices Of Early Humans}{24}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}The Origin Of Big Data}{25}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Visualisation Design}{26}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Storytelling}{27}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Metaphor Selection}{27}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Nature-Inspired}{27}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Man-Made}{28}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3}Composite}{29}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.4}Domain Specific}{30}{subsubsection.2.2.2.4}
+\contentsline {section}{\numberline {2.3}Visualising Relationships}{33}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}The Dataset}{33}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}The Sociograph}{34}{subsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.2.1}The Chord Diagram}{34}{subsubsection.2.3.2.1}
+\contentsline {subsubsection}{\numberline {2.3.2.2}Direct Representation Of The Relational Matrix}{38}{subsubsection.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.2.3}Arc Diagrams}{39}{subsubsection.2.3.2.3}
+\contentsline {subsubsection}{\numberline {2.3.2.4}The Traditional Network Graph}{42}{subsubsection.2.3.2.4}
+\contentsline {section}{\numberline {2.4}Conclusion}{44}{section.2.4}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-4}
+\contentsline {chapter}{\numberline {3}Applying Visual Analytics to the Atmospheric Chemistry Network}{49}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{52}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Networks And Their Role In Visual Analytics}{52}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Graphs In Chemistry}{52}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Using Sociograms To Describe Reactions}{53}{subsubsection.3.1.2.1}
+\contentsline {subsection}{\numberline {3.1.3}Modeling Chemistry As A Directed Graph.}{53}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Graph Syntactics}{56}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Selecting The Correct Evaluation Criteria.}{57}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Edge Crossing}{58}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Node Distribution And Overlap}{59}{subsubsection.3.2.1.2}
+\contentsline {subsection}{\numberline {3.2.2}Automated Graph Drawing Layouts}{59}{subsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Replication Of Hand-Drawing Methods}{59}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2.2}Projection Based}{60}{subsubsection.3.2.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.3}Force-Directed}{62}{subsubsection.3.2.2.3}
+\contentsline {paragraph}{Force Atlas 2}{63}{figure.caption.36}
+\contentsline {paragraph}{Yifan Hu}{63}{figure.caption.36}
+\contentsline {paragraph}{OpenOrd}{64}{figure.caption.36}
+\contentsline {paragraph}{tsNET}{65}{figure.caption.36}
+\contentsline {section}{\numberline {3.3}Selecting The Best Graph Drawing Layout.}{65}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Graph-Node Distribution}{66}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Evaluating Node Distribution For The Beijing Mechanism}{67}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Distribution Of Primary Emitted VOCs}{68}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Calculation Of Spatial Clustering}{68}{subsubsection.3.3.1.3}
+\contentsline {section}{\numberline {3.4}Graph Semantics}{72}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Limitations}{72}{subsection.3.4.1}
+\contentsline {paragraph}{Visual}{72}{subsection.3.4.1}
+\contentsline {paragraph}{Cognitive}{73}{figure.caption.41}
+\contentsline {paragraph}{Technological}{74}{figure.caption.41}
+\contentsline {subsection}{\numberline {3.4.2}Node Encoding}{74}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Edge Properties}{78}{subsection.3.4.3}
+\contentsline {subsubsection}{\numberline {3.4.3.1}Muti-Variate Edges}{78}{subsubsection.3.4.3.1}
+\contentsline {subsubsection}{\numberline {3.4.3.2}Edge Direction}{78}{subsubsection.3.4.3.2}
+\contentsline {subsubsection}{\numberline {3.4.3.3}Edge Shape}{78}{subsubsection.3.4.3.3}
+\contentsline {subsubsection}{\numberline {3.4.3.4}Edge Bundling }{81}{subsubsection.3.4.3.4}
+\contentsline {subsubsection}{\numberline {3.4.3.5}Power, Routing And Confluence.}{82}{subsubsection.3.4.3.5}
+\contentsline {subsubsection}{\numberline {3.4.3.6} Angle / Continuity}{85}{subsubsection.3.4.3.6}
+\contentsline {subsection}{\numberline {3.4.4}Temporal Projection}{86}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Additional Dimensions}{88}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Summary Of Semantic Representation}{88}{subsection.3.4.6}
+\contentsline {section}{\numberline {3.5}A Chemistry Case Study}{89}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Semantic And Syntatic Considerations.}{89}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Syntatic Representation}{89}{subsubsection.3.5.1.1}
+\contentsline {subsubsection}{\numberline {3.5.1.2}Example Semantic Representation Using A Methane Mechanism.}{89}{subsubsection.3.5.1.2}
+\contentsline {subsection}{\numberline {3.5.2}A Model Of Beijing}{90}{subsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Similarity Between Graph Shape}{92}{subsubsection.3.5.2.1}
+\contentsline {subsubsection}{\numberline {3.5.2.2}Network Branch Classification}{94}{subsubsection.3.5.2.2}
+\contentsline {section}{\numberline {3.6}Conclusion}{96}{section.3.6}
+\gdef \the@ipfilectr {}
+\gdef \the@ipfilectr {@-5}
+\contentsline {chapter}{\numberline {4} Conclusions and Future Work }{105}{chapter.4}
+\contentsline {section}{\numberline {4.1}Conclusions}{105}{section.4.1}
+\contentsline {section}{\numberline {4.2}Future Work}{106}{section.4.2}
+\contentsline {section}{\numberline {}Reproducability}{107}{section.4.2}
+\gdef \the@ipfilectr {}
+\contentsline {chapter}{Appendices}{111}{section*.59}
+\contentsline {chapter}{\numberline {A}Supplementary Mathematics}{112}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}PCA}{112}{section.a.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Statistics}{112}{subsection.a.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Matrices and Eigenvectors}{113}{subsection.a.A.1.2}
+\contentsline {section}{\numberline {A.2}t-SNE}{113}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Student t distribution}{113}{subsection.a.A.2.1}
+\contentsline {subsubsection}{\numberline {A.2.1.1}t-Score}{114}{subsubsection.a.A.2.1.1}
+\contentsline {chapter}{\numberline {B}Neural Network Activation Functions}{115}{Appendix.a.B}
+\contentsline {section}{\numberline {B.1}Binary Step}{115}{section.a.B.1}
+\contentsline {section}{\numberline {B.2}Linear}{115}{section.a.B.2}
+\contentsline {section}{\numberline {B.3}Sigmoid / Logistic}{116}{section.a.B.3}
+\contentsline {section}{\numberline {B.4}Hyperbolic Tangent}{117}{section.a.B.4}
+\contentsline {section}{\numberline {B.5}Rectified Linear Unit}{117}{section.a.B.5}
+\contentsline {section}{\numberline {B.6}Swish}{118}{section.a.B.6}
+\contentsline {section}{\numberline {B.7}\textbf {A note on backpropagation}}{118}{section.a.B.7}
+\contentsline {chapter}{\numberline {C}Graphs and Networks}{119}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Heavily Labeled Citation Graph}{120}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Centrality on the UK rail network.}{121}{section.a.C.2}
+\contentsline {chapter}{\numberline {D}Miscellaneous}{123}{Appendix.a.D}
+\contentsline {section}{\numberline {D.1}Correspondance with Mike Jenkin}{123}{section.a.D.1}
+\contentsline {section}{\numberline {D.2}Functional Groups}{127}{section.a.D.2}
+\contentsline {chapter}{\numberline {E}Chapter Keywords}{128}{Appendix.a.E}
+\contentsline {section}{\numberline {E.1} Introduction }{128}{section.a.E.1}
+\contentsline {section}{\numberline {E.2} Visualisation and its use in understanding Complex Data }{129}{section.a.E.2}
+\contentsline {section}{\numberline {E.3}Applying Visual Analytics to the Atmospheric Chemistry Network}{129}{section.a.E.3}
+\contentsline {section}{\numberline {E.4} Chemical model diagnostics using graph theory and metrics. }{130}{section.a.E.4}
+\contentsline {section}{\numberline {E.5} Using Graph Clustering And Natural Language Processing To Aid Mechanism Reduction. }{130}{section.a.E.5}
+\contentsline {section}{\numberline {E.6} Computational Learning of Species Structure using Visualisation and Vector Clustering}{131}{section.a.E.6}
+\contentsline {section}{\numberline {E.7} Conclusion }{131}{section.a.E.7}

@@ -6,7 +6,7 @@
    month = {December},
    note = {http://arxiv.org/abs/1312.6722},
    primaryclass = {math.NA},
-   title = {UNTITLED},
+   title = {{On The Limiting Behavior Of Parameter-Dependent Network Centrality Measures}},
    year = {2013}
 }
 
@@ -17,7 +17,7 @@
    isbn = {978-0-12-409548-9},
    note = {\url{http://www.sciencedirect.com/science/article/pii/B9780124095489091776}},
    publisher = {Elsevier},
-   title = {UNTITLED},
+   title = {Atmospheric Chemistry},
    year = {2015}
 }
 
@@ -28,7 +28,7 @@
    note = {\url{https://books.google.co.uk/books?id=hf57X0s4aPwC}},
    publisher = {Wiley},
    series = {Wiley Science Editions},
-   title = {UNTITLED},
+   title = {Serendipity: Accidental Discoveries In Science},
    year = {1989}
 }
 
@@ -43,7 +43,8 @@ Karin},
    number = {9},
    pages = {1152--1158},
    publisher = {Taylor \& Francis},
-   title = {UNTITLED},
+   title = {{Photochemical Ozone Creation Potentials: A Study Of Different
+Concepts}},
    volume = {42},
    year = {1992}
 }
@@ -51,7 +52,7 @@ Karin},
 @misc{adj,
    author = {Bostock, Mike},
    note = {\url{https://bost.ocks.org/mike/miserables/}},
-   title = {UNTITLED},
+   title = {{Les Mis{\'E}Rables Co-Occurrence}},
    year = {2019}
 }
 
@@ -62,7 +63,7 @@ Karin},
    note = {\url{https://www.atmos-chem-phys.net/7/2413/2007/}},
    number = {9},
    pages = {2413--2433},
-   title = {UNTITLED},
+   title = {Development Of The Adjoint Of Geos-Chem},
    volume = {7},
    year = {2007}
 }
@@ -70,7 +71,7 @@ Karin},
 @article{advnummeth,
    author = {C.J.Budd},
    note = {\url{https://people.bath.ac.uk/mamamf/chapt6and7.pdf}},
-   title = {UNTITLED},
+   title = {{Advanced Numerical Methods - Lectures Part 2 }},
    year = {2019}
 }
 
@@ -79,7 +80,7 @@ Karin},
    booktitle = {{Medium}},
    note = {\url{https://towardsdatascience.com/convolutional-autoencoders-for-image-noise-reduction-32fce9fc1763}},
    publisher = {Towards Data Science},
-   title = {UNTITLED},
+   title = {{Convolutional Autoencoders For Image Noise Reduction}},
    year = {2019}
 }
 
@@ -91,7 +92,7 @@ Karin},
    month = {Dec},
    number = {},
    pages = {2605-2612},
-   title = {UNTITLED},
+   title = {Deep Convolutional Autoencoder For Eeg Noise Filtering},
    volume = {},
    year = {2018}
 }
@@ -103,7 +104,7 @@ Karin},
    isbn = {978-3-905673-43-2},
    issn = {1816-0859},
    publisher = {The Eurographics Association},
-   title = {UNTITLED},
+   title = {{The Aesthetics Of Graph Visualization}},
    year = {2007}
 }
 
@@ -118,7 +119,7 @@ Karin},
    number = {356},
    pages = {791--799},
    publisher = {Taylor \& Francis},
-   title = {UNTITLED},
+   title = {{Science And Statistics}},
    volume = {71},
    year = {1976}
 }
@@ -135,7 +136,7 @@ Karin},
    pages = {e8694},
    pmc = {PMC2811724},
    pmid = {20111700},
-   title = {UNTITLED},
+   title = {{Mapping Change In Large Networks}},
    volume = {5},
    year = {2010}
 }
@@ -154,7 +155,8 @@ and Stein, C},
    number = {6328},
    pages = {966--969},
    pmid = {28254944},
-   title = {UNTITLED},
+   title = {{A Nontoxic Pain Killer Designed By Modeling Of Pathological
+Receptor Conformations}},
    volume = {355},
    year = {2017}
 }
@@ -165,7 +167,9 @@ Joe and Huang, Zhonghui and Wang, Xinming and Hewitt, Nick
 and Crilley, Leigh and Kramer, Louisa and Slater, Eloise and
 Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    note = {\url{https://catalogue.ceda.ac.uk/uuid/648246d2bdc7460b8159a8f9daee7844}},
-   title = {UNTITLED},
+   title = {{Dataset Collection Record: Aphh: Atmospheric Measurements And
+Model Results For The Atmospheric Pollution \& Human Health
+In A Chinese Megacity}},
    year = {2017}
 }
 
@@ -173,7 +177,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    author = {Sanjoy Mahajan},
    journal = {MIT OpenCourseWare},
    note = {\url{http://web.mit.edu/6.055/book/book-draft.pdf}},
-   title = {UNTITLED},
+   title = {{The Art Of Approximation In Science And Engineering.}},
    year = {2008}
 }
 
@@ -184,7 +188,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    issn = {1522-404X},
    month = {Oct},
    pages = {110-116},
-   title = {UNTITLED},
+   title = {Arc Diagrams: Visualizing Structure In Strings},
    year = {2002}
 }
 
@@ -194,7 +198,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    lccn = {lc93000909},
    note = {\url{https://books.google.co.uk/books?id=YBAzXV4YtQ8C}},
    publisher = {University of Chicago Press},
-   title = {UNTITLED},
+   title = {Archaic Bookkeeping: Early Writing And Techniques Of Economic Administration In The Ancient Near East},
    year = {1993}
 }
 
@@ -203,7 +207,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    booktitle = {{2nd International Immersive Projection Technology Workshop}},
    journal = {Sun Microsystems},
    note = {\url{https://www.swift.ac.uk/about/files/vision.pdf}},
-   title = {UNTITLED},
+   title = {{The Limits Of Human Vision}},
    volume = {2},
    year = {1998}
 }
@@ -220,7 +224,8 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    pages = {492},
    pmc = {PMC5731498},
    pmid = {29244012},
-   title = {UNTITLED},
+   title = {{Utilizing Knowledge Base Of Amino Acids Structural Neighborhoods
+To Predict Protein-Protein Interaction Sites}},
    volume = {18},
    year = {2017}
 }
@@ -236,7 +241,8 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    number = {2},
    pages = {64--73},
    publisher = {American Chemical Society},
-   title = {UNTITLED},
+   title = {{Atom Pairs As Molecular Features In Structure-Activity Studies:
+Definition And Applications}},
    volume = {25},
    year = {1985}
 }
@@ -246,7 +252,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    booktitle = {{Londontopia}},
    month = {April},
    note = {\url{https://londontopia.net/site-news/featured/london-icon-tube-map/}},
-   title = {UNTITLED},
+   title = {{London Icon: A History Of Harry Beck'S Iconic Tube Map}},
    year = {2017}
 }
 
@@ -257,7 +263,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    note = {\url{https://books.google.co.uk/books?id=\_G74dDQO8gUC}},
    publisher = {University of Texas Press},
    series = {Before Writing},
-   title = {UNTITLED},
+   title = {Before Writing, Vol. I: From Counting To Cuneiform},
    year = {1992}
 }
 
@@ -266,7 +272,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    booktitle = {Sociometry},
    month = {03},
    pages = {35-41},
-   title = {UNTITLED},
+   title = {A Set Of Measures Of Centrality Based On Betweenness},
    volume = {40},
    year = {1977}
 }
@@ -275,7 +281,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    author = {Ulrik Brandes},
    journal = {Journal of Mathematical Sociology},
    pages = {163--177},
-   title = {UNTITLED},
+   title = {A Faster Algorithm For Betweenness Centrality},
    volume = {25},
    year = {2001}
 }
@@ -286,7 +292,7 @@ Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
    journal = {Social Networks},
    month = {06},
    pages = {141-154},
-   title = {UNTITLED},
+   title = {Centrality In Valued Graphs: A Measure Of Betweenness Based On Network Flow},
    volume = {13},
    year = {1991}
 }
@@ -301,7 +307,7 @@ and Wagner, Christopher G.},
    note = {\url{http://dx.doi.org/10.1007/3-540-37623-2_12}},
    pages = {153--166},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {A Framework For Drawing Planar Graphs With Curves And Polylines},
    year = {1998}
 }
 
@@ -311,7 +317,7 @@ and Wagner, Christopher G.},
    lccn = {99010096},
    note = {\url{https://books.google.co.uk/books?id=YmQy799flPkC}},
    publisher = {Industrial Press},
-   title = {UNTITLED},
+   title = {Mathematics For Computer Graphics Applications},
    year = {1999}
 }
 
@@ -323,7 +329,7 @@ and Wagner, Christopher G.},
    number = {v. 1},
    publisher = {Springer Netherlands},
    series = {Encyclopaedia of Mathematics},
-   title = {UNTITLED},
+   title = {Encyclopaedia Of Mathematics: Supplement},
    year = {1997}
 }
 
@@ -340,7 +346,7 @@ and Wagner, Christopher G.},
    numpages = {5},
    pages = {1–5},
    publisher = {Association for Computing Machinery},
-   title = {UNTITLED},
+   title = {Mining Big Data: Current Status, And Forecast To The Future},
    volume = {14},
    year = {2013}
 }
@@ -351,7 +357,7 @@ and Wagner, Christopher G.},
    month = {August},
    note = {\url{https://ideas.repec.org/p/pen/papers/13-003.html}},
    number = {13-003},
-   title = {UNTITLED},
+   title = {A Personal Perspective On The Origin(S) And Development Of Big Data: The Phenomenon, The Term, And The Discipline, Second Version},
    type = {PIER Working Paper Archive},
    year = {2012}
 }
@@ -366,7 +372,9 @@ Baker, Andy and Dyda, Rachael Y and Stubbins, Aron and Six, Johan},
    note = {http://doi.wiley.com/10.1029/2009JG001180},
    number = {G3},
    pages = {2069},
-   title = {UNTITLED},
+   title = {{Temporal Controls On Dissolved Organic Matter And Lignin
+Biogeochemistry In A Pristine Tropical River, Democratic Republic
+Of Congo}},
    volume = {115},
    year = {2010}
 }
@@ -379,7 +387,8 @@ Baker, Andy and Dyda, Rachael Y and Stubbins, Aron and Six, Johan},
    month = {October},
    note = {\url{http://arxiv.org/abs/1810.07215}},
    primaryclass = {q-bio.PE},
-   title = {UNTITLED},
+   title = {{Strategic Heuristics Underlie Animal Dominance Hierarchies
+And Provide Evidence Of Group-Level Social Knowledge}},
    year = {2018}
 }
 
@@ -388,7 +397,7 @@ Baker, Andy and Dyda, Rachael Y and Stubbins, Aron and Six, Johan},
    isbn = {9781472114372},
    note = {\url{https://books.google.co.uk/books?id=3z\_sCgAAQBAJ}},
    publisher = {Little, Brown Book Group},
-   title = {UNTITLED},
+   title = {The Genius Of Birds: The Intelligent Life Of Birds},
    year = {2016}
 }
 
@@ -396,7 +405,7 @@ Baker, Andy and Dyda, Rachael Y and Stubbins, Aron and Six, Johan},
    author = {Haruka Wada},
    note = {\url{https://www.nature.com/scitable/knowledge/library/the-development-of-birdsong-16133266}},
    publisher = {Nature Education Knowledge},
-   title = {UNTITLED},
+   title = {{The Development Of Birdsong | Learn Science At Scitable}},
    year = {2010}
 }
 
@@ -411,7 +420,8 @@ Baker, Andy and Dyda, Rachael Y and Stubbins, Aron and Six, Johan},
    pages = {84},
    pmc = {PMC3937982},
    pmid = {24616707},
-   title = {UNTITLED},
+   title = {{Red Blood Cell Oxidative Stress Impairs Oxygen Delivery And
+Induces Red Blood Cell Aging}},
    volume = {5},
    year = {2014}
 }
@@ -420,7 +430,8 @@ Baker, Andy and Dyda, Rachael Y and Stubbins, Aron and Six, Johan},
    author = {Hewitt,
 Nick and Edwards, Peter},
    note = {\url{https://catalogue.ceda.ac.uk/uuid/81892deb2dd5e7f0d26b9c587af45f3d}},
-   title = {UNTITLED},
+   title = {{Dataset Record: Op3-1 Campaign: Leeds Merged Chemistry Data
+At Bukit Atur}},
    year = {2009}
 }
 
@@ -437,7 +448,8 @@ J and Stone, D and Whalley, L K and Heard, D E},
    number = {18},
    pages = {9497--9514},
    publisher = {Copernicus GmbH},
-   title = {UNTITLED},
+   title = {{Oh Reactivity In A South East Asian Tropical Rainforest During
+The Oxidant And Particle Photochemical Processes (Op3) Project}},
    volume = {13},
    year = {2013}
 }
@@ -453,7 +465,7 @@ J and Stone, D and Whalley, L K and Heard, D E},
    number = {7375},
    pages = {91--93},
    pmid = {22080949},
-   title = {UNTITLED},
+   title = {{Energetics And The Evolution Of Human Brain Size}},
    volume = {480},
    year = {2011}
 }
@@ -470,7 +482,7 @@ J and Stone, D and Whalley, L K and Heard, D E},
    pages = {69 - 94},
    publisher = {Morgan Kaufmann},
    series = {Interactive Technologies},
-   title = {UNTITLED},
+   title = {Chapter Three - Lightness, Brightness, Contrast, And Constancy },
    year = {2013}
 }
 
@@ -478,7 +490,7 @@ J and Stone, D and Whalley, L K and Heard, D E},
    author = {J M Hayes,John P Rafferty},
    booktitle = {{Encyclop{\ae}dia Britannica}},
    note = {\url{https://www.britannica.com/topic/evolution-of-the-atmosphere-1703862}},
-   title = {UNTITLED},
+   title = {{Processes Affecting The Composition Of The Early Atmosphere}},
    year = {1998}
 }
 
@@ -491,7 +503,7 @@ J and Stone, D and Whalley, L K and Heard, D E},
    number = {3},
    pages = {983--990},
    publisher = {Blackwell Publishing Ltd},
-   title = {UNTITLED},
+   title = {Force-Directed Edge Bundling For Graph Visualization},
    volume = {28},
    year = {2009}
 }
@@ -504,7 +516,7 @@ J and Stone, D and Whalley, L K and Heard, D E},
    month = {Sept},
    number = {5},
    pages = {741-748},
-   title = {UNTITLED},
+   title = {Hierarchical Edge Bundles: Visualization Of Adjacency Relations In Hierarchical Data},
    volume = {12},
    year = {2006}
 }
@@ -518,7 +530,8 @@ J and Stone, D and Whalley, L K and Heard, D E},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231096001057}},
    number = {1},
    pages = {81--104},
-   title = {UNTITLED},
+   title = {{The Tropospheric Degradation Of Volatile Organic Compounds: A
+Protocol For Mechanism Development}},
    volume = {31},
    year = {1997}
 }
@@ -533,7 +546,8 @@ J and Stone, D and Whalley, L K and Heard, D E},
    number = {4},
    pages = {37},
    publisher = {Multidisciplinary Digital Publishing Institute},
-   title = {UNTITLED},
+   title = {{Visual Analysis Of Nonlinear Dynamical Systems: Chaos, Fractals,
+Self-Similarity And The Limits Of Prediction}},
    volume = {4},
    year = {2016}
 }
@@ -541,7 +555,8 @@ J and Stone, D and Whalley, L K and Heard, D E},
 @misc{capeverde,
    author = {Read, Katie A},
    note = {\url{https://catalogue.ceda.ac.uk/uuid/a457d9715f3c4bc295ef975932e491d9}},
-   title = {UNTITLED},
+   title = {{Dataset Record: Cape Verde Atmospheric Observatory:
+Meteorological Davis Weather Station Measurements}},
    year = {2010}
 }
 
@@ -554,7 +569,7 @@ J and Stone, D and Whalley, L K and Heard, D E},
    number = {1},
    pages = {219--230},
    publisher = {University of Hawai'i Press},
-   title = {UNTITLED},
+   title = {{Rock Art, Burials, And Habitations: Caves In East Kalimantan}},
    volume = {44},
    year = {2005}
 }
@@ -562,7 +577,7 @@ J and Stone, D and Whalley, L K and Heard, D E},
 @misc{cavepic,
    author = {Schroth, Christian},
    note = {\url{https://www.facebook.com/AncientEnthusiast/photos/a.849792428414625/2618224274904756/?type=3&theater}},
-   title = {UNTITLED},
+   title = {{Horses Panel, Chauvet Cave}},
    year = {2019}
 }
 
@@ -577,7 +592,7 @@ and Ward, Matthew O.},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_1}},
    pages = {1--9},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Introduction To Multivariate Network Visualization},
    year = {2014}
 }
 
@@ -596,7 +611,7 @@ and Xu, Kai},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_10}},
    pages = {207--235},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Scalability Considerations For Multivariate Graph Visualization},
    year = {2014}
 }
 
@@ -610,7 +625,7 @@ and Telea, Alexandru C.},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_2}},
    pages = {13--36},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Multivariate Networks In Software Engineering},
    year = {2014}
 }
 
@@ -626,7 +641,7 @@ and Zhou, Michelle X.},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_3}},
    pages = {37--59},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Multivariate Social Network Visual Analytics},
    year = {2014}
 }
 
@@ -641,7 +656,7 @@ and Ward, Matthew O.},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_4}},
    pages = {61--73},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Multivariate Networks In The Life Sciences},
    year = {2014}
 }
 
@@ -656,7 +671,7 @@ and Stasko, John T.},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_5}},
    pages = {77--95},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Tasks For Multivariate Network Analysis},
    year = {2014}
 }
 
@@ -674,7 +689,7 @@ and Zimmer, Bj{\"o}rn},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_6}},
    pages = {97--125},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Interaction In The Visualization Of Multivariate Networks},
    year = {2014}
 }
 
@@ -690,7 +705,7 @@ and McGill, Matthew},
    note = {\url{http://dx.doi.org/10.1007/978-1-4615-0457-3_6}},
    pages = {149--178},
    publisher = {Springer US},
-   title = {UNTITLED},
+   title = {Uml Class Diagrams: An Empirical Study Of Comprehension},
    year = {2003}
 }
 
@@ -707,7 +722,7 @@ and Zhou, Michelle X.},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_7}},
    pages = {127--150},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Novel Visual Metaphors For Multivariate Networks},
    year = {2014}
 }
 
@@ -727,7 +742,7 @@ and Telea, Alexandru C.},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_8}},
    pages = {151--174},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Temporal Multivariate Networks},
    year = {2014}
 }
 
@@ -744,7 +759,7 @@ and Zeckzer, Dirk},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_9}},
    pages = {175--206},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Heterogeneous Networks On Multiple Levels},
    year = {2014}
 }
 
@@ -754,7 +769,7 @@ and Zeckzer, Dirk},
    month = {February},
    note = {\url{https://earthobservatory.nasa.gov/images/146362/airborne-nitrogen-dioxide-plummets-over-china}},
    publisher = {NASA Earth Observatory},
-   title = {UNTITLED},
+   title = {{Airborne Nitrogen Dioxide Plummets Over China}},
    year = {2020}
 }
 
@@ -765,7 +780,7 @@ and Zeckzer, Dirk},
    issn = {2151-1357},
    month = {June},
    pages = {1-6},
-   title = {UNTITLED},
+   title = {Reflections On The Use Of Chord Diagrams In Social Network Visualization In Process Mining},
    year = {2016}
 }
 
@@ -774,7 +789,7 @@ and Zeckzer, Dirk},
    booktitle = {{Londonist}},
    month = {January},
    note = {\url{https://londonist.com/2013/01/alternative-tube-maps-circles-within-circles}},
-   title = {UNTITLED},
+   title = {{Alternative Tube Maps: Circles Within Circles}},
    year = {2013}
 }
 
@@ -788,7 +803,9 @@ Claire E and Oram, David and Sokhi, R and Young, Dominique
 and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    month = {May},
    note = {\url{https://catalogue.ceda.ac.uk/uuid/cee49a1f044b79d5413b7a0282467508}},
-   title = {UNTITLED},
+   title = {{Dataset Collection Record: Clearflo (Clean Air For London)
+Project: Meteorology, Composition And Particulate Loading
+Measurements Of London'S Urban Atmosphere}},
    year = {2012}
 }
 
@@ -802,7 +819,7 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    note = {\url{https://doi.org/10.1007/BF02289527}},
    number = {4},
    pages = {581--603},
-   title = {UNTITLED},
+   title = {The Centrality Index Of A Graph},
    volume = {31},
    year = {1966}
 }
@@ -810,14 +827,15 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
 @article{closeness-book,
    author = {Poliaktiv},
    note = {\url{https://www.politaktiv.org/documents/10157/29141/SocNet_TheoryApp.pdf}},
-   title = {UNTITLED},
+   title = {{Social Network Analysis: Theory And Applications}},
    year = {2011}
 }
 
 @misc{clustereval,
    author = {sklearn},
    note = {\url{https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html}},
-   title = {UNTITLED},
+   title = {{Comparing Different Clustering Algorithms On Toy Datasets ---
+Scikit-Learn 0.21.3 Documentation}},
    year = {2019}
 }
 
@@ -830,7 +848,8 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    note = {\url{https://doi.org/10.1007/BF01166355}},
    number = {3},
    pages = {203--248},
-   title = {UNTITLED},
+   title = {{Sensitivity Analysis Of Complex Kinetic Systems. Tools And
+Applications}},
    volume = {5},
    year = {1990}
 }
@@ -843,7 +862,7 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    note = {\url{http://www.sciencedirect.com/science/article/pii/0004698177900919}},
    number = {12},
    pages = {1157 - 1162},
-   title = {UNTITLED},
+   title = {London Air Pollution, 1500–1900},
    volume = {11},
    year = {1977}
 }
@@ -856,7 +875,7 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    month = {July},
    number = {},
    pages = {615-618},
-   title = {UNTITLED},
+   title = {Searching Promising Researchers Through Network Centrality Measures Of Co-Author Networks Of Technical Papers},
    volume = {2},
    year = {2017}
 }
@@ -869,7 +888,7 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    note = {\url{https://asistdl.onlinelibrary.wiley.com/doi/abs/10.1002/asi.4630240406}},
    number = {4},
    pages = {265-269},
-   title = {UNTITLED},
+   title = {Co-Citation In The Scientific Literature: A New Measure Of The Relationship Between Two Documents},
    volume = {24},
    year = {1973}
 }
@@ -879,7 +898,7 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    doi = {10.1145/3290353},
    month = {January},
    note = {\url{http://dl.acm.org/citation.cfm?doid=3302515.3290353}},
-   title = {UNTITLED},
+   title = {{Code2Vec: Learning Distributed Representations Of Code}},
    year = {2019}
 }
 
@@ -895,7 +914,7 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    pages = {95 - 138},
    publisher = {Morgan Kaufmann},
    series = {Interactive Technologies},
-   title = {UNTITLED},
+   title = {Chapter Four - Color },
    year = {2013}
 }
 
@@ -908,7 +927,7 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S0370157309002841}},
    number = {3},
    pages = {75--174},
-   title = {UNTITLED},
+   title = {{Community Detection In Graphs}},
    volume = {486},
    year = {2010}
 }
@@ -920,7 +939,8 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    note = {\url{http://dx.doi.org/10.1007/978-3-642-38610-7_28}},
    pages = {297--308},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {{A Comparison Of Dimensionality Reduction Techniques In Virtual
+Screening}},
    year = {2013}
 }
 
@@ -933,7 +953,7 @@ and Visser, Suzanne and Whitehead, James and Zotter, Peter},
    number = {6},
    pages = {961{\textendash}968},
    publisher = {IEEE Educational Activities Department},
-   title = {UNTITLED},
+   title = {A Comparison Of User-Generated And Automatic Graph Layouts},
    volume = {15},
    year = {2009}
 }
@@ -950,7 +970,8 @@ and Marriott, Kim and Dwyer, Tim},
    number = {1},
    pages = {541--550},
    pmid = {27875170},
-   title = {UNTITLED},
+   title = {{Towards Unambiguous Edge Bundling: Investigating Confluent
+Drawings For Network Visualization}},
    volume = {23},
    year = {2017}
 }
@@ -960,14 +981,14 @@ and Marriott, Kim and Dwyer, Tim},
    eprint = {1908.05345},
    journal = {arXiv},
    primaryclass = {cs.CG},
-   title = {UNTITLED},
+   title = {On Strict (Outer-)Confluent Graphs},
    year = {2019}
 }
 
 @misc{confpic,
    author = {Benjamin Bach},
    note = {\url{https://aviz.fr/~bbach/confluentgraphs/}},
-   title = {UNTITLED},
+   title = {{Confluent Graphs}},
    year = {2020}
 }
 
@@ -980,7 +1001,7 @@ and Tomlin, Alison S.},
    note = {\url{https://doi.org/10.1007/978-3-662-44562-4_7}},
    pages = {183--312},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {Reduction Of Reaction Mechanisms},
    year = {2014}
 }
 
@@ -990,7 +1011,7 @@ and Tomlin, Alison S.},
    journal = {The New York Times},
    month = {September},
    note = {\url{https://www.nytimes.com/interactive/2012/09/17/science/driving-safety-in-fits-and-starts.html}},
-   title = {UNTITLED},
+   title = {{Driving Safety, In Fits And Starts}},
    year = {2012}
 }
 
@@ -1007,7 +1028,7 @@ and Tomlin, Alison S.},
    numpages = {8},
    pages = {103--110},
    publisher = {Palgrave Macmillan},
-   title = {UNTITLED},
+   title = {Cognitive Measurements Of Graph Aesthetics},
    volume = {1},
    year = {2002}
 }
@@ -1022,7 +1043,7 @@ and Kuroya, Katsutoshi},
    note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_34}},
    pages = {369--380},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {Convex Drawing For C-Planar Biconnected Clustered Graphs},
    year = {2004}
 }
 
@@ -1034,7 +1055,7 @@ and Kuroya, Katsutoshi},
    number = {2},
    pages = {275--305},
    publisher = {University of Chicago Press},
-   title = {UNTITLED},
+   title = {The Distribution Of Power In Exchange Networks: Theory And Experimental Results},
    volume = {89},
    year = {1983}
 }
@@ -1042,7 +1063,7 @@ and Kuroya, Katsutoshi},
 @book{cooking,
    author = {Wrangham, Richard},
    publisher = {Basic Books},
-   title = {UNTITLED},
+   title = {Catching Fire: How Cooking Made Us Human},
    year = {2009}
 }
 
@@ -1050,7 +1071,7 @@ and Kuroya, Katsutoshi},
    author = {Daniel Ellis},
    doi = {10.1002/kin.21180},
    note = {\url{https://s100.copyright.com/AppDispatchServlet?startPage=i&publisherName=Wiley&publication=kin&contentID=10.1002%2Fkin.21180&endPage=i&title=Cover+Image%2C+Volume+50%2C+Issue+6}},
-   title = {UNTITLED},
+   title = {{Chemical Kinetic Interactions Cover Image}},
    year = {2019}
 }
 
@@ -1062,7 +1083,7 @@ and Kuroya, Katsutoshi},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231008006742}},
    number = {31},
    pages = {7185 - 7195},
-   title = {UNTITLED},
+   title = {A Common Representative Intermediates (Cri) Mechanism For VOC Degradation. Part 1: Gas Phase Mechanism Development},
    volume = {42},
    year = {2008}
 }
@@ -1071,7 +1092,7 @@ and Kuroya, Katsutoshi},
    author = {Mike Jenkin},
    howpublished = {Online},
    month = {9},
-   title = {UNTITLED},
+   title = {{ Http://Cri.York.Ac.Uk }},
    year = {2019}
 }
 
@@ -1087,14 +1108,14 @@ and Kuroya, Katsutoshi},
    pages = {604–613},
    publisher = {Association for Computing Machinery},
    series = {STOC ’98},
-   title = {UNTITLED},
+   title = {Approximate Nearest Neighbors: Towards Removing The Curse Of Dimensionality},
    year = {1998}
 }
 
 @misc{d3annotate,
    author = {Lu, Susie},
    note = {\url{https://d3-annotation.susielu.com/}},
-   title = {UNTITLED},
+   title = {{D3-Annotate}},
    year = {2019}
 }
 
@@ -1106,7 +1127,7 @@ and Kuroya, Katsutoshi},
    intrahash = {4fdb2faa7a94a7248a7fb5725aaa5afa},
    note = {\url{http://d3js.org/}},
    timestamp = {2012-11-08T12:33:57.000+0100},
-   title = {UNTITLED},
+   title = {D3.Js - Data-Driven Documents},
    year = {2012}
 }
 
@@ -1114,7 +1135,7 @@ and Kuroya, Katsutoshi},
    author = {Ellis, Daniel},
    institution = {Github},
    note = {\url{https://github.com/wolfiex/DanEllisThesis/blob/master/daynight_26mb.gif}},
-   title = {UNTITLED},
+   title = {{Animation Of The Evolution Of Chemistry Graph Of Beijing.}},
    year = {2018}
 }
 
@@ -1122,7 +1143,7 @@ and Kuroya, Katsutoshi},
    author = {Martin Ester and Hans-peter Kriegel and Jörg Sander and Xiaowei Xu},
    pages = {226--231},
    publisher = {AAAI Press},
-   title = {UNTITLED},
+   title = {A Density-Based Algorithm For Discovering Clusters In Large Spatial Databases With Noise},
    year = {1996}
 }
 
@@ -1137,7 +1158,7 @@ and Kuroya, Katsutoshi},
    number = {9},
    pages = {2174--2186},
    pmid = {26600062},
-   title = {UNTITLED},
+   title = {{The Connected Scatterplot For Presenting Paired Time Series}},
    volume = {22},
    year = {2016}
 }
@@ -1147,7 +1168,7 @@ and Kuroya, Katsutoshi},
    booktitle = {{Lexico Dictionaries | English}},
    note = {\url{https://www.lexico.com/en/definition/network}},
    publisher = {Lexico Dictionaries},
-   title = {UNTITLED},
+   title = {{Network | Definition Of Network In English By Lexico Dictionaries}},
    year = {2019}
 }
 
@@ -1155,7 +1176,7 @@ and Kuroya, Katsutoshi},
    author = {Dick Derwent,Andrea Fraser,John Abbott,Mike Jenkin},
    issue = {3},
    note = {\url{https://uk-air.defra.gov.uk/assets/documents/reports/cat05/1006241607_100608_MIP_Final_Version.pdf}},
-   title = {UNTITLED},
+   title = {{Evaluating The Performance Of Air Quality Models}},
    year = {2010}
 }
 
@@ -1178,7 +1199,7 @@ and Spiliopoulou, Myra},
    isbn = {978-3-319-23461-8},
    pages = {165--179},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {Two Step Graph-Based Semi-Supervised Learning For Online Auction Fraud Detection},
    year = {2015}
 }
 
@@ -1188,7 +1209,7 @@ and Spiliopoulou, Myra},
    number = {3},
    pages = {215--239},
    publisher = {North-Holland},
-   title = {UNTITLED},
+   title = {Centrality In Social Networks Conceptual Clarification},
    volume = {1},
    year = {1978}
 }
@@ -1197,7 +1218,7 @@ and Spiliopoulou, Myra},
    author = {Gemma, Joyce},
    booktitle = {{Brandwatch}},
    note = {\url{https://www.brandwatch.com/blog/react-influential-men-and-women-2017/}},
-   title = {UNTITLED},
+   title = {{The Most Influential Men And Women On Twitter 2017}},
    year = {2019}
 }
 
@@ -1211,7 +1232,7 @@ and Spiliopoulou, Myra},
    note = {\url{https://doi.org/10.1093/comjnl/24.2.167}},
    number = {2},
    pages = {167-172},
-   title = {UNTITLED},
+   title = {{Computing The N-Dimensional Delaunay Tessellation With Application To Voronoi Polytopes*}},
    volume = {24},
    year = {1981}
 }
@@ -1220,7 +1241,7 @@ and Spiliopoulou, Myra},
    author = {Descartes, Ren{\'e} and Lafleur, Laurence J},
    note = {\url{http://selfpace.uconn.edu/class/percep/DescartesMeditations.pdf}},
    publisher = {Bobbs-Merrill New York},
-   title = {UNTITLED},
+   title = {{Meditations On First Philosophy}},
    year = {1960}
 }
 
@@ -1231,7 +1252,7 @@ and Spiliopoulou, Myra},
    note = {\url{https://www.atmos-chem-phys.net/5/641/2005/}},
    number = {3},
    pages = {641--664},
-   title = {UNTITLED},
+   title = {Development Of A Detailed Chemical Mechanism (MCMv3.1) For The Atmospheric Oxidation Of Aromatic Hydrocarbons},
    volume = {5},
    year = {2005}
 }
@@ -1239,7 +1260,8 @@ and Spiliopoulou, Myra},
 @article{dev-social-analysis,
    author = {Freeman, Linton C},
    note = {\url{http://moreno.ss.uci.edu/91.pdf}},
-   title = {UNTITLED},
+   title = {{The Development Of Social Network Analysis---With An Emphasis On
+Recent Events}},
    year = {2020}
 }
 
@@ -1251,7 +1273,7 @@ and Spiliopoulou, Myra},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S000926140600861X}},
    number = {1},
    pages = {181 - 184},
-   title = {UNTITLED},
+   title = {The Hydrogen Bond Strength: New Proposals To Evaluate The Intermolecular Interaction Using Dft Calculations And The Aim Theory},
    volume = {427},
    year = {2006}
 }
@@ -1262,7 +1284,7 @@ and Spiliopoulou, Myra},
    number = {2},
    pages = {199--221},
    publisher = {University of Chicago Press},
-   title = {UNTITLED},
+   title = {The Expensive-Tissue Hypothesis: The Brain And The Digestive System In Human And Primate Evolution},
    volume = {36},
    year = {1995}
 }
@@ -1277,7 +1299,7 @@ and Spiliopoulou, Myra},
    number = {2},
    pages = {2813--2838},
    publisher = {Oxford Academic},
-   title = {UNTITLED},
+   title = {{The Resonant Drag Instability (Rdi): Acoustic Modes}},
    volume = {480},
    year = {2018}
 }
@@ -1290,7 +1312,7 @@ and Spiliopoulou, Myra},
    note = {\url{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}},
    pages = {1097--1105},
    publisher = {Curran Associates, Inc.},
-   title = {UNTITLED},
+   title = {{Imagenet Classification With Deep Convolutional Neural Networks}},
    year = {2012}
 }
 
@@ -1299,7 +1321,7 @@ and Spiliopoulou, Myra},
    isbn = {9781446547410},
    note = {\url{https://books.google.co.uk/books?id=U0t8CgAAQBAJ}},
    publisher = {Read Books Limited},
-   title = {UNTITLED},
+   title = {The Interpretation Of Dreams},
    year = {2013}
 }
 
@@ -1313,7 +1335,7 @@ and Spiliopoulou, Myra},
    number = {5500},
    pages = {2323--2326},
    publisher = {American Association for the Advancement of Science},
-   title = {UNTITLED},
+   title = {Nonlinear Dimensionality Reduction By Locally Linear Embedding},
    volume = {290},
    year = {2000}
 }
@@ -1326,7 +1348,7 @@ and Spiliopoulou, Myra},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S1359644617304695}},
    number = {8},
    pages = {1538 - 1546},
-   title = {UNTITLED},
+   title = {Machine Learning In Chemoinformatics And Drug Discovery},
    volume = {23},
    year = {2018}
 }
@@ -1335,7 +1357,7 @@ and Spiliopoulou, Myra},
    author = {Choi, Jong Youl and Bae, Seung-Hee and Qiu, Judy and Fox, Geoffrey
 and Chen, Bin and Wild, David},
    note = {\url{http://grids.ucs.indiana.edu/ptliupages/publications/ecmls2010_submission_13.pdf}},
-   title = {UNTITLED},
+   title = {{Browsing Large Scale Cheminformatics Data With Dimension Reduction}},
    year = {2019}
 }
 
@@ -1346,7 +1368,7 @@ and Chen, Bin and Wild, David},
    note = {\url{https://www.atmos-chem-phys.net/9/1831/2009/}},
    number = {5},
    pages = {1831--1845},
-   title = {UNTITLED},
+   title = {Comparison Of Tropospheric Gas-Phase Chemistry Schemes For Use Within Global Models},
    volume = {9},
    year = {2009}
 }
@@ -1355,7 +1377,7 @@ and Chen, Bin and Wild, David},
    author = {Ellis, Dan},
    institution = {Github},
    note = {\url{https://github.com/wolfiex/DSMACC-testing}},
-   title = {UNTITLED},
+   title = {{DSMACC-Testing}},
    year = {2020}
 }
 
@@ -1370,7 +1392,7 @@ and Chen, Bin and Wild, David},
    number = {17},
    pages = {9983--9996},
    publisher = {Copernicus Publications},
-   title = {UNTITLED},
+   title = {Diesel-Related Hydrocarbons Can Dominate Gas Phase Reactive Carbon In Megacities},
    volume = {15},
    year = {2015}
 }
@@ -1380,14 +1402,14 @@ and Chen, Bin and Wild, David},
    note = {cited By 1},
    pages = {149-160},
    source = {Scopus},
-   title = {UNTITLED},
+   title = {A Heuristic For Graph Drawing},
    year = {1984}
 }
 
 @inproceedings{Eades,
    author = {Peter Eades},
    booktitle = {proceedings},
-   title = {UNTITLED},
+   title = {A Heuristic For Graph Drawing},
    year = {1984}
 }
 
@@ -1405,7 +1427,7 @@ and Chen, Bin and Wild, David},
    numpages = {8},
    pages = {741--748},
    publisher = {IEEE Educational Activities Department},
-   title = {UNTITLED},
+   title = {Hierarchical Edge Bundles: Visualization Of Adjacency Relations In Hierarchical Data},
    volume = {12},
    year = {2006}
 }
@@ -1420,7 +1442,7 @@ and Chen, Bin and Wild, David},
    numpages = {8},
    pages = {012304},
    publisher = {American Physical Society},
-   title = {UNTITLED},
+   title = {Unwinding The Hairball Graph: Pruning Algorithms For Weighted Complex Networks},
    volume = {93},
    year = {2016}
 }
@@ -1431,7 +1453,7 @@ and Chen, Bin and Wild, David},
    language = {en},
    month = {July},
    note = {\url{https://www.eea.europa.eu/publications/air-quality-in-europe-2018}},
-   title = {UNTITLED},
+   title = {{Air Quality In Europe - 2018}},
    year = {2018}
 }
 
@@ -1443,7 +1465,7 @@ and Chen, Bin and Wild, David},
    number = {5},
    pages = {1170--1182},
    publisher = {University of Chicago Press},
-   title = {UNTITLED},
+   title = {Power And Centrality: A Family Of Measures},
    volume = {92},
    year = {1987}
 }
@@ -1456,7 +1478,7 @@ and Chen, Bin and Wild, David},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S0378873307000342}},
    number = {4},
    pages = {555 - 564},
-   title = {UNTITLED},
+   title = {Some Unique Properties Of Eigenvector Centrality},
    volume = {29},
    year = {2007}
 }
@@ -1467,7 +1489,8 @@ and Chen, Bin and Wild, David},
    journal = {Annalen der Physik},
    number = {10},
    pages = {891--921},
-   title = {UNTITLED},
+   title = {{Zur Elektrodynamik Bewegter K{\"O}Rper}. ({German})
+[{On} The Electrodynamics Of Moving Bodies]},
    volume = {322},
    year = {1905}
 }
@@ -1478,7 +1501,7 @@ and Chen, Bin and Wild, David},
    lccn = {2003010123},
    note = {\url{https://books.google.nl/books?id=h\_wAbnGlOC4C}},
    publisher = {Basic Books},
-   title = {UNTITLED},
+   title = {Emotional Design: Why We Love (Or Hate) Everyday Things},
    year = {2005}
 }
 
@@ -1490,7 +1513,7 @@ and Chen, Bin and Wild, David},
    note = {\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.21684}},
    number = {2},
    pages = {136-141},
-   title = {UNTITLED},
+   title = {Utilizing Graph Theory To Select The Largest Set Of Unrelated Individuals For Genetic Analysis},
    volume = {37},
    year = {2013}
 }
@@ -1504,7 +1527,7 @@ and Chen, Bin and Wild, David},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S0378873304000693}},
    number = {1},
    pages = {55--71},
-   title = {UNTITLED},
+   title = {{Centrality And Network Flow}},
    volume = {27},
    year = {2005}
 }
@@ -1521,7 +1544,8 @@ and Chen, Bin and Wild, David},
    pages = {20},
    pmc = {PMC5357663},
    pmid = {28367500},
-   title = {UNTITLED},
+   title = {{Visual Routines Are Associated With Specific Graph
+Interpretations}},
    volume = {2},
    year = {2017}
 }
@@ -1533,7 +1557,7 @@ and Chen, Bin and Wild, David},
    isbn = {978-3-905674-17-0},
    issn = {1816-0859},
    publisher = {The Eurographics Association},
-   title = {UNTITLED},
+   title = {{Comparing The Readability Of Graph Layouts Using Eyetracking And Task-Oriented Analysis}},
    year = {2009}
 }
 
@@ -1549,7 +1573,8 @@ Bastian, Mathieu},
    pages = {e98679},
    pmc = {PMC4051631},
    pmid = {24914678},
-   title = {UNTITLED},
+   title = {{Forceatlas2, A Continuous Graph Layout Algorithm For Handy Network
+Visualization Designed For The Gephi Software}},
    volume = {9},
    year = {2014}
 }
@@ -1569,7 +1594,7 @@ Maxwell, Simon and Dubash, Navroz K},
    number = {7797},
    pages = {25--28},
    pmid = {32132686},
-   title = {UNTITLED},
+   title = {{Emissions: World Has Four Times The Work Or One-Third Of The Time}},
    volume = {579},
    year = {2020}
 }
@@ -1581,7 +1606,7 @@ Maxwell, Simon and Dubash, Navroz K},
    editor = {S. Maddock and J. Jorge},
    issn = {1017-4656},
    publisher = {The Eurographics Association},
-   title = {UNTITLED},
+   title = {{The Five Design-Sheet (Fds) Approach For Sketching Information Visualization Designs}},
    year = {2011}
 }
 
@@ -1596,7 +1621,7 @@ and Rohrer, Christoph},
    note = {\url{http://dx.doi.org/10.1007/BFb0021792}},
    pages = {76--87},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {An Experimental Comparison Of Force-Directed And Randomized Graph Drawing Algorithms},
    year = {1996}
 }
 
@@ -1604,7 +1629,7 @@ and Rohrer, Christoph},
    author = {Andy Brunning},
    booktitle = {{Twitter}},
    note = {\url{https://twitter.com/compoundchem/status/1230953094474862592/photo/1}},
-   title = {UNTITLED},
+   title = {{Functional Groups In Organic Chemistry}},
    year = {2020}
 }
 
@@ -1616,7 +1641,7 @@ and Rohrer, Christoph},
    isbn = {978-0-12-257060-5},
    note = {\url{http://www.sciencedirect.com/science/article/pii/B9780122570605500034}},
    publisher = {Academic Press},
-   title = {UNTITLED},
+   title = {Chemistry Of The Upper And Lower Atmosphere},
    year = {2000}
 }
 
@@ -1632,7 +1657,7 @@ and Erkelens, Casper J.},
    note = {\url{https://doi.org/10.3758/BF03192777}},
    number = {2},
    pages = {251--261},
-   title = {UNTITLED},
+   title = {A Quantitative Measure For The Uniformity Of Fixation Density: The Voronoi Method},
    volume = {38},
    year = {2006}
 }
@@ -1644,7 +1669,7 @@ Tomás Sherwen},
    month = {July},
    note = {\url{https://doi.org/10.5281/zenodo.3346817}},
    publisher = {Zenodo},
-   title = {UNTITLED},
+   title = {Wolfiex/Treesurgeon: Wollemia},
    version = {v1.3},
    year = {2019}
 }
@@ -1658,7 +1683,7 @@ Tomás Sherwen},
    number = {5},
    pages = {711--712},
    publisher = {American Mathematical Society},
-   title = {UNTITLED},
+   title = {Every Planar Map Is Four Colorable},
    volume = {82},
    year = {1976}
 }
@@ -1668,7 +1693,8 @@ Tomás Sherwen},
    booktitle = {{Medium}},
    note = {\url{https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190}},
    publisher = {Towards Data Science},
-   title = {UNTITLED},
+   title = {{Using Tf-Idf To Form Descriptive Chapter Summaries Via
+Keyword Extraction}},
    year = {2019}
 }
 
@@ -1677,7 +1703,7 @@ Tomás Sherwen},
    journal = {U.S. Department of Energy Office of Scientific and Technical Information},
    month = {1},
    place = {United States},
-   title = {UNTITLED},
+   title = {Numerical Approaches To Combustion Modeling. Progress In Astronautics And Aeronautics. Vol. 135},
    year = {1991}
 }
 
@@ -1686,7 +1712,7 @@ Tomás Sherwen},
    author = {Dan Ellis},
    doi = {10.5281/zenodo.3586009},
    publisher = {Zenodo},
-   title = {UNTITLED},
+   title = {Wolfiex/Frmd: 2016},
    year = {2016}
 }
 
@@ -1696,7 +1722,7 @@ Tomás Sherwen},
    isbn = {9781139165389},
    note = {\url{https://www.cambridge.org/core/books/fundamentals-of-atmospheric-modeling/A6B866737D682B17EE46F8449F76FB2C}},
    publisher = {Cambridge University Press},
-   title = {UNTITLED},
+   title = {Fundamentals Of Atmospheric Modelling},
    year = {2005}
 }
 
@@ -1709,14 +1735,14 @@ Tomás Sherwen},
    month = {June},
    note = {\url{http://arxiv.org/abs/1706.02263}},
    primaryclass = {stat.ML},
-   title = {UNTITLED},
+   title = {{Graph Convolutional Matrix Completion}},
    year = {2017}
 }
 
 @misc{gcm,
    author = {Henderson-Sellers},
    note = {\url{https://www.nccs.nasa.gov/services/climate-data-services}},
-   title = {UNTITLED},
+   title = {{Climate Data Services | Nasa Center For Climate Simulation}},
    year = {2015}
 }
 
@@ -1730,7 +1756,7 @@ Max Welling},
    journal = {CoRR},
    note = {\url{http://arxiv.org/abs/1609.02907}},
    timestamp = {Mon, 13 Aug 2018 16:48:31 +0200},
-   title = {UNTITLED},
+   title = {Semi-Supervised Classification With Graph Convolutional Networks},
    volume = {abs/1609.02907},
    year = {2016}
 }
@@ -1740,7 +1766,7 @@ Max Welling},
    author = {Hairer, E. and N\o{}rsett, S. P. and Wanner, G.},
    isbn = {0387566708},
    publisher = {Springer-Verlag},
-   title = {UNTITLED},
+   title = {Solving Ordinary Differential Equations I (2Nd Revised. Ed.): Nonstiff Problems},
    year = {2002}
 }
 
@@ -1757,7 +1783,8 @@ Zhao, Zhongming and Zhi, Degui},
    pages = {82},
    pmc = {PMC6360648},
    pmid = {30712510},
-   title = {UNTITLED},
+   title = {{Gene2Vec: Distributed Representation Of Genes Based On
+Co-Expression}},
    volume = {20},
    year = {2019}
 }
@@ -1768,7 +1795,7 @@ Zhao, Zhongming and Zhi, Degui},
    note = {\url{https://books.google.co.uk/books?id=lvItDwAAQBAJ}},
    publisher = {Frontiers Media SA},
    series = {Frontiers Research Topics},
-   title = {UNTITLED},
+   title = {Advances In Genomics And Epigenomics Of Social Insects},
    year = {2017}
 }
 
@@ -1777,7 +1804,7 @@ Zhao, Zhongming and Zhi, Degui},
    booktitle = {{Wikipedia, The Free Encyclopedia}},
    month = {February},
    note = {\url{https://en.wikipedia.org/w/index.php?title=History_of_Earth&oldid=940308026}},
-   title = {UNTITLED},
+   title = {{History Of Earth}},
    year = {2020}
 }
 
@@ -1794,7 +1821,8 @@ Mopper, Kenneth},
    number = {9},
    pages = {3271--3276},
    pmid = {18522105},
-   title = {UNTITLED},
+   title = {{Relating Carbon Monoxide Photoproduction To Dissolved Organic
+Matter Functionality}},
    volume = {42},
    year = {2008}
 }
@@ -1802,7 +1830,7 @@ Mopper, Kenneth},
 @article{geos,
    author = {GEOS-Chem},
    note = {\url{http://acmg.seas.harvard.edu/geos/geos_pub.html}},
-   title = {UNTITLED},
+   title = {{Geos-Chem Publications}},
    year = {2020}
 }
 
@@ -1812,7 +1840,7 @@ Mopper, Kenneth},
    month = {February},
    note = {\url{https://doi.org/10.5281/zenodo.3676008}},
    publisher = {Zenodo},
-   title = {UNTITLED},
+   title = {GEOSChem/Geos-Chem: Geos-Chem 12.7.1},
    version = {12.7.1},
    year = {2020}
 }
@@ -1824,7 +1852,7 @@ Mopper, Kenneth},
    note = {\url{https://www.geosci-model-dev.net/12/1209/2019/}},
    number = {3},
    pages = {1209--1225},
-   title = {UNTITLED},
+   title = {Application Of Random Forest Regression To The Calculation Of Gas-Phase Chemistry Within The Geos-Chem Chemistry Model V10},
    volume = {12},
    year = {2019}
 }
@@ -1834,7 +1862,7 @@ Mopper, Kenneth},
    conference = {International AAAI Conference on Weblogs and Social Media},
    journal = {AAAI},
    note = {http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154},
-   title = {UNTITLED},
+   title = {Gephi: An Open Source Software For Exploring And Manipulating Networks},
    year = {2009}
 }
 
@@ -1843,7 +1871,7 @@ Mopper, Kenneth},
    isbn = {9781101444207},
    note = {\url{https://books.google.co.uk/books?id=3H2Xg5qxz-8C}},
    publisher = {Penguin Publishing Group},
-   title = {UNTITLED},
+   title = {Where Good Ideas Come From},
    year = {2010}
 }
 
@@ -1855,7 +1883,7 @@ Mopper, Kenneth},
    note = {Previous number = SIDL-WP-1999-0120 \url{http://ilpubs.stanford.edu:8090/422/}},
    number = {1999-66},
    publisher = {Stanford InfoLab},
-   title = {UNTITLED},
+   title = {The Pagerank Citation Ranking: Bringing Order To The Web.},
    type = {Technical Report},
    year = {1999}
 }
@@ -1873,7 +1901,7 @@ and Sch{\"a}fer, Katrin},
    note = {\url{https://doi.org/10.1007/978-0-585-34289-4_5}},
    pages = {77--89},
    publisher = {Springer US},
-   title = {UNTITLED},
+   title = {Groups, Gossip, And The Evolution Of Language},
    year = {1997}
 }
 
@@ -1884,7 +1912,7 @@ and Sch{\"a}fer, Katrin},
    note = {\url{http://kar.kent.ac.uk/14297/}},
    pages = {651--656},
    publisher = {IEEE Computer Society},
-   title = {UNTITLED},
+   title = {Applying Graphical Design Techniques To Graph Visualisation},
    year = {2005}
 }
 
@@ -1902,7 +1930,7 @@ and Sch{\"a}fer, Katrin},
    numpages = {12},
    pages = {283--294},
    publisher = {The Eurographs Association \&\#38; John Wiley \&\#38; Sons, Ltd.},
-   title = {UNTITLED},
+   title = {Graph Layouts By T-Sne},
    volume = {36},
    year = {2017}
 }
@@ -1912,7 +1940,7 @@ and Sch{\"a}fer, Katrin},
    isbn = {9781491962268},
    note = {\url{https://books.google.co.uk/books?id=khpYDgAAQBAJ}},
    publisher = {O'Reilly Media},
-   title = {UNTITLED},
+   title = {Hands-On Machine Learning With Scikit-Learn And Tensorflow: Concepts, Tools, And Techniques To Build Intelligent Systems},
    year = {2017}
 }
 
@@ -1927,7 +1955,7 @@ and Sch{\"a}fer, Katrin},
    number = {5},
    pages = {604--632},
    publisher = {ACM},
-   title = {UNTITLED},
+   title = {{Authoritative Sources In A Hyperlinked Environment}},
    volume = {46},
    year = {1999}
 }
@@ -1943,7 +1971,7 @@ and Sch{\"a}fer, Katrin},
    number = {1},
    pages = {135--161},
    publisher = {Society for Industrial and Applied Mathematics},
-   title = {UNTITLED},
+   title = {{A Survey Of Eigenvector Methods For Web Information Retrieval}},
    volume = {47},
    year = {2005}
 }
@@ -1951,7 +1979,7 @@ and Sch{\"a}fer, Katrin},
 @article{hitsweb,
    author = {Kumar, Ravi and Upfal, Eli},
    note = {\url{http://cs.brown.edu/research/webagent/pods-2000.pdf}},
-   title = {UNTITLED},
+   title = {{The Web As A Graph}},
    year = {2000}
 }
 
@@ -1963,7 +1991,7 @@ and Sch{\"a}fer, Katrin},
    note = {\url{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2014JD021794}},
    number = {17},
    pages = {10567-10582},
-   title = {UNTITLED},
+   title = {Atmospheric Photochemical Reactivity And Ozone Production At Two Sites In Hong Kong: Application Of A Master Chemical Mechanism–Photochemical Box Model},
    volume = {119},
    year = {2014}
 }
@@ -1980,7 +2008,8 @@ and Stange, G and Berresheim, H and Schurath, U},
    journal = {Journal of geophysical research},
    note = {\url{https://www.academia.edu/29719780/HO_x_budgets_during_HOxComp_A_case_study_of_HO_x_chemistry_under_NO_x_-limited_conditions}},
    number = {D3},
-   title = {UNTITLED},
+   title = {{Ho X Budgets During Hoxcomp: A Case Study Of Ho X Chemistry Under
+No X -Limited Conditions}},
    volume = {117},
    year = {2012}
 }
@@ -1990,7 +2019,7 @@ and Stange, G and Berresheim, H and Schurath, U},
    booktitle = {{Nottingham HPP whitewater course users group}},
    month = {Aug},
    note = {\url{https://hppconcern.wordpress.com/2008/08/04/proposed-plans-for-holme-pierrepont-whitewater-course/}},
-   title = {UNTITLED},
+   title = {{Proposed Plans For Holme Pierrepont Whitewater Course}},
    year = {2008}
 }
 
@@ -1999,7 +2028,7 @@ and Stange, G and Berresheim, H and Schurath, U},
    journal = {Proceedings of the IRE},
    number = {9},
    pages = {1098-1101},
-   title = {UNTITLED},
+   title = {A Method For The Construction Of Minimum-Redundancy Codes},
    volume = {40},
    year = {1952}
 }
@@ -2008,7 +2037,7 @@ and Stange, G and Berresheim, H and Schurath, U},
    author = {{Sad CRUD Developer}},
    journal = {{StackOverflow}},
    note = {\url{https://i.stack.imgur.com/9T1Am.png}},
-   title = {UNTITLED},
+   title = {{The Huffman Tree}},
    year = {2016}
 }
 
@@ -2021,7 +2050,7 @@ and Stange, G and Berresheim, H and Schurath, U},
    note = {\url{http://dx.doi.org/10.1007/3-540-63938-1_67}},
    pages = {248--261},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {Which Aesthetic Has The Greatest Effect On Human Understanding?},
    year = {1997}
 }
 
@@ -2029,7 +2058,7 @@ and Stange, G and Berresheim, H and Schurath, U},
    author = {Mquantin},
    journal = {wikipedia commons},
    note = {\url{https://upload.wikimedia.org/wikipedia/commons/0/05/Plot_IDF_functions.png}},
-   title = {UNTITLED},
+   title = {Idf Response Functions.},
    year = {2020}
 }
 
@@ -2046,7 +2075,7 @@ Tchekhovskoi, Dmitrii and Pletnev},
    pages = {7},
    pmc = {PMC3599061},
    pmid = {23343401},
-   title = {UNTITLED},
+   title = {{Inchi - The Worldwide Chemical Structure Identifier Standard}},
    volume = {5},
    year = {2013}
 }
@@ -2061,7 +2090,7 @@ Tchekhovskoi, Dmitrii and Pletnev},
    numpages = {10},
    pages = {062312},
    publisher = {American Physical Society},
-   title = {UNTITLED},
+   title = {Constrained Information Flows In Temporal Networks Reveal Intermittent Communities},
    volume = {97},
    year = {2018}
 }
@@ -2076,7 +2105,7 @@ Tchekhovskoi, Dmitrii and Pletnev},
    number = {4},
    pages = {1118--1123},
    publisher = {National Academy of Sciences},
-   title = {UNTITLED},
+   title = {Maps Of Random Walks On Complex Networks Reveal Community Structure},
    volume = {105},
    year = {2008}
 }
@@ -2094,7 +2123,7 @@ Tchekhovskoi, Dmitrii and Pletnev},
    pages = {97--104},
    publisher = {ACM},
    series = {UIST '97},
-   title = {UNTITLED},
+   title = {An Interactive Constraint-Based System For Drawing Graphs},
    year = {1997}
 }
 
@@ -2104,7 +2133,7 @@ Tchekhovskoi, Dmitrii and Pletnev},
    edition = {3rd},
    isbn = {0201694972},
    publisher = {Addison-Wesley Longman Publishing Co., Inc.},
-   title = {UNTITLED},
+   title = {Designing The User Interface: Strategies For Effective Human-Computer Interaction},
    year = {1997}
 }
 
@@ -2115,7 +2144,7 @@ Tchekhovskoi, Dmitrii and Pletnev},
    note = {\url{https://www.earth-syst-sci-data.net/11/1239/2019/}},
    number = {3},
    pages = {1239--1262},
-   title = {UNTITLED},
+   title = {A Machine-Learning-Based Global Sea-Surface Iodide Distribution},
    volume = {11},
    year = {2019}
 }
@@ -2123,14 +2152,15 @@ Tchekhovskoi, Dmitrii and Pletnev},
 @misc{ipbes,
    author = {IPBES},
    note = {\url{https://ipbes.net/global-assessment}},
-   title = {UNTITLED},
+   title = {{Global Assessment Report On Biodiversity And Ecosystem
+Services | The Intergovernmental Science-Policy Platform On Biodiversity And Ecosystem Services}},
    year = {2019}
 }
 
 @book{IPCC1990Science,
    author = {J.T. Houghton and G.J. Jenkins and J.J. Ephraums},
    publisher = {The Intergovernmental Panel on Climate Change},
-   title = {UNTITLED},
+   title = {Climate Change 1990 The Science Of Climate Change},
    year = {1996}
 }
 
@@ -2138,7 +2168,7 @@ Tchekhovskoi, Dmitrii and Pletnev},
    author = {J.T. Houghton and L.G. Meira Filho and B.A. Callander and N. Harris
 and A. Kattenberg and K. Maskell},
    publisher = {The Intergovernmental Panel on Climate Change},
-   title = {UNTITLED},
+   title = {Climate Change 1995 The Science Of Climate Change},
    year = {1996}
 }
 
@@ -2149,7 +2179,7 @@ and A. Kattenberg and K. Maskell},
    note = {\url{http://www.ipcc.ch/ipccreports/ar4-wg1.htm}},
    publisher = {Geneva: IPCC},
    timestamp = {2009-11-11T11:50:02.000+0100},
-   title = {UNTITLED},
+   title = {Fourth Assessment Report: Climate Change 2007: The Ar4 Synthesis Report},
    year = {2007}
 }
 
@@ -2161,7 +2191,7 @@ and A. Kattenberg and K. Maskell},
    note = {\url{www.climatechange2013.org}},
    pages = {1535},
    publisher = {Cambridge University Press},
-   title = {UNTITLED},
+   title = {Climate Change 2013: The Physical Science Basis. Contribution Of Working Group I To The Fifth Assessment Report Of The Intergovernmental Panel On Climate Change},
    type = {Book},
    year = {2013}
 }
@@ -2174,7 +2204,8 @@ and A. Kattenberg and K. Maskell},
    month = {September},
    number = {5},
    pages = {821--828},
-   title = {UNTITLED},
+   title = {{Ipsep-Cola}: An Incremental Procedure For Separation
+Constraint Layout Of Graphs},
    volume = {12},
    year = {2006}
 }
@@ -2186,7 +2217,7 @@ and A. Kattenberg and K. Maskell},
    note = {\url{https://www.atmos-chem-phys.net/15/11433/2015/}},
    number = {20},
    pages = {11433--11459},
-   title = {UNTITLED},
+   title = {The MCM V3.3.1 Degradation Scheme For Isoprene},
    volume = {15},
    year = {2015}
 }
@@ -2196,7 +2227,7 @@ and A. Kattenberg and K. Maskell},
    isbn = {9781108210959},
    note = {\url{https://books.google.co.uk/books?id=k9\_PDgAAQBAJ}},
    publisher = {Cambridge University Press},
-   title = {UNTITLED},
+   title = {Modeling Of Atmospheric Chemistry},
    year = {2017}
 }
 
@@ -2210,7 +2241,7 @@ Max Welling},
    journal = {CoRR},
    note = {\url{http://arxiv.org/abs/1609.02907}},
    timestamp = {Mon, 13 Aug 2018 16:48:31 +0200},
-   title = {UNTITLED},
+   title = {Semi-Supervised Classification With Graph Convolutional Networks},
    volume = {abs/1609.02907},
    year = {2016}
 }
@@ -2226,7 +2257,7 @@ Max Welling},
    number = {27 Pt 1},
    pages = {278701},
    pmid = {11800921},
-   title = {UNTITLED},
+   title = {{Universal Behavior Of Load Distribution In Scale-Free Networks}},
    volume = {87},
    year = {2001}
 }
@@ -2237,7 +2268,7 @@ Max Welling},
    note = {\url{http://eprints.whiterose.ac.uk/84294/}},
    pages = {1 -- 376},
    publisher = {Springer},
-   title = {UNTITLED},
+   title = {Analysis Of Kinetic Reaction Mechanisms},
    year = {2015}
 }
 
@@ -2246,7 +2277,7 @@ Max Welling},
    isbn = {9781473966314},
    note = {\url{https://books.google.co.uk/books?id=wNpsDAAAQBAJ}},
    publisher = {SAGE Publications},
-   title = {UNTITLED},
+   title = {Data Visualisation: A Handbook For Data Driven Design},
    year = {2016}
 }
 
@@ -2260,7 +2291,7 @@ Max Welling},
    number = {4598},
    pages = {671--680},
    publisher = {American Association for the Advancement of Science},
-   title = {UNTITLED},
+   title = {Optimization By Simulated Annealing},
    volume = {220},
    year = {1983}
 }
@@ -2272,7 +2303,7 @@ Max Welling},
    note = {\url{https://projecteuclid.org/euclid.bsmsp/1200512992}},
    pages = {281--297},
    publisher = {University of California Press},
-   title = {UNTITLED},
+   title = {Some Methods For Classification And Analysis Of Multivariate Observations},
    year = {1967}
 }
 
@@ -2283,7 +2314,7 @@ Max Welling},
    note = {\url{https://www.atmos-chem-phys.net/6/187/2006/}},
    number = {1},
    pages = {187--195},
-   title = {UNTITLED},
+   title = {Technical Note: Simulating Chemical Systems In Fortran90 And Matlab With The Kinetic Preprocessor KPP-2.1},
    volume = {6},
    year = {2006}
 }
@@ -2299,7 +2330,8 @@ Max Welling},
    number = {20},
    pages = {5336--5344},
    pmid = {14710810},
-   title = {UNTITLED},
+   title = {{Graphical Method For Analysis Of Ultrahigh-Resolution Broadband
+Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
    volume = {75},
    year = {2003}
 }
@@ -2309,7 +2341,7 @@ Max Welling},
    author = {Press, William H. and Teukolsky, Saul A. and Vetterling, William T. and Flannery, Brian P.},
    isbn = {0521431085},
    publisher = {Cambridge University Press},
-   title = {UNTITLED},
+   title = {Numerical Recipes In C (2Nd Ed.): The Art Of Scientific Computing},
    year = {1992}
 }
 
@@ -2323,7 +2355,7 @@ Max Welling},
    number = {1},
    pages = {79--86},
    publisher = {The Institute of Mathematical Statistics},
-   title = {UNTITLED},
+   title = {On Information And Sufficiency},
    volume = {22},
    year = {1951}
 }
@@ -2338,7 +2370,7 @@ Max Welling},
    numpages = {11},
    pages = {036106},
    publisher = {American Physical Society},
-   title = {UNTITLED},
+   title = {Near Linear Time Algorithm To Detect Community Structures In Large-Scale Networks},
    volume = {76},
    year = {2007}
 }
@@ -2346,7 +2378,7 @@ Max Welling},
 @misc{lapack,
    howpublished = {\url{http://www.netlib.org/lapack/}},
    note = {http://www.netlib.org/lapack/},
-   title = {UNTITLED},
+   title = {{Lapack --- Linear Algebra Package}},
    year = {2019}
 }
 
@@ -2354,14 +2386,14 @@ Max Welling},
    author = {Santiago Ramon Cajal},
    journal = {web},
    note = {\url{https://upload.wikimedia.org/wikipedia/commons/5/5b/Cajal_cortex_drawings.png}},
-   title = {UNTITLED},
+   title = {Cortex Drawings},
    year = {2020}
 }
 
 @misc{lesmis,
    author = {Donald Knuth},
    note = {\url{https://www-cs-faculty.stanford.edu/~knuth/sgb.html}},
-   title = {UNTITLED},
+   title = {{Knuth: The Stanford Graphbase}},
    year = {2019}
 }
 
@@ -2372,7 +2404,7 @@ Max Welling},
    note = {\url{https://books.google.co.uk/books?id=zyK4AAAAIAAJ}},
    publisher = {Viking Press},
    series = {Documents of 20th-century art},
-   title = {UNTITLED},
+   title = {Art-As-Art: The Selected Writings Of Ad Reinhardt},
    year = {1975}
 }
 
@@ -2386,7 +2418,7 @@ Max Welling},
    number = {16},
    pages = {2921--2927},
    publisher = {Royal Society of Chemistry},
-   title = {UNTITLED},
+   title = {In Situ, Gas Chromatographic Measurements Of Non-Methane Hydrocarbons And Dimethyl Sulfide At A Remote Coastal Location (Mace Head, Eire) July-August 1996},
    volume = {93},
    year = {1997}
 }
@@ -2399,7 +2431,7 @@ Max Welling},
    number = {2},
    pages = {239--245},
    publisher = {[Taylor & Francis, Ltd., American Statistical Association, American Society for Quality]},
-   title = {UNTITLED},
+   title = {A Comparison Of Three Methods For Selecting Values Of Input Variables In The Analysis Of Output From A Computer Code},
    volume = {21},
    year = {1979}
 }
@@ -2412,7 +2444,7 @@ Max Welling},
    note = {\url{http://dx.doi.org/10.1039/B611116E}},
    pages = {5185-5198},
    publisher = {The Royal Society of Chemistry},
-   title = {UNTITLED},
+   title = {Laser Induced Fluorescence Studies Of Iodine Oxide Chemistry Part Ii. The Reactions Of Io With Ch3O2{,} Cf3O2 And O3},
    volume = {8},
    year = {2006}
 }
@@ -2424,7 +2456,7 @@ Max Welling},
    note = {\url{https://www.atmos-chem-phys.net/4/571/2004/}},
    number = {2},
    pages = {571--583},
-   title = {UNTITLED},
+   title = {Validation Of The Calibration Of A Laser-Induced Fluorescence Instrument For The Measurement Of Oh Radicals In The Atmosphere},
    volume = {4},
    year = {2004}
 }
@@ -2434,7 +2466,8 @@ Max Welling},
    journal = {Atmospheric Chemistry and Physics},
    note = {\url{https://www.atmos-chem-phys.net/4/2057/2004/acp-4-2057-2004.pdf}},
    pages = {2057--2081},
-   title = {UNTITLED},
+   title = {{Systematic Reduction Of Complex Tropospheric Chemical Mechanisms,
+Part Ii: Lumping Using A Time-Scale Based Approach}},
    volume = {4},
    year = {2004}
 }
@@ -2444,7 +2477,7 @@ Max Welling},
    doi = {10.1021/acs.chemmater.8b03175},
    journal = {Chemistry of Materials},
    month = {09},
-   title = {UNTITLED},
+   title = {Lithium Transport In Li 4.4 M 0.4 M Â 0.6 S 4 ( M = Al 3+ , Ga 3+ And M Â= Ge 4+ , Sn 4+ ): Combined Crystallographic, Conductivity, Solid State Nmr And Computational Studies},
    volume = {30},
    year = {2018}
 }
@@ -2459,7 +2492,7 @@ Max Welling},
    numpages = {7},
    pages = {016132},
    publisher = {American Physical Society},
-   title = {UNTITLED},
+   title = {Scientific Collaboration Networks. Ii. Shortest Paths, Weighted Networks, And Centrality},
    volume = {64},
    year = {2001}
 }
@@ -2477,7 +2510,7 @@ and Trott, Lowell},
    note = {\url{http://dx.doi.org/10.1007/978-3-642-25878-7_31}},
    pages = {320--331},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {Force-Directed Lombardi-Style Graph Drawing},
    year = {2012}
 }
 
@@ -2485,7 +2518,8 @@ and Trott, Lowell},
    author = {Edward N. Lorenz},
    journal = {Americal Association For The Advancement of Science},
    note = {\url{https://static.gymportalen.dk/sites/lru.dk/files/lru/132_kap6_lorenz_artikel_the_butterfly_effect.pdf}},
-   title = {UNTITLED},
+   title = {Predictability: Does The Flap Of A Butterfly’S Wings In Brazil Set Off A Tornado In
+Texas? },
    year = {1972}
 }
 
@@ -2497,7 +2531,7 @@ and Trott, Lowell},
    month = {August},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S0167819115000472}},
    pages = {19--37},
-   title = {UNTITLED},
+   title = {{Parallel Heuristics For Scalable Community Detection}},
    volume = {47},
    year = {2015}
 }
@@ -2511,7 +2545,7 @@ and Trott, Lowell},
    number = {10},
    pages = {P10008},
    publisher = {{IOP} Publishing},
-   title = {UNTITLED},
+   title = {Fast Unfolding Of Communities In Large Networks},
    volume = {2008},
    year = {2008}
 }
@@ -2525,7 +2559,7 @@ and Trott, Lowell},
    note = {\url{https://doi.org/10.1007/978-0-387-32833-1_223}},
    pages = {297--297},
    publisher = {Springer New York},
-   title = {UNTITLED},
+   title = {Latin Square Designs},
    year = {2008}
 }
 
@@ -2533,7 +2567,7 @@ and Trott, Lowell},
    author = {MDL},
    journal = {Santa Clara, CA},
    note = {MDL Information SystemsSymyx (MDL)},
-   title = {UNTITLED},
+   title = {Maccs-Ii},
    year = {1984}
 }
 
@@ -2547,7 +2581,7 @@ and Trott, Lowell},
    pages = {336--},
    publisher = {IEEE Computer Society},
    series = {VL '96},
-   title = {UNTITLED},
+   title = {The Eyes Have It: A Task By Data Type Taxonomy For Information Visualizations},
    year = {1996}
 }
 
@@ -2557,7 +2591,7 @@ and Trott, Lowell},
    month = {November},
    note = {\url{https://towardsdatascience.com/generating-a-logo-with-mapbox-gl-and-python-2c44a357f462}},
    publisher = {Towards Data Science},
-   title = {UNTITLED},
+   title = {{Editing Generating A Logo With Mapbox Gl And Python.}},
    year = {2019}
 }
 
@@ -2573,7 +2607,7 @@ and Bergstrom, C. T.},
    note = {\url{https://doi.org/10.1140/epjst/e2010-01179-1}},
    number = {1},
    pages = {13--23},
-   title = {UNTITLED},
+   title = {The Map Equation},
    volume = {178},
    year = {2009}
 }
@@ -2583,14 +2617,14 @@ and Bergstrom, C. T.},
    journal = {Language Arts},
    note = {\url{https://www.jstor.org/stable/41411379}},
    publisher = {JSTOR},
-   title = {UNTITLED},
+   title = {{Storytelling And Science}},
    year = {1988}
 }
 
 @misc{mcm,
    author = {Andrew Rickard},
    note = {\url{http://mcm.york.ac.uk/}},
-   title = {UNTITLED},
+   title = {{MCM Website}},
    year = {2020}
 }
 
@@ -2601,7 +2635,7 @@ and Bergstrom, C. T.},
    note = {\url{https://www.atmos-chem-phys.net/5/2497/2005/}},
    number = {9},
    pages = {2497--2517},
-   title = {UNTITLED},
+   title = {Modelling The Evolution Of Organic Carbon During Its Gas-Phase Tropospheric Oxidation: Development Of An Explicit Model Based On A Self Generating Approach},
    volume = {5},
    year = {2005}
 }
@@ -2610,7 +2644,7 @@ and Bergstrom, C. T.},
    author = {Mike Jenkins},
    howpublished = {slide deck},
    note = {Presentation for the EPSR group, Imperial Collage},
-   title = {UNTITLED},
+   title = {{History Of The Master Chemical Mechanism (MCM) And Its Development Protocols}},
    year = {2002}
 }
 
@@ -2622,7 +2656,7 @@ and Bergstrom, C. T.},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231096001057}},
    number = {1},
    pages = {81 - 104},
-   title = {UNTITLED},
+   title = {The Tropospheric Degradation Of Volatile Organic Compounds: A Protocol For Mechanism Development},
    volume = {31},
    year = {1997}
 }
@@ -2638,7 +2672,7 @@ and Bergstrom, C. T.},
    pages = {161-180},
    pdf = {https://hal.archives-ouvertes.fr/hal-00295229/file/acp-3-161-2003.pdf},
    publisher = {{European Geosciences Union}},
-   title = {UNTITLED},
+   title = {{Protocol For The Development Of The Master Chemical Mechanism, MCM V3 (Part A): Tropospheric Degradation Of Non-Aromatic Volatile Organic Compounds}},
    volume = {3},
    year = {2003}
 }
@@ -2650,7 +2684,7 @@ and Bergstrom, C. T.},
    note = {\url{https://www.atmos-chem-phys.net/3/181/2003/}},
    number = {1},
    pages = {181--193},
-   title = {UNTITLED},
+   title = {Protocol For The Development Of The Master Chemical Mechanism, MCM V3 (Part B): Tropospheric Degradation Of Aromatic Volatile Organic Compounds},
    volume = {3},
    year = {2003}
 }
@@ -2658,7 +2692,8 @@ and Bergstrom, C. T.},
 @misc{memory,
    author = {Brian Foo},
    note = {\url{http://memoryunderground.com/}},
-   title = {UNTITLED},
+   title = {{Memory Underground - Convert Your Memories Into A Subway Map
+- Home}},
    year = {2019}
 }
 
@@ -2671,14 +2706,14 @@ and Bergstrom, C. T.},
    month = {April},
    note = {\url{http://arxiv.org/abs/1904.10814}},
    primaryclass = {physics.soc-ph},
-   title = {UNTITLED},
+   title = {{Mercator: Uncovering Faithful Hyperbolic Embeddings Of Complex Networks}},
    year = {2019}
 }
 
 @misc{metabolic,
    author = {Gerhard Michal},
    note = {\url{https://www.roche.com/sustainability/philanthropy/science_education/pathways/pathways-ordering.htm}},
-   title = {UNTITLED},
+   title = {{Metabolic Pathways}},
    year = {1965}
 }
 
@@ -2690,7 +2725,7 @@ and Bergstrom, C. T.},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S1045926X02902326}},
    number = {5},
    pages = {501 - 516},
-   title = {UNTITLED},
+   title = {Metrics For Graph Drawing Aesthetics},
    volume = {13},
    year = {2002}
 }
@@ -2702,7 +2737,7 @@ and Bergstrom, C. T.},
    note = {\url{http://scitation.aip.org/content/aip/journal/jcp/21/6/10.1063/1.1699114}},
    number = {6},
    pages = {1087-1092},
-   title = {UNTITLED},
+   title = {Equation Of State Calculations By Fast Computing Machines},
    volume = {21},
    year = {1953}
 }
@@ -2716,7 +2751,8 @@ Masoni, Paolo},
    month = {June},
    note = {http://www.sciencedirect.com/science/article/pii/S095965261100388X},
    pages = {150--159},
-   title = {UNTITLED},
+   title = {{Life Cycle Assessment Of Italian High Quality Milk Production. A
+Comparison With An Epd Study}},
    volume = {28},
    year = {2012}
 }
@@ -2731,7 +2767,8 @@ and Pilling, Michael J},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231098000533}},
    number = {14},
    pages = {2429--2441},
-   title = {UNTITLED},
+   title = {{Photochemical Ozone Creation Potentials For Organic Compounds In
+Northwest Europe Calculated With A Master Chemical Mechanism}},
    volume = {32},
    year = {1998}
 }
@@ -2745,7 +2782,9 @@ and Pilling, Michael J},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231098002611}},
    number = {8},
    pages = {1275--1293},
-   title = {UNTITLED},
+   title = {{Photochemical Ozone Creation Potentials For Oxygenated Volatile
+Organic Compounds: Sensitivity To Variations In Kinetic And
+Mechanistic Parameters}},
    volume = {33},
    year = {1999}
 }
@@ -2756,7 +2795,7 @@ and Pilling, Michael J},
    note = {\url{https://books.google.co.uk/books?id=Bp7KwpmFBzoC}},
    publisher = {Universiteit Antwerpen, Faculteit Letteren en Wijsbegeerte, Departement Taalkunde},
    series = {Proefschriften UA-LW : taalkunde},
-   title = {UNTITLED},
+   title = {Modeling Creativity: Case Studies In Python},
    year = {2013}
 }
 
@@ -2764,7 +2803,7 @@ and Pilling, Michael J},
    author = {Herman Bergwerf},
    booktitle = {{MolView}},
    note = {\url{http://molview.org/}},
-   title = {UNTITLED},
+   title = {{Molview}},
    year = {2019}
 }
 
@@ -2777,7 +2816,7 @@ and Kleiner, B.},
    isbn = {978-1-4613-9464-8},
    pages = {268--273},
    publisher = {Springer US},
-   title = {UNTITLED},
+   title = {Mosaics For Contingency Tables},
    year = {1981}
 }
 
@@ -2793,7 +2832,7 @@ Reymond, Jean-Louis},
    number = {11},
    pages = {1803--1805},
    pmid = {19774591},
-   title = {UNTITLED},
+   title = {{Classification Of Organic Molecules By Molecular Quantum Numbers}},
    volume = {4},
    year = {2009}
 }
@@ -2811,7 +2850,7 @@ Reymond, Jean-Louis and Chen, Hongming and Engkvist, Ola},
    pages = {20},
    pmc = {PMC6419837},
    pmid = {30868314},
-   title = {UNTITLED},
+   title = {{Exploring The Gdb-13 Chemical Space Using Deep Generative Models}},
    volume = {11},
    year = {2019}
 }
@@ -2821,7 +2860,7 @@ Reymond, Jean-Louis and Chen, Hongming and Engkvist, Ola},
    journal = {Science Daily},
    month = {January},
    note = {\url{https://www.sciencedaily.com/releases/2013/01/130117084856.htm}},
-   title = {UNTITLED},
+   title = {{Great Oxidation Event: More Oxygen Through Multicellularity}},
    year = {2013}
 }
 
@@ -2831,7 +2870,7 @@ Reymond, Jean-Louis and Chen, Hongming and Engkvist, Ola},
    month = {April},
    note = {\url{https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef}},
    publisher = {Towards Data Science},
-   title = {UNTITLED},
+   title = {{Node2Vec: Embeddings For Graph Data}},
    year = {2018}
 }
 
@@ -2845,7 +2884,8 @@ and Aizenberg, Joanna},
    note = {http://doi.wiley.com/10.1002/adma.200801432},
    number = {4},
    pages = {463--469},
-   title = {UNTITLED},
+   title = {{Fabrication Of Bioinspired Actuated Nanostructures With Arbitrary
+Geometry And Stiffness}},
    volume = {21},
    year = {2009}
 }
@@ -2861,7 +2901,7 @@ and Aizenberg, Joanna},
    number = {7781},
    pages = {22--23},
    pmid = {31695219},
-   title = {UNTITLED},
+   title = {{150 Years Of Nature: A Data Graphic Charts Our Evolution}},
    volume = {575},
    year = {2019}
 }
@@ -2871,7 +2911,7 @@ and Aizenberg, Joanna},
    journal = {Nature},
    note = {\url{https://www.nature.com/immersive/d42859-019-00121-0/public/pdf/nature-150-cover.pdf}},
    number = {7781},
-   title = {UNTITLED},
+   title = {{Nature-150-Cover.Pdf}},
    volume = {575},
    year = {2019}
 }
@@ -2884,7 +2924,7 @@ and Aizenberg, Joanna},
    number = {2},
    pages = {184--193},
    publisher = {[University of Chicago Press, Wenner-Gren Foundation for Anthropological Research]},
-   title = {UNTITLED},
+   title = {Neocortex Size, Group Size, And The Evolution Of Language},
    volume = {34},
    year = {1993}
 }
@@ -2894,7 +2934,7 @@ and Aizenberg, Joanna},
    isbn = {978-1-492-05781-9.},
    journal = {O'Reilly},
    note = {\url{https://neo4j.com/neoassets/graphbooks/Graph_Algorithms_Neo4j.pdf}},
-   title = {UNTITLED},
+   title = {{Practical Examples In Apache Spark \& Neo4J}},
    year = {2019}
 }
 
@@ -2907,7 +2947,8 @@ and Aizenberg, Joanna},
    month = {January},
    note = {\url{http://arxiv.org/abs/2001.09006}},
    primaryclass = {physics.soc-ph},
-   title = {UNTITLED},
+   title = {{Twenty Years Of Network Science: A Bibliographic And
+Co-Authorship Network Analysis}},
    year = {2020}
 }
 
@@ -2924,7 +2965,7 @@ Morten H},
    number = {7},
    pages = {348--360},
    pmid = {23726319},
-   title = {UNTITLED},
+   title = {{Networks In Cognitive Science}},
    volume = {17},
    year = {2013}
 }
@@ -2941,7 +2982,7 @@ and Pizzonia, Maurizio},
    note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_27}},
    pages = {295--306},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {Bgplay: A System For Visualizing The Interdomain Routing Evolution},
    year = {2004}
 }
 
@@ -2951,7 +2992,7 @@ and Pizzonia, Maurizio},
    booktitle = {Proceedings of the 7th Python in Science Conference},
    editor = {Ga\"el Varoquaux and Travis Vaught and Jarrod Millman},
    pages = {11 - 15},
-   title = {UNTITLED},
+   title = {Exploring Network Structure, Dynamics, And Function Using Networkx},
    year = {2008}
 }
 
@@ -2968,7 +3009,8 @@ Ching Ming and Hu, Wei-Shou},
    number = {1},
    pages = {1--17},
    pmid = {14687967},
-   title = {UNTITLED},
+   title = {{Large Scale Gene Expression Profiling Of Metabolic Shift Of
+Mammalian Cells In Culture}},
    volume = {107},
    year = {2004}
 }
@@ -2981,7 +3023,7 @@ Ching Ming and Hu, Wei-Shou},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S0891061800000648}},
    number = {1},
    pages = {83 - 92},
-   title = {UNTITLED},
+   title = {Voronoi Tessellation To Study The Numerical Density And The Spatial Distribution Of Neurones},
    volume = {20},
    year = {2000}
 }
@@ -2999,7 +3041,7 @@ Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D},
    number = {3},
    pages = {380--408},
    pmid = {16498609},
-   title = {UNTITLED},
+   title = {{Neuroproteomics In Neurotrauma}},
    volume = {25},
    year = {2006}
 }
@@ -3014,7 +3056,7 @@ Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D},
    number = {suppl 1},
    pages = {5200--5205},
    publisher = {National Academy of Sciences},
-   title = {UNTITLED},
+   title = {Coauthorship Networks And Patterns Of Scientific Collaboration},
    volume = {101},
    year = {2004}
 }
@@ -3025,7 +3067,7 @@ Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D},
    month = {October},
    note = {\url{http://www.atlasobscura.com/places/newspaper-rock}},
    publisher = {Atlas Obscura},
-   title = {UNTITLED},
+   title = {{Newspaper Rock}},
    year = {2019}
 }
 
@@ -3043,7 +3085,7 @@ Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D},
    numpages = {31},
    pages = {301--331},
    publisher = {ACM},
-   title = {UNTITLED},
+   title = {Drawing Graphs Nicely Using Simulated Annealing},
    volume = {15},
    year = {1996}
 }
@@ -3051,7 +3093,9 @@ Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D},
 @misc{nightingale,
    author = {Florence Nightingale},
    note = {\url{https://www.rct.uk/collection/1075240/notes-on-matters-affecting-the-health-efficiency-and-hospital-administration-of}},
-   title = {UNTITLED},
+   title = {{Notes On Matters Affecting
+The Health, Efficiency And Hospital Administration Of The
+British Army 1820-1910}},
    year = {1820}
 }
 
@@ -3062,7 +3106,8 @@ Hayes, Ronald L and Wang, Kevin K W and Denslow, Nancy D},
    note = {\url{https://www.atmos-chem-phys.net/17/2103/2017/}},
    number = {3},
    pages = {2103--2162},
-   title = {UNTITLED},
+   title = {Nitrate Radicals And Biogenic Volatile Organic Compounds: Oxidation,
+Mechanisms, And Organic Aerosol},
    volume = {17},
    year = {2017}
 }
@@ -3077,7 +3122,7 @@ https://doi.org/10.1021/acscentsci.6b00219
    note = {PMID: 27800555},
    number = {10},
    pages = {725-732},
-   title = {UNTITLED},
+   title = {Neural Networks For The Prediction Of Organic Chemistry Reactions},
    volume = {2},
    year = {2016}
 }
@@ -3091,7 +3136,7 @@ https://doi.org/10.1021/acscentsci.6b00219
    note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_40}},
    pages = {425--436},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {An Energy Model For Visual Graph Clustering},
    year = {2004}
 }
 
@@ -3103,7 +3148,7 @@ https://doi.org/10.1021/acscentsci.6b00219
    month = {July},
    number = {4},
    pages = {536-548},
-   title = {UNTITLED},
+   title = {Drawing Directed Graphs Using Quadratic Programming},
    volume = {12},
    year = {2006}
 }
@@ -3111,7 +3156,7 @@ https://doi.org/10.1021/acscentsci.6b00219
 @article{node2vec,
    author = {Aditya Grover and Jure Leskovec},
    note = {Accessed: 2019-10-21},
-   title = {UNTITLED},
+   title = {Node2Vec: Scalable Feature Learning For Networks},
    year = {2019}
 }
 
@@ -3126,7 +3171,7 @@ and Stuckey, Peter J.},
    note = {\url{http://dx.doi.org/10.1007/11618058_15}},
    pages = {153--164},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {Fast Node Overlap Removal},
    year = {2006}
 }
 
@@ -3137,7 +3182,8 @@ and Stuckey, Peter J.},
    note = {\url{http://dx.doi.org/10.1007/978-3-319-50901-3_46}},
    pages = {579--591},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {{Nodetrix-Multiplex: Visual Analytics Of Multiplex Small World
+Networks}},
    year = {2017}
 }
 
@@ -3152,7 +3198,7 @@ and Stuckey, Peter J.},
    pages = {369--376},
    publisher = {Australian Computer Society, Inc.},
    series = {ACSC '04},
-   title = {UNTITLED},
+   title = {Flexible Layering In Hierarchical Drawings With Nodes Of Arbitrary Size},
    year = {2004}
 }
 
@@ -3168,7 +3214,8 @@ States of America},
    pages = {13614--13620},
    pmc = {PMC4183170},
    pmid = {25225368},
-   title = {UNTITLED},
+   title = {{Using Narratives And Storytelling To Communicate Science With
+Nonexpert Audiences}},
    volume = {111 Suppl 4},
    year = {2014}
 }
@@ -3183,7 +3230,7 @@ States of America},
    pages = {7--17},
    publisher = {IBM Press},
    series = {CASCON '92},
-   title = {UNTITLED},
+   title = {Cluster Busting In Anchored Graph Drawing},
    year = {1992}
 }
 
@@ -3192,7 +3239,7 @@ States of America},
    month = {01},
    note = {\url{https://docs.scipy.org/doc/_static/numpybook.pdf}},
    pages = {},
-   title = {UNTITLED},
+   title = {Guide To Numpy},
    year = {2006}
 }
 
@@ -3212,7 +3259,9 @@ for Photobiology},
    pages = {127--179},
    pmc = {PMC6155474},
    pmid = {29404558},
-   title = {UNTITLED},
+   title = {{Environmental Effects Of Ozone Depletion, Uv Radiation And
+Interactions With Climate Change: Unep Environmental Effects
+Assessment Panel, Update 2017}},
    volume = {17},
    year = {2018}
 }
@@ -3223,7 +3272,7 @@ Chakravarty, and Cheng Tang}},
    journal = {Amazon Machine Learning Blog},
    month = {November},
    note = {\url{https://aws.amazon.com/blogs/machine-learning/introduction-to-amazon-sagemaker-object2vec/}},
-   title = {UNTITLED},
+   title = {{Introduction To Amazon Sagemaker: Object2Vec}},
    year = {2008}
 }
 
@@ -3231,7 +3280,8 @@ Chakravarty, and Cheng Tang}},
    author = {Lynch, Helen},
    doi = {10.21427/D73W37},
    note = {\url{http://dx.doi.org/10.21427/D73W37}},
-   title = {UNTITLED},
+   title = {{Infant Places, Spaces And Objects: Exploring The Physical In
+Learning Environments For Infants Under Two}},
    year = {2011}
 }
 
@@ -3251,7 +3301,8 @@ Wild, Oliver},
    number = {D5},
    pages = {5979--5991},
    series = {chap.},
-   title = {UNTITLED},
+   title = {{Results From The Intergovernmental Panel On Climatic Change
+Photochemical Model Intercomparison (Photocomp)}},
    volume = {102},
    year = {1997}
 }
@@ -3270,7 +3321,7 @@ and Meyer, J{\"o}rg},
    note = {\url{http://dx.doi.org/10.1007/978-3-540-71949-6_4}},
    pages = {163--230},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {Visual Representations},
    year = {2007}
 }
 
@@ -3280,7 +3331,7 @@ and Meyer, J{\"o}rg},
    journal = {Proc SPIE},
    month = {01},
    pages = {786806},
-   title = {UNTITLED},
+   title = {Openord: An Open-Source Toolbox For Large Graph Layout},
    volume = {7868},
    year = {2011}
 }
@@ -3290,7 +3341,7 @@ and Meyer, J{\"o}rg},
    month = {August},
    note = {\url{https://www.youtube.com/watch?v=Jq2Rc0WlYTE}},
    publisher = {Youtube},
-   title = {UNTITLED},
+   title = {{Openvis Conference Proceedings}},
    year = {2018}
 }
 
@@ -3307,7 +3358,7 @@ and Meyer, J{\"o}rg},
    numpages = {12},
    pages = {49–60},
    publisher = {Association for Computing Machinery},
-   title = {UNTITLED},
+   title = {Optics: Ordering Points To Identify The Clustering Structure},
    volume = {28},
    year = {1999}
 }
@@ -3324,7 +3375,7 @@ Nourse, James G},
    number = {6},
    pages = {1273--1280},
    pmid = {12444722},
-   title = {UNTITLED},
+   title = {{Reoptimization Of Mdl Keys For Use In Drug Discovery}},
    volume = {42},
    year = {2002}
 }
@@ -3334,7 +3385,7 @@ Nourse, James G},
    doi = {10.1117/12.871402},
    journal = {.},
    note = {\url{https://doi.org/10.1117/12.871402}},
-   title = {UNTITLED},
+   title = {Openord: An Open-Source Toolbox For Large Graph Layout},
    volume = {7868},
    year = {2011}
 }
@@ -3353,7 +3404,7 @@ Nourse, James G},
    numpages = {48},
    pages = {235--282},
    publisher = {Elsevier Science Publishers B. V.},
-   title = {UNTITLED},
+   title = {Algorithms For Drawing Graphs: An Annotated Bibliography},
    volume = {4},
    year = {1994}
 }
@@ -3361,7 +3412,7 @@ Nourse, James G},
 @misc{orthogonaltv,
    author = {JVC},
    note = {\url{https://thydzik.com/videosphere/}},
-   title = {UNTITLED},
+   title = {{Videosphere Service And Repair Manuals (Model 3 240)}},
    year = {2020}
 }
 
@@ -3378,7 +3429,8 @@ Olivier J},
    note = {\url{https://doi.org/10.1038/ngeo2122}},
    number = {4},
    pages = {283--286},
-   title = {UNTITLED},
+   title = {{Evidence For Oxygenic Photosynthesis Half A Billion Years Before
+The Great Oxidation Event}},
    volume = {7},
    year = {2014}
 }
@@ -3392,7 +3444,7 @@ Olivier J},
    note = {\url{https://doi.org/10.1007/978-3-642-11274-4_1721}},
    pages = {1209--1209},
    publisher = {Springer Berlin Heidelberg},
-   title = {UNTITLED},
+   title = {Oxygenic Photosynthesis},
    year = {2011}
 }
 
@@ -3405,7 +3457,8 @@ Olivier J},
    note = {\url{https://doi.org/10.1038/315207a0}},
    number = {6016},
    pages = {207--210},
-   title = {UNTITLED},
+   title = {{Large Losses Of Total Ozone In Antarctica Reveal Seasonal Clox/Nox
+Interaction}},
    volume = {315},
    year = {1985}
 }
@@ -3413,7 +3466,7 @@ Olivier J},
 @article{ozonerepair,
    author = {Ellen Gray, Theo Stein, Sara Blumberg},
    note = {\url{http://www.nasa.gov/feature/goddard/2019/2019-ozone-hole-is-the-smallest-on-record-since-its-discovery}},
-   title = {UNTITLED},
+   title = {{2019 Ozone Hole Is The Smallest On Record Since Its Discovery}},
    year = {2019}
 }
 
@@ -3428,14 +3481,14 @@ Olivier J},
    note = {\url{http://www.sciencedirect.com/science/article/pii/B9780123822253004333}},
    pages = {251 - 254},
    publisher = {Academic Press},
-   title = {UNTITLED},
+   title = {Tropospheric Chemistry And Composition | Peroxyacetyl Nitrate},
    year = {2015}
 }
 
 @misc{paris,
    author = {UNFCCC},
    note = {\url{https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement}},
-   title = {UNTITLED},
+   title = {{The Paris Agreement | United Nations Climate Change}},
    year = {2015}
 }
 
@@ -3446,7 +3499,7 @@ Olivier J},
    month = {December},
    note = {\url{https://www.abc.net.au/news/2015-12-12/world-adopts-climate-deal-at-paris-talks/7023712}},
    publisher = {Australian Broadcasting Corporation},
-   title = {UNTITLED},
+   title = {{Cheers As World Adopts Historic Paris Climate Deal}},
    year = {2015}
 }
 
@@ -3459,7 +3512,7 @@ Olivier J},
    note = {\url{http://dx.doi.org/10.1057/9780230371934_11}},
    pages = {191--209},
    publisher = {Palgrave Macmillan UK},
-   title = {UNTITLED},
+   title = {Analysis Tool Or Research Methodology: Is There An Epistemology For Patterns?},
    year = {2012}
 }
 
@@ -3472,7 +3525,7 @@ Olivier J},
    number = {11},
    pages = {559-572},
    publisher = {Taylor & Francis},
-   title = {UNTITLED},
+   title = {Liii. On Lines And Planes Of Closest Fit To Systems Of Points In Space},
    volume = {2},
    year = {1901}
 }
@@ -3485,7 +3538,7 @@ Olivier J},
    number = {6},
    pages = {417--441},
    publisher = {American Psychological Association ({APA})},
-   title = {UNTITLED},
+   title = {Analysis Of A Complex Of Statistical Variables Into Principal Components.},
    volume = {24},
    year = {1933}
 }
@@ -3499,7 +3552,7 @@ Olivier J},
    month = {November},
    note = {\url{http://www.intechopen.com/books/statistics-growing-data-sets-and-growing-demand-for-statistics/application-of-principal-component-analysis-to-image-compression}},
    publisher = {InTech},
-   title = {UNTITLED},
+   title = {{Application Of Principal Component Analysis To Image Compression}},
    year = {2018}
 }
 
@@ -3507,7 +3560,7 @@ Olivier J},
    author = {Victor Powell},
    booktitle = {{Explained Visually}},
    note = {\url{http://setosa.io/ev/principal-component-analysis/}},
-   title = {UNTITLED},
+   title = {{Principal Component Analysis Explained Visually}},
    year = {2020}
 }
 
@@ -3515,7 +3568,7 @@ Olivier J},
    author = {Smith, Lindsay I},
    institution = {otago},
    note = {\url{http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf}},
-   title = {UNTITLED},
+   title = {{A Tutorial On Principal Components Analysis}},
    year = {2002}
 }
 
@@ -3528,7 +3581,9 @@ Olivier J},
    note = {\url{https://doi.org/10.1007/s12555-015-0196-7}},
    number = {2},
    pages = {506--517},
-   title = {UNTITLED},
+   title = {{Principal Component Analysis Based Signal-To-Noise Ratio
+Improvement For Inchoate Faulty Signals: Application To Ball
+Bearing Fault Detection}},
    volume = {15},
    year = {2017}
 }
@@ -3545,7 +3600,7 @@ Olivier J},
    pages = {20150202},
    pmc = {PMC4792409},
    pmid = {26953178},
-   title = {UNTITLED},
+   title = {{Principal Component Analysis: A Review And Recent Developments}},
    volume = {374},
    year = {2016}
 }
@@ -3558,7 +3613,7 @@ Olivier J},
    note = {\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/kin.550170107}},
    number = {1},
    pages = {55-81},
-   title = {UNTITLED},
+   title = {Principal Component Analysis Of Kinetic Models},
    volume = {17},
    year = {1985}
 }
@@ -3566,7 +3621,7 @@ Olivier J},
 @misc{people,
    author = {{People2Vec}},
    note = {\url{http://people2vec.org/}},
-   title = {UNTITLED},
+   title = {{People2Vec}},
    year = {2019}
 }
 
@@ -3574,14 +3629,14 @@ Olivier J},
    author = {F. Rosenblatt},
    journal = {Psychological Review},
    pages = {65--386},
-   title = {UNTITLED},
+   title = {The Perceptron: A Probabilistic Model For Information Storage And Organization In The Brain},
    year = {1958}
 }
 
 @misc{perceptronimage,
    author = {Lab Cornell},
    note = {\url{https://en.wikipedia.org/w/index.php?title=Perceptron&oldid=935763442}},
-   title = {UNTITLED},
+   title = {{Mark 1 Perceptron}},
    year = {2020}
 }
 
@@ -3589,7 +3644,7 @@ Olivier J},
    author = {John Hay, Ben Lynch, David Smith},
    journal = {Cornell Aeronautical Laboratory},
    note = {\url{https://apps.dtic.mil/dtic/tr/fulltext/u2/236965.pdf}},
-   title = {UNTITLED},
+   title = {{Mark 1 Perceptron Operators' Manual}},
    year = {1960}
 }
 
@@ -3603,7 +3658,8 @@ Olivier J},
    number = {19},
    pages = {3404--3415},
    pmid = {19206125},
-   title = {UNTITLED},
+   title = {{Icon Of Chemistry: The Periodic System Of Chemical Elements In
+The New Century}},
    volume = {48},
    year = {2009}
 }
@@ -3611,7 +3667,8 @@ Olivier J},
 @article{phrase,
    author = {Boudin, Florian},
    note = {\url{https://hal.archives-ouvertes.fr/hal-00850187/document}},
-   title = {UNTITLED},
+   title = {{A Comparison Of Centrality Measures For Graph-Based Keyphrase
+Extraction}},
    year = {2013}
 }
 
@@ -3620,7 +3677,7 @@ Olivier J},
    journal = {Hyle},
    number = {2},
    pages = {101--126},
-   title = {UNTITLED},
+   title = {Towards A Philosophy Of Approximations In The 'Exact' Sciences},
    volume = {11},
    year = {2005}
 }
@@ -3637,7 +3694,8 @@ Association on Water Pollution Research},
    number = {6},
    pages = {1393--1400},
    pmid = {20351417},
-   title = {UNTITLED},
+   title = {{Fast Start-Up Of A Pilot-Scale Deammonification Sequencing Batch
+Reactor From An Activated Sludge Inoculum}},
    volume = {61},
    year = {2010}
 }
@@ -3653,7 +3711,7 @@ and Pitts, Walter},
    note = {\url{https://doi.org/10.1007/BF02478259}},
    number = {4},
    pages = {115--133},
-   title = {UNTITLED},
+   title = {A Logical Calculus Of The Ideas Immanent In Nervous Activity},
    volume = {5},
    year = {1943}
 }
@@ -3664,7 +3722,7 @@ and Pitts, Walter},
    journal = {Scientific American},
    month = {October},
    note = {\url{https://www.scientificamerican.com/article/planet-formation-its-a-drag/}},
-   title = {UNTITLED},
+   title = {{Planet Formation? It'S A Drag}},
    year = {2018}
 }
 
@@ -3675,7 +3733,7 @@ and Pitts, Walter},
    note = {\url{https://books.google.co.uk/books?id=vbtbQk\_A0YoC}},
    publisher = {Lexington Books},
    series = {G - Reference, Information and Interdisciplinary Subjects Series},
-   title = {UNTITLED},
+   title = {Plato'S Forms: Varieties Of Interpretation},
    year = {2002}
 }
 
@@ -3690,7 +3748,7 @@ and Pitts, Walter},
    number = {4},
    pages = {661--703},
    publisher = {Society for Industrial and Applied Mathematics},
-   title = {UNTITLED},
+   title = {{Power-Law Distributions In Empirical Data}},
    volume = {51},
    year = {2009}
 }
@@ -3699,7 +3757,7 @@ and Pitts, Walter},
    author = {Baillargeon, Renace and Carey, Susan},
    journal = {Early childhood development and later outcome},
    month = {01},
-   title = {UNTITLED},
+   title = {Core Cognition And Beyond: The Acquisition Of Physical And Numerical Knowledge},
    year = {2012}
 }
 
@@ -3712,7 +3770,8 @@ Oscar and Worm, Dani{\"e}l},
    note = {\url{http://dx.doi.org/10.1007/978-3-030-32101-7_35}},
    pages = {605--623},
    publisher = {Springer International Publishing},
-   title = {UNTITLED},
+   title = {{Secure Multiparty Pagerank Algorithm For Collaborative Fraud
+Detection}},
    year = {2019}
 }
 
@@ -3721,7 +3780,7 @@ Oscar and Worm, Dani{\"e}l},
    note = {\url{https://books.google.co.uk/books?id=7a60MQEACAAJ}},
    publisher = {Coast and Geodetic Survey},
    series = {Special publication},
-   title = {UNTITLED},
+   title = {Conformal Projections In Geodesy And Cartography},
    year = {1952}
 }
 
@@ -3730,7 +3789,9 @@ Oscar and Worm, Dani{\"e}l},
    journal = {Atmospheric Chemistry and Physics},
    note = {\url{https://www.atmos-chem-phys.net/5/2497/2005/acp-5-2497-2005.pdf}},
    pages = {2497--2517},
-   title = {UNTITLED},
+   title = {{Modelling The Evolution Of Organic Carbon During Its Gas-Phase
+Tropospheric Oxidation: Development Of An Explicit Model Based On
+A Self Generating Approach}},
    volume = {5},
    year = {2005}
 }
@@ -3742,7 +3803,7 @@ Oscar and Worm, Dani{\"e}l},
    note = {\url{https://www.atmos-chem-phys.net/4/2025/2004/}},
    number = {7},
    pages = {2025--2056},
-   title = {UNTITLED},
+   title = {Systematic Reduction Of Complex Tropospheric Chemical Mechanisms, Part I: Sensitivity And Time-Scale Analyses},
    volume = {4},
    year = {2004}
 }
@@ -3755,7 +3816,7 @@ Oscar and Worm, Dani{\"e}l},
    note = {\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.4380211102}},
    number = {11},
    pages = {1129-1164},
-   title = {UNTITLED},
+   title = {Graph Drawing By Force-Directed Placement},
    volume = {21},
    year = {1991}
 }
@@ -3794,7 +3855,7 @@ Jeff van Santen},
    doi = {10.5281/zenodo.2864247},
    month = {May},
    note = {\url{https://doi.org/10.5281/zenodo.2864247}},
-   title = {UNTITLED},
+   title = {Rdkit 2019-03-2 (Q1 2019) Release},
    year = {2019}
 }
 
@@ -3802,7 +3863,7 @@ Jeff van Santen},
    author = {rdkit},
    institution = {Github},
    note = {\url{https://github.com/rdkit/rdkit/blob/24f1737839c9302489cadc473d8d9196ad9187b4/rdkit/Chem/MACCSkeys.py}},
-   title = {UNTITLED},
+   title = {{Rdkit}},
    year = {2019}
 }
 
@@ -3819,7 +3880,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    number = {1},
    pages = {29-52},
    publisher = {Routledge},
-   title = {UNTITLED},
+   title = {Regular Equivalence: General Theory},
    volume = {19},
    year = {1994}
 }
@@ -3833,7 +3894,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    note = {\url{https://doi.org/10.1023/A:1010933404324}},
    number = {1},
    pages = {5--32},
-   title = {UNTITLED},
+   title = {{Random Forests}},
    volume = {45},
    year = {2001}
 }
@@ -3844,7 +3905,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    lccn = {2010020592},
    note = {\url{https://books.google.co.uk/books?id=b2W5S3Lb4fwC}},
    publisher = {Elsevier Science},
-   title = {UNTITLED},
+   title = {Clean Coal Engineering Technology},
    year = {2010}
 }
 
@@ -3856,7 +3917,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231097832128}},
    number = {20},
    pages = {3459 - 3472},
-   title = {UNTITLED},
+   title = {Benchmarking Stiff Ode Solvers For Atmospheric Chemistry Problems Ii: Rosenbrock Solvers},
    volume = {31},
    year = {1997}
 }
@@ -3869,7 +3930,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    note = {http://dx.doi.org/10.1039/C7RE00129K},
    pages = {102-118},
    publisher = {The Royal Society of Chemistry},
-   title = {UNTITLED},
+   title = {Statistics Of The Network Of Organic Chemistry},
    volume = {3},
    year = {2018}
 }
@@ -3877,7 +3938,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
 @misc{rule8,
    author = {{Ben Shneiderman}},
    note = {\url{http://www.cs.umd.edu/~ben/goldenrules.html}},
-   title = {UNTITLED},
+   title = {The Eight Golden Rules Of Interface Design},
    year = {1985}
 }
 
@@ -3889,7 +3950,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    number = {1},
    pages = {55-61},
    publisher = {Taylor & Francis},
-   title = {UNTITLED},
+   title = {A Comparison Of Three Methods For Selecting Values Of Input Variables In The Analysis Of Output From A Computer Code},
    volume = {42},
    year = {2000}
 }
@@ -3900,7 +3961,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    lccn = {2014028418},
    note = {\url{https://books.google.co.uk/books?id=FmyBAwAAQBAJ}},
    publisher = {Harper},
-   title = {UNTITLED},
+   title = {Sapiens: A Brief History Of Humankind},
    year = {2015}
 }
 
@@ -3916,7 +3977,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    pages = {1017},
    pmc = {PMC6399239},
    pmid = {30833554},
-   title = {UNTITLED},
+   title = {{Scale-Free Networks Are Rare}},
    volume = {10},
    year = {2019}
 }
@@ -3931,7 +3992,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    numpages = {4},
    pages = {035103},
    publisher = {American Physical Society},
-   title = {UNTITLED},
+   title = {Scale-Free Topology Of E-Mail Networks},
    volume = {66},
    year = {2002}
 }
@@ -3946,7 +4007,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    number = {3683},
    pages = {510--515},
    publisher = {American Association for the Advancement of Science},
-   title = {UNTITLED},
+   title = {Networks Of Scientific Papers},
    volume = {149},
    year = {1965}
 }
@@ -3954,7 +4015,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
 @misc{scholar,
    author = {Google},
    note = {\url{https://scholar.google.com/schhp?hl=en}},
-   title = {UNTITLED},
+   title = {{Google Scholar}},
    year = {2019}
 }
 
@@ -3962,7 +4023,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    author = {Monta{\~n}ez, Amanda},
    booktitle = {{Scientific American Blog Network}},
    note = {\url{https://blogs.scientificamerican.com/sa-visual/how-science-visualization-can-help-save-the-world/}},
-   title = {UNTITLED},
+   title = {{How Science Visualization Can Help Save The World}},
    year = {2016}
 }
 
@@ -3977,7 +4038,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    number = {6377},
    pages = {744--745},
    pmid = {29449479},
-   title = {UNTITLED},
+   title = {{The Changing Face Of Urban Air Pollution}},
    volume = {359},
    year = {2018}
 }
@@ -3993,7 +4054,7 @@ https://doi.org/10.1080/0022250X.1994.9990134
    numpages = {6},
    pages = {2825--2830},
    publisher = {JMLR.org},
-   title = {UNTITLED},
+   title = {Scikit-Learn: Machine Learning In Python},
    volume = {12},
    year = {2011}
 }
@@ -4005,7 +4066,7 @@ and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
 Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    journal = {Journal of Machine Learning Research},
    pages = {2825--2830},
-   title = {UNTITLED},
+   title = {Scikit-Learn: Machine Learning In {P}Ython},
    volume = {12},
    year = {2011}
 }
@@ -4013,7 +4074,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
 @misc{scipy,
    author = {Eric Jones and Travis Oliphant and Pearu Peterson and others},
    note = {http://www.scipy.org/},
-   title = {UNTITLED},
+   title = {{Scipy}: Open Source Scientific Tools For {Python}},
    year = {2001--}
 }
 
@@ -4023,7 +4084,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    journal = {Canadian Journal of Psychology/Revue canadienne de psychologie},
    month = {12},
    pages = {234-240},
-   title = {UNTITLED},
+   title = {The Net Of Reciprocal Influence: A Problem In Treating Sociometric Data},
    volume = {3},
    year = {1949}
 }
@@ -4035,7 +4096,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    note = {\url{https://books.google.co.uk/books?id=hf57X0s4aPwC}},
    publisher = {Wiley},
    series = {Wiley Science Editions},
-   title = {UNTITLED},
+   title = {Serendipity: Accidental Discoveries In Science},
    year = {1989}
 }
 
@@ -4053,7 +4114,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    numpages = {8},
    pages = {1269--1276},
    publisher = {IEEE Educational Activities Department},
-   title = {UNTITLED},
+   title = {The Shaping Of Information By Visual Metaphors},
    volume = {14},
    year = {2008}
 }
@@ -4070,7 +4131,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    journal = {Journal of Computational and Applied Mathematics},
    note = {\url{http://www.sciencedirect.com/science/article/pii/0377042787901257}},
    pages = {53--65},
-   title = {UNTITLED},
+   title = {Silhouettes: A Graphical Aid To The Interpretation And Validation Of Cluster Analysis},
    ty = {JOUR},
    volume = {20},
    year = {1987}
@@ -4082,7 +4143,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    lccn = {00068915},
    note = {\url{https://books.google.co.uk/books?id=JuLko8USApwC}},
    publisher = {Cambridge University Press},
-   title = {UNTITLED},
+   title = {The Skeptical Environmentalist: Measuring The Real State Of The World},
    year = {2001}
 }
 
@@ -4099,7 +4160,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    number = {4},
    numpages = {12},
    publisher = {Association for Computing Machinery},
-   title = {UNTITLED},
+   title = {The Sketchy Database: Learning To Retrieve Badly Drawn Bunnies},
    volume = {35},
    year = {2016}
 }
@@ -4111,7 +4172,7 @@ and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
 Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    journal = {Journal of Machine Learning Research},
    pages = {2825--2830},
-   title = {UNTITLED},
+   title = {{Scikit-Learn: Machine Learning In Python }},
    volume = {12},
    year = {2011}
 }
@@ -4122,14 +4183,14 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    issn = {0036-8733},
    journal = {Scientific American},
    note = {\url{https://www.scientificamerican.com/article/the-origin-of-humans-is-surprisingly-complicated/}},
-   title = {UNTITLED},
+   title = {{The Origin Of Humans Is Surprisingly Complicated}},
    year = {2014}
 }
 
 @article{slidedeck,
    author = {John Mashey },
    note = {\url{https://static.usenix.org/event/usenix99/invited_talks/mashey.pdf}},
-   title = {UNTITLED},
+   title = {{Big Data And The Next Wave Of Infrastress }},
    year = {1998}
 }
 
@@ -4145,7 +4206,8 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    pages = {e0002051},
    pmc = {PMC2323569},
    pmid = {18446219},
-   title = {UNTITLED},
+   title = {{Network 'Small-World-Ness': A Quantitative Method For Determining
+Canonical Network Equivalence}},
    volume = {3},
    year = {2008}
 }
@@ -4160,7 +4222,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    number = {6684},
    pages = {440--442},
    pmid = {9623998},
-   title = {UNTITLED},
+   title = {{Collective Dynamics Of 'Small-World' Networks}},
    volume = {393},
    year = {1998}
 }
@@ -4176,7 +4238,8 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    number = {1},
    pages = {31--36},
    publisher = {American Chemical Society},
-   title = {UNTITLED},
+   title = {{Smiles, A Chemical Language And Information System. 1.
+Introduction To Methodology And Encoding Rules}},
    volume = {28},
    year = {1988}
 }
@@ -4192,7 +4255,8 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    number = {1},
    pages = {1--7},
    pmid = {29257869},
-   title = {UNTITLED},
+   title = {{Smilesdrawer: Parsing And Drawing Smiles-Encoded Molecular
+Structures Using Client-Side Javascript}},
    volume = {58},
    year = {2018}
 }
@@ -4208,7 +4272,7 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    number = {1},
    pages = {53--72},
    pmid = {26189988},
-   title = {UNTITLED},
+   title = {{Social Network Size In Humans}},
    volume = {14},
    year = {2003}
 }
@@ -4225,7 +4289,7 @@ https://doi.org/10.1177/0038038588022001007
 }},
    number = {1},
    pages = {109-127},
-   title = {UNTITLED},
+   title = {Social Network Analysis},
    volume = {22},
    year = {1988}
 }
@@ -4235,7 +4299,7 @@ https://doi.org/10.1177/0038038588022001007
    author = {Diehl, Stephan},
    isbn = {3540465049},
    publisher = {Springer-Verlag New York, Inc.},
-   title = {UNTITLED},
+   title = {Software Visualization: Visualizing The Structure, Behaviour, And Evolution Of Software},
    year = {2007}
 }
 
@@ -4250,7 +4314,7 @@ Rolf},
    number = {3},
    pages = {510--532},
    publisher = {Molecular Diversity Preservation International},
-   title = {UNTITLED},
+   title = {{Chemical Mechanism Solvers In Air Quality Models}},
    volume = {2},
    year = {2011}
 }
@@ -4265,7 +4329,7 @@ Rolf},
    number = {4},
    pages = {433--445},
    publisher = {Cambridge University Press},
-   title = {UNTITLED},
+   title = {{Spectral Ranking}},
    volume = {4},
    year = {2016}
 }
@@ -4280,7 +4344,7 @@ Rolf},
    numpages = {15},
    pages = {026113},
    publisher = {American Physical Society},
-   title = {UNTITLED},
+   title = {Finding And Evaluating Community Structure In Networks},
    volume = {69},
    year = {2004}
 }
@@ -4289,7 +4353,7 @@ Rolf},
    author = {Ferguson, Niall},
    isbn = {0735222916},
    publisher = {Penguin Group , The},
-   title = {UNTITLED},
+   title = {The Square And The Tower: Networks And Power, From The Freemasons To Facebook},
    year = {2018}
 }
 
@@ -4299,7 +4363,7 @@ Rolf},
    lccn = {2011042372},
    note = {\url{https://books.google.co.uk/books?id=Gd3lT5yP3ZQC}},
    publisher = {Houghton Mifflin Harcourt},
-   title = {UNTITLED},
+   title = {The Storytelling Animal: How Stories Make Us Human},
    year = {2012}
 }
 
@@ -4316,7 +4380,7 @@ Rolf},
    numpages = {7},
    pages = {31--37},
    publisher = {ACM},
-   title = {UNTITLED},
+   title = {What Storytelling Can Do For Information Visualization},
    volume = {44},
    year = {2001}
 }
@@ -4324,7 +4388,7 @@ Rolf},
 @misc{stripes,
    author = {Ed Hawkins},
    note = {\url{https://showyourstripes.info/}},
-   title = {UNTITLED},
+   title = {{\#Showyourstripes}},
    year = {2019}
 }
 
@@ -4338,7 +4402,7 @@ Rolf},
    numpages = {8},
    pages = {061901},
    publisher = {American Physical Society},
-   title = {UNTITLED},
+   title = {Distance, Dissimilarity Index, And Network Community Structure},
    volume = {67},
    year = {2003}
 }
@@ -4354,7 +4418,7 @@ Rolf},
    number = {481},
    pages = {1--7},
    publisher = {Taylor \& Francis},
-   title = {UNTITLED},
+   title = {{On Student'S 1908 Article ``The Probable Error Of A Mean''}},
    volume = {103},
    year = {2008}
 }
@@ -4369,7 +4433,8 @@ G{\"u}nnemann, Stephan},
    month = {October},
    note = {\url{http://arxiv.org/abs/1810.05997}},
    primaryclass = {cs.LG},
-   title = {UNTITLED},
+   title = {{Predict Then Propagate: Graph Neural Networks Meet
+Personalized Pagerank}},
    year = {2018}
 }
 
@@ -4377,14 +4442,14 @@ G{\"u}nnemann, Stephan},
    author = {British-Museum},
    booktitle = {{British Museum}},
    note = {\url{https://www.britishmuseum.org/research/collection_online/collection_object_details.aspx?objectId=1547654&partId=1&searchText=tablet&from=bc&fromDate=4444&to=bc&toDate=3000&page=1}},
-   title = {UNTITLED},
+   title = {{Tablet}},
    year = {BC}
 }
 
 @article{tephi,
    author = {Ian Brooks},
    note = {\url{http://www.met.reading.ac.uk/~sgs02rpa/TEACHING/Tephigram.pdf}},
-   title = {UNTITLED},
+   title = {Tephigram.Pdf},
    year = {2019}
 }
 
@@ -4395,7 +4460,7 @@ G{\"u}nnemann, Stephan},
    note = {\url{http://ecsocman.hse.ru/data/517/132/1231/mappingterroristnetworks.pdf}},
    number = {3},
    pages = {43--52},
-   title = {UNTITLED},
+   title = {{Mapping Networks Of Terrorist Cells}},
    volume = {24},
    year = {2002}
 }
@@ -4413,7 +4478,7 @@ and Breitinger, Corinna},
    note = {\url{https://doi.org/10.1007/s00799-015-0156-0}},
    number = {4},
    pages = {305--338},
-   title = {UNTITLED},
+   title = {Research-Paper Recommender Systems: A Literature Survey},
    volume = {17},
    year = {2016}
 }
@@ -4425,7 +4490,7 @@ and Breitinger, Corinna},
    journal = {Journal of Theoretical Biology},
    note = {\url{http://www.sciencedirect.com/science/article/pii/S0022519316301849}},
    pages = {1 - 4},
-   title = {UNTITLED},
+   title = {Modelling Biological Evolution: Linking Mathematical Theories With Empirical Realities},
    volume = {405},
    year = {2016}
 }
@@ -4433,7 +4498,7 @@ and Breitinger, Corinna},
 @misc{threejs,
    author = {Ricardo Cabello},
    note = {\url{https://threejs.org/}},
-   title = {UNTITLED},
+   title = {{Three.Js -- Javascript 3D Library}},
    year = {2019}
 }
 
@@ -4446,7 +4511,8 @@ George and Lobell, David and Ermon, Stefano},
    month = {May},
    note = {\url{http://arxiv.org/abs/1805.02855}},
    primaryclass = {cs.CV},
-   title = {UNTITLED},
+   title = {{Tile2Vec: Unsupervised Representation Learning For Spatially
+Distributed Data}},
    year = {2018}
 }
 
@@ -4455,7 +4521,7 @@ George and Lobell, David and Ermon, Stefano},
    doi = {10.13140/RG.2.2.25621.93927},
    month = {05},
    publisher = {.},
-   title = {UNTITLED},
+   title = {Dimensionality Reduction In Chemoinformatics. Generative Topographic Mapping},
    year = {2016}
 }
 
@@ -4464,7 +4530,7 @@ George and Lobell, David and Ermon, Stefano},
    doi = {https://doi.org/10.1371/journal.pone.0090283},
    journal = {PLoS ONE},
    number = {4},
-   title = {UNTITLED},
+   title = {Towards A Methodology For Validation Of Centrality Measures In Complex Networks},
    volume = {9},
    year = {2014}
 }
@@ -4475,7 +4541,7 @@ George and Lobell, David and Ermon, Stefano},
    lccn = {2015043236},
    note = {\url{https://books.google.co.uk/books?id=n\_RmCgAAQBAJ}},
    publisher = {Wiley},
-   title = {UNTITLED},
+   title = {Atmospheric Chemistry And Physics: From Air Pollution To Climate Change},
    year = {2016}
 }
 
@@ -4493,7 +4559,7 @@ George and Lobell, David and Ermon, Stefano},
    numpages = {8},
    pages = {92--99},
    publisher = {ACM},
-   title = {UNTITLED},
+   title = {Tree Visualization With Tree-Maps: 2-D Space-Filling Approach},
    volume = {11},
    year = {1992}
 }
@@ -4509,7 +4575,7 @@ George and Lobell, David and Ermon, Stefano},
    number = {2},
    pages = {377--398},
    publisher = {SAGE Publications Inc},
-   title = {UNTITLED},
+   title = {{Human Trial-And-Error Learning}},
    volume = {3},
    year = {1957}
 }
@@ -4517,7 +4583,7 @@ George and Lobell, David and Ermon, Stefano},
 @misc{truthandbeauty,
    author = {Moritz Stefaner},
    note = {\url{https://truth-and-beauty.net/projects/multiplicity}},
-   title = {UNTITLED},
+   title = {{Truth \& Beauty - Multiplicity}},
    year = {2020}
 }
 
@@ -4528,7 +4594,7 @@ George and Lobell, David and Ermon, Stefano},
    note = {\url{http://www.jmlr.org/papers/v9/vandermaaten08a.html}},
    number = {Nov},
    pages = {2579--2605},
-   title = {UNTITLED},
+   title = {{Visualizing Data Using T-Sne}},
    volume = {9},
    year = {2008}
 }
@@ -4537,7 +4603,7 @@ George and Lobell, David and Ermon, Stefano},
    author = {Strayer, Nick},
    booktitle = {{Observable}},
    note = {\url{https://observablehq.com/@nstrayer/t-sne-explained-in-plain-javascript}},
-   title = {UNTITLED},
+   title = {{T-Sne Explained In Plain Javascript}},
    year = {2018}
 }
 
@@ -4549,7 +4615,7 @@ George and Lobell, David and Ermon, Stefano},
    note = {\url{https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13187}},
    number = {3},
    pages = {283-294},
-   title = {UNTITLED},
+   title = {Graph Layouts By T-Sne},
    volume = {36},
    year = {2017}
 }
@@ -4561,7 +4627,7 @@ George and Lobell, David and Ermon, Stefano},
    note = {\url{http://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf}},
    number = {Nov},
    pages = {2579--2605},
-   title = {UNTITLED},
+   title = {{Visualizing Data Using T-Sne}},
    volume = {9},
    year = {2008}
 }
@@ -4573,7 +4639,7 @@ George and Lobell, David and Ermon, Stefano},
    number = {v. 914},
    publisher = {Graphics Press},
    series = {The Visual Display of Quantitative Information},
-   title = {UNTITLED},
+   title = {The Visual Display Of Quantitative Information},
    year = {1983}
 }
 
@@ -4583,7 +4649,7 @@ George and Lobell, David and Ermon, Stefano},
    journal = {New journal of chemistry = Nouveau journal de chimie},
    note = {\url{http://garfield.chem.elte.hu/Turanyi/pdf/14_Turanyi_NJC_1990.PDF}},
    pages = {795--gO3},
-   title = {UNTITLED},
+   title = {{Reductton Large Reactton Mechantsms}},
    volume = {14},
    year = {1990}
 }
@@ -4592,7 +4658,7 @@ George and Lobell, David and Ermon, Stefano},
    author = {Br{\"a}uer, Peter},
    institution = {Github},
    note = {\url{https://github.com/pb866/TUV_DSMACC}},
-   title = {UNTITLED},
+   title = {{TUV 5.2X DSMACC}},
    year = {2020}
 }
 
@@ -4604,7 +4670,7 @@ George and Lobell, David and Ermon, Stefano},
    month = {Sept},
    number = {5},
    pages = {805-812},
-   title = {UNTITLED},
+   title = {Visual Exploration Of Complex Time-Varying Graphs},
    volume = {12},
    year = {2006}
 }
@@ -4617,7 +4683,7 @@ George and Lobell, David and Ermon, Stefano},
    month = {July},
    number = {7},
    pages = {39-46},
-   title = {UNTITLED},
+   title = {Large-Scale Graph Visualization And Analytics},
    volume = {46},
    year = {2013}
 }
@@ -4625,7 +4691,7 @@ George and Lobell, David and Ermon, Stefano},
 @misc{vt,
    author = {{VTL}},
    note = {\url{http://visualthinking.psych.northwestern.edu/}},
-   title = {UNTITLED},
+   title = {{Visual Thinking Lab}},
    year = {2019}
 }
 
@@ -4638,7 +4704,7 @@ Jeffrey},
    month = {January},
    note = {\url{http://arxiv.org/abs/1301.3781}},
    primaryclass = {cs.CL},
-   title = {UNTITLED},
+   title = {{Efficient Estimation Of Word Representations In Vector Space}},
    year = {2013}
 }
 
@@ -4646,7 +4712,7 @@ Jeffrey},
    author = {{Daniel Ellis}},
    booktitle = {{Observable}},
    note = {\url{https://observablehq.com/@wolfiex/d3-fourcolour-voronoi}},
-   title = {UNTITLED},
+   title = {{D3-Fourcolour Voronoi}},
    year = {2019}
 }
 
@@ -4662,7 +4728,7 @@ Jeffrey},
    pages = {31 - 68},
    publisher = {Morgan Kaufmann},
    series = {Interactive Technologies},
-   title = {UNTITLED},
+   title = {Chapter Two - The Environment, Optics, Resolution, And The Display },
    year = {2013}
 }
 
@@ -4670,14 +4736,14 @@ Jeffrey},
    author = {Edsu and Ellis, Dan},
    institution = {Github},
    note = {https://github.com/wolfiex/etudier},
-   title = {UNTITLED},
+   title = {{Etudier}},
    year = {2019}
 }
 
 @misc{webstats,
    author = {InternetLiveStats},
    note = {\url{https://www.internetlivestats.com/total-number-of-websites/}},
-   title = {UNTITLED},
+   title = {{Total Number Of Websites - Internet Live Stats}},
    year = {2020}
 }
 
@@ -4688,7 +4754,7 @@ Jeffrey},
    note = {\url{https://www.atmos-chem-phys.net/4/2025/2004/}},
    number = {7},
    pages = {2025--2056},
-   title = {UNTITLED},
+   title = {Systematic Reduction Of Complex Tropospheric Chemical Mechanisms, Part I: Sensitivity And Time-Scale Analyses},
    volume = {4},
    year = {2004}
 }
@@ -4696,21 +4762,21 @@ Jeffrey},
 @article{who,
    author = {WHO},
    note = {\url{https://www.who.int/airpollution/ambient/health-impacts/en/}},
-   title = {UNTITLED},
+   title = {{World Health Organization | Ambient Air Pollution: Health Impacts}},
    year = {2018}
 }
 
 @article{whodata,
    author = {WHO},
    note = {\url{https://www.who.int/airpollution/data/en/}},
-   title = {UNTITLED},
+   title = {{World Health Organization | Ambient And Household Air Pollution And Health}},
    year = {2016}
 }
 
 @article{wild,
    author = {Oliver Wild},
    note = {\url{https://www.ukca.ac.uk/images/b/b1/Solvers_for_web.pdf}},
-   title = {UNTITLED},
+   title = {{Chemical Solvers - A Slide Deck From The Ukca Theory And Practice Workshop}},
    year = {2015}
 }
 
@@ -4721,7 +4787,7 @@ Jeffrey},
    note = {\url{https://books.google.co.uk/books?id=yMwiTTpwasgC}},
    publisher = {Cambridge University Press},
    series = {Cambridge Texts in the History of Philosophy},
-   title = {UNTITLED},
+   title = {Descartes: Meditations On First Philosophy: With Selections From The Objections And Replies},
    year = {1996}
 }
 
@@ -4729,14 +4795,15 @@ Jeffrey},
    author = {Anderson, Chris},
    journal = {online},
    note = {\url{http://www.wired.com/print/science/discoveries/magazine/16-0}},
-   title = {UNTITLED},
+   title = {{The End Of Theory: The Data Deluge Makes The Scientific Method
+Obsolete}},
    year = {2008}
 }
 
 @misc{worldmap,
    author = {{Martin Grandjean}},
    note = {\url{http://www.martingrandjean.ch/connected-world-air-traffic-network/}},
-   title = {UNTITLED},
+   title = {{Connected World: Untangling The Air Traffic Network}},
    year = {2016}
 }
 
@@ -4747,7 +4814,7 @@ Jeffrey},
    note = {\url{https://www.atmos-chem-phys.net/15/8077/2015/}},
    number = {14},
    pages = {8077--8100},
-   title = {UNTITLED},
+   title = {Mapping Gas-Phase Organic Reactivity And Concomitant Secondary Organic Aerosol Formation: Chemometric Dimension Reduction Techniques For The Deconvolution Of Complex Atmospheric Data Sets},
    volume = {15},
    year = {2015}
 }
@@ -4756,7 +4823,7 @@ Jeffrey},
    author = {Hu, Yifan},
    journal = {web},
    note = {\url{http://yifanhu.net/PUB/graph_draw.pdf}},
-   title = {UNTITLED},
+   title = {{Efficient, High-Quality Force-Directed Graph Drawing}},
    year = {2004}
 }
 
@@ -4772,7 +4839,8 @@ Tsai, Jerry and Strauss, Charlie E M},
    number = {10},
    pages = {1063--1068},
    pmid = {15898109},
-   title = {UNTITLED},
+   title = {{Practical Conversion From Torsion Space To Cartesian Space For In
+Silico Protein Synthesis}},
    volume = {26},
    year = {2005}
 }
