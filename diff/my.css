@@ -1,0 +1,62 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --fonts: 6pt;
+  --fh: 1;
+}
+
+
+/* s { text-decoration:none; } //strike-through
+em { font-style: normal; font-weight: bold; } //italic emphasis
+
+// colors
+s { color: green }
+em { color: blue } */
+
+@font-face {
+    font-family: "InputSans";
+    src: url("/users/wolfiex/Library/Fonts/InputSans-Light.ttf");
+}
+h1,h2,h3,h4,h5,h6{
+    margin:.01;
+    line-height:  1;
+    font-size: 11px;
+    font-family:'InputSans';
+}
+
+ h6 {
+  font-size: 6pt!important;  
+  color: red;
+}
+
+ h5 {
+  font-size: 6pt!important;
+  color: green;
+}
+
+ h4 {
+  font-size: calc(.94* 6pt);
+  margin-bottom: 1;
+  color: gray;
+}
+
+ h3 {
+     margin-top:1;
+  font-size: 10pt;
+  color: steelblue;
+}
+
+
+h1 {
+ font-size: 10pt;
+ color: steelblue;
+}
+
+h2 {
+ margin-top: =100px;
+ font-size: 8pt;
+}
+
+em { margin:-1;
+    font-size: 0pt;
+    line-height: -2;}
