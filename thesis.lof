@@ -26,7 +26,7 @@
 \contentsline {figure}{\numberline {2.13}{\ignorespaces \textbf { Arc diagram features for the Hydroperoxyl and Hydroxide radicals.} The $HO_x$ cycle chemistry (b) can ge seen within certain groups in the network. The main ones of these are hilighted in (a). \relax }}{41}{figure.caption.24}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces \textbf { Arc diagram features for photolysis and hydroxide. reactions. } Photolysis results in species with a reduced number of functional groups, and therefore longer arcs. OH reactions for the same species do not produce such a drastic change on group number, and therefore have a smaller arc lenght.\relax }}{41}{figure.caption.25}
 \contentsline {figure}{\numberline {2.15}{\ignorespaces \textbf { Arc diagram features for the PAN reactions. } \relax }}{42}{figure.caption.26}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces \textbf {Two node-link graphs comparing the MCM and the reduced CRI mechanism for an n-heptane subset.} The top graph shows the MCM v3.2 subset for n-heptane. Here features of the chemistry (e.g. anthropogenic and biogenic emitted species) are seen within the graph structure. The bottom graph shows the reduced Common Representative Intermediates (CRI) v2.1. Species that exist in both mechanisms are fixed, allowing us to compare the differences in structure between both. Node colours represent modules of clusters of the chemistry and hold no further meaning for this section. \relax }}{43}{figure.caption.27}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces \textbf {Comparing a range of MCM and CRI mechanims using their graph shape and structure.} \relax }}{43}{figure.caption.27}
 \gdef \the@ipfilectr {}
 \gdef \the@ipfilectr {@-4}
 \addvspace {10\p@ }
