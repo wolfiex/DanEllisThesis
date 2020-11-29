@@ -86,6 +86,13 @@ for i in range(len(entries)):
         entries[i]['year'] = '2020'
         print ('note="Accessed: 2020-1-1",')
 
+    try:entries[i]['journal']
+    except:
+        try: entries[i]['journal'] = entries[i]['publisher'] 
+        except:
+            #print('---\n\n'+entries[i]['ID']+'\nNo Journal\n',entries[i])
+            entries[i]['journal'] = 'online'
+
     try:
         url = entries[i]['url'].replace('\\url','')
         entries[i]['note']= '\\url{%s}'%stp.sub('',url)

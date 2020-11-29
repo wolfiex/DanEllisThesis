@@ -258,9 +258,9 @@ Although such a layout may seem daunting at first, with many lines, in all direc
 
 \autoref{fig:ho2} and \autoref{fig:oh} show arc diagrams where the reactions of interest (photolysis and OH reactions respectively) highlighted in both colour and opacity. These enable us to see patterns between the radical cylcing of \ce{OH -> HO2} chemistry (\autoref{fig:rxnho2oh}). Here the cyclic reaction shown between the dashed lines corresponds to the reaction of \ch{RO2 <->[HO2][O2] ROOH} (\autoref{fig:rxnho2oh}).
 
-Applying the same methodology to photolysis and hydroxide reactions, the production of species containing fewer functional groups is seen in \autoref{fig:ohhv}. Within the highlighted reactions, it is seen that a ROOH species undergoes a reaction with OH or photolyses (\autoref{fig:rxnohhv}). In the OH reaction, Hydrogen abstraction is performed to produce an RO2 species and water, \ch{ROOH ->[OH] RO2 + H2O}. Photolysis reactions, however, photolyse the double bond, \ch{ROOH ->[hv] RO2 + HO2}, reducing the number of functional groups - producing a larger arc. It should be mentioned that the ROOH can also react with \ch{o2} to produce an RO2, although this has not been highlighted.
+Applying the same methodology to photolysis and hydroxy reactions, the production of species containing fewer functional groups is seen in \autoref{fig:ohhv}. Within the highlighted reactions, it is seen that a ROOH species undergoes a reaction with OH or photolyses (\autoref{fig:rxnohhv}). In the OH reaction, Hydrogen abstraction is performed to produce an \ch{RO2} species and water, \ch{ROOH ->[OH] RO2 + H2O}. Photolysis reactions, however, photolyse, \ch{ROOH ->[hv] RO2 + HO2}, reducing the number of functional groups - producing a larger arc.
 
-Finally, Peroxy Acetyl Nitrates (PANs), play a vital role in the modelling of photochemical smog (ozone events), \citep{pans}. PANs an effective reservoir species with significant importance within the production of ozone in atmospheric chemistry models (especially if transportation is involved) \citep{finlayson}. Although they are very stable at cold temperatures, these can quickly decompose (thermally) to release $NO_x$ if warmed. In the MCM the thermal decomposition of PANS is determined by the KBPAN rate constant. In comparing reactions of \autoref{fig:kbpans}, with those of \autoref{fig:no2} (at rate KFPAN), we see a cycle between two arcs forming (\autoref{fig:pandir}). This can be explained by the reactions in \autoref{fig:rxnpan} which show that \ch{RC(O)OONO2 ->[KBPAN]  RC(O)O2} (+\ch{NO2}) \ch{ ->[NO2] RC(O)OONO2}.
+Finally, Peroxy Acetyl Nitrates (PANs), play a vital role in the modelling of photochemical smog (ozone events), \citep{pans}. PANs an effective reservoir species with significant importance within the production of ozone in atmospheric chemistry models (especially if transportation is involved) \citep{finlayson}. Although they are very stable at cold temperatures, these can quickly decompose (thermally) to release $NO_x$ if warmed. In the MCM the thermal decomposition of PANS is determined by the KBPAN rate constant. In comparing reactions of \autoref{fig:kbpan}, with those of \autoref{fig:no2} (at rate KFPAN), we see a cycle between two arcs forming (\autoref{fig:pansdir}). This can be explained by the reactions in \autoref{fig:rxnpan} which show that \ch{RC(O)OONO2 ->[KBPAN]  RC(O)O2} (+\ch{NO2}) \ch{ ->[NO2] RC(O)OONO2}.
 
 \textit{\textbf{NOTE:} A downside to the arc diagrams format that has been chosen is that for reactions between species of the same number of functional groups, there is no set direction. }
 
@@ -350,7 +350,7 @@ Finally, Peroxy Acetyl Nitrates (PANs), play a vital role in the modelling of ph
          \caption{Hydroxide}
          \label{fig:oh2}
      \end{subfigure}
-      \caption{\textbf{ Arc diagram features for photolysis and  hydroxide. reactions.  } Photolysis results in species with a reduced number of functional groups, and therefore longer arcs. OH reactions for the same species do not produce such a drastic change on group number, and therefore have a smaller arc lenght.}
+      \caption{\textbf{ Arc diagram features for photolysis and  hydroxide reactions.  } Photolysis results in species with a reduced number of functional groups, and therefore longer arcs. OH reactions for the same species do not produce such a drastic change on group number, and therefore have a smaller arc length.}
         \label{fig:wholeohhv}
 \end{figure}
 
@@ -368,7 +368,7 @@ Finally, Peroxy Acetyl Nitrates (PANs), play a vital role in the modelling of ph
          \centering
             \scalebox{.7}{
         \schemestart [0,1,thick]
-            \chemfig{R-[:30]O-[:-30]O-[:30]N(=[:90]O^{-})=[:-30]O}
+            \chemfig{R-[:30]O-[:-30]O-[:30]N(=[:90]O)=[:-30]O}
              \arrow{->[\ce{}][][][.5][]}
             \chemfig{R-[:30]O-[:-30]O_{.}}
             \arrow{0}[,0] \chemfig{\+ \ce{NO2}}
@@ -404,20 +404,21 @@ Finally, Peroxy Acetyl Nitrates (PANs), play a vital role in the modelling of ph
 
 %
 %
+\newpage
 
 
 \subsubsection{The Traditional Network Graph}\label{sec:tradnetconc}
 
 Finally, we have the traditional network representation in the form of a mathematical graph. Here species are represented as nodes (circles) and reactions as the links (lines) between them. This analogy has its roots in social representation and can be described using the metaphor of people holding hands - a concept familiar to most people. Graph representations allow for an overview of the structural relationships within the MCM network, and even to compare it against other reduced mechanisms, \autoref{fig:graphc1}
-Here two 
+Here we show the growth of the MCM (left) against two versions (three variations) of the reduced Common Representative Intermediates (CRI) \citep{cri} mechanism in the same space. By fixing species which exist in mechanisms groups (generally the primary emitted VOCs) we produce a `fingerprint'-like structure we can use to visually identify changes in their size, interconnectedness (density) and structure. 
 
+Building on this, an ineractive visualisation (\autoref{fig:mcmchange}) was constructed to better reveal the differences between of each mechanism in (\autoref{fig:graphc1}). The code for this can be found in \citep{mcmblue}. 
+\autoref{fig:m1to2} shows the expansion from MCM version 3.1 to 3.2 which included new schemes for crotonaldehyde, ethylene oxide and vinyl chloride, the introduction of methacolein and the integration of dimethyl sulphide (DMS), beta-caryophyllene and limonene \citep{mcm} - the latter of which is responsible for the additional South-West pointing branch seen within the graph representations. Similarly \autoref{fig:m2to3} shows the upgrade from MCM v3.2 to v3.3.1, the main change is the mechanism update to include the complete degregation mechanism for isoprene \citep{isopmcm}. This change results in the addition of ~100 species, many of which are mainly realated to OH initiated chemistry. However since the ratio of species to links (reactions) has now increased, these lie closer to the main body of the network - the reason for which is discussed in \autoref{ch3}. 
 
+Similarly we can use \autoref{fig:mcmchange} to emphasise the amount that has been added (or lost) in reduction or development. \autoref{fig:m2tocri1} shows the difference between the MCM v3.2 and its reduced CRI v2.0 form, which focuses on preserving the overall ozone-forming potential of the mechanism. Simialrly \autoref{fig:cr1tocr5} shows a comparison of the CRI v2.0 after a further 5 reductions (CRI v2.0 r1). Using these two plots we can identify regions or branches of chemsitry which have been removed (namely bigonic and anthropogenic aromatic branches - bottom left and bottom right) and generate a an overview of how well the reduced mechanism structre represents all parts of the contained chemistry. We can see that on avarage the CRI mechanism does a good job at retaining the core network structure, often lumping the more esoteric (or extreme) branches into a single species at their base.  
 
-
-
- shows the comparison of the MCM against the reduced Common Representative Intermediates (CRI) \citep{cri} mechanism. In fixing common species (generally the primary emitted VOCs) between both mechanisms, we can use the graph as a fingerprint to compare changes in network structure. The CRI mechanism reduces the number of species within the MCM based on their ozone-forming potential. This is seen within the enclosed polygons in \autoref{fig:graphc1}, where the messy structure of the MCM (top) is greatly reduced, forming clusters of lumped species with similar ozone-forming potential (bottom). This form of representation is the most intuitive and commonly used sociograph, and therefore shall further be explored in \autoref{ch2}.
-
-
+This type of network representation is found not only simplest and most intuitve, but also the most informative about what effects changing the underlying chemistry may have on a simulation. \autoref{ch2} expands on the sociograph idea, and explors the different ways in which we may tune it to maximise its potential for useful knowledge transfer. 
+    
 
 \begin{figure}[H]
      \centering
@@ -431,7 +432,7 @@ Here two
 
 \begin{figure}[H]
      \centering
-    \begin{subfigure}[b]{.49\textwidth}
+     \begin{subfigure}[b]{.49\textwidth}
          \centering \includegraphics[width=\textwidth]{m31_m32.png}
          \caption{MCM v3.1 vs MCM v3.2}
          \label{fig:m1to2}
@@ -441,18 +442,18 @@ Here two
          \caption{MCM v3.2 vs MCM v3.3.1}
          \label{fig:m2to3}
      \end{subfigure}
-    \begin{subfigure}[b]{.49\textwidth}
+     \begin{subfigure}[b]{.49\textwidth}
+         \centering \includegraphics[width=\textwidth]{cr1_m32.png}
+         \caption{MCM v3.2 vs CRI v2.0(r1)}
+         \label{fig:m2tocri1}
+     \end{subfigure}
+     \begin{subfigure}[b]{.49\textwidth}
          \centering \includegraphics[width=\textwidth]{cr1_cr5.png}
          \caption{CRI v2.0(r1) vs CRI v2.0(r5)}
          \label{fig:cr1tocr5}
      \end{subfigure}
-         \begin{subfigure}[b]{.49\textwidth}
-         \centering \includegraphics[width=\textwidth]{cr1_m32.png}
-         \caption{MCM v3.2 vs CRI v2.0(r1)}
-         \label{fig:ts}
-     \end{subfigure}
       \hfill
-        \caption{ \textbf{Voronoi cells of each node from the graph layout - used to identify changes in mechanisms.} A difference plot between the different graphs in \autoref{fig:graphc1}. These use colours to show us species that are added or taken away between different versions. Subplots (a) and (b) show the increasesin mechanism size of the MCM whilst (c) and show the reduction from MCM v3.2 to CRI v2.0(r1), and followed by the fith reduction to CRI v2.0(r5).  
+        \caption{ \textbf{Voronoi cells of each node from the graph layout - used to identify changes in mechanisms.} A difference plot between the different graphs in \autoref{fig:graphc1}. These use colours to show us species that are added or taken away between different versions. Subplots (a) and (b) show the increasesin mechanism size of the MCM whilst (c) and (d) show the reduction from MCM v3.2 to CRI v2.0(r1), and followed by the fith reduction to CRI v2.0(r5).  
         Figure colouring: purple cells only exist within the first mechanism, pink only exist within the second, and blue are present in both.  Source: \cite{mcmblue}}
         \label{fig:mcmchange}
 \end{figure}
@@ -465,7 +466,7 @@ Here two
 
 %
 %
-
+\newpage
 
 
 \section{Conclusion}

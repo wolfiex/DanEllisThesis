@@ -55,15 +55,11 @@
 
 ####  \include{./0_intro}
 
-####  % Ch1 1
-
 ####   \include{./1_visual}
 
 ####  % Chapter 2
 
 ####  \include{./2_graphs}
-
-##### +% %
 
 ##### +% % Chapter 3
 
@@ -81,8 +77,6 @@
 
 ###### - \include{./5_DR}
 
-##### +% %
-
 ##### +% % Chapter 4 - done
 
 ##### +%  \include{./4_lumping}
@@ -90,10 +84,6 @@
 ##### +% % Chapter 5
 
 ##### +%  \include{./5_DR}
-
-##### +% %
-
-##### +% %
 
 ####  % Conclusion
 

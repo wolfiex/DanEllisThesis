@@ -48,7 +48,7 @@ for i,f in enumerate(files):
     for i in data:
         i = i.strip('\\n')
         
-        if len(i)<5: continue
+        if len(i)<10: continue
 
         # if previous[1:10] == i[1:10]:
         #     edit.append('_a a_')##joint edit
