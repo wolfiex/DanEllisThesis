@@ -22,10 +22,17 @@ def make(filename):
     print('.')
     print(re.findall(r'[Ww]arning:.*line\s\d+\.',str(err)) )
 
-    for i,b in enumerate(bib):
-        print ('-'*10,'\n',bf[i],'\n','-'*10)
-        for j in re.split(r'\n',b):
-            print(j)
+    with open('warnings.txt','w') as f:
+        f.write('\n'.join(re.findall(r'[Ww]arning:.*line\s\d+\.',str(err))))
+
+        for i in range(2):f.write('------------\n')
+        
+
+        for i,b in enumerate(bib):
+            print ('-'*10,'\n',bf[i],'\n','-'*10)
+            for j in re.split(r'\n',b):
+                print(j)
+                f.write(j+'\n')
 
     print('Finished')
 

@@ -17,3 +17,6 @@ Understanding Atmospheric Chemistry using graph-theory, visualisation and machin
 - `makeindex.py` :  creates the index (NLP chapter keyword summary)
 - `getbib.py` : 	generates a combigned and checked `bibligoraphy.bib` file
 - `mini.py` :
+- `./findline`: runs a grep command on the arguments
+- `warning.txt` : output of compile containing things that need fixing
+- `diff.py`: gets the diff for files between both branches using gitdiff. This is then parsed, filtered and converted to markdown. Eventually the markdown becomes a .pdf within the diff directory. 

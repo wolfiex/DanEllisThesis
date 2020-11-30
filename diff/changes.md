@@ -159,7 +159,7 @@
 ## 1_visual.tex
 #### diff --git a/visintro/combigned.tex b/visintro/combigned.tex
 
-#### index 8026d7b..71c389f 100644
+#### index 8026d7b..8d81357 100644
 
 ###### --- a/visintro/combigned.tex
 
@@ -193,16 +193,69 @@
 
 ####  \end{figure}
 
-###  -408,17 +408,61 
+###  -258,9 +258,9 
+####  \autoref{fig:ho2} and \autoref{fig:oh} show arc diagrams where the reactions of interest (photolysis and OH reactions respectively) highlighted in both colour and opacity. These enable us to see patterns between the radical cylcing of \ce{OH -> HO2} chemistry (\autoref{fig:rxnho2oh}). Here the cyclic reaction shown between the dashed lines corresponds to the reaction of \ch{RO2 <->[HO2][O2] ROOH} (\autoref{fig:rxnho2oh}).
+
+###### -Applying the same methodology to photolysis and hydroxide reactions, the production of species containing fewer functional groups is seen in \autoref{fig:ohhv}. Within the highlighted reactions, it is seen that a ROOH species undergoes a reaction with OH or photolyses (\autoref{fig:rxnohhv}). In the OH reaction, Hydrogen abstraction is performed to produce an RO2 species and water, \ch{ROOH ->[OH] RO2 + H2O}. Photolysis reactions, however, photolyse the double bond, \ch{ROOH ->[hv] RO2 + HO2}, reducing the number of functional groups - producing a larger arc. It should be mentioned that the ROOH can also react with \ch{o2} to produce an RO2, although this has not been highlighted.
+
+##### +Applying the same methodology to photolysis and hydroxy reactions, the production of species containing fewer functional groups is seen in \autoref{fig:ohhv}. Within the highlighted reactions, it is seen that a ROOH species undergoes a reaction with OH or photolyses (\autoref{fig:rxnohhv}). In the OH reaction, Hydrogen abstraction is performed to produce an \ch{RO2} species and water, \ch{ROOH ->[OH] RO2 + H2O}. Photolysis reactions, however, photolyse, \ch{ROOH ->[hv] RO2 + HO2}, reducing the number of functional groups - producing a larger arc.
+
+###### -Finally, Peroxy Acetyl Nitrates (PANs), play a vital role in the modelling of photochemical smog (ozone events), \citep{pans}. PANs an effective reservoir species with significant importance within the production of ozone in atmospheric chemistry models (especially if transportation is involved) \citep{finlayson}. Although they are very stable at cold temperatures, these can quickly decompose (thermally) to release $NO_x$ if warmed. In the MCM the thermal decomposition of PANS is determined by the KBPAN rate constant. In comparing reactions of \autoref{fig:kbpans}, with those of \autoref{fig:no2} (at rate KFPAN), we see a cycle between two arcs forming (\autoref{fig:pandir}). This can be explained by the reactions in \autoref{fig:rxnpan} which show that \ch{RC(O)OONO2 ->[KBPAN]  RC(O)O2} (+\ch{NO2}) \ch{ ->[NO2] RC(O)OONO2}.
+
+##### +Finally, Peroxy Acetyl Nitrates (PANs), play a vital role in the modelling of photochemical smog (ozone events), \citep{pans}. PANs an effective reservoir species with significant importance within the production of ozone in atmospheric chemistry models (especially if transportation is involved) \citep{finlayson}. Although they are very stable at cold temperatures, these can quickly decompose (thermally) to release $NO_x$ if warmed. In the MCM the thermal decomposition of PANS is determined by the KBPAN rate constant. In comparing reactions of \autoref{fig:kbpan}, with those of \autoref{fig:no2} (at rate KFPAN), we see a cycle between two arcs forming (\autoref{fig:pansdir}). This can be explained by the reactions in \autoref{fig:rxnpan} which show that \ch{RC(O)OONO2 ->[KBPAN]  RC(O)O2} (+\ch{NO2}) \ch{ ->[NO2] RC(O)OONO2}.
+
+####  \textit{\textbf{NOTE:} A downside to the arc diagrams format that has been chosen is that for reactions between species of the same number of functional groups, there is no set direction. }
+
+###  -350,7 +350,7 
+####           \caption{Hydroxide}
+
+####           \label{fig:oh2}
+
+####       \end{subfigure}
+
+###### -      \caption{\textbf{ Arc diagram features for photolysis and  hydroxide. reactions.  } Photolysis results in species with a reduced number of functional groups, and therefore longer arcs. OH reactions for the same species do not produce such a drastic change on group number, and therefore have a smaller arc lenght.}
+
+##### +      \caption{\textbf{ Arc diagram features for photolysis and  hydroxide reactions.  } Photolysis results in species with a reduced number of functional groups, and therefore longer arcs. OH reactions for the same species do not produce such a drastic change on group number, and therefore have a smaller arc length.}
+
+####          \label{fig:wholeohhv}
+
+####  \end{figure}
+
+###  -368,7 +368,7 
+####           \centering
+
+####              \scalebox{.7}{
+
+####          \schemestart [0,1,thick]
+
+###### -            \chemfig{R-[:30]O-[:-30]O-[:30]N(=[:90]O^{-})=[:-30]O}
+
+##### +            \chemfig{R-[:30]O-[:-30]O-[:30]N(=[:90]O)=[:-30]O}
+
+####               \arrow{->[\ce{}][][][.5][]}
+
+####              \chemfig{R-[:30]O-[:-30]O_{.}}
+
+####              \arrow{0}[,0] \chemfig{\+ \ce{NO2}}
+
+###  -404,24 +404,69 
+##### +\newpage
+
 ####  \subsubsection{The Traditional Network Graph}\label{sec:tradnetconc}
 
 ###### -Finally, we have the traditional network representation in the form of a mathematical graph. Here species are represented as nodes (circles) and reactions as the links (lines) between them. This analogy has its roots in social representation and can be described using the metaphor of people holding hands - a concept familiar to most people. Graph representations allow for an overview of the structural relationships within the MCM network, and even to compare it against other reduced mechanisms. \autoref{fig:graphc1} shows the comparison of the MCM against the reduced Common Representative Intermediates (CRI) \citep{cri} mechanism. In fixing common species (generally the primary emitted VOCs) between both mechanisms, we can use the graph as a fingerprint to compare changes in network structure. The CRI mechanism reduces the number of species within the MCM based on their ozone-forming potential. This is seen within the enclosed polygons in \autoref{fig:graphc1}, where the messy structure of the MCM (top) is greatly reduced, forming clusters of lumped species with similar ozone-forming potential (bottom). This form of representation is the most intuitive and commonly used sociograph, and therefore shall further be explored in \autoref{ch2}.
 
 ##### +Finally, we have the traditional network representation in the form of a mathematical graph. Here species are represented as nodes (circles) and reactions as the links (lines) between them. This analogy has its roots in social representation and can be described using the metaphor of people holding hands - a concept familiar to most people. Graph representations allow for an overview of the structural relationships within the MCM network, and even to compare it against other reduced mechanisms, \autoref{fig:graphc1}
 
-##### +Here two 
+##### +Here we show the growth of the MCM (left) against two versions (three variations) of the reduced Common Representative Intermediates (CRI) \citep{cri} mechanism in the same space. By fixing species which exist in mechanisms groups (generally the primary emitted VOCs) we produce a `fingerprint'-like structure we can use to visually identify changes in their size, interconnectedness (density) and structure. 
 
-##### + shows the comparison of the MCM against the reduced Common Representative Intermediates (CRI) \citep{cri} mechanism. In fixing common species (generally the primary emitted VOCs) between both mechanisms, we can use the graph as a fingerprint to compare changes in network structure. The CRI mechanism reduces the number of species within the MCM based on their ozone-forming potential. This is seen within the enclosed polygons in \autoref{fig:graphc1}, where the messy structure of the MCM (top) is greatly reduced, forming clusters of lumped species with similar ozone-forming potential (bottom). This form of representation is the most intuitive and commonly used sociograph, and therefore shall further be explored in \autoref{ch2}.
+##### +Building on this, an ineractive visualisation (\autoref{fig:mcmchange}) was constructed to better reveal the differences between of each mechanism in (\autoref{fig:graphc1}). The code for this can be found in \citep{mcmblue}. 
+
+##### +\autoref{fig:m1to2} shows the expansion from MCM version 3.1 to 3.2 which included new schemes for crotonaldehyde, ethylene oxide and vinyl chloride, the introduction of methacolein and the integration of dimethyl sulphide (DMS), beta-caryophyllene and limonene \citep{mcm} - the latter of which is responsible for the additional South-West pointing branch seen within the graph representations. Similarly \autoref{fig:m2to3} shows the upgrade from MCM v3.2 to v3.3.1, the main change is the mechanism update to include the complete degregation mechanism for isoprene \citep{isopmcm}. This change results in the addition of ~100 species, many of which are mainly realated to OH initiated chemistry. However since the ratio of species to links (reactions) has now increased, these lie closer to the main body of the network - the reason for which is discussed in \autoref{ch3}. 
+
+##### +Similarly we can use \autoref{fig:mcmchange} to emphasise the amount that has been added (or lost) in reduction or development. \autoref{fig:m2tocri1} shows the difference between the MCM v3.2 and its reduced CRI v2.0 form, which focuses on preserving the overall ozone-forming potential of the mechanism. Simialrly \autoref{fig:cr1tocr5} shows a comparison of the CRI v2.0 after a further 5 reductions (CRI v2.0 r1). Using these two plots we can identify regions or branches of chemsitry which have been removed (namely bigonic and anthropogenic aromatic branches - bottom left and bottom right) and generate a an overview of how well the reduced mechanism structre represents all parts of the contained chemistry. We can see that on avarage the CRI mechanism does a good job at retaining the core network structure, often lumping the more esoteric (or extreme) branches into a single species at their base.  
+
+##### +This type of network representation is found not only simplest and most intuitve, but also the most informative about what effects changing the underlying chemistry may have on a simulation. \autoref{ch2} expands on the sociograph idea, and explors the different ways in which we may tune it to maximise its potential for useful knowledge transfer. 
 
 ####  \begin{figure}[H]
 
@@ -224,7 +277,7 @@
 
 ##### +     \centering
 
-##### +    \begin{subfigure}[b]{.49\textwidth}
+##### +     \begin{subfigure}[b]{.49\textwidth}
 
 ##### +         \centering \includegraphics[width=\textwidth]{m31_m32.png}
 
@@ -244,7 +297,17 @@
 
 ##### +     \end{subfigure}
 
-##### +    \begin{subfigure}[b]{.49\textwidth}
+##### +     \begin{subfigure}[b]{.49\textwidth}
+
+##### +         \centering \includegraphics[width=\textwidth]{cr1_m32.png}
+
+##### +         \caption{MCM v3.2 vs CRI v2.0(r1)}
+
+##### +         \label{fig:m2tocri1}
+
+##### +     \end{subfigure}
+
+##### +     \begin{subfigure}[b]{.49\textwidth}
 
 ##### +         \centering \includegraphics[width=\textwidth]{cr1_cr5.png}
 
@@ -254,25 +317,19 @@
 
 ##### +     \end{subfigure}
 
-##### +         \begin{subfigure}[b]{.49\textwidth}
-
-##### +         \centering \includegraphics[width=\textwidth]{cr1_m32.png}
-
-##### +         \caption{MCM v3.2 vs CRI v2.0(r1)}
-
-##### +         \label{fig:ts}
-
-##### +     \end{subfigure}
-
 ##### +      \hfill
 
-##### +        \caption{ \textbf{Voronoi cells of each node from the graph layout - used to identify changes in mechanisms.} A difference plot between the different graphs in \autoref{fig:graphc1}. These use colours to show us species that are added or taken away between different versions. Subplots (a) and (b) show the increasesin mechanism size of the MCM whilst (c) and show the reduction from MCM v3.2 to CRI v2.0(r1), and followed by the fith reduction to CRI v2.0(r5).  
+##### +        \caption{ \textbf{Voronoi cells of each node from the graph layout - used to identify changes in mechanisms.} A difference plot between the different graphs in \autoref{fig:graphc1}. These use colours to show us species that are added or taken away between different versions. Subplots (a) and (b) show the increasesin mechanism size of the MCM whilst (c) and (d) show the reduction from MCM v3.2 to CRI v2.0(r1), and followed by the fith reduction to CRI v2.0(r5).  
 
 ##### +        Figure colouring: purple cells only exist within the first mechanism, pink only exist within the second, and blue are present in both.  Source: \cite{mcmblue}}
 
 ##### +        \label{fig:mcmchange}
 
 ##### +\end{figure}
+
+##### +\newpage
+
+####  \section{Conclusion}
 
 ## 2_graphs.tex
 #### diff --git a/visanalytics/combigned.tex b/visanalytics/combigned.tex
@@ -1092,14 +1149,563 @@
 ## Bibliography
 #### diff --git a/bibtex.bib b/bibtex.bib
 
-#### index 8b8f0b8..f907065 100644
+#### index 8b8f0b8..3045150 100644
 
 ###### --- a/bibtex.bib
 
 ##### +++ b/bibtex.bib
 
-###  -767,7 +767,7 
+###  -3,6 +3,7 
+####     arxivid = {1312.6722},
+
+####     author = {Benzi, Michele and Klymko, Christine},
+
+####     eprint = {1312.6722},
+
+##### +   journal = {online},
+
+####     month = {December},
+
+####     note = {http://arxiv.org/abs/1312.6722},
+
+####     primaryclass = {math.NA},
+
+###  -15,6 +16,7 
+####     booktitle = {Reference Module in Earth Systems and Environmental Sciences},
+
+####     doi = {https://doi.org/10.1016/B978-0-12-409548-9.09177-6},
+
+####     isbn = {978-0-12-409548-9},
+
+##### +   journal = {Elsevier},
+
+####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780124095489091776}},
+
+####     publisher = {Elsevier},
+
+####     title = {Atmospheric Chemistry},
+
+###  -24,6 +26,7 
+####  @book{accidental,
+
+####     author = {Roberts, R.M.},
+
+####     isbn = {9780471602033},
+
+##### +   journal = {Wiley},
+
+####     lccn = {lc88033638},
+
+####     note = {\url{https://books.google.co.uk/books?id=hf57X0s4aPwC}},
+
+####     publisher = {Wiley},
+
+###  -51,6 +54,7 
+####  @misc{adj,
+
+####     author = {Bostock, Mike},
+
+##### +   journal = {online},
+
+####     note = {\url{https://bost.ocks.org/mike/miserables/}},
+
+####     title = {{Les Mis{\'E}Rables Co-Occurrence}},
+
+####     year = {2019}
+
+###  -70,6 +74,7 
+####  @article{advnummeth,
+
+####     author = {C.J.Budd},
+
+##### +   journal = {online},
+
+####     note = {\url{https://people.bath.ac.uk/mamamf/chapt6and7.pdf}},
+
+####     title = {{Advanced Numerical Methods - Lectures Part 2 }},
+
+####     year = {2019}
+
+###  -78,6 +83,7 
+####  @misc{aeim,
+
+####     author = {{Dataman}},
+
+####     booktitle = {{Medium}},
+
+##### +   journal = {Towards Data Science},
+
+####     note = {\url{https://towardsdatascience.com/convolutional-autoencoders-for-image-noise-reduction-32fce9fc1763}},
+
+####     publisher = {Towards Data Science},
+
+####     title = {{Convolutional Autoencoders For Image Noise Reduction}},
+
+###  -89,6 +95,7 
+####     booktitle = {2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+
+####     doi = {10.1109/BIBM.2018.8621080},
+
+####     issn = {null},
+
+##### +   journal = {online},
+
+####     month = {Dec},
+
+####     number = {},
+
+####     pages = {2605-2612},
+
+###  -103,6 +110,7 
+####     doi = {10.2312/COMPAESTH/COMPAESTH07/057-064},
+
+####     isbn = {978-3-905673-43-2},
+
+####     issn = {1816-0859},
+
+##### +   journal = {The Eurographics Association},
+
+####     publisher = {The Eurographics Association},
+
+####     title = {{The Aesthetics Of Graph Visualization}},
+
+####     year = {2007}
+
+###  -166,6 +174,7 
+####  Joe and Huang, Zhonghui and Wang, Xinming and Hewitt, Nick
+
+####  and Crilley, Leigh and Kramer, Louisa and Slater, Eloise and
+
+####  Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
+
+##### +   journal = {online},
+
+####     note = {\url{https://catalogue.ceda.ac.uk/uuid/648246d2bdc7460b8159a8f9daee7844}},
+
+####     title = {{Dataset Collection Record: Aphh: Atmospheric Measurements And
+
+####  Model Results For The Atmospheric Pollution \& Human Health
+
+###  -186,6 +195,7 
+####     booktitle = {IEEE Symposium on Information Visualization, 2002. INFOVIS 2002.},
+
+####     doi = {10.1109/INFVIS.2002.1173155},
+
+####     issn = {1522-404X},
+
+##### +   journal = {online},
+
+####     month = {Oct},
+
+####     pages = {110-116},
+
+####     title = {Arc Diagrams: Visualizing Structure In Strings},
+
+###  -195,6 +205,7 
+####  @book{archaic,
+
+####     author = {Nissen, H.J. and Damerow, P. and Englund, R.K. and Englund, R.K. and Larsen, P. and Larsen, R.K.},
+
+####     isbn = {9780226586595},
+
+##### +   journal = {University of Chicago Press},
+
+####     lccn = {lc93000909},
+
+####     note = {\url{https://books.google.co.uk/books?id=YBAzXV4YtQ8C}},
+
+####     publisher = {University of Chicago Press},
+
+###  -250,6 +261,7 
+####  @misc{beck,
+
+####     author = {Henry Beck},
+
+####     booktitle = {{Londontopia}},
+
+##### +   journal = {online},
+
+####     month = {April},
+
+####     note = {\url{https://londontopia.net/site-news/featured/london-icon-tube-map/}},
+
+####     title = {{London Icon: A History Of Harry Beck'S Iconic Tube Map}},
+
+###  -259,6 +271,7 
+####  @book{beforeCuneiform,
+
+####     author = {Schmandt-Besserat, D.},
+
+####     isbn = {9780292707832},
+
+##### +   journal = {University of Texas Press},
+
+####     lccn = {lc90023615},
+
+####     note = {\url{https://books.google.co.uk/books?id=\_G74dDQO8gUC}},
+
+####     publisher = {University of Texas Press},
+
+###  -270,6 +283,7 
+####  @article{between,
+
+####     author = {Freeman, Linton},
+
+####     booktitle = {Sociometry},
+
+##### +   journal = {online},
+
+####     month = {03},
+
+####     pages = {35-41},
+
+####     title = {A Set Of Measures Of Centrality Based On Betweenness},
+
+###  -304,6 +318,7 
+####     booktitle = {Graph Drawing: 6th International Symposium, GD' 98 Montr{\'e}al, Canada, August 13--15, 1998 Proceedings},
+
+####     doi = {10.1007/3-540-37623-2_12},
+
+####     isbn = {978-3-540-37623-1},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/3-540-37623-2_12}},
+
+####     pages = {153--166},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -314,6 +329,7 
+####  @book{beziercomputer,
+
+####     author = {Mortenson, M.E.},
+
+####     isbn = {9780831131111},
+
+##### +   journal = {Industrial Press},
+
+####     lccn = {99010096},
+
+####     note = {\url{https://books.google.co.uk/books?id=YmQy799flPkC}},
+
+####     publisher = {Industrial Press},
+
+###  -324,6 +340,7 
+####  @book{beziermath,
+
+####     author = {Hazewinkel, M.},
+
+####     isbn = {9780792347095},
+
+##### +   journal = {Springer Netherlands},
+
+####     lccn = {87026437},
+
+####     note = {\url{https://books.google.co.uk/books?id=3ndQH4mTzWQC}},
+
+####     number = {v. 1},
+
+###  -354,6 +371,7 
+####  @techreport{bigdataorigin,
+
+####     author = {Francis X. Diebold},
+
+####     institution = {Penn Institute for Economic Research, Department of Economics, University of Pennsylvania},
+
+##### +   journal = {online},
+
+####     month = {August},
+
+####     note = {\url{https://ideas.repec.org/p/pen/papers/13-003.html}},
+
+####     number = {13-003},
+
+###  -384,6 +402,7 
+####     arxivid = {1810.07215},
+
+####     author = {Hobson, Elizabeth A and M{\o}nster, Dan and DeDeo, Simon},
+
+####     eprint = {1810.07215},
+
+##### +   journal = {online},
+
+####     month = {October},
+
+####     note = {\url{http://arxiv.org/abs/1810.07215}},
+
+####     primaryclass = {q-bio.PE},
+
+###  -395,6 +414,7 
+####  @book{birds,
+
+####     author = {Ackerman, J.},
+
+####     isbn = {9781472114372},
+
+##### +   journal = {Little, Brown Book Group},
+
+####     note = {\url{https://books.google.co.uk/books?id=3z\_sCgAAQBAJ}},
+
+####     publisher = {Little, Brown Book Group},
+
+####     title = {The Genius Of Birds: The Intelligent Life Of Birds},
+
+###  -403,6 +423,7 
+####  @misc{birdsongs,
+
+####     author = {Haruka Wada},
+
+##### +   journal = {Nature Education Knowledge},
+
+####     note = {\url{https://www.nature.com/scitable/knowledge/library/the-development-of-birdsong-16133266}},
+
+####     publisher = {Nature Education Knowledge},
+
+####     title = {{The Development Of Birdsong | Learn Science At Scitable}},
+
+###  -429,6 +450,7 
+####  @misc{borneo,
+
+####     author = {Hewitt,
+
+####  Nick and Edwards, Peter},
+
+##### +   journal = {online},
+
+####     note = {\url{https://catalogue.ceda.ac.uk/uuid/81892deb2dd5e7f0d26b9c587af45f3d}},
+
+####     title = {{Dataset Record: Op3-1 Campaign: Leeds Merged Chemistry Data
+
+####  At Bukit Atur}},
+
+###  -478,6 +500,7 
+####     edition = {Third Edition},
+
+####     editor = {Ware, Colin },
+
+####     isbn = {978-0-12-381464-7},
+
+##### +   journal = {Morgan Kaufmann},
+
+####     note = {\url{http://www.sciencedirect.com/science/article/pii/B978012381464700003X}},
+
+####     pages = {69 - 94},
+
+####     publisher = {Morgan Kaufmann},
+
+###  -489,6 +512,7 
+####  @inbook{britanicaplanet,
+
+####     author = {J M Hayes,John P Rafferty},
+
+####     booktitle = {{Encyclop{\ae}dia Britannica}},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.britannica.com/topic/evolution-of-the-atmosphere-1703862}},
+
+####     title = {{Processes Affecting The Composition Of The Early Atmosphere}},
+
+####     year = {1998}
+
+###  -554,6 +578,7 
+####  @misc{capeverde,
+
+####     author = {Read, Katie A},
+
+##### +   journal = {online},
+
+####     note = {\url{https://catalogue.ceda.ac.uk/uuid/a457d9715f3c4bc295ef975932e491d9}},
+
+####     title = {{Dataset Record: Cape Verde Atmospheric Observatory:
+
+####  Meteorological Davis Weather Station Measurements}},
+
+###  -576,6 +601,7 
+####  @misc{cavepic,
+
+####     author = {Schroth, Christian},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.facebook.com/AncientEnthusiast/photos/a.849792428414625/2618224274904756/?type=3&theater}},
+
+####     title = {{Horses Panel, Chauvet Cave}},
+
+####     year = {2019}
+
+###  -589,6 +615,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_1},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_1}},
+
+####     pages = {1--9},
+
+####     publisher = {Springer International Publishing},
+
+###  -608,6 +635,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_10},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_10}},
+
+####     pages = {207--235},
+
+####     publisher = {Springer International Publishing},
+
+###  -622,6 +650,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_2},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_2}},
+
+####     pages = {13--36},
+
+####     publisher = {Springer International Publishing},
+
+###  -638,6 +667,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_3},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_3}},
+
+####     pages = {37--59},
+
+####     publisher = {Springer International Publishing},
+
+###  -653,6 +683,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_4},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_4}},
+
+####     pages = {61--73},
+
+####     publisher = {Springer International Publishing},
+
+###  -668,6 +699,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_5},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_5}},
+
+####     pages = {77--95},
+
+####     publisher = {Springer International Publishing},
+
+###  -686,6 +718,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_6},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_6}},
+
+####     pages = {97--125},
+
+####     publisher = {Springer International Publishing},
+
+###  -702,6 +735,7 
+####     booktitle = {Software Visualization: From Theory to Practice},
+
+####     doi = {10.1007/978-1-4615-0457-3_6},
+
+####     isbn = {978-1-4615-0457-3},
+
+##### +   journal = {Springer US},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-1-4615-0457-3_6}},
+
+####     pages = {149--178},
+
+####     publisher = {Springer US},
+
+###  -719,6 +753,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_7},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_7}},
+
+####     pages = {127--150},
+
+####     publisher = {Springer International Publishing},
+
+###  -739,6 +774,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_8},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_8}},
+
+####     pages = {151--174},
+
+####     publisher = {Springer International Publishing},
+
+###  -756,6 +792,7 
+####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
+
+####     doi = {10.1007/978-3-319-06793-3_9},
+
+####     isbn = {978-3-319-06793-3},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_9}},
+
+####     pages = {175--206},
+
+####     publisher = {Springer International Publishing},
+
+###  -765,9 +802,10 
+####  @article{chinanox,
+
 ####     author = {Joshua Stevens},
+
+##### +   journal = {NASA Earth Observatory},
 
 ####     language = {en},
 
@@ -1115,12 +1721,59 @@
 
 ####     year = {2020}
 
-###  -825,7 +825,7 
+###  -778,6 +816,7 
+####     booktitle = {2016 IEEE Tenth International Conference on Research Challenges in Information Science (RCIS)},
+
+####     doi = {10.1109/RCIS.2016.7549281},
+
+####     issn = {2151-1357},
+
+##### +   journal = {online},
+
+####     month = {June},
+
+####     pages = {1-6},
+
+####     title = {Reflections On The Use Of Chord Diagrams In Social Network Visualization In Process Mining},
+
+###  -787,6 +826,7 
+####  @misc{circ,
+
+####     author = {Jonathan Fisher},
+
+####     booktitle = {{Londonist}},
+
+##### +   journal = {online},
+
+####     month = {January},
+
+####     note = {\url{https://londonist.com/2013/01/alternative-tube-maps-circles-within-circles}},
+
+####     title = {{Alternative Tube Maps: Circles Within Circles}},
+
+###  -801,6 +841,7 
+####  Liu, Dantong and Monks, Paul S and Nemitz, E and Reeves,
+
+####  Claire E and Oram, David and Sokhi, R and Young, Dominique
+
+####  and Visser, Suzanne and Whitehead, James and Zotter, Peter},
+
+##### +   journal = {online},
+
+####     month = {May},
+
+####     note = {\url{https://catalogue.ceda.ac.uk/uuid/cee49a1f044b79d5413b7a0282467508}},
+
+####     title = {{Dataset Collection Record: Clearflo (Clean Air For London)
+
+###  -825,7 +866,8 
 ####  @article{closeness-book,
 
 ###### -   author = {poliaktiv},
 
 ##### +   author = {Poliaktiv},
+
+##### +   journal = {online},
 
 ####     note = {\url{https://www.politaktiv.org/documents/10157/29141/SocNet_TheoryApp.pdf}},
 
@@ -1128,7 +1781,151 @@
 
 ####     year = {2011}
 
-###  -1083,7 +1083,7 
+###  -833,6 +875,7 
+####  @misc{clustereval,
+
+####     author = {sklearn},
+
+##### +   journal = {online},
+
+####     note = {\url{https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html}},
+
+####     title = {{Comparing Different Clustering Algorithms On Toy Datasets ---
+
+####  Scikit-Learn 0.21.3 Documentation}},
+
+###  -872,6 +915,7 
+####     booktitle = {2017 IEEE 41st Annual Computer Software and Applications Conference (COMPSAC)},
+
+####     doi = {10.1109/COMPSAC.2017.205},
+
+####     issn = {0730-3157},
+
+##### +   journal = {online},
+
+####     month = {July},
+
+####     number = {},
+
+####     pages = {615-618},
+
+###  -896,6 +940,7 
+####  @misc{code,
+
+####     author = {Alon, Uri and Zilberstein, Meital and Levy, Omer and Yahav, Eran},
+
+####     doi = {10.1145/3290353},
+
+##### +   journal = {online},
+
+####     month = {January},
+
+####     note = {\url{http://dl.acm.org/citation.cfm?doid=3302515.3290353}},
+
+####     title = {{Code2Vec: Learning Distributed Representations Of Code}},
+
+###  -910,6 +955,7 
+####     edition = {Third Edition},
+
+####     editor = {Ware, Colin },
+
+####     isbn = {978-0-12-381464-7},
+
+##### +   journal = {Morgan Kaufmann},
+
+####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780123814647000041}},
+
+####     pages = {95 - 138},
+
+####     publisher = {Morgan Kaufmann},
+
+###  -936,6 +982,7 
+####     author = {Pasupa, Kitsuchart},
+
+####     booktitle = {{Artificial Intelligence and Soft Computing}},
+
+####     doi = {10.1007/978-3-642-38610-7\_28},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-642-38610-7_28}},
+
+####     pages = {297--308},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -987,6 +1034,7 
+####  @misc{confpic,
+
+####     author = {Benjamin Bach},
+
+##### +   journal = {online},
+
+####     note = {\url{https://aviz.fr/~bbach/confluentgraphs/}},
+
+####     title = {{Confluent Graphs}},
+
+####     year = {2020}
+
+###  -998,6 +1046,7 
+####  and Tomlin, Alison S.},
+
+####     booktitle = {Analysis of Kinetic Reaction Mechanisms},
+
+####     doi = {10.1007/978-3-662-44562-4_7},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{https://doi.org/10.1007/978-3-662-44562-4_7}},
+
+####     pages = {183--312},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -1040,6 +1089,7 
+####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
+
+####     doi = {10.1007/978-3-540-24595-7_34},
+
+####     isbn = {978-3-540-24595-7},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_34}},
+
+####     pages = {369--380},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -1062,6 +1112,7 
+####  @book{cooking,
+
+####     author = {Wrangham, Richard},
+
+##### +   journal = {Basic Books},
+
+####     publisher = {Basic Books},
+
+####     title = {Catching Fire: How Cooking Made Us Human},
+
+####     year = {2009}
+
+###  -1070,6 +1121,7 
+####  @misc{cover,
+
+####     author = {Daniel Ellis},
+
+####     doi = {10.1002/kin.21180},
+
+##### +   journal = {online},
+
+####     note = {\url{https://s100.copyright.com/AppDispatchServlet?startPage=i&publisherName=Wiley&publication=kin&contentID=10.1002%2Fkin.21180&endPage=i&title=Cover+Image%2C+Volume+50%2C+Issue+6}},
+
+####     title = {{Chemical Kinetic Interactions Cover Image}},
+
+####     year = {2019}
+
+###  -1083,7 +1135,7 
 ####     note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231008006742}},
 
 ####     number = {31},
@@ -1143,7 +1940,166 @@
 
 ####     year = {2008}
 
-###  -1252,7 +1252,7 
+###  -1091,6 +1143,7 
+####  @misc{criv2,
+
+####     author = {Mike Jenkin},
+
+####     howpublished = {Online},
+
+##### +   journal = {online},
+
+####     month = {9},
+
+####     title = {{ Http://Cri.York.Ac.Uk }},
+
+####     year = {2019}
+
+###  -1102,6 +1155,7 
+####     booktitle = {Proceedings of the Thirtieth Annual ACM Symposium on Theory of Computing},
+
+####     doi = {10.1145/276698.276876},
+
+####     isbn = {0897919629},
+
+##### +   journal = {Association for Computing Machinery},
+
+####     location = {Dallas, Texas, USA},
+
+####     note = {\url{https://doi.org/10.1145/276698.276876}},
+
+####     numpages = {10},
+
+###  -1114,6 +1168,7 
+####  @misc{d3annotate,
+
+####     author = {Lu, Susie},
+
+##### +   journal = {online},
+
+####     note = {\url{https://d3-annotation.susielu.com/}},
+
+####     title = {{D3-Annotate}},
+
+####     year = {2019}
+
+###  -1125,6 +1180,7 
+####     biburl = {https://www.bibsonomy.org/bibtex/24fdb2faa7a94a7248a7fb5725aaa5afa/maxirichter},
+
+####     interhash = {9e3b5ed5b36799e856b35165b06248af},
+
+####     intrahash = {4fdb2faa7a94a7248a7fb5725aaa5afa},
+
+##### +   journal = {online},
+
+####     note = {\url{http://d3js.org/}},
+
+####     timestamp = {2012-11-08T12:33:57.000+0100},
+
+####     title = {D3.Js - Data-Driven Documents},
+
+###  -1134,6 +1190,7 
+####  @misc{daygraph,
+
+####     author = {Ellis, Daniel},
+
+####     institution = {Github},
+
+##### +   journal = {online},
+
+####     note = {\url{https://github.com/wolfiex/DanEllisThesis/blob/master/daynight_26mb.gif}},
+
+####     title = {{Animation Of The Evolution Of Chemistry Graph Of Beijing.}},
+
+####     year = {2018}
+
+###  -1141,6 +1198,7 
+####  @inproceedings{DBSCAN,
+
+####     author = {Martin Ester and Hans-peter Kriegel and Jörg Sander and Xiaowei Xu},
+
+##### +   journal = {AAAI Press},
+
+####     pages = {226--231},
+
+####     publisher = {AAAI Press},
+
+####     title = {A Density-Based Algorithm For Discovering Clusters In Large Spatial Databases With Noise},
+
+###  -1166,6 +1224,7 
+####  @misc{definenetwork,
+
+####     author = {Oxford},
+
+####     booktitle = {{Lexico Dictionaries | English}},
+
+##### +   journal = {Lexico Dictionaries},
+
+####     note = {\url{https://www.lexico.com/en/definition/network}},
+
+####     publisher = {Lexico Dictionaries},
+
+####     title = {{Network | Definition Of Network In English By Lexico Dictionaries}},
+
+###  -1175,6 +1234,7 
+####  @article{defra1,
+
+####     author = {Dick Derwent,Andrea Fraser,John Abbott,Mike Jenkin},
+
+####     issue = {3},
+
+##### +   journal = {online},
+
+####     note = {\url{https://uk-air.defra.gov.uk/assets/documents/reports/cat05/1006241607_100608_MIP_Final_Version.pdf}},
+
+####     title = {{Evaluating The Performance Of Air Quality Models}},
+
+####     year = {2010}
+
+###  -1197,6 +1257,7 
+####  and Cardoso, Jaime
+
+####  and Spiliopoulou, Myra},
+
+####     isbn = {978-3-319-23461-8},
+
+##### +   journal = {Springer International Publishing},
+
+####     pages = {165--179},
+
+####     publisher = {Springer International Publishing},
+
+####     title = {Two Step Graph-Based Semi-Supervised Learning For Online Auction Fraud Detection},
+
+###  -1217,6 +1278,7 
+####  @misc{degreetwitter,
+
+####     author = {Gemma, Joyce},
+
+####     booktitle = {{Brandwatch}},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.brandwatch.com/blog/react-influential-men-and-women-2017/}},
+
+####     title = {{The Most Influential Men And Women On Twitter 2017}},
+
+####     year = {2019}
+
+###  -1239,6 +1301,7 
+####  @book{descartes,
+
+####     author = {Descartes, Ren{\'e} and Lafleur, Laurence J},
+
+##### +   journal = {Bobbs-Merrill New York},
+
+####     note = {\url{http://selfpace.uconn.edu/class/percep/DescartesMeditations.pdf}},
+
+####     publisher = {Bobbs-Merrill New York},
+
+####     title = {{Meditations On First Philosophy}},
+
+###  -1252,13 +1315,14 
 ####     note = {\url{https://www.atmos-chem-phys.net/5/641/2005/}},
 
 ####     number = {3},
@@ -1158,10 +2114,71 @@
 
 ####     year = {2005}
 
-###  -1377,7 +1377,7 
+####  @article{dev-social-analysis,
+
+####     author = {Freeman, Linton C},
+
+##### +   journal = {online},
+
+####     note = {\url{http://moreno.ss.uci.edu/91.pdf}},
+
+####     title = {{The Development Of Social Network Analysis---With An Emphasis On
+
+####  Recent Events}},
+
+###  -1309,6 +1373,7 
+####     booktitle = {{Advances in Neural Information Processing Systems 25}},
+
+####     doi = {10.21105/joss.00747},
+
+####     editor = {Pereira, F and Burges, C J C and Bottou, L and Weinberger, K Q},
+
+##### +   journal = {Curran Associates, Inc.},
+
+####     note = {\url{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}},
+
+####     pages = {1097--1105},
+
+####     publisher = {Curran Associates, Inc.},
+
+###  -1319,6 +1384,7 
+####  @book{dream,
+
+####     author = {Freud, S. and Cronin, A.J.},
+
+####     isbn = {9781446547410},
+
+##### +   journal = {Read Books Limited},
+
+####     note = {\url{https://books.google.co.uk/books?id=U0t8CgAAQBAJ}},
+
+####     publisher = {Read Books Limited},
+
+####     title = {The Interpretation Of Dreams},
+
+###  -1356,6 +1422,7 
+####  @article{drviz,
+
+####     author = {Choi, Jong Youl and Bae, Seung-Hee and Qiu, Judy and Fox, Geoffrey
+
+####  and Chen, Bin and Wild, David},
+
+##### +   journal = {online},
+
+####     note = {\url{http://grids.ucs.indiana.edu/ptliupages/publications/ecmls2010_submission_13.pdf}},
+
+####     title = {{Browsing Large Scale Cheminformatics Data With Dimension Reduction}},
+
+####     year = {2019}
+
+###  -1376,8 +1443,9 
+####  @misc{dsmaccgit,
+
 ####     author = {Ellis, Dan},
 
 ####     institution = {Github},
+
+##### +   journal = {online},
 
 ####     note = {\url{https://github.com/wolfiex/DSMACC-testing}},
 
@@ -1171,7 +2188,137 @@
 
 ####     year = {2020}
 
-###  -1645,6 +1645,23 
+###  -1399,6 +1467,7 
+####  @article{eades,
+
+####     author = {Eades, P.},
+
+##### +   journal = {online},
+
+####     note = {cited By 1},
+
+####     pages = {149-160},
+
+####     source = {Scopus},
+
+###  -1409,6 +1478,7 
+####  @inproceedings{Eades,
+
+####     author = {Peter Eades},
+
+####     booktitle = {proceedings},
+
+##### +   journal = {online},
+
+####     title = {A Heuristic For Graph Drawing},
+
+####     year = {1984}
+
+###  -1450,6 +1520,7 
+####  @misc{eea,
+
+####     author = {EEA},
+
+####     booktitle = {{European Environment Agency}},
+
+##### +   journal = {online},
+
+####     language = {en},
+
+####     month = {July},
+
+####     note = {\url{https://www.eea.europa.eu/publications/air-quality-in-europe-2018}},
+
+###  -1498,6 +1569,7 
+####  @book{emotional,
+
+####     author = {Norman, D.A.},
+
+####     isbn = {9780465051366},
+
+##### +   journal = {Basic Books},
+
+####     lccn = {2003010123},
+
+####     note = {\url{https://books.google.nl/books?id=h\_wAbnGlOC4C}},
+
+####     publisher = {Basic Books},
+
+###  -1556,6 +1628,7 
+####     doi = {10.2312/COMPAESTH/COMPAESTH09/049-056},
+
+####     isbn = {978-3-905674-17-0},
+
+####     issn = {1816-0859},
+
+##### +   journal = {The Eurographics Association},
+
+####     publisher = {The Eurographics Association},
+
+####     title = {{Comparing The Readability Of Graph Layouts Using Eyetracking And Task-Oriented Analysis}},
+
+####     year = {2009}
+
+###  -1605,6 +1678,7 
+####     doi = {10.2312/EG2011/education/029-036},
+
+####     editor = {S. Maddock and J. Jorge},
+
+####     issn = {1017-4656},
+
+##### +   journal = {The Eurographics Association},
+
+####     publisher = {The Eurographics Association},
+
+####     title = {{The Five Design-Sheet (Fds) Approach For Sketching Information Visualization Designs}},
+
+####     year = {2011}
+
+###  -1618,6 +1692,7 
+####     booktitle = {Graph Drawing: Symposium on Graph Drawing, GD '95 Passau, Germany, September 20--22, 1995 Proceedings},
+
+####     doi = {10.1007/BFb0021792},
+
+####     isbn = {978-3-540-49351-8},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/BFb0021792}},
+
+####     pages = {76--87},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -1628,6 +1703,7 
+####  @misc{fgps,
+
+####     author = {Andy Brunning},
+
+####     booktitle = {{Twitter}},
+
+##### +   journal = {online},
+
+####     note = {\url{https://twitter.com/compoundchem/status/1230953094474862592/photo/1}},
+
+####     title = {{Functional Groups In Organic Chemistry}},
+
+####     year = {2020}
+
+###  -1639,16 +1715,35 
+####     doi = {https://doi.org/10.1016/B978-012257060-5/50003-4},
+
+####     editor = {Barbara J. Finlayson-Pitts and James N. Pitts},
+
+####     isbn = {978-0-12-257060-5},
+
+##### +   journal = {Academic Press},
+
+####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780122570605500034}},
+
+####     publisher = {Academic Press},
+
+####     title = {Chemistry Of The Upper And Lower Atmosphere},
+
 ####     year = {2000}
 
 ##### +@article{fixation,
@@ -1210,7 +2357,141 @@
 
 ####  Tomás Sherwen},
 
-###  -1823,7 +1840,7 
+####     doi = {10.5281/zenodo.3346817},
+
+##### +   journal = {Zenodo},
+
+####     month = {July},
+
+####     note = {\url{https://doi.org/10.5281/zenodo.3346817}},
+
+####     publisher = {Zenodo},
+
+###  -1674,6 +1769,7 
+####  @misc{frankenstein,
+
+####     author = {Ellis, Daniel},
+
+####     booktitle = {{Medium}},
+
+##### +   journal = {Towards Data Science},
+
+####     note = {\url{https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190}},
+
+####     publisher = {Towards Data Science},
+
+####     title = {{Using Tf-Idf To Form Descriptive Chapter Summaries Via
+
+###  -1694,6 +1790,7 
+####     abstractnote = {Force Directed Representation of Multivariate Data},
+
+####     author = {Dan Ellis},
+
+####     doi = {10.5281/zenodo.3586009},
+
+##### +   journal = {Zenodo},
+
+####     publisher = {Zenodo},
+
+####     title = {Wolfiex/Frmd: 2016},
+
+####     year = {2016}
+
+###  -1703,6 +1800,7 
+####     author = {Jacobson, M.Z.},
+
+####     doi = {10.1017/CBO9781139165389},
+
+####     isbn = {9781139165389},
+
+##### +   journal = {Cambridge University Press},
+
+####     note = {\url{https://www.cambridge.org/core/books/fundamentals-of-atmospheric-modeling/A6B866737D682B17EE46F8449F76FB2C}},
+
+####     publisher = {Cambridge University Press},
+
+####     title = {Fundamentals Of Atmospheric Modelling},
+
+###  -1724,6 +1822,7 
+####  @misc{gcm,
+
+####     author = {Henderson-Sellers},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.nccs.nasa.gov/services/climate-data-services}},
+
+####     title = {{Climate Data Services | Nasa Center For Climate Simulation}},
+
+####     year = {2015}
+
+###  -1748,6 +1847,7 
+####     address = {Berlin, Heidelberg},
+
+####     author = {Hairer, E. and N\o{}rsett, S. P. and Wanner, G.},
+
+####     isbn = {0387566708},
+
+##### +   journal = {Springer-Verlag},
+
+####     publisher = {Springer-Verlag},
+
+####     title = {Solving Ordinary Differential Equations I (2Nd Revised. Ed.): Nonstiff Problems},
+
+####     year = {2002}
+
+###  -1775,6 +1875,7 
+####  @book{genomics,
+
+####     author = {Hunt, G.J. and Gadau, J.R.},
+
+####     isbn = {9782889450800},
+
+##### +   journal = {Frontiers Media SA},
+
+####     note = {\url{https://books.google.co.uk/books?id=lvItDwAAQBAJ}},
+
+####     publisher = {Frontiers Media SA},
+
+####     series = {Frontiers Research Topics},
+
+###  -1785,6 +1886,7 
+####  @misc{geoclock,
+
+####     author = {{Woudloper}},
+
+####     booktitle = {{Wikipedia, The Free Encyclopedia}},
+
+##### +   journal = {online},
+
+####     month = {February},
+
+####     note = {\url{https://en.wikipedia.org/w/index.php?title=History_of_Earth&oldid=940308026}},
+
+####     title = {{History Of Earth}},
+
+###  -1812,6 +1914,7 
+####  @article{geos,
+
+####     author = {GEOS-Chem},
+
+##### +   journal = {online},
+
+####     note = {\url{http://acmg.seas.harvard.edu/geos/geos_pub.html}},
+
+####     title = {{Geos-Chem Publications}},
+
+####     year = {2020}
+
+###  -1820,10 +1923,11 
+####  @article{geosgit,
+
+####     author = {The International GEOS-Chem Community},
+
+####     doi = {10.5281/zenodo.3676008},
+
+##### +   journal = {Zenodo},
+
 ####     month = {February},
 
 ####     note = {\url{https://doi.org/10.5281/zenodo.3676008}},
@@ -1225,7 +2506,95 @@
 
 ####     year = {2020}
 
-###  -2017,7 +2034,7 
+###  -1852,6 +1956,7 
+####  @book{goodideas,
+
+####     author = {Johnson, S.},
+
+####     isbn = {9781101444207},
+
+##### +   journal = {Penguin Publishing Group},
+
+####     note = {\url{https://books.google.co.uk/books?id=3H2Xg5qxz-8C}},
+
+####     publisher = {Penguin Publishing Group},
+
+####     title = {Where Good Ideas Come From},
+
+###  -1881,6 +1986,7 
+####  and Grammer, Karl
+
+####  and Sch{\"a}fer, Katrin},
+
+####     isbn = {978-0-585-34289-4},
+
+##### +   journal = {Springer US},
+
+####     note = {\url{https://doi.org/10.1007/978-0-585-34289-4_5}},
+
+####     pages = {77--89},
+
+####     publisher = {Springer US},
+
+###  -1891,6 +1997,7 
+####  @inproceedings{graphmetnew,
+
+####     author = {Martyn Taylor and Peter Rodgers},
+
+####     booktitle = {Ninth International Conference on Information Visualisation, 06-08 July 2005, London, England: Proceedings},
+
+##### +   journal = {IEEE Computer Society},
+
+####     month = {October},
+
+####     note = {\url{http://kar.kent.ac.uk/14297/}},
+
+####     pages = {651--656},
+
+###  -1921,6 +2028,7 
+####  @book{handsonml,
+
+####     author = {G{\'e}ron, A.},
+
+####     isbn = {9781491962268},
+
+##### +   journal = {O'Reilly Media},
+
+####     note = {\url{https://books.google.co.uk/books?id=khpYDgAAQBAJ}},
+
+####     publisher = {O'Reilly Media},
+
+####     title = {Hands-On Machine Learning With Scikit-Learn And Tensorflow: Concepts, Tools, And Techniques To Build Intelligent Systems},
+
+###  -1961,6 +2069,7 
+####  @article{hitsweb,
+
+####     author = {Kumar, Ravi and Upfal, Eli},
+
+##### +   journal = {online},
+
+####     note = {\url{http://cs.brown.edu/research/webagent/pods-2000.pdf}},
+
+####     title = {{The Web As A Graph}},
+
+####     year = {2000}
+
+###  -2000,6 +2109,7 
+####  @misc{hpp,
+
+####     author = {Pete Cornes},
+
+####     booktitle = {{Nottingham HPP whitewater course users group}},
+
+##### +   journal = {online},
+
+####     month = {Aug},
+
+####     note = {\url{https://hppconcern.wordpress.com/2008/08/04/proposed-plans-for-holme-pierrepont-whitewater-course/}},
+
+####     title = {{Proposed Plans For Holme Pierrepont Whitewater Course}},
+
+###  -2017,7 +2127,7 
 ####  @article{hufftree,
 
 ###### -   autor = {{Sad CRUD Developer}},
@@ -1238,7 +2607,123 @@
 
 ####     title = {{The Huffman Tree}},
 
-###  -2200,7 +2217,7 
+###  -2030,6 +2140,7 
+####     booktitle = {Graph Drawing: 5th International Symposium, GD '97 Rome, Italy, September 18--20, 1997 Proceedings},
+
+####     doi = {10.1007/3-540-63938-1_67},
+
+####     isbn = {978-3-540-69674-2},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/3-540-63938-1_67}},
+
+####     pages = {248--261},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -2100,6 +2211,7 
+####     booktitle = {Proceedings of the 10th Annual ACM Symposium on User Interface Software and Technology},
+
+####     doi = {10.1145/263407.263521},
+
+####     isbn = {0-89791-881-9},
+
+##### +   journal = {ACM},
+
+####     location = {Banff, Alberta, Canada},
+
+####     note = {\url{http://doi.acm.org/10.1145/263407.263521}},
+
+####     numpages = {8},
+
+###  -2115,6 +2227,7 
+####     author = {Shneiderman, Ben},
+
+####     edition = {3rd},
+
+####     isbn = {0201694972},
+
+##### +   journal = {Addison-Wesley Longman Publishing Co., Inc.},
+
+####     publisher = {Addison-Wesley Longman Publishing Co., Inc.},
+
+####     title = {Designing The User Interface: Strategies For Effective Human-Computer Interaction},
+
+####     year = {1997}
+
+###  -2134,6 +2247,7 
+####  @misc{ipbes,
+
+####     author = {IPBES},
+
+##### +   journal = {online},
+
+####     note = {\url{https://ipbes.net/global-assessment}},
+
+####     title = {{Global Assessment Report On Biodiversity And Ecosystem
+
+####  Services | The Intergovernmental Science-Policy Platform On Biodiversity And Ecosystem Services}},
+
+###  -2142,6 +2256,7 
+####  @book{IPCC1990Science,
+
+####     author = {J.T. Houghton and G.J. Jenkins and J.J. Ephraums},
+
+##### +   journal = {The Intergovernmental Panel on Climate Change},
+
+####     publisher = {The Intergovernmental Panel on Climate Change},
+
+####     title = {Climate Change 1990 The Science Of Climate Change},
+
+####     year = {1996}
+
+###  -2150,6 +2265,7 
+####  @book{IPCC1995Science,
+
+####     author = {J.T. Houghton and L.G. Meira Filho and B.A. Callander and N. Harris
+
+####  and A. Kattenberg and K. Maskell},
+
+##### +   journal = {The Intergovernmental Panel on Climate Change},
+
+####     publisher = {The Intergovernmental Panel on Climate Change},
+
+####     title = {Climate Change 1995 The Science Of Climate Change},
+
+####     year = {1996}
+
+###  -2159,6 +2275,7 
+####     added-at = {2008-04-08T14:52:00.000+0200},
+
+####     author = {IPCC},
+
+####     biburl = {https://www.bibsonomy.org/bibtex/2ee8fa5001c307e9d40938c70c508cb77/sustdev_ac},
+
+##### +   journal = {Geneva: IPCC},
+
+####     note = {\url{http://www.ipcc.ch/ipccreports/ar4-wg1.htm}},
+
+####     publisher = {Geneva: IPCC},
+
+####     timestamp = {2009-11-11T11:50:02.000+0100},
+
+###  -2171,6 +2288,7 
+####     author = {IPCC},
+
+####     doi = {10.1017/CBO9781107415324},
+
+####     isbn = {ISBN 978-1-107-66182-0},
+
+##### +   journal = {Cambridge University Press},
+
+####     note = {\url{www.climatechange2013.org}},
+
+####     pages = {1535},
+
+####     publisher = {Cambridge University Press},
+
+###  -2200,7 +2318,7 
 ####     note = {\url{https://www.atmos-chem-phys.net/15/11433/2015/}},
 
 ####     number = {20},
@@ -1253,7 +2738,65 @@
 
 ####     year = {2015}
 
-###  -2297,7 +2314,7 
+###  -2208,6 +2326,7 
+####  @book{jacob,
+
+####     author = {Brasseur, G.P. and Jacob, D.J.},
+
+####     isbn = {9781108210959},
+
+##### +   journal = {Cambridge University Press},
+
+####     note = {\url{https://books.google.co.uk/books?id=k9\_PDgAAQBAJ}},
+
+####     publisher = {Cambridge University Press},
+
+####     title = {Modeling Of Atmospheric Chemistry},
+
+###  -2247,6 +2366,7 
+####  @book{kinetics,
+
+####     author = {T Turanyi and AS Tomlin},
+
+##### +   journal = {Springer},
+
+####     month = {January},
+
+####     note = {\url{http://eprints.whiterose.ac.uk/84294/}},
+
+####     pages = {1 -- 376},
+
+###  -2258,6 +2378,7 
+####  @book{kirk,
+
+####     author = {Kirk, A.},
+
+####     isbn = {9781473966314},
+
+##### +   journal = {SAGE Publications},
+
+####     note = {\url{https://books.google.co.uk/books?id=wNpsDAAAQBAJ}},
+
+####     publisher = {SAGE Publications},
+
+####     title = {Data Visualisation: A Handbook For Data Driven Design},
+
+###  -2283,6 +2404,7 
+####     address = {Berkeley, Calif.},
+
+####     author = {MacQueen, J.},
+
+####     booktitle = {Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Statistics},
+
+##### +   journal = {University of California Press},
+
+####     note = {\url{https://projecteuclid.org/euclid.bsmsp/1200512992}},
+
+####     pages = {281--297},
+
+####     publisher = {University of California Press},
+
+###  -2297,7 +2419,7 
 ####     note = {\url{https://www.atmos-chem-phys.net/6/187/2006/}},
 
 ####     number = {1},
@@ -1268,10 +2811,128 @@
 
 ####     year = {2006}
 
-###  -2607,7 +2624,17 
+###  -2323,6 +2445,7 
+####     address = {USA},
+
+####     author = {Press, William H. and Teukolsky, Saul A. and Vetterling, William T. and Flannery, Brian P.},
+
+####     isbn = {0521431085},
+
+##### +   journal = {Cambridge University Press},
+
+####     publisher = {Cambridge University Press},
+
+####     title = {Numerical Recipes In C (2Nd Ed.): The Art Of Scientific Computing},
+
+####     year = {1992}
+
+###  -2360,6 +2483,7 
+####  @misc{lapack,
+
+####     howpublished = {\url{http://www.netlib.org/lapack/}},
+
+##### +   journal = {online},
+
+####     note = {http://www.netlib.org/lapack/},
+
+####     title = {{Lapack --- Linear Algebra Package}},
+
+####     year = {2019}
+
+###  -2375,6 +2499,7 
+####  @misc{lesmis,
+
+####     author = {Donald Knuth},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www-cs-faculty.stanford.edu/~knuth/sgb.html}},
+
+####     title = {{Knuth: The Stanford Graphbase}},
+
+####     year = {2019}
+
+###  -2383,6 +2508,7 
+####  @book{lessmore,
+
+####     author = {Reinhardt, A.},
+
+####     isbn = {9780670134519},
+
+##### +   journal = {Viking Press},
+
+####     lccn = {75019041},
+
+####     note = {\url{https://books.google.co.uk/books?id=zyK4AAAAIAAJ}},
+
+####     publisher = {Viking Press},
+
+###  -2490,6 +2616,7 
+####     booktitle = {Graph Drawing: 19th International Symposium, GD 2011, Eindhoven, The Netherlands, September 21-23, 2011, Revised Selected Papers},
+
+####     doi = {10.1007/978-3-642-25878-7_31},
+
+####     isbn = {978-3-642-25878-7},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-642-25878-7_31}},
+
+####     pages = {320--331},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -2539,6 +2666,7 
+####     booktitle = {The Concise Encyclopedia of Statistics},
+
+####     doi = {10.1007/978-0-387-32833-1_223},
+
+####     isbn = {978-0-387-32833-1},
+
+##### +   journal = {Springer New York},
+
+####     note = {\url{https://doi.org/10.1007/978-0-387-32833-1_223}},
+
+####     pages = {297--297},
+
+####     publisher = {Springer New York},
+
+###  -2560,6 +2688,7 
+####     author = {Shneiderman, Ben},
+
+####     booktitle = {Proceedings of the 1996 IEEE Symposium on Visual Languages},
+
+####     isbn = {0-8186-7508-X},
+
+##### +   journal = {IEEE Computer Society},
+
+####     note = {\url{http://dl.acm.org/citation.cfm?id=832277.834354}},
+
+####     pages = {336--},
+
+####     publisher = {IEEE Computer Society},
+
+###  -2571,6 +2700,7 
+####  @misc{mapbox,
+
+####     author = {Ellis, Daniel},
+
+####     booktitle = {{Medium}},
+
+##### +   journal = {Towards Data Science},
+
+####     month = {November},
+
+####     note = {\url{https://towardsdatascience.com/generating-a-logo-with-mapbox-gl-and-python-2c44a357f462}},
+
+####     publisher = {Towards Data Science},
+
+###  -2606,8 +2736,20 
 ####  @misc{mcm,
 
 ####     author = {Andrew Rickard},
+
+##### +   journal = {online},
 
 ####     note = {\url{http://mcm.york.ac.uk/}},
 
@@ -1287,6 +2948,8 @@
 
 ##### +   doi = {10.5281/zenodo.4294816},
 
+##### +   journal = {Zenodo},
+
 ##### +   note = {\url{https://doi.org/10.5281/zenodo.4294816}},
 
 ##### +   publisher = {Zenodo},
@@ -1297,10 +2960,14 @@
 
 ####     year = {2020}
 
-###  -2627,7 +2654,7 
+###  -2626,8 +2768,9 
+####  @misc{mcmhist,
+
 ####     author = {Mike Jenkins},
 
 ####     howpublished = {slide deck},
+
+##### +   journal = {online},
 
 ####     note = {Presentation for the EPSR group, Imperial Collage},
 
@@ -1310,7 +2977,7 @@
 
 ####     year = {2002}
 
-###  -2655,7 +2682,7 
+###  -2655,7 +2798,7 
 ####     pages = {161-180},
 
 ####     pdf = {https://hal.archives-ouvertes.fr/hal-00295229/file/acp-3-161-2003.pdf},
@@ -1325,7 +2992,7 @@
 
 ####     year = {2003}
 
-###  -2667,7 +2694,7 
+###  -2667,13 +2810,14 
 ####     note = {\url{https://www.atmos-chem-phys.net/3/181/2003/}},
 
 ####     number = {1},
@@ -1340,12 +3007,66 @@
 
 ####     year = {2003}
 
-###  -2790,6 +2817,14 
+####  @misc{memory,
+
+####     author = {Brian Foo},
+
+##### +   journal = {online},
+
+####     note = {\url{http://memoryunderground.com/}},
+
+####     title = {{Memory Underground - Convert Your Memories Into A Subway Map
+
+####  - Home}},
+
+###  -2695,6 +2839,7 
+####  @misc{metabolic,
+
+####     author = {Gerhard Michal},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.roche.com/sustainability/philanthropy/science_education/pathways/pathways-ordering.htm}},
+
+####     title = {{Metabolic Pathways}},
+
+####     year = {1965}
+
+###  -2775,6 +2920,7 
+####  @book{modelingpythonbees,
+
+####     author = {De Smedt, T.},
+
+####     isbn = {9789057182600},
+
+##### +   journal = {Universiteit Antwerpen, Faculteit Letteren en Wijsbegeerte, Departement Taalkunde},
+
+####     note = {\url{https://books.google.co.uk/books?id=Bp7KwpmFBzoC}},
+
+####     publisher = {Universiteit Antwerpen, Faculteit Letteren en Wijsbegeerte, Departement Taalkunde},
+
+####     series = {Proefschriften UA-LW : taalkunde},
+
+###  -2785,11 +2931,21 
+####  @misc{mol3d,
+
+####     author = {Herman Bergwerf},
+
+####     booktitle = {{MolView}},
+
+##### +   journal = {online},
+
+####     note = {\url{http://molview.org/}},
+
+####     title = {{Molview}},
+
 ####     year = {2019}
 
 ##### +@misc{montreal,
 
 ##### +   author = {UNEP},
+
+##### +   journal = {online},
 
 ##### +   note = {\url{https://ozone.unep.org/treaties/montreal-protocol}},
 
@@ -1361,10 +3082,188 @@
 
 ####     author = {Hartigan, J. A.
 
-###  -3220,6 +3255,7 
+###  -2797,6 +2953,7 
+####     booktitle = {Computer Science and Statistics: Proceedings of the 13th Symposium on the Interface},
+
+####     editor = {Eddy, William F.},
+
+####     isbn = {978-1-4613-9464-8},
+
+##### +   journal = {Springer US},
+
+####     pages = {268--273},
+
+####     publisher = {Springer US},
+
+####     title = {Mosaics For Contingency Tables},
+
+###  -2850,6 +3007,7 
+####  @misc{n2vimg,
+
+####     author = {Cohen, Elior},
+
+####     booktitle = {{Medium}},
+
+##### +   journal = {Towards Data Science},
+
+####     month = {April},
+
+####     note = {\url{https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef}},
+
+####     publisher = {Towards Data Science},
+
+###  -2962,6 +3120,7 
+####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
+
+####     doi = {10.1007/978-3-540-24595-7_27},
+
+####     isbn = {978-3-540-24595-7},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_27}},
+
+####     pages = {295--306},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -2974,6 +3133,7 
+####     author = {Aric A. Hagberg and Daniel A. Schult and Pieter J. Swart},
+
+####     booktitle = {Proceedings of the 7th Python in Science Conference},
+
+####     editor = {Ga\"el Varoquaux and Travis Vaught and Jarrod Millman},
+
+##### +   journal = {online},
+
+####     pages = {11 - 15},
+
+####     title = {Exploring Network Structure, Dynamics, And Function Using Networkx},
+
+####     year = {2008}
+
+###  -3047,6 +3207,7 
+####  @misc{newspaperrock,
+
+####     author = {{ugc}},
+
+####     booktitle = {{Atlas Obscura}},
+
+##### +   journal = {Atlas Obscura},
+
+####     month = {October},
+
+####     note = {\url{http://www.atlasobscura.com/places/newspaper-rock}},
+
+####     publisher = {Atlas Obscura},
+
+###  -3075,6 +3236,7 
+####  @misc{nightingale,
+
+####     author = {Florence Nightingale},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.rct.uk/collection/1075240/notes-on-matters-affecting-the-health-efficiency-and-hospital-administration-of}},
+
+####     title = {{Notes On Matters Affecting
+
+####  The Health, Efficiency And Hospital Administration Of The
+
+###  -3116,6 +3278,7 
+####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
+
+####     doi = {10.1007/978-3-540-24595-7_40},
+
+####     isbn = {978-3-540-24595-7},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_40}},
+
+####     pages = {425--436},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -3138,6 +3301,7 
+####  @article{node2vec,
+
+####     author = {Aditya Grover and Jure Leskovec},
+
+##### +   journal = {online},
+
+####     note = {Accessed: 2019-10-21},
+
+####     title = {Node2Vec: Scalable Feature Learning For Networks},
+
+####     year = {2019}
+
+###  -3151,6 +3315,7 
+####     booktitle = {Graph Drawing: 13th International Symposium, GD 2005, Limerick, Ireland, September 12-14, 2005. Revised Papers},
+
+####     doi = {10.1007/11618058_15},
+
+####     isbn = {978-3-540-31667-1},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/11618058_15}},
+
+####     pages = {153--164},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -3162,6 +3327,7 
+####     author = {Agarwal, Shivam and Tomar, Amit and Sreevalsan-Nair, Jaya},
+
+####     booktitle = {{Complex Networks \& Their Applications V}},
+
+####     doi = {10.1007/978-3-319-50901-3\_46},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-319-50901-3_46}},
+
+####     pages = {579--591},
+
+####     publisher = {Springer International Publishing},
+
+###  -3175,6 +3341,7 
+####     address = {Darlinghurst, Australia, Australia},
+
+####     author = {Friedrich, Carsten and Schreiber, Falk},
+
+####     booktitle = {Proceedings of the 27th Australasian Conference on Computer Science - Volume 26},
+
+##### +   journal = {Australian Computer Society, Inc.},
+
+####     location = {Dunedin, New Zealand},
+
+####     note = {\url{http://dl.acm.org/citation.cfm?id=979922.979966}},
+
+####     numpages = {8},
+
+###  -3207,6 +3374,7 
+####     acmid = {962200},
+
+####     author = {Lyons, Kelly A.},
+
+####     booktitle = {Proceedings of the 1992 Conference of the Centre for Advanced Studies on Collaborative Research - Volume 1},
+
+##### +   journal = {IBM Press},
+
+####     location = {Toronto, Ontario, Canada},
+
+####     note = {\url{http://dl.acm.org/citation.cfm?id=962198.962200}},
+
+####     numpages = {11},
+
+###  -3219,7 +3387,9 
 ####  @misc{numpy,
 
 ####     author = {Oliphant, Travis},
+
+##### +   journal = {online},
 
 ####     month = {01},
 
@@ -1376,7 +3275,60 @@
 
 ####     year = {2006}
 
-###  -3398,23 +3434,6 
+###  -3261,6 +3431,7 
+####  @phdthesis{objects,
+
+####     author = {Lynch, Helen},
+
+####     doi = {10.21427/D73W37},
+
+##### +   journal = {online},
+
+####     note = {\url{http://dx.doi.org/10.21427/D73W37}},
+
+####     title = {{Infant Places, Spaces And Objects: Exploring The Physical In
+
+####  Learning Environments For Infants Under Two}},
+
+###  -3300,6 +3471,7 
+####     booktitle = {Human-Centered Visualization Environments: GI-Dagstuhl Research Seminar, Dagstuhl Castle, Germany, March 5-8, 2006, Revised Lectures},
+
+####     doi = {10.1007/978-3-540-71949-6_4},
+
+####     isbn = {978-3-540-71949-6},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-540-71949-6_4}},
+
+####     pages = {163--230},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -3320,6 +3492,7 
+####  @misc{OpenVis,
+
+####     author = {{Steven Franconeri}},
+
+##### +   journal = {Youtube},
+
+####     month = {August},
+
+####     note = {\url{https://www.youtube.com/watch?v=Jq2Rc0WlYTE}},
+
+####     publisher = {Youtube},
+
+###  -3393,28 +3566,12 
+####  @misc{orthogonaltv,
+
+####     author = {JVC},
+
+##### +   journal = {online},
+
+####     note = {\url{https://thydzik.com/videosphere/}},
+
+####     title = {{Videosphere Service And Repair Manuals (Model 3 240)}},
+
 ####     year = {2020}
 
 ###### -@article{Over2006,
@@ -1415,7 +3367,161 @@
 
 ####  Christopher T and Lalonde, Stefan V and Knudsen, Andrew and Wang,
 
-###  -3671,6 +3690,16 
+###  -3440,6 +3597,7 
+####     booktitle = {Encyclopedia of Astrobiology},
+
+####     doi = {10.1007/978-3-642-11274-4_1721},
+
+####     isbn = {978-3-642-11274-4},
+
+##### +   journal = {Springer Berlin Heidelberg},
+
+####     note = {\url{https://doi.org/10.1007/978-3-642-11274-4_1721}},
+
+####     pages = {1209--1209},
+
+####     publisher = {Springer Berlin Heidelberg},
+
+###  -3464,6 +3622,7 
+####  @article{ozonerepair,
+
+####     author = {Ellen Gray, Theo Stein, Sara Blumberg},
+
+##### +   journal = {online},
+
+####     note = {\url{http://www.nasa.gov/feature/goddard/2019/2019-ozone-hole-is-the-smallest-on-record-since-its-discovery}},
+
+####     title = {{2019 Ozone Hole Is The Smallest On Record Since Its Discovery}},
+
+####     year = {2019}
+
+###  -3477,6 +3636,7 
+####     edition = {Second Edition},
+
+####     editor = {Gerald R. North and John Pyle and Fuqing Zhang},
+
+####     isbn = {978-0-12-382225-3},
+
+##### +   journal = {Academic Press},
+
+####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780123822253004333}},
+
+####     pages = {251 - 254},
+
+####     publisher = {Academic Press},
+
+###  -3486,6 +3646,7 
+####  @misc{paris,
+
+####     author = {UNFCCC},
+
+##### +   journal = {online},
+
+####     note = {\url{https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement}},
+
+####     title = {{The Paris Agreement | United Nations Climate Change}},
+
+####     year = {2015}
+
+###  -3508,6 +3669,7 
+####     booktitle = {Understanding Digital Humanities},
+
+####     doi = {10.1057/9780230371934_11},
+
+####     isbn = {978-0-230-37193-4},
+
+##### +   journal = {Palgrave Macmillan UK},
+
+####     note = {\url{http://dx.doi.org/10.1057/9780230371934_11}},
+
+####     pages = {191--209},
+
+####     publisher = {Palgrave Macmillan UK},
+
+###  -3548,6 +3710,7 
+####     doi = {10.5772/intechopen.75007},
+
+####     editor = {G{\"o}ksel, T{\"u}rkmen},
+
+####     isbn = {9781789843958, 9781789843965},
+
+##### +   journal = {InTech},
+
+####     month = {November},
+
+####     note = {\url{http://www.intechopen.com/books/statistics-growing-data-sets-and-growing-demand-for-statistics/application-of-principal-component-analysis-to-image-compression}},
+
+####     publisher = {InTech},
+
+###  -3558,6 +3721,7 
+####  @misc{pcaim,
+
+####     author = {Victor Powell},
+
+####     booktitle = {{Explained Visually}},
+
+##### +   journal = {online},
+
+####     note = {\url{http://setosa.io/ev/principal-component-analysis/}},
+
+####     title = {{Principal Component Analysis Explained Visually}},
+
+####     year = {2020}
+
+###  -3566,6 +3730,7 
+####  @techreport{pcamath,
+
+####     author = {Smith, Lindsay I},
+
+####     institution = {otago},
+
+##### +   journal = {online},
+
+####     note = {\url{http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf}},
+
+####     title = {{A Tutorial On Principal Components Analysis}},
+
+####     year = {2002}
+
+###  -3619,6 +3784,7 
+####  @misc{people,
+
+####     author = {{People2Vec}},
+
+##### +   journal = {online},
+
+####     note = {\url{http://people2vec.org/}},
+
+####     title = {{People2Vec}},
+
+####     year = {2019}
+
+###  -3634,6 +3800,7 
+####  @misc{perceptronimage,
+
+####     author = {Lab Cornell},
+
+##### +   journal = {online},
+
+####     note = {\url{https://en.wikipedia.org/w/index.php?title=Perceptron&oldid=935763442}},
+
+####     title = {{Mark 1 Perceptron}},
+
+####     year = {2020}
+
+###  -3665,12 +3832,23 
+####  @article{phrase,
+
+####     author = {Boudin, Florian},
+
+##### +   journal = {online},
+
+####     note = {\url{https://hal.archives-ouvertes.fr/hal-00850187/document}},
+
+####     title = {{A Comparison Of Centrality Measures For Graph-Based Keyphrase
+
+####  Extraction}},
+
 ####     year = {2013}
 
 ##### +@article{physapprox,
@@ -1440,7 +3546,7 @@
 
 ####  W and Graveleau, L},
 
-###  -3715,6 +3744,17 
+###  -3715,6 +3893,18 
 ####     year = {2018}
 
 ##### +@book{platoform,
@@ -1448,6 +3554,8 @@
 ##### +   author = {Welton, W.A. and Benso, S. and Bowery, A.M.},
 
 ##### +   isbn = {9780739105146},
+
+##### +   journal = {Lexington Books},
 
 ##### +   lccn = {2002117245},
 
@@ -1467,7 +3575,92 @@
 
 ####     author = {Clauset, Aaron and Shalizi, Cosma Rohilla and Newman, M E J},
 
-###  -3921,7 +3961,7 
+###  -3745,6 +3935,7 
+####  Oscar and Worm, Dani{\"e}l},
+
+####     booktitle = {{Financial Cryptography and Data Security}},
+
+####     doi = {10.1007/978-3-030-32101-7\_35},
+
+##### +   journal = {Springer International Publishing},
+
+####     note = {\url{http://dx.doi.org/10.1007/978-3-030-32101-7_35}},
+
+####     pages = {605--623},
+
+####     publisher = {Springer International Publishing},
+
+###  -3755,6 +3946,7 
+####  @book{projections,
+
+####     author = {Thomas, P.D.},
+
+##### +   journal = {Coast and Geodetic Survey},
+
+####     note = {\url{https://books.google.co.uk/books?id=7a60MQEACAAJ}},
+
+####     publisher = {Coast and Geodetic Survey},
+
+####     series = {Special publication},
+
+###  -3831,6 +4023,7 
+####  Karl Leswing and
+
+####  Jeff van Santen},
+
+####     doi = {10.5281/zenodo.2864247},
+
+##### +   journal = {online},
+
+####     month = {May},
+
+####     note = {\url{https://doi.org/10.5281/zenodo.2864247}},
+
+####     title = {Rdkit 2019-03-2 (Q1 2019) Release},
+
+###  -3840,6 +4033,7 
+####  @misc{rdkitcode,
+
+####     author = {rdkit},
+
+####     institution = {Github},
+
+##### +   journal = {online},
+
+####     note = {\url{https://github.com/rdkit/rdkit/blob/24f1737839c9302489cadc473d8d9196ad9187b4/rdkit/Chem/MACCSkeys.py}},
+
+####     title = {{Rdkit}},
+
+####     year = {2019}
+
+###  -3880,6 +4074,7 
+####  @book{roman,
+
+####     author = {Miller, B.G.},
+
+####     isbn = {9780080961163},
+
+##### +   journal = {Elsevier Science},
+
+####     lccn = {2010020592},
+
+####     note = {\url{https://books.google.co.uk/books?id=b2W5S3Lb4fwC}},
+
+####     publisher = {Elsevier Science},
+
+###  -3915,13 +4110,14 
+####  @misc{rule8,
+
+####     author = {{Ben Shneiderman}},
+
+##### +   journal = {online},
+
+####     note = {\url{http://www.cs.umd.edu/~ben/goldenrules.html}},
+
+####     title = {The Eight Golden Rules Of Interface Design},
+
+####     year = {1985}
+
 ####  @article{sampling,
 
 ###### -   author = { M. D.   Mckay  and  R. J.   Beckman  and  W. J.   Conover },
@@ -1480,7 +3673,63 @@
 
 ####     note = {\url{https://amstat.tandfonline.com/doi/abs/10.1080/00401706.2000.10485979}},
 
-###  -4067,6 +4107,17 
+###  -3936,6 +4132,7 
+####  @book{sapiens,
+
+####     author = {Harari, Y.N.},
+
+####     isbn = {9780062316103},
+
+##### +   journal = {Harper},
+
+####     lccn = {2014028418},
+
+####     note = {\url{https://books.google.co.uk/books?id=FmyBAwAAQBAJ}},
+
+####     publisher = {Harper},
+
+###  -3992,6 +4189,7 
+####  @misc{scholar,
+
+####     author = {Google},
+
+##### +   journal = {online},
+
+####     note = {\url{https://scholar.google.com/schhp?hl=en}},
+
+####     title = {{Google Scholar}},
+
+####     year = {2019}
+
+###  -4000,6 +4198,7 
+####  @misc{sciamerican,
+
+####     author = {Monta{\~n}ez, Amanda},
+
+####     booktitle = {{Scientific American Blog Network}},
+
+##### +   journal = {online},
+
+####     note = {\url{https://blogs.scientificamerican.com/sa-visual/how-science-visualization-can-help-save-the-world/}},
+
+####     title = {{How Science Visualization Can Help Save The World}},
+
+####     year = {2016}
+
+###  -4051,6 +4250,7 
+####  @misc{scipy,
+
+####     author = {Eric Jones and Travis Oliphant and Pearu Peterson and others},
+
+##### +   journal = {online},
+
+####     note = {http://www.scipy.org/},
+
+####     title = {{Scipy}: Open Source Scientific Tools For {Python}},
+
+####     year = {2001--}
+
+###  -4067,6 +4267,18 
 ####     year = {1949}
 
 ##### +@book{serendipity,
@@ -1488,6 +3737,8 @@
 ##### +   author = {Roberts, R.M.},
 
 ##### +   isbn = {9780471602033},
+
+##### +   journal = {Wiley},
 
 ##### +   lccn = {lc88033638},
 
@@ -1507,10 +3758,227 @@
 
 ####     address = {Piscataway, NJ, USA},
 
-###  -4625,7 +4676,7 
+###  -4107,6 +4319,7 
+####  @book{skeptical,
+
+####     author = {Lomborg, B. and Matthews, M.H. and University of Cambridge (Gran Breta{\~n}a)},
+
+####     isbn = {9780521010689},
+
+##### +   journal = {Cambridge University Press},
+
+####     lccn = {00068915},
+
+####     note = {\url{https://books.google.co.uk/books?id=JuLko8USApwC}},
+
+####     publisher = {Cambridge University Press},
+
+###  -4156,6 +4369,7 
+####  @article{slidedeck,
+
+####     author = {John Mashey },
+
+##### +   journal = {online},
+
+####     note = {\url{https://static.usenix.org/event/usenix99/invited_talks/mashey.pdf}},
+
+####     title = {{Big Data And The Next Wave Of Infrastress }},
+
+####     year = {1998}
+
+###  -4265,6 +4479,7 
+####     address = {Secaucus, NJ, USA},
+
+####     author = {Diehl, Stephan},
+
+####     isbn = {3540465049},
+
+##### +   journal = {Springer-Verlag New York, Inc.},
+
+####     publisher = {Springer-Verlag New York, Inc.},
+
+####     title = {Software Visualization: Visualizing The Structure, Behaviour, And Evolution Of Software},
+
+####     year = {2007}
+
+###  -4319,6 +4534,7 
+####  @book{squaretower,
+
+####     author = {Ferguson, Niall},
+
+####     isbn = {0735222916},
+
+##### +   journal = {Penguin Group , The},
+
+####     publisher = {Penguin Group , The},
+
+####     title = {The Square And The Tower: Networks And Power, From The Freemasons To Facebook},
+
+####     year = {2018}
+
+###  -4327,6 +4543,7 
+####  @book{storyanimal,
+
+####     author = {Gottschall, J.},
+
+####     isbn = {9780547391403},
+
+##### +   journal = {Houghton Mifflin Harcourt},
+
+####     lccn = {2011042372},
+
+####     note = {\url{https://books.google.co.uk/books?id=Gd3lT5yP3ZQC}},
+
+####     publisher = {Houghton Mifflin Harcourt},
+
+###  -4354,6 +4571,7 
+####  @misc{stripes,
+
+####     author = {Ed Hawkins},
+
+##### +   journal = {online},
+
+####     note = {\url{https://showyourstripes.info/}},
+
+####     title = {{\#Showyourstripes}},
+
+####     year = {2019}
+
+###  -4408,6 +4626,7 
+####  @misc{tablet,
+
+####     author = {British-Museum},
+
+####     booktitle = {{British Museum}},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.britishmuseum.org/research/collection_online/collection_object_details.aspx?objectId=1547654&partId=1&searchText=tablet&from=bc&fromDate=4444&to=bc&toDate=3000&page=1}},
+
+####     title = {{Tablet}},
+
+####     year = {BC}
+
+###  -4415,6 +4634,7 
+####  @article{tephi,
+
+####     author = {Ian Brooks},
+
+##### +   journal = {online},
+
+####     note = {\url{http://www.met.reading.ac.uk/~sgs02rpa/TEACHING/Tephigram.pdf}},
+
+####     title = {Tephigram.Pdf},
+
+####     year = {2019}
+
+###  -4464,6 +4684,7 
+####  @misc{threejs,
+
+####     author = {Ricardo Cabello},
+
+##### +   journal = {online},
+
+####     note = {\url{https://threejs.org/}},
+
+####     title = {{Three.Js -- Javascript 3D Library}},
+
+####     year = {2019}
+
+###  -4475,6 +4696,7 
+####     author = {Jean, Neal and Wang, Sherrie and Samar, Anshul and Azzari,
+
+####  George and Lobell, David and Ermon, Stefano},
+
+####     eprint = {1805.02855},
+
+##### +   journal = {online},
+
+####     month = {May},
+
+####     note = {\url{http://arxiv.org/abs/1805.02855}},
+
+####     primaryclass = {cs.CV},
+
+###  -4486,6 +4708,7 
+####  @article{topomap,
+
+####     author = {Baskin, Igor},
+
+####     doi = {10.13140/RG.2.2.25621.93927},
+
+##### +   journal = {.},
+
+####     month = {05},
+
+####     publisher = {.},
+
+####     title = {Dimensionality Reduction In Chemoinformatics. Generative Topographic Mapping},
+
+###  -4505,6 +4728,7 
+####  @book{transporttime,
+
+####     author = {Seinfeld, J.H. and Pandis, S.N.},
+
+####     isbn = {9781118947401},
+
+##### +   journal = {Wiley},
+
+####     lccn = {2015043236},
+
+####     note = {\url{https://books.google.co.uk/books?id=n\_RmCgAAQBAJ}},
+
+####     publisher = {Wiley},
+
+###  -4549,6 +4773,7 
+####  @misc{truthandbeauty,
+
+####     author = {Moritz Stefaner},
+
+##### +   journal = {online},
+
+####     note = {\url{https://truth-and-beauty.net/projects/multiplicity}},
+
+####     title = {{Truth \& Beauty - Multiplicity}},
+
+####     year = {2020}
+
+###  -4569,6 +4794,7 
+####  @misc{tsneexplain,
+
+####     author = {Strayer, Nick},
+
+####     booktitle = {{Observable}},
+
+##### +   journal = {online},
+
+####     note = {\url{https://observablehq.com/@nstrayer/t-sne-explained-in-plain-javascript}},
+
+####     title = {{T-Sne Explained In Plain Javascript}},
+
+####     year = {2018}
+
+###  -4601,6 +4827,7 
+####  @book{tufte,
+
+####     author = {Tufte, E.R.},
+
+##### +   journal = {Graphics Press},
+
+####     lccn = {83156861},
+
+####     note = {\url{https://books.google.co.uk/books?id=tWpHAAAAMAAJ}},
+
+####     number = {v. 914},
+
+###  -4624,8 +4851,9 
+####  @misc{tuv,
+
 ####     author = {Br{\"a}uer, Peter},
 
 ####     institution = {Github},
+
+##### +   journal = {online},
 
 ####     note = {\url{https://github.com/pb866/TUV_DSMACC}},
 
@@ -1519,3 +3987,156 @@
 ##### +   title = {{TUV 5.2X DSMACC}},
 
 ####     year = {2020}
+
+###  -4657,6 +4885,7 
+####  @misc{vt,
+
+####     author = {{VTL}},
+
+##### +   journal = {online},
+
+####     note = {\url{http://visualthinking.psych.northwestern.edu/}},
+
+####     title = {{Visual Thinking Lab}},
+
+####     year = {2019}
+
+###  -4668,6 +4897,7 
+####     author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean,
+
+####  Jeffrey},
+
+####     eprint = {1301.3781},
+
+##### +   journal = {online},
+
+####     month = {January},
+
+####     note = {\url{http://arxiv.org/abs/1301.3781}},
+
+####     primaryclass = {cs.CL},
+
+###  -4678,6 +4908,7 
+####  @misc{w4colobs,
+
+####     author = {{Daniel Ellis}},
+
+####     booktitle = {{Observable}},
+
+##### +   journal = {online},
+
+####     note = {\url{https://observablehq.com/@wolfiex/d3-fourcolour-voronoi}},
+
+####     title = {{D3-Fourcolour Voronoi}},
+
+####     year = {2019}
+
+###  -4691,6 +4922,7 
+####     edition = {Third Edition},
+
+####     editor = {Ware, Colin },
+
+####     isbn = {978-0-12-381464-7},
+
+##### +   journal = {Morgan Kaufmann},
+
+####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780123814647000028}},
+
+####     pages = {31 - 68},
+
+####     publisher = {Morgan Kaufmann},
+
+###  -4702,6 +4934,7 
+####  @misc{web,
+
+####     author = {Edsu and Ellis, Dan},
+
+####     institution = {Github},
+
+##### +   journal = {online},
+
+####     note = {https://github.com/wolfiex/etudier},
+
+####     title = {{Etudier}},
+
+####     year = {2019}
+
+###  -4709,6 +4942,7 
+####  @misc{webstats,
+
+####     author = {InternetLiveStats},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.internetlivestats.com/total-number-of-websites/}},
+
+####     title = {{Total Number Of Websites - Internet Live Stats}},
+
+####     year = {2020}
+
+###  -4728,6 +4962,7 
+####  @article{who,
+
+####     author = {WHO},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.who.int/airpollution/ambient/health-impacts/en/}},
+
+####     title = {{World Health Organization | Ambient Air Pollution: Health Impacts}},
+
+####     year = {2018}
+
+###  -4735,6 +4970,7 
+####  @article{whodata,
+
+####     author = {WHO},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.who.int/airpollution/data/en/}},
+
+####     title = {{World Health Organization | Ambient And Household Air Pollution And Health}},
+
+####     year = {2016}
+
+###  -4742,6 +4978,7 
+####  @article{wild,
+
+####     author = {Oliver Wild},
+
+##### +   journal = {online},
+
+####     note = {\url{https://www.ukca.ac.uk/images/b/b1/Solvers_for_web.pdf}},
+
+####     title = {{Chemical Solvers - A Slide Deck From The Ukca Theory And Practice Workshop}},
+
+####     year = {2015}
+
+###  -4750,6 +4987,7 
+####  @book{wingedhorse,
+
+####     author = {Descartes, R. and Cottingham, J. and Williams, B.},
+
+####     isbn = {9780521558181},
+
+##### +   journal = {Cambridge University Press},
+
+####     lccn = {86012898},
+
+####     note = {\url{https://books.google.co.uk/books?id=yMwiTTpwasgC}},
+
+####     publisher = {Cambridge University Press},
+
+###  -4769,6 +5007,7 
+####  @misc{worldmap,
+
+####     author = {{Martin Grandjean}},
+
+##### +   journal = {online},
+
+####     note = {\url{http://www.martingrandjean.ch/connected-world-air-traffic-network/}},
+
+####     title = {{Connected World: Untangling The Air Traffic Network}},
+
+####     year = {2016}

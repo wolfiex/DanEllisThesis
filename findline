@@ -1,0 +1,11 @@
+#! /opt/anaconda3/bin/python
+
+import os,sys
+
+
+arg = ' '.join(sys.argv[1:])
+cmd = 'grep --color -inr "%s" */*.tex'%arg
+
+print(cmd)
+print('')
+os.system(cmd)

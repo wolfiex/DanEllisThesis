@@ -532,19 +532,6 @@ The Oxidant And Particle Photochemical Processes (Op3) Project}},
    year = {2009}
 }
 
-@article{bundlepioneer,
-   author = {D. Holten},
-   doi = {10.1109/TVCG.2006.147},
-   issn = {1077-2626},
-   journal = {IEEE Transactions on Visualization and Computer Graphics},
-   month = {Sept},
-   number = {5},
-   pages = {741-748},
-   title = {Hierarchical Edge Bundles: Visualization Of Adjacency Relations In Hierarchical Data},
-   volume = {12},
-   year = {2006}
-}
-
 @article{butane,
    author = {Jenkin, Michael E and Saunders, Sandra M and Pilling, Michael J},
    doi = {10.1016/S1352-2310(96)00105-7},
@@ -1196,7 +1183,7 @@ and Kuroya, Katsutoshi},
    year = {2018}
 }
 
-@inproceedings{DBSCAN,
+@article{DBSCAN,
    author = {Martin Ester and Hans-peter Kriegel and Jörg Sander and Xiaowei Xu},
    journal = {AAAI Press},
    pages = {226--231},
@@ -1232,7 +1219,8 @@ and Kuroya, Katsutoshi},
 }
 
 @article{defra1,
-   author = {Dick Derwent,Andrea Fraser,John Abbott,Mike Jenkin},
+   author = {{Dick Derwent, Andrea Fraser, John Abbott and Mike Jenkin
+}},
    issue = {3},
    journal = {online},
    note = {\url{https://uk-air.defra.gov.uk/assets/documents/reports/cat05/1006241607_100608_MIP_Final_Version.pdf}},
@@ -1465,17 +1453,7 @@ and Chen, Bin and Wild, David},
    year = {2015}
 }
 
-@article{eades,
-   author = {Eades, P.},
-   journal = {online},
-   note = {cited By 1},
-   pages = {149-160},
-   source = {Scopus},
-   title = {A Heuristic For Graph Drawing},
-   year = {1984}
-}
-
-@inproceedings{Eades,
+@inproceedings{eades,
    author = {Peter Eades},
    booktitle = {proceedings},
    journal = {online},
@@ -1973,6 +1951,7 @@ Matter Functionality}},
    publisher = {Stanford InfoLab},
    title = {The Pagerank Citation Ranking: Bringing Order To The Web.},
    type = {Technical Report},
+   volume = {1},
    year = {1999}
 }
 
@@ -1992,6 +1971,25 @@ and Sch{\"a}fer, Katrin},
    publisher = {Springer US},
    title = {Groups, Gossip, And The Evolution Of Language},
    year = {1997}
+}
+
+@article{graph2vec,
+   archiveprefix = {arXiv},
+   author = {Annamalai Narayanan and
+Mahinthan Chandramohan and
+Rajasekar Venkatesan and
+Lihui Chen and
+Yang Liu and
+Shantanu Jaiswal},
+   bibsource = {dblp computer science bibliography, https://dblp.org},
+   biburl = {https://dblp.org/rec/journals/corr/NarayananCVCLJ17.bib},
+   eprint = {1707.05005},
+   journal = {CoRR},
+   note = {\url{http://arxiv.org/abs/1707.05005}},
+   timestamp = {Mon, 15 Jul 2019 14:17:42 +0200},
+   title = {Graph2Vec: Learning Distributed Representations Of Graphs},
+   volume = {abs/1707.05005},
+   year = {2017}
 }
 
 @inproceedings{graphmetnew,
@@ -2482,6 +2480,7 @@ Mass Spectra Of Natural Organic Matter, The Van Krevelen Diagram}},
 }
 
 @misc{lapack,
+   author = {LAPACK},
    howpublished = {\url{http://www.netlib.org/lapack/}},
    journal = {online},
    note = {http://www.netlib.org/lapack/},
@@ -3433,6 +3432,7 @@ Chakravarty, and Cheng Tang}},
    doi = {10.21427/D73W37},
    journal = {online},
    note = {\url{http://dx.doi.org/10.21427/D73W37}},
+   school = {-},
    title = {{Infant Places, Spaces And Objects: Exploring The Physical In
 Learning Environments For Infants Under Two}},
    year = {2011}
@@ -4265,18 +4265,6 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    title = {The Net Of Reciprocal Influence: A Problem In Treating Sociometric Data},
    volume = {3},
    year = {1949}
-}
-
-@book{serendipity,
-   author = {Roberts, R.M.},
-   isbn = {9780471602033},
-   journal = {Wiley},
-   lccn = {lc88033638},
-   note = {\url{https://books.google.co.uk/books?id=hf57X0s4aPwC}},
-   publisher = {Wiley},
-   series = {Wiley Science Editions},
-   title = {Serendipity: Accidental Discoveries In Science},
-   year = {1989}
 }
 
 @article{shapinginfo,
