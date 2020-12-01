@@ -1831,6 +1831,19 @@ Max Welling},
    year = {2002}
 }
 
+@article{gecko,
+   author = {{Aumont}, B. and {Hodzic}, A. and {La}, S. and {Camredon}, M. and {Lannuque}, V. and {Lee-Taylor}, J.~M. and {Madronich}, S.},
+   booktitle = {AGU Fall Meeting Abstracts},
+   eid = {A23Q-04},
+   journal = {online},
+   month = {December},
+   note = {\url{https://ui.adsabs.harvard.edu/abs/2014AGUFM.A23Q..04A}},
+   pages = {A23Q-04},
+   title = {{Assessment Of The Gecko-A Modeling Tool And Simplified 3D Model Parameterizations For Soa Formation}},
+   volume = {2014},
+   year = {2014}
+}
+
 @article{gene,
    author = {Du, Jingcheng and Jia, Peilin and Dai, Yulin and Tao, Cui and
 Zhao, Zhongming and Zhi, Degui},
@@ -1957,13 +1970,12 @@ Matter Functionality}},
 
 @inbook{gossip,
    address = {Boston, MA},
-   author = {Dunbar, R. I. M.},
-   booktitle = {New Aspects of Human Ethology},
-   doi = {10.1007/978-0-585-34289-4_5},
-   editor = {Schmitt, Alain
+   author = {Dunbar, R. I. M., Schmitt, Alain
 and Atzwanger, Klaus
 and Grammer, Karl
 and Sch{\"a}fer, Katrin},
+   booktitle = {New Aspects of Human Ethology},
+   doi = {10.1007/978-0-585-34289-4_5},
    isbn = {978-0-585-34289-4},
    journal = {Springer US},
    note = {\url{https://doi.org/10.1007/978-0-585-34289-4_5}},
@@ -2630,6 +2642,19 @@ and Trott, Lowell},
    title = {Predictability: Does The Flap Of A Butterfly’S Wings In Brazil Set Off A Tornado In
 Texas? },
    year = {1972}
+}
+
+@article{losso3,
+   author = {Perry J. Hardin and Ryan R. Jensen},
+   doi = {https://doi.org/10.1016/j.ufug.2007.01.005},
+   issn = {1618-8667},
+   journal = {Urban Forestry and Urban Greening},
+   note = {\url{http://www.sciencedirect.com/science/article/pii/S1618866707000180}},
+   number = {2},
+   pages = {63 - 72},
+   title = {The Effect Of Urban Leaf Area On Summertime Urban Surface Kinetic Temperatures: A Terre Haute Case Study},
+   volume = {6},
+   year = {2007}
 }
 
 @article{loudrobust,
@@ -4057,6 +4082,18 @@ https://doi.org/10.1080/0022250X.1994.9990134
    year = {1994}
 }
 
+@article{reviewo3,
+   author = {Fitzky, Anne Charlott and Sandén, Hans and Karl, Thomas and Fares, Silvano and Calfapietra, Carlo and Grote, Rüdiger and Saunier, Amélie and Rewald, Boris},
+   doi = {10.3389/ffgc.2019.00050},
+   issn = {2624-893X},
+   journal = {Frontiers in Forests and Global Change},
+   note = {\url{https://www.frontiersin.org/article/10.3389/ffgc.2019.00050}},
+   pages = {50},
+   title = {The Interplay Between Ozone And Urban Vegetation—Bvoc Emissions, Ozone Deposition, And Tree Ecophysiology},
+   volume = {2},
+   year = {2019}
+}
+
 @article{rfrr,
    author = {Breiman, Leo},
    doi = {10.1023/A:1010933404324},
@@ -4265,6 +4302,18 @@ Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
    title = {The Net Of Reciprocal Influence: A Problem In Treating Sociometric Data},
    volume = {3},
    year = {1949}
+}
+
+@article{shady,
+   author = {Vesa Yli-Pelkonen and Viljami Viippola and Anna-Lea Rantalainen and JunQiang Zheng and Heikki Setälä},
+   doi = {https://doi.org/10.1016/j.atmosenv.2018.08.061},
+   issn = {1352-2310},
+   journal = {Atmospheric Environment},
+   note = {\url{http://www.sciencedirect.com/science/article/pii/S135223101830582X}},
+   pages = {151 - 159},
+   title = {The Impact Of Urban Trees On Concentrations Of Pahs And Other Gaseous Air Pollutants In Yanji, Northeast China},
+   volume = {192},
+   year = {2018}
 }
 
 @article{shapinginfo,

@@ -40,11 +40,16 @@ The next section looks at the four most common centrality metrics and explores t
 
 \subsection{The Master Chemical Mechanism (MCM)}\label{sec:metricmcm}
 
-The MCM, \citep{mcm}, is a near explicit representation of our foremost understanding of gas-phase tropospheric chemistry. The mechanism describes the oxidation of 143 primary emitted VOCs and the respective rates at which this occurs. It has been tested on over 300 chamber experiments and used as a benchmarking mechanism to assist the development of reduced mechanism, providing a useful means for the evaluation of air quality models \citep{defra1}.
-
-Version 3.3.1 of the MCM contains 5809 chemical species and 17224 reactions to describe them \citep{isopmcm}.
+The MCM, \citep{mcm}, is a near explicit representation of our foremost understanding of gas-phase tropospheric chemistry. The mechanism describes the oxidation of 143 primary emitted VOCs and the respective rates at which this occurs. It has been tested on over 300 chamber experiments and used as a benchmarking mechanism to assist the development of reduced mechanism, providing a useful means for the evaluation of air quality models \citep{defra1}. The current version (3.3.1) contains 5809 chemical species and 17224 reactions to describe them \citep{isopmcm}. However there there are still a number of weaknesses that need to be considered. Firstly there very little \ce{Cl} chemistry and no other halogens in the mechanism. Reactions with \ce{O2} are implicit as are \ce{RO2}-\ce{RO2} reactions, which are shown through the reaction with an \ce{RO2} pool.
 
 
+
+
+
+\subsection{Data Collection}\label{sec:scholar}
+
+To generate a dataset on papers related to the MCM. The academic search engine (Google Scholar \citep{scholar}) is queried for all articles containing the words \{ \emph{"Master", "Chemical", "Mechanism"} and \emph{"MCM"} \}. For each match, the first 100 pages of results are selected. Each of these contains ten articles, from which the first 100 pages of related articles are chosen.
+In taking the top 1000 citations for each page, a network of 15744 papers and 30178 citations\footnote{Note: this had the potential of returning up to 1000,000 nodes} is created. This process made use of an edited version of the  \emph{etudier} Github repository, \citep{web}.
 
 
 \begin{figure}[H]
@@ -54,13 +59,6 @@ Version 3.3.1 of the MCM contains 5809 chemical species and 17224 reactions to d
         \caption{\textbf{150 years of letters to Nature.} A visualisation showing how previous research is used to inspire future studies. Important discoveries (DNA, Cloning(frogs), Bio-Currents, Ozone Hole, Molecular Sieves and Exoplanets) are split into research which contributed to their formation (below), and the consequent papers produced from each discovery. Use of colour is used to emphasise the multi-disciplinary nature of prolific scientific discovery. Source: \citep{naturecover}}
         \label{fig:naturecover}
 \end{figure}
-
-
-
-\subsection{Data Collection}\label{sec:scholar}
-
-To generate a dataset on papers related to the MCM. The academic search engine (Google Scholar \citep{scholar}) is queried for all articles containing the words \{ \emph{"Master", "Chemical", "Mechanism"} and \emph{"MCM"} \}. For each match, the first 100 pages of results are selected. Each of these contains ten articles, from which the first 100 pages of related articles are chosen.
-In taking the top 1000 citations for each page, a network of 15744 papers and 30178 citations\footnote{Note: this had the potential of returning up to 1000,000 nodes} is created. This process made use of an edited version of the  \emph{etudier} Github repository, \citep{web}.
 
 
 \subsection{Visualising The Data.}
@@ -171,7 +169,7 @@ Applying the above method allows us to reduce the citation graph of 451 papers a
 \subsection{The Co-Authorship Network}
 An alternative to exploring which papers which are cited together are to look at their authors. Here undirected links are drawn between authors on the same paper. This style of analysis was used to show that the number of papers per author, and the total number of authors per paper can vary between research fields, \citep{newmancoauthor}. In combining this with a series of network centrality metrics, \citep{coauthornew} revealed that it is possible to discern promising researchers from both iter and Intra disciplinary groups.
 
-In building a co-authorship network for the MCM, we can identify authors who publish together\footnote{ Disclaimer: as mentioned earlier, not all authors for every paper were recorded by the web scraping algorithm} and highlight research groups who work with the MCM, \autoref{fig:authorgroup}. This shows how authors with a similar geographic location/institution are more likely to publish together. The largest cluster here falls under the MCM developer team, which resides between the University of Leeds and York. Next two German institutions which are heavily involved in the atmospheric chemistry field (Julich and Max Planck), followed by an assortment of Chinese authors, mainly centred around the Beijing or Hong Kong region.
+In building a co-authorship network for the MCM, we can identify authors who publish together\footnote{ Disclaimer: as mentioned earlier, not all authors for every paper were recorded by the web scraping algorithm} and highlight research groups who work with the MCM, \autoref{fig:authorgroup}. This shows how authors with a similar geographic location/institution are more likely to publish together. The largest cluster here falls under the MCM developer team, which resides between the University of Leeds and York. Next two German institutions which are heavily involved in the atmospheric chemistry field (FZ-Julich and Max Planck for Chemistry, Mainz), followed by an assortment of Chinese authors, mainly centred around the Beijing or Hong Kong region.
 
 
 \begin{figure}[H]
@@ -559,7 +557,7 @@ However, the potential for human/coding error, additional simplification and a n
 
 \subsection{A Practical Example Using The MCM}\label{sec:jacpractical}
 
-Taking a single equation from the MCM, we may calculate the Jacobian relationships between species and convert them into a graph. A randomly chosen ethane reaction (\autoref{eqn:line}) from a simple mechanism was chosen. It must be noted that in general, it is unusual in the MCM that alkyl radicals react rapidly and extremely well with \ce{O2} to from stabilised peroxy radicals, \citep{mcmorigin}. In general, the reaction would consist of the following two steps:
+Taking a single equation from the MCM, we may calculate the Jacobian relationships between species and convert them into a graph. A randomly chosen ethane reaction (\autoref{eqn:line}) from a simple mechanism was chosen. In general, the reaction consists of the following two steps:
  \ce{C2H6 + OH ->[\kappa_1] C2H5. + H2O}
 and \ce{C2H5. + O2 ->[\kappa_2] CH5O2}.
 
@@ -698,8 +696,8 @@ Since any loss edges contain a negative value (orange numbers), it is possible t
 After reversing the links, we see that concentration for the reaction between \ch{c2h6} and OH follow the paths:
 
 \begin{eqnarray}
-    \ce{OH ->[0.1] C2H6 ->[0.1] C2H5O2} \\[20pt]
-    \ce{C2H6 ->[2\times10^{-7}] OH ->[2\times10^{-7}] C2H5O2}
+    \ce{OH ->[C2H6][0.1] C2H5O2} \\[20pt]
+    \ce{C2H6 ->[OH][2\times10^{-7}] C2H5O2}
 \end{eqnarray}
 
 
@@ -729,7 +727,7 @@ As links in the graph are of the same units, we can simplify the equations by pr
 
 
 \section{Case Study}\label{sec:metriccase}
-In this section, the centrality metrics discussed in \autoref{sec:graphcentrality} are applied to a range of scenarios. These range from polluted urban environments such as London \citep{clfo} and Beijing \cite{aphh}, to marine and terrestrial forest- Cape Verde \cite{capeverde} and Borneo \citep{borneo}. We determine the main drivers for the chemistry and compare the species which are important across each simulation.
+In this section, the centrality metrics discussed in \autoref{sec:graphcentrality} are applied to a range of scenarios. These range from polluted urban environments such as London \citep{clfo} and Beijing \cite{aphh}, to marine and terrestrial forest- Cape Verde \citep{capeverde} and Borneo \citep{borneo}. We determine the main drivers for the chemistry and compare the species which are important across each simulation.
 
 \subsection{Establishing Initial Conditions From Observational Data}
 Within experimental data assimilation, it is not uncommon to face problems which result in unreliable or missing data. These can range from anything as little as measuring below the instrument sensitivity to powercuts and equipment damage/theft from the local wildlife. This can result in problems when analysing the results and combining them to create a simulation of the chemistry for that environment.
@@ -1116,7 +1114,7 @@ Using a graph with reversed links weighted by model results of a Jacobian is equ
 \centering
 \begin{tabular}{p{.6\textwidth}p{.2\textwidth}}
 \toprule
-Species & PageRank Ranking\\ \midrule   
+Species & PageRank Ranking\\ \midrule
 NC101CO   &  9.920000e-01 \\
 APINENE   &  9.210000e-06 \\
 NAPINBO   &  4.540000e-03 \\
