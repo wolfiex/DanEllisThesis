@@ -5,10 +5,12 @@ Warning: Reference `ch2' on page 15 undefined on input line 238.
 Warning: Reference `ch3' on page 15 undefined on input line 239.
 Warning: Reference `ch4' on page 15 undefined on input line 239.
 Warning: Reference `ch5' on page 15 undefined on input line 239.
-Warning: Reference `ch3' on page 37 undefined on input line 9.
-Warning: Reference `ch3' on page 37 undefined on input line 9.
-Warning: Citation `fgps' on page 45 undefined on input line 122.
-Warning: Reference `ch3' on page 47 undefined on input line 3.------------
+Warning: Reference `fig:graphc1' on page 25 undefined on input line 15.
+Warning: Reference `fig:imap2page' on page 25 undefined on input line 21.
+Warning: Reference `ch3' on page 38 undefined on input line 9.
+Warning: Reference `ch3' on page 38 undefined on input line 9.
+Warning: Citation `fgps' on page 43 undefined on input line 117.
+Warning: Reference `ch3' on page 45 undefined on input line 3.------------
 ------------
 This is BibTeX, Version 0.99d (TeX Live 2016)
 The top-level auxiliary file: glossary.aux
@@ -28,11 +30,11 @@ A level-1 auxiliary file: ./glossary.aux
 A level-1 auxiliary file: ./0_intro.aux
 The style file: apalike.bst
 A level-1 auxiliary file: ./6_conclusion.aux
-Illegal, another \bibstyle command---line 28 of file ./6_conclusion.aux
+Illegal, another \bibstyle command---line 30 of file ./6_conclusion.aux
  : \bibstyle
  :          {apalike}
 I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 29 of file ./6_conclusion.aux
+Illegal, another \bibdata command---line 31 of file ./6_conclusion.aux
  : \bibdata
  :         {bibtex}
 I'm skipping whatever remains of this command
