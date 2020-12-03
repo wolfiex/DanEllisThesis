@@ -1,34 +1,65 @@
-Warning: Reference `ch3' on page xiii undefined on input line 24.
-Warning: Reference `fig:skulls' on page 4 undefined on input line 19.
+Warning: Reference `ch1' on page xv undefined on input line 14.
 Warning: Reference `ch1' on page 15 undefined on input line 238.
 Warning: Reference `ch2' on page 15 undefined on input line 238.
-Warning: Reference `ch3' on page 15 undefined on input line 239.
 Warning: Reference `ch4' on page 15 undefined on input line 239.
 Warning: Reference `ch5' on page 15 undefined on input line 239.
-Warning: Reference `fig:graphc1' on page 25 undefined on input line 15.
-Warning: Reference `fig:imap2page' on page 25 undefined on input line 21.
-Warning: Reference `ch3' on page 38 undefined on input line 9.
-Warning: Reference `ch3' on page 38 undefined on input line 9.
-Warning: Citation `fgps' on page 43 undefined on input line 117.
-Warning: Reference `ch3' on page 45 undefined on input line 3.------------
+Warning: Reference `sec:chemgraph' on page 24 undefined on input line 3.
+Warning: Reference `syntatic' on page 24 undefined on input line 3.
+Warning: Reference `ch1' on page 24 undefined on input line 9.
+Warning: Reference `ch1' on page 24 undefined on input line 9.
+Warning: Reference `ch2' on page 25 undefined on input line 19.
+Warning: Reference `sec:visbg' on page 25 undefined on input line 27.
+Warning: Reference `ch2' on page 25 undefined on input line 27.
+Warning: Reference `ch2' on page 44 undefined on input line 405.
+Warning: Reference `ch2' on page 47 undefined on input line 446.
+Warning: Reference `sec:ae' on page 58 undefined on input line 751.
+Warning: Reference `fig:vk' on page 74 undefined on input line 980.
+Warning: No autoref name for `algorithm' on input line 1047.
+Warning: Reference `ch1' on page 85 undefined on input line 1193.
+Warning: Reference `ch2' on page 85 undefined on input line 1193.
+Warning: Reference `fig:graphc1' on page 85 undefined on input line 1197.
+Warning: Reference `ch4' on page 86 undefined on input line 1201.
+Warning: Reference `fig:graphc1' on page 99 undefined on input line 15.
+Warning: Reference `fig:imap2page' on page 99 undefined on input line 21.------------
 ------------
-This is BibTeX, Version 0.99d (TeX Live 2016)
+This is BibTeX, Version 0.99d (TeX Live 2015)
+The top-level auxiliary file: 0_intro.aux
+The style file: apalike.bst
+Database file #1: bibtex.bib
+Warning--empty booktitle in finlayson
+(There was 1 warning)
+
+This is BibTeX, Version 0.99d (TeX Live 2015)
+The top-level auxiliary file: 3_centrality.aux
+The style file: apalike.bst
+Database file #1: bibtex.bib
+
+This is BibTeX, Version 0.99d (TeX Live 2015)
+The top-level auxiliary file: 6_conclusion.aux
+The style file: apalike.bst
+Database file #1: bibtex.bib
+
+This is BibTeX, Version 0.99d (TeX Live 2015)
 The top-level auxiliary file: glossary.aux
 I found no \citation commands---while reading file glossary.aux
 I found no \bibdata command---while reading file glossary.aux
 I found no \bibstyle command---while reading file glossary.aux
 (There were 3 error messages)
 
-This is BibTeX, Version 0.99d (TeX Live 2016)
-The top-level auxiliary file: 6_conclusion.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-
-This is BibTeX, Version 0.99d (TeX Live 2016)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: ./glossary.aux
 A level-1 auxiliary file: ./0_intro.aux
 The style file: apalike.bst
+A level-1 auxiliary file: ./3_centrality.aux
+Illegal, another \bibstyle command---line 285 of file ./3_centrality.aux
+ : \bibstyle
+ :          {apalike}
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 286 of file ./3_centrality.aux
+ : \bibdata
+ :         {bibtex}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: ./6_conclusion.aux
 Illegal, another \bibstyle command---line 30 of file ./6_conclusion.aux
  : \bibstyle
@@ -40,12 +71,5 @@ Illegal, another \bibdata command---line 31 of file ./6_conclusion.aux
 I'm skipping whatever remains of this command
 Database file #1: bibtex.bib
 Warning--empty booktitle in finlayson
-(There were 2 error messages)
-
-This is BibTeX, Version 0.99d (TeX Live 2016)
-The top-level auxiliary file: 0_intro.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-Warning--empty booktitle in finlayson
-(There was 1 warning)
+(There were 4 error messages)
 

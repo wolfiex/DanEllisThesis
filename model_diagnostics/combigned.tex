@@ -1042,7 +1042,7 @@ Beijing consists mainly of Quinones and Dialdehydes, which are both derivatives 
 
 
 
-\section{Calculating Production Sensitivity Using Personalised Page Rank.}
+\section{Causality analysis using Personalised Page Rank.}
 
 In \autoref{sec:pagerank}, the results of the PageRank algorithm was obtained by solving for the eigenvalues and vectors of the google matrix. It was also mentioned that an equivalent method to get a result might be obtained by propagating the one's vector (a 1D vector of unity) in small increments (Equation \autoref{eqn:forwards}). This works much like the integrator within a chemical box model, except rather than updating the species concentration with each time step, we move information between each node.
 
@@ -1182,9 +1182,9 @@ In assessing the source of a species production, we can use the Jacobian matrix,
 
 \begin{figure}[H]
      \centering
-     \includegraphics[width=.7\textwidth]{figures_c3/ch2_distance.pdf}
-        \caption{\textbf{Showing total the influence from each species on HCHO for a sample MCM subset of Butane.}  }
-        \label{fig:backtrace}
+     \includegraphics[width=1\textwidth]{newfigs/ch2_distance_links.pdf}
+        \caption{\textbf{Showing total the influence from each species on HCHO for a sample MCM subset of Butane.} Species importance is determined using the reverse pagerank algorithm. It is calculated by taking a snapshot of a chemical simulation and rendered using the transpose of the Jacobian relational matrix. We then use a customised page rank algorithm to look at where flow goes from HCHO (the large node in the midde). A larger node and thicker link suggests a greater influence on the net change of HCHO.  }
+        \label{fig:backtrace}  
 \end{figure}
 
 
