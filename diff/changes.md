@@ -3,7 +3,7 @@
 ## Thesis.tex
 #### diff --git a/thesis.tex b/thesis.tex
 
-#### index 992121e..f497259 100644
+#### index 992121e..f9d4f42 100644
 
 ###### --- a/thesis.tex
 
@@ -29,9 +29,9 @@
 
 ##### +Atmospheric chemistry mechanisms play a pivotal role in our understanding of societal problems such as air pollution, climate change and stratospheric ozone loss. This thesis explores the benefits of representing these mechanisms in terms of a mathematic graph (or network) which connects species (nodes) through reactions (edges). We use the Dynamically Simple Model of Atmospheric Chemical Complexity and the Master Chemical Mechanism to explore the a number of real world senarios - using graph theory and machine learning to visualise, understand and analyse the underlying chemistry of the lower atmosphere.\\
 
-###### -Chapter one discusses the use of various methods in the presentation of complex datasets. Chapter two applies the sociograph framework to atmospheric mechanisms and determines the best way in which to present these. Chapter three takes a more mathematical approach, comparing the results of graph centrality metrics applied to model simulation resuts against more traditional diagnostic methods. The use of graph theory is continued in Chapter four, where graph clustering and natural language processing is used to identify pairs of nodes with similar patterns. Finally Chapter five ventures into the field of chemical informatics, and looks at the use of different representations of species structure within machine learning models (PCA, t-SNE and AutoEncoders) with an aim to merging the content of this thesis into a Graph Convoluted Neural Network in future work.\\
-
 ##### +We begin by exploring different visualisation techniques to depict chemistry within the atmosphere. It is found that the sociograph framework provides the most (visually) intuitive delineation of the species and their reactions. For large, complex systems, this type of qseudo-qualitative analysis has its limitations - physical and cognitive. Instead, the relationships between species in the network are quantified using graph centrality metrics and then compared against well-established methods such as the jacobian and rate of production analysis. Further development of graph theory allows us to couple natural language processing, network decomposition, and clustering to identify species with similar lifetimes, reaction styles, or temporal profiles. \\
+
+###### -Chapter one discusses the use of various methods in the presentation of complex datasets. Chapter two applies the sociograph framework to atmospheric mechanisms and determines the best way in which to present these. Chapter three takes a more mathematical approach, comparing the results of graph centrality metrics applied to model simulation resuts against more traditional diagnostic methods. The use of graph theory is continued in Chapter four, where graph clustering and natural language processing is used to identify pairs of nodes with similar patterns. Finally Chapter five ventures into the field of chemical informatics, and looks at the use of different representations of species structure within machine learning models (PCA, t-SNE and AutoEncoders) with an aim to merging the content of this thesis into a Graph Convoluted Neural Network in future work.\\
 
 ##### +Having explored aspects of mechanism analysis, visualisation and reduction, we examine how varying representations of species structure can affect the patterns highlighted by unsupervised machine learning models. This is done by visualising them in 2D space and serves as a precursor to potential future work involving Graph Convoluted Neural Networks - thus consolidating the contents of this thesis.\\
 
@@ -50,40 +50,21 @@
 
 ####  \newpage
 
-###  -318,27 +325,27 
+###  -318,7 +325,7 
 ####  % Introduction 0
 
 ####  \include{./0_intro}
 
 ####   \include{./1_visual}
 
-####  % Chapter 2
+###  -331,14 +337,13 
+####  % Chapter 4 - done
 
-####  \include{./2_graphs}
+####   \include{./4_lumping}
 
-##### +% % Chapter 3
+####  % Chapter 5
 
-##### +% \include{./3_centrality}
-
-###### -% Chapter 3
-
-###### -\include{./3_centrality}
-
-###### -% Chapter 4 - done
-
-###### - \include{./4_lumping}
-
-###### -% Chapter 5
-
-###### - \include{./5_DR}
-
-##### +% % Chapter 4 - done
-
-##### +%  \include{./4_lumping}
-
-##### +% % Chapter 5
-
-##### +%  \include{./5_DR}
+####   \include{./5_DR}
 
 ####  % Conclusion
 
@@ -93,7 +74,7 @@
 
 ####  \begin{appendices}
 
-###  -357,7 +364,7 
+###  -357,7 +362,7 
 ####  % \bibliographystyle{apalike}
 
 ####  % \bibliography{bibtex}
@@ -159,7 +140,7 @@
 ## 1_visual.tex
 #### diff --git a/visintro/combigned.tex b/visintro/combigned.tex
 
-#### index 8026d7b..8d81357 100644
+#### index 8026d7b..61c4282 100644
 
 ###### --- a/visintro/combigned.tex
 
@@ -193,7 +174,20 @@
 
 ####  \end{figure}
 
-###  -258,9 +258,9 
+###  -210,8 +210,7 
+####  \textit{It is worth noting that segment sizes do not represent the number of species undergoing a specific reaction pathway, but rather the percentage of all possible pathways which follow that route. This is because species often undergo a range of reactions, each of which counts as an individual weighting. It is for this reason that even though almost all\footnote{ Except for any inorganic species.} contain a C-H bond, hydrogen abstraction does not consume the whole graph. Many species have multiple possible pathways in which they may react, and the chord diagram presents the likeliness of a rection for all possible methods of reaction for all species.
+
+###### -From this, we see that hydroxy reactions are the most common with C-H bonds being in abundance\footnote{This is seen within the graph layout \autoref{fig:mcmfull}}. We also see that having another type of reaction is also just as probable, with a third of the most utilised branches within the MCM protocol falling under species containing at least one Carbonyl group.
+
+###### -Next, we look at the co-occurrence of branches for different species. These are represented using the area of a circle connecting two arcs (a chord). Each chord has two edges connecting two arcs\footnote{ except for self-loops, although these are addressed below.}.  It is possible to discern the percentage of items going between these and other branches by comparing the width of each chord to its parent arc. Here, for example, we see a roughly even split between species with a C-H bond (i.e. all species) and every other group. This suggests an even distribution of reaction types between species.
+
+##### +From this, we see that hydroxy reactions are the most common with C-H bonds being in abundance\footnote{This is seen within the graph layout \autoref{fig:mcmfull}}. Additionally we find that when applying the MCM protocol, a third of species contain at least one carbonyl group. Next, we look at the co-occurrence of branches for different species. These are represented using the area of a circle connecting two arcs (a chord). Each chord has two edges connecting two arcs\footnote{ except for self-loops, although these are addressed below.}.  It is possible to discern the percentage of items going between these and other branches by comparing the width of each chord to its parent arc. Here, for example, we see a roughly even split between species with a C-H bond (i.e. all species) and every other group. This suggests an even distribution of reaction types between species.
+
+####  This means that in comparing the arc length of each chord, we can visually determine the percentage of group A which relates to its partner group B. Finally it is also possible to determine the number of items in a group which contain themselves. Chemically these are species with multiples of one functional group that undergo a specific reaction pathway more than one time. Although these reactions will usually be combined within a mechanism (to avoid duplication), their rate would be increased accordingly.
+
+####  \begin{figure}[H]
+
+###  -258,9 +257,9 
 ####  \autoref{fig:ho2} and \autoref{fig:oh} show arc diagrams where the reactions of interest (photolysis and OH reactions respectively) highlighted in both colour and opacity. These enable us to see patterns between the radical cylcing of \ce{OH -> HO2} chemistry (\autoref{fig:rxnho2oh}). Here the cyclic reaction shown between the dashed lines corresponds to the reaction of \ch{RO2 <->[HO2][O2] ROOH} (\autoref{fig:rxnho2oh}).
 
 ###### -Applying the same methodology to photolysis and hydroxide reactions, the production of species containing fewer functional groups is seen in \autoref{fig:ohhv}. Within the highlighted reactions, it is seen that a ROOH species undergoes a reaction with OH or photolyses (\autoref{fig:rxnohhv}). In the OH reaction, Hydrogen abstraction is performed to produce an RO2 species and water, \ch{ROOH ->[OH] RO2 + H2O}. Photolysis reactions, however, photolyse the double bond, \ch{ROOH ->[hv] RO2 + HO2}, reducing the number of functional groups - producing a larger arc. It should be mentioned that the ROOH can also react with \ch{o2} to produce an RO2, although this has not been highlighted.
@@ -206,7 +200,7 @@
 
 ####  \textit{\textbf{NOTE:} A downside to the arc diagrams format that has been chosen is that for reactions between species of the same number of functional groups, there is no set direction. }
 
-###  -350,7 +350,7 
+###  -350,7 +349,7 
 ####           \caption{Hydroxide}
 
 ####           \label{fig:oh2}
@@ -221,7 +215,7 @@
 
 ####  \end{figure}
 
-###  -368,7 +368,7 
+###  -368,7 +367,7 
 ####           \centering
 
 ####              \scalebox{.7}{
@@ -238,7 +232,7 @@
 
 ####              \arrow{0}[,0] \chemfig{\+ \ce{NO2}}
 
-###  -404,24 +404,69 
+###  -404,24 +403,69 
 ##### +\newpage
 
 ####  \subsubsection{The Traditional Network Graph}\label{sec:tradnetconc}
@@ -334,7 +328,7 @@
 ## 2_graphs.tex
 #### diff --git a/visanalytics/combigned.tex b/visanalytics/combigned.tex
 
-#### index f6c9ce1..15cd3f8 100644
+#### index f6c9ce1..c585f13 100644
 
 ###### --- a/visanalytics/combigned.tex
 
@@ -384,6 +378,21 @@
 
 ####   Syntactic representation considers how best to distribute information on a page for maximum impact. This can be seen between the force-directed graph (top) and geographical location (bottom) layouts in \autoref{fig:worldmap}. Although the geographical layout gives a more accurate representation of the distances between unconnected nodes (airports), a force-directed graph provides greater insight into the relationships (flights) between each airport. This highlights the importance of choosing a suitable syntactic representation to highlight the features of interest. The remainder of this section discusses the syntactic choices required for the visualisation of a complex chemical mechanism.
 
+###  -173,7 +173,7 
+####       \includegraphics[width=\textwidth]{figures_c1/layout/mercator.png}
+
+####       \caption{Mercator}
+
+####       \end{subfigure}
+
+###### -        \caption{\textbf{A selection of map projections.} These have been created using DataDrivenDocuments \citep{d3} and show a range of methods for mapping the spheroid shape of the Earth onto a 2D plane. }
+
+##### +        \caption{\textbf{A selection of map projections.} These have been created using DataDrivenDocuments \citep{d3js} and show a range of methods for mapping the spheroid shape of the Earth onto a 2D plane. }
+
+####        \label{fig:projections}
+
+####  \end{figure}
+
 ###  -339,7 +339,7 
 ####  \subsubsection{Distribution Of Primary Emitted VOCs}
 
@@ -393,7 +402,16 @@
 
 ####  \subsubsection{Calculation Of Spatial Clustering}\label{sec:nodedensitya}
 
-###  -791,7 +791,7 
+###  -630,7 +630,7 
+####  \subsubsection{Edge Bundling }
+
+###### -Pioneered by \cite{bundlepioneer}, edge bundling techniques are an effective way to reduce visual clutter. Much like a force graph, edges are represented as a string of lined points. This allows for edges to be pulled together (attracted to one another) and produces a visualisation akin to moving water droplets on a hydrophobic surface. \autoref{fig:edgebundling} shows how in changing the amount of attraction between edges, it is possible to reduce clutter in a visualisation.
+
+##### +Pioneered by \cite{edgebundle}, edge bundling techniques are an effective way to reduce visual clutter. Much like a force graph, edges are represented as a string of lined points. This allows for edges to be pulled together (attracted to one another) and produces a visualisation akin to moving water droplets on a hydrophobic surface. \autoref{fig:edgebundling} shows how in changing the amount of attraction between edges, it is possible to reduce clutter in a visualisation.
+
+####  \begin{figure}[H]
+
+###  -791,13 +791,13 
 ####       \includegraphics[width=\textwidth]{figures_c1/tap3/ch4_weighted_s1-eps-converted-to.pdf}
 
 ####       \caption{Connected weighted (flux)}
@@ -408,10 +426,79 @@
 
 ####  \end{figure}
 
+####  \subsection{A Model Of Beijing}
+
+###### -To perform a sensitivity study on the initial positions of nodes within the force atlas algorithm a graph consisting of links and weightings is constructed using a box model simulation of the Beijing summer environment (mid-day) and feed it the gephi software \citep{gephi} - an open-source software designed for the exploration of networks. We then script the java code to perform the functions in \autoref{fig:flowrepeat}. As part of this, nodes are initiated with a random position; the ForceAtlas2 layout is then run and then the graph is rotated and translated such that it is centred around carbon monoxide and has a 45-degree angle between this and formaldehyde. This step constrains the general orientation of the graph, allowing us to analyse the generated graphs for global and local minima. The final step is to save a copy of the generated graph layout and repeat to generate a data set, a subset of which is shown in  \autoref{fig:all}. These are discussed further in \autoref{sec:patternmatch}.
+
+##### +To perform a sensitivity study on the initial positions of nodes within the force atlas algorithm a graph consisting of links and weightings is constructed using a box model simulation of the Beijing summer environment (mid-day) and feed it the gephi software \citep{gephi} - an open-source software designed for the exploration of networks. We then script the java code to perform the functions in \autoref{fig:flowrepeat}. As part of this, nodes are initiated with a random position; the ForceAtlas2 layout is then run and then the graph is rotated and translated such that it is centred around carbon monoxide and has a 45-degree angle between this and formaldehyde. This step constrains the general orientation of the graph, allowing us to analyse the generated graphs for global and local minima. The final step is to save a copy of the generated graph layout and repeat to generate a data set, a subset of which is shown in  \autoref{fig:allsamples}. These are discussed further in \autoref{sec:patternmatch}.
+
+####      \begin{figure}[H]
+
+####           \centering
+
+###  -810,21 +810,21 
+####           \centering
+
+####       \includegraphics[width=\textwidth]{figures_c1/beijingtest/10_900.png}
+
+####       \caption{\textbf{A sample of 224 (out of the 2000) graphs generated using the ForceAtlas2 algorithm.} These represent the conditions of a spun up simulation of Beijing at noon. The shapes of each graph, and general shapes are discussed in \autoref{sec:patternmatch} and \autoref{sec:netshape}.}
+
+###### -     \label{fig:all}
+
+##### +     \label{fig:allsamples}
+
+####       \end{figure}
+
+####  \subsubsection{Similarity Between Graph Shape}\label{sec:patternmatch}
+
+###### -Although through the use of manual intervention, it is possible to perform a superficial level of shape analysis, our cognitive capabilities do not allow us to perform this task for all the simulations of \autoref{fig:all}- less so the entire 2000 graphs in the dataset. To overcome this problem, we rely on a method of machine learning called t-Distributed Stochastic Neighbor Embedding (t-SNE) - described in \autoref{sec:overcrowd} and is the foundation of the tsNET layout algorithm. This is a dimensionality reduction technique used in the automatic categorisation of images or photographs \citep{truthandbeauty,sketchy}.
+
+##### +Although through the use of manual intervention, it is possible to perform a superficial level of shape analysis, our cognitive capabilities do not allow us to perform this task for all the simulations of \autoref{fig:allsamples}- less so the entire 2000 graphs in the dataset. To overcome this problem, we rely on a method of machine learning called t-Distributed Stochastic Neighbor Embedding (t-SNE) - described in \autoref{sec:overcrowd} and is the foundation of the tsNET layout algorithm. This is a dimensionality reduction technique used in the automatic categorisation of images or photographs \citep{truthandbeauty,sketchy}.
+
+####  The input for the t-SNE for each dataset is a flattened (1 dimensional) representation of the pixels in the image - we start and by taking a binary matrix representing each image, split it up into rows, and glue these together. The pixelmap for each image is then fed into the t-SNE algorithm from the Scikit Learn package \citep{scikit-learn}. This reduces the logical list of pixels for each image into a two-dimensional representation of their similarity. We plot each file, for its $(x,y)$ coordinate, and isolate clusters of similarity using density contours in \autoref{fig:density}.
+
+####      \begin{figure}[H]
+
+####           \centering
+
+####      \includegraphics[width=.6\textwidth]{figures_c1/beijingtest/density.png}
+
+###### -     \caption{\textbf{A normalised scatter plot of 2D space produced by the t-SNE algorithm.} Each triangle represents a different arrangement of the MCM nodes shown in \autoref{fig:all}, and the colours/density contours show the regions in which we find similar images/graphs. Cluster numbers correspond to the groups in \autoref{fig:densityfig}. }
+
+##### +     \caption{\textbf{A normalised scatter plot of 2D space produced by the t-SNE algorithm.} Each triangle represents a different arrangement of the MCM nodes shown in \autoref{fig:allsamples}, and the colours/density contours show the regions in which we find similar images/graphs. Cluster numbers correspond to the groups in \autoref{fig:densitypic}. }
+
+####       \label{fig:densty}
+
+####       \end{figure}
+
+###  -860,7 +860,7 
+####  \subsubsection{Network Branch Classification}\label{sec:netshape}
+
+###### -In \autoref{sec:patternmatch} it was seen that there exist a certain branch pattern that emerges from the structure of the MCM (\autoref{fig:densitypic}). Upon manual inspection of the simulations (\autoref{fig:all}) many graphs appear to contain three branches for each graph - using this it may be hypothesized that these are a result of the mechanism, and by consequence the chemistry it describes.
+
+##### +In \autoref{sec:patternmatch} it was seen that there exist a certain branch pattern that emerges from the structure of the MCM (\autoref{fig:densitypic}). Upon manual inspection of the simulations (\autoref{fig:allsamples}) many graphs appear to contain three branches for each graph - using this it may be hypothesized that these are a result of the mechanism, and by consequence the chemistry it describes.
+
+####  To test for this, we categorise all primary emitted species into Alkanes, Alkenes, Aromatics and Terpenes. All nodes and links in close proximity are regarded as products of these species and are placed within the same group. Using a randomly selected graph from the dataset, the network is separated spatially, and nodes within the Voronoi cell (These are described in \autoref{sec:nodedensitya}) of a primary emitted species are coloured similarly.
+
+###  -869,7 +869,7 
+####      \begin{figure}[H]
+
+####           \centering
+
+####      \includegraphics[width=\textwidth,trim={0 4cm 0 4cm},angle=-90]{figures_c1/beijingtest/graphgroups.pdf}
+
+###### -     \caption{\textbf{Highlighting the groups of species, and their products within one of the MCM network graphs from \autoref{fig:all}} These are {\color{DarkGoldenrod} Aromatics (gold)} , {\color{DarkTurquoise} Terpenes (turquoise) } and {\color{OrangeRed} Alkane}/{\color{RoyalBlue} Alkene  } carbon chains (red/blue)}
+
+##### +     \caption{\textbf{Highlighting the groups of species, and their products within one of the MCM network graphs from \autoref{fig:allsamples}} These are {\color{DarkGoldenrod} Aromatics (gold)} , {\color{DarkTurquoise} Terpenes (turquoise) } and {\color{OrangeRed} Alkane}/{\color{RoyalBlue} Alkene  } carbon chains (red/blue)}
+
+####       \label{fig:fncolour}
+
+####       \end{figure}
+
 ## 3_centrality.tex
 #### diff --git a/model_diagnostics/combigned.tex b/model_diagnostics/combigned.tex
 
-#### index c021b18..72ec6b0 100644
+#### index c021b18..8f401f2 100644
 
 ###### --- a/model_diagnostics/combigned.tex
 
@@ -613,7 +700,45 @@
 
 ##### +This forms a `sparse' Jacobian. Substituting numbers from subset mechanisms containing the methane and ethane precursors, we get \autoref{eqn:exjacsp}.
 
-###  -817,7 +817,7 
+###  -754,7 +754,7 
+####  \begin{quote}
+
+####  \textit{
+
+###### -\textbf{Example analogy:} Backpropagation can be likened to the iterative calibration of scientific instrumentation. In the field of atmospheric chemistry, laser-induced fluorescence is used to calculate species concentrations and reaction rates within the troposphere, \citep{lif1,lif2}. Here the frequency of a laser can be adjusted in contrast with a known target (e.g. an amount of \ce{SO2}) to produce a response curve showing where the maximum resonance occurs.\\
+
+##### +\textbf{Example analogy:} Backpropagation can be likened to the iterative calibration of scientific instrumentation. In the field of atmospheric chemistry, laser-induced fluorescence is used to measure species concentrations and reaction rates within the troposphere, \citep{lif1,lif2}. Here the frequency of a laser can be tuned to a resonant frequency of a known target (e.g. \ce{OH}, \ce{NO2} and \ce{SO2}) to produce a response curve.\\
+
+####  Similarly, a neural network can be `trained' (calibrated).
+
+####  This is done through the use of a `training dataset' - a set of input-output pairings which represent a random selection of 2/3rds of the total dataset. Next, the neurons within each layer (similar to the potentiometer dials on an instrument) are adjusted in sequence through the layers to match the known result (a standard of known concentration) to the input values provided. This process is repeated until for many iterations, or until a sufficiently `good' prediction is attained for the entire training dataset (early termination). The power of ANNs comes from the ability to adjust neuron thresholds whilst moving both forwards and backwards through the network (Note: predictions of an MLP are still only passed forwards). Finally, model performance is evaluated against the remaining 1/3rd of the total dataset.
+
+###  -769,7 +769,7 
+####  \end{figure}
+
+####  \subsubsection{Applying The Mlpregressor To Observational Data}
+
+###### -In the application of any type of machine aided algorithms, it is important to evaluate the results provided. In this section, the results of 12 years of data collected as part of the [CAPE VERDE CAMPAIGN] are shown (these contain measurements spanning the entirety of 12 years, which produce the clearest tests for the algorithm). A MLPRegressor of 10 hidden layers, and a hyperbolic tan (tanh) activation function is used \autoref{sec:appendix:tanh}. Additionally, the limited-memory Broyden–Fletcher–Goldfarb–Shanno (l-BFGS) solver (a quasi-newton method which minimises the inverse of the Hessian matrix\footnote{ The hessian is a square matrix of second-order partial derivatives of a scalar-valued function/field describing the local curvature of a function (of many variables).} to steer through space and obtain a solution) and an adaptive learning rate\footnote{Each time the model improvement fails to decrease the learning loss, the learning rate is reduced by 1/5. This means smaller jumps are made towards the curve peak. } is used.
+
+##### +In the application of any type of machine aided algorithms, it is important to evaluate the results provided. In this section data collected from Cape Verde (\citep{capeverde}) containing 12 years of observations are shown. A MLPRegressor of 10 hidden layers, and a hyperbolic tan (tanh) activation function is used \autoref{apx:tanh}. Additionally, the limited-memory Broyden–Fletcher–Goldfarb–Shanno (l-BFGS) solver (a quasi-newton method which minimises the inverse of the Hessian matrix\footnote{ The hessian is a square matrix of second-order partial derivatives of a scalar-valued function/field describing the local curvature of a function (of many variables).} to steer through space and obtain a solution) and an adaptive learning rate\footnote{Each time the model improvement fails to decrease the learning loss, the learning rate is reduced by 1/5. This means smaller jumps are made towards the curve peak. } is used.
+
+####  The input of the regressor is in the form of a month and an hour, to represent each measurement. This allows it to find not only daily trends but also seasonal trends within the data. Once trained, the regressor is then used to predict a diurnal profile for each month based on the observational data provided. For simplicity $\log_{10}$ values of the concentrations obtained have been used. The predicted MLPRegressor line is compared to a transparent scatterplot for all the results. In addition to this, a boxplot showing the Inter Quartile Range (The range between the 25th and 75th percentile), median and mean (green line) plotted alongside to evaluate the predictor output. In this study, we only take the values for the month of June (or closest available depending on the dataset).
+
+###  -806,18 +806,18 
+####  \subsubsection{Model Initialisation Procedure}
+
+###### -The aim is to generate a set of initiation concentrations which are representative of the species found for different environments around the world. In this section, we are not interested in the exact concentration modelling for specific times or scenarios. Instead, we seek to generate representative of the processed chemistry under a range of conditions.
+
+##### +The aim is to generate a set of initiation conditions which are representative of the species found for different environments around the world. In this section, we are not interested in the exact concentration modelling for specific times or scenarios. Instead, we seek to generate representative of the processed chemistry under a range of conditions.
+
+####  Species concentrations are extracted from an MLP regressor trained on observational data for each scenario. Each concentration is that of noon local time from the generated diurnal from summer observations at each location. This produces a monthly error of $\pm 2 months$ from June. As both nitrogen oxide and dioxide are supplied, the total NO$_x$ for each simulation are \emph{not} constrained. The initial conditions are shown in \autoref{tab:icsmetric}.
+
+###### -In general observational measurements are not able to detect all the species presented within the MCM. This means that to be able to compare model scenarios, the chemistry must first be spun up. In propagating the chemistry forwards in time, primarily emitted and measured species are broken up forming the intermediate species which exist within a mechanism. To reach a steady-state, the model is initiated at noon, and the observational concentrations are rest every 24 hours. For each diurnal, the fractional difference between the concentrations at each day are compared. If the difference between these is less than 0.001, the model is left to run unconstrained for five days (right of the dashed line in \multiref{fig:ccape}{fig:cbeijing}). Model results are then taken after three days of unconstrained runs. The reason for this is that the total RO$_2$ concentration takes longer to stabilise in the polluted environments (London and Beijing). This falls into a periodic cycle beginning noon on the third day and can provide a representation of the processed chemistry within each environment.
+
+##### +In general observational measurements are not able to detect all the species presented within the MCM. This means that to be able to compare model scenarios, the chemistry must first be spun up. In propagating the chemistry forwards in time, primarily emitted and measured species are broken up forming the intermediate species which exist within a mechanism. To reach a steady-state, the model is initiated at noon, and the observational concentrations are rest every 24 hours. For each diurnal, the fractional difference between the concentrations at each day are compared. If the difference between these is less than 0.001, the model is left to run unconstrained for five days (right of the dashed line in \autoref{fig:cbeijing}). Model results are then taken after three days of unconstrained runs. The reason for this is that the total RO$_2$ concentration takes longer to stabilise in the polluted environments (London and Beijing). This falls into a periodic cycle beginning noon on the third day and can provide a representation of the processed chemistry within each environment.
+
+####  \textit{NOTE: It should be noted that some of the concentration plots may appear to lose their diurnal dependability. This may be attributed to the changing order of magnitude of the concentrations, and that the species are still responding as expected. }
+
 ####  \subsubsection{Extracting The Required Results}
 
 ####  Model diagnostics such as concentration and the net flux passing through a species may be extracted directly from the DSMACC box model. These provide the baseline comparison and can be directly compared to the graph metrics. Species concentration tells us the abundance of different species, and the net-flux tells us how fast this is changing in time.
@@ -624,7 +749,118 @@
 
 ####  \input{metricics.tex}
 
-###  -1110,7 +1110,7 
+###  -832,7 +832,7 
+####  \begin{figure}[H]
+
+####      \centering
+
+####  \includegraphics[width=.9\textwidth]{figures_c3/mlpregressor/conc_clfo.pdf}
+
+###### -\caption{\textbf{The concentration profile for London.}This shows a the change in concentration over time for HO$_x$,NO$_x$,Ozone and RO$_2$ species for a simulation run generated by the mlpregressor. Left of the dashed line shows the last 6 days of spinup, where the intial concentrations are reset at noon each day until the species fractional difference is less than 0.001 .}
+
+##### +\caption{\textbf{The mixing ratio profile for London.}This shows a the change in mixing ratio over time for HO$_x$,NO$_x$, HCHO,Ozone and RO$_2$ species for a simulation run generated by the mlpregressor. Left of the dashed line shows the last 6 days of spinup, where the values are reset at noon each day until the species fractional difference is less than 0.001 .}
+
+####  \label{fig:clondon}
+
+####  \end{figure}
+
+###  -842,7 +842,7 
+####  \begin{figure}[H]
+
+####      \centering
+
+####  \includegraphics[width=.9\textwidth]{figures_c3/mlpregressor/conc_beijing.pdf}
+
+###### -\caption{\textbf{The concentration profile for Beijing.}This shows the change in concentration over time for HO$_x$, NO$_x$, Ozone and RO$_2$ species for a simulation run generated by the MLPRegressor. Left of the dashed line shows the last six days of spinup, where the initial concentrations are reset at noon each day until the species fractional difference is less than 0.001 .}\label{fig:cbeijing}
+
+##### +\caption{\textbf{The mixing ratio profile for Beijing.}This shows the change in mixing ratio over time for HO$_x$, NO$_x$, HCHO, Ozone and RO$_2$ species for a simulation run generated by the MLPRegressor. Left of the dashed line shows the last six days of spinup, where the initial values are reset at noon each day until the species fractional difference is less than 0.001 .}\label{fig:cbeijing}
+
+####  \end{figure}
+
+####  \newpage
+
+###  -949,10 +949,10 
+####  Individual categories are split between traditional metrics and graph centrality metrics. To represent the importance of a species, the following values may be extracted through the use of a simple box model:
+
+####  \begin{itemize}
+
+###### -\item[-] \textbf{Concentration} - This describes the abundance of a species within the atmosphere.
+
+###### -\item[-] \textbf{Net flux} - This describes the rate of net (absolute) change of concentration over time for a species.
+
+###### -\item[-] \textbf{Absolute flux} - Some species may have a large flux going through them (production and loss), resulting in a small net flux. This sums the production and loss fluxes.
+
+###### -\item[-] \textbf{ influence} - Influence is the total magnitude of an effect that changing a species concentration by 1\% would have on other species within the network. Since the graph is generated using the Jacobian matrix, an alternative method for calculating this can be by calculating the total out-degree of a node.
+
+##### +\item[-] \textbf{Concentration} - this describes the abundance of a species within the atmosphere.
+
+##### +\item[-] \textbf{Net flux} - this describes the rate of net (absolute) change of concentration over time for a species.
+
+##### +\item[-] \textbf{Absolute flux} - some species may have a large flux going through them (production and loss), resulting in a small net flux. This sums the production and loss fluxes.
+
+##### +\item[-] \textbf{ influence} - influence is the total magnitude of an effect that changing a species concentration by 1\% would have on other species within the network. Since the graph is generated using the Jacobian matrix, an alternative method for calculating this can be by calculating the total out-degree of a node.
+
+####  \end{itemize}
+
+###  -969,7 +969,7 
+####  Finally, the `Metric Sum' is the sum of all the metric values scaled between 1 and zero (the mean).
+
+###### -\subsection{Senario Analysis}
+
+##### +\subsection{Scenario Analysis}
+
+####  In selecting the top 10 ranking species for each category, it is possible to examine if the importance of a species with centrality metrics varies from the results suggested by traditional metrics. In this subsection, we explore the TF-IDF rankings of each metric and use this to decide if species importance is local to a specific metric. We look at what species are highlighted by each scenario (Figures \ref{fig:heatl} - \ref{fig:heatbj}) and compare them against the primary emitted species shown in \autoref{tab:icsmetric}. Finally, we compare the total metric sum against the traditional metrics of concentration and flux and compare the correlation.
+
+###  -979,7 +979,7 
+####  \subsection*{London}
+
+###### -The London dataset (\autoref{fig:fglondon}) contains a mix of anthropogenic and biogenic aromatics and long-chain alkanes. We have a section of alkanes which have a low overall metric sum and a small value for closeness and page rank. Combined with their high net flux, absolute flux and influence values, this suggests that they have a moderate directional flux, most likely influencing the production of many other species at a consistent rate. In addition to these, we have species with a moderate closeness but a high betweenness. These are often species such as formaldehyde (\ch{HCHO}), glyoxal (\ch{c2o2}) and acetaldehyde (\ch{ch3co3}) which can serve as tracers for fast photolytic reactions. This is because on the graph structure (\autoref{fig:vk}) they sit between the dense centre of the network (high closeness) and the branches formed from each primary emitted species (a low closeness value). Their high connection density and importance in the network is also picked up by the page rank algorithm. Other species with high betweenness and a low centrality are the monoterpenes limonene and $\alpha$ pinene, as well as hexane (\ch{nc6h14}) and butane products. These are (or are close to) primary emitted species and therefore have a low closeness. Since much of the chemistry originates with such species, the outward `flow' of information also results in a lower page rank value.
+
+##### +The London dataset (\autoref{fig:fglondon}) contains a mix of anthropogenic and biogenic aromatics and long-chain alkanes. We have a section of alkanes which have a low overall metric sum and a small value for closeness and page rank. Combined with their high net flux, absolute flux and influence values, this suggests that they have a moderate directional flux, most likely influencing the production of many other species at a consistent rate. In addition to these, we have species with a moderate closeness but a high betweenness. These are often species such as formaldehyde (\ch{HCHO}), glyoxal and acetaldehyde which can serve as tracers for fast photolytic reactions. This is because on the graph structure (\autoref{fig:vk}) they sit between the dense centre of the network (high closeness) and the branches formed from each primary emitted species (a low closeness value). Their high connection density and importance in the network is also picked up by the page rank algorithm. Other species with high betweenness and a low centrality are the monoterpenes limonene and $\alpha$ pinene, as well as hexane (\ch{nc6h14}) and butane products. These are (or are close to) primary emitted species and therefore have a low closeness. Since much of the chemistry originates with such species, the outward `flow' of information also results in a lower page rank value.
+
+####  \begin{figure}[H]
+
+####       \centering
+
+###  -994,7 +994,7 
+####  Similar to London, the fast photochemical tracers are identified, although some have a slightly lower flux between them (Betweenness) and page rank values for Beijing (\autoref{fig:fgbeijing}). This suggests that the network structure or weightings may have shifted slightly from London, creating more links, or importance in a specific branch of chemistry.
+
+###### - Additionally, their overall metric sum is lower. Glyoxal, Methyl Vinyl Ketone (MVK) and their associated criegee configurations all feature heavily in the middle of \autoref{fig:heatbj}. These are important as they represent the fast chemistry formed by both the anthropogenic and biogenic chemistry that is within the simulation. These tend to have a high closeness and page rank centrality, a pattern that is also seen with the long-chain alkane products from Octane (\ch{NC8H18}), Hexane (\ch{nc6h14}) and Isoprene.
+
+##### + Additionally, their overall metric sum is lower. Glyoxal, Methyl Vinyl Ketone (MVK) and their associated criegee configurations all feature heavily in the middle of \autoref{fig:heatbj}. These are important as they represent the fast chemistry formed by both the anthropogenic and biogenic chemistry that is within the simulation. These tend to have a high closeness and page rank centrality, a pattern that is also seen with the long-chain alkane products from Octane (n-\ch{C8H18}), Hexane (n-\ch{c6h14}) and Isoprene.
+
+####   \begin{figure}[H]
+
+####        \centering
+
+###  -1024,16 +1024,16 
+####  \subsection{Providing An Overall Overview Using The TF-IDF And The Metric Sum.}
+
+###### -In the previous section, it was shown that centrality metrics could be used to complement the use of traditional metrics in the analysis of the chemical network. As each metric represents a different aspect of importance, should a single ranking value for a node be required, it is possible to take the average sum of all three metric values. Looking at \multiref{fig:heatcv}{fig:heatbj} it is possible to see similar trends in colour gradient between the purples of the traditional metrics of flux and concentration with the total metric sum (the blue column). This suggests that it is possible to compare each scenario with the use of the metric sum.
+
+##### +In the previous section, it was shown that centrality metrics could be used to complement the use of traditional metrics in the analysis of the chemical network. As each metric represents a different aspect of importance, should a single ranking value for a node be required, it is possible to take the average sum of all three metric values. Looking at \autoref{fig:heatbj} it is possible to see similar trends in colour gradient between the purples of the traditional metrics of flux and concentration with the total metric sum (the blue column). This suggests that it is possible to compare each scenario with the use of the metric sum.
+
+####  In selecting the ten highest-ranking species from the mean centrality metric table for each simulation, \autoref{tab:groupcomp} can be created. Unlike the previous method, we are now looking at species which are essential across all metrics in a simulation.
+
+###### -Beijing consists mainly of Quinones and Dialdehydes, which are both derivatives of Benzene. London again has Benzine related compounds, mixed with the fast photochemical indicators, which were also ranked highly in \autoref{fig:heatl}. Looking at the highest-ranking sum (NaN-mean), it is seen that Isoprene, hept/hexane and glyoxal products highlighted as the most consistently important across all four simulations.
+
+##### +Beijing consists mainly of Quinones and Dialdehydes, which are both derivatives of Benzene. London again has Benzene related compounds, mixed with the fast photochemical indicators, which were also ranked highly in \autoref{fig:heatl}. Looking at the highest-ranking sum (NaN-mean), it is seen that Isoprene, hept/hexane and glyoxal products highlighted as the most consistently important across all four simulations.
+
+####  \begin{table}[H]
+
+####  \centering
+
+####  \input{tables/groupmetric.tex}
+
+###### -\caption{\textbf{A table of the top 10 ranked species for each simulation.} Only species that exist within at least 3 out of the four simulations are used. The Nan-Mean takes the mean of all available data, ignoring runs where a species is not present.}
+
+##### +\caption{\textbf{A table of the top 10 ranked species for each simulation.} Only species that exist within at least 3 out of the four simulations are used. The Nan-Mean takes the mean of all available data, ignoring runs where a species is not present. Species presented within the table follow the MCM naming convention.}
+
+####  \label{tab:groupcomp}
+
+####  \end{table}
+
+###  -1110,12 +1110,13 
 ####  \end{figure}
 
 ###### -Using a graph with reversed links weighted by model results of a jacobian is equivalent to a network created by an adjoint matrix (which is used to run models backwards). With this network, we run the PageRank algorithm with a `personalised' initiated ranking vector of 1000000 for \ch{NC101CO} and -1 for everything else (A damping factor value of 0.01 is also used for the algorithm). This produces the results in \autoref{tab:nc101}. Here although all nodes receive a ranking value due to transportation within the PageRank algorithm, there is a distinct split between highly ranked values and the rest. It is found that \ce{NC101CO} has the strongest influence on itself (which makes sense), followed by that of $\alpha$-pinene. Other more direct influences are seen from NAPINBOOH, NAPINBO, \ch{NAPINBO2}, from which NAPINBO has twice the influence from the other two. This is most likely as this has the highest net-flux from the model (\autoref{tab:nc101vdot}).
@@ -635,10 +871,22 @@
 
 ####  \centering
 
+####  \begin{tabular}{p{.6\textwidth}p{.2\textwidth}}
+
+####  \toprule
+
+##### +Species & PageRank Ranking\\ \midrule   
+
+####  NC101CO   &  9.920000e-01 \\
+
+####  APINENE   &  9.210000e-06 \\
+
+####  NAPINBO   &  4.540000e-03 \\
+
 ## 4_lumping.tex
 #### diff --git a/mechanism_lumping/combigned.tex b/mechanism_lumping/combigned.tex
 
-#### index 62d358e..40c4bd6 100644
+#### index 62d358e..5a8e92e 100644
 
 ###### --- a/mechanism_lumping/combigned.tex
 
@@ -696,7 +944,7 @@
 
 ###### -It has been shown that a graph-based representation of the atmospheric chemical network proves useful in both the visual and mathematical analysis of simulation results (\autoref{c2,c3}). It, therefore, follows that the network representation of mechanism may also have its uses in the simplification, and thus reduction, of chemical complexity.  This section will outline the basic methods of modularity (cluster) detection with the graph framework, the different methods in which this may be done and eventually apply it to a case example representative of the chemistry within the London environment.
 
-##### +It has been shown that a graph-based representation of the atmospheric chemical network proves useful in both the visual and mathematical analysis of simulation results (\autoref{ch2,ch3}). It, therefore, follows that the network representation of mechanism may also have its uses in the simplification, and thus reduction, of chemical complexity.  This section will outline the basic methods of modularity (cluster) detection with the graph framework, the different methods in which this may be done and eventually apply it to a case example representative of the chemistry within the London environment.
+##### +It has been shown that a graph-based representation of the atmospheric chemical network proves useful in both the visual and mathematical analysis of simulation results (Chapters \multiref{ch2,ch3}). It, therefore, follows that the network representation of mechanism may also have its uses in the simplification, and thus reduction, of chemical complexity.  This section will outline the basic methods of modularity (cluster) detection with the graph framework, the different methods in which this may be done and eventually apply it to a case example representative of the chemistry within the London environment.
 
 ###  -202,13 +202,13 
 ####  \subsection{Species Type And Clustering}
@@ -809,7 +1057,7 @@
 ## 5_DR.tex
 #### diff --git a/dr/combigned.tex b/dr/combigned.tex
 
-#### index fcd93ea..32f0323 100644
+#### index fcd93ea..457271c 100644
 
 ###### --- a/dr/combigned.tex
 
@@ -824,7 +1072,7 @@
 
 ##### +The established process of trial and error has always underpinned our survival \citep{TrialandError}. Babies are born to rely on a set of sensory reflexes and a framework for physical reasoning \citep{pr}, and with these, we develop methods to navigate the influence of change within a physical, and auditory space \citep{objects}. This method of decision making is reflected in our adult lives with ideas and actions being limited in choice by our intuition and experience \citep{descartes}. In science, we apply a methodological framework consisting of a continuous assessment of scepticism, educated guessing (hypothesising) and rigorous practical testing. Specialists accrue years of practical and theoretical knowledge within a narrow field and can identify areas of potential gain and futility. Nevertheless, even with all prior experience, the discovery of new and untested techniques involve the tortuous traipsing through a sea of uncertainty.
 
-##### + Such methods sometimes prove fruitful, through accidental discoveries of items such as polyetheylene, penicillin, x-rays, nylon, teflon, velcro etc.   \citep{accidental,serendipity}; finding novel applications for existing methods such as optical tweezers for chemistry or the abstract field of maths utilised by Einstein, but more often than not end in the constant evolution of a pre-existing project with no apparent result.
+##### + Such methods sometimes prove fruitful, through accidental discoveries of items such as polyetheylene, penicillin, x-rays, nylon, teflon, velcro etc.   \citep{accidental}; finding novel applications for existing methods such as optical tweezers for chemistry or the abstract field of maths utilised by Einstein, but more often than not end in the constant evolution of a pre-existing project with no apparent result.
 
 ####  \subsection{Theory And Simulation In Science}
 
@@ -1149,7 +1397,7 @@
 ## Bibliography
 #### diff --git a/bibtex.bib b/bibtex.bib
 
-#### index 8b8f0b8..3045150 100644
+#### index 8b8f0b8..85c41d6 100644
 
 ###### --- a/bibtex.bib
 
@@ -1509,7 +1757,38 @@
 
 ####     year = {1998}
 
-###  -554,6 +578,7 
+###  -508,19 +532,6 
+####     year = {2009}
+
+###### -@article{bundlepioneer,
+
+###### -   author = {D. Holten},
+
+###### -   doi = {10.1109/TVCG.2006.147},
+
+###### -   issn = {1077-2626},
+
+###### -   journal = {IEEE Transactions on Visualization and Computer Graphics},
+
+###### -   month = {Sept},
+
+###### -   number = {5},
+
+###### -   pages = {741-748},
+
+###### -   title = {Hierarchical Edge Bundles: Visualization Of Adjacency Relations In Hierarchical Data},
+
+###### -   volume = {12},
+
+###### -   year = {2006}
+
+####  @article{butane,
+
+####     author = {Jenkin, Michael E and Saunders, Sandra M and Pilling, Michael J},
+
+####     doi = {10.1016/S1352-2310(96)00105-7},
+
+###  -554,6 +565,7 
 ####  @misc{capeverde,
 
 ####     author = {Read, Katie A},
@@ -1522,7 +1801,7 @@
 
 ####  Meteorological Davis Weather Station Measurements}},
 
-###  -576,6 +601,7 
+###  -576,6 +588,7 
 ####  @misc{cavepic,
 
 ####     author = {Schroth, Christian},
@@ -1535,7 +1814,7 @@
 
 ####     year = {2019}
 
-###  -589,6 +615,7 
+###  -589,6 +602,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_1},
@@ -1550,7 +1829,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -608,6 +635,7 
+###  -608,6 +622,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_10},
@@ -1565,7 +1844,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -622,6 +650,7 
+###  -622,6 +637,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_2},
@@ -1580,7 +1859,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -638,6 +667,7 
+###  -638,6 +654,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_3},
@@ -1595,7 +1874,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -653,6 +683,7 
+###  -653,6 +670,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_4},
@@ -1610,7 +1889,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -668,6 +699,7 
+###  -668,6 +686,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_5},
@@ -1625,7 +1904,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -686,6 +718,7 
+###  -686,6 +705,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_6},
@@ -1640,7 +1919,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -702,6 +735,7 
+###  -702,6 +722,7 
 ####     booktitle = {Software Visualization: From Theory to Practice},
 
 ####     doi = {10.1007/978-1-4615-0457-3_6},
@@ -1655,7 +1934,7 @@
 
 ####     publisher = {Springer US},
 
-###  -719,6 +753,7 
+###  -719,6 +740,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_7},
@@ -1670,7 +1949,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -739,6 +774,7 
+###  -739,6 +761,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_8},
@@ -1685,7 +1964,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -756,6 +792,7 
+###  -756,6 +779,7 
 ####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
 
 ####     doi = {10.1007/978-3-319-06793-3_9},
@@ -1700,7 +1979,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -765,9 +802,10 
+###  -765,9 +789,10 
 ####  @article{chinanox,
 
 ####     author = {Joshua Stevens},
@@ -1721,7 +2000,7 @@
 
 ####     year = {2020}
 
-###  -778,6 +816,7 
+###  -778,6 +803,7 
 ####     booktitle = {2016 IEEE Tenth International Conference on Research Challenges in Information Science (RCIS)},
 
 ####     doi = {10.1109/RCIS.2016.7549281},
@@ -1736,7 +2015,7 @@
 
 ####     title = {Reflections On The Use Of Chord Diagrams In Social Network Visualization In Process Mining},
 
-###  -787,6 +826,7 
+###  -787,6 +813,7 
 ####  @misc{circ,
 
 ####     author = {Jonathan Fisher},
@@ -1751,7 +2030,7 @@
 
 ####     title = {{Alternative Tube Maps: Circles Within Circles}},
 
-###  -801,6 +841,7 
+###  -801,6 +828,7 
 ####  Liu, Dantong and Monks, Paul S and Nemitz, E and Reeves,
 
 ####  Claire E and Oram, David and Sokhi, R and Young, Dominique
@@ -1766,7 +2045,7 @@
 
 ####     title = {{Dataset Collection Record: Clearflo (Clean Air For London)
 
-###  -825,7 +866,8 
+###  -825,7 +853,8 
 ####  @article{closeness-book,
 
 ###### -   author = {poliaktiv},
@@ -1781,7 +2060,7 @@
 
 ####     year = {2011}
 
-###  -833,6 +875,7 
+###  -833,6 +862,7 
 ####  @misc{clustereval,
 
 ####     author = {sklearn},
@@ -1794,7 +2073,7 @@
 
 ####  Scikit-Learn 0.21.3 Documentation}},
 
-###  -872,6 +915,7 
+###  -872,6 +902,7 
 ####     booktitle = {2017 IEEE 41st Annual Computer Software and Applications Conference (COMPSAC)},
 
 ####     doi = {10.1109/COMPSAC.2017.205},
@@ -1809,7 +2088,7 @@
 
 ####     pages = {615-618},
 
-###  -896,6 +940,7 
+###  -896,6 +927,7 
 ####  @misc{code,
 
 ####     author = {Alon, Uri and Zilberstein, Meital and Levy, Omer and Yahav, Eran},
@@ -1824,7 +2103,7 @@
 
 ####     title = {{Code2Vec: Learning Distributed Representations Of Code}},
 
-###  -910,6 +955,7 
+###  -910,6 +942,7 
 ####     edition = {Third Edition},
 
 ####     editor = {Ware, Colin },
@@ -1839,7 +2118,7 @@
 
 ####     publisher = {Morgan Kaufmann},
 
-###  -936,6 +982,7 
+###  -936,6 +969,7 
 ####     author = {Pasupa, Kitsuchart},
 
 ####     booktitle = {{Artificial Intelligence and Soft Computing}},
@@ -1854,7 +2133,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -987,6 +1034,7 
+###  -987,6 +1021,7 
 ####  @misc{confpic,
 
 ####     author = {Benjamin Bach},
@@ -1867,7 +2146,7 @@
 
 ####     year = {2020}
 
-###  -998,6 +1046,7 
+###  -998,6 +1033,7 
 ####  and Tomlin, Alison S.},
 
 ####     booktitle = {Analysis of Kinetic Reaction Mechanisms},
@@ -1882,7 +2161,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -1040,6 +1089,7 
+###  -1040,6 +1076,7 
 ####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
 
 ####     doi = {10.1007/978-3-540-24595-7_34},
@@ -1897,7 +2176,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -1062,6 +1112,7 
+###  -1062,6 +1099,7 
 ####  @book{cooking,
 
 ####     author = {Wrangham, Richard},
@@ -1910,7 +2189,7 @@
 
 ####     year = {2009}
 
-###  -1070,6 +1121,7 
+###  -1070,6 +1108,7 
 ####  @misc{cover,
 
 ####     author = {Daniel Ellis},
@@ -1925,7 +2204,7 @@
 
 ####     year = {2019}
 
-###  -1083,7 +1135,7 
+###  -1083,7 +1122,7 
 ####     note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231008006742}},
 
 ####     number = {31},
@@ -1940,7 +2219,7 @@
 
 ####     year = {2008}
 
-###  -1091,6 +1143,7 
+###  -1091,6 +1130,7 
 ####  @misc{criv2,
 
 ####     author = {Mike Jenkin},
@@ -1955,7 +2234,7 @@
 
 ####     year = {2019}
 
-###  -1102,6 +1155,7 
+###  -1102,6 +1142,7 
 ####     booktitle = {Proceedings of the Thirtieth Annual ACM Symposium on Theory of Computing},
 
 ####     doi = {10.1145/276698.276876},
@@ -1970,7 +2249,7 @@
 
 ####     numpages = {10},
 
-###  -1114,6 +1168,7 
+###  -1114,6 +1155,7 
 ####  @misc{d3annotate,
 
 ####     author = {Lu, Susie},
@@ -1983,7 +2262,7 @@
 
 ####     year = {2019}
 
-###  -1125,6 +1180,7 
+###  -1125,6 +1167,7 
 ####     biburl = {https://www.bibsonomy.org/bibtex/24fdb2faa7a94a7248a7fb5725aaa5afa/maxirichter},
 
 ####     interhash = {9e3b5ed5b36799e856b35165b06248af},
@@ -1998,7 +2277,7 @@
 
 ####     title = {D3.Js - Data-Driven Documents},
 
-###  -1134,6 +1190,7 
+###  -1134,13 +1177,15 
 ####  @misc{daygraph,
 
 ####     author = {Ellis, Daniel},
@@ -2013,8 +2292,9 @@
 
 ####     year = {2018}
 
-###  -1141,6 +1198,7 
-####  @inproceedings{DBSCAN,
+###### -@inproceedings{DBSCAN,
+
+##### +@article{DBSCAN,
 
 ####     author = {Martin Ester and Hans-peter Kriegel and Jörg Sander and Xiaowei Xu},
 
@@ -2026,7 +2306,7 @@
 
 ####     title = {A Density-Based Algorithm For Discovering Clusters In Large Spatial Databases With Noise},
 
-###  -1166,6 +1224,7 
+###  -1166,6 +1211,7 
 ####  @misc{definenetwork,
 
 ####     author = {Oxford},
@@ -2041,10 +2321,12 @@
 
 ####     title = {{Network | Definition Of Network In English By Lexico Dictionaries}},
 
-###  -1175,6 +1234,7 
+###  -1173,8 +1219,10 
 ####  @article{defra1,
 
-####     author = {Dick Derwent,Andrea Fraser,John Abbott,Mike Jenkin},
+###### -   author = {Dick Derwent,Andrea Fraser,John Abbott,Mike Jenkin},
+
+##### +   author = {{Dick Derwent, Andrea Fraser, John Abbott and Mike Jenkin
 
 ####     issue = {3},
 
@@ -2056,7 +2338,7 @@
 
 ####     year = {2010}
 
-###  -1197,6 +1257,7 
+###  -1197,6 +1245,7 
 ####  and Cardoso, Jaime
 
 ####  and Spiliopoulou, Myra},
@@ -2071,7 +2353,7 @@
 
 ####     title = {Two Step Graph-Based Semi-Supervised Learning For Online Auction Fraud Detection},
 
-###  -1217,6 +1278,7 
+###  -1217,6 +1266,7 
 ####  @misc{degreetwitter,
 
 ####     author = {Gemma, Joyce},
@@ -2086,7 +2368,7 @@
 
 ####     year = {2019}
 
-###  -1239,6 +1301,7 
+###  -1239,6 +1289,7 
 ####  @book{descartes,
 
 ####     author = {Descartes, Ren{\'e} and Lafleur, Laurence J},
@@ -2099,7 +2381,7 @@
 
 ####     title = {{Meditations On First Philosophy}},
 
-###  -1252,13 +1315,14 
+###  -1252,13 +1303,14 
 ####     note = {\url{https://www.atmos-chem-phys.net/5/641/2005/}},
 
 ####     number = {3},
@@ -2126,7 +2408,7 @@
 
 ####  Recent Events}},
 
-###  -1309,6 +1373,7 
+###  -1309,6 +1361,7 
 ####     booktitle = {{Advances in Neural Information Processing Systems 25}},
 
 ####     doi = {10.21105/joss.00747},
@@ -2141,7 +2423,7 @@
 
 ####     publisher = {Curran Associates, Inc.},
 
-###  -1319,6 +1384,7 
+###  -1319,6 +1372,7 
 ####  @book{dream,
 
 ####     author = {Freud, S. and Cronin, A.J.},
@@ -2156,7 +2438,7 @@
 
 ####     title = {The Interpretation Of Dreams},
 
-###  -1356,6 +1422,7 
+###  -1356,6 +1410,7 
 ####  @article{drviz,
 
 ####     author = {Choi, Jong Youl and Bae, Seung-Hee and Qiu, Judy and Fox, Geoffrey
@@ -2171,7 +2453,7 @@
 
 ####     year = {2019}
 
-###  -1376,8 +1443,9 
+###  -1376,8 +1431,9 
 ####  @misc{dsmaccgit,
 
 ####     author = {Ellis, Dan},
@@ -2188,21 +2470,26 @@
 
 ####     year = {2020}
 
-###  -1399,6 +1467,7 
-####  @article{eades,
+###  -1397,18 +1453,10 
+####     year = {2015}
 
-####     author = {Eades, P.},
+###### -@article{eades,
 
-##### +   journal = {online},
+###### -   author = {Eades, P.},
 
-####     note = {cited By 1},
+###### -   note = {cited By 1},
 
-####     pages = {149-160},
+###### -   pages = {149-160},
 
-####     source = {Scopus},
+###### -   source = {Scopus},
 
-###  -1409,6 +1478,7 
-####  @inproceedings{Eades,
+###### -   title = {A Heuristic For Graph Drawing},
+
+###### -   year = {1984}
+
+###### -@inproceedings{Eades,
+
+##### +@inproceedings{eades,
 
 ####     author = {Peter Eades},
 
@@ -2214,7 +2501,7 @@
 
 ####     year = {1984}
 
-###  -1450,6 +1520,7 
+###  -1450,6 +1498,7 
 ####  @misc{eea,
 
 ####     author = {EEA},
@@ -2229,7 +2516,7 @@
 
 ####     note = {\url{https://www.eea.europa.eu/publications/air-quality-in-europe-2018}},
 
-###  -1498,6 +1569,7 
+###  -1498,6 +1547,7 
 ####  @book{emotional,
 
 ####     author = {Norman, D.A.},
@@ -2244,7 +2531,7 @@
 
 ####     publisher = {Basic Books},
 
-###  -1556,6 +1628,7 
+###  -1556,6 +1606,7 
 ####     doi = {10.2312/COMPAESTH/COMPAESTH09/049-056},
 
 ####     isbn = {978-3-905674-17-0},
@@ -2259,7 +2546,7 @@
 
 ####     year = {2009}
 
-###  -1605,6 +1678,7 
+###  -1605,6 +1656,7 
 ####     doi = {10.2312/EG2011/education/029-036},
 
 ####     editor = {S. Maddock and J. Jorge},
@@ -2274,7 +2561,7 @@
 
 ####     year = {2011}
 
-###  -1618,6 +1692,7 
+###  -1618,6 +1670,7 
 ####     booktitle = {Graph Drawing: Symposium on Graph Drawing, GD '95 Passau, Germany, September 20--22, 1995 Proceedings},
 
 ####     doi = {10.1007/BFb0021792},
@@ -2289,7 +2576,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -1628,6 +1703,7 
+###  -1628,6 +1681,7 
 ####  @misc{fgps,
 
 ####     author = {Andy Brunning},
@@ -2304,7 +2591,7 @@
 
 ####     year = {2020}
 
-###  -1639,16 +1715,35 
+###  -1639,16 +1693,35 
 ####     doi = {https://doi.org/10.1016/B978-012257060-5/50003-4},
 
 ####     editor = {Barbara J. Finlayson-Pitts and James N. Pitts},
@@ -2367,7 +2654,7 @@
 
 ####     publisher = {Zenodo},
 
-###  -1674,6 +1769,7 
+###  -1674,6 +1747,7 
 ####  @misc{frankenstein,
 
 ####     author = {Ellis, Daniel},
@@ -2382,7 +2669,7 @@
 
 ####     title = {{Using Tf-Idf To Form Descriptive Chapter Summaries Via
 
-###  -1694,6 +1790,7 
+###  -1694,6 +1768,7 
 ####     abstractnote = {Force Directed Representation of Multivariate Data},
 
 ####     author = {Dan Ellis},
@@ -2397,7 +2684,7 @@
 
 ####     year = {2016}
 
-###  -1703,6 +1800,7 
+###  -1703,6 +1778,7 
 ####     author = {Jacobson, M.Z.},
 
 ####     doi = {10.1017/CBO9781139165389},
@@ -2412,7 +2699,7 @@
 
 ####     title = {Fundamentals Of Atmospheric Modelling},
 
-###  -1724,6 +1822,7 
+###  -1724,6 +1800,7 
 ####  @misc{gcm,
 
 ####     author = {Henderson-Sellers},
@@ -2425,7 +2712,7 @@
 
 ####     year = {2015}
 
-###  -1748,6 +1847,7 
+###  -1748,6 +1825,7 
 ####     address = {Berlin, Heidelberg},
 
 ####     author = {Hairer, E. and N\o{}rsett, S. P. and Wanner, G.},
@@ -2440,7 +2727,7 @@
 
 ####     year = {2002}
 
-###  -1775,6 +1875,7 
+###  -1775,6 +1853,7 
 ####  @book{genomics,
 
 ####     author = {Hunt, G.J. and Gadau, J.R.},
@@ -2455,7 +2742,7 @@
 
 ####     series = {Frontiers Research Topics},
 
-###  -1785,6 +1886,7 
+###  -1785,6 +1864,7 
 ####  @misc{geoclock,
 
 ####     author = {{Woudloper}},
@@ -2470,7 +2757,7 @@
 
 ####     title = {{History Of Earth}},
 
-###  -1812,6 +1914,7 
+###  -1812,6 +1892,7 
 ####  @article{geos,
 
 ####     author = {GEOS-Chem},
@@ -2483,7 +2770,7 @@
 
 ####     year = {2020}
 
-###  -1820,10 +1923,11 
+###  -1820,10 +1901,11 
 ####  @article{geosgit,
 
 ####     author = {The International GEOS-Chem Community},
@@ -2506,7 +2793,7 @@
 
 ####     year = {2020}
 
-###  -1852,6 +1956,7 
+###  -1852,6 +1934,7 
 ####  @book{goodideas,
 
 ####     author = {Johnson, S.},
@@ -2521,10 +2808,40 @@
 
 ####     title = {Where Good Ideas Come From},
 
-###  -1881,6 +1986,7 
+###  -1868,19 +1951,20 
+####     publisher = {Stanford InfoLab},
+
+####     title = {The Pagerank Citation Ranking: Bringing Order To The Web.},
+
+####     type = {Technical Report},
+
+##### +   volume = {1},
+
+####     year = {1999}
+
+####  @inbook{gossip,
+
+####     address = {Boston, MA},
+
+###### -   author = {Dunbar, R. I. M.},
+
+###### -   booktitle = {New Aspects of Human Ethology},
+
+###### -   doi = {10.1007/978-0-585-34289-4_5},
+
+###### -   editor = {Schmitt, Alain
+
+##### +   author = {Dunbar, R. I. M., Schmitt, Alain
+
+####  and Atzwanger, Klaus
+
 ####  and Grammer, Karl
 
 ####  and Sch{\"a}fer, Katrin},
+
+##### +   booktitle = {New Aspects of Human Ethology},
+
+##### +   doi = {10.1007/978-0-585-34289-4_5},
 
 ####     isbn = {978-0-585-34289-4},
 
@@ -2536,7 +2853,43 @@
 
 ####     publisher = {Springer US},
 
-###  -1891,6 +1997,7 
+###  -1888,9 +1972,29 
+####     year = {1997}
+
+##### +@article{graph2vec,
+
+##### +   archiveprefix = {arXiv},
+
+##### +   author = {Annamalai Narayanan and
+
+##### +Mahinthan Chandramohan and
+
+##### +Rajasekar Venkatesan and
+
+##### +Lihui Chen and
+
+##### +Yang Liu and
+
+##### +Shantanu Jaiswal},
+
+##### +   bibsource = {dblp computer science bibliography, https://dblp.org},
+
+##### +   biburl = {https://dblp.org/rec/journals/corr/NarayananCVCLJ17.bib},
+
+##### +   eprint = {1707.05005},
+
+##### +   journal = {CoRR},
+
+##### +   note = {\url{http://arxiv.org/abs/1707.05005}},
+
+##### +   timestamp = {Mon, 15 Jul 2019 14:17:42 +0200},
+
+##### +   title = {Graph2Vec: Learning Distributed Representations Of Graphs},
+
+##### +   volume = {abs/1707.05005},
+
+##### +   year = {2017}
+
 ####  @inproceedings{graphmetnew,
 
 ####     author = {Martyn Taylor and Peter Rodgers},
@@ -2551,7 +2904,7 @@
 
 ####     pages = {651--656},
 
-###  -1921,6 +2028,7 
+###  -1921,6 +2025,7 
 ####  @book{handsonml,
 
 ####     author = {G{\'e}ron, A.},
@@ -2566,7 +2919,7 @@
 
 ####     title = {Hands-On Machine Learning With Scikit-Learn And Tensorflow: Concepts, Tools, And Techniques To Build Intelligent Systems},
 
-###  -1961,6 +2069,7 
+###  -1961,6 +2066,7 
 ####  @article{hitsweb,
 
 ####     author = {Kumar, Ravi and Upfal, Eli},
@@ -2579,7 +2932,7 @@
 
 ####     year = {2000}
 
-###  -2000,6 +2109,7 
+###  -2000,6 +2106,7 
 ####  @misc{hpp,
 
 ####     author = {Pete Cornes},
@@ -2594,7 +2947,7 @@
 
 ####     title = {{Proposed Plans For Holme Pierrepont Whitewater Course}},
 
-###  -2017,7 +2127,7 
+###  -2017,7 +2124,7 
 ####  @article{hufftree,
 
 ###### -   autor = {{Sad CRUD Developer}},
@@ -2607,7 +2960,7 @@
 
 ####     title = {{The Huffman Tree}},
 
-###  -2030,6 +2140,7 
+###  -2030,6 +2137,7 
 ####     booktitle = {Graph Drawing: 5th International Symposium, GD '97 Rome, Italy, September 18--20, 1997 Proceedings},
 
 ####     doi = {10.1007/3-540-63938-1_67},
@@ -2622,7 +2975,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -2100,6 +2211,7 
+###  -2100,6 +2208,7 
 ####     booktitle = {Proceedings of the 10th Annual ACM Symposium on User Interface Software and Technology},
 
 ####     doi = {10.1145/263407.263521},
@@ -2637,7 +2990,7 @@
 
 ####     numpages = {8},
 
-###  -2115,6 +2227,7 
+###  -2115,6 +2224,7 
 ####     author = {Shneiderman, Ben},
 
 ####     edition = {3rd},
@@ -2652,7 +3005,7 @@
 
 ####     year = {1997}
 
-###  -2134,6 +2247,7 
+###  -2134,6 +2244,7 
 ####  @misc{ipbes,
 
 ####     author = {IPBES},
@@ -2665,7 +3018,7 @@
 
 ####  Services | The Intergovernmental Science-Policy Platform On Biodiversity And Ecosystem Services}},
 
-###  -2142,6 +2256,7 
+###  -2142,6 +2253,7 
 ####  @book{IPCC1990Science,
 
 ####     author = {J.T. Houghton and G.J. Jenkins and J.J. Ephraums},
@@ -2678,7 +3031,7 @@
 
 ####     year = {1996}
 
-###  -2150,6 +2265,7 
+###  -2150,6 +2262,7 
 ####  @book{IPCC1995Science,
 
 ####     author = {J.T. Houghton and L.G. Meira Filho and B.A. Callander and N. Harris
@@ -2693,7 +3046,7 @@
 
 ####     year = {1996}
 
-###  -2159,6 +2275,7 
+###  -2159,6 +2272,7 
 ####     added-at = {2008-04-08T14:52:00.000+0200},
 
 ####     author = {IPCC},
@@ -2708,7 +3061,7 @@
 
 ####     timestamp = {2009-11-11T11:50:02.000+0100},
 
-###  -2171,6 +2288,7 
+###  -2171,6 +2285,7 
 ####     author = {IPCC},
 
 ####     doi = {10.1017/CBO9781107415324},
@@ -2723,7 +3076,7 @@
 
 ####     publisher = {Cambridge University Press},
 
-###  -2200,7 +2318,7 
+###  -2200,7 +2315,7 
 ####     note = {\url{https://www.atmos-chem-phys.net/15/11433/2015/}},
 
 ####     number = {20},
@@ -2738,7 +3091,7 @@
 
 ####     year = {2015}
 
-###  -2208,6 +2326,7 
+###  -2208,6 +2323,7 
 ####  @book{jacob,
 
 ####     author = {Brasseur, G.P. and Jacob, D.J.},
@@ -2753,7 +3106,7 @@
 
 ####     title = {Modeling Of Atmospheric Chemistry},
 
-###  -2247,6 +2366,7 
+###  -2247,6 +2363,7 
 ####  @book{kinetics,
 
 ####     author = {T Turanyi and AS Tomlin},
@@ -2766,7 +3119,7 @@
 
 ####     pages = {1 -- 376},
 
-###  -2258,6 +2378,7 
+###  -2258,6 +2375,7 
 ####  @book{kirk,
 
 ####     author = {Kirk, A.},
@@ -2781,7 +3134,7 @@
 
 ####     title = {Data Visualisation: A Handbook For Data Driven Design},
 
-###  -2283,6 +2404,7 
+###  -2283,6 +2401,7 
 ####     address = {Berkeley, Calif.},
 
 ####     author = {MacQueen, J.},
@@ -2796,7 +3149,7 @@
 
 ####     publisher = {University of California Press},
 
-###  -2297,7 +2419,7 
+###  -2297,7 +2416,7 
 ####     note = {\url{https://www.atmos-chem-phys.net/6/187/2006/}},
 
 ####     number = {1},
@@ -2811,7 +3164,7 @@
 
 ####     year = {2006}
 
-###  -2323,6 +2445,7 
+###  -2323,6 +2442,7 
 ####     address = {USA},
 
 ####     author = {Press, William H. and Teukolsky, Saul A. and Vetterling, William T. and Flannery, Brian P.},
@@ -2826,8 +3179,10 @@
 
 ####     year = {1992}
 
-###  -2360,6 +2483,7 
+###  -2359,7 +2479,9 
 ####  @misc{lapack,
+
+##### +   author = {LAPACK},
 
 ####     howpublished = {\url{http://www.netlib.org/lapack/}},
 
@@ -2839,7 +3194,7 @@
 
 ####     year = {2019}
 
-###  -2375,6 +2499,7 
+###  -2375,6 +2497,7 
 ####  @misc{lesmis,
 
 ####     author = {Donald Knuth},
@@ -2852,7 +3207,7 @@
 
 ####     year = {2019}
 
-###  -2383,6 +2508,7 
+###  -2383,6 +2506,7 
 ####  @book{lessmore,
 
 ####     author = {Reinhardt, A.},
@@ -2867,7 +3222,7 @@
 
 ####     publisher = {Viking Press},
 
-###  -2490,6 +2616,7 
+###  -2490,6 +2614,7 
 ####     booktitle = {Graph Drawing: 19th International Symposium, GD 2011, Eindhoven, The Netherlands, September 21-23, 2011, Revised Selected Papers},
 
 ####     doi = {10.1007/978-3-642-25878-7_31},
@@ -2882,7 +3237,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -2539,6 +2666,7 
+###  -2539,6 +2664,7 
 ####     booktitle = {The Concise Encyclopedia of Statistics},
 
 ####     doi = {10.1007/978-0-387-32833-1_223},
@@ -2897,7 +3252,7 @@
 
 ####     publisher = {Springer New York},
 
-###  -2560,6 +2688,7 
+###  -2560,6 +2686,7 
 ####     author = {Shneiderman, Ben},
 
 ####     booktitle = {Proceedings of the 1996 IEEE Symposium on Visual Languages},
@@ -2912,7 +3267,7 @@
 
 ####     publisher = {IEEE Computer Society},
 
-###  -2571,6 +2700,7 
+###  -2571,6 +2698,7 
 ####  @misc{mapbox,
 
 ####     author = {Ellis, Daniel},
@@ -2927,7 +3282,7 @@
 
 ####     publisher = {Towards Data Science},
 
-###  -2606,8 +2736,20 
+###  -2606,8 +2734,20 
 ####  @misc{mcm,
 
 ####     author = {Andrew Rickard},
@@ -2960,7 +3315,7 @@
 
 ####     year = {2020}
 
-###  -2626,8 +2768,9 
+###  -2626,8 +2766,9 
 ####  @misc{mcmhist,
 
 ####     author = {Mike Jenkins},
@@ -2977,7 +3332,7 @@
 
 ####     year = {2002}
 
-###  -2655,7 +2798,7 
+###  -2655,7 +2796,7 
 ####     pages = {161-180},
 
 ####     pdf = {https://hal.archives-ouvertes.fr/hal-00295229/file/acp-3-161-2003.pdf},
@@ -2992,7 +3347,7 @@
 
 ####     year = {2003}
 
-###  -2667,13 +2810,14 
+###  -2667,13 +2808,14 
 ####     note = {\url{https://www.atmos-chem-phys.net/3/181/2003/}},
 
 ####     number = {1},
@@ -3019,7 +3374,7 @@
 
 ####  - Home}},
 
-###  -2695,6 +2839,7 
+###  -2695,6 +2837,7 
 ####  @misc{metabolic,
 
 ####     author = {Gerhard Michal},
@@ -3032,7 +3387,7 @@
 
 ####     year = {1965}
 
-###  -2775,6 +2920,7 
+###  -2775,6 +2918,7 
 ####  @book{modelingpythonbees,
 
 ####     author = {De Smedt, T.},
@@ -3047,7 +3402,7 @@
 
 ####     series = {Proefschriften UA-LW : taalkunde},
 
-###  -2785,11 +2931,21 
+###  -2785,11 +2929,21 
 ####  @misc{mol3d,
 
 ####     author = {Herman Bergwerf},
@@ -3082,7 +3437,7 @@
 
 ####     author = {Hartigan, J. A.
 
-###  -2797,6 +2953,7 
+###  -2797,6 +2951,7 
 ####     booktitle = {Computer Science and Statistics: Proceedings of the 13th Symposium on the Interface},
 
 ####     editor = {Eddy, William F.},
@@ -3097,7 +3452,7 @@
 
 ####     title = {Mosaics For Contingency Tables},
 
-###  -2850,6 +3007,7 
+###  -2850,6 +3005,7 
 ####  @misc{n2vimg,
 
 ####     author = {Cohen, Elior},
@@ -3112,7 +3467,7 @@
 
 ####     publisher = {Towards Data Science},
 
-###  -2962,6 +3120,7 
+###  -2962,6 +3118,7 
 ####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
 
 ####     doi = {10.1007/978-3-540-24595-7_27},
@@ -3127,7 +3482,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -2974,6 +3133,7 
+###  -2974,6 +3131,7 
 ####     author = {Aric A. Hagberg and Daniel A. Schult and Pieter J. Swart},
 
 ####     booktitle = {Proceedings of the 7th Python in Science Conference},
@@ -3142,7 +3497,7 @@
 
 ####     year = {2008}
 
-###  -3047,6 +3207,7 
+###  -3047,6 +3205,7 
 ####  @misc{newspaperrock,
 
 ####     author = {{ugc}},
@@ -3157,7 +3512,7 @@
 
 ####     publisher = {Atlas Obscura},
 
-###  -3075,6 +3236,7 
+###  -3075,6 +3234,7 
 ####  @misc{nightingale,
 
 ####     author = {Florence Nightingale},
@@ -3170,7 +3525,7 @@
 
 ####  The Health, Efficiency And Hospital Administration Of The
 
-###  -3116,6 +3278,7 
+###  -3116,6 +3276,7 
 ####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
 
 ####     doi = {10.1007/978-3-540-24595-7_40},
@@ -3185,7 +3540,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -3138,6 +3301,7 
+###  -3138,6 +3299,7 
 ####  @article{node2vec,
 
 ####     author = {Aditya Grover and Jure Leskovec},
@@ -3198,7 +3553,7 @@
 
 ####     year = {2019}
 
-###  -3151,6 +3315,7 
+###  -3151,6 +3313,7 
 ####     booktitle = {Graph Drawing: 13th International Symposium, GD 2005, Limerick, Ireland, September 12-14, 2005. Revised Papers},
 
 ####     doi = {10.1007/11618058_15},
@@ -3213,7 +3568,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -3162,6 +3327,7 
+###  -3162,6 +3325,7 
 ####     author = {Agarwal, Shivam and Tomar, Amit and Sreevalsan-Nair, Jaya},
 
 ####     booktitle = {{Complex Networks \& Their Applications V}},
@@ -3228,7 +3583,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -3175,6 +3341,7 
+###  -3175,6 +3339,7 
 ####     address = {Darlinghurst, Australia, Australia},
 
 ####     author = {Friedrich, Carsten and Schreiber, Falk},
@@ -3243,7 +3598,7 @@
 
 ####     numpages = {8},
 
-###  -3207,6 +3374,7 
+###  -3207,6 +3372,7 
 ####     acmid = {962200},
 
 ####     author = {Lyons, Kelly A.},
@@ -3258,7 +3613,7 @@
 
 ####     numpages = {11},
 
-###  -3219,7 +3387,9 
+###  -3219,7 +3385,9 
 ####  @misc{numpy,
 
 ####     author = {Oliphant, Travis},
@@ -3275,7 +3630,7 @@
 
 ####     year = {2006}
 
-###  -3261,6 +3431,7 
+###  -3261,7 +3429,9 
 ####  @phdthesis{objects,
 
 ####     author = {Lynch, Helen},
@@ -3286,11 +3641,15 @@
 
 ####     note = {\url{http://dx.doi.org/10.21427/D73W37}},
 
+##### +   school = {-},
+
 ####     title = {{Infant Places, Spaces And Objects: Exploring The Physical In
 
 ####  Learning Environments For Infants Under Two}},
 
-###  -3300,6 +3471,7 
+####     year = {2011}
+
+###  -3300,6 +3470,7 
 ####     booktitle = {Human-Centered Visualization Environments: GI-Dagstuhl Research Seminar, Dagstuhl Castle, Germany, March 5-8, 2006, Revised Lectures},
 
 ####     doi = {10.1007/978-3-540-71949-6_4},
@@ -3305,7 +3664,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -3320,6 +3492,7 
+###  -3320,6 +3491,7 
 ####  @misc{OpenVis,
 
 ####     author = {{Steven Franconeri}},
@@ -3318,7 +3677,7 @@
 
 ####     publisher = {Youtube},
 
-###  -3393,28 +3566,12 
+###  -3393,28 +3565,12 
 ####  @misc{orthogonaltv,
 
 ####     author = {JVC},
@@ -3367,7 +3726,7 @@
 
 ####  Christopher T and Lalonde, Stefan V and Knudsen, Andrew and Wang,
 
-###  -3440,6 +3597,7 
+###  -3440,6 +3596,7 
 ####     booktitle = {Encyclopedia of Astrobiology},
 
 ####     doi = {10.1007/978-3-642-11274-4_1721},
@@ -3382,7 +3741,7 @@
 
 ####     publisher = {Springer Berlin Heidelberg},
 
-###  -3464,6 +3622,7 
+###  -3464,6 +3621,7 
 ####  @article{ozonerepair,
 
 ####     author = {Ellen Gray, Theo Stein, Sara Blumberg},
@@ -3395,7 +3754,7 @@
 
 ####     year = {2019}
 
-###  -3477,6 +3636,7 
+###  -3477,6 +3635,7 
 ####     edition = {Second Edition},
 
 ####     editor = {Gerald R. North and John Pyle and Fuqing Zhang},
@@ -3410,7 +3769,7 @@
 
 ####     publisher = {Academic Press},
 
-###  -3486,6 +3646,7 
+###  -3486,6 +3645,7 
 ####  @misc{paris,
 
 ####     author = {UNFCCC},
@@ -3423,7 +3782,7 @@
 
 ####     year = {2015}
 
-###  -3508,6 +3669,7 
+###  -3508,6 +3668,7 
 ####     booktitle = {Understanding Digital Humanities},
 
 ####     doi = {10.1057/9780230371934_11},
@@ -3438,7 +3797,7 @@
 
 ####     publisher = {Palgrave Macmillan UK},
 
-###  -3548,6 +3710,7 
+###  -3548,6 +3709,7 
 ####     doi = {10.5772/intechopen.75007},
 
 ####     editor = {G{\"o}ksel, T{\"u}rkmen},
@@ -3453,7 +3812,7 @@
 
 ####     publisher = {InTech},
 
-###  -3558,6 +3721,7 
+###  -3558,6 +3720,7 
 ####  @misc{pcaim,
 
 ####     author = {Victor Powell},
@@ -3468,7 +3827,7 @@
 
 ####     year = {2020}
 
-###  -3566,6 +3730,7 
+###  -3566,6 +3729,7 
 ####  @techreport{pcamath,
 
 ####     author = {Smith, Lindsay I},
@@ -3483,7 +3842,7 @@
 
 ####     year = {2002}
 
-###  -3619,6 +3784,7 
+###  -3619,6 +3783,7 
 ####  @misc{people,
 
 ####     author = {{People2Vec}},
@@ -3496,7 +3855,7 @@
 
 ####     year = {2019}
 
-###  -3634,6 +3800,7 
+###  -3634,6 +3799,7 
 ####  @misc{perceptronimage,
 
 ####     author = {Lab Cornell},
@@ -3509,7 +3868,7 @@
 
 ####     year = {2020}
 
-###  -3665,12 +3832,23 
+###  -3665,12 +3831,23 
 ####  @article{phrase,
 
 ####     author = {Boudin, Florian},
@@ -3546,7 +3905,7 @@
 
 ####  W and Graveleau, L},
 
-###  -3715,6 +3893,18 
+###  -3715,6 +3892,18 
 ####     year = {2018}
 
 ##### +@book{platoform,
@@ -3575,7 +3934,7 @@
 
 ####     author = {Clauset, Aaron and Shalizi, Cosma Rohilla and Newman, M E J},
 
-###  -3745,6 +3935,7 
+###  -3745,6 +3934,7 
 ####  Oscar and Worm, Dani{\"e}l},
 
 ####     booktitle = {{Financial Cryptography and Data Security}},
@@ -3590,7 +3949,7 @@
 
 ####     publisher = {Springer International Publishing},
 
-###  -3755,6 +3946,7 
+###  -3755,6 +3945,7 
 ####  @book{projections,
 
 ####     author = {Thomas, P.D.},
@@ -3603,7 +3962,7 @@
 
 ####     series = {Special publication},
 
-###  -3831,6 +4023,7 
+###  -3831,6 +4022,7 
 ####  Karl Leswing and
 
 ####  Jeff van Santen},
@@ -3618,7 +3977,7 @@
 
 ####     title = {Rdkit 2019-03-2 (Q1 2019) Release},
 
-###  -3840,6 +4033,7 
+###  -3840,6 +4032,7 
 ####  @misc{rdkitcode,
 
 ####     author = {rdkit},
@@ -3633,7 +3992,7 @@
 
 ####     year = {2019}
 
-###  -3880,6 +4074,7 
+###  -3880,6 +4073,7 
 ####  @book{roman,
 
 ####     author = {Miller, B.G.},
@@ -3648,7 +4007,7 @@
 
 ####     publisher = {Elsevier Science},
 
-###  -3915,13 +4110,14 
+###  -3915,13 +4109,14 
 ####  @misc{rule8,
 
 ####     author = {{Ben Shneiderman}},
@@ -3673,7 +4032,7 @@
 
 ####     note = {\url{https://amstat.tandfonline.com/doi/abs/10.1080/00401706.2000.10485979}},
 
-###  -3936,6 +4132,7 
+###  -3936,6 +4131,7 
 ####  @book{sapiens,
 
 ####     author = {Harari, Y.N.},
@@ -3688,7 +4047,7 @@
 
 ####     publisher = {Harper},
 
-###  -3992,6 +4189,7 
+###  -3992,6 +4188,7 
 ####  @misc{scholar,
 
 ####     author = {Google},
@@ -3701,7 +4060,7 @@
 
 ####     year = {2019}
 
-###  -4000,6 +4198,7 
+###  -4000,6 +4197,7 
 ####  @misc{sciamerican,
 
 ####     author = {Monta{\~n}ez, Amanda},
@@ -3716,7 +4075,7 @@
 
 ####     year = {2016}
 
-###  -4051,6 +4250,7 
+###  -4051,6 +4249,7 
 ####  @misc{scipy,
 
 ####     author = {Eric Jones and Travis Oliphant and Pearu Peterson and others},
@@ -3729,36 +4088,7 @@
 
 ####     year = {2001--}
 
-###  -4067,6 +4267,18 
-####     year = {1949}
-
-##### +@book{serendipity,
-
-##### +   author = {Roberts, R.M.},
-
-##### +   isbn = {9780471602033},
-
-##### +   journal = {Wiley},
-
-##### +   lccn = {lc88033638},
-
-##### +   note = {\url{https://books.google.co.uk/books?id=hf57X0s4aPwC}},
-
-##### +   publisher = {Wiley},
-
-##### +   series = {Wiley Science Editions},
-
-##### +   title = {Serendipity: Accidental Discoveries In Science},
-
-##### +   year = {1989}
-
-####  @article{shapinginfo,
-
-####     acmid = {1477423},
-
-####     address = {Piscataway, NJ, USA},
-
-###  -4107,6 +4319,7 
+###  -4107,6 +4306,7 
 ####  @book{skeptical,
 
 ####     author = {Lomborg, B. and Matthews, M.H. and University of Cambridge (Gran Breta{\~n}a)},
@@ -3773,7 +4103,7 @@
 
 ####     publisher = {Cambridge University Press},
 
-###  -4156,6 +4369,7 
+###  -4156,6 +4356,7 
 ####  @article{slidedeck,
 
 ####     author = {John Mashey },
@@ -3786,7 +4116,7 @@
 
 ####     year = {1998}
 
-###  -4265,6 +4479,7 
+###  -4265,6 +4466,7 
 ####     address = {Secaucus, NJ, USA},
 
 ####     author = {Diehl, Stephan},
@@ -3801,7 +4131,7 @@
 
 ####     year = {2007}
 
-###  -4319,6 +4534,7 
+###  -4319,6 +4521,7 
 ####  @book{squaretower,
 
 ####     author = {Ferguson, Niall},
@@ -3816,7 +4146,7 @@
 
 ####     year = {2018}
 
-###  -4327,6 +4543,7 
+###  -4327,6 +4530,7 
 ####  @book{storyanimal,
 
 ####     author = {Gottschall, J.},
@@ -3831,7 +4161,7 @@
 
 ####     publisher = {Houghton Mifflin Harcourt},
 
-###  -4354,6 +4571,7 
+###  -4354,6 +4558,7 
 ####  @misc{stripes,
 
 ####     author = {Ed Hawkins},
@@ -3844,7 +4174,7 @@
 
 ####     year = {2019}
 
-###  -4408,6 +4626,7 
+###  -4408,6 +4613,7 
 ####  @misc{tablet,
 
 ####     author = {British-Museum},
@@ -3859,7 +4189,7 @@
 
 ####     year = {BC}
 
-###  -4415,6 +4634,7 
+###  -4415,6 +4621,7 
 ####  @article{tephi,
 
 ####     author = {Ian Brooks},
@@ -3872,7 +4202,7 @@
 
 ####     year = {2019}
 
-###  -4464,6 +4684,7 
+###  -4464,6 +4671,7 
 ####  @misc{threejs,
 
 ####     author = {Ricardo Cabello},
@@ -3885,7 +4215,7 @@
 
 ####     year = {2019}
 
-###  -4475,6 +4696,7 
+###  -4475,6 +4683,7 
 ####     author = {Jean, Neal and Wang, Sherrie and Samar, Anshul and Azzari,
 
 ####  George and Lobell, David and Ermon, Stefano},
@@ -3900,7 +4230,7 @@
 
 ####     primaryclass = {cs.CV},
 
-###  -4486,6 +4708,7 
+###  -4486,6 +4695,7 
 ####  @article{topomap,
 
 ####     author = {Baskin, Igor},
@@ -3915,7 +4245,7 @@
 
 ####     title = {Dimensionality Reduction In Chemoinformatics. Generative Topographic Mapping},
 
-###  -4505,6 +4728,7 
+###  -4505,6 +4715,7 
 ####  @book{transporttime,
 
 ####     author = {Seinfeld, J.H. and Pandis, S.N.},
@@ -3930,7 +4260,7 @@
 
 ####     publisher = {Wiley},
 
-###  -4549,6 +4773,7 
+###  -4549,6 +4760,7 
 ####  @misc{truthandbeauty,
 
 ####     author = {Moritz Stefaner},
@@ -3943,7 +4273,7 @@
 
 ####     year = {2020}
 
-###  -4569,6 +4794,7 
+###  -4569,6 +4781,7 
 ####  @misc{tsneexplain,
 
 ####     author = {Strayer, Nick},
@@ -3958,7 +4288,7 @@
 
 ####     year = {2018}
 
-###  -4601,6 +4827,7 
+###  -4601,6 +4814,7 
 ####  @book{tufte,
 
 ####     author = {Tufte, E.R.},
@@ -3971,7 +4301,7 @@
 
 ####     number = {v. 914},
 
-###  -4624,8 +4851,9 
+###  -4624,8 +4838,9 
 ####  @misc{tuv,
 
 ####     author = {Br{\"a}uer, Peter},
@@ -3988,7 +4318,7 @@
 
 ####     year = {2020}
 
-###  -4657,6 +4885,7 
+###  -4657,6 +4872,7 
 ####  @misc{vt,
 
 ####     author = {{VTL}},
@@ -4001,7 +4331,7 @@
 
 ####     year = {2019}
 
-###  -4668,6 +4897,7 
+###  -4668,6 +4884,7 
 ####     author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean,
 
 ####  Jeffrey},
@@ -4016,7 +4346,7 @@
 
 ####     primaryclass = {cs.CL},
 
-###  -4678,6 +4908,7 
+###  -4678,6 +4895,7 
 ####  @misc{w4colobs,
 
 ####     author = {{Daniel Ellis}},
@@ -4031,7 +4361,7 @@
 
 ####     year = {2019}
 
-###  -4691,6 +4922,7 
+###  -4691,6 +4909,7 
 ####     edition = {Third Edition},
 
 ####     editor = {Ware, Colin },
@@ -4046,7 +4376,7 @@
 
 ####     publisher = {Morgan Kaufmann},
 
-###  -4702,6 +4934,7 
+###  -4702,6 +4921,7 
 ####  @misc{web,
 
 ####     author = {Edsu and Ellis, Dan},
@@ -4061,7 +4391,7 @@
 
 ####     year = {2019}
 
-###  -4709,6 +4942,7 
+###  -4709,6 +4929,7 
 ####  @misc{webstats,
 
 ####     author = {InternetLiveStats},
@@ -4074,7 +4404,7 @@
 
 ####     year = {2020}
 
-###  -4728,6 +4962,7 
+###  -4728,6 +4949,7 
 ####  @article{who,
 
 ####     author = {WHO},
@@ -4087,7 +4417,7 @@
 
 ####     year = {2018}
 
-###  -4735,6 +4970,7 
+###  -4735,6 +4957,7 
 ####  @article{whodata,
 
 ####     author = {WHO},
@@ -4100,7 +4430,7 @@
 
 ####     year = {2016}
 
-###  -4742,6 +4978,7 
+###  -4742,6 +4965,7 
 ####  @article{wild,
 
 ####     author = {Oliver Wild},
@@ -4113,7 +4443,7 @@
 
 ####     year = {2015}
 
-###  -4750,6 +4987,7 
+###  -4750,6 +4974,7 
 ####  @book{wingedhorse,
 
 ####     author = {Descartes, R. and Cottingham, J. and Williams, B.},
@@ -4128,7 +4458,7 @@
 
 ####     publisher = {Cambridge University Press},
 
-###  -4769,6 +5007,7 
+###  -4769,6 +4994,7 
 ####  @misc{worldmap,
 
 ####     author = {{Martin Grandjean}},

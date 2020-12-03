@@ -28,8 +28,8 @@ for f in chs:
     files.append(loc+'/combigned.tex')
 
 
-title.extend(['Glossary','Bibliography'])
-files.extend(['glossary.tex','bibtex.bib'])
+title.extend(['Glossary'])#,'Bibliography'])
+files.extend(['glossary.tex'])#,'bibtex.bib'])
 
 
 changes = ['# DanEllisThesis - Change Log','-------------------------']
