@@ -1,132 +1,51 @@
-Warning: Float too large for page by 83.01437pt on input line 72.
-Warning: No autoref name for `algorithm' on input line 1049.
-Warning: Reference `ch2,ch3' on page 191 undefined on input line 106.
-Warning: Reference `)' on page 191 undefined on input line 106.
-Warning: Float too large for page by 21.40002pt on input line 208.
-Warning: Command \Large invalid in math mode on input line 253.
-Warning: Float too large for page by 3.74403pt on input line 447.
-Warning: Reference `appendix:kl' on page 233 undefined on input line 352.
-Warning: No autoref name for `Appendix' on input line 413.------------
+Warning: Reference `ch3' on page xiii undefined on input line 24.
+Warning: Reference `fig:skulls' on page 4 undefined on input line 19.
+Warning: Reference `ch1' on page 15 undefined on input line 238.
+Warning: Reference `ch2' on page 15 undefined on input line 238.
+Warning: Reference `ch3' on page 15 undefined on input line 239.
+Warning: Reference `ch4' on page 15 undefined on input line 239.
+Warning: Reference `ch5' on page 15 undefined on input line 239.
+Warning: Reference `fig:graphc1' on page 25 undefined on input line 15.
+Warning: Reference `fig:imap2page' on page 25 undefined on input line 21.
+Warning: Reference `ch3' on page 38 undefined on input line 9.
+Warning: Reference `ch3' on page 38 undefined on input line 9.
+Warning: Citation `fgps' on page 43 undefined on input line 117.
+Warning: Reference `ch3' on page 45 undefined on input line 3.------------
 ------------
-This is BibTeX, Version 0.99d (TeX Live 2015)
-The top-level auxiliary file: 0_intro.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-Warning--empty booktitle in finlayson
-(There was 1 warning)
-
-This is BibTeX, Version 0.99d (TeX Live 2015)
-The top-level auxiliary file: 1_visual.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-Too many commas in name 1 of "Dunbar, R. I. M., Schmitt, Alain and Atzwanger, Klaus and Grammer, Karl and Sch{\"a}fer, Katrin" for entry gossip
-while executing---line 1023 of file apalike.bst
-Too many commas in name 1 of "Dunbar, R. I. M., Schmitt, Alain and Atzwanger, Klaus and Grammer, Karl and Sch{\"a}fer, Katrin" for entry gossip
-while executing---line 1023 of file apalike.bst
-Too many commas in name 1 of "Dunbar, R. I. M., Schmitt, Alain and Atzwanger, Klaus and Grammer, Karl and Sch{\"a}fer, Katrin" for entry gossip
-while executing---line 1098 of file apalike.bst
-Warning--empty booktitle in finlayson
-(There were 3 error messages)
-
-This is BibTeX, Version 0.99d (TeX Live 2015)
-The top-level auxiliary file: 2_graphs.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-
-This is BibTeX, Version 0.99d (TeX Live 2015)
-The top-level auxiliary file: 3_centrality.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-
-This is BibTeX, Version 0.99d (TeX Live 2015)
-The top-level auxiliary file: 4_lumping.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-
-This is BibTeX, Version 0.99d (TeX Live 2015)
-The top-level auxiliary file: 5_DR.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-
-This is BibTeX, Version 0.99d (TeX Live 2015)
-The top-level auxiliary file: 6_conclusion.aux
-The style file: apalike.bst
-Database file #1: bibtex.bib
-
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 The top-level auxiliary file: glossary.aux
 I found no \citation commands---while reading file glossary.aux
 I found no \bibdata command---while reading file glossary.aux
 I found no \bibstyle command---while reading file glossary.aux
 (There were 3 error messages)
 
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2016)
+The top-level auxiliary file: 6_conclusion.aux
+The style file: apalike.bst
+Database file #1: bibtex.bib
+
+This is BibTeX, Version 0.99d (TeX Live 2016)
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: ./glossary.aux
 A level-1 auxiliary file: ./0_intro.aux
 The style file: apalike.bst
-A level-1 auxiliary file: ./1_visual.aux
-Illegal, another \bibstyle command---line 168 of file ./1_visual.aux
- : \bibstyle
- :          {apalike}
-I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 169 of file ./1_visual.aux
- : \bibdata
- :         {bibtex}
-I'm skipping whatever remains of this command
-A level-1 auxiliary file: ./2_graphs.aux
-Illegal, another \bibstyle command---line 264 of file ./2_graphs.aux
- : \bibstyle
- :          {apalike}
-I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 265 of file ./2_graphs.aux
- : \bibdata
- :         {bibtex}
-I'm skipping whatever remains of this command
-A level-1 auxiliary file: ./3_centrality.aux
-Illegal, another \bibstyle command---line 286 of file ./3_centrality.aux
- : \bibstyle
- :          {apalike}
-I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 287 of file ./3_centrality.aux
- : \bibdata
- :         {bibtex}
-I'm skipping whatever remains of this command
-A level-1 auxiliary file: ./4_lumping.aux
-Illegal, another \bibstyle command---line 119 of file ./4_lumping.aux
- : \bibstyle
- :          {apalike}
-I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 120 of file ./4_lumping.aux
- : \bibdata
- :         {bibtex}
-I'm skipping whatever remains of this command
-A level-1 auxiliary file: ./5_DR.aux
-Illegal, another \bibstyle command---line 345 of file ./5_DR.aux
- : \bibstyle
- :          {apalike}
-I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 346 of file ./5_DR.aux
- : \bibdata
- :         {bibtex}
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: ./6_conclusion.aux
-Illegal, another \bibstyle command---line 17 of file ./6_conclusion.aux
+Illegal, another \bibstyle command---line 30 of file ./6_conclusion.aux
  : \bibstyle
  :          {apalike}
 I'm skipping whatever remains of this command
-Illegal, another \bibdata command---line 18 of file ./6_conclusion.aux
+Illegal, another \bibdata command---line 31 of file ./6_conclusion.aux
  : \bibdata
  :         {bibtex}
 I'm skipping whatever remains of this command
 Database file #1: bibtex.bib
-Warning--I didn't find a database entry for "d3"
-Too many commas in name 1 of "Dunbar, R. I. M., Schmitt, Alain and Atzwanger, Klaus and Grammer, Karl and Sch{\"a}fer, Katrin" for entry gossip
-while executing---line 1023 of file apalike.bst
-Too many commas in name 1 of "Dunbar, R. I. M., Schmitt, Alain and Atzwanger, Klaus and Grammer, Karl and Sch{\"a}fer, Katrin" for entry gossip
-while executing---line 1023 of file apalike.bst
-Too many commas in name 1 of "Dunbar, R. I. M., Schmitt, Alain and Atzwanger, Klaus and Grammer, Karl and Sch{\"a}fer, Katrin" for entry gossip
-while executing---line 1098 of file apalike.bst
 Warning--empty booktitle in finlayson
-(There were 15 error messages)
+(There were 2 error messages)
+
+This is BibTeX, Version 0.99d (TeX Live 2016)
+The top-level auxiliary file: 0_intro.aux
+The style file: apalike.bst
+Database file #1: bibtex.bib
+Warning--empty booktitle in finlayson
+(There was 1 warning)
 

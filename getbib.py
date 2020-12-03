@@ -88,7 +88,7 @@ for i in range(len(entries)):
 
     try:entries[i]['journal']
     except:
-        try: entries[i]['journal'] = entries[i]['publisher'] 
+        try: entries[i]['journal'] = entries[i]['publisher']
         except:
             #print('---\n\n'+entries[i]['ID']+'\nNo Journal\n',entries[i])
             entries[i]['journal'] = 'online'
