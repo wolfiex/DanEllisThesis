@@ -89,19 +89,19 @@ If the relative change of \ce{NO2} is small, it can be thought of as being in a 
   \label{eqn:oo3}
 \end{equation}
 
-As ozone is a secondary pollutant (made not emitted), and its primary reaction produces a null cycle, the production of ozone in the atmosphere requires an increase in nitrogen dioxide livnconcentraions.
+As ozone is a secondary pollutant (made not emitted), and its primary reaction produces the null cycle, the production of ozone in the atmosphere requires an increase in nitrogen dioxide concentraions.
 
-\subsection{The Nox Cycle}\label{sec:noxcycle}
-Ozone production/loss in the troposphere is directly dependant on the concentration of available Nitrogen Oxides (NOx) (\autoref{sec:o3prod}). These are predominantly emitted by motor vehicles and power stations and can are known to cause respiratory problems in children and asthmatics as well as disrupting terrestrial and aquatic ecosystems \citep{eea}. Although NOx may be released naturally, the anthropogenic influence on their emissions was highlighted in early 2020 where the COVID-19 coronavirus disrupted travel across mainland china, causing a significant drop in anthropogenic emissions - \autoref{fig:chinanox}.
+\subsection{The NOx Cycle}\label{sec:noxcycle}
+Ozone production/loss in the troposphere is directly dependant on the concentration of available Nitrogen Oxides (NOx) (\autoref{sec:o3prod}). These are predominantly emitted by motor vehicles and power stations and can are known to cause respiratory problems in children and asthmatics as well as disrupting terrestrial and aquatic ecosystems \citep{eea}. Although NOx may be released naturally, the anthropogenic influence on their emissions was highlighted in early 2020 where the COVID-19 coronavirus disrupted travel across mainland China, causing a significant drop in anthropogenic emissions - \autoref{fig:chinanox}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{china_trop_2020056.png}
-    \caption{\textbf{Changes in NOx concentrations due to anthropogenic emissions.} A reduction in activity and trasport resutls in a large decrease of Nitrogen dioxide concentrations in the troposphere. Source: \citep{chinanox}}
+    \caption{\textbf{Changes in NOx concentrations due to anthropogenic emissions.} A reduction in activity and trasport produces a notable decrease of Nitrogen dioxide concentrations in the troposphere. Source: \citep{chinanox}}
     \label{fig:chinanox}
 \end{figure}
 
-During the day nitrate (\ce{NO3}) radicals can be formed through the reaction with \ch{O3}: \autoref{eqn:ono2} and \autoref{eqn:nno2}, however this is quickly destroyed through rapid photolysis (\autoref{eqn:nno3}) \citep{nitrate}. Photolysis reactions such as \autoref{eqn:nno3} and \autoref{eqn:o2} are no longer possible and th ozone production process shuts down.
+During the day nitrate (\ce{NO3}) radicals can be formed through the reaction with \ch{O3}: \autoref{eqn:ono2} and \autoref{eqn:nno2}, however this is quickly destroyed through rapid photolysis (\autoref{eqn:nno3}) \citep{nitrate}. At night photolysis reactions such as \autoref{eqn:nno3} and \autoref{eqn:o2} are no longer possible and the ozone production process shuts down.
 
 \begin{equation}
   \ce{NO2 + O3 ->[k3] NO3 + O2}
@@ -109,12 +109,12 @@ During the day nitrate (\ce{NO3}) radicals can be formed through the reaction wi
 \end{equation}
 
 \begin{equation}
-  \ce{NO3 ->[hv] NO2 + O(3P)}
+  \ce{NO3 ->[hv] NO2 + O}(^3P)
   \label{eqn:nno3}
 \end{equation}
 
 
- The increased amount of \ce{NO3} can now react with \ce{NO2} to produce dinitric pentoxide (\ce{N2O5}) and an aqueous nitric acid (\ce{HNO3}) - \autoref{eqn:n2o5} and \autoref{eqn:hno3}. \autoref{eqn:n2o5} is a three-body forwards pressure dependant reaction and a reverse temperature dependant reaction. During the day at the lower troposphere, it is warm, and this can occur within seconds, however, at night or high altitudes it can take anywhere from hours to months \citep{fundamentals}.
+ The increased amount of \ce{NO3} can now react with \ce{NO2} to produce dinitric pentoxide (\ce{N2O5}) and (in solution) nitric acid (\ce{HNO3}) - \autoref{eqn:n2o5} and \autoref{eqn:hno3}. \autoref{eqn:n2o5} is a three-body forwards pressure dependant reaction and a reverse temperature dependant reaction. During the day at the lower troposphere, it is warm, and the reverse reaction can occur within seconds, however, at night or high altitudes it can take anywhere from hours to months \citep{fundamentals}.
 
 
 \begin{equation}
@@ -129,31 +129,48 @@ During the day nitrate (\ce{NO3}) radicals can be formed through the reaction wi
 
 
 
-\subsection{Hox Cycle}
-The hydroxyl (OH) radical is central to tropospheric chemistry and a major sink for many of the greenhouse gasses (including ozone) \citep{olson}. Its primary source of production is through the action of UV in sunlight to photolyse ozone \citep{fundamentals}:
+\subsection{HOx Cycle}
+The hydroxyl (OH) radical is central to tropospheric chemistry and a major sink for many of the greenhouse gasses (including ozone - see \autoref{eqn:o3sink}) \citep{olson}. Its primary source of production is through the action of UV in sunlight to photolyse ozone \citep{fundamentals}:
 
+\begin{align}
+  \ce{O3 ->[hv] O}^1D\\
+  O^1\ce{D + H2O -> 2OH}\\
+  \ce{OH + O3 -> HO2 + O2} \label{eqn:o3sink}
+\end{align}
+
+As OH is highly reactive , with a lifetime of $<1$ seconds - \autoref{fig:timescales}, it is not transported a long distance and only exists during daytime (when it is still being produced). In reacting with a VOC, the hydroxyl radical scavenges hydrogen to form a radical species and water (\ch{h2o}). This produced radical species can then move on to react with \ch{O2} to produce a \ch{RO2} species \autoref{eqn:rdo2}.%(\autoref{fig:hox}).
+
+
+
+
+
+
+\begin{align}
+  OH + RH \ce{ -> } R. + \ch{h2o} \\
+  R. + \ch{o2} \ce{ -> } \ch{RO2} \label{eqn:rdo2}\\
+  \ch{ro2} + NO \ce{ -> } RO + \ch{no2}
+\end{align}
+
+
+The created \ce{RO2} can then convert NO to \ch{NO2} producing an \ch{RO} (\autoref{eqn:ro2no}) which also does the same via the hydroperoxide radical \ch{HO2} (\autoref{eqn:ro_1} - \ref{eqn:ro_2}). This NOx conversion is able to drive Ozone formation in the conventional way: \autoref{eqn:o1}-\ref{eqn:o3}.
+
+
+  \begin{align}
+    \ch{ro2} + NO \ce{ -> } RO + \ch{no2} \label{eqn:ro2no} \\
+    RO + \ce{O2}  \ce{ -> } \ch{HO2} \label{eqn:ro_1} \\
+    \ce{HO2} + NO \ce{ -> } \ch{NO2} + OH \label{eqn:ro_2}
+\end{align}
+
+
+\subsubsection{The Hydroperoxide Radical}
+
+Unlike OH, \ch{HO2} can exist both during daytime and night. It can further react with ozone to reproduce the hydroxyl radical and create two \ch{o2} molecules - \autoref{eqn:ho22o2}.
 
 \begin{equation}
-  \ce{O3 ->[hv] O1D}
+  \ce{HO2 + O3 -> OH + O2 + O2} \label{eqn:ho22o2}
 \end{equation}
 
-\begin{equation}
-  \ce{O1D + H2O -> 2OH}
-\end{equation}
-
-As OH is highly reactive ($<1$ seconds - \autoref{fig:timescales}) it is not transported a long distance and only exists during daytime (when it is still being produced). In reacting with a VOC, the hydroxyl radical scavenges hydrogen to form a radical species and water (\ch{h2o}). This produced radical species can then move on to react with \ch{O2} to produce a \ch{RO2} species (\autoref{fig:hox}). Additionally, reaction with OH can lead to the catalytic destruction of \ch{o3}. This provides the hydroperoxide radical (\ch{HO2}).
-
-\begin{equation}
-  \ce{OH + O3 -> HO2 + O2}
-\end{equation}
-
-Unlike OH, \ch{HO2} can exist both during daytime and night. It can further react with ozone to reproduce the hydroxyl radical and create two \ch{o2} molecules:
-
-\begin{equation}
-  \ce{HO2 + O3 -> OH + O2 + O2}
-\end{equation}
-
-Its loss depends on the NO mixing ratio, where if NO $>10$ pptv, \ch{HO2} will react predominantly with the NOx species. At lower concentrations (3-10 pptv) \ch{HO2} reacts mainly with ozone, and at deficient concentrations, it reacts mostly with itself \citep{finlayson}. Combined OH and \ch{ho2} form the HOx species, and the cycle in \autoref{fig:hox}.
+The loss of ozone loss depends on the NO mixing ratio, where if NO $>10$ pptv, \ch{HO2} will react predominantly with the NOx species. At lower concentrations (3-10 pptv) \ch{HO2} reacts mainly with ozone, and at deficient concentrations, it reacts mostly with itself \citep{finlayson}. Combined OH and \ch{ho2} form the HOx species, and the cycle in \autoref{fig:hox}.
 
 \begin{figure}[H]
   \centering
@@ -165,15 +182,16 @@ Its loss depends on the NO mixing ratio, where if NO $>10$ pptv, \ch{HO2} will r
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{hoxcycle.png}
-    \caption{\textbf{The HOx cycle.} The OH aids in the oxidation of VOCs, which makes them more water soluble - this allowing for their removal from the atmosphere. In a high NOx evironment the \ch{RO2} radicals can then reacti with NO to produce \ch{NO2}, and consequenty more ozone.}
+    \caption{\textbf{The HOx cycle.} The OH aids in the oxidation of VOCs, which makes them more water soluble - this allowing for their removal from the atmosphere. In a high NOx evironment the \ch{RO2} radicals can then reactive with NO to produce \ch{NO2}, and consequenty more ozone.}
     \label{fig:hox}
 \end{figure}
 
 \section{Modelling The Earth}
 In the previous section, the air quality and its detrimental effects on human health were seen to influence policy for cities and industry.
 For a policy to be passed there needs to not only evidence of the problem but a strong suggestion that any proposed changes will have the desired effect. As it is not possible to perform experiments on complex, and often unknown, chemistry at every location on the planet, we are forced to rely on the numerical simulation of the Earth System, and the constituent parts within it.
+
 \subsection{Earth System Models (ESM)}
-  ESMs are models capable of predict past or future interactions of the planetary system. They represent our foremost understanding of the complex interplay between land-surface (geosphere), ocean (hydrosphere), ice (cryosphere) and the air (atmosphere), and act as a surrogate to manual experimentation -  which is just not possible on the global scale.
+  ESMs are models capable of predicting past or future interactions of the planetary system. They represent our foremost understanding of the complex interplay between land-surface (geosphere), ocean (hydrosphere), ice (cryosphere) and the air (atmosphere), and act as a surrogate to manual experimentation -  which is just not possible on the global scale.
 ESMs can be split into individual parts. One example of this is the Chemistry section of the Goddard Earth Observing System (an integrated ESM and data assimilation model hosted by NASA's Goddard space flight centre \citep{geosgit}) - GEOS Chem. GEOS-Chem is a global 3D model of atmospheric chemistry which is driven by the meteorology provided by NASA \citep{geos}. Here the Earth is split up into cubic cells longitudinally, latitudinally, and vertically (\autoref{fig:gcm})\footnote{This image is not from GEOS-Chem.}. Each one of these cells performs several perturbations of the chemistry within them before any long-lived species are transported, and the process is repeated. If extracted separately, a single one of these cells may be used to explore the sensitivity of different species for a range of input conditions. This is the bases of the atmospheric box model.
 \begin{figure}
   \centering
@@ -199,11 +217,11 @@ Using a mechanim it is possible to determine how quickly each species in a react
 \label{eqn:numerical1}
 \end{equation}
 \begin{equation}
-\ce{ d[N2O5]/dt ->    d[NO2]/dt} + \ce{d[NO3]/dt}
+\ce{- d[N2O5]/dt =   d[NO2]/dt} + \ce{d[NO3]/dt}
 \label{eqn:numerical2}
 \end{equation}
 \begin{equation}
-\ce{ \int d[N2O5]/dt ->    \int d[NO2]/dt} + \ce{\int d[NO3]/dt}
+\ce{ - \int d[N2O5]/dt =  \int d[NO2]/dt} + \ce{\int d[NO3]/dt}
 \label{eqn:numerical3}
 \end{equation}
 \subsubsection{Non-Stiff Equations}
