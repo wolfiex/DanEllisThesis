@@ -4,7 +4,7 @@
 
 In the previous chapters, we have discussed visualisation and its role in bridging the gap between data and understanding. We have applied centrality metrics to a chemical network to tell us what species are of importance and experimented in getting machine learning models to learn the chemical structure of the species in a mechanism. This final research chapter provides a (brief) overview of current mechanism reduction techniques while providing two novel alternatives to aid the process.
 
-Science often deals with the problem of understanding complexity. Such a task may be accomplished through organisation and partitioning (e.g. chunking a problem into smaller problems) and processing these at the the same time using many workers (parallelism). In cases where such methods fail, we are forced to `disregard' complexity. To do this physical processes may be simplified\footnote{It is common to approximate a year as 365 days, an atom as a sphere and replace the Van der Walls equation with the ideal gas law (for normal pressures).}, or described using mathematics. Theorems and ideas may be applied to emulate `real-world' outcomes based on the platonian concept of an abstract `Ideal' world \citep{platoform, physapprox}.
+Science often deals with the problem of understanding complexity. Such a task may be accomplished through organisation and partitioning (e.g. chunking a problem into smaller problems) and processing these at the same time using many workers (parallelism). In cases where such methods fail, we are forced to `disregard' complexity. To do this physical processes may be simplified\footnote{It is common to approximate a year as 365 days, an atom as a sphere and replace the Van der Walls equation with the ideal gas law (for normal pressures).}, or described using mathematics. Theorems and ideas may be applied to emulate `real-world' outcomes based on the Platonian concept of an abstract `Ideal' world \citep{platoform, physapprox}.
 
  The process of lumping has long been used to replace a complex, changing process (e.g. Quantum Mechanics or Boundary Layer Fluid Dynamics) with a more straightforward constant process, \citep{approx}. In such cases, an approximation may be far more useful than a lengthy exact solution, or none at all provided the primary criteria/outcome is identified and optimised for (evaluated against a benchmark or standard).
 
@@ -17,7 +17,7 @@ However, even with such simplifications, atmospheric chemical mechanisms have be
 
 \section{Mechanism Reduction}
 
-\textit{Although this chapter discusses work which can contribute to a chemists toolkit for mechanism reduction, it itself does not concern itself with this task specifically - and will not contain any work directly related to this nor analyse the results of a mechanism where the species suggested may be lumped together. Although the framework for such a task exists, this shall be left as a task for future work.  }
+\textit{Although this chapter discusses work which can contribute to a chemists toolkit for mechanism reduction, it does not concern itself with this task specifically - and will not contain any work directly related to this nor analyse the results of a mechanism where the species suggested may be lumped together. Although the framework for such a task exists, this shall be left as a task for future work.  }
 
 Currently, there exist two main reasons for trying to find species of similar chemical properties. These are searching for pysciochemical analogues within the field of cheminformatics (see \autoref{ch5}) and mechanism reduction. This chapter concerns itself with using the graph structure to group species with reactions on fast timescales, or similar connectivity patterns - a problem commonly presented in the production of a reduced (simplified) chemical mechanism. For this reason, the following section provides a short literature review on several different reduction techniques.
 
@@ -82,7 +82,7 @@ The mechanism used is the Common Representative Intermediates (CRI) Mechanism v2
 Reductions have been made on a compound-by-compound basis and compared to the MCM using a series of 5-day box-model simulations, \citep{cri}.
 
 \paragraph*{Why further simplify the CRI network?}\label{sec:whycri}
-CRI v2.2 \citep{cri} is a mechanism of 422 species and 1261 reactions - that is ~7\% of the full MCM (5809 species and 17224 reactions). Although this is significantly smaller than the full MCM, it may still prove problematic if used within a global model - for comparison the GEOS-Chem\footnote{A global 3D model of atmospheric chemistry driven by meteorology from NASA's Goddard Earth Observing System (GEOS), \citep{geos}.} standard chemistry is approximately half the size of this, \citep{geosgit}.
+CRI v2.2 \citep{cri} is a mechanism of 422 species and 1261 reactions - that is ~7\% of the full MCM (5809 species and 17224 reactions). Although this is significantly smaller than the full MCM, it may still prove problematic if used within a global model - for comparison, the GEOS-Chem\footnote{A global 3D model of atmospheric chemistry driven by meteorology from NASA's Goddard Earth Observing System (GEOS), \citep{geos}.} standard chemistry is approximately half the size of this, \citep{geosgit}.
 
 \subsection{The Box-Model}
 The box model is an adapted version of the Dynamically Simple Model of Atmospheric Chemical Complexity (DSMACC) \citep{dsmacc,dsmaccgit}. Recent updates allow for multiple parallel runs, easy extraction of rates, fluxes and the Jacobian matrix as well as a simple Ncurses (a command like semi-graphic interface) interface for loading and parsing new files.
@@ -120,7 +120,7 @@ Algorithms such as Label Propagation \citep{labelprop} and spin-glass \citep{spi
     \item[-]\textit{structual equivalence} - vertices are similar if they have like neighbours, \citep{strueq}.
     \item[-]\textit{regular eqivalence} - retrieves nodes with similar connection patterns (e.g. parent - child node hierarchicl structures), \citep{regequiv}.
 \end{itemize}
-This works in a similar way to an AutoEncoder (discussed in \autoref{sec:ae}), where topological similarities are used to simplify (or encode) the network structure, in a way which it may be decoded again.
+This works similarly to an AutoEncoder (discussed in \autoref{sec:ae}), where topological similarities are used to simplify (or encode) the network structure, in a way which it may be decoded again.
 
 Finally, there exist a set of `flow' based models which use the network dynamics to determine the modularity of a network. These are discussed below.
 
@@ -147,7 +147,7 @@ The Louvain is a hierarchical clustering algorithm; this means that after each i
 
 
 The Infomap clustering algorithm is a flow-based method which operates on system dynamics rather than structure \citep{mapeqn}. It works by trying to minimise the Huffman code \citep{huffman} - a type of optimal prefix code used for lossless compression in computer science and information theory.
-Here the frequency of items is grouped to produce a binary decision tree (\autoref{fig:huff} left). Here the letters a,d,r,g and b appear much more frequently than ! and c. Navigation this binary tree can then be used to produce a Huffman code for each letter (\autoref{fig:huff} right) where letters with a higher frequency have a shorter code length. This method is used within the infomap algorithm to compresses information about the probability of a random walker transitioning between pairs of nodes in a network. Here the prefix of a Huffman code works much like a postcode (City+Areacode, StreetCode ) to identify regions where the walker gets trapped (clusters of high density with a low probability that the walker leaves).
+Here the frequency of items is grouped to produce a binary decision tree (\autoref{fig:huff} left). Here the letters a,d,r,g and b appear much more frequently than! and c. Navigation this binary tree can then be used to produce a Huffman code for each letter (\autoref{fig:huff} right) where letters with a higher frequency have a shorter code length. This method is used within the infomap algorithm to compresses information about the probability of a random walker transitioning between pairs of nodes in a network. Here the prefix of a Huffman code works much like a postcode (City+Areacode, StreetCode ) to identify regions where the walker gets trapped (clusters of high density with a low probability that the walker leaves).
 
 As the number of partitions grows exponentially with the number of nodes\footnote{See `Bell Numbers' - these count the possibles partitions in a set and have root going back to medieval Japan.} it is not possible to apply a brute force approach to find the best number of partitions. Instead, a variation of the Louvain method applies `submodule exploration' which verifies that large modules should not be broken down into smaller ones and `single-node movements` which allow individual nodes to move between modules. These optimisations avoid the situation of too large modules (where each node has a category to itself) or too small where the number of prefix codes is great.
 
@@ -175,7 +175,7 @@ As the InfoMap algorithm implements a directed approach coupled with a multi-lev
 
 \section{Evaluation Of Infomap On A Real Simulation.}
 
-Using the initial conditions for London from (\autoref{tab:icsmetric}), a spun up model simulation with the CRI v2.2 mechanism was run. Since this does not contain \ch{c5h11cho}, MVK, MACR or Limonene as primary species, these are omitted from the initialisation. Following a spinup to radical steady-state, a graph is generated for noon after one day of an unconstrained run. The InfoMap algorithm is then applied to the generated graph.
+Using the initial conditions for London from (\autoref{tab:icsmetric}), a spun up a model simulation with the CRI v2.2 mechanism was run. Since this does not contain \ch{c5h11cho}, MVK, MACR or Limonene as primary species, these are omitted from the initialisation. Following a spinup to radical steady-state, a graph is generated for noon after one day of an unconstrained run. The InfoMap algorithm is then applied to the generated graph.
 
 The coarsest level of clustering is shown in \autoref{fig:iml1}. Here nodes are coloured by their cluster, and approximate polygon hulls (a shape of multiple corners which enclose a set of points) surround the nodes closest to the median cluster centre. Much like the findings in (\autoref{ch2}), it is seen that different sections of the graph network represent different types of chemistry - for example, hull 4 contains aromatic species, hull 2 contains the products of linear alkanes and hull 3 contains the terpenes.
 
@@ -394,7 +394,7 @@ The most significant changes of a reaction rate within a simulation are due to p
 
 \section{Results}
 
-In order to get a representation of the mechanism, we run 300 randomly initiated scenarios (\autoref{sec:lumpinputs}). The experimental setup is one such that it is possible to add more data points at a later date. From each simulation, the no diagonal elements of the Jacobian are used to construct a graph representative of the aggregated hourly means of the simulation output. Each of these graphs is then run through the infomap algorithm, and a grouping/clustering produced. Each infomap is run 100 times, where the result with the best fit (shortest code length) is taken - this is an optional parameter on the algorithm.
+To get a representation of the mechanism, we run 300 randomly initiated scenarios (\autoref{sec:lumpinputs}). The experimental setup is one such that it is possible to add more data points at a later date. From each simulation, the no diagonal elements of the Jacobian are used to construct a graph representative of the aggregated hourly means of the simulation output. Each of these graphs is then run through the infomap algorithm, and a grouping/clustering produced. Each infomap is run 100 times, where the result with the best fit (shortest code length) is taken - this is an optional parameter on the algorithm.
 
 \subsection{The Co-Grouping Network}
 
@@ -442,7 +442,7 @@ In taking the common clusters formed at midnight (\autoref{fig:alluvial} left)  
 \begin{figure}%[H]
     \centering
 \includegraphics[width=.9\textwidth]{fig/alluvial.png}
-\caption{\textbf{An alluvial diagram showing the changes in clusters between noon and midnight.} On the left are all groups that appear in >45\% of the midnight simulation results. On the right are groups which appear >45\% of the midday results. In the middle exist the clusters extracted which appear in >45\% of all runs. Here it is seen that there exist a series of species which may exist in the daytime or nighttime chemistry, but do not persist between both. Sizes represent the number of species and colours (greys) have no purpose other than to differentiate different items. }
+\caption{\textbf{An alluvial diagram showing the changes in clusters between noon and midnight.} On the left are all groups that appear in >45\% of the midnight simulation results. On the right are groups which appear >45\% of the midday results. In the middle exist the clusters extracted which appear in >45\% of all runs. Here it is seen that there exist a series of species which may exist in the daytime or nighttime chemistry, but do not persist between both. Sizes represent the number of species and colours (greys) has no purpose other than to differentiate different items. }
 \label{fig:alluvial}
 \end{figure}
 
@@ -504,37 +504,6 @@ PECOH DIEK & 0.0172 & 0.0011 \\
 
 
 
-
-
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
 
 
 

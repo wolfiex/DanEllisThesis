@@ -99,7 +99,7 @@ As chemical networks provide a wealth of information on the reactions within a s
 
 
 \subsubsection{Edge Crossing} \label{sec:edgecross}
-One of the greatest limitations to understanding a graph is the number of overlapping (crossing) edges \citep{humanaesthetic}, especially since users often spend most of their time looking at the edges of a graph in order to understand it \citep{eyetrack}.
+One of the greatest limitations to understanding a graph is the number of overlapping (crossing) edges \citep{humanaesthetic}, especially since users often spend most of their time looking at the edges of a graph to understand it \citep{eyetrack}.
 
 There exist several types of graph layout algorithms which aim to reduce the number of overlapping edges in a graph. The two most common ones are force-directed and orthogonal. Orthogonal designs are those of straight edges at 90-degree angles, such as in architectural or circuit schematics (\autoref{fig:orthogonal}). Force-directed graphs (\autoref{sec:forcedirected}) are a graph layout is designed to simulate a physical system, where node positions are the result of the push and pull of the edges between them. In the task selecting nodes from a specific path, users were twice as more accurate using this layout than the orthogonal one \citep{eyetrack}.
 
@@ -118,14 +118,14 @@ There exist several types of graph layout algorithms which aim to reduce the num
 
 \subsubsection{Node Distribution And Overlap}\label{sec:ndist}
 
-The distribution of nodes across the page can both hinder or increase the readability of a graph - especially since larger nodes may obscure smaller ones at the same location. \cite{ch6graphredability} found that graphs with an equal node distribution across space, at a medium edge length greatly improved graph readability - with node distribution and graph-symmetry ranking second in a study on user preference on graphs.
+The distribution of nodes across the page can both hinder or increase the readability of a graph - especially since larger nodes may obscure smaller ones at the same location. \cite{ch6graphredability} found that graphs with an equal node distribution across space, at a medium edge length, greatly improved graph readability - with node distribution and graph-symmetry ranking second in a study on user preference on graphs.
 
 In addition to selecting the best graph layout, there exist several methods in which overlapping nodes may be removed - an issue that is sometimes difficult by the treating of nodes as `point masses' within an algorithm \citep{nodeoverlap}. \cite{IPSEPCOLA} explains that there are usually two methods for reducing the number of overlapping nodes in a graph; these are:
 
 
 \begin{itemize}
 \item [1.] Create a layout design capable of taking node size (e.g. \citep{nons}) into consideration. These designs tend to be layout specific and not absolute in removing all overlap between nodes.
-\item [2.] This requires a level of post-processing in the form of a `layout adjustment'. Here we reposition nodes after a chosen layout has finished computing. The drawback of this method is that information contained in the graph's shape may be degraded. This can be done through the use of collision detection, or moving nodes to the centre of the vernouli cells \citep{novern}.
+\item [2.] This requires a level of post-processing in the form of a `layout adjustment'. Here we reposition nodes after a chosen layout has finished computing. The drawback of this method is that information contained in the graph's shape may be degraded. This can be done through the use of collision detection, or moving nodes to the centre of the vornouli cells \citep{novern}.
 \end{itemize}
 
 
@@ -335,7 +335,7 @@ In deciding which layout algorithm produces the best graph-node homogeneity, a k
 \end{figure}
 
 This style of plotting allows for the easy location of areas containing a large number of nodes (high density) through the use of the contour-colour gradient. In an ideal graph, we would have groups (clusters) of high density, all of which would be evenly dispersed around the 2D plane.
-Additionally, the use of $x/y$ kernel density can show us the homogeneity of a graph - a perfectly homogeneous (lattice) graph will have a uniform distribution across both axes. For a modular graph of evenly dispersed groups, we would expect an oscillatory distribution of similar amplitudes. Using this criterion, the Mercator (\autoref{fig:merc}b), tsNet (\autoref{fig:ts}) and Force Atlas (\autoref{fig:fa}) score the highest, where the OpenOrd and Yifan Hu graphs containing a gaussianesque distribution across both axes - a distribution conducive to the production of a hairball.
+Additionally, the use of $x/y$ kernel density can show us the homogeneity of a graph - a perfectly homogeneous (lattice) graph will have a uniform distribution across both axes. For a modular graph of evenly dispersed groups, we would expect an oscillatory distribution of similar amplitudes. Using this criterion, the Mercator (\autoref{fig:merc}b), tsNet (\autoref{fig:ts}) and Force Atlas (\autoref{fig:fa}) score the highest, where the OpenOrd and Yifan Hu graphs containing a gaussian-esque distribution across both axes - a distribution conducive to the production of a hairball.
 
 \subsubsection{Distribution Of Primary Emitted VOCs}
 
@@ -466,7 +466,7 @@ This is usually due to our inherent ability to locate patterns and changes due t
 \end{itemize}
 
 \paragraph{Technological}
-In addition to human limitations, there may be restrictions due to the medium a visualisation is created/presented. In addition, to monitor resolution, much scientific research is constrained by the size, resolution and colour quality of the presentation mediums used for talks, printing or posters. \cite{ware} explains that a printer capable of producing 1200 dots per inch squared, can only do this for black/white binary images. If for instance, 256-greyscale is used, the resulting resolution is then at-least ten times smaller. This is because printers a Monet (dot matrix) style approach to create shading and colour. It follows that at full colour\footnote{CYMK (Cyan Magenta Yellow Black)}, the output resolution will be worse.
+In addition to human limitations, there may be restrictions due to the medium a visualisation is created/presented. To monitor resolution, much scientific research is constrained by the size, resolution and colour quality of the presentation mediums used for talks, printing or posters. \cite{ware} explains that a printer capable of producing 1200 dots per inch squared, can only do this for black/white binary images. If for instance, 256-greyscale is used, the resulting resolution is then at-least ten times smaller. This is because printers a Monet (dot matrix) style approach to create shading and colour. It follows that at full colour\footnote{CYMK (Cyan Magenta Yellow Black)}, the output resolution will be worse.
 
 It is also essential to have a graph fitting the same overall shape of the canvas on which it is presented \citep{graphmetnew}. This not only makes optimal use of any space available but also reduces the visual complexity as it minimises the number of distinct shapes available to the user.
 
@@ -594,9 +594,9 @@ When using a directional graph, it is the convention to use arrowheads to repres
 
 
 \subsubsection{Edge Shape}
-Edge shape is essential, as it is the medium we use to represent relationships within a graph. For orthogonal graphs (\autoref{sec:edgecross}), multiple lines are used to simplify the complexity of a graph and reduce edge crossings \citep{ortho}. In increasing the number of lines within an edge, this multi (poly)-line graphs can be modified to give drawing with nicely curved edges. In a similar manner, it is possible to replace the edges in a straight-line graph with Lombardi-style curves or cubic beziers \citep{lombardi,bezier}.
+Edge shape is essential, as it is the medium we use to represent relationships within a graph. For orthogonal graphs (\autoref{sec:edgecross}), multiple lines are used to simplify the complexity of a graph and reduce edge crossings \citep{ortho}. In increasing the number of lines within an edge, this multi (poly)-line graphs can be modified to give drawing with nicely curved edges. Similarly, it is possible to replace the edges in a straight-line graph with Lombardi-style curves or cubic beziers \citep{lombardi,bezier}.
 
-Using a mechanism describing the reactions of Butane in the MCM, we compare many edge shapes (\autoref{fig:curvededge}). In this graph, each node has multiple edges between nodes (multi-link). Each edge represents a different reaction between the species. \autoref{fig:curvededge}a shows the straight-line representation of each graph. Since each edge represents the shortest distance between two nodes, any additional reactions pairs between similar nodes are hidden from view. If using this type of representation, it is advised to take the net edge direction and weight between the values. An improvement to the straight-line graph comes from the use of quadratic curves (\autoref{fig:curvededge}b). This allows for the symmetric distribution of edges within the graph. If instead an asymmetric representation for each edge is required, it is possible to use a bezier curve (described below) instead of a quadratic edge (\autoref{fig:curvededge}c). These can provide additional information through the use of control points, which can alter the shape, steepness and asymmetry of each link.
+Using a mechanism describing the reactions of Butane in the MCM, we compare many edge shapes (\autoref{fig:curvededge}). In this graph, each node has multiple edges between nodes (multi-link). Each edge represents a different reaction between the species. \autoref{fig:curvededge} shows the straight-line representation of each graph. Since each edge represents the shortest distance between two nodes, any additional reactions pairs between similar nodes are hidden from view. If using this type of representation, it is advised to take the net edge direction and weight between the values. An improvement to the straight-line graph comes from the use of quadratic curves (\autoref{fig:curvededge}b). This allows for the symmetric distribution of edges within the graph. If instead an asymmetric representation for each edge is required, it is possible to use a bezier curve (described below) instead of a quadratic edge (\autoref{fig:curvededge}c). These can provide additional information through the use of control points, which can alter the shape, steepness and asymmetry of each link.
 
 \paragraph*{Bezier Curves}
 Bezier curves are named after Pierre Bezier who used them in the bodywork design of Renault cars in the 1960s \citep{beziermath}. Since then they have been widely used in graphs, computer graphics, font design and animation/interactivity response \citep{bezier,beziermath,beziercomputer}. Bezier curves come in a range of possible dimensions; cubic beziers are the most commonly used within network visualisation. These contain four control points, respectively, which can be used to determine the shallowness of the curve through design. In general, relatively shallow curves are prefered, as these do not introduce unnecessary edge crossing or abrupt changes, which have been shown to hinder a users ability to isolate items of interest \citep{ch6graphredability}.
@@ -864,7 +864,7 @@ In \autoref{sec:patternmatch} it was seen that there exist a certain branch patt
 
 To test for this, we categorise all primary emitted species into Alkanes, Alkenes, Aromatics and Terpenes. All nodes and links in close proximity are regarded as products of these species and are placed within the same group. Using a randomly selected graph from the dataset, the network is separated spatially, and nodes within the Voronoi cell (These are described in \autoref{sec:nodedensitya}) of a primary emitted species are coloured similarly.
 
-\autoref{fig:fncolour} shows a split in the MCM chemistry for the Beijing mechanism. Here it is found that it is possible to separate the MCM network into an aromatic branch, a terpene branch, an alkane and straight-chain alkene branches. Such branches not only help us identify changes in chemistry due to biogenic or anthropogenic sources but also emphasise the path taken to carbon dioxide and water. As the MCM does not contain \ce{CO2}, we see all the different groups converge on Carbon Monoxide at the centre of the figure (the white dot). Coupled with the last section, this suggests that following rotational and symmetric transformations, it is possible to compare  different mechanisms.
+\autoref{fig:fncolour} shows a split in the MCM chemistry for the Beijing mechanism. Here it is found that it is possible to separate the MCM network into an aromatic branch, a terpene branch, an alkane and straight-chain alkene branches. Such branches not only help us identify changes in chemistry due to biogenic or anthropogenic sources but also emphasise the path taken to carbon dioxide and water. As the MCM does not contain \ce{CO2}, we see all the different groups converge on Carbon Monoxide at the centre of the figure (the white dot). Coupled with the last section, this suggests that following rotational and symmetric transformations, it is possible to compare different mechanisms.
 
     \begin{figure}[H]
          \centering
@@ -879,7 +879,7 @@ To test for this, we categorise all primary emitted species into Alkanes, Alkene
 
 \section{Conclusion}
 
-\autoref{ch1} explained that the visual representation of data could make use of the pattern recognition side of the human brain. Similarly to the invention of cuneiform, we are able to use graphics to alleviate some of the cognitive strain from numerical data. It was noted that metaphor selection and storytelling are an essential part of conveying complex information to the reader and that the choice of encoding plays an integral part in this.
+\autoref{ch1} explained that the visual representation of data could make use of the pattern recognition side of the human brain. Similarly to the invention of cuneiform, we can use graphics to alleviate some of the cognitive strain from numerical data. It was noted that metaphor selection and storytelling are an essential part of conveying complex information to the reader and that the choice of encoding plays an integral part in this.
 
 This chapter begins on building on those concepts of visualisation. We defined our system as a collection of relational interactions between species and chose the graph/sociograph design to represent these.
 

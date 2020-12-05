@@ -5,7 +5,7 @@ import re,glob
 
 from nltk.corpus import stopwords
 stop = list(stopwords.words('english'))
-stop.extend('section subsection subsubsection figure table item paragraph begin end caption autoref includegraph  png pdf textwidth endsubfigure subfigure the is this centering label textbf textit emph fig cite citep width height includegraphics sec use'.split())
+stop.extend('section subsection subsubsection figure table item paragraph begin end caption autoref includegraph  png pdf textwidth endsubfigure subfigure the is this centering label textbf textit emph fig cite citep width height includegraphics sec use equation eqn pp conscat ch also nc used using pt within align https com ac whereupon github'.split())
 # NOTE these are now removed from the regex exp anyway.
 
 files = glob.glob('*_*.tex')
