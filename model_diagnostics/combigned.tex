@@ -1042,24 +1042,36 @@ Beijing consists mainly of Quinones and Dialdehydes, which are both derivatives 
 
 
 
-\section{Causality analysis using Personalised Page Rank.}
+\section{Causality Analysis using the Jacobian and Pagerank}
 
-In \autoref{sec:pagerank}, the results of the PageRank algorithm was obtained by solving for the eigenvalues and vectors of the google matrix. It was also mentioned that an equivalent method to get a result might be obtained by propagating the one's vector (a 1D vector of unity) in small increments (Equation \autoref{eqn:forwards}). This works much like the integrator within a chemical box model, except rather than updating the species concentration with each time step, we move information between each node.
+Due to the complex inter-dependency on species within an atmospheric network, it is often hard to calculate how much of an effect perturbing one species will have on another. Classically we can find the instantaneous change at a specific point in time by close examination of the Jacobian matrix - also known as the connectivity method.
+Here \cite{connectivity} states that the value $J_{A, B}$ of a log-normalised Jacobian represents the effect changing a species A will have on species B - allowing us to determine a set of important species with an aim (e.g. mechanism reduction).
 
-Using this analogy it, therefore, follows that should we reverse the direction of the flow (change the edges from source $\rightarrow$ target to source $\leftarrow$ target) it would be possible to see where species influence originates (\autoref{fig:prgraphs}). As each network is constructed directly from the Jacobian matrix (what is used within the integrator to propagate a model forwards in time ), reversing the link direction is analogous to taking the transpose of the Jacobian. Within the modelling world, the resultant matrix is now known as the adjoint. The adjoint matrix is often used in the running of models backwards in time, to make historic predictions based on current data - for example, in finding out the source of a pollution \citep{adjgeos}.
+If we take the sum of all items in the B column ($\sum_{i \ne B} J[i, B]$) we can calculate the total production of species B. Expanding this method we can calculate the percentage importance of B's precursors. Here the species with the highest values present the most significance to the formation of B. If we were to look at the rows instead of columns, a similar analysis may be executed for a species loss. It is for this reason that in preparing the Jacobian for use within a graph, we take the net difference between production and loss contributions to determine edge direction and weight. 
+
+\subsection{Source Analysis using PageRank}
+The PageRank value of a species can be calculated through the solving of eigenvalues and eigenvectors of a google matrix, or propagating a vector of unity through the network in small increments (Equation \autoref{eqn:forwards}). These solutions are both very similar to the integrator we use to propagate the chemistry within our box model - where instead of concentration we move `information' between nodes in our network. 
+
+This means that for a network of nodes \{A, B, C, D, E\} (\autoref{fig:forwardspr}) we can use page rank to determine where the flow of information ends up (ultimately E). However, if we are interested to find out how much each of these nodes contributes to the total amount of information gained by E, we need to look at the whole sequence in reverse. For a directed-graph, we may reverse the direction of the links (so that source $\rightarrow$ target becomes source $\leftarrow$ target) and then assign an arbitrary amount of information to our queryable node (E) and then propagate it forwards using page rank on our reversed network using the same edge weighting as before, \autoref{fig:backwardspr}. 
+
+
+\subsection{Mathematical Equivalent of Edge Reversal}
+The physical `flipping' of an edge direction is the most visually intuitive method reversing the direction, however, in \autoref{ch2} we discussed that the 2D relational data of a network may also be represented through the use of an adjacency matrix. Since this is a matrix of links where row elements $\rightarrow$ column elements, the reversal of these edges is mathematically identical to taking the transpose of the matrix. 
+
+In terms of our chemistry, our network is derived using the net values of our second order, partial derivative, relational matrix - the Jacobian. This makes the link reversal procedure equivalent to transposing the Jacobian, and thus analogous to the creation of the adjoint. The adjoint matrix is often used within the modelling world, to run backwards in time and make historic predictions based on current data \citep{adjgeos}. This has its application in determining the geolocational source of pollution, or in our case the source of concentration change in a species of interest. 
 
 \begin{figure}[H]
     \centering
 \begin{subfigure}{.9\textwidth}
   \centering
   \includegraphics[width=\textwidth]{figures_c3/traditional.pdf}
-  \caption{Traditional Influence Graph}
+  \caption{Traditional Influence Graph}\label{fig:forwardspr}
 \end{subfigure}
 
 \begin{subfigure}{.9\textwidth }
   \centering
   \includegraphics[width=\textwidth]{figures_c3/adjoint.pdf}
-  \caption{Reversed-link (adjoint) influence graph}
+  \caption{Reversed-link (adjoint) influence graph}\label{fig:backwardspr}
 \end{subfigure}
 
 \caption{\textbf{Link reversal of the Jacobian Sensitivity matrix graph results in a graph of the adjoint.} Showing changing the direction of links in a graph is equivalent to applying the transpose to an adjacency matrix (right). In the case of a Jacobian based graph, this is analogous to using the adjoint to propagate the model back in time - something that can be used to identify the influence upon a species with a model.}
@@ -1067,48 +1079,46 @@ Using this analogy it, therefore, follows that should we reverse the direction o
 \end{figure}
 
 
+\subsection{A Calculated Case Study}
+To illustrate the points made within this section we select a species (MCM name: NC101CO) from a sample simulation of the MCM (Borneo initial conditions are given in \autoref{tab:icsmetric}). A brief mechanism analysis allows us to determine the precursors of \ch{NC101CO} by isolating its local sub-graph and reversing it. This is done by looking at outwards arrows in \autoref{fig:prtest1}. 
 
 
-\subsection{Source Analysis With Pagerank}
-Often we are faced with the problem of determining the source of a species production. To do this, we select a case study of \ch{NC101CO} from the Borneo simulation run from the MCM. In tracing back the precursors of this (see below), it is seen that \ch{NC101CO} is the product of $\alpha$-pinene forming NAPINBOOH, NAPINBO, \ch{NAPINBO2} and consequently \ch{NC101CO}. This can also be seen in the subgraph in \autoref{fig:prtest1} - observing the outwards arrows only (these point in the direction of the source node).
- Knowing this, we test the results of the reversed PageRank algorithm to see which species offer the most influence.
-
-\newpage
-
-\begin{verbatim}
-    ! Sources of NC101CO
-        NAPINBO-->NC101CO+HO2
-        NAPINBO2-->NC101CO
-        NAPINBOOH+OH-->NC101CO+OH
-
-    --- 2nd generation precursors ---
-    ! precursors of NAPINBOOH
-        NAPINBO2+HO2-->NAPINBOOH
-
-    ! precursors of NAPINBO
-        NAPINBO2+NO-->NAPINBO+NO2
-        NAPINBO2+NO3-->NAPINBO+NO2
-        NAPINBO2-->NAPINBO
-        NAPINBOOH-->NAPINBO+OH
-
-    ! precursors of NAPINBO2
-        NAPINBOOH+OH-->NAPINBO2
-        APINENE+NO3-->NAPINBO2
-
-    --- 3rd generation precursors ---
-    ! APINENE is a primary emitted species
-\end{verbatim}
 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1.1\textwidth]{figures_c3/prtest1.png}
-\caption{\textbf{The reversed subgraph between $\alpha$-pinene, and \ce{NC101CO}.}\\ This is a subgraph showing the production of \ce{NC101CO}. Arrows point towards a species precursor. }
+  \includegraphics[width=1.1\textwidth]{figures_c3/prtest1.png}\\
+  
+  \begin{verbatim}
+                              ! Sources of NC101CO
+                                  NAPINBO-->NC101CO+HO2
+                                  NAPINBO2-->NC101CO
+                                  NAPINBOOH+OH-->NC101CO+OH
+
+                              --- 2nd generation precursors ---
+                              ! precursors of NAPINBOOH
+                                  NAPINBO2+HO2-->NAPINBOOH
+
+                              ! precursors of NAPINBO
+                                  NAPINBO2+NO-->NAPINBO+NO2
+                                  NAPINBO2+NO3-->NAPINBO+NO2
+                                  NAPINBO2-->NAPINBO
+                                  NAPINBOOH-->NAPINBO+OH
+
+                              ! precursors of NAPINBO2
+                                  NAPINBOOH+OH-->NAPINBO2
+                                  APINENE+NO3-->NAPINBO2
+
+                              --- 3rd generation precursors ---
+                              ! APINENE is a primary emitted species
+  \end{verbatim}
+
+\caption{\textbf{The reversed subgraph between $\alpha$-pinene, and NC101CO.}\\ This is a subgraph showing the production of \ce{NC101CO}. Arrows point towards a species precursor. }
 \label{fig:prtest1}
 \end{figure}
 
-
-Using a graph with reversed links weighted by model results of a Jacobian is equivalent to a network created by an adjoint matrix (which is used to run models backwards). With this network, we run the PageRank algorithm with a `personalised' initiated ranking vector of 1000000 for \ch{NC101CO} and -1 for everything else (A damping factor value of 0.01 is also used for the algorithm). This produces the results in \autoref{tab:nc101}. Here although all nodes receive a ranking value due to transportation within the PageRank algorithm, there is a distinct split between highly ranked values and the rest. It is found that \ce{NC101CO} has the strongest influence on itself (which makes sense), followed by that of $\alpha$-pinene. Other more direct influences are seen from NAPINBOOH, NAPINBO, \ch{NAPINBO2}, from which NAPINBO has twice the influence from the other two. This is most likely as this has the highest net-flux from the model (\autoref{tab:nc101vdot}).
+\subsubsection{Personalised PageRank}
+Using the reversed network we apply a `personalised' version of PageRank. This means that we initiate NC101CO with a ranking vector of 1000000 and -1 for all other species. A damping factor of 0.01 is also used within the algorithm to produce the results in \autoref{tab:nc101}. As is often seen within the algorithm, top-scoring values often have a notable split from mid and lower scoring values. We find that NC101CO has the strongest influence on itself (it is where we start our information), followed that of $\alpha$-pinene - its primary emitted precursor. Other influences such as NAPINBOOH, NAPINBO, \ch{NAPINBO2} are seen,  where NAPINBO has twice the influence from the others. This is most likely as this has the highest net-flux from the model (\autoref{tab:nc101vdot}).
 
 \begin{table}[H]
 \centering
@@ -1144,19 +1154,8 @@ NAPINBO   &  -1840.391917\\
 \end{table}
 
 
-%
-%
-%
-%
-%
-
-%
-%
-
-
-\subsection{Source Analysis Using The Jacobian}
-
-Traditionally this procedure can be performed using Jacobian analysis with the connectivity method \citep{connectivity}. To do this the influence a 1\% changing the concentration of species A has on species B (at a single timestep) can be calculated by taking the $J_{A,B}^{th}$ element of the Jacobian. Similarly, the total production of a species can be calculated by taking the sum of all items in its corresponding column (not including the diagonal). Here the most significant influence can be calculated by looking at the highest values within the column for a species (\autoref{tab:nc101jac}). For each influential species, it is possible to partition their values using the ratios other species influence their production (their columns), and ultimately find the original precursor.
+\subsubsection{Iterative Analysis of the Jacobian}
+ The total production of a species was also calculated by taking the sum of all items in the corresponding column (not including the diagonal), \autoref{tab:nc101jac}. As we are ignoring the diagonal\footnote{The diagonal of a Jacobian tells us the net change of a species, which can also be calculated as the difference of the column and row sums.} the first generation influence matches that of the reversed page rank algorithm. To get the total influence however we now have to repeat the process for each of the species producing NC101CO, and so forth. This process is identical to the iterative sum of in-degree links going backwards through our jacobian derived network - a process visually illustrated within \autoref{fig:backtrace}.
 
 \begin{table}[H]
 \centering
@@ -1173,19 +1172,22 @@ $J_{precursor -> NC101CO}$ & Value \\
 \label{tab:nc101jac}
 \end{table}
 
+
+
+
+
+
+
+
 \subsection{Verdict}
-As the PageRank algorithm is applied to the whole network and contains teleportation, it provides small values for species without a direct link to the species in question. This requires some sort of changepoint analysis to filter. A much simpler method would be the calculation of the shortest simple path between a species in question and all other species, and then subtract the value obtained within each step to get its contribution. For the example \ce{A ->[4] B  ->[6]C} the shortest path from A to C would be ten and B to c would be 6. The influence of A on C  is calculated by the influence of A on B divided by the total influence on B.
+As the PageRank algorithm is applied to the whole network and contains teleportation, it provides small values for species without a direct link to the species in question. This requires some sort of changepoint analysis to filter. 
 
-In assessing the source of a species production, we can use the Jacobian matrix, either with direct analysis or the graph framework. Both methods are equally challenging to implement and provide the same result, the use of a graph analogy (either before or after the analysis) is found to aids in communication (\autoref{fig:backtrace}).
+A better method would be the calculation of the shortest simple path between a species in question and all other species, and then subtract the value obtained within each step to get its contribution. For the example \ce{A ->[4] B  ->[6]C} the shortest path from A to C would be ten and B to c would be 6. The influence of A on C  is calculated by the influence of A on B divided by the total influence on B. This is similar to the process required if we were to use the Jacobian Matrix directly. 
+
+Overall, as we use the Jacobian matrix to create the graph, writing a script to process this may be the most computationally efficient (and comparable to other results). The graph representation and page rank methods may at first glance be quicker to implement, but do not necessarily produce numerical output that is immediately interpretable. They do however illustrate what the more traditional (mathematical) methods are doing in the background. Therefore both methods are equally difficult to implement, as well as being useful, and therefore it is up to the reader to select the one most appropriate to their aims. 
 
 
 
-\begin{figure}[H]
-     \centering
-     \includegraphics[width=1\textwidth]{newfigs/ch2_distance_links.pdf}
-        \caption{\textbf{Showing total the influence from each species on HCHO for a sample MCM subset of Butane.} Species importance is determined using the reverse pagerank algorithm. It is calculated by taking a snapshot of a chemical simulation and rendered using the transpose of the Jacobian relational matrix. We then use a customised page rank algorithm to look at where flow goes from HCHO (the large node in the midde). A larger node and thicker link suggests a greater influence on the net change of HCHO.  }
-        \label{fig:backtrace}  
-\end{figure}
 
 
 \section{Conclusions}
@@ -1195,6 +1197,14 @@ In assessing the source of a species production, we can use the Jacobian matrix,
 We start by looking at several centrality metrics, which categorise nodes of importance within the network. Despite showing great promise in other fields, these do not seem to supply significant new insights into the chemical mechanisms of a model simulation when compared to traditional methods.
 
 Next, we look at the classification of the MCM as a network. Here it is shown that this contains both small world and power-law features. This means that the network has both a local and global structure. The MCM network consists of a series of small `communities' of species which react with each other, connected by a hierarchical structure - a structure which can be utilised in the use of mechanism reduction (as seen in \autoref{fig:graphc1}).
+
+\begin{figure}[H]
+     \centering
+     \includegraphics[width=1\textwidth]{newfigs/ch2_distance_links.pdf}
+        \caption{\textbf{Showing total the influence from each species on HCHO for a sample MCM subset of Butane.} Species importance (node size) is determined using the reverse PageRank algorithm starting at HCHO (middle). It is calculated by taking a snapshot of a chemical simulation and rendered using the transpose of the Jacobian relational matrix. Link width is representative of the cumulative sum of the weights contributing to a concentration change of HCHO.  }
+        \label{fig:backtrace}  
+\end{figure}
+
 
 Finally, it is possible to apply graph theory for the use of source analysis. Although this is analogous to manual matrix methods on the Jacobian, the use of a graph structure makes the explanation and understanding of the procedure more intuitive. Again there is no gain over the traditional Jacobian analysis methods.
 

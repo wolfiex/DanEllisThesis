@@ -3,7 +3,7 @@
 ## Thesis.tex
 #### diff --git a/thesis.tex b/thesis.tex
 
-#### index 992121e..f9d4f42 100644
+#### index 992121e..736606d 100644
 
 ###### --- a/thesis.tex
 
@@ -29,9 +29,9 @@
 
 ##### +Atmospheric chemistry mechanisms play a pivotal role in our understanding of societal problems such as air pollution, climate change and stratospheric ozone loss. This thesis explores the benefits of representing these mechanisms in terms of a mathematic graph (or network) which connects species (nodes) through reactions (edges). We use the Dynamically Simple Model of Atmospheric Chemical Complexity and the Master Chemical Mechanism to explore the a number of real world senarios - using graph theory and machine learning to visualise, understand and analyse the underlying chemistry of the lower atmosphere.\\
 
-##### +We begin by exploring different visualisation techniques to depict chemistry within the atmosphere. It is found that the sociograph framework provides the most (visually) intuitive delineation of the species and their reactions. For large, complex systems, this type of qseudo-qualitative analysis has its limitations - physical and cognitive. Instead, the relationships between species in the network are quantified using graph centrality metrics and then compared against well-established methods such as the jacobian and rate of production analysis. Further development of graph theory allows us to couple natural language processing, network decomposition, and clustering to identify species with similar lifetimes, reaction styles, or temporal profiles. \\
-
 ###### -Chapter one discusses the use of various methods in the presentation of complex datasets. Chapter two applies the sociograph framework to atmospheric mechanisms and determines the best way in which to present these. Chapter three takes a more mathematical approach, comparing the results of graph centrality metrics applied to model simulation resuts against more traditional diagnostic methods. The use of graph theory is continued in Chapter four, where graph clustering and natural language processing is used to identify pairs of nodes with similar patterns. Finally Chapter five ventures into the field of chemical informatics, and looks at the use of different representations of species structure within machine learning models (PCA, t-SNE and AutoEncoders) with an aim to merging the content of this thesis into a Graph Convoluted Neural Network in future work.\\
+
+##### +We begin by exploring different visualisation techniques to depict chemistry within the atmosphere. It is found that the sociograph framework provides the most (visually) intuitive delineation of the species and their reactions. For large, complex systems, this type of qseudo-qualitative analysis has its limitations - physical and cognitive. Instead, the relationships between species in the network are quantified using graph centrality metrics and then compared against well-established methods such as the jacobian and rate of production analysis. Further development of graph theory allows us to couple natural language processing, network decomposition, and clustering to identify species with similar lifetimes, reaction styles, or temporal profiles. \\
 
 ##### +Having explored aspects of mechanism analysis, visualisation and reduction, we examine how varying representations of species structure can affect the patterns highlighted by unsupervised machine learning models. This is done by visualising them in 2D space and serves as a precursor to potential future work involving Graph Convoluted Neural Networks - thus consolidating the contents of this thesis.\\
 
@@ -50,25 +50,52 @@
 
 ####  \newpage
 
-###  -318,7 +325,7 
+###  -318,27 +325,25 
 ####  % Introduction 0
 
 ####  \include{./0_intro}
 
-####   \include{./1_visual}
+###### - \include{./1_visual}
 
-###  -331,14 +337,13 
-####  % Chapter 4 - done
+###### -% Chapter 2
 
-####   \include{./4_lumping}
+###### -\include{./2_graphs}
 
-####  % Chapter 5
+##### +% % Ch1 1
 
-####   \include{./5_DR}
+##### +%  \include{./1_visual}
 
-####  % Conclusion
+##### +% % Chapter 2
 
-####   \include{./6_conclusion}
+##### +% \include{./2_graphs}
+
+####  % Chapter 3
+
+####  \include{./3_centrality}
+
+###### -% Chapter 4 - done
+
+###### - \include{./4_lumping}
+
+##### +% % Chapter 4 - done
+
+##### +%  \include{./4_lumping}
+
+##### +% % Chapter 5
+
+##### +%  \include{./5_DR}
+
+##### +% % Conclusion
+
+##### +%  \include{./6_conclusion}
+
+###### -% Chapter 5
+
+###### - \include{./5_DR}
+
+###### -% Conclusion
+
+###### - \include{./6_conclusion}
 
 ####  \cleardoublepage\makeatletter\@openrightfalse\makeatother
 
@@ -86,7 +113,7 @@
 ## 0_intro.tex
 #### diff --git a/intro/combigned.tex b/intro/combigned.tex
 
-#### index 26376fe..c2b2316 100644
+#### index 26376fe..f75ed41 100644
 
 ###### --- a/intro/combigned.tex
 
@@ -126,7 +153,210 @@
 
 ####  \subsection{Changing Climate} \label{sec:climatechange}
 
-###  -230,7 +230,7 
+###  -89,19 +89,19 
+####    \label{eqn:oo3}
+
+####  \end{equation}
+
+###### -As ozone is a secondary pollutant (made not emitted), and its primary reaction produces a null cycle, the production of ozone in the atmosphere requires an increase in nitrogen dioxide livnconcentraions.
+
+##### +As ozone is a secondary pollutant (made not emitted), and its primary reaction produces the null cycle, the production of ozone in the atmosphere requires an increase in nitrogen dioxide concentraions.
+
+###### -\subsection{The Nox Cycle}\label{sec:noxcycle}
+
+###### -Ozone production/loss in the troposphere is directly dependant on the concentration of available Nitrogen Oxides (NOx) (\autoref{sec:o3prod}). These are predominantly emitted by motor vehicles and power stations and can are known to cause respiratory problems in children and asthmatics as well as disrupting terrestrial and aquatic ecosystems \citep{eea}. Although NOx may be released naturally, the anthropogenic influence on their emissions was highlighted in early 2020 where the COVID-19 coronavirus disrupted travel across mainland china, causing a significant drop in anthropogenic emissions - \autoref{fig:chinanox}.
+
+##### +\subsection{The NOx Cycle}\label{sec:noxcycle}
+
+##### +Ozone production/loss in the troposphere is directly dependant on the concentration of available Nitrogen Oxides (NOx) (\autoref{sec:o3prod}). These are predominantly emitted by motor vehicles and power stations and can are known to cause respiratory problems in children and asthmatics as well as disrupting terrestrial and aquatic ecosystems \citep{eea}. Although NOx may be released naturally, the anthropogenic influence on their emissions was highlighted in early 2020 where the COVID-19 coronavirus disrupted travel across mainland China, causing a significant drop in anthropogenic emissions - \autoref{fig:chinanox}.
+
+####  \begin{figure}[H]
+
+####      \centering
+
+####      \includegraphics[width=0.7\textwidth]{china_trop_2020056.png}
+
+###### -    \caption{\textbf{Changes in NOx concentrations due to anthropogenic emissions.} A reduction in activity and trasport resutls in a large decrease of Nitrogen dioxide concentrations in the troposphere. Source: \citep{chinanox}}
+
+##### +    \caption{\textbf{Changes in NOx concentrations due to anthropogenic emissions.} A reduction in activity and trasport produces a notable decrease of Nitrogen dioxide concentrations in the troposphere. Source: \citep{chinanox}}
+
+####      \label{fig:chinanox}
+
+####  \end{figure}
+
+###### -During the day nitrate (\ce{NO3}) radicals can be formed through the reaction with \ch{O3}: \autoref{eqn:ono2} and \autoref{eqn:nno2}, however this is quickly destroyed through rapid photolysis (\autoref{eqn:nno3}) \citep{nitrate}. Photolysis reactions such as \autoref{eqn:nno3} and \autoref{eqn:o2} are no longer possible and th ozone production process shuts down.
+
+##### +During the day nitrate (\ce{NO3}) radicals can be formed through the reaction with \ch{O3}: \autoref{eqn:ono2} and \autoref{eqn:nno2}, however this is quickly destroyed through rapid photolysis (\autoref{eqn:nno3}) \citep{nitrate}. At night photolysis reactions such as \autoref{eqn:nno3} and \autoref{eqn:o2} are no longer possible and the ozone production process shuts down.
+
+####  \begin{equation}
+
+####    \ce{NO2 + O3 ->[k3] NO3 + O2}
+
+###  -109,12 +109,12 
+####  \end{equation}
+
+####  \begin{equation}
+
+###### -  \ce{NO3 ->[hv] NO2 + O(3P)}
+
+##### +  \ce{NO3 ->[hv] NO2 + O}(^3P)
+
+####    \label{eqn:nno3}
+
+####  \end{equation}
+
+###### - The increased amount of \ce{NO3} can now react with \ce{NO2} to produce dinitric pentoxide (\ce{N2O5}) and an aqueous nitric acid (\ce{HNO3}) - \autoref{eqn:n2o5} and \autoref{eqn:hno3}. \autoref{eqn:n2o5} is a three-body forwards pressure dependant reaction and a reverse temperature dependant reaction. During the day at the lower troposphere, it is warm, and this can occur within seconds, however, at night or high altitudes it can take anywhere from hours to months \citep{fundamentals}.
+
+##### + The increased amount of \ce{NO3} can now react with \ce{NO2} to produce dinitric pentoxide (\ce{N2O5}) and (in solution) nitric acid (\ce{HNO3}) - \autoref{eqn:n2o5} and \autoref{eqn:hno3}. \autoref{eqn:n2o5} is a three-body forwards pressure dependant reaction and a reverse temperature dependant reaction. During the day at the lower troposphere, it is warm, and the reverse reaction can occur within seconds, however, at night or high altitudes it can take anywhere from hours to months \citep{fundamentals}.
+
+####  \begin{equation}
+
+###  -129,31 +129,48 
+###### -\subsection{Hox Cycle}
+
+###### -The hydroxyl (OH) radical is central to tropospheric chemistry and a major sink for many of the greenhouse gasses (including ozone) \citep{olson}. Its primary source of production is through the action of UV in sunlight to photolyse ozone \citep{fundamentals}:
+
+##### +\subsection{HOx Cycle}
+
+##### +The hydroxyl (OH) radical is central to tropospheric chemistry and a major sink for many of the greenhouse gasses (including ozone - see \autoref{eqn:o3sink}) \citep{olson}. Its primary source of production is through the action of UV in sunlight to photolyse ozone \citep{fundamentals}:
+
+##### +\begin{align}
+
+##### +  \ce{O3 ->[hv] O}^1D\\
+
+##### +  O^1\ce{D + H2O -> 2OH}\\
+
+##### +  \ce{OH + O3 -> HO2 + O2} \label{eqn:o3sink}
+
+##### +\end{align}
+
+##### +As OH is highly reactive , with a lifetime of $<1$ seconds - \autoref{fig:timescales}, it is not transported a long distance and only exists during daytime (when it is still being produced). In reacting with a VOC, the hydroxyl radical scavenges hydrogen to form a radical species and water (\ch{h2o}). This produced radical species can then move on to react with \ch{O2} to produce a \ch{RO2} species \autoref{eqn:rdo2}.%(\autoref{fig:hox}).
+
+###### -\begin{equation}
+
+###### -  \ce{O3 ->[hv] O1D}
+
+###### -\end{equation}
+
+###### -\begin{equation}
+
+###### -  \ce{O1D + H2O -> 2OH}
+
+###### -\end{equation}
+
+###### -As OH is highly reactive ($<1$ seconds - \autoref{fig:timescales}) it is not transported a long distance and only exists during daytime (when it is still being produced). In reacting with a VOC, the hydroxyl radical scavenges hydrogen to form a radical species and water (\ch{h2o}). This produced radical species can then move on to react with \ch{O2} to produce a \ch{RO2} species (\autoref{fig:hox}). Additionally, reaction with OH can lead to the catalytic destruction of \ch{o3}. This provides the hydroperoxide radical (\ch{HO2}).
+
+###### -\begin{equation}
+
+###### -  \ce{OH + O3 -> HO2 + O2}
+
+###### -\end{equation}
+
+###### -Unlike OH, \ch{HO2} can exist both during daytime and night. It can further react with ozone to reproduce the hydroxyl radical and create two \ch{o2} molecules:
+
+##### +\begin{align}
+
+##### +  OH + RH \ce{ -> } R. + \ch{h2o} \\
+
+##### +  R. + \ch{o2} \ce{ -> } \ch{RO2} \label{eqn:rdo2}\\
+
+##### +  \ch{ro2} + NO \ce{ -> } RO + \ch{no2}
+
+##### +\end{align}
+
+##### +The created \ce{RO2} can then convert NO to \ch{NO2} producing an \ch{RO} (\autoref{eqn:ro2no}) which also does the same via the hydroperoxide radical \ch{HO2} (\autoref{eqn:ro_1} - \ref{eqn:ro_2}). This NOx conversion is able to drive Ozone formation in the conventional way: \autoref{eqn:o1}-\ref{eqn:o3}.
+
+##### +  \begin{align}
+
+##### +    \ch{ro2} + NO \ce{ -> } RO + \ch{no2} \label{eqn:ro2no} \\
+
+##### +    RO + \ce{O2}  \ce{ -> } \ch{HO2} \label{eqn:ro_1} \\
+
+##### +    \ce{HO2} + NO \ce{ -> } \ch{NO2} + OH \label{eqn:ro_2}
+
+##### +\end{align}
+
+##### +\subsubsection{The Hydroperoxide Radical}
+
+##### +Unlike OH, \ch{HO2} can exist both during daytime and night. It can further react with ozone to reproduce the hydroxyl radical and create two \ch{o2} molecules - \autoref{eqn:ho22o2}.
+
+####  \begin{equation}
+
+###### -  \ce{HO2 + O3 -> OH + O2 + O2}
+
+##### +  \ce{HO2 + O3 -> OH + O2 + O2} \label{eqn:ho22o2}
+
+####  \end{equation}
+
+###### -Its loss depends on the NO mixing ratio, where if NO $>10$ pptv, \ch{HO2} will react predominantly with the NOx species. At lower concentrations (3-10 pptv) \ch{HO2} reacts mainly with ozone, and at deficient concentrations, it reacts mostly with itself \citep{finlayson}. Combined OH and \ch{ho2} form the HOx species, and the cycle in \autoref{fig:hox}.
+
+##### +The loss of ozone loss depends on the NO mixing ratio, where if NO $>10$ pptv, \ch{HO2} will react predominantly with the NOx species. At lower concentrations (3-10 pptv) \ch{HO2} reacts mainly with ozone, and at deficient concentrations, it reacts mostly with itself \citep{finlayson}. Combined OH and \ch{ho2} form the HOx species, and the cycle in \autoref{fig:hox}.
+
+####  \begin{figure}[H]
+
+####    \centering
+
+###  -165,15 +182,16 
+####  \begin{figure}[H]
+
+####      \centering
+
+####      \includegraphics[width=0.7\textwidth]{hoxcycle.png}
+
+###### -    \caption{\textbf{The HOx cycle.} The OH aids in the oxidation of VOCs, which makes them more water soluble - this allowing for their removal from the atmosphere. In a high NOx evironment the \ch{RO2} radicals can then reacti with NO to produce \ch{NO2}, and consequenty more ozone.}
+
+##### +    \caption{\textbf{The HOx cycle.} The OH aids in the oxidation of VOCs, which makes them more water soluble - this allowing for their removal from the atmosphere. In a high NOx evironment the \ch{RO2} radicals can then reactive with NO to produce \ch{NO2}, and consequenty more ozone.}
+
+####      \label{fig:hox}
+
+####  \end{figure}
+
+####  \section{Modelling The Earth}
+
+####  In the previous section, the air quality and its detrimental effects on human health were seen to influence policy for cities and industry.
+
+####  For a policy to be passed there needs to not only evidence of the problem but a strong suggestion that any proposed changes will have the desired effect. As it is not possible to perform experiments on complex, and often unknown, chemistry at every location on the planet, we are forced to rely on the numerical simulation of the Earth System, and the constituent parts within it.
+
+####  \subsection{Earth System Models (ESM)}
+
+###### -  ESMs are models capable of predict past or future interactions of the planetary system. They represent our foremost understanding of the complex interplay between land-surface (geosphere), ocean (hydrosphere), ice (cryosphere) and the air (atmosphere), and act as a surrogate to manual experimentation -  which is just not possible on the global scale.
+
+##### +  ESMs are models capable of predicting past or future interactions of the planetary system. They represent our foremost understanding of the complex interplay between land-surface (geosphere), ocean (hydrosphere), ice (cryosphere) and the air (atmosphere), and act as a surrogate to manual experimentation -  which is just not possible on the global scale.
+
+####  ESMs can be split into individual parts. One example of this is the Chemistry section of the Goddard Earth Observing System (an integrated ESM and data assimilation model hosted by NASA's Goddard space flight centre \citep{geosgit}) - GEOS Chem. GEOS-Chem is a global 3D model of atmospheric chemistry which is driven by the meteorology provided by NASA \citep{geos}. Here the Earth is split up into cubic cells longitudinally, latitudinally, and vertically (\autoref{fig:gcm})\footnote{This image is not from GEOS-Chem.}. Each one of these cells performs several perturbations of the chemistry within them before any long-lived species are transported, and the process is repeated. If extracted separately, a single one of these cells may be used to explore the sensitivity of different species for a range of input conditions. This is the bases of the atmospheric box model.
+
+####  \begin{figure}
+
+####    \centering
+
+###  -199,11 +217,11 
+####  \label{eqn:numerical1}
+
+####  \end{equation}
+
+####  \begin{equation}
+
+###### -\ce{ d[N2O5]/dt ->    d[NO2]/dt} + \ce{d[NO3]/dt}
+
+##### +\ce{- d[N2O5]/dt =   d[NO2]/dt} + \ce{d[NO3]/dt}
+
+####  \label{eqn:numerical2}
+
+####  \end{equation}
+
+####  \begin{equation}
+
+###### -\ce{ \int d[N2O5]/dt ->    \int d[NO2]/dt} + \ce{\int d[NO3]/dt}
+
+##### +\ce{ - \int d[N2O5]/dt =  \int d[NO2]/dt} + \ce{\int d[NO3]/dt}
+
+####  \label{eqn:numerical3}
+
+####  \end{equation}
+
+####  \subsubsection{Non-Stiff Equations}
+
+###  -230,7 +248,7 
 ####   \subsection{The Dynamically Simple Model Of Atmospheric Chemical Complexity}
 
 ###### -Within this thesis, the Dynamically Simple Model of Atmospheric Chemical Complexity (DSMACC) shall be used to run model simulations. This a simple box model designed for the comparison of a range of gas-phase chemical schemes under different conditions \citep{dsmacc}.
@@ -498,7 +728,7 @@
 ## 3_centrality.tex
 #### diff --git a/model_diagnostics/combigned.tex b/model_diagnostics/combigned.tex
 
-#### index c021b18..8f401f2 100644
+#### index c021b18..55bd30a 100644
 
 ###### --- a/model_diagnostics/combigned.tex
 
@@ -515,7 +745,41 @@
 
 ####       \centering
 
-###  -110,7 +110,7 
+###  -40,13 +40,18 
+####  \subsection{The Master Chemical Mechanism (MCM)}\label{sec:metricmcm}
+
+###### -The MCM, \citep{mcm}, is a near explicit representation of our foremost understanding of gas-phase tropospheric chemistry. The mechanism describes the oxidation of 143 primary emitted VOCs and the respective rates at which this occurs. It has been tested on over 300 chamber experiments and used as a benchmarking mechanism to assist the development of reduced mechanism, providing a useful means for the evaluation of air quality models \citep{defra1}.
+
+##### +The MCM, \citep{mcm}, is a near explicit representation of our foremost understanding of gas-phase tropospheric chemistry. The mechanism describes the oxidation of 143 primary emitted VOCs and the respective rates at which this occurs. It has been tested on over 300 chamber experiments and used as a benchmarking mechanism to assist the development of reduced mechanism, providing a useful means for the evaluation of air quality models \citep{defra1}. The current version (3.3.1) contains 5809 chemical species and 17224 reactions to describe them \citep{isopmcm}. However there there are still a number of weaknesses that need to be considered. Firstly there very little \ce{Cl} chemistry and no other halogens in the mechanism. Reactions with \ce{O2} are implicit as are \ce{RO2}-\ce{RO2} reactions, which are shown through the reaction with an \ce{RO2} pool.
+
+###### -Version 3.3.1 of the MCM contains 5809 chemical species and 17224 reactions to describe them \citep{isopmcm}.
+
+##### +\subsection{Data Collection}\label{sec:scholar}
+
+##### +To generate a dataset on papers related to the MCM. The academic search engine (Google Scholar \citep{scholar}) is queried for all articles containing the words \{ \emph{"Master", "Chemical", "Mechanism"} and \emph{"MCM"} \}. For each match, the first 100 pages of results are selected. Each of these contains ten articles, from which the first 100 pages of related articles are chosen.
+
+##### +In taking the top 1000 citations for each page, a network of 15744 papers and 30178 citations\footnote{Note: this had the potential of returning up to 1000,000 nodes} is created. This process made use of an edited version of the  \emph{etudier} Github repository, \citep{web}.
+
+####  \begin{figure}[H]
+
+####       \centering
+
+####           \includegraphics[width=0.92\textheight,angle=90]{figures_c3/naturegraph.png}
+
+###  -56,13 +61,6 
+####  \end{figure}
+
+###### -\subsection{Data Collection}\label{sec:scholar}
+
+###### -To generate a dataset on papers related to the MCM. The academic search engine (Google Scholar \citep{scholar}) is queried for all articles containing the words \{ \emph{"Master", "Chemical", "Mechanism"} and \emph{"MCM"} \}. For each match, the first 100 pages of results are selected. Each of these contains ten articles, from which the first 100 pages of related articles are chosen.
+
+###### -In taking the top 1000 citations for each page, a network of 15744 papers and 30178 citations\footnote{Note: this had the potential of returning up to 1000,000 nodes} is created. This process made use of an edited version of the  \emph{etudier} Github repository, \citep{web}.
+
+####  \subsection{Visualising The Data.}
+
+####  The initial visualisation of the dataset is accomplished through the use of THREE.js \citep{threejs}. This makes use of WebGL bindings and allows for the efficient viewing, querying and interacting of the data in 3 dimensions. This helped identify the temporal changes within the network by mapping a papers publication year to the $z$ direction, \autoref{fig:weball}, as discussed in \autoref{sec:filter3d}.
+
+###  -110,7 +108,7 
 ####  \textbf{A note on unintentional filtering}\\
 
 ####  \textit{
@@ -524,7 +788,18 @@
 
 ##### +The script used for web scraping extracts author names directly from the google scholar page, and not the articles themselves. This means some author names can be omitted and replaced by ellipses - producing an inaccurate graph. Therefore the results in this section are not explicit, but rather a demonstration of graph theory on a real-world dataset.
 
-###  -218,13 +218,13 
+###  -171,7 +169,7 
+####  \subsection{The Co-Authorship Network}
+
+####  An alternative to exploring which papers which are cited together are to look at their authors. Here undirected links are drawn between authors on the same paper. This style of analysis was used to show that the number of papers per author, and the total number of authors per paper can vary between research fields, \citep{newmancoauthor}. In combining this with a series of network centrality metrics, \citep{coauthornew} revealed that it is possible to discern promising researchers from both iter and Intra disciplinary groups.
+
+###### -In building a co-authorship network for the MCM, we can identify authors who publish together\footnote{ Disclaimer: as mentioned earlier, not all authors for every paper were recorded by the web scraping algorithm} and highlight research groups who work with the MCM, \autoref{fig:authorgroup}. This shows how authors with a similar geographic location/institution are more likely to publish together. The largest cluster here falls under the MCM developer team, which resides between the University of Leeds and York. Next two German institutions which are heavily involved in the atmospheric chemistry field (Julich and Max Planck), followed by an assortment of Chinese authors, mainly centred around the Beijing or Hong Kong region.
+
+##### +In building a co-authorship network for the MCM, we can identify authors who publish together\footnote{ Disclaimer: as mentioned earlier, not all authors for every paper were recorded by the web scraping algorithm} and highlight research groups who work with the MCM, \autoref{fig:authorgroup}. This shows how authors with a similar geographic location/institution are more likely to publish together. The largest cluster here falls under the MCM developer team, which resides between the University of Leeds and York. Next two German institutions which are heavily involved in the atmospheric chemistry field (FZ-Julich and Max Planck for Chemistry, Mainz), followed by an assortment of Chinese authors, mainly centred around the Beijing or Hong Kong region.
+
+####  \begin{figure}[H]
+
+###  -218,13 +216,13 
 ####  \input{tables/Out-Degree_Citation.tex}
 
 ###### -\subsection{Closness Centrality}\label{sec:closeness}
@@ -547,7 +822,7 @@
 
 ####  \end{quote}
 
-###  -250,7 +250,7 
+###  -250,7 +248,7 
 ####  \end{quote}
 
 ###### -Authors with a high betweenness in \autoref{fig:betauth} are seen to lie along the joints between clusters. Here we can imagine that removing Li, Griffin or Liu can disrupt the overall flow of collaboration, potentially isolating the work of the Max Planck from that of everyone else. Similarly, Jenkin and Pilling can be seen as holding much of the Leeds cluster together. In removing them from the network (if for example, the refused to collaborate) it is possible to see how many of groups within the Leeds environment may not have worked together, with the cluster potentially separating into several smaller groups. Finally, we see Saunders (Australia), who served to introduce the MCM to the Chinese atmospheric community. In removing her from the network, it can be seen that much of the collaboration which exists would have been significantly less likely.
@@ -558,7 +833,7 @@
 
 ####       \centering
 
-###  -356,7 +356,7 
+###  -356,7 +354,7 
 ####   This is repeated until a pre-defined tolerance, $\epsilon$ is reached. For best results, this can be set to just under the numerical precision of the programming language/hardware.
 
 ###### -For smaller systems, it is possible to use the LAPACK \citep{lapack} library, as used by \cite{numpy}. For a vast network, however, the computation of a $n \times n $ matrix can be very memory inefficient for small machines. It is then possible to apply the methods as described above using a sparse matrix on per-node bases as can be seen within the Python's SciPy implementation of the Networkx source code \citep{scipy,networkx}.
@@ -569,7 +844,7 @@
 
 ####  As the PageRank algorithm loos at how quantities `flow' within a network, it can be used to identify not only the bottlenecks (betweenness centrality) but also any nodes which are connected well within the network. As the flows between a node are somewhat governed by the number of links it contains, the PageRank algorithms tend to correlate, but not dependence, on the betweenness of a node. \autoref{fig:pagerankauth} uses the PageRank algorithm to identify important authors within each `cluster' or research group. Due to its propagating nature, authors connected to these important nodes are often also of greater importance. An application of this can again be the determination of how to best spread new results or information with the least number of people. \textit{Note: if we only had one person we would probably use the node with the highest closeness centrality.}
 
-###  -366,7 +366,7 
+###  -366,7 +364,7 
 ####           \includegraphics[width=.8\textwidth]{figures_c3/pagerankauthor.png}
 
 ####          \input{tables/pagerank_Author.tex}
@@ -582,7 +857,7 @@
 
 ####  \end{figure}
 
-###  -379,7 +379,7 
+###  -379,7 +377,7 
 ####  \section{Classifying The Master Chemical Mechanism Network}\label{sec:globalclass}
 
 ###### -Having shown that graph metrics can help the roles of individual nodes within the network, these are now applied to an atmospheric chemical system. Since computational efficiency and resources are often a limiting factor, many applications of the MCM only require a small subset of the entire mechanism. For this reason, it may be of interest to compare these against each other, in an attempt to classify the type of network the MCM chemistry falls under. In this section, we apply graph theory to the entire MCM network to determine its defining characteristics. This is achieved through the analysis of several hundred Monte Carlo selected subsets of the MCM. Each of these is a different combination of the primary emitted VOC's within the MCM v3.3.1.
@@ -593,7 +868,7 @@
 
 ####  Network density is the easiest metric to understand. Visually this can induce complexity and obscure aspects in a graph; mathematically, it can greatly increase the computation time for metrics or algorithms. By definition, we can define network density as a measure of how well connected a node is to every other node. Mathematically it is the ratio of edges against the total number of possible edges for a complete graph\footnote{A complete graph is one where every node is connected to every other node.} of the same size. In chemical terms, we can use this to determine the sparsity of the graph (which has applications on model integrator selection) and give us insights on the chemical structure.  In \autoref{fig:density}, higher numbers of species (nodes) results in an overall decrease in the node-edge ratio - its density. This suggests a modular or hierarchical structure, where new species directly react only with a set number of species, and not the entire mechanism. An explanation for this is that the addition of larger species introduce new branches within the chemistry, which then need to be oxidised before they are small enough to react with the species from a different branch.  Since these branches are somewhat isolated from the rest of the chemistry, they decrease the network density, even though their addition may increase the amount of chemistry that occurs within it.
 
-###  -387,7 +387,7 
+###  -387,7 +385,7 
 ####  \begin{figure}[H]
 
 ####       \centering
@@ -608,14 +883,14 @@
 
 ####  \end{figure}
 
-###  -404,7 +404,7 
+###  -404,7 +402,7 
 ####  Here $C$ is the average clustering coefficient and $L$, the shortest path length of the graph. Comparing these with the average shortest path length, $L_R$, and clustering coefficient $C_l$ (as calculated using an equivalent random and lattice graph) gives the above equation. The output is a result between positive and negative one \{-1,1\}, where a value of 0 suggests the graph exhibits perfect small world-ness.
 
 ###### -In assessing the network structure of the MCM, a Monte Carlo (random) approach was taken to extract several hundred subsets from the entire mechanism. For each of these, the omega coefficient was calculated and plotted in \autoref{fig:smw}. Here it is seen that subsets with a small number of species (for example those derived only from Methane or Ethane) exhibit a more lattice-style (grid) graph, with the majority of the networks showing a more random network structure \autoref{fig:gstructure}. All the results, however, show a prevalence of small-world features over any of the alternative network structures - they are closer to 0 than 1 or -1. This reflects the idea that large species react locally, forming branches (\autoref{ch2}), before oxidising to smaller species with more reactions. This result is also seen within the Reaxys chemical database \citep{rscgraph}.
 
 ##### +In assessing the network structure of the MCM, a Monte Carlo (random) approach was taken to extract several hundred subsets from the entire mechanism. For each of these, the omega coefficient was calculated and plotted in \autoref{fig:smw}. Here it is seen that subsets with a small number of species (for example those derived only from methane or ethane) exhibit a more lattice-style (grid) graph, with the majority of the networks showing a more random network structure \autoref{fig:gstructure}. All the results, however, show a prevalence of small-world features over any of the alternative network structures - they are closer to 0 than 1 or -1. This reflects the idea that large species react locally, forming branches (\autoref{ch2}), before oxidising to smaller species with more reactions. This result is also seen within the Reaxys chemical database \citep{rscgraph}.
 
-###  -429,7 +429,7 
+###  -429,7 +427,7 
 ####          \label{fig:gstructure}
 
 ####  \end{figure}
@@ -628,7 +903,7 @@
 
 ####  D = \smash{\displaystyle\max_{x \ge x_{min}}} |{S(x) - P(x)}|
 
-###  -461,7 +461,7 
+###  -461,7 +459,7 
 ####  Using the species concentration as a metric, we can map how it changes over time, and how in changing the initial concentrations of a simulation can produce different results. This can be useful for looking at a range of possible scenarios and evaluating the potential outcome after a pre-determined amount of time. An example would be through the use of policy-based simulations to predict changes in air composition over cities.
 
 ###### -Using a simple example from a Methane only subset of the MCM (\autoref{fig:concentration}), it is possible to observe the inverse relationship between \ch{NO2} and \ch{NO} using only their concentration profiles. Here nitrogen monoxide reacts with a \ch{Ro2} species to produce an RO and nitrogen dioxide.
@@ -639,7 +914,7 @@
 
 ####  \begin{figure}[H]
 
-###  -474,7 +474,7 
+###  -474,7 +472,7 
 ####  \subsubsection{Rate Of Production And Loss}\label{sec:ropa}
 
 ###### -Analysing the concentration-time profiles allows the comparison of how a series of scenarios or runs change concerning their initial conditions and simulation length. Although these can tell us how, and how much, each species changes over time, it does not rank or quantifies the specific reactions to which this may be attributed. Rate of Production Analysis (ROPA)\footnote{and loss} provides a method for establishing the total contribution from each reaction by calculating the change of concentration (concerning time) for the produced species - the instantaneous reaction Flux.
@@ -650,7 +925,7 @@
 
 ####    r_1 = A + B \overset{\kappa_1}{\xrightarrow{\hspace*{7mm}}} \eta C & & \text{ Reaction 1}\\[15pt]
 
-###  -547,25 +547,25 
+###  -547,25 +545,25 
 ####  Having covered the general definition of a Jacobian matrix and how it is constructed, we can now apply it to the context of mechanism analysis and comprehension. The first analogy that needs to be made is that for the flux is the change of a species concentration in time (the first differential with respect to time, $d/dt$). If we consider the change in a species concentration as a `displacement', we can think of the flux as its `velocity'.
 
 ####  Similarly, the Jacobian provides us with a description of how the individual flux of a species changes concerning the concentration (or displacement) or another species (the second-order partial differential). This is analogous to the acceleration of the object or particle we first displaced. In using the Jacobian, we have constructed a relational matrix which outlines the effect a nominal change of a species has on all other species - a concept which is the foundation of the connectivity method (a mechanism reduction technique where all but essential species are removed) \citep{connectivity}.
@@ -673,7 +948,7 @@
 
 ###### -Taking a single equation from the MCM, we may calculate the jacobian relationships between species and convert them into a graph. A randomly chosen ethane reaction (\autoref{eqn:line}) from a simple mechanism was chosen. It must be noted that in general, it is unusual in the MCM that alkyl radicals react rapidly and extremely well with \ce{O2} to from stabilised peroxy radicals, \citep{mcmorigin}. In general, the reaction would consist of the following two steps:
 
-##### +Taking a single equation from the MCM, we may calculate the Jacobian relationships between species and convert them into a graph. A randomly chosen ethane reaction (\autoref{eqn:line}) from a simple mechanism was chosen. It must be noted that in general, it is unusual in the MCM that alkyl radicals react rapidly and extremely well with \ce{O2} to from stabilised peroxy radicals, \citep{mcmorigin}. In general, the reaction would consist of the following two steps:
+##### +Taking a single equation from the MCM, we may calculate the Jacobian relationships between species and convert them into a graph. A randomly chosen ethane reaction (\autoref{eqn:line}) from a simple mechanism was chosen. In general, the reaction consists of the following two steps:
 
 ####   \ce{C2H6 + OH ->[\kappa_1] C2H5. + H2O}
 
@@ -693,14 +968,40 @@
 
 ####  For simplicity, in this example, this will be the only equation for our mechanism. The resultant Flux \autoref{eqn:exflux} and resultant Jacobian \autoref{eqn:exjac} may be calculated.
 
-###  -605,7 +605,7 
+###  -605,7 +603,7 
 ####  \end{eqnarray}
 
 ###### -This forms a `sparse' jacobian. Substituting numbers from subset mechanisms containing the methane and ethane precursors, we get \autoref{eqn:exjacsp}.
 
 ##### +This forms a `sparse' Jacobian. Substituting numbers from subset mechanisms containing the methane and ethane precursors, we get \autoref{eqn:exjacsp}.
 
-###  -754,7 +754,7 
+###  -698,8 +696,8 
+####  After reversing the links, we see that concentration for the reaction between \ch{c2h6} and OH follow the paths:
+
+####  \begin{eqnarray}
+
+###### -    \ce{OH ->[0.1] C2H6 ->[0.1] C2H5O2} \\[20pt]
+
+###### -    \ce{C2H6 ->[2\times10^{-7}] OH ->[2\times10^{-7}] C2H5O2}
+
+##### +    \ce{OH ->[C2H6][0.1] C2H5O2} \\[20pt]
+
+##### +    \ce{C2H6 ->[OH][2\times10^{-7}] C2H5O2}
+
+####  \end{eqnarray}
+
+###  -729,7 +727,7 
+####  \section{Case Study}\label{sec:metriccase}
+
+###### -In this section, the centrality metrics discussed in \autoref{sec:graphcentrality} are applied to a range of scenarios. These range from polluted urban environments such as London \citep{clfo} and Beijing \cite{aphh}, to marine and terrestrial forest- Cape Verde \cite{capeverde} and Borneo \citep{borneo}. We determine the main drivers for the chemistry and compare the species which are important across each simulation.
+
+##### +In this section, the centrality metrics discussed in \autoref{sec:graphcentrality} are applied to a range of scenarios. These range from polluted urban environments such as London \citep{clfo} and Beijing \cite{aphh}, to marine and terrestrial forest- Cape Verde \citep{capeverde} and Borneo \citep{borneo}. We determine the main drivers for the chemistry and compare the species which are important across each simulation.
+
+####  \subsection{Establishing Initial Conditions From Observational Data}
+
+####  Within experimental data assimilation, it is not uncommon to face problems which result in unreliable or missing data. These can range from anything as little as measuring below the instrument sensitivity to powercuts and equipment damage/theft from the local wildlife. This can result in problems when analysing the results and combining them to create a simulation of the chemistry for that environment.
+
+###  -754,7 +752,7 
 ####  \begin{quote}
 
 ####  \textit{
@@ -713,7 +1014,7 @@
 
 ####  This is done through the use of a `training dataset' - a set of input-output pairings which represent a random selection of 2/3rds of the total dataset. Next, the neurons within each layer (similar to the potentiometer dials on an instrument) are adjusted in sequence through the layers to match the known result (a standard of known concentration) to the input values provided. This process is repeated until for many iterations, or until a sufficiently `good' prediction is attained for the entire training dataset (early termination). The power of ANNs comes from the ability to adjust neuron thresholds whilst moving both forwards and backwards through the network (Note: predictions of an MLP are still only passed forwards). Finally, model performance is evaluated against the remaining 1/3rd of the total dataset.
 
-###  -769,7 +769,7 
+###  -769,7 +767,7 
 ####  \end{figure}
 
 ####  \subsubsection{Applying The Mlpregressor To Observational Data}
@@ -724,7 +1025,7 @@
 
 ####  The input of the regressor is in the form of a month and an hour, to represent each measurement. This allows it to find not only daily trends but also seasonal trends within the data. Once trained, the regressor is then used to predict a diurnal profile for each month based on the observational data provided. For simplicity $\log_{10}$ values of the concentrations obtained have been used. The predicted MLPRegressor line is compared to a transparent scatterplot for all the results. In addition to this, a boxplot showing the Inter Quartile Range (The range between the 25th and 75th percentile), median and mean (green line) plotted alongside to evaluate the predictor output. In this study, we only take the values for the month of June (or closest available depending on the dataset).
 
-###  -806,18 +806,18 
+###  -806,18 +804,18 
 ####  \subsubsection{Model Initialisation Procedure}
 
 ###### -The aim is to generate a set of initiation concentrations which are representative of the species found for different environments around the world. In this section, we are not interested in the exact concentration modelling for specific times or scenarios. Instead, we seek to generate representative of the processed chemistry under a range of conditions.
@@ -749,7 +1050,7 @@
 
 ####  \input{metricics.tex}
 
-###  -832,7 +832,7 
+###  -832,7 +830,7 
 ####  \begin{figure}[H]
 
 ####      \centering
@@ -764,7 +1065,7 @@
 
 ####  \end{figure}
 
-###  -842,7 +842,7 
+###  -842,7 +840,7 
 ####  \begin{figure}[H]
 
 ####      \centering
@@ -779,7 +1080,7 @@
 
 ####  \newpage
 
-###  -949,10 +949,10 
+###  -949,10 +947,10 
 ####  Individual categories are split between traditional metrics and graph centrality metrics. To represent the importance of a species, the following values may be extracted through the use of a simple box model:
 
 ####  \begin{itemize}
@@ -802,7 +1103,7 @@
 
 ####  \end{itemize}
 
-###  -969,7 +969,7 
+###  -969,7 +967,7 
 ####  Finally, the `Metric Sum' is the sum of all the metric values scaled between 1 and zero (the mean).
 
 ###### -\subsection{Senario Analysis}
@@ -811,7 +1112,7 @@
 
 ####  In selecting the top 10 ranking species for each category, it is possible to examine if the importance of a species with centrality metrics varies from the results suggested by traditional metrics. In this subsection, we explore the TF-IDF rankings of each metric and use this to decide if species importance is local to a specific metric. We look at what species are highlighted by each scenario (Figures \ref{fig:heatl} - \ref{fig:heatbj}) and compare them against the primary emitted species shown in \autoref{tab:icsmetric}. Finally, we compare the total metric sum against the traditional metrics of concentration and flux and compare the correlation.
 
-###  -979,7 +979,7 
+###  -979,7 +977,7 
 ####  \subsection*{London}
 
 ###### -The London dataset (\autoref{fig:fglondon}) contains a mix of anthropogenic and biogenic aromatics and long-chain alkanes. We have a section of alkanes which have a low overall metric sum and a small value for closeness and page rank. Combined with their high net flux, absolute flux and influence values, this suggests that they have a moderate directional flux, most likely influencing the production of many other species at a consistent rate. In addition to these, we have species with a moderate closeness but a high betweenness. These are often species such as formaldehyde (\ch{HCHO}), glyoxal (\ch{c2o2}) and acetaldehyde (\ch{ch3co3}) which can serve as tracers for fast photolytic reactions. This is because on the graph structure (\autoref{fig:vk}) they sit between the dense centre of the network (high closeness) and the branches formed from each primary emitted species (a low closeness value). Their high connection density and importance in the network is also picked up by the page rank algorithm. Other species with high betweenness and a low centrality are the monoterpenes limonene and $\alpha$ pinene, as well as hexane (\ch{nc6h14}) and butane products. These are (or are close to) primary emitted species and therefore have a low closeness. Since much of the chemistry originates with such species, the outward `flow' of information also results in a lower page rank value.
@@ -822,7 +1123,7 @@
 
 ####       \centering
 
-###  -994,7 +994,7 
+###  -994,7 +992,7 
 ####  Similar to London, the fast photochemical tracers are identified, although some have a slightly lower flux between them (Betweenness) and page rank values for Beijing (\autoref{fig:fgbeijing}). This suggests that the network structure or weightings may have shifted slightly from London, creating more links, or importance in a specific branch of chemistry.
 
 ###### - Additionally, their overall metric sum is lower. Glyoxal, Methyl Vinyl Ketone (MVK) and their associated criegee configurations all feature heavily in the middle of \autoref{fig:heatbj}. These are important as they represent the fast chemistry formed by both the anthropogenic and biogenic chemistry that is within the simulation. These tend to have a high closeness and page rank centrality, a pattern that is also seen with the long-chain alkane products from Octane (\ch{NC8H18}), Hexane (\ch{nc6h14}) and Isoprene.
@@ -833,7 +1134,7 @@
 
 ####        \centering
 
-###  -1024,16 +1024,16 
+###  -1024,16 +1022,16 
 ####  \subsection{Providing An Overall Overview Using The TF-IDF And The Metric Sum.}
 
 ###### -In the previous section, it was shown that centrality metrics could be used to complement the use of traditional metrics in the analysis of the chemical network. As each metric represents a different aspect of importance, should a single ranking value for a node be required, it is possible to take the average sum of all three metric values. Looking at \multiref{fig:heatcv}{fig:heatbj} it is possible to see similar trends in colour gradient between the purples of the traditional metrics of flux and concentration with the total metric sum (the blue column). This suggests that it is possible to compare each scenario with the use of the metric sum.
@@ -860,7 +1161,14 @@
 
 ####  \end{table}
 
-###  -1110,12 +1110,13 
+###  -1044,7 +1042,7 
+###### -\section{Calculating Production Sensitivity Using Personalised Page Rank.}
+
+##### +\section{Causality analysis using Personalised Page Rank.}
+
+####  In \autoref{sec:pagerank}, the results of the PageRank algorithm was obtained by solving for the eigenvalues and vectors of the google matrix. It was also mentioned that an equivalent method to get a result might be obtained by propagating the one's vector (a 1D vector of unity) in small increments (Equation \autoref{eqn:forwards}). This works much like the integrator within a chemical box model, except rather than updating the species concentration with each time step, we move information between each node.
+
+###  -1110,12 +1108,13 
 ####  \end{figure}
 
 ###### -Using a graph with reversed links weighted by model results of a jacobian is equivalent to a network created by an adjoint matrix (which is used to run models backwards). With this network, we run the PageRank algorithm with a `personalised' initiated ranking vector of 1000000 for \ch{NC101CO} and -1 for everything else (A damping factor value of 0.01 is also used for the algorithm). This produces the results in \autoref{tab:nc101}. Here although all nodes receive a ranking value due to transportation within the PageRank algorithm, there is a distinct split between highly ranked values and the rest. It is found that \ce{NC101CO} has the strongest influence on itself (which makes sense), followed by that of $\alpha$-pinene. Other more direct influences are seen from NAPINBOOH, NAPINBO, \ch{NAPINBO2}, from which NAPINBO has twice the influence from the other two. This is most likely as this has the highest net-flux from the model (\autoref{tab:nc101vdot}).
@@ -875,13 +1183,30 @@
 
 ####  \toprule
 
-##### +Species & PageRank Ranking\\ \midrule   
+##### +Species & PageRank Ranking\\ \midrule
 
 ####  NC101CO   &  9.920000e-01 \\
 
 ####  APINENE   &  9.210000e-06 \\
 
 ####  NAPINBO   &  4.540000e-03 \\
+
+###  -1183,8 +1182,8 
+####  \begin{figure}[H]
+
+####       \centering
+
+###### -     \includegraphics[width=.7\textwidth]{figures_c3/ch2_distance.pdf}
+
+###### -        \caption{\textbf{Showing total the influence from each species on HCHO for a sample MCM subset of Butane.}  }
+
+##### +     \includegraphics[width=1\textwidth]{newfigs/ch2_distance_links.pdf}
+
+##### +        \caption{\textbf{Showing total the influence from each species on HCHO for a sample MCM subset of Butane.} Species importance is determined using the reverse pagerank algorithm. It is calculated by taking a snapshot of a chemical simulation and rendered using the transpose of the Jacobian relational matrix. We then use a customised page rank algorithm to look at where flow goes from HCHO (the large node in the midde). A larger node and thicker link suggests a greater influence on the net change of HCHO.  }
+
+####          \label{fig:backtrace}  
+
+####  \end{figure}
 
 ## 4_lumping.tex
 #### diff --git a/mechanism_lumping/combigned.tex b/mechanism_lumping/combigned.tex
@@ -1205,20 +1530,76 @@
 ## 6_conclusion.tex
 #### diff --git a/conclusion/combigned.tex b/conclusion/combigned.tex
 
-#### index 9761db7..7295fe4 100644
+#### index 9761db7..540d41d 100644
 
 ###### --- a/conclusion/combigned.tex
 
 ##### +++ b/conclusion/combigned.tex
 
-###  -13,5 +13,56 
-####  Finally, in preparation for future research, the use of different species structure representations was run through a number of dimensionality reduction algorithms. Here the different inputs were reduced to two dimensions and plotted in a $x-y$ scatterplot. Analysis of these scatterplots showed that the t-SNE algorithm provided the best spacing between clusters. Additionally, it is found that the type of input can influence the features that are obtained as part of the dimensionality reduction process. It is suggested that if using a neural network, the molecular quantum number or tokenised SMILES input are likely to produce the best results.
+###  -1,17 +1,98 
+####  \section{Conclusions}
+
+###### -Humans are social creatures. Our increased neocortex size allows us to interact and communicate effectively between large amounts of people. It is due to this that we created methods for storing information external to our brains and developed a hive mind. Information transfer was pivotal to our development of technology and scientific advancement, however, doing so comes at a cost - and increase of radiative forcing and climate change due to anthropogenic emissions (a problem we are now trying to reduce through the use of scientific understanding and policy).
+
+##### +The topic of changing climate has been a prominent talking point in the last decade \citep{IPCC2013Science}. Anthropogenic activities starting with the industrial revolution have served to increase the amount of heat retained by the earth (radiative forcing). Similarly, the use of CFCs has damaged the protective layer of ozone in the atmosphere \citep{o3damage}, and dangerous levels of air quality have produced an increase in respiratory distress of living organisms. Although we have guidelines and policies to determine the acceptable levels of pollutants, it is not uncommon for these to be unregulated or broken - for example, it was shown that >95\% of the EU urban population were exposed to concentrations higher than the WHO regulation in \citep{eea}.
+
+###### -Since it is not possible to run experiments on the entire planetary system, we are forced to rely on numerical models. Within these reactions of the atmosphere are represented in the form of a mechanism. This thesis has looked at using new data processing techniques to analyse and visualise the complexity of the chemistry within the atmosphere. It is found that when addressing complex tasks within science, relying on narrative within the visual context allows for the greatest transfer of information to a reader.
+
+###### -Since a mechanism can be thought of a relational representation between reactants and products, a sociograph structure of nodes and links between them proves an effective means of visually communicating patterns in a way that is intuitive.
+
+##### +To prevent further irreversible harm, both physical and environmental, we must mitigate any further damage. The problem is, however, that this is not as small of a feat in itself. Taking the production of ground-level ozone as an example, the complex interplay between emissions and production within the earth system can result in two scenarios where the same concentration of a chemical species can result in the production or the loss of ozone based on the chemical regime it is in. For example, \cite{reviewo3} discusses the role of urban vegetation, and how trees can both reduce \citep{losso3} and greatly contribute to the formation \citep{isopmcm} of ozone - all while the shading provided from tree canopies could also influence the amount of radiation and its production \citep{shady}. As we try to better represent the processes that govern the physical world, the larger and more complex our models become. This means an important balance must be struck, whereupon the `selected'\footnote{In atmospheric chemistry and climate change it is common to compare the results of several different models and mechanisms when studying something new. This style of `ensemble' modelling provides a good way to check that things are working whilst eliminating some of the errors presented by individual simulations.} tool must be both robust, accurate within reason and computationally efficient.
+
+###### -The force-directed graph structure (a subset of the sociograph class) was found to reduce many of the problems encountered within the conventional (manual) drawing of the chemistry within a mechanism. The push-pull physics nature of these makes them easy to explain while allowing for additional information (such as the rate of reaction) to be embedded within the network shape. This allows for the automatic generation and visual comparison of graphs for different sizes of mechanism, or different points within a chemical simulation.
+
+##### +With the development of construction protocols, the automatic generation of very large and comprehensive chemical mechanisms is now a possibility, \citep{gecko}. This, however, presents problems which are both cognitive and computational. This thesis has explored the use of modern techniques in visualisation, reduction and machine learning in an attempt to address the above problem.
+
+###### -In addition to the visualisation of a network, it is possible to undergo a level of mathematical analysis using the graph structure. Here we can convert the relationships between nodes for a point in time (as given by the Jacobian matrix) and apply several centrality metrics. These provide information about the number of links of a node,  its role within the network and where the `flow' of information is going. It was established that although node importance as provided by the centrality metrics was useful, it did not provide any additional information to current (and tested) techniques.
+
+##### +\section{Results}
+
+###### -In addition to node importance, it also allows us to leverage the graph network and acquire information about its structure. Global graph metrics describe the Master Chemical Mechanism as a sparse graph with the small world (highly connected clusters) and hierarchical (structured) features - properties which are common in real-world graphs. In addition to classifying the type of network, we were also able to use the infomap graph-clustering algorithm to locate the groups within this network. It was found that this can identify modular groups of species that contain many reactions between each other for the CRI mechanism (a reduced version of the MCM). When applying this to the results of several randomly initiated simulations only a couple of small size groups were found, not making it efficient for mechanism reduction through lumping, however, more work needs to be done before this is dismissed as technique.
+
+##### +In attempting to optimise the information transfer between computational models and the reader, we start by understanding human evolution and how an increase in neocortex size led to the ability (and necessity) to communicate large numbers between many people. The inial method for doing this was through the use of language, storytelling and pitograms. This sort of external information `sharing' proved pivotal for the propagation of ideas, and ultimately the creation of technology and scientific advancement. Similarly, it is seen that even in the present-day setting, the use of narrative and selected metaphors can enrich the user's ability to navigate data, and instil a personal aspect to which they can relate to. When applied to atmospheric chemical mechanisms, the resultant output is a node-link representation of reactions, where species are analogous to people or items, and reactions (relationships) the links holding them together.
+
+###### -Finally, in preparation for future research, the use of different species structure representations was run through a number of dimensionality reduction algorithms. Here the different inputs were reduced to two dimensions and plotted in a $x-y$ scatterplot. Analysis of these scatterplots showed that the t-SNE algorithm provided the best spacing between clusters. Additionally, it is found that the type of input can influence the features that are obtained as part of the dimensionality reduction process. It is suggested that if using a neural network, the molecular quantum number or tokenised SMILES input are likely to produce the best results.
+
+##### +\newpage
 
 ###### -\section{Future Work}
 
+###### -With the newly emerging age of `big data', the fields of data analysis and graph theory are ever-improving. An example of this is the development and use of graph convolutional neural networks in 2016. Here a neural network receives not only information about the structure of an item, but also the relationships it has with everything else. Theoretically, this framework may allow the artificial network to `learn' the relationships and protocols of a chemical mechanism and generate the correct chemical pathways based on the structure of a new (and unseen species).
+
+##### +We then encode additional information into the visualisation, first syntactically  using line width and colour, then semantically by setting the node positions and line lengths based on an additional property. The latter of which was achieved by a simple physical system similar to treating nodes as like charged magnets (they repulse) and links as springs pulling them back together. This force-directed graph structure (a subset of the sociograph class) alleviates many of the traditional difficulties of manually outlining a species degradation pathways. The push-pull physics nature of force-directed graphs makes them effortless to understand while allowing for additional information (such as the rate of reaction) to be embedded within the network shape all whilst being able to juxtapose different subsets or mechanisms within the same visual space (e.g. \autoref{fig:graphc1}).
+
+##### +At the limits of perceivable (visual acuity) and physical resolution, we were able to translate the graphical network structure into a purely computational one. Here we are able to perform temporal analysis of the state of a mechanism within a simulation by taking a series of static `snapshots' or aggregating the data. This mathematical approach not only gives us information on the number of reactions of a species but also its importance within the system. Similarly in looking at where the flow of information within the network we can determine bottlenecks and controlling points, whereupon a small change to a one chemical species can have a significant effect on a large number of others. This type of analysis helps us to identify important areas to study, especially in the context of policy and air quality studies.
+
+##### +The computational graph can be further leveraged to categorise the type of network a mechanism represents, For example, we see that the Master Chemical Mechanism presents a sparse structure with the many highly connected (small-world) and hierarchical features. This is a pattern commonly found in real-world graphs and other chemical mechanisms, \citep{smallworld,rscgraph}.
+
+##### +The classification and ranking of species their modular structure allow us to apply several graph-based clustering techniques. Rather looking at the proximity and distribution of data within space, these techniques often navigate the links of a network, locating areas of high connectivity between species - thus forming a clique, module or cluster (depending on the field of study). This form of analysis not only highlights structural patterns from the network shape (e.g. \autoref{fig:imap2page}) but can also be used to access the suitability of combined species within mechanism lumping.
+
+##### +Finally, in preparation for future research, the use of different species structure representations was run through a selection of dimensionality reduction algorithms. Here different representations were reduced to two dimensions and shown in a $x-y$ scatterplot. The analysis showed t-SNE reduced data was the most aesthetically pleasing, as it provides better separation between clustered groups. Additionally, the type of representation had a significant effect on the type of features which were outlined by each DR algorithm. This highlights the importance of careful selection regarding input data when training a computational model. Out of the methods assessed it is suggested that the molecular quantum number or tokenised SMILES stings are used in any future works.
+
+##### +\newpage
+
+##### +\section{General Overview}
+
+##### +Although no definitive improvements over existing methods have been found, the wide reaches of the study suggest that graphs, visual representations and machine learning have their place in the field of atmospheric chemistry. Although they may not replace current `tried and tested' solutions, they have been shown to produce similar and agreeable results and demonstrated the pattern-finding abilities of computational models (for data analysis).
+
+##### +Where these methods come into their own is by demonstrating a more user-friendly approach to model diagnostics, mechanism comparison and change perturbation within a large complex system. Presenting chemistry in such a way enables us to successfully communicate what is going on in a way that policymakers and the general public can understand. This in itself can go a long way into the prevention and mitigation of the global problems described at the start of this thesis.
+
 ##### +\section{Future Work}\label{sec:futurework}
 
-####  With the newly emerging age of `big data', the fields of data analysis and graph theory are ever-improving. An example of this is the development and use of graph convolutional neural networks in 2016. Here a neural network receives not only information about the structure of an item, but also the relationships it has with everything else. Theoretically, this framework may allow the artificial network to `learn' the relationships and protocols of a chemical mechanism and generate the correct chemical pathways based on the structure of a new (and unseen species).
+##### +When discussing future projects relating to this work, there are two apparent avenues which should be explored. The first lies in applying this work to better communicate issues of air quality, whilst the second focuses more on the use of graph neural networks to generate dynamic mechanisms based on user requirements. These are outlined below.
+
+##### +\subsection{Policy and Communication}
+
+##### +As was described previously, one of the more successful parts of this project has been the communication of atmospheric chemistry in a visually intuitive way. Building on this, it would be highly bene to create an `immersive' user-controllable box model GUI which policymakers and students can adjust, whilst watching the chemical graph dynamically change based on the user regime the chemistry falls into at that point in time. This will go a long way into educating people about the complexities of the atmosphere and how a small change may have a large effect based on circumstances/conditions.
+
+##### +\subsection{Dynamic Box Model Emulation}
+
+##### +Except for long-range transport, much of the chemistry which occurs within different regions of the earth is constrained by the surrounding environment. It would be useful to develop an automatically adapting mechanism based on its position within the earth system - whereupon the number of species and calculations is adjusted in accordance to location, elevation and time of day (photolysis). This will allow global and regional models to provide higher quality results - e.g. by computing high (chemical) resolution runs within urban and surrounding areas whilst removing the same computational overhead for isolated and rural grid boxes.
+
+##### +With the newly emerging age of `big data', the fields of data analysis and graph theory are ever-improving. An example of this is the release of graph convolutional neural networks in 2016 - this is a neural network which takes into consideration not only its inputs but also the relationships between them. If we could get a neural network to learn the protocols for mechanism construction, and then simulate a box model output based on this, the idea of an adaptive mechanism may have potential. This would nicely tie in the visual, mathematical and ML aspects of this thesis.
 
 ##### +\newpage
 
@@ -1226,33 +1607,33 @@
 
 ##### +\addcontentsline{toc}{section}{\protect\numberline{}Reproducability}%
 
-##### +The code used within this thesis is provided `as is' within the relevant repositories. There will be an attempt to make it more presentable and fully documented within the near future, but this has not yet happened. For many of the tasks it is possible to download a clean repository and implement any relevant changes yourself.
+##### +The code used within this thesis is provided `as is' within the relevant repositories. There will be an attempt to make it more presentable and fully documented within the near future, but this has not yet happened. For many of the tasks, it is possible to download a clean repository and implement any relevant changes yourself.
 
 ##### +\subsection*{The Box Model}
 
-##### +Most of the work in this thesis relies on the use of the DSMACC Box model \citep{dsmacc}. In order to reproduce it the specific code I have used can be found in \citep{dsmaccgit}, however any box model which allows you to extract both the fluxes and Jacobian matrix may be used.
+##### +Most of the work in this thesis relies on the use of the DSMACC Box model \citep{dsmacc}. To reproduce it the specific code I have used can be found in \citep{dsmaccgit}, however, any box model which allows you to extract both the fluxes and Jacobian matrix may be used.
 
 ##### +\subsection*{Photolysis Calculations}
 
-##### +Photolysis rates are calculated with version 5.2 of the Tropospheric and Ultraviolet and Visible codebase. Photolysis rates are calculated once at the start of each box model run and then interpolated with the use of cubic splines to provide the values required throughout the day. This can be located at \citep{tuv}, Photolysis rates within the J array correspond to the lines outlined in \verb|./INPUTS/MCMTUV| and are hard wired within the \verb|./MCMvXX.inc| include files.
+##### +Photolysis rates are calculated with version 5.2 of the Tropospheric and Ultraviolet and Visible codebase. Photolysis rates are calculated once at the start of each box model run and then interpolated with the use of cubic splines to provide the values required throughout the day. This can be located at \citep{tuv}, Photolysis rates within the J array correspond to the lines outlined in \verb|./INPUTS/MCMTUV| and are hard-wired within the \verb|./MCMvXX.inc| include files.
 
 ##### +\subsection*{The Master Chemical Mechanism}
 
-##### +For the work, we have made use of various versions of the master chemical mechanism \citep{mcm}. Different versions of this and its reduced component (CRI) can be obtained from the MCM website: \url{mcm.york.ac.uk}. Alternatively the KPP presentation of all the mechanisms I have used are located within the \verb|./mechanisms| folder in the DSMACC repository.
+##### +For the work, we have made use of various versions of the master chemical mechanism \citep{mcm}. Different versions of this and its reduced component (CRI) can be obtained from the MCM website: \url{mcm.york.ac.uk}. Alternatively, the KPP presentation of all the mechanisms I have used is located within the \verb|./mechanisms| folder in the DSMACC repository.
 
 ##### +\subsection*{Kinetic Pre-Processor}
 
-##### +To transpose the chemical mechanism into a usable format, the Kinetic Pre-Processor rewrites the human readable first order ordinary differential equations into FORTRAN95 code. The version of this originates from FlexChem  - the KPP rewrite used in GEOSChem (KPP 2.3.01). This is located at \url{https://github.com/wolfiex/kpp_2.3.01_gc/}
+##### +To transpose the chemical mechanism into a usable format, the Kinetic Pre-Processor rewrites the human-readable first-order ordinary differential equations into FORTRAN95 code. The version of this originates from FlexChem  - the KPP rewrite used in GEOSChem (KPP 2.3.01). This is located at \url{https://github.com/wolfiex/kpp_2.3.01_gc/}
 
 ##### +\subsection*{ML libraries}
 
-##### +Simple processing tasks as clustering , PCA and t-SNE generally make use of the Scikit-Learn package \citep{sklearn}.
+##### +Simple processing tasks as clustering, PCA and t-SNE generally make use of the Scikit-Learn package \citep{sklearn}.
 
-##### +Graph Layouts such at TSNET and Mercator can be found in \url{https://github.com/wolfiex/tsNET} and \url{https://github.com/networkgeometry/mercator}.
+##### +Graph Layouts such as TSNET and Mercator can be found in \url{https://github.com/wolfiex/tsNET} and \url{https://github.com/networkgeometry/mercator}.
 
-##### +The AutoEncoder  code can be found within the DSMACC repository at \url{https://github.com/wolfiex/DSMACC-testing/blob/master/dsmacc/examples/rate_ae.py} and the Graph AutoEncoder at \url{https://github.com/tkipf/gae}.
+##### +The AutoEncoder code can be found within the DSMACC repository at \url{https://github.com/wolfiex/DSMACC-testing/blob/master/dsmacc/examples/rate_ae.py} and the Graph AutoEncoder at \url{https://github.com/tkipf/gae}.
 
-##### +Although not documented, the aim of this thesis was to work up to the use of a graph convolutional network such as the one in \url{https://github.com/wolfiex/gcn}.
+##### +Although not documented, this thesis aimed to work up to the use of a graph convolutional network such as the one in \url{https://github.com/wolfiex/gcn}.
 
 ##### +\subsection*{Chemial representation and Molecular Keys}
 
@@ -1274,9 +1655,9 @@
 
 ##### +\end{itemize}
 
-##### +Once downloaded, these are wrangled into the initial conditions CSV format for the use in model runs - some of which are spun up to steady state based on the users preference and aim of the study.
+##### +Once downloaded, these are wrangled into the initial conditions CSV format for the use in model runs - some of which are spun up to a steady state based on the user's preference and aim of the study.
 
-##### +Non-observational runs are initated through the use of a Latin hypercube format to provide a random assortment of initial concentrations within a pre-defined limit. An example of the intial conditions output for one run of these can be found in \url{https://github.com/wolfiex/DSMACC-testing/blob/master/InitCons/lhs_spinup.csv}.
+##### +Non-observational runs are initiated through the use of a Latin hypercube format to provide a random assortment of initial concentrations within a pre-defined limit. An example of the output of the initial condition for one run of these can be found in \url{https://github.com/wolfiex/DSMACC-testing/blob/master/InitCons/lhs_spinup.csv}.
 
 ##### +\bibliographystyle{apalike}
 
@@ -1393,3080 +1774,3 @@
 ##### +  \end{tabular}
 
 ##### + \end{center}
-
-## Bibliography
-#### diff --git a/bibtex.bib b/bibtex.bib
-
-#### index 8b8f0b8..85c41d6 100644
-
-###### --- a/bibtex.bib
-
-##### +++ b/bibtex.bib
-
-###  -3,6 +3,7 
-####     arxivid = {1312.6722},
-
-####     author = {Benzi, Michele and Klymko, Christine},
-
-####     eprint = {1312.6722},
-
-##### +   journal = {online},
-
-####     month = {December},
-
-####     note = {http://arxiv.org/abs/1312.6722},
-
-####     primaryclass = {math.NA},
-
-###  -15,6 +16,7 
-####     booktitle = {Reference Module in Earth Systems and Environmental Sciences},
-
-####     doi = {https://doi.org/10.1016/B978-0-12-409548-9.09177-6},
-
-####     isbn = {978-0-12-409548-9},
-
-##### +   journal = {Elsevier},
-
-####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780124095489091776}},
-
-####     publisher = {Elsevier},
-
-####     title = {Atmospheric Chemistry},
-
-###  -24,6 +26,7 
-####  @book{accidental,
-
-####     author = {Roberts, R.M.},
-
-####     isbn = {9780471602033},
-
-##### +   journal = {Wiley},
-
-####     lccn = {lc88033638},
-
-####     note = {\url{https://books.google.co.uk/books?id=hf57X0s4aPwC}},
-
-####     publisher = {Wiley},
-
-###  -51,6 +54,7 
-####  @misc{adj,
-
-####     author = {Bostock, Mike},
-
-##### +   journal = {online},
-
-####     note = {\url{https://bost.ocks.org/mike/miserables/}},
-
-####     title = {{Les Mis{\'E}Rables Co-Occurrence}},
-
-####     year = {2019}
-
-###  -70,6 +74,7 
-####  @article{advnummeth,
-
-####     author = {C.J.Budd},
-
-##### +   journal = {online},
-
-####     note = {\url{https://people.bath.ac.uk/mamamf/chapt6and7.pdf}},
-
-####     title = {{Advanced Numerical Methods - Lectures Part 2 }},
-
-####     year = {2019}
-
-###  -78,6 +83,7 
-####  @misc{aeim,
-
-####     author = {{Dataman}},
-
-####     booktitle = {{Medium}},
-
-##### +   journal = {Towards Data Science},
-
-####     note = {\url{https://towardsdatascience.com/convolutional-autoencoders-for-image-noise-reduction-32fce9fc1763}},
-
-####     publisher = {Towards Data Science},
-
-####     title = {{Convolutional Autoencoders For Image Noise Reduction}},
-
-###  -89,6 +95,7 
-####     booktitle = {2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
-
-####     doi = {10.1109/BIBM.2018.8621080},
-
-####     issn = {null},
-
-##### +   journal = {online},
-
-####     month = {Dec},
-
-####     number = {},
-
-####     pages = {2605-2612},
-
-###  -103,6 +110,7 
-####     doi = {10.2312/COMPAESTH/COMPAESTH07/057-064},
-
-####     isbn = {978-3-905673-43-2},
-
-####     issn = {1816-0859},
-
-##### +   journal = {The Eurographics Association},
-
-####     publisher = {The Eurographics Association},
-
-####     title = {{The Aesthetics Of Graph Visualization}},
-
-####     year = {2007}
-
-###  -166,6 +174,7 
-####  Joe and Huang, Zhonghui and Wang, Xinming and Hewitt, Nick
-
-####  and Crilley, Leigh and Kramer, Louisa and Slater, Eloise and
-
-####  Whalley, Lisa and Ye, Chunxiang and Ingham, Trevor},
-
-##### +   journal = {online},
-
-####     note = {\url{https://catalogue.ceda.ac.uk/uuid/648246d2bdc7460b8159a8f9daee7844}},
-
-####     title = {{Dataset Collection Record: Aphh: Atmospheric Measurements And
-
-####  Model Results For The Atmospheric Pollution \& Human Health
-
-###  -186,6 +195,7 
-####     booktitle = {IEEE Symposium on Information Visualization, 2002. INFOVIS 2002.},
-
-####     doi = {10.1109/INFVIS.2002.1173155},
-
-####     issn = {1522-404X},
-
-##### +   journal = {online},
-
-####     month = {Oct},
-
-####     pages = {110-116},
-
-####     title = {Arc Diagrams: Visualizing Structure In Strings},
-
-###  -195,6 +205,7 
-####  @book{archaic,
-
-####     author = {Nissen, H.J. and Damerow, P. and Englund, R.K. and Englund, R.K. and Larsen, P. and Larsen, R.K.},
-
-####     isbn = {9780226586595},
-
-##### +   journal = {University of Chicago Press},
-
-####     lccn = {lc93000909},
-
-####     note = {\url{https://books.google.co.uk/books?id=YBAzXV4YtQ8C}},
-
-####     publisher = {University of Chicago Press},
-
-###  -250,6 +261,7 
-####  @misc{beck,
-
-####     author = {Henry Beck},
-
-####     booktitle = {{Londontopia}},
-
-##### +   journal = {online},
-
-####     month = {April},
-
-####     note = {\url{https://londontopia.net/site-news/featured/london-icon-tube-map/}},
-
-####     title = {{London Icon: A History Of Harry Beck'S Iconic Tube Map}},
-
-###  -259,6 +271,7 
-####  @book{beforeCuneiform,
-
-####     author = {Schmandt-Besserat, D.},
-
-####     isbn = {9780292707832},
-
-##### +   journal = {University of Texas Press},
-
-####     lccn = {lc90023615},
-
-####     note = {\url{https://books.google.co.uk/books?id=\_G74dDQO8gUC}},
-
-####     publisher = {University of Texas Press},
-
-###  -270,6 +283,7 
-####  @article{between,
-
-####     author = {Freeman, Linton},
-
-####     booktitle = {Sociometry},
-
-##### +   journal = {online},
-
-####     month = {03},
-
-####     pages = {35-41},
-
-####     title = {A Set Of Measures Of Centrality Based On Betweenness},
-
-###  -304,6 +318,7 
-####     booktitle = {Graph Drawing: 6th International Symposium, GD' 98 Montr{\'e}al, Canada, August 13--15, 1998 Proceedings},
-
-####     doi = {10.1007/3-540-37623-2_12},
-
-####     isbn = {978-3-540-37623-1},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/3-540-37623-2_12}},
-
-####     pages = {153--166},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -314,6 +329,7 
-####  @book{beziercomputer,
-
-####     author = {Mortenson, M.E.},
-
-####     isbn = {9780831131111},
-
-##### +   journal = {Industrial Press},
-
-####     lccn = {99010096},
-
-####     note = {\url{https://books.google.co.uk/books?id=YmQy799flPkC}},
-
-####     publisher = {Industrial Press},
-
-###  -324,6 +340,7 
-####  @book{beziermath,
-
-####     author = {Hazewinkel, M.},
-
-####     isbn = {9780792347095},
-
-##### +   journal = {Springer Netherlands},
-
-####     lccn = {87026437},
-
-####     note = {\url{https://books.google.co.uk/books?id=3ndQH4mTzWQC}},
-
-####     number = {v. 1},
-
-###  -354,6 +371,7 
-####  @techreport{bigdataorigin,
-
-####     author = {Francis X. Diebold},
-
-####     institution = {Penn Institute for Economic Research, Department of Economics, University of Pennsylvania},
-
-##### +   journal = {online},
-
-####     month = {August},
-
-####     note = {\url{https://ideas.repec.org/p/pen/papers/13-003.html}},
-
-####     number = {13-003},
-
-###  -384,6 +402,7 
-####     arxivid = {1810.07215},
-
-####     author = {Hobson, Elizabeth A and M{\o}nster, Dan and DeDeo, Simon},
-
-####     eprint = {1810.07215},
-
-##### +   journal = {online},
-
-####     month = {October},
-
-####     note = {\url{http://arxiv.org/abs/1810.07215}},
-
-####     primaryclass = {q-bio.PE},
-
-###  -395,6 +414,7 
-####  @book{birds,
-
-####     author = {Ackerman, J.},
-
-####     isbn = {9781472114372},
-
-##### +   journal = {Little, Brown Book Group},
-
-####     note = {\url{https://books.google.co.uk/books?id=3z\_sCgAAQBAJ}},
-
-####     publisher = {Little, Brown Book Group},
-
-####     title = {The Genius Of Birds: The Intelligent Life Of Birds},
-
-###  -403,6 +423,7 
-####  @misc{birdsongs,
-
-####     author = {Haruka Wada},
-
-##### +   journal = {Nature Education Knowledge},
-
-####     note = {\url{https://www.nature.com/scitable/knowledge/library/the-development-of-birdsong-16133266}},
-
-####     publisher = {Nature Education Knowledge},
-
-####     title = {{The Development Of Birdsong | Learn Science At Scitable}},
-
-###  -429,6 +450,7 
-####  @misc{borneo,
-
-####     author = {Hewitt,
-
-####  Nick and Edwards, Peter},
-
-##### +   journal = {online},
-
-####     note = {\url{https://catalogue.ceda.ac.uk/uuid/81892deb2dd5e7f0d26b9c587af45f3d}},
-
-####     title = {{Dataset Record: Op3-1 Campaign: Leeds Merged Chemistry Data
-
-####  At Bukit Atur}},
-
-###  -478,6 +500,7 
-####     edition = {Third Edition},
-
-####     editor = {Ware, Colin },
-
-####     isbn = {978-0-12-381464-7},
-
-##### +   journal = {Morgan Kaufmann},
-
-####     note = {\url{http://www.sciencedirect.com/science/article/pii/B978012381464700003X}},
-
-####     pages = {69 - 94},
-
-####     publisher = {Morgan Kaufmann},
-
-###  -489,6 +512,7 
-####  @inbook{britanicaplanet,
-
-####     author = {J M Hayes,John P Rafferty},
-
-####     booktitle = {{Encyclop{\ae}dia Britannica}},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.britannica.com/topic/evolution-of-the-atmosphere-1703862}},
-
-####     title = {{Processes Affecting The Composition Of The Early Atmosphere}},
-
-####     year = {1998}
-
-###  -508,19 +532,6 
-####     year = {2009}
-
-###### -@article{bundlepioneer,
-
-###### -   author = {D. Holten},
-
-###### -   doi = {10.1109/TVCG.2006.147},
-
-###### -   issn = {1077-2626},
-
-###### -   journal = {IEEE Transactions on Visualization and Computer Graphics},
-
-###### -   month = {Sept},
-
-###### -   number = {5},
-
-###### -   pages = {741-748},
-
-###### -   title = {Hierarchical Edge Bundles: Visualization Of Adjacency Relations In Hierarchical Data},
-
-###### -   volume = {12},
-
-###### -   year = {2006}
-
-####  @article{butane,
-
-####     author = {Jenkin, Michael E and Saunders, Sandra M and Pilling, Michael J},
-
-####     doi = {10.1016/S1352-2310(96)00105-7},
-
-###  -554,6 +565,7 
-####  @misc{capeverde,
-
-####     author = {Read, Katie A},
-
-##### +   journal = {online},
-
-####     note = {\url{https://catalogue.ceda.ac.uk/uuid/a457d9715f3c4bc295ef975932e491d9}},
-
-####     title = {{Dataset Record: Cape Verde Atmospheric Observatory:
-
-####  Meteorological Davis Weather Station Measurements}},
-
-###  -576,6 +588,7 
-####  @misc{cavepic,
-
-####     author = {Schroth, Christian},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.facebook.com/AncientEnthusiast/photos/a.849792428414625/2618224274904756/?type=3&theater}},
-
-####     title = {{Horses Panel, Chauvet Cave}},
-
-####     year = {2019}
-
-###  -589,6 +602,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_1},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_1}},
-
-####     pages = {1--9},
-
-####     publisher = {Springer International Publishing},
-
-###  -608,6 +622,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_10},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_10}},
-
-####     pages = {207--235},
-
-####     publisher = {Springer International Publishing},
-
-###  -622,6 +637,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_2},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_2}},
-
-####     pages = {13--36},
-
-####     publisher = {Springer International Publishing},
-
-###  -638,6 +654,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_3},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_3}},
-
-####     pages = {37--59},
-
-####     publisher = {Springer International Publishing},
-
-###  -653,6 +670,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_4},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_4}},
-
-####     pages = {61--73},
-
-####     publisher = {Springer International Publishing},
-
-###  -668,6 +686,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_5},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_5}},
-
-####     pages = {77--95},
-
-####     publisher = {Springer International Publishing},
-
-###  -686,6 +705,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_6},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_6}},
-
-####     pages = {97--125},
-
-####     publisher = {Springer International Publishing},
-
-###  -702,6 +722,7 
-####     booktitle = {Software Visualization: From Theory to Practice},
-
-####     doi = {10.1007/978-1-4615-0457-3_6},
-
-####     isbn = {978-1-4615-0457-3},
-
-##### +   journal = {Springer US},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-1-4615-0457-3_6}},
-
-####     pages = {149--178},
-
-####     publisher = {Springer US},
-
-###  -719,6 +740,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_7},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_7}},
-
-####     pages = {127--150},
-
-####     publisher = {Springer International Publishing},
-
-###  -739,6 +761,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_8},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_8}},
-
-####     pages = {151--174},
-
-####     publisher = {Springer International Publishing},
-
-###  -756,6 +779,7 
-####     booktitle = {Multivariate Network Visualization: Dagstuhl Seminar {\#}13201, Dagstuhl Castle, Germany, May 12-17, 2013, Revised Discussions},
-
-####     doi = {10.1007/978-3-319-06793-3_9},
-
-####     isbn = {978-3-319-06793-3},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-06793-3_9}},
-
-####     pages = {175--206},
-
-####     publisher = {Springer International Publishing},
-
-###  -765,9 +789,10 
-####  @article{chinanox,
-
-####     author = {Joshua Stevens},
-
-##### +   journal = {NASA Earth Observatory},
-
-####     language = {en},
-
-####     month = {February},
-
-###### -   note = {\url{https://earthobservatory.nasa.gov/images/146362/airborne-nitrogen-dioxide-plummets-over-china?fbclid=IwAR1z9jXZfY8xNZsCCRRo8Eor2hCjbNDIV70wXGOlzmNyFPkFBesURDCAwB4}},
-
-##### +   note = {\url{https://earthobservatory.nasa.gov/images/146362/airborne-nitrogen-dioxide-plummets-over-china}},
-
-####     publisher = {NASA Earth Observatory},
-
-####     title = {{Airborne Nitrogen Dioxide Plummets Over China}},
-
-####     year = {2020}
-
-###  -778,6 +803,7 
-####     booktitle = {2016 IEEE Tenth International Conference on Research Challenges in Information Science (RCIS)},
-
-####     doi = {10.1109/RCIS.2016.7549281},
-
-####     issn = {2151-1357},
-
-##### +   journal = {online},
-
-####     month = {June},
-
-####     pages = {1-6},
-
-####     title = {Reflections On The Use Of Chord Diagrams In Social Network Visualization In Process Mining},
-
-###  -787,6 +813,7 
-####  @misc{circ,
-
-####     author = {Jonathan Fisher},
-
-####     booktitle = {{Londonist}},
-
-##### +   journal = {online},
-
-####     month = {January},
-
-####     note = {\url{https://londonist.com/2013/01/alternative-tube-maps-circles-within-circles}},
-
-####     title = {{Alternative Tube Maps: Circles Within Circles}},
-
-###  -801,6 +828,7 
-####  Liu, Dantong and Monks, Paul S and Nemitz, E and Reeves,
-
-####  Claire E and Oram, David and Sokhi, R and Young, Dominique
-
-####  and Visser, Suzanne and Whitehead, James and Zotter, Peter},
-
-##### +   journal = {online},
-
-####     month = {May},
-
-####     note = {\url{https://catalogue.ceda.ac.uk/uuid/cee49a1f044b79d5413b7a0282467508}},
-
-####     title = {{Dataset Collection Record: Clearflo (Clean Air For London)
-
-###  -825,7 +853,8 
-####  @article{closeness-book,
-
-###### -   author = {poliaktiv},
-
-##### +   author = {Poliaktiv},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.politaktiv.org/documents/10157/29141/SocNet_TheoryApp.pdf}},
-
-####     title = {{Social Network Analysis: Theory And Applications}},
-
-####     year = {2011}
-
-###  -833,6 +862,7 
-####  @misc{clustereval,
-
-####     author = {sklearn},
-
-##### +   journal = {online},
-
-####     note = {\url{https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html}},
-
-####     title = {{Comparing Different Clustering Algorithms On Toy Datasets ---
-
-####  Scikit-Learn 0.21.3 Documentation}},
-
-###  -872,6 +902,7 
-####     booktitle = {2017 IEEE 41st Annual Computer Software and Applications Conference (COMPSAC)},
-
-####     doi = {10.1109/COMPSAC.2017.205},
-
-####     issn = {0730-3157},
-
-##### +   journal = {online},
-
-####     month = {July},
-
-####     number = {},
-
-####     pages = {615-618},
-
-###  -896,6 +927,7 
-####  @misc{code,
-
-####     author = {Alon, Uri and Zilberstein, Meital and Levy, Omer and Yahav, Eran},
-
-####     doi = {10.1145/3290353},
-
-##### +   journal = {online},
-
-####     month = {January},
-
-####     note = {\url{http://dl.acm.org/citation.cfm?doid=3302515.3290353}},
-
-####     title = {{Code2Vec: Learning Distributed Representations Of Code}},
-
-###  -910,6 +942,7 
-####     edition = {Third Edition},
-
-####     editor = {Ware, Colin },
-
-####     isbn = {978-0-12-381464-7},
-
-##### +   journal = {Morgan Kaufmann},
-
-####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780123814647000041}},
-
-####     pages = {95 - 138},
-
-####     publisher = {Morgan Kaufmann},
-
-###  -936,6 +969,7 
-####     author = {Pasupa, Kitsuchart},
-
-####     booktitle = {{Artificial Intelligence and Soft Computing}},
-
-####     doi = {10.1007/978-3-642-38610-7\_28},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-642-38610-7_28}},
-
-####     pages = {297--308},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -987,6 +1021,7 
-####  @misc{confpic,
-
-####     author = {Benjamin Bach},
-
-##### +   journal = {online},
-
-####     note = {\url{https://aviz.fr/~bbach/confluentgraphs/}},
-
-####     title = {{Confluent Graphs}},
-
-####     year = {2020}
-
-###  -998,6 +1033,7 
-####  and Tomlin, Alison S.},
-
-####     booktitle = {Analysis of Kinetic Reaction Mechanisms},
-
-####     doi = {10.1007/978-3-662-44562-4_7},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{https://doi.org/10.1007/978-3-662-44562-4_7}},
-
-####     pages = {183--312},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -1040,6 +1076,7 
-####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
-
-####     doi = {10.1007/978-3-540-24595-7_34},
-
-####     isbn = {978-3-540-24595-7},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_34}},
-
-####     pages = {369--380},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -1062,6 +1099,7 
-####  @book{cooking,
-
-####     author = {Wrangham, Richard},
-
-##### +   journal = {Basic Books},
-
-####     publisher = {Basic Books},
-
-####     title = {Catching Fire: How Cooking Made Us Human},
-
-####     year = {2009}
-
-###  -1070,6 +1108,7 
-####  @misc{cover,
-
-####     author = {Daniel Ellis},
-
-####     doi = {10.1002/kin.21180},
-
-##### +   journal = {online},
-
-####     note = {\url{https://s100.copyright.com/AppDispatchServlet?startPage=i&publisherName=Wiley&publication=kin&contentID=10.1002%2Fkin.21180&endPage=i&title=Cover+Image%2C+Volume+50%2C+Issue+6}},
-
-####     title = {{Chemical Kinetic Interactions Cover Image}},
-
-####     year = {2019}
-
-###  -1083,7 +1122,7 
-####     note = {\url{http://www.sciencedirect.com/science/article/pii/S1352231008006742}},
-
-####     number = {31},
-
-####     pages = {7185 - 7195},
-
-###### -   title = {A Common Representative Intermediates (Cri) Mechanism For Voc Degradation. Part 1: Gas Phase Mechanism Development},
-
-##### +   title = {A Common Representative Intermediates (Cri) Mechanism For VOC Degradation. Part 1: Gas Phase Mechanism Development},
-
-####     volume = {42},
-
-####     year = {2008}
-
-###  -1091,6 +1130,7 
-####  @misc{criv2,
-
-####     author = {Mike Jenkin},
-
-####     howpublished = {Online},
-
-##### +   journal = {online},
-
-####     month = {9},
-
-####     title = {{ Http://Cri.York.Ac.Uk }},
-
-####     year = {2019}
-
-###  -1102,6 +1142,7 
-####     booktitle = {Proceedings of the Thirtieth Annual ACM Symposium on Theory of Computing},
-
-####     doi = {10.1145/276698.276876},
-
-####     isbn = {0897919629},
-
-##### +   journal = {Association for Computing Machinery},
-
-####     location = {Dallas, Texas, USA},
-
-####     note = {\url{https://doi.org/10.1145/276698.276876}},
-
-####     numpages = {10},
-
-###  -1114,6 +1155,7 
-####  @misc{d3annotate,
-
-####     author = {Lu, Susie},
-
-##### +   journal = {online},
-
-####     note = {\url{https://d3-annotation.susielu.com/}},
-
-####     title = {{D3-Annotate}},
-
-####     year = {2019}
-
-###  -1125,6 +1167,7 
-####     biburl = {https://www.bibsonomy.org/bibtex/24fdb2faa7a94a7248a7fb5725aaa5afa/maxirichter},
-
-####     interhash = {9e3b5ed5b36799e856b35165b06248af},
-
-####     intrahash = {4fdb2faa7a94a7248a7fb5725aaa5afa},
-
-##### +   journal = {online},
-
-####     note = {\url{http://d3js.org/}},
-
-####     timestamp = {2012-11-08T12:33:57.000+0100},
-
-####     title = {D3.Js - Data-Driven Documents},
-
-###  -1134,13 +1177,15 
-####  @misc{daygraph,
-
-####     author = {Ellis, Daniel},
-
-####     institution = {Github},
-
-##### +   journal = {online},
-
-####     note = {\url{https://github.com/wolfiex/DanEllisThesis/blob/master/daynight_26mb.gif}},
-
-####     title = {{Animation Of The Evolution Of Chemistry Graph Of Beijing.}},
-
-####     year = {2018}
-
-###### -@inproceedings{DBSCAN,
-
-##### +@article{DBSCAN,
-
-####     author = {Martin Ester and Hans-peter Kriegel and Jörg Sander and Xiaowei Xu},
-
-##### +   journal = {AAAI Press},
-
-####     pages = {226--231},
-
-####     publisher = {AAAI Press},
-
-####     title = {A Density-Based Algorithm For Discovering Clusters In Large Spatial Databases With Noise},
-
-###  -1166,6 +1211,7 
-####  @misc{definenetwork,
-
-####     author = {Oxford},
-
-####     booktitle = {{Lexico Dictionaries | English}},
-
-##### +   journal = {Lexico Dictionaries},
-
-####     note = {\url{https://www.lexico.com/en/definition/network}},
-
-####     publisher = {Lexico Dictionaries},
-
-####     title = {{Network | Definition Of Network In English By Lexico Dictionaries}},
-
-###  -1173,8 +1219,10 
-####  @article{defra1,
-
-###### -   author = {Dick Derwent,Andrea Fraser,John Abbott,Mike Jenkin},
-
-##### +   author = {{Dick Derwent, Andrea Fraser, John Abbott and Mike Jenkin
-
-####     issue = {3},
-
-##### +   journal = {online},
-
-####     note = {\url{https://uk-air.defra.gov.uk/assets/documents/reports/cat05/1006241607_100608_MIP_Final_Version.pdf}},
-
-####     title = {{Evaluating The Performance Of Air Quality Models}},
-
-####     year = {2010}
-
-###  -1197,6 +1245,7 
-####  and Cardoso, Jaime
-
-####  and Spiliopoulou, Myra},
-
-####     isbn = {978-3-319-23461-8},
-
-##### +   journal = {Springer International Publishing},
-
-####     pages = {165--179},
-
-####     publisher = {Springer International Publishing},
-
-####     title = {Two Step Graph-Based Semi-Supervised Learning For Online Auction Fraud Detection},
-
-###  -1217,6 +1266,7 
-####  @misc{degreetwitter,
-
-####     author = {Gemma, Joyce},
-
-####     booktitle = {{Brandwatch}},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.brandwatch.com/blog/react-influential-men-and-women-2017/}},
-
-####     title = {{The Most Influential Men And Women On Twitter 2017}},
-
-####     year = {2019}
-
-###  -1239,6 +1289,7 
-####  @book{descartes,
-
-####     author = {Descartes, Ren{\'e} and Lafleur, Laurence J},
-
-##### +   journal = {Bobbs-Merrill New York},
-
-####     note = {\url{http://selfpace.uconn.edu/class/percep/DescartesMeditations.pdf}},
-
-####     publisher = {Bobbs-Merrill New York},
-
-####     title = {{Meditations On First Philosophy}},
-
-###  -1252,13 +1303,14 
-####     note = {\url{https://www.atmos-chem-phys.net/5/641/2005/}},
-
-####     number = {3},
-
-####     pages = {641--664},
-
-###### -   title = {Development Of A Detailed Chemical Mechanism (Mcmv3.1) For The Atmospheric Oxidation Of Aromatic Hydrocarbons},
-
-##### +   title = {Development Of A Detailed Chemical Mechanism (MCMv3.1) For The Atmospheric Oxidation Of Aromatic Hydrocarbons},
-
-####     volume = {5},
-
-####     year = {2005}
-
-####  @article{dev-social-analysis,
-
-####     author = {Freeman, Linton C},
-
-##### +   journal = {online},
-
-####     note = {\url{http://moreno.ss.uci.edu/91.pdf}},
-
-####     title = {{The Development Of Social Network Analysis---With An Emphasis On
-
-####  Recent Events}},
-
-###  -1309,6 +1361,7 
-####     booktitle = {{Advances in Neural Information Processing Systems 25}},
-
-####     doi = {10.21105/joss.00747},
-
-####     editor = {Pereira, F and Burges, C J C and Bottou, L and Weinberger, K Q},
-
-##### +   journal = {Curran Associates, Inc.},
-
-####     note = {\url{http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}},
-
-####     pages = {1097--1105},
-
-####     publisher = {Curran Associates, Inc.},
-
-###  -1319,6 +1372,7 
-####  @book{dream,
-
-####     author = {Freud, S. and Cronin, A.J.},
-
-####     isbn = {9781446547410},
-
-##### +   journal = {Read Books Limited},
-
-####     note = {\url{https://books.google.co.uk/books?id=U0t8CgAAQBAJ}},
-
-####     publisher = {Read Books Limited},
-
-####     title = {The Interpretation Of Dreams},
-
-###  -1356,6 +1410,7 
-####  @article{drviz,
-
-####     author = {Choi, Jong Youl and Bae, Seung-Hee and Qiu, Judy and Fox, Geoffrey
-
-####  and Chen, Bin and Wild, David},
-
-##### +   journal = {online},
-
-####     note = {\url{http://grids.ucs.indiana.edu/ptliupages/publications/ecmls2010_submission_13.pdf}},
-
-####     title = {{Browsing Large Scale Cheminformatics Data With Dimension Reduction}},
-
-####     year = {2019}
-
-###  -1376,8 +1431,9 
-####  @misc{dsmaccgit,
-
-####     author = {Ellis, Dan},
-
-####     institution = {Github},
-
-##### +   journal = {online},
-
-####     note = {\url{https://github.com/wolfiex/DSMACC-testing}},
-
-###### -   title = {{Dsmacc-Testing}},
-
-##### +   title = {{DSMACC-Testing}},
-
-####     year = {2020}
-
-###  -1397,18 +1453,10 
-####     year = {2015}
-
-###### -@article{eades,
-
-###### -   author = {Eades, P.},
-
-###### -   note = {cited By 1},
-
-###### -   pages = {149-160},
-
-###### -   source = {Scopus},
-
-###### -   title = {A Heuristic For Graph Drawing},
-
-###### -   year = {1984}
-
-###### -@inproceedings{Eades,
-
-##### +@inproceedings{eades,
-
-####     author = {Peter Eades},
-
-####     booktitle = {proceedings},
-
-##### +   journal = {online},
-
-####     title = {A Heuristic For Graph Drawing},
-
-####     year = {1984}
-
-###  -1450,6 +1498,7 
-####  @misc{eea,
-
-####     author = {EEA},
-
-####     booktitle = {{European Environment Agency}},
-
-##### +   journal = {online},
-
-####     language = {en},
-
-####     month = {July},
-
-####     note = {\url{https://www.eea.europa.eu/publications/air-quality-in-europe-2018}},
-
-###  -1498,6 +1547,7 
-####  @book{emotional,
-
-####     author = {Norman, D.A.},
-
-####     isbn = {9780465051366},
-
-##### +   journal = {Basic Books},
-
-####     lccn = {2003010123},
-
-####     note = {\url{https://books.google.nl/books?id=h\_wAbnGlOC4C}},
-
-####     publisher = {Basic Books},
-
-###  -1556,6 +1606,7 
-####     doi = {10.2312/COMPAESTH/COMPAESTH09/049-056},
-
-####     isbn = {978-3-905674-17-0},
-
-####     issn = {1816-0859},
-
-##### +   journal = {The Eurographics Association},
-
-####     publisher = {The Eurographics Association},
-
-####     title = {{Comparing The Readability Of Graph Layouts Using Eyetracking And Task-Oriented Analysis}},
-
-####     year = {2009}
-
-###  -1605,6 +1656,7 
-####     doi = {10.2312/EG2011/education/029-036},
-
-####     editor = {S. Maddock and J. Jorge},
-
-####     issn = {1017-4656},
-
-##### +   journal = {The Eurographics Association},
-
-####     publisher = {The Eurographics Association},
-
-####     title = {{The Five Design-Sheet (Fds) Approach For Sketching Information Visualization Designs}},
-
-####     year = {2011}
-
-###  -1618,6 +1670,7 
-####     booktitle = {Graph Drawing: Symposium on Graph Drawing, GD '95 Passau, Germany, September 20--22, 1995 Proceedings},
-
-####     doi = {10.1007/BFb0021792},
-
-####     isbn = {978-3-540-49351-8},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/BFb0021792}},
-
-####     pages = {76--87},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -1628,6 +1681,7 
-####  @misc{fgps,
-
-####     author = {Andy Brunning},
-
-####     booktitle = {{Twitter}},
-
-##### +   journal = {online},
-
-####     note = {\url{https://twitter.com/compoundchem/status/1230953094474862592/photo/1}},
-
-####     title = {{Functional Groups In Organic Chemistry}},
-
-####     year = {2020}
-
-###  -1639,16 +1693,35 
-####     doi = {https://doi.org/10.1016/B978-012257060-5/50003-4},
-
-####     editor = {Barbara J. Finlayson-Pitts and James N. Pitts},
-
-####     isbn = {978-0-12-257060-5},
-
-##### +   journal = {Academic Press},
-
-####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780122570605500034}},
-
-####     publisher = {Academic Press},
-
-####     title = {Chemistry Of The Upper And Lower Atmosphere},
-
-####     year = {2000}
-
-##### +@article{fixation,
-
-##### +   author = {Over, Eelco A. B.
-
-##### +and Hooge, Ignace T. C.
-
-##### +and Erkelens, Casper J.},
-
-##### +   day = {01},
-
-##### +   doi = {10.3758/BF03192777},
-
-##### +   issn = {1554-3528},
-
-##### +   journal = {Behavior Research Methods},
-
-##### +   month = {May},
-
-##### +   note = {\url{https://doi.org/10.3758/BF03192777}},
-
-##### +   number = {2},
-
-##### +   pages = {251--261},
-
-##### +   title = {A Quantitative Measure For The Uniformity Of Fixation Density: The Voronoi Method},
-
-##### +   volume = {38},
-
-##### +   year = {2006}
-
-####  @misc{forrester,
-
-####     author = {Dan Ellis and
-
-####  Tomás Sherwen},
-
-####     doi = {10.5281/zenodo.3346817},
-
-##### +   journal = {Zenodo},
-
-####     month = {July},
-
-####     note = {\url{https://doi.org/10.5281/zenodo.3346817}},
-
-####     publisher = {Zenodo},
-
-###  -1674,6 +1747,7 
-####  @misc{frankenstein,
-
-####     author = {Ellis, Daniel},
-
-####     booktitle = {{Medium}},
-
-##### +   journal = {Towards Data Science},
-
-####     note = {\url{https://towardsdatascience.com/using-tf-idf-to-form-descriptive-chapter-summaries-via-keyword-extraction-4e6fd857d190}},
-
-####     publisher = {Towards Data Science},
-
-####     title = {{Using Tf-Idf To Form Descriptive Chapter Summaries Via
-
-###  -1694,6 +1768,7 
-####     abstractnote = {Force Directed Representation of Multivariate Data},
-
-####     author = {Dan Ellis},
-
-####     doi = {10.5281/zenodo.3586009},
-
-##### +   journal = {Zenodo},
-
-####     publisher = {Zenodo},
-
-####     title = {Wolfiex/Frmd: 2016},
-
-####     year = {2016}
-
-###  -1703,6 +1778,7 
-####     author = {Jacobson, M.Z.},
-
-####     doi = {10.1017/CBO9781139165389},
-
-####     isbn = {9781139165389},
-
-##### +   journal = {Cambridge University Press},
-
-####     note = {\url{https://www.cambridge.org/core/books/fundamentals-of-atmospheric-modeling/A6B866737D682B17EE46F8449F76FB2C}},
-
-####     publisher = {Cambridge University Press},
-
-####     title = {Fundamentals Of Atmospheric Modelling},
-
-###  -1724,6 +1800,7 
-####  @misc{gcm,
-
-####     author = {Henderson-Sellers},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.nccs.nasa.gov/services/climate-data-services}},
-
-####     title = {{Climate Data Services | Nasa Center For Climate Simulation}},
-
-####     year = {2015}
-
-###  -1748,6 +1825,7 
-####     address = {Berlin, Heidelberg},
-
-####     author = {Hairer, E. and N\o{}rsett, S. P. and Wanner, G.},
-
-####     isbn = {0387566708},
-
-##### +   journal = {Springer-Verlag},
-
-####     publisher = {Springer-Verlag},
-
-####     title = {Solving Ordinary Differential Equations I (2Nd Revised. Ed.): Nonstiff Problems},
-
-####     year = {2002}
-
-###  -1775,6 +1853,7 
-####  @book{genomics,
-
-####     author = {Hunt, G.J. and Gadau, J.R.},
-
-####     isbn = {9782889450800},
-
-##### +   journal = {Frontiers Media SA},
-
-####     note = {\url{https://books.google.co.uk/books?id=lvItDwAAQBAJ}},
-
-####     publisher = {Frontiers Media SA},
-
-####     series = {Frontiers Research Topics},
-
-###  -1785,6 +1864,7 
-####  @misc{geoclock,
-
-####     author = {{Woudloper}},
-
-####     booktitle = {{Wikipedia, The Free Encyclopedia}},
-
-##### +   journal = {online},
-
-####     month = {February},
-
-####     note = {\url{https://en.wikipedia.org/w/index.php?title=History_of_Earth&oldid=940308026}},
-
-####     title = {{History Of Earth}},
-
-###  -1812,6 +1892,7 
-####  @article{geos,
-
-####     author = {GEOS-Chem},
-
-##### +   journal = {online},
-
-####     note = {\url{http://acmg.seas.harvard.edu/geos/geos_pub.html}},
-
-####     title = {{Geos-Chem Publications}},
-
-####     year = {2020}
-
-###  -1820,10 +1901,11 
-####  @article{geosgit,
-
-####     author = {The International GEOS-Chem Community},
-
-####     doi = {10.5281/zenodo.3676008},
-
-##### +   journal = {Zenodo},
-
-####     month = {February},
-
-####     note = {\url{https://doi.org/10.5281/zenodo.3676008}},
-
-####     publisher = {Zenodo},
-
-###### -   title = {Geoschem/Geos-Chem: Geos-Chem 12.7.1},
-
-##### +   title = {GEOSChem/Geos-Chem: Geos-Chem 12.7.1},
-
-####     version = {12.7.1},
-
-####     year = {2020}
-
-###  -1852,6 +1934,7 
-####  @book{goodideas,
-
-####     author = {Johnson, S.},
-
-####     isbn = {9781101444207},
-
-##### +   journal = {Penguin Publishing Group},
-
-####     note = {\url{https://books.google.co.uk/books?id=3H2Xg5qxz-8C}},
-
-####     publisher = {Penguin Publishing Group},
-
-####     title = {Where Good Ideas Come From},
-
-###  -1868,19 +1951,20 
-####     publisher = {Stanford InfoLab},
-
-####     title = {The Pagerank Citation Ranking: Bringing Order To The Web.},
-
-####     type = {Technical Report},
-
-##### +   volume = {1},
-
-####     year = {1999}
-
-####  @inbook{gossip,
-
-####     address = {Boston, MA},
-
-###### -   author = {Dunbar, R. I. M.},
-
-###### -   booktitle = {New Aspects of Human Ethology},
-
-###### -   doi = {10.1007/978-0-585-34289-4_5},
-
-###### -   editor = {Schmitt, Alain
-
-##### +   author = {Dunbar, R. I. M., Schmitt, Alain
-
-####  and Atzwanger, Klaus
-
-####  and Grammer, Karl
-
-####  and Sch{\"a}fer, Katrin},
-
-##### +   booktitle = {New Aspects of Human Ethology},
-
-##### +   doi = {10.1007/978-0-585-34289-4_5},
-
-####     isbn = {978-0-585-34289-4},
-
-##### +   journal = {Springer US},
-
-####     note = {\url{https://doi.org/10.1007/978-0-585-34289-4_5}},
-
-####     pages = {77--89},
-
-####     publisher = {Springer US},
-
-###  -1888,9 +1972,29 
-####     year = {1997}
-
-##### +@article{graph2vec,
-
-##### +   archiveprefix = {arXiv},
-
-##### +   author = {Annamalai Narayanan and
-
-##### +Mahinthan Chandramohan and
-
-##### +Rajasekar Venkatesan and
-
-##### +Lihui Chen and
-
-##### +Yang Liu and
-
-##### +Shantanu Jaiswal},
-
-##### +   bibsource = {dblp computer science bibliography, https://dblp.org},
-
-##### +   biburl = {https://dblp.org/rec/journals/corr/NarayananCVCLJ17.bib},
-
-##### +   eprint = {1707.05005},
-
-##### +   journal = {CoRR},
-
-##### +   note = {\url{http://arxiv.org/abs/1707.05005}},
-
-##### +   timestamp = {Mon, 15 Jul 2019 14:17:42 +0200},
-
-##### +   title = {Graph2Vec: Learning Distributed Representations Of Graphs},
-
-##### +   volume = {abs/1707.05005},
-
-##### +   year = {2017}
-
-####  @inproceedings{graphmetnew,
-
-####     author = {Martyn Taylor and Peter Rodgers},
-
-####     booktitle = {Ninth International Conference on Information Visualisation, 06-08 July 2005, London, England: Proceedings},
-
-##### +   journal = {IEEE Computer Society},
-
-####     month = {October},
-
-####     note = {\url{http://kar.kent.ac.uk/14297/}},
-
-####     pages = {651--656},
-
-###  -1921,6 +2025,7 
-####  @book{handsonml,
-
-####     author = {G{\'e}ron, A.},
-
-####     isbn = {9781491962268},
-
-##### +   journal = {O'Reilly Media},
-
-####     note = {\url{https://books.google.co.uk/books?id=khpYDgAAQBAJ}},
-
-####     publisher = {O'Reilly Media},
-
-####     title = {Hands-On Machine Learning With Scikit-Learn And Tensorflow: Concepts, Tools, And Techniques To Build Intelligent Systems},
-
-###  -1961,6 +2066,7 
-####  @article{hitsweb,
-
-####     author = {Kumar, Ravi and Upfal, Eli},
-
-##### +   journal = {online},
-
-####     note = {\url{http://cs.brown.edu/research/webagent/pods-2000.pdf}},
-
-####     title = {{The Web As A Graph}},
-
-####     year = {2000}
-
-###  -2000,6 +2106,7 
-####  @misc{hpp,
-
-####     author = {Pete Cornes},
-
-####     booktitle = {{Nottingham HPP whitewater course users group}},
-
-##### +   journal = {online},
-
-####     month = {Aug},
-
-####     note = {\url{https://hppconcern.wordpress.com/2008/08/04/proposed-plans-for-holme-pierrepont-whitewater-course/}},
-
-####     title = {{Proposed Plans For Holme Pierrepont Whitewater Course}},
-
-###  -2017,7 +2124,7 
-####  @article{hufftree,
-
-###### -   autor = {{Sad CRUD Developer}},
-
-##### +   author = {{Sad CRUD Developer}},
-
-####     journal = {{StackOverflow}},
-
-####     note = {\url{https://i.stack.imgur.com/9T1Am.png}},
-
-####     title = {{The Huffman Tree}},
-
-###  -2030,6 +2137,7 
-####     booktitle = {Graph Drawing: 5th International Symposium, GD '97 Rome, Italy, September 18--20, 1997 Proceedings},
-
-####     doi = {10.1007/3-540-63938-1_67},
-
-####     isbn = {978-3-540-69674-2},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/3-540-63938-1_67}},
-
-####     pages = {248--261},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -2100,6 +2208,7 
-####     booktitle = {Proceedings of the 10th Annual ACM Symposium on User Interface Software and Technology},
-
-####     doi = {10.1145/263407.263521},
-
-####     isbn = {0-89791-881-9},
-
-##### +   journal = {ACM},
-
-####     location = {Banff, Alberta, Canada},
-
-####     note = {\url{http://doi.acm.org/10.1145/263407.263521}},
-
-####     numpages = {8},
-
-###  -2115,6 +2224,7 
-####     author = {Shneiderman, Ben},
-
-####     edition = {3rd},
-
-####     isbn = {0201694972},
-
-##### +   journal = {Addison-Wesley Longman Publishing Co., Inc.},
-
-####     publisher = {Addison-Wesley Longman Publishing Co., Inc.},
-
-####     title = {Designing The User Interface: Strategies For Effective Human-Computer Interaction},
-
-####     year = {1997}
-
-###  -2134,6 +2244,7 
-####  @misc{ipbes,
-
-####     author = {IPBES},
-
-##### +   journal = {online},
-
-####     note = {\url{https://ipbes.net/global-assessment}},
-
-####     title = {{Global Assessment Report On Biodiversity And Ecosystem
-
-####  Services | The Intergovernmental Science-Policy Platform On Biodiversity And Ecosystem Services}},
-
-###  -2142,6 +2253,7 
-####  @book{IPCC1990Science,
-
-####     author = {J.T. Houghton and G.J. Jenkins and J.J. Ephraums},
-
-##### +   journal = {The Intergovernmental Panel on Climate Change},
-
-####     publisher = {The Intergovernmental Panel on Climate Change},
-
-####     title = {Climate Change 1990 The Science Of Climate Change},
-
-####     year = {1996}
-
-###  -2150,6 +2262,7 
-####  @book{IPCC1995Science,
-
-####     author = {J.T. Houghton and L.G. Meira Filho and B.A. Callander and N. Harris
-
-####  and A. Kattenberg and K. Maskell},
-
-##### +   journal = {The Intergovernmental Panel on Climate Change},
-
-####     publisher = {The Intergovernmental Panel on Climate Change},
-
-####     title = {Climate Change 1995 The Science Of Climate Change},
-
-####     year = {1996}
-
-###  -2159,6 +2272,7 
-####     added-at = {2008-04-08T14:52:00.000+0200},
-
-####     author = {IPCC},
-
-####     biburl = {https://www.bibsonomy.org/bibtex/2ee8fa5001c307e9d40938c70c508cb77/sustdev_ac},
-
-##### +   journal = {Geneva: IPCC},
-
-####     note = {\url{http://www.ipcc.ch/ipccreports/ar4-wg1.htm}},
-
-####     publisher = {Geneva: IPCC},
-
-####     timestamp = {2009-11-11T11:50:02.000+0100},
-
-###  -2171,6 +2285,7 
-####     author = {IPCC},
-
-####     doi = {10.1017/CBO9781107415324},
-
-####     isbn = {ISBN 978-1-107-66182-0},
-
-##### +   journal = {Cambridge University Press},
-
-####     note = {\url{www.climatechange2013.org}},
-
-####     pages = {1535},
-
-####     publisher = {Cambridge University Press},
-
-###  -2200,7 +2315,7 
-####     note = {\url{https://www.atmos-chem-phys.net/15/11433/2015/}},
-
-####     number = {20},
-
-####     pages = {11433--11459},
-
-###### -   title = {The Mcm V3.3.1 Degradation Scheme For Isoprene},
-
-##### +   title = {The MCM V3.3.1 Degradation Scheme For Isoprene},
-
-####     volume = {15},
-
-####     year = {2015}
-
-###  -2208,6 +2323,7 
-####  @book{jacob,
-
-####     author = {Brasseur, G.P. and Jacob, D.J.},
-
-####     isbn = {9781108210959},
-
-##### +   journal = {Cambridge University Press},
-
-####     note = {\url{https://books.google.co.uk/books?id=k9\_PDgAAQBAJ}},
-
-####     publisher = {Cambridge University Press},
-
-####     title = {Modeling Of Atmospheric Chemistry},
-
-###  -2247,6 +2363,7 
-####  @book{kinetics,
-
-####     author = {T Turanyi and AS Tomlin},
-
-##### +   journal = {Springer},
-
-####     month = {January},
-
-####     note = {\url{http://eprints.whiterose.ac.uk/84294/}},
-
-####     pages = {1 -- 376},
-
-###  -2258,6 +2375,7 
-####  @book{kirk,
-
-####     author = {Kirk, A.},
-
-####     isbn = {9781473966314},
-
-##### +   journal = {SAGE Publications},
-
-####     note = {\url{https://books.google.co.uk/books?id=wNpsDAAAQBAJ}},
-
-####     publisher = {SAGE Publications},
-
-####     title = {Data Visualisation: A Handbook For Data Driven Design},
-
-###  -2283,6 +2401,7 
-####     address = {Berkeley, Calif.},
-
-####     author = {MacQueen, J.},
-
-####     booktitle = {Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability, Volume 1: Statistics},
-
-##### +   journal = {University of California Press},
-
-####     note = {\url{https://projecteuclid.org/euclid.bsmsp/1200512992}},
-
-####     pages = {281--297},
-
-####     publisher = {University of California Press},
-
-###  -2297,7 +2416,7 
-####     note = {\url{https://www.atmos-chem-phys.net/6/187/2006/}},
-
-####     number = {1},
-
-####     pages = {187--195},
-
-###### -   title = {Technical Note: Simulating Chemical Systems In Fortran90 And Matlab With The Kinetic Preprocessor Kpp-2.1},
-
-##### +   title = {Technical Note: Simulating Chemical Systems In Fortran90 And Matlab With The Kinetic Preprocessor KPP-2.1},
-
-####     volume = {6},
-
-####     year = {2006}
-
-###  -2323,6 +2442,7 
-####     address = {USA},
-
-####     author = {Press, William H. and Teukolsky, Saul A. and Vetterling, William T. and Flannery, Brian P.},
-
-####     isbn = {0521431085},
-
-##### +   journal = {Cambridge University Press},
-
-####     publisher = {Cambridge University Press},
-
-####     title = {Numerical Recipes In C (2Nd Ed.): The Art Of Scientific Computing},
-
-####     year = {1992}
-
-###  -2359,7 +2479,9 
-####  @misc{lapack,
-
-##### +   author = {LAPACK},
-
-####     howpublished = {\url{http://www.netlib.org/lapack/}},
-
-##### +   journal = {online},
-
-####     note = {http://www.netlib.org/lapack/},
-
-####     title = {{Lapack --- Linear Algebra Package}},
-
-####     year = {2019}
-
-###  -2375,6 +2497,7 
-####  @misc{lesmis,
-
-####     author = {Donald Knuth},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www-cs-faculty.stanford.edu/~knuth/sgb.html}},
-
-####     title = {{Knuth: The Stanford Graphbase}},
-
-####     year = {2019}
-
-###  -2383,6 +2506,7 
-####  @book{lessmore,
-
-####     author = {Reinhardt, A.},
-
-####     isbn = {9780670134519},
-
-##### +   journal = {Viking Press},
-
-####     lccn = {75019041},
-
-####     note = {\url{https://books.google.co.uk/books?id=zyK4AAAAIAAJ}},
-
-####     publisher = {Viking Press},
-
-###  -2490,6 +2614,7 
-####     booktitle = {Graph Drawing: 19th International Symposium, GD 2011, Eindhoven, The Netherlands, September 21-23, 2011, Revised Selected Papers},
-
-####     doi = {10.1007/978-3-642-25878-7_31},
-
-####     isbn = {978-3-642-25878-7},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-642-25878-7_31}},
-
-####     pages = {320--331},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -2539,6 +2664,7 
-####     booktitle = {The Concise Encyclopedia of Statistics},
-
-####     doi = {10.1007/978-0-387-32833-1_223},
-
-####     isbn = {978-0-387-32833-1},
-
-##### +   journal = {Springer New York},
-
-####     note = {\url{https://doi.org/10.1007/978-0-387-32833-1_223}},
-
-####     pages = {297--297},
-
-####     publisher = {Springer New York},
-
-###  -2560,6 +2686,7 
-####     author = {Shneiderman, Ben},
-
-####     booktitle = {Proceedings of the 1996 IEEE Symposium on Visual Languages},
-
-####     isbn = {0-8186-7508-X},
-
-##### +   journal = {IEEE Computer Society},
-
-####     note = {\url{http://dl.acm.org/citation.cfm?id=832277.834354}},
-
-####     pages = {336--},
-
-####     publisher = {IEEE Computer Society},
-
-###  -2571,6 +2698,7 
-####  @misc{mapbox,
-
-####     author = {Ellis, Daniel},
-
-####     booktitle = {{Medium}},
-
-##### +   journal = {Towards Data Science},
-
-####     month = {November},
-
-####     note = {\url{https://towardsdatascience.com/generating-a-logo-with-mapbox-gl-and-python-2c44a357f462}},
-
-####     publisher = {Towards Data Science},
-
-###  -2606,8 +2734,20 
-####  @misc{mcm,
-
-####     author = {Andrew Rickard},
-
-##### +   journal = {online},
-
-####     note = {\url{http://mcm.york.ac.uk/}},
-
-###### -   title = {{Mcm Website}},
-
-##### +   title = {{MCM Website}},
-
-##### +   year = {2020}
-
-##### +@article{mcmblue,
-
-##### +   author = {Dan Ellis},
-
-##### +   doi = {10.5281/zenodo.4294816},
-
-##### +   journal = {Zenodo},
-
-##### +   note = {\url{https://doi.org/10.5281/zenodo.4294816}},
-
-##### +   publisher = {Zenodo},
-
-##### +   title = {Wolfiex/MCM-Blueprint: Thesisref},
-
-##### +   version = {v0.0.3},
-
-####     year = {2020}
-
-###  -2626,8 +2766,9 
-####  @misc{mcmhist,
-
-####     author = {Mike Jenkins},
-
-####     howpublished = {slide deck},
-
-##### +   journal = {online},
-
-####     note = {Presentation for the EPSR group, Imperial Collage},
-
-###### -   title = {{History Of The Master Chemical Mechanism (Mcm) And Its Development Protocols}},
-
-##### +   title = {{History Of The Master Chemical Mechanism (MCM) And Its Development Protocols}},
-
-####     year = {2002}
-
-###  -2655,7 +2796,7 
-####     pages = {161-180},
-
-####     pdf = {https://hal.archives-ouvertes.fr/hal-00295229/file/acp-3-161-2003.pdf},
-
-####     publisher = {{European Geosciences Union}},
-
-###### -   title = {{Protocol For The Development Of The Master Chemical Mechanism, Mcm V3 (Part A): Tropospheric Degradation Of Non-Aromatic Volatile Organic Compounds}},
-
-##### +   title = {{Protocol For The Development Of The Master Chemical Mechanism, MCM V3 (Part A): Tropospheric Degradation Of Non-Aromatic Volatile Organic Compounds}},
-
-####     volume = {3},
-
-####     year = {2003}
-
-###  -2667,13 +2808,14 
-####     note = {\url{https://www.atmos-chem-phys.net/3/181/2003/}},
-
-####     number = {1},
-
-####     pages = {181--193},
-
-###### -   title = {Protocol For The Development Of The Master Chemical Mechanism, Mcm V3 (Part B): Tropospheric Degradation Of Aromatic Volatile Organic Compounds},
-
-##### +   title = {Protocol For The Development Of The Master Chemical Mechanism, MCM V3 (Part B): Tropospheric Degradation Of Aromatic Volatile Organic Compounds},
-
-####     volume = {3},
-
-####     year = {2003}
-
-####  @misc{memory,
-
-####     author = {Brian Foo},
-
-##### +   journal = {online},
-
-####     note = {\url{http://memoryunderground.com/}},
-
-####     title = {{Memory Underground - Convert Your Memories Into A Subway Map
-
-####  - Home}},
-
-###  -2695,6 +2837,7 
-####  @misc{metabolic,
-
-####     author = {Gerhard Michal},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.roche.com/sustainability/philanthropy/science_education/pathways/pathways-ordering.htm}},
-
-####     title = {{Metabolic Pathways}},
-
-####     year = {1965}
-
-###  -2775,6 +2918,7 
-####  @book{modelingpythonbees,
-
-####     author = {De Smedt, T.},
-
-####     isbn = {9789057182600},
-
-##### +   journal = {Universiteit Antwerpen, Faculteit Letteren en Wijsbegeerte, Departement Taalkunde},
-
-####     note = {\url{https://books.google.co.uk/books?id=Bp7KwpmFBzoC}},
-
-####     publisher = {Universiteit Antwerpen, Faculteit Letteren en Wijsbegeerte, Departement Taalkunde},
-
-####     series = {Proefschriften UA-LW : taalkunde},
-
-###  -2785,11 +2929,21 
-####  @misc{mol3d,
-
-####     author = {Herman Bergwerf},
-
-####     booktitle = {{MolView}},
-
-##### +   journal = {online},
-
-####     note = {\url{http://molview.org/}},
-
-####     title = {{Molview}},
-
-####     year = {2019}
-
-##### +@misc{montreal,
-
-##### +   author = {UNEP},
-
-##### +   journal = {online},
-
-##### +   note = {\url{https://ozone.unep.org/treaties/montreal-protocol}},
-
-##### +   title = {{The Montreal Protocol On Substances That Deplete The Ozone
-
-##### +Layer}},
-
-##### +   year = {1987}
-
-####  @inproceedings{mosaic,
-
-####     address = {New York, NY},
-
-####     author = {Hartigan, J. A.
-
-###  -2797,6 +2951,7 
-####     booktitle = {Computer Science and Statistics: Proceedings of the 13th Symposium on the Interface},
-
-####     editor = {Eddy, William F.},
-
-####     isbn = {978-1-4613-9464-8},
-
-##### +   journal = {Springer US},
-
-####     pages = {268--273},
-
-####     publisher = {Springer US},
-
-####     title = {Mosaics For Contingency Tables},
-
-###  -2850,6 +3005,7 
-####  @misc{n2vimg,
-
-####     author = {Cohen, Elior},
-
-####     booktitle = {{Medium}},
-
-##### +   journal = {Towards Data Science},
-
-####     month = {April},
-
-####     note = {\url{https://towardsdatascience.com/node2vec-embeddings-for-graph-data-32a866340fef}},
-
-####     publisher = {Towards Data Science},
-
-###  -2962,6 +3118,7 
-####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
-
-####     doi = {10.1007/978-3-540-24595-7_27},
-
-####     isbn = {978-3-540-24595-7},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_27}},
-
-####     pages = {295--306},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -2974,6 +3131,7 
-####     author = {Aric A. Hagberg and Daniel A. Schult and Pieter J. Swart},
-
-####     booktitle = {Proceedings of the 7th Python in Science Conference},
-
-####     editor = {Ga\"el Varoquaux and Travis Vaught and Jarrod Millman},
-
-##### +   journal = {online},
-
-####     pages = {11 - 15},
-
-####     title = {Exploring Network Structure, Dynamics, And Function Using Networkx},
-
-####     year = {2008}
-
-###  -3047,6 +3205,7 
-####  @misc{newspaperrock,
-
-####     author = {{ugc}},
-
-####     booktitle = {{Atlas Obscura}},
-
-##### +   journal = {Atlas Obscura},
-
-####     month = {October},
-
-####     note = {\url{http://www.atlasobscura.com/places/newspaper-rock}},
-
-####     publisher = {Atlas Obscura},
-
-###  -3075,6 +3234,7 
-####  @misc{nightingale,
-
-####     author = {Florence Nightingale},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.rct.uk/collection/1075240/notes-on-matters-affecting-the-health-efficiency-and-hospital-administration-of}},
-
-####     title = {{Notes On Matters Affecting
-
-####  The Health, Efficiency And Hospital Administration Of The
-
-###  -3116,6 +3276,7 
-####     booktitle = {Graph Drawing: 11th International Symposium, GD 2003 Perugia, Italy, September 21-24, 2003 Revised Papers},
-
-####     doi = {10.1007/978-3-540-24595-7_40},
-
-####     isbn = {978-3-540-24595-7},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-540-24595-7_40}},
-
-####     pages = {425--436},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -3138,6 +3299,7 
-####  @article{node2vec,
-
-####     author = {Aditya Grover and Jure Leskovec},
-
-##### +   journal = {online},
-
-####     note = {Accessed: 2019-10-21},
-
-####     title = {Node2Vec: Scalable Feature Learning For Networks},
-
-####     year = {2019}
-
-###  -3151,6 +3313,7 
-####     booktitle = {Graph Drawing: 13th International Symposium, GD 2005, Limerick, Ireland, September 12-14, 2005. Revised Papers},
-
-####     doi = {10.1007/11618058_15},
-
-####     isbn = {978-3-540-31667-1},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/11618058_15}},
-
-####     pages = {153--164},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -3162,6 +3325,7 
-####     author = {Agarwal, Shivam and Tomar, Amit and Sreevalsan-Nair, Jaya},
-
-####     booktitle = {{Complex Networks \& Their Applications V}},
-
-####     doi = {10.1007/978-3-319-50901-3\_46},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-319-50901-3_46}},
-
-####     pages = {579--591},
-
-####     publisher = {Springer International Publishing},
-
-###  -3175,6 +3339,7 
-####     address = {Darlinghurst, Australia, Australia},
-
-####     author = {Friedrich, Carsten and Schreiber, Falk},
-
-####     booktitle = {Proceedings of the 27th Australasian Conference on Computer Science - Volume 26},
-
-##### +   journal = {Australian Computer Society, Inc.},
-
-####     location = {Dunedin, New Zealand},
-
-####     note = {\url{http://dl.acm.org/citation.cfm?id=979922.979966}},
-
-####     numpages = {8},
-
-###  -3207,6 +3372,7 
-####     acmid = {962200},
-
-####     author = {Lyons, Kelly A.},
-
-####     booktitle = {Proceedings of the 1992 Conference of the Centre for Advanced Studies on Collaborative Research - Volume 1},
-
-##### +   journal = {IBM Press},
-
-####     location = {Toronto, Ontario, Canada},
-
-####     note = {\url{http://dl.acm.org/citation.cfm?id=962198.962200}},
-
-####     numpages = {11},
-
-###  -3219,7 +3385,9 
-####  @misc{numpy,
-
-####     author = {Oliphant, Travis},
-
-##### +   journal = {online},
-
-####     month = {01},
-
-##### +   note = {\url{https://docs.scipy.org/doc/_static/numpybook.pdf}},
-
-####     pages = {},
-
-####     title = {Guide To Numpy},
-
-####     year = {2006}
-
-###  -3261,7 +3429,9 
-####  @phdthesis{objects,
-
-####     author = {Lynch, Helen},
-
-####     doi = {10.21427/D73W37},
-
-##### +   journal = {online},
-
-####     note = {\url{http://dx.doi.org/10.21427/D73W37}},
-
-##### +   school = {-},
-
-####     title = {{Infant Places, Spaces And Objects: Exploring The Physical In
-
-####  Learning Environments For Infants Under Two}},
-
-####     year = {2011}
-
-###  -3300,6 +3470,7 
-####     booktitle = {Human-Centered Visualization Environments: GI-Dagstuhl Research Seminar, Dagstuhl Castle, Germany, March 5-8, 2006, Revised Lectures},
-
-####     doi = {10.1007/978-3-540-71949-6_4},
-
-####     isbn = {978-3-540-71949-6},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-540-71949-6_4}},
-
-####     pages = {163--230},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -3320,6 +3491,7 
-####  @misc{OpenVis,
-
-####     author = {{Steven Franconeri}},
-
-##### +   journal = {Youtube},
-
-####     month = {August},
-
-####     note = {\url{https://www.youtube.com/watch?v=Jq2Rc0WlYTE}},
-
-####     publisher = {Youtube},
-
-###  -3393,28 +3565,12 
-####  @misc{orthogonaltv,
-
-####     author = {JVC},
-
-##### +   journal = {online},
-
-####     note = {\url{https://thydzik.com/videosphere/}},
-
-####     title = {{Videosphere Service And Repair Manuals (Model 3 240)}},
-
-####     year = {2020}
-
-###### -@article{Over2006,
-
-###### -   author = {Over, Eelco A. B.
-
-###### -and Hooge, Ignace T. C.
-
-###### -and Erkelens, Casper J.},
-
-###### -   day = {01},
-
-###### -   doi = {10.3758/BF03192777},
-
-###### -   issn = {1554-3528},
-
-###### -   journal = {Behavior Research Methods},
-
-###### -   month = {May},
-
-###### -   note = {\url{https://doi.org/10.3758/BF03192777}},
-
-###### -   number = {2},
-
-###### -   pages = {251--261},
-
-###### -   title = {A Quantitative Measure For The Uniformity Of Fixation Density: The Voronoi Method},
-
-###### -   volume = {38},
-
-###### -   year = {2006}
-
-####  @article{oxidation,
-
-####     author = {Planavsky, Noah J and Asael, Dan and Hofmann, Axel and Reinhard,
-
-####  Christopher T and Lalonde, Stefan V and Knudsen, Andrew and Wang,
-
-###  -3440,6 +3596,7 
-####     booktitle = {Encyclopedia of Astrobiology},
-
-####     doi = {10.1007/978-3-642-11274-4_1721},
-
-####     isbn = {978-3-642-11274-4},
-
-##### +   journal = {Springer Berlin Heidelberg},
-
-####     note = {\url{https://doi.org/10.1007/978-3-642-11274-4_1721}},
-
-####     pages = {1209--1209},
-
-####     publisher = {Springer Berlin Heidelberg},
-
-###  -3464,6 +3621,7 
-####  @article{ozonerepair,
-
-####     author = {Ellen Gray, Theo Stein, Sara Blumberg},
-
-##### +   journal = {online},
-
-####     note = {\url{http://www.nasa.gov/feature/goddard/2019/2019-ozone-hole-is-the-smallest-on-record-since-its-discovery}},
-
-####     title = {{2019 Ozone Hole Is The Smallest On Record Since Its Discovery}},
-
-####     year = {2019}
-
-###  -3477,6 +3635,7 
-####     edition = {Second Edition},
-
-####     editor = {Gerald R. North and John Pyle and Fuqing Zhang},
-
-####     isbn = {978-0-12-382225-3},
-
-##### +   journal = {Academic Press},
-
-####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780123822253004333}},
-
-####     pages = {251 - 254},
-
-####     publisher = {Academic Press},
-
-###  -3486,6 +3645,7 
-####  @misc{paris,
-
-####     author = {UNFCCC},
-
-##### +   journal = {online},
-
-####     note = {\url{https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement}},
-
-####     title = {{The Paris Agreement | United Nations Climate Change}},
-
-####     year = {2015}
-
-###  -3508,6 +3668,7 
-####     booktitle = {Understanding Digital Humanities},
-
-####     doi = {10.1057/9780230371934_11},
-
-####     isbn = {978-0-230-37193-4},
-
-##### +   journal = {Palgrave Macmillan UK},
-
-####     note = {\url{http://dx.doi.org/10.1057/9780230371934_11}},
-
-####     pages = {191--209},
-
-####     publisher = {Palgrave Macmillan UK},
-
-###  -3548,6 +3709,7 
-####     doi = {10.5772/intechopen.75007},
-
-####     editor = {G{\"o}ksel, T{\"u}rkmen},
-
-####     isbn = {9781789843958, 9781789843965},
-
-##### +   journal = {InTech},
-
-####     month = {November},
-
-####     note = {\url{http://www.intechopen.com/books/statistics-growing-data-sets-and-growing-demand-for-statistics/application-of-principal-component-analysis-to-image-compression}},
-
-####     publisher = {InTech},
-
-###  -3558,6 +3720,7 
-####  @misc{pcaim,
-
-####     author = {Victor Powell},
-
-####     booktitle = {{Explained Visually}},
-
-##### +   journal = {online},
-
-####     note = {\url{http://setosa.io/ev/principal-component-analysis/}},
-
-####     title = {{Principal Component Analysis Explained Visually}},
-
-####     year = {2020}
-
-###  -3566,6 +3729,7 
-####  @techreport{pcamath,
-
-####     author = {Smith, Lindsay I},
-
-####     institution = {otago},
-
-##### +   journal = {online},
-
-####     note = {\url{http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf}},
-
-####     title = {{A Tutorial On Principal Components Analysis}},
-
-####     year = {2002}
-
-###  -3619,6 +3783,7 
-####  @misc{people,
-
-####     author = {{People2Vec}},
-
-##### +   journal = {online},
-
-####     note = {\url{http://people2vec.org/}},
-
-####     title = {{People2Vec}},
-
-####     year = {2019}
-
-###  -3634,6 +3799,7 
-####  @misc{perceptronimage,
-
-####     author = {Lab Cornell},
-
-##### +   journal = {online},
-
-####     note = {\url{https://en.wikipedia.org/w/index.php?title=Perceptron&oldid=935763442}},
-
-####     title = {{Mark 1 Perceptron}},
-
-####     year = {2020}
-
-###  -3665,12 +3831,23 
-####  @article{phrase,
-
-####     author = {Boudin, Florian},
-
-##### +   journal = {online},
-
-####     note = {\url{https://hal.archives-ouvertes.fr/hal-00850187/document}},
-
-####     title = {{A Comparison Of Centrality Measures For Graph-Based Keyphrase
-
-####  Extraction}},
-
-####     year = {2013}
-
-##### +@article{physapprox,
-
-##### +   author = {Valentin N. Ostrovsky},
-
-##### +   journal = {Hyle},
-
-##### +   number = {2},
-
-##### +   pages = {101--126},
-
-##### +   title = {Towards A Philosophy Of Approximations In The 'Exact' Sciences},
-
-##### +   volume = {11},
-
-##### +   year = {2005}
-
-####  @article{pilot,
-
-####     author = {Jeanningros, Y and Vlaeminck, S E and Kaldate, A and Verstraete,
-
-####  W and Graveleau, L},
-
-###  -3715,6 +3892,18 
-####     year = {2018}
-
-##### +@book{platoform,
-
-##### +   author = {Welton, W.A. and Benso, S. and Bowery, A.M.},
-
-##### +   isbn = {9780739105146},
-
-##### +   journal = {Lexington Books},
-
-##### +   lccn = {2002117245},
-
-##### +   note = {\url{https://books.google.co.uk/books?id=vbtbQk\_A0YoC}},
-
-##### +   publisher = {Lexington Books},
-
-##### +   series = {G - Reference, Information and Interdisciplinary Subjects Series},
-
-##### +   title = {Plato'S Forms: Varieties Of Interpretation},
-
-##### +   year = {2002}
-
-####  @article{plexp,
-
-####     annote = {doi: 10.1137/070710111},
-
-####     author = {Clauset, Aaron and Shalizi, Cosma Rohilla and Newman, M E J},
-
-###  -3745,6 +3934,7 
-####  Oscar and Worm, Dani{\"e}l},
-
-####     booktitle = {{Financial Cryptography and Data Security}},
-
-####     doi = {10.1007/978-3-030-32101-7\_35},
-
-##### +   journal = {Springer International Publishing},
-
-####     note = {\url{http://dx.doi.org/10.1007/978-3-030-32101-7_35}},
-
-####     pages = {605--623},
-
-####     publisher = {Springer International Publishing},
-
-###  -3755,6 +3945,7 
-####  @book{projections,
-
-####     author = {Thomas, P.D.},
-
-##### +   journal = {Coast and Geodetic Survey},
-
-####     note = {\url{https://books.google.co.uk/books?id=7a60MQEACAAJ}},
-
-####     publisher = {Coast and Geodetic Survey},
-
-####     series = {Special publication},
-
-###  -3831,6 +4022,7 
-####  Karl Leswing and
-
-####  Jeff van Santen},
-
-####     doi = {10.5281/zenodo.2864247},
-
-##### +   journal = {online},
-
-####     month = {May},
-
-####     note = {\url{https://doi.org/10.5281/zenodo.2864247}},
-
-####     title = {Rdkit 2019-03-2 (Q1 2019) Release},
-
-###  -3840,6 +4032,7 
-####  @misc{rdkitcode,
-
-####     author = {rdkit},
-
-####     institution = {Github},
-
-##### +   journal = {online},
-
-####     note = {\url{https://github.com/rdkit/rdkit/blob/24f1737839c9302489cadc473d8d9196ad9187b4/rdkit/Chem/MACCSkeys.py}},
-
-####     title = {{Rdkit}},
-
-####     year = {2019}
-
-###  -3880,6 +4073,7 
-####  @book{roman,
-
-####     author = {Miller, B.G.},
-
-####     isbn = {9780080961163},
-
-##### +   journal = {Elsevier Science},
-
-####     lccn = {2010020592},
-
-####     note = {\url{https://books.google.co.uk/books?id=b2W5S3Lb4fwC}},
-
-####     publisher = {Elsevier Science},
-
-###  -3915,13 +4109,14 
-####  @misc{rule8,
-
-####     author = {{Ben Shneiderman}},
-
-##### +   journal = {online},
-
-####     note = {\url{http://www.cs.umd.edu/~ben/goldenrules.html}},
-
-####     title = {The Eight Golden Rules Of Interface Design},
-
-####     year = {1985}
-
-####  @article{sampling,
-
-###### -   author = { M. D.   Mckay  and  R. J.   Beckman  and  W. J.   Conover },
-
-##### +   author = { M. D.   McKay  and  R. J.   Beckman  and  W. J.   Conover },
-
-####     doi = {10.1080/00401706.2000.10485979},
-
-####     journal = {Technometrics},
-
-####     note = {\url{https://amstat.tandfonline.com/doi/abs/10.1080/00401706.2000.10485979}},
-
-###  -3936,6 +4131,7 
-####  @book{sapiens,
-
-####     author = {Harari, Y.N.},
-
-####     isbn = {9780062316103},
-
-##### +   journal = {Harper},
-
-####     lccn = {2014028418},
-
-####     note = {\url{https://books.google.co.uk/books?id=FmyBAwAAQBAJ}},
-
-####     publisher = {Harper},
-
-###  -3992,6 +4188,7 
-####  @misc{scholar,
-
-####     author = {Google},
-
-##### +   journal = {online},
-
-####     note = {\url{https://scholar.google.com/schhp?hl=en}},
-
-####     title = {{Google Scholar}},
-
-####     year = {2019}
-
-###  -4000,6 +4197,7 
-####  @misc{sciamerican,
-
-####     author = {Monta{\~n}ez, Amanda},
-
-####     booktitle = {{Scientific American Blog Network}},
-
-##### +   journal = {online},
-
-####     note = {\url{https://blogs.scientificamerican.com/sa-visual/how-science-visualization-can-help-save-the-world/}},
-
-####     title = {{How Science Visualization Can Help Save The World}},
-
-####     year = {2016}
-
-###  -4051,6 +4249,7 
-####  @misc{scipy,
-
-####     author = {Eric Jones and Travis Oliphant and Pearu Peterson and others},
-
-##### +   journal = {online},
-
-####     note = {http://www.scipy.org/},
-
-####     title = {{Scipy}: Open Source Scientific Tools For {Python}},
-
-####     year = {2001--}
-
-###  -4107,6 +4306,7 
-####  @book{skeptical,
-
-####     author = {Lomborg, B. and Matthews, M.H. and University of Cambridge (Gran Breta{\~n}a)},
-
-####     isbn = {9780521010689},
-
-##### +   journal = {Cambridge University Press},
-
-####     lccn = {00068915},
-
-####     note = {\url{https://books.google.co.uk/books?id=JuLko8USApwC}},
-
-####     publisher = {Cambridge University Press},
-
-###  -4156,6 +4356,7 
-####  @article{slidedeck,
-
-####     author = {John Mashey },
-
-##### +   journal = {online},
-
-####     note = {\url{https://static.usenix.org/event/usenix99/invited_talks/mashey.pdf}},
-
-####     title = {{Big Data And The Next Wave Of Infrastress }},
-
-####     year = {1998}
-
-###  -4265,6 +4466,7 
-####     address = {Secaucus, NJ, USA},
-
-####     author = {Diehl, Stephan},
-
-####     isbn = {3540465049},
-
-##### +   journal = {Springer-Verlag New York, Inc.},
-
-####     publisher = {Springer-Verlag New York, Inc.},
-
-####     title = {Software Visualization: Visualizing The Structure, Behaviour, And Evolution Of Software},
-
-####     year = {2007}
-
-###  -4319,6 +4521,7 
-####  @book{squaretower,
-
-####     author = {Ferguson, Niall},
-
-####     isbn = {0735222916},
-
-##### +   journal = {Penguin Group , The},
-
-####     publisher = {Penguin Group , The},
-
-####     title = {The Square And The Tower: Networks And Power, From The Freemasons To Facebook},
-
-####     year = {2018}
-
-###  -4327,6 +4530,7 
-####  @book{storyanimal,
-
-####     author = {Gottschall, J.},
-
-####     isbn = {9780547391403},
-
-##### +   journal = {Houghton Mifflin Harcourt},
-
-####     lccn = {2011042372},
-
-####     note = {\url{https://books.google.co.uk/books?id=Gd3lT5yP3ZQC}},
-
-####     publisher = {Houghton Mifflin Harcourt},
-
-###  -4354,6 +4558,7 
-####  @misc{stripes,
-
-####     author = {Ed Hawkins},
-
-##### +   journal = {online},
-
-####     note = {\url{https://showyourstripes.info/}},
-
-####     title = {{\#Showyourstripes}},
-
-####     year = {2019}
-
-###  -4408,6 +4613,7 
-####  @misc{tablet,
-
-####     author = {British-Museum},
-
-####     booktitle = {{British Museum}},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.britishmuseum.org/research/collection_online/collection_object_details.aspx?objectId=1547654&partId=1&searchText=tablet&from=bc&fromDate=4444&to=bc&toDate=3000&page=1}},
-
-####     title = {{Tablet}},
-
-####     year = {BC}
-
-###  -4415,6 +4621,7 
-####  @article{tephi,
-
-####     author = {Ian Brooks},
-
-##### +   journal = {online},
-
-####     note = {\url{http://www.met.reading.ac.uk/~sgs02rpa/TEACHING/Tephigram.pdf}},
-
-####     title = {Tephigram.Pdf},
-
-####     year = {2019}
-
-###  -4464,6 +4671,7 
-####  @misc{threejs,
-
-####     author = {Ricardo Cabello},
-
-##### +   journal = {online},
-
-####     note = {\url{https://threejs.org/}},
-
-####     title = {{Three.Js -- Javascript 3D Library}},
-
-####     year = {2019}
-
-###  -4475,6 +4683,7 
-####     author = {Jean, Neal and Wang, Sherrie and Samar, Anshul and Azzari,
-
-####  George and Lobell, David and Ermon, Stefano},
-
-####     eprint = {1805.02855},
-
-##### +   journal = {online},
-
-####     month = {May},
-
-####     note = {\url{http://arxiv.org/abs/1805.02855}},
-
-####     primaryclass = {cs.CV},
-
-###  -4486,6 +4695,7 
-####  @article{topomap,
-
-####     author = {Baskin, Igor},
-
-####     doi = {10.13140/RG.2.2.25621.93927},
-
-##### +   journal = {.},
-
-####     month = {05},
-
-####     publisher = {.},
-
-####     title = {Dimensionality Reduction In Chemoinformatics. Generative Topographic Mapping},
-
-###  -4505,6 +4715,7 
-####  @book{transporttime,
-
-####     author = {Seinfeld, J.H. and Pandis, S.N.},
-
-####     isbn = {9781118947401},
-
-##### +   journal = {Wiley},
-
-####     lccn = {2015043236},
-
-####     note = {\url{https://books.google.co.uk/books?id=n\_RmCgAAQBAJ}},
-
-####     publisher = {Wiley},
-
-###  -4549,6 +4760,7 
-####  @misc{truthandbeauty,
-
-####     author = {Moritz Stefaner},
-
-##### +   journal = {online},
-
-####     note = {\url{https://truth-and-beauty.net/projects/multiplicity}},
-
-####     title = {{Truth \& Beauty - Multiplicity}},
-
-####     year = {2020}
-
-###  -4569,6 +4781,7 
-####  @misc{tsneexplain,
-
-####     author = {Strayer, Nick},
-
-####     booktitle = {{Observable}},
-
-##### +   journal = {online},
-
-####     note = {\url{https://observablehq.com/@nstrayer/t-sne-explained-in-plain-javascript}},
-
-####     title = {{T-Sne Explained In Plain Javascript}},
-
-####     year = {2018}
-
-###  -4601,6 +4814,7 
-####  @book{tufte,
-
-####     author = {Tufte, E.R.},
-
-##### +   journal = {Graphics Press},
-
-####     lccn = {83156861},
-
-####     note = {\url{https://books.google.co.uk/books?id=tWpHAAAAMAAJ}},
-
-####     number = {v. 914},
-
-###  -4624,8 +4838,9 
-####  @misc{tuv,
-
-####     author = {Br{\"a}uer, Peter},
-
-####     institution = {Github},
-
-##### +   journal = {online},
-
-####     note = {\url{https://github.com/pb866/TUV_DSMACC}},
-
-###### -   title = {{Tuv 5.2X Dsmacc}},
-
-##### +   title = {{TUV 5.2X DSMACC}},
-
-####     year = {2020}
-
-###  -4657,6 +4872,7 
-####  @misc{vt,
-
-####     author = {{VTL}},
-
-##### +   journal = {online},
-
-####     note = {\url{http://visualthinking.psych.northwestern.edu/}},
-
-####     title = {{Visual Thinking Lab}},
-
-####     year = {2019}
-
-###  -4668,6 +4884,7 
-####     author = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean,
-
-####  Jeffrey},
-
-####     eprint = {1301.3781},
-
-##### +   journal = {online},
-
-####     month = {January},
-
-####     note = {\url{http://arxiv.org/abs/1301.3781}},
-
-####     primaryclass = {cs.CL},
-
-###  -4678,6 +4895,7 
-####  @misc{w4colobs,
-
-####     author = {{Daniel Ellis}},
-
-####     booktitle = {{Observable}},
-
-##### +   journal = {online},
-
-####     note = {\url{https://observablehq.com/@wolfiex/d3-fourcolour-voronoi}},
-
-####     title = {{D3-Fourcolour Voronoi}},
-
-####     year = {2019}
-
-###  -4691,6 +4909,7 
-####     edition = {Third Edition},
-
-####     editor = {Ware, Colin },
-
-####     isbn = {978-0-12-381464-7},
-
-##### +   journal = {Morgan Kaufmann},
-
-####     note = {\url{http://www.sciencedirect.com/science/article/pii/B9780123814647000028}},
-
-####     pages = {31 - 68},
-
-####     publisher = {Morgan Kaufmann},
-
-###  -4702,6 +4921,7 
-####  @misc{web,
-
-####     author = {Edsu and Ellis, Dan},
-
-####     institution = {Github},
-
-##### +   journal = {online},
-
-####     note = {https://github.com/wolfiex/etudier},
-
-####     title = {{Etudier}},
-
-####     year = {2019}
-
-###  -4709,6 +4929,7 
-####  @misc{webstats,
-
-####     author = {InternetLiveStats},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.internetlivestats.com/total-number-of-websites/}},
-
-####     title = {{Total Number Of Websites - Internet Live Stats}},
-
-####     year = {2020}
-
-###  -4728,6 +4949,7 
-####  @article{who,
-
-####     author = {WHO},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.who.int/airpollution/ambient/health-impacts/en/}},
-
-####     title = {{World Health Organization | Ambient Air Pollution: Health Impacts}},
-
-####     year = {2018}
-
-###  -4735,6 +4957,7 
-####  @article{whodata,
-
-####     author = {WHO},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.who.int/airpollution/data/en/}},
-
-####     title = {{World Health Organization | Ambient And Household Air Pollution And Health}},
-
-####     year = {2016}
-
-###  -4742,6 +4965,7 
-####  @article{wild,
-
-####     author = {Oliver Wild},
-
-##### +   journal = {online},
-
-####     note = {\url{https://www.ukca.ac.uk/images/b/b1/Solvers_for_web.pdf}},
-
-####     title = {{Chemical Solvers - A Slide Deck From The Ukca Theory And Practice Workshop}},
-
-####     year = {2015}
-
-###  -4750,6 +4974,7 
-####  @book{wingedhorse,
-
-####     author = {Descartes, R. and Cottingham, J. and Williams, B.},
-
-####     isbn = {9780521558181},
-
-##### +   journal = {Cambridge University Press},
-
-####     lccn = {86012898},
-
-####     note = {\url{https://books.google.co.uk/books?id=yMwiTTpwasgC}},
-
-####     publisher = {Cambridge University Press},
-
-###  -4769,6 +4994,7 
-####  @misc{worldmap,
-
-####     author = {{Martin Grandjean}},
-
-##### +   journal = {online},
-
-####     note = {\url{http://www.martingrandjean.ch/connected-world-air-traffic-network/}},
-
-####     title = {{Connected World: Untangling The Air Traffic Network}},
-
-####     year = {2016}
