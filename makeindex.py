@@ -20,11 +20,11 @@ for f in files:
         loc = re.findall(r'\\subimport\{([^\}]*)',dir)[0]
         text = open('%scombigned.tex'%loc,'r').read().lower()
         title.append(re.findall(r'\\chapter\{(.*)\}',dir)[0])
-        
+
         text = re.sub(r'\s*%.*\n','',text )
         text = re.sub(r'\\\w+ *','',text )
         text = re.sub(r'[\._\W\s\d]+',' ',re.sub('-','',text ))
-        
+
         corpus.append(text)
     except:None
 
@@ -41,7 +41,7 @@ df = pd.DataFrame(data, columns=names,index=title)
 
 tfidf = '''
 \\chapter{Chapter Keywords}
-This section uses the Term Frequency Inverse Document Frequency to determine the keywords of each chapter - a techneque which has been described in \\autoref{ch3} and \\cite{frankenstein}. Text size corresponds to the importance of each word.
+This section uses the Term Frequency Inverse Document Frequency to determine the keywords of each chapter - a technique which has been described in \\autoref{ch3}. Text size corresponds to the importance of each word.
 
 
 '''

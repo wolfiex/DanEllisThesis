@@ -578,11 +578,11 @@ This gives a value $-1 \le s(i) \le 1$. Values near zero suggest overlapping clu
 \subsection{Feature Extraction}\label{sec:drfeature}
 Upon establishing a set of DR datasets, and their groups (the clusters of species they contain), it is important to evaluate what input features they represent. Rather than doing this manually, we make use of Random Forests - described below.
 
-\subsubsection{Random Forrests}
+\subsubsection{Random Forests}
 Random forests \citep{rfrr}, are a subset of ML algorithms called ensemble learning. This means that they train a large number of decision trees, each on a random subset of the original features. A decision tree is a tree formed from a series of conditionals\footnote{Questions with a True/False answer}, much like a perceptron network (\autoref{sec:perceptron}) with binary activation functions. Random forests introduce a level of additional randomness by selecting only a subset on which to create each decision tree. This may introduce a higher bias, but lowers the overall model variance, which creates a better (more robust) model. Such methods have been applied to replacing the computationally expensive process of chemistry integration of GEOS-Chem (a global 3D model of tropospheric chemistry) \citep{geosrf} and the prediction of global sea-surface iodine based on observations coupled with sea-surface temperature, depth, and salinity \citep{iodene}.
 
-\subsubsection{Calculating Importance Using Random Forrests}
-Since random forests are in essence a collection of decision trees, it is possible to generate a `decision tree aggregate' to visualise the ensemble structure of the random forest \citep{forrester} (\autoref{fig:iodenetree}). Alternatively, if all that is required is the relative importance of each feature, the RandomForrestClassifier from \citep{sklearn} provides a quick and easy way of understanding which features matter,
+\subsubsection{Calculating Importance Using Random Forests}
+Since random forests are in essence a collection of decision trees, it is possible to generate a `decision tree aggregate' to visualise the ensemble structure of the random forest \citep{forrester} (\autoref{fig:iodenetree}). Alternatively, if all that is required is the relative importance of each feature, the RandomForestClassifier from \citep{sklearn} provides a quick and easy way of understanding which features matter,
 \citep{handsonml}. This works by aggregating the weighted nodes which use a particular feature using the number of samples and then scales the result to 1. We use this method to access the overall importance of features within each DR output and identify the differences between clusters.
 
 
@@ -596,7 +596,7 @@ Since random forests are in essence a collection of decision trees, it is possib
 
 %
 
-\textit{NOTE: The only downside is that Random Forrests are in themselves ML techniques which also need to be evaluated. To do this, as they are simply being used as indicators of cluster properties which we are to explore further, we can initiate a collection of 300 random Forrest classifiers, from which we take the median. A sort of ensemble learning from an ensemble. }
+\textit{NOTE: The only downside is that Random Forests are in themselves ML techniques which also need to be evaluated. To do this, as they are simply being used as indicators of cluster properties which we are to explore further, we can initiate a collection of 300 random Forest classifiers, from which we take the median. A sort of ensemble learning from an ensemble. }
 
 
 \section{Results}\label{sec:drres}
@@ -718,7 +718,7 @@ In establishing that the input format is responsible for the splitting of cluste
 
  Species names (h) have prefixes (e.g. C$xx$) and suffices (e.g., -OOH, -\ch{NO3}, -\ch{O2}, -OL) which allow an easy way for a user to distinguish the types of species, but also the DR algorithms. These show the second-best separation of aromatic species, most likely attributed to the standard naming convention, e.g. (`BENZ', `PIN', `TMB'). Similarly, the SMILES string (g) shows a human-readable representation of the structure of the molecule. Since this is explicitly defined, the SMILES input provides the highest uniformity in group types when analysing cluster composition. As aromatic compounds are represented using a lower case `c', this makes them easy to distinguish (especially in the case of AE \autoref{fig:aelegend}g).
 
- As was touched on in \autoref{sec:mathclustanalysis} the MACCS input consists of a series of logical questions about a species structure. Since many of those questions regard the existence of a Nitrogen atom, data was separated species with a Nitrate or PAN group, and those without. In making a series of decisions on which cluster a species falls under, this largest most recurring branch for the RandomForrestClassifier (imagine of temperature in \autoref{fig:iodenetree}) falls under the existence of a Nitrate group.
+ As was touched on in \autoref{sec:mathclustanalysis} the MACCS input consists of a series of logical questions about a species structure. Since many of those questions regard the existence of a Nitrogen atom, data was separated species with a Nitrate or PAN group, and those without. In making a series of decisions on which cluster a species falls under, this largest most recurring branch for the RandomForestClassifier (imagine of temperature in \autoref{fig:iodenetree}) falls under the existence of a Nitrate group.
 
  The main inconsistency between clusters and DR algorithms comes from the Node2Vec embedding (e) - much of which can be explained by the poor performance of the DR and clustering algorithms of separating the chemistry into groups (see plots in \autoref{sec:cldist}). \autoref{sec:selectcomp} continues this analysis by comparing output with $<3$ clusters each against the graph plots presented in this subsection. The content of individual groupings is explored for an output with multiple clusters.
 
