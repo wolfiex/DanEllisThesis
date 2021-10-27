@@ -1,7 +1,7 @@
 # DanEllisThesis
 Understanding Atmospheric Chemistry using graph-theory, visualisation and machine learning.
 
-Publication: https://etheses.whiterose.ac.uk/28367/
+Publication / Download: https://etheses.whiterose.ac.uk/28367/
 
 ### How to generate PDF
 `python compile.py thesis.tex && open thesis.pdf`
